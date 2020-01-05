@@ -34,7 +34,7 @@ jobs:
         cp -a _build/html/ ../dst
  
     - name: Commit changes
-      uses: stefanzweifel/git-auto-commit-action@v2.4.0
+      uses: stefanzweifel/git-auto-commit-action@v2.5.0
       with:
         #author_name: Marc Demo (Github Actions)
         #author_email: i18n-bot@it-projects.info
