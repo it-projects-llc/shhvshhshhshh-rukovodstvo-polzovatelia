@@ -1,0 +1,6 @@
+version: "1"
+rules:
+  - base: 13.0
+    upstream: odoo:13.0
+    mergeMethod: merge
+label: ":alien: pull from odoo" 
