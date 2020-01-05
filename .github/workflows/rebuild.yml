@@ -24,8 +24,8 @@ jobs:
         pip install -r requirements.txt
     - name: Rebuild
       run: |
-      cd src 
-      make html && cp -a _build/html/ ../dst
+        cd src
+        make html && cp -a _build/html/ ../dst
  
     - name: Commit changes
       uses: stefanzweifel/git-auto-commit-action@v2.4.0
