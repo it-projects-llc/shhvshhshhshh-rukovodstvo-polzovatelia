@@ -1,0 +1,463 @@
+<!doctype html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Colombia (ES) &#8212; Odoo 13.0 documentation</title>
+    <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/accounting.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script type="text/javascript" src="../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.noconflict.js"></script>
+    <link rel="canonical" href="" />
+  
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Italy (IT)" href="italy_IT.html" />
+    <link rel="prev" title="Colombia" href="colombia.html" /> 
+  </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
+<!--
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <div class="o_header_buttons">
+        <a href="http://www.odoo.com/trial" class="btn btn-primary">Start Now</a>
+      </div>
+      <ul class="o_primary_nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Apps</a>
+          <div class="dropdown-menu o_secondary_nav">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-3 o_website_apps">
+                  <div class="o_nav_app_family">
+                    <span></span> Websites
+                    <div>Build great user experience</div>
+                  </div>
+                  <ul>
+                    <li><a href="https://www.odoo.com/page/website-builder">Website Builder</a></li>
+                    <li><a href="https://www.odoo.com/page/e-commerce">eCommerce</a></li>
+                    <li><a href="https://www.odoo.com/page/blog-engine">Blogs</a></li>
+                    <li><a href="https://www.odoo.com/page/community-builder">Forums</a></li>
+                    <li><a href="https://www.odoo.com/page/learning-management-system">eLearning</a></li>
+                    <li><a href="https://www.odoo.com/page/live-chat">Live Chat</a></li>
+                  </ul>
+                </div>
+                <div class="col-sm-3 o_sale_apps">
+                  <div class="o_nav_app_family">
+                    <span></span> Sales
+                    <div>Boost your success rate</div>
+                  </div>
+                  <ul>
+                    <li><a href="https://www.odoo.com/page/sales">Sales</a></li>
+                    <li><a href="https://www.odoo.com/page/crm">CRM</a></li>
+                    <li><a href="https://www.odoo.com/page/billing">Invoicing</a></li>
+                    <li class="dropdown">
+                      <a href="#0" class="dropdown-toggle">Point of Sale</a>
+                      <ul>
+                        <li><a href="https://www.odoo.com/page/point-of-sale">Shops</a></li>
+                        <li><a href="https://www.odoo.com/page/pos-restaurant">Restaurants</a></li>
+                        <li><a href="https://www.odoo.com/page/point-of-sale-hardware">Hardware</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://www.odoo.com/page/subscriptions">Subscriptions</a></li>
+                    <li><a href="https://www.odoo.com/page/sign">Sign</a></li>
+                    <li><a href="https://www.odoo.com/page/rental">Rental</a></li>
+                  </ul>
+                </div>
+                <div class="col-sm-3 o_operation_apps">
+                  <div class="o_nav_app_family">
+                    <span></span> Operations
+                    <div>It's all about efficiency</div>
+                  </div>
+                  <ul>
+                    <li><a href="https://www.odoo.com/page/accounting/">Accounting</a></li>
+                    <li><a href="https://www.odoo.com/page/project-management/">Project</a></li>
+                    <li class="dropdown">
+                      <a href="#0" class="dropdown-toggle">Human Resources</a>
+                      <ul>
+                        <li><a href="https://www.odoo.com/page/referral">Referral</a></li>
+                        <li><a href="https://www.odoo.com/page/employees">Employees</a></li>
+                        <li><a href="https://www.odoo.com/page/expenses">Expenses</a></li>
+                        <li><a href="https://www.odoo.com/page/appraisal">Appraisal</a></li>
+                        <li><a href="https://www.odoo.com/page/fleet">Fleet</a></li>
+                        <li><a href="https://www.odoo.com/page/leaves">Time Off</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://www.odoo.com/page/warehouse">Inventory</a></li>
+                    <li><a href="https://www.odoo.com/page/purchase">Purchase</a></li>
+                    <li class="dropdown">
+                      <a href="#0" class="dropdown-toggle">Manufacturing</a>
+                      <ul>
+                        <li><a href="https://www.odoo.com/page/manufacturing">MRP</a></li>
+                        <li><a href="https://www.odoo.com/page/plm">PLM</a></li>
+                        <li><a href="https://www.odoo.com/page/maintenance">Maintenance</a></li>
+                        <li><a href="https://www.odoo.com/page/quality">Quality</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://www.odoo.com/page/helpdesk">Helpdesk</a></li>
+                    <li><a href="https://www.odoo.com/page/field-service-management">Field Service</a></li>
+                  </ul>
+                </div>
+                <div class="col-sm-3 o_productivity_apps">
+                  <div class="o_nav_app_family">
+                    <span></span> Productivity Tools
+                    <div>Great Tools = Happy People</div>
+                  </div>
+                  <ul>
+                    <li class="dropdown">
+                      <a href="#0" class="dropdown-toggle">Communication</a>
+                      <ul>
+                        <li><a href="https://www.odoo.com/page/discuss">Discuss</a></li>
+                        <li><a href="https://www.odoo.com/page/discuss-groups">Mailing Lists</a></li>
+                        <li><a href="https://www.odoo.com/page/notes">Notes</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://www.odoo.com/page/timesheet">Timesheet</a></li>
+                    <li><a href="https://www.odoo.com/page/events">Events</a></li>
+                    <li class="dropdown">
+                      <a href="#0" class="dropdown-toggle">Marketing</a>
+                      <ul>
+                        <li><a href="https://www.odoo.com/page/marketing-automation">Automation</a></li>
+                        <li><a href="https://www.odoo.com/page/email-marketing">Email</a></li>
+                        <li><a href="https://www.odoo.com/page/social-marketing">Social</a></li>
+                        <li><a href="https://www.odoo.com/page/sms-marketing">SMS</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://www.odoo.com/page/survey">Survey</a></li>
+                    <li><a href="https://www.odoo.com/page/approval-workflow">Approvals</a></li>
+                    <li><a href="https://www.odoo.com/page/appointments">Appointments</a></li>
+                    <li><a href="https://www.odoo.com/page/documents">Documents</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <a href="http://www.odoo.com/apps/modules" class="o_store_link"><i class="fa fa-cube fa-fw"></i> Third party apps</a>
+          </div>
+        </li>
+        <li><a href="https://www.odoo.com/page/tour">Tour</a></li>
+        <li><a href="https://www.odoo.com/pricing">Pricing</a></li>
+        <li><a href="https://www.odoo.com/page/docs">Docs</a></li>
+      </ul>
+    </div>
+-->
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Navigate
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+
+
+
+
+
+    
+        
+            
+                <li><a href="../../index.html">Документация Пользователя</a></li>
+            
+        
+    
+        
+            
+                
+                    <li><a href="../../accounting.html">Accounting</a></li>
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+    <li class="active"><a href="#">Colombia (ES)</a></li>
+
+              
+          </ol>
+
+          <div class="call-to-action navbar-right hidden-xs">
+            <a href="http://www.odoo.com/trial" class="btn btn-primary">Start Now</a>
+          </div>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+
+            
+            
+
+<!--
+<li><a href="https://www.odoo.com/documentation/user/13.0/index.html">User</a></li>
+<li><a href="https://www.odoo.com/documentation/13.0/index.html">Developer</a></li>
+<li><a href="https://odoo.com/slides">eLearning</a></li>
+<li><a href="https://www.odoo.com/documentation/13.0/webservices/odoo.html">API</a></li>
+<li><a href="https://www.odoo.com/documentation/13.0/setup/install.html">Installation</a></li>
+<li><a href="https://www.odoo.com/page/odoo-white-paper">White Papers</a></li>
+<li><a href="https://www.odoo.com/page/legal">Legal</a></li>
+-->
+<li id="searchbox" style="display: none; margin: 0 0 0 10px;" role="search">
+    <form class="search form-inline" action="../../search.html" method="get">
+        <input type="text" class="form-control" name="q" id="q" placeholder="Поиск..." />
+        <input type="hidden" name="area" value="default" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <button type="submit" value="Go" class="btn btn-default">Найти</button>
+    </form>
+</li>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+            
+
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    <figure class="card top ">
+      <span class="card-img" ></span>
+      <div class="container text-center">
+        <h1> Colombia (ES) </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#introduccion" class="ripple internal reference">Introducción</a><ul ><li class="list-group-item"><a href="#flujo-general" class="ripple internal reference">Flujo General</a></li></ul></li><li class="list-group-item"><a href="#configuracion" class="ripple internal reference">Configuración</a><ul ><li class="list-group-item"><a href="#instalacion-de-los-modulos-de-localizacion-colombiana" class="ripple internal reference">1. Instalación de los módulos de Localización Colombiana</a><ul ><li class="list-group-item"><a href="#configuracion-de-las-credenciales-del-servicio-web-de-carvajal-t-s" class="ripple internal reference">2. Configuración de las credenciales del Servicio Web de Carvajal T&amp;S</a></li></ul></li><li class="list-group-item"><a href="#configuracion-de-informacion-para-pdf" class="ripple internal reference">3. Configuración de Información para PDF</a></li><li class="list-group-item"><a href="#configuracion-de-los-datos-principales-requeridos-en-el-xml" class="ripple internal reference">4. Configuración de los Datos Principales Requeridos en el XML</a><ul ><li class="list-group-item"><a href="#contacto-tercero" class="ripple internal reference">4.1 Contacto (Tercero)</a></li><li class="list-group-item"><a href="#identificacion" class="ripple internal reference">4.1.1 Identificación</a></li><li class="list-group-item"><a href="#estructura-fiscal-rut" class="ripple internal reference">4.1.2 Estructura Fiscal (RUT)</a></li></ul></li><li class="list-group-item"><a href="#impuestos" class="ripple internal reference">4.2 Impuestos</a></li><li class="list-group-item"><a href="#diarios" class="ripple internal reference">4.3 Diarios</a></li><li class="list-group-item"><a href="#usuarios" class="ripple internal reference">4.4 Usuarios</a></li></ul></li><li class="list-group-item"><a href="#uso-y-pruebas" class="ripple internal reference">Uso y Pruebas</a><ul ><li class="list-group-item"><a href="#facturas" class="ripple internal reference">Facturas</a><ul ><li class="list-group-item"><a href="#invoice-creation" class="ripple internal reference">1. Invoice Creation</a></li><li class="list-group-item"><a href="#invoice-validation" class="ripple internal reference">1. Invoice Validation</a></li><li class="list-group-item"><a href="#recepcion-del-xml-y-pdf-legal" class="ripple internal reference">1. Recepción del XML y PDF Legal</a></li><li class="list-group-item"><a href="#errores-frecuentes" class="ripple internal reference">1. Errores Frecuentes</a></li></ul></li><li class="list-group-item"><a href="#casos-de-uso-adicionales" class="ripple internal reference">Casos de Uso adicionales</a></li></ul></li></ul>
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/accounting/localizations/colombia_ES.rst" class="gith-link">
+                  Edit on GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body  ">
+            
+            
+  <section id="colombia-es"><p ><strong >Facturación Electrónica para Colombia</strong></p></section><section id="introduccion"><h2 >Introducción</h2><p >La Facturación Electrónica para Colombia está disponible en Odoo V12 y
+requiere los siguientes Módulos:</p><ol ><li ><dl ><dt ><strong >l11n_co</strong>:** Contiene los datos básicos para manejar el</dt><dd ><blockquote >módulo de contabilidad, incluyendo la configuración por defecto
+de los siguientes puntos:</blockquote><div class="line-block"><div class="line">a. Plan Contable</div><div class="line">b. Impuestos</div><div class="line">c. Retenciones</div><div class="line">d. Tipos de Documentos de Identificación</div></div></dd></dl></li></ol><ol ><li ><dl ><dt ><strong >l10n_co_edi</strong>: Este módulo incluye todos los campos</dt><dd >adicionales que son requeridos para la Integración entre Carvajal
+T&amp;S y la generación de la Factura Electrónica, basado en los
+requisitos legales de la DIAN.</dd></dl></li></ol></section><section id="flujo-general"><h3 >Flujo General</h3></section><section id="configuracion"><h2 >Configuración</h2></section><section id="instalacion-de-los-modulos-de-localizacion-colombiana"><h3 >1. Instalación de los módulos de Localización Colombiana</h3><p >Para esto ve a las aplicaciones y busca “Colombia”, luego da click en
+Instalar a los primeros dos módulos:</p><p >cz</p></section><section id="configuracion-de-las-credenciales-del-servicio-web-de-carvajal-t-s"><h4 >2. Configuración de las credenciales del Servicio Web de Carvajal T&amp;S</h4><div class="line-block"><div class="line">Una vez que los módulos están instalados, para poderte conectar con el
+Servicio Web de Carvajal T&amp;S, es necesario configurar el Usuario y las
+Credenciales. Esta información será provista por Carvajal T&amp;S.</div><div class="line">Ve a Facturación –&gt; Configuración –&gt; Configuración y busca la sección
+<strong >Facturación Electrónica Colombiana</strong></div></div><img src="../../_images/colombia_ES02.png" style="" class="img-responsive center-block"><div class="line-block"><div class="line">La funcionalidad de pruebas le permite conectarse e interactuar con el
+ambiente piloto de Carvajal T&amp;S, esto permite a los usuarios probar el
+flujo completo y la integración con el Portal Financiero CEN, al cual
+se accede a través de la siguiente liga: <a href="https://cenfinancierolab.cen.biz" class="external reference">Cenfinanciero</a>,</div></div><p >Una vez que el ambiente de producción está listo en Odoo y en Carvajal
+T&amp;S el ambiente de pruebas debe ser deshabilitado para poder enviar la
+información al ambiente de producción de Carvajal, para el cual es
+utilizada la siguiente URL: <a href="https://cenfinancierolab.cen.biz" class="external reference">Cenfinanciero</a>,</p></section><section id="configuracion-de-informacion-para-pdf"><h3 >3. Configuración de Información para PDF</h3><div class="line-block"><div class="line">Como parte de la información configurable que es enviada en el XML,
+puedes definir los datos de la sección fiscal del PDF, así como de la
+información Bancaria.</div><div class="line">Ve a Contabilidad – Configuración – Ajustes y busca la sección
+<strong >Facturación Electrónica Colombiana</strong>.</div></div><img src="../../_images/colombia_ES03.png" style="" class="img-responsive center-block"></section><section id="configuracion-de-los-datos-principales-requeridos-en-el-xml"><h3 >4. Configuración de los Datos Principales Requeridos en el XML</h3></section><section id="contacto-tercero"><h4 >4.1 Contacto (Tercero)</h4></section><section id="identificacion"><h4 >4.1.1 Identificación</h4><p >Como parte de la Localización Colombiana, los tipos de documentos
+definidos por la DIAN ahora están disponibles en el formulario de
+Contactos, por lo cual ya es posible asignarles su número de
+identificación asociado al tipo de documento correspondiente.</p><img src="../../_images/colombia_ES04.png" style="" class="img-responsive center-block"><p >Nota: Cuando el tipo de documento es RUT la identificación necesita ser
+ingresada en Odoo incluyendo el Dígito de Verificación. Odoo separará
+este número cuando la información sea enviada a los proveedores
+terceros.</p></section><section id="estructura-fiscal-rut"><h4 >4.1.2 Estructura Fiscal (RUT)</h4><p >Los Códigos de tipo de Obligación aplicables a los terceros (sección 53
+en el documento de RUT), son incluidos como parte del módulo de
+Facturación Electrónica, dado que es información requerida por la DIAN.</p><p >Estos campos se encuentran en Contactos –&gt; Pestaña de Ventas y Compras
+–&gt; Información Fiscal</p><img src="../../_images/colombia_ES05.png" style="" class="img-responsive center-block"><p >Adicionalmente dos últimos campos fueron agregados para especificar el
+régimen fiscal del contacto. Cabe aclarar que para envío de Factura
+electrónica de Carvajal, únicamente se hace distinción de entre Grandes
+Contribuyentes y Régimen simplificado, por lo se muestran solo estas dos
+opciones.</p></section><section id="impuestos"><h3 >4.2 Impuestos</h3><div class="line-block"><div class="line">Si tus transacciones de ventas incluyen productos con impuestos, es
+importante considerar que un campo adicional llamado <em >Tipo de Valor</em>
+necesita ser configurado en la siguiente ruta:</div><div class="line">Contabilidad – &gt; Configuración –&gt; Impuestos: –&gt; Opciones Avanzadas
+–&gt;Tipo de Valor</div></div><img src="../../_images/colombia_ES06.png" style="" class="img-responsive center-block"><p >Los impuestos para Retenciones (ICA, IVA y Fuente) también están
+incluidos en las opciones para configurar tus impuestos, esta
+configuración es considerada para desplegar correctamente los impuestos
+en la representación gráfica de la Factura. (PDF)</p><img src="../../_images/colombia_ES07.png" style="" class="img-responsive center-block"></section><section id="diarios"><h3 >4.3 Diarios</h3><p >Una vez que la DIAN ha asignado la secuencia y prefijo oficiales para la
+resolución de la Facturación Electrónica, los Diarios de Ventas
+relacionados con tus documentos de facturación necesitan ser
+actualizados en Odoo.</p><p >La secuencia es configurada usando el modo de desarrollador en la
+siguiente ruta:</p><p >Contabilidad –&gt; Configuración –&gt; Diarios –&gt; Liga de Secuencia</p><img src="../../_images/colombia_ES08.png" style="" class="img-responsive center-block"><p >Una vez que la secuencia es abierta, los campos de Prefijo y Siguiente
+Número deben ser configurados y sincronizados con el CEN Financiero.</p><img src="../../_images/colombia_ES09.png" style="" class="img-responsive center-block"></section><section id="usuarios"><h3 >4.4 Usuarios</h3><p >La plantilla por defecto que es usada por Odoo en la representación
+gráfica incluye el nombre del Vendedor, así que estos campos deben ser
+considerados:</p><img src="../../_images/colombia_ES10.png" style="" class="img-responsive center-block"></section><section id="uso-y-pruebas"><h2 >Uso y Pruebas</h2></section><section id="facturas"><h3 >Facturas</h3><p >Una vez que toda la información principal y las credenciales han sido
+configuradas, es posible empezar a probar el flujo de la Facturación
+Electrónica siguiendo las instrucciones que se detallan a continuación:</p></section><section id="invoice-creation"><h4 >1. Invoice Creation</h4><p >El flujo de trabajo funcional que lleva lugar antes de la validación de
+una factura continua siendo igual con Facturación Electrónica,
+independientemente de si es creada desde una Orden de Venta o si es
+creado manualmente.</p><p >Los cambios principales que son introducidos con la Facturación
+Electrónica son los siguientes:</p><p >Hay tres tipos de documentos</p><ul ><li ><dl ><dt ><strong >Factura electrónica</strong>. Este es el documento normal y aplica</dt><dd >para Facturas, Notas de Crédito y Notas de Débito.</dd></dl></li><li ><dl ><dt ><strong >Factura de Importación</strong>. Debe ser seleccionada para</dt><dd >transacciones de importación.</dd></dl></li><li ><dl ><dt ><strong >Factura de Contingencia</strong>. Esta es un caso excepcional y es</dt><dd >utilizada como un respaldo manual en caso que la compañía no
+pueda usar el ERP y hay necesidad de crear la factura
+manualmente. Al ingresar esta factura en el ERP, se debe
+seleccionar este tipo.</dd></dl></li></ul><img src="../../_images/colombia_ES11.png" style="" class="img-responsive center-block"></section><section id="invoice-validation"><h4 >1. Invoice Validation</h4><p >Después que la factura fue validada, un archivo XML es creado y enviado
+automáticamente al proveedor de la factura electrónica. Este archivo es
+desplegado en el historial.</p><img src="../../_images/colombia_ES12.png" style="" class="img-responsive center-block"><p >Un campo adicional es ahora desplegado en la pestaña de “Otra
+Información” con el nombre del archivo XML. Adicionalmente hay un
+segundo campo adicional que es desplegado con el estatus de la Factura
+Electrónica, con el valor inicial <strong >En Proceso</strong>.</p><img src="../../_images/colombia_ES13.png" style="" class="img-responsive center-block"></section><section id="recepcion-del-xml-y-pdf-legal"><h4 >1. Recepción del XML y PDF Legal</h4><div class="line-block"><div class="line">El proveedor de la Factura Electrónica recibe el archivo XML y procede
+a validar la información y la estructura contenida. Si todo es
+correcto, el estatus de la Factura cambia a “Validado”. Como parte de
+este proceso se generar el XML Legal, el cual incluye una firma
+digital y un código único (CUFE) y generan el PDF de la Factura (el
+cual incluye un código QR) y el CUFE.</div></div><div class="line-block"><div class="line">Odoo envía una petición de actualización automáticamente para
+verificar que el XML fue creado. Si este es el caso, las siguientes
+acciones son hechas automáticamente.</div></div><ul ><li ><dl ><dt >El XML Legal y el PDF son incluidos en un archivo ZIP y desplegados</dt><dd >en el historial de la Factura.</dd></dl></li></ul><img src="../../_images/colombia_ES14.png" style="" class="img-responsive center-block"><ul ><li >El estatus de la Factura Electrónica es cambiado a “Aceptado”.</li></ul><img src="../../_images/colombia_ES15.png" style="" class="img-responsive center-block"><p >Nota: En caso que el PDF y el XML sean requeridos inmediatamente, es
+posible mandar manualmente la petición del estatus usando el siguiente
+botón:</p><img src="../../_images/colombia_ES16.png" style="" class="img-responsive center-block"></section><section id="errores-frecuentes"><h4 >1. Errores Frecuentes</h4><p >Durante la validación del XML los errores más comunes usualmente están
+relacionados con información principal faltante. En estos casos, los
+detalles del error son recuperados en la petición de actualización y
+desplegados en el historial.</p><img src="../../_images/colombia_ES17.png" style="" class="img-responsive center-block"><p >Si la información principal es corregida, es posible re procesar el XML
+con la nueva información y mandar la versión actualizada usando el
+siguiente botón:</p><img src="../../_images/colombia_ES18.png" style="" class="img-responsive center-block"><img src="../../_images/colombia_ES19.png" style="" class="img-responsive center-block"></section><section id="casos-de-uso-adicionales"><h3 >Casos de Uso adicionales</h3><p >El proceso para las Notas de Crédito y Débito (Proveedores) es
+exactamente el mismo que en las Facturas. Su flujo de trabajo funcional
+se mantiene igual.</p></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+<!--
+  <footer>
+    <div id="footer" class="container">
+      <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+      <div class="row">
+        <div class="col-sm-7 col-md-7 col-lg-6">
+          <div class="row">
+            <div class="col-xs-6 col-sm-4">
+              <span class="menu_title">Community</span>
+              <ul>
+                <li><a href="https://github.com/odoo/odoo">Github</a></li>
+                <li><a href="http://www.odoo.com/page/download">Download</a></li>
+                <li class="divider"></li>
+                <li><a href="http://runbot.odoo.com/runbot/repo/git-github-com-odoo-enterprise-7">Runbot</a></li>
+                <li><a href="https://github.com/odoo/odoo/wiki/Translations">Translations</a></li>
+                <li class="divider"></li>
+                <li><a href="http://www.odoo.com/page/odoo-community">Mailing Lists</a></li>
+                <li><a href="http://www.odoo.com/forum/help-1">Forum</a></li>
+              </ul>
+            </div>
+            <div class="col-xs-6 col-sm-4">
+              <span class="menu_title">Services</span>
+              <ul>
+                <li><a href="http://www.odoo.com/pricing">Editions</a></li>
+                <li><a href="http://www.odoo.com/pricing-online">Cloud Pricing</a></li>
+                <li><a href="http://www.odoo.com/page/upgrade">Upgrade</a></li>
+                <li class="divider"></li>
+                <li><a href="http://www.odoo.com/partners">Find a partner</a></li>
+                <li><a href="http://www.odoo.com/page/become-a-partner">Become a partner</a></li>
+                <li class="divider"></li>
+                <li><a href="http://www.odoo.com/page/education-program">Education</a></li>
+                <li class="divider"></li>
+                <li><a href="http://www.odoo.com/page/security">Security</a></li>
+              </ul>
+            </div>
+            <div class="col-sm-4 mb64">
+              <span class="menu_title">About us</span>
+              <ul>
+                <li><a href="http://www.odoo.com/page/about-us">Our company</a></li>
+                <li><a href="http://www.odoo.com/page/contactus">Contact</a></li>
+                <li class="divider" />
+                <li><a href="http://www.odoo.com/event">Events</a></li>
+                <li><a href="http://www.odoo.com/blog/">Blog</a></li>
+                <li><a href="http://www.odoo.com/blog/6">Customers</a></li>
+                <li class="divider" />
+                <li><a href="http://www.odoo.com/jobs">Jobs</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-5 col-md-4 col-md-offset-1 col-lg-5 col-lg-offset-1">
+          <p>
+            <small>
+              Odoo is a suite of open source business apps that cover all your company needs: CRM, eCommerce, accounting, inventory, point of sale, project management, etc.
+              <br/><br/>
+              Odoo's unique value proposition is to be at the same time very easy to use and fully integrated.
+            </small>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="o_footer_bottom">
+      <div class="container">
+        <a class="small" href="http://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+        <div class="social-links pull-right">
+          <a href="http://www.odoo.com/web/about/facebook"><i class="fa fa-facebook"></i></a>
+          <a href="http://www.odoo.com/web/about/twitter"><i class="fa fa-twitter"></i></a>
+          <a href="http://www.odoo.com/web/about/linkedin"><i class="fa fa-linkedin"></i></a>
+          <a href="mailto:info@odoo.com"><i class="fa fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+-->
+  </body>
+</html>

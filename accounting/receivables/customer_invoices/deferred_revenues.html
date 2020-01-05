@@ -1,0 +1,449 @@
+<!doctype html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Deferred Revenues &#8212; Odoo 13.0 documentation</title>
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/accounting.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <link rel="canonical" href="" />
+  
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Credit Notes and Refunds" href="credit_notes.html" />
+    <link rel="prev" title="How to define an installment plan on customer invoices?" href="installment_plans.html" /> 
+  </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
+<!--
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <div class="o_header_buttons">
+        <a href="http://www.odoo.com/trial" class="btn btn-primary">Start Now</a>
+      </div>
+      <ul class="o_primary_nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Apps</a>
+          <div class="dropdown-menu o_secondary_nav">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-3 o_website_apps">
+                  <div class="o_nav_app_family">
+                    <span></span> Websites
+                    <div>Build great user experience</div>
+                  </div>
+                  <ul>
+                    <li><a href="https://www.odoo.com/page/website-builder">Website Builder</a></li>
+                    <li><a href="https://www.odoo.com/page/e-commerce">eCommerce</a></li>
+                    <li><a href="https://www.odoo.com/page/blog-engine">Blogs</a></li>
+                    <li><a href="https://www.odoo.com/page/community-builder">Forums</a></li>
+                    <li><a href="https://www.odoo.com/page/learning-management-system">eLearning</a></li>
+                    <li><a href="https://www.odoo.com/page/live-chat">Live Chat</a></li>
+                  </ul>
+                </div>
+                <div class="col-sm-3 o_sale_apps">
+                  <div class="o_nav_app_family">
+                    <span></span> Sales
+                    <div>Boost your success rate</div>
+                  </div>
+                  <ul>
+                    <li><a href="https://www.odoo.com/page/sales">Sales</a></li>
+                    <li><a href="https://www.odoo.com/page/crm">CRM</a></li>
+                    <li><a href="https://www.odoo.com/page/billing">Invoicing</a></li>
+                    <li class="dropdown">
+                      <a href="#0" class="dropdown-toggle">Point of Sale</a>
+                      <ul>
+                        <li><a href="https://www.odoo.com/page/point-of-sale">Shops</a></li>
+                        <li><a href="https://www.odoo.com/page/pos-restaurant">Restaurants</a></li>
+                        <li><a href="https://www.odoo.com/page/point-of-sale-hardware">Hardware</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://www.odoo.com/page/subscriptions">Subscriptions</a></li>
+                    <li><a href="https://www.odoo.com/page/sign">Sign</a></li>
+                    <li><a href="https://www.odoo.com/page/rental">Rental</a></li>
+                  </ul>
+                </div>
+                <div class="col-sm-3 o_operation_apps">
+                  <div class="o_nav_app_family">
+                    <span></span> Operations
+                    <div>It's all about efficiency</div>
+                  </div>
+                  <ul>
+                    <li><a href="https://www.odoo.com/page/accounting/">Accounting</a></li>
+                    <li><a href="https://www.odoo.com/page/project-management/">Project</a></li>
+                    <li class="dropdown">
+                      <a href="#0" class="dropdown-toggle">Human Resources</a>
+                      <ul>
+                        <li><a href="https://www.odoo.com/page/referral">Referral</a></li>
+                        <li><a href="https://www.odoo.com/page/employees">Employees</a></li>
+                        <li><a href="https://www.odoo.com/page/expenses">Expenses</a></li>
+                        <li><a href="https://www.odoo.com/page/appraisal">Appraisal</a></li>
+                        <li><a href="https://www.odoo.com/page/fleet">Fleet</a></li>
+                        <li><a href="https://www.odoo.com/page/leaves">Time Off</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://www.odoo.com/page/warehouse">Inventory</a></li>
+                    <li><a href="https://www.odoo.com/page/purchase">Purchase</a></li>
+                    <li class="dropdown">
+                      <a href="#0" class="dropdown-toggle">Manufacturing</a>
+                      <ul>
+                        <li><a href="https://www.odoo.com/page/manufacturing">MRP</a></li>
+                        <li><a href="https://www.odoo.com/page/plm">PLM</a></li>
+                        <li><a href="https://www.odoo.com/page/maintenance">Maintenance</a></li>
+                        <li><a href="https://www.odoo.com/page/quality">Quality</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://www.odoo.com/page/helpdesk">Helpdesk</a></li>
+                    <li><a href="https://www.odoo.com/page/field-service-management">Field Service</a></li>
+                  </ul>
+                </div>
+                <div class="col-sm-3 o_productivity_apps">
+                  <div class="o_nav_app_family">
+                    <span></span> Productivity Tools
+                    <div>Great Tools = Happy People</div>
+                  </div>
+                  <ul>
+                    <li class="dropdown">
+                      <a href="#0" class="dropdown-toggle">Communication</a>
+                      <ul>
+                        <li><a href="https://www.odoo.com/page/discuss">Discuss</a></li>
+                        <li><a href="https://www.odoo.com/page/discuss-groups">Mailing Lists</a></li>
+                        <li><a href="https://www.odoo.com/page/notes">Notes</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://www.odoo.com/page/timesheet">Timesheet</a></li>
+                    <li><a href="https://www.odoo.com/page/events">Events</a></li>
+                    <li class="dropdown">
+                      <a href="#0" class="dropdown-toggle">Marketing</a>
+                      <ul>
+                        <li><a href="https://www.odoo.com/page/marketing-automation">Automation</a></li>
+                        <li><a href="https://www.odoo.com/page/email-marketing">Email</a></li>
+                        <li><a href="https://www.odoo.com/page/social-marketing">Social</a></li>
+                        <li><a href="https://www.odoo.com/page/sms-marketing">SMS</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://www.odoo.com/page/survey">Survey</a></li>
+                    <li><a href="https://www.odoo.com/page/approval-workflow">Approvals</a></li>
+                    <li><a href="https://www.odoo.com/page/appointments">Appointments</a></li>
+                    <li><a href="https://www.odoo.com/page/documents">Documents</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <a href="http://www.odoo.com/apps/modules" class="o_store_link"><i class="fa fa-cube fa-fw"></i> Third party apps</a>
+          </div>
+        </li>
+        <li><a href="https://www.odoo.com/page/tour">Tour</a></li>
+        <li><a href="https://www.odoo.com/pricing">Pricing</a></li>
+        <li><a href="https://www.odoo.com/page/docs">Docs</a></li>
+      </ul>
+    </div>
+-->
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Navigate
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+
+
+
+
+
+    
+        
+            
+                <li><a href="../../../index.html">Документация Пользователя</a></li>
+            
+        
+    
+        
+            
+                
+                    <li><a href="../../../accounting.html">Accounting</a></li>
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+    <li class="active"><a href="#">Deferred Revenues</a></li>
+
+              
+          </ol>
+
+          <div class="call-to-action navbar-right hidden-xs">
+            <a href="http://www.odoo.com/trial" class="btn btn-primary">Start Now</a>
+          </div>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+
+            
+            
+
+<!--
+<li><a href="https://www.odoo.com/documentation/user/13.0/index.html">User</a></li>
+<li><a href="https://www.odoo.com/documentation/13.0/index.html">Developer</a></li>
+<li><a href="https://odoo.com/slides">eLearning</a></li>
+<li><a href="https://www.odoo.com/documentation/13.0/webservices/odoo.html">API</a></li>
+<li><a href="https://www.odoo.com/documentation/13.0/setup/install.html">Installation</a></li>
+<li><a href="https://www.odoo.com/page/odoo-white-paper">White Papers</a></li>
+<li><a href="https://www.odoo.com/page/legal">Legal</a></li>
+-->
+<li id="searchbox" style="display: none; margin: 0 0 0 10px;" role="search">
+    <form class="search form-inline" action="../../../search.html" method="get">
+        <input type="text" class="form-control" name="q" id="q" placeholder="Поиск..." />
+        <input type="hidden" name="area" value="default" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <button type="submit" value="Go" class="btn btn-default">Найти</button>
+    </form>
+</li>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+            
+
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    <figure class="card top ">
+      <span class="card-img" ></span>
+      <div class="container text-center">
+        <h1> Deferred Revenues </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#prerequisites" class="ripple internal reference">Prerequisites</a><ul ><li class="list-group-item"><a href="#configure-a-deferred-revenue-account" class="ripple internal reference">Configure a Deferred Revenue Account</a></li><li class="list-group-item"><a href="#post-an-income-to-the-right-account" class="ripple internal reference">Post an income to the right account</a><ul ><li class="list-group-item"><a href="#select-the-account-on-a-draft-invoice" class="ripple internal reference">Select the account on a draft invoice</a></li><li class="list-group-item"><a href="#choose-a-different-income-account-for-specific-products" class="ripple internal reference">Choose a different Income Account for specific products</a></li><li class="list-group-item"><a href="#change-the-account-of-a-posted-journal-item" class="ripple internal reference">Change the account of a posted journal item</a></li></ul></li></ul></li><li class="list-group-item"><a href="#deferred-revenues-entries" class="ripple internal reference">Deferred Revenues entries</a><ul ><li class="list-group-item"><a href="#create-a-new-entry" class="ripple internal reference">Create a new entry</a><ul ><li class="list-group-item"><a href="#what-does-prorata-temporis-mean" class="ripple internal reference">What does “Prorata Temporis” mean?</a></li></ul></li><li class="list-group-item"><a href="#deferred-entry-from-the-sales-journal" class="ripple internal reference">Deferred Entry from the Sales Journal</a></li></ul></li><li class="list-group-item"><a href="#deferred-revenue-models" class="ripple internal reference">Deferred Revenue Models</a><ul ><li class="list-group-item"><a href="#apply-a-deferred-revenue-model-to-a-new-entry" class="ripple internal reference">Apply a Deferred Revenue Model to a new entry</a></li></ul></li><li class="list-group-item"><a href="#automate-the-deferred-revenues" class="ripple internal reference">Automate the Deferred Revenues</a></li></ul>
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/accounting/receivables/customer_invoices/deferred_revenues.rst" class="gith-link">
+                  Edit on GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body  ">
+            
+            
+  <section id="deferred-revenues"><p ><strong >Deferred revenues</strong>, or <strong >unearned revenue</strong>, are payments made in advance
+by  customers for products yet to deliver or services yet to render.</p><p >Such payments are a <strong >liability</strong> for the company that receives
+them since it still owes its customers these products or services.
+The company cannot report them on the current <strong >Profit and Loss statement</strong>,
+or <em >Income Statement</em>, since the payments will be effectively
+earned in the future.</p><p >These future revenues must be deferred on the company’s balance sheet
+until the moment in time they can be <strong >recognized</strong>, at once or over a
+defined period, on the Profit and Loss statement.</p><p >For example, let’s say we sell a five-year extended warranty for $ 350.
+We already receive the money now but haven’t earned it yet. Therefore,
+we post this new income in a deferred revenue account and decide to
+recognize it on a yearly basis. Each year, for the next 5 years, $ 70
+will be recognized as revenue.</p><p >Odoo Accounting handles deferred revenues by spreading them in multiple
+entries that are automatically created periodically.</p></section><section id="prerequisites"><h2 >Prerequisites</h2><p >Such transactions must be posted on a <strong >Deferred Revenue Account</strong> rather than
+on the default income account.</p></section><section id="configure-a-deferred-revenue-account"><h3 >Configure a Deferred Revenue Account</h3><p >To configure your account in the <strong >Chart of Accounts</strong>,
+go to <span class="menuselection">Accounting ‣ Configuration ‣ Chart of Accounts</span>,
+click on <em >Create</em>, and fill out the form.</p><img src="../../../_images/deferred_revenues01.png" alt="Configuration of a Deferred Revenue Account in Odoo Accounting" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >This account’s type must be either <em >Current Liabilities</em> or <em >Non-current
+Liabilities</em></p></div></section><section id="post-an-income-to-the-right-account"><h3 >Post an income to the right account</h3></section><section id="select-the-account-on-a-draft-invoice"><h4 >Select the account on a draft invoice</h4><p >On a draft invoice, select the right account for all the products of which the
+incomes must be deferred.</p><img src="../../../_images/deferred_revenues02.png" alt="Selection of a Deferred Revenue Account on a draft invoice in Odoo Accounting" style="" class="img-responsive center-block"></section><section id="choose-a-different-income-account-for-specific-products"><h4 >Choose a different Income Account for specific products</h4><p >Start editing the product, go to the <em >Accounting</em> tab, select the right
+<strong >Income Account</strong>, and save.</p><img src="../../../_images/deferred_revenues03.png" alt="Change of the Income Account for a product in Odoo" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >It is possible to automate the creation of revenue entries for these products
+(see: <a href="#automate-the-deferred-revenues" class="internal alert-link reference">Automate the Deferred Revenues</a>).</p></div></section><section id="change-the-account-of-a-posted-journal-item"><h4 >Change the account of a posted journal item</h4><p >To do so, open your Sales Journal by going to
+<span class="menuselection">Accounting ‣ Accounting ‣ Sales</span>, select the journal item you
+want to modify, click on the account, and select the right one.</p><img src="../../../_images/deferred_revenues04.png" alt="Modification of a posted journal item's account in Odoo Accounting" style="" class="img-responsive center-block"></section><section id="deferred-revenues-entries"><h2 >Deferred Revenues entries</h2></section><section id="create-a-new-entry"><h3 >Create a new entry</h3><p >A <strong >Deferred Revenues entry</strong> automatically generates journal entries at
+the right time until the full amount of the income is recognized.</p><p >To create a new entry, go to <span class="menuselection">Accounting ‣ Accounting ‣ Deferred
+Revenues</span>, click on <em >Create</em>, and fill out the form.</p><p >Click on <strong >select related purchases</strong> to link an existing journal item to
+this new entry. Some fields are then automatically filled out, and the
+journal item is now listed under the <strong >Related Sales</strong> tab.</p><img src="../../../_images/deferred_revenues05.png" alt="Deferred Revenue entry in Odoo Accounting" style="" class="img-responsive center-block"><p >Once done, you can click on <em >Compute Revenue</em> (next to the <em >Confirm</em>
+button) to generate all the values of the <strong >Revenue Board</strong>. This board
+shows you all the entries that Odoo will post to recognize your
+revenue, and at which date.</p><img src="../../../_images/deferred_revenues06.png" alt="Revenue Board in Odoo Accounting" style="" class="img-responsive center-block"></section><section id="what-does-prorata-temporis-mean"><h4 >What does “Prorata Temporis” mean?</h4><p >The <strong >Prorata Temporis</strong> feature is useful to recognize your revenue
+the most accurately possible.</p><p >With this feature, the first entry on the Revenue Board is computed based
+on the time left between the <em >Prorata Date</em> and the <em >First Recognition Date</em>
+rather than the default amount of time between recognitions.</p><p >For example, the Revenue Board above has its first revenue with an amount of
+$ 4.22 rather than $ 70.00. Consequently, the last entry is also lower and
+has an amount of $ 65.78.</p></section><section id="deferred-entry-from-the-sales-journal"><h3 >Deferred Entry from the Sales Journal</h3><p >You can create a deferred entry from a specific journal item in your <strong >Sales Journal</strong>.</p><p >To do so, open your Sales Journal by going to
+<span class="menuselection">Accounting ‣ Accounting ‣ Sales</span>, and select the journal item you
+want to defer. Make sure that it is posted in the right account (see: <a href="#change-the-account-of-a-posted-journal-item" class="internal reference">Change the
+account of a posted journal item</a>).</p><p >Then, click on <em >Action</em>, select <strong >Create Deferred Entry</strong>, and fill out the form the
+same way you would do to <a href="#create-a-new-entry" class="internal reference">create a new entry</a>.</p><img src="../../../_images/deferred_revenues07.png" alt="Create Deferred Entry from a journal item in Odoo Accounting" style="" class="img-responsive center-block"></section><section id="deferred-revenue-models"><h2 >Deferred Revenue Models</h2><p >You can create <strong >Deferred Revenue Models</strong> to create your Deferred Revenue
+entries faster.</p><p >To create a model, go to <span class="menuselection">Accounting ‣ Configuration ‣ Deferred
+Revenue Models</span>, click on <em >Create</em>, and fill out the form the same way you would
+do to create a new entry.</p><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >You can also convert a <em >confirmed Deferred Revenue entry</em> into a model by
+opening it from <span class="menuselection">Accounting ‣ Accounting ‣ Deferred
+Revenues</span> and then, by clicking on the button <strong >Save Model</strong>.</p></div></section><section id="apply-a-deferred-revenue-model-to-a-new-entry"><h3 >Apply a Deferred Revenue Model to a new entry</h3><p >When you create a new Deferred Revenue entry,  fill out the <strong >Deferred Revenue
+Account</strong> with the right recognition account.</p><p >New buttons with all the models linked to that account appear at the top of the form.
+Clicking on a model button fills out the form according to that model.</p><img src="../../../_images/deferred_revenues08.png" alt="Deferred Revenue model button in Odoo Accounting" style="" class="img-responsive center-block"></section><section id="automate-the-deferred-revenues"><h2 >Automate the Deferred Revenues</h2><p >When you create or edit an account of which the type is either <em >Current Liabilities</em>
+or <em >Non-current Liabilities</em>, you can configure it to defer the revenues that
+are credited on it automatically.</p><p >You have three choices for the <strong >Automate Deferred Revenue</strong> field:</p><ol ><li ><strong >No:</strong> this is the default value. Nothing happens.</li><li ><strong >Create in draft:</strong> whenever a transaction is posted on the account, a draft
+<em >Deferred Revenues entry</em> is created, but not validated. You must first
+fill out the form in <span class="menuselection">Accounting ‣ Accounting ‣ Deferred Revenues</span>.</li><li ><strong >Create and validate:</strong> you must also select a Deferred Revenue Model
+(see: <a href="#deferred-revenue-models" class="internal reference">Deferred Revenue Models</a>). Whenever a transaction is posted on
+the account, a <em >Deferred Revenues entry</em> is created and immediately
+validated.</li></ol><img src="../../../_images/deferred_revenues09.png" alt="Automate Deferred Revenue on an account in Odoo Accounting" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >You can, for example, select this account as the default <strong >Income Account</strong>
+of a product to fully automate its sale completely. (see: <a href="#choose-a-different-income-account-for-specific-products" class="internal alert-link reference">Choose a different
+Income Account for specific products</a>).</p></div><div role="alert" class="alert-go_to alert"><p class="alert-title">See also</p><ul ><li ><a href="../../others/configuration/account_type.html" class="internal alert-link reference"><span class="doc">What is an account type and how do I configure it?</span></a></li><li ><a href="https://www.odoo.com/r/EWO" class="external reference alert-link">Odoo Academy: Deferred Revenues (Recognition)</a></li></ul></div></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+<!--
+  <footer>
+    <div id="footer" class="container">
+      <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+      <div class="row">
+        <div class="col-sm-7 col-md-7 col-lg-6">
+          <div class="row">
+            <div class="col-xs-6 col-sm-4">
+              <span class="menu_title">Community</span>
+              <ul>
+                <li><a href="https://github.com/odoo/odoo">Github</a></li>
+                <li><a href="http://www.odoo.com/page/download">Download</a></li>
+                <li class="divider"></li>
+                <li><a href="http://runbot.odoo.com/runbot/repo/git-github-com-odoo-enterprise-7">Runbot</a></li>
+                <li><a href="https://github.com/odoo/odoo/wiki/Translations">Translations</a></li>
+                <li class="divider"></li>
+                <li><a href="http://www.odoo.com/page/odoo-community">Mailing Lists</a></li>
+                <li><a href="http://www.odoo.com/forum/help-1">Forum</a></li>
+              </ul>
+            </div>
+            <div class="col-xs-6 col-sm-4">
+              <span class="menu_title">Services</span>
+              <ul>
+                <li><a href="http://www.odoo.com/pricing">Editions</a></li>
+                <li><a href="http://www.odoo.com/pricing-online">Cloud Pricing</a></li>
+                <li><a href="http://www.odoo.com/page/upgrade">Upgrade</a></li>
+                <li class="divider"></li>
+                <li><a href="http://www.odoo.com/partners">Find a partner</a></li>
+                <li><a href="http://www.odoo.com/page/become-a-partner">Become a partner</a></li>
+                <li class="divider"></li>
+                <li><a href="http://www.odoo.com/page/education-program">Education</a></li>
+                <li class="divider"></li>
+                <li><a href="http://www.odoo.com/page/security">Security</a></li>
+              </ul>
+            </div>
+            <div class="col-sm-4 mb64">
+              <span class="menu_title">About us</span>
+              <ul>
+                <li><a href="http://www.odoo.com/page/about-us">Our company</a></li>
+                <li><a href="http://www.odoo.com/page/contactus">Contact</a></li>
+                <li class="divider" />
+                <li><a href="http://www.odoo.com/event">Events</a></li>
+                <li><a href="http://www.odoo.com/blog/">Blog</a></li>
+                <li><a href="http://www.odoo.com/blog/6">Customers</a></li>
+                <li class="divider" />
+                <li><a href="http://www.odoo.com/jobs">Jobs</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-5 col-md-4 col-md-offset-1 col-lg-5 col-lg-offset-1">
+          <p>
+            <small>
+              Odoo is a suite of open source business apps that cover all your company needs: CRM, eCommerce, accounting, inventory, point of sale, project management, etc.
+              <br/><br/>
+              Odoo's unique value proposition is to be at the same time very easy to use and fully integrated.
+            </small>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="o_footer_bottom">
+      <div class="container">
+        <a class="small" href="http://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+        <div class="social-links pull-right">
+          <a href="http://www.odoo.com/web/about/facebook"><i class="fa fa-facebook"></i></a>
+          <a href="http://www.odoo.com/web/about/twitter"><i class="fa fa-twitter"></i></a>
+          <a href="http://www.odoo.com/web/about/linkedin"><i class="fa fa-linkedin"></i></a>
+          <a href="mailto:info@odoo.com"><i class="fa fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+-->
+  </body>
+</html>

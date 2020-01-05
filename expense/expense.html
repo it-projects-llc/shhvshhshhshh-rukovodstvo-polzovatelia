@@ -1,0 +1,433 @@
+<!doctype html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Expenses &#8212; Odoo 13.0 documentation</title>
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/accounting.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../_static/atom.js"></script>
+    <script type="text/javascript" src="../_static/immutable.js"></script>
+    <script type="text/javascript" src="../_static/react.min.js"></script>
+    <script type="text/javascript" src="../_static/accounts.js"></script>
+    <script type="text/javascript" src="../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../_static/entries.js"></script>
+    <script type="text/javascript" src="../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../_static/misc.js"></script>
+    <script type="text/javascript" src="../_static/inventory.js"></script>
+    <script type="text/javascript" src="../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../_static/doc.js"></script>
+    <script type="text/javascript" src="../_static/jquery.noconflict.js"></script>
+    <link rel="canonical" href="" />
+  
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="General" href="../general.html" />
+    <link rel="prev" title="Live Chat" href="../livechat/livechat.html" /> 
+  </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
+<!--
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <div class="o_header_buttons">
+        <a href="http://www.odoo.com/trial" class="btn btn-primary">Start Now</a>
+      </div>
+      <ul class="o_primary_nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Apps</a>
+          <div class="dropdown-menu o_secondary_nav">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-3 o_website_apps">
+                  <div class="o_nav_app_family">
+                    <span></span> Websites
+                    <div>Build great user experience</div>
+                  </div>
+                  <ul>
+                    <li><a href="https://www.odoo.com/page/website-builder">Website Builder</a></li>
+                    <li><a href="https://www.odoo.com/page/e-commerce">eCommerce</a></li>
+                    <li><a href="https://www.odoo.com/page/blog-engine">Blogs</a></li>
+                    <li><a href="https://www.odoo.com/page/community-builder">Forums</a></li>
+                    <li><a href="https://www.odoo.com/page/learning-management-system">eLearning</a></li>
+                    <li><a href="https://www.odoo.com/page/live-chat">Live Chat</a></li>
+                  </ul>
+                </div>
+                <div class="col-sm-3 o_sale_apps">
+                  <div class="o_nav_app_family">
+                    <span></span> Sales
+                    <div>Boost your success rate</div>
+                  </div>
+                  <ul>
+                    <li><a href="https://www.odoo.com/page/sales">Sales</a></li>
+                    <li><a href="https://www.odoo.com/page/crm">CRM</a></li>
+                    <li><a href="https://www.odoo.com/page/billing">Invoicing</a></li>
+                    <li class="dropdown">
+                      <a href="#0" class="dropdown-toggle">Point of Sale</a>
+                      <ul>
+                        <li><a href="https://www.odoo.com/page/point-of-sale">Shops</a></li>
+                        <li><a href="https://www.odoo.com/page/pos-restaurant">Restaurants</a></li>
+                        <li><a href="https://www.odoo.com/page/point-of-sale-hardware">Hardware</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://www.odoo.com/page/subscriptions">Subscriptions</a></li>
+                    <li><a href="https://www.odoo.com/page/sign">Sign</a></li>
+                    <li><a href="https://www.odoo.com/page/rental">Rental</a></li>
+                  </ul>
+                </div>
+                <div class="col-sm-3 o_operation_apps">
+                  <div class="o_nav_app_family">
+                    <span></span> Operations
+                    <div>It's all about efficiency</div>
+                  </div>
+                  <ul>
+                    <li><a href="https://www.odoo.com/page/accounting/">Accounting</a></li>
+                    <li><a href="https://www.odoo.com/page/project-management/">Project</a></li>
+                    <li class="dropdown">
+                      <a href="#0" class="dropdown-toggle">Human Resources</a>
+                      <ul>
+                        <li><a href="https://www.odoo.com/page/referral">Referral</a></li>
+                        <li><a href="https://www.odoo.com/page/employees">Employees</a></li>
+                        <li><a href="https://www.odoo.com/page/expenses">Expenses</a></li>
+                        <li><a href="https://www.odoo.com/page/appraisal">Appraisal</a></li>
+                        <li><a href="https://www.odoo.com/page/fleet">Fleet</a></li>
+                        <li><a href="https://www.odoo.com/page/leaves">Time Off</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://www.odoo.com/page/warehouse">Inventory</a></li>
+                    <li><a href="https://www.odoo.com/page/purchase">Purchase</a></li>
+                    <li class="dropdown">
+                      <a href="#0" class="dropdown-toggle">Manufacturing</a>
+                      <ul>
+                        <li><a href="https://www.odoo.com/page/manufacturing">MRP</a></li>
+                        <li><a href="https://www.odoo.com/page/plm">PLM</a></li>
+                        <li><a href="https://www.odoo.com/page/maintenance">Maintenance</a></li>
+                        <li><a href="https://www.odoo.com/page/quality">Quality</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://www.odoo.com/page/helpdesk">Helpdesk</a></li>
+                    <li><a href="https://www.odoo.com/page/field-service-management">Field Service</a></li>
+                  </ul>
+                </div>
+                <div class="col-sm-3 o_productivity_apps">
+                  <div class="o_nav_app_family">
+                    <span></span> Productivity Tools
+                    <div>Great Tools = Happy People</div>
+                  </div>
+                  <ul>
+                    <li class="dropdown">
+                      <a href="#0" class="dropdown-toggle">Communication</a>
+                      <ul>
+                        <li><a href="https://www.odoo.com/page/discuss">Discuss</a></li>
+                        <li><a href="https://www.odoo.com/page/discuss-groups">Mailing Lists</a></li>
+                        <li><a href="https://www.odoo.com/page/notes">Notes</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://www.odoo.com/page/timesheet">Timesheet</a></li>
+                    <li><a href="https://www.odoo.com/page/events">Events</a></li>
+                    <li class="dropdown">
+                      <a href="#0" class="dropdown-toggle">Marketing</a>
+                      <ul>
+                        <li><a href="https://www.odoo.com/page/marketing-automation">Automation</a></li>
+                        <li><a href="https://www.odoo.com/page/email-marketing">Email</a></li>
+                        <li><a href="https://www.odoo.com/page/social-marketing">Social</a></li>
+                        <li><a href="https://www.odoo.com/page/sms-marketing">SMS</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://www.odoo.com/page/survey">Survey</a></li>
+                    <li><a href="https://www.odoo.com/page/approval-workflow">Approvals</a></li>
+                    <li><a href="https://www.odoo.com/page/appointments">Appointments</a></li>
+                    <li><a href="https://www.odoo.com/page/documents">Documents</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <a href="http://www.odoo.com/apps/modules" class="o_store_link"><i class="fa fa-cube fa-fw"></i> Third party apps</a>
+          </div>
+        </li>
+        <li><a href="https://www.odoo.com/page/tour">Tour</a></li>
+        <li><a href="https://www.odoo.com/pricing">Pricing</a></li>
+        <li><a href="https://www.odoo.com/page/docs">Docs</a></li>
+      </ul>
+    </div>
+-->
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Navigate
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+
+
+
+
+
+    
+        
+            <li><a href="../index.html">Документация Пользователя</a></li>
+        
+    
+    <li class="active"><a href="#">Expenses</a></li>
+
+              
+          </ol>
+
+          <div class="call-to-action navbar-right hidden-xs">
+            <a href="http://www.odoo.com/trial" class="btn btn-primary">Start Now</a>
+          </div>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+
+            
+            
+
+<!--
+<li><a href="https://www.odoo.com/documentation/user/13.0/index.html">User</a></li>
+<li><a href="https://www.odoo.com/documentation/13.0/index.html">Developer</a></li>
+<li><a href="https://odoo.com/slides">eLearning</a></li>
+<li><a href="https://www.odoo.com/documentation/13.0/webservices/odoo.html">API</a></li>
+<li><a href="https://www.odoo.com/documentation/13.0/setup/install.html">Installation</a></li>
+<li><a href="https://www.odoo.com/page/odoo-white-paper">White Papers</a></li>
+<li><a href="https://www.odoo.com/page/legal">Legal</a></li>
+-->
+<li id="searchbox" style="display: none; margin: 0 0 0 10px;" role="search">
+    <form class="search form-inline" action="../search.html" method="get">
+        <input type="text" class="form-control" name="q" id="q" placeholder="Поиск..." />
+        <input type="hidden" name="area" value="default" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <button type="submit" value="Go" class="btn btn-default">Найти</button>
+    </form>
+</li>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+            
+
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    
+    
+    <figure class="card top has_banner">
+      <span class="card-img" style="background-image: url('../_static/banners/expense.jpg');"></span>
+      <div class="container text-center">
+        <h1> Expenses </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#how-to-set-expense-types" class="ripple internal reference">How to set expense types</a></li><li class="list-group-item"><a href="#how-to-record-expenses" class="ripple internal reference">How to record expenses</a><ul ><li class="list-group-item"><a href="#manually" class="ripple internal reference">Manually</a></li><li class="list-group-item"><a href="#in-one-click-from-emails" class="ripple internal reference">In one click from emails</a></li></ul></li><li class="list-group-item"><a href="#how-to-submit-expenses-to-managers" class="ripple internal reference">How to submit expenses to managers</a></li><li class="list-group-item"><a href="#how-to-approve-expenses" class="ripple internal reference">How to approve expenses</a></li><li class="list-group-item"><a href="#how-to-post-expenses-in-accounting" class="ripple internal reference">How to post expenses in accounting</a></li><li class="list-group-item"><a href="#how-to-reimburse-employees" class="ripple internal reference">How to reimburse employees</a></li><li class="list-group-item"><a href="#how-to-re-invoice-expenses-to-your-customers" class="ripple internal reference">How to re-invoice expenses to your customers</a><ul ><li class="list-group-item"><a href="#setup" class="ripple internal reference">Setup</a></li><li class="list-group-item"><a href="#create-an-order" class="ripple internal reference">Create an order</a></li><li class="list-group-item"><a href="#submit-validate-and-post-expenses" class="ripple internal reference">Submit, validate and post expenses</a></li><li class="list-group-item"><a href="#invoice-expenses" class="ripple internal reference">Invoice expenses</a></li></ul></li></ul>
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/expense/expense.rst" class="gith-link">
+                  Edit on GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body  ">
+            
+            
+  <section id="expenses"></section><section id="how-to-set-expense-types"><h2 >How to set expense types</h2><p >The first step to track expenses is to configure the expense types (managed as products in Odoo)
+that your company allows, from the <em >Configuration</em> menu.
+When a specific expense is reimbursed at a fixed price, set a cost on the product.
+Otherwise keep the cost at 0.0 and employees will report the real cost per expense.</p><img src="../_images/expense_product.png" style="" class="img-responsive center-block"><p >Here are some examples to configure:</p><ul ><li ><p >Restaurant:</p><ul ><li >Cost: 0.00 (the cost of the ticket will be recorded on every expense)</li></ul></li><li ><p >Travel with Personal Car:</p><ul ><li >Cost: 0.30 (the price per mile reimbursed by the company is fixed)</li></ul></li><li ><p >Hotel:</p><ul ><li >Cost: 0.00 (the cost of the ticket will be recorded on every expense)</li></ul></li><li ><p >Others:</p><ul ><li >Cost: 0.0</li></ul></li></ul><p >Don’t forget to set an expense tax on each expense type
+(and an account if you use Odoo Accounting).
+It’s usually a good practice to use a tax that is configured
+with <em >Tax Included in Price</em> (see: <a href="../accounting/others/taxes/tax_included.html" class="internal reference"><span class="doc">How to set tax-included prices</span></a>).
+That way, employees report expenses with
+prices including taxes, which is usually the expected behaviour.</p><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >The <em >Sales</em> app allows you to specify unit of measures for your
+expense types (units, miles, nights, etc.).
+Go to <span class="menuselection">Sales ‣ Configuration ‣ Settings</span> and check
+<em >Some products may be sold/purchased in different units of measure (advanced)</em>.</p></div></section><section id="how-to-record-expenses"><h2 >How to record expenses</h2></section><section id="manually"><h3 >Manually</h3><p >As an employee (Employee in user access rights), you can record
+expenses from <span class="menuselection">My Expenses ‣ Expenses to Submit</span>.</p><img src="../_images/expense_submit_01.png" style="" class="img-responsive center-block"><ol ><li >Select the related product and enter either the total amount
+you paid (with Quantity = 1) or the unit price if Quantity is
+countable (e.g. number of hotel nights).</li><li >Enter the expense date.</li><li >Choose if you paid the bill on your own (and expect to be reimbursed)
+or if the company paid directly (e.g. if you used a company’s credit card).</li><li >Set the bill reference, add some notes if requested and attach a
+photo/scan of the receipt from the discussion thread.
+That will help the manager and the accountant validate it.</li></ol><img src="../_images/expense_submit_02.png" style="" class="img-responsive center-block"></section><section id="in-one-click-from-emails"><h3 >In one click from emails</h3><p >Let your employees record their expenses from a simple email.
+Make a snapshot of the receipt and send it by email, or simply forward a bill!</p><p >The only thing to do is setting up an email alias in
+<span class="menuselection">Expenses ‣ Configuration ‣ Settings</span> (e.g. <em >expenses</em> @mycompany.odoo.com).
+For security purposes, only authenticated employee emails
+(cfr. <em >Work Email</em> in employee detail form) are accepted.</p><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >The expense product is set automatically if the mail subject contains
+the product’s internal reference between brackets (e.g. [Food]).
+Type the expense amount in the mail subject to set it on the expense too.</p></div></section><section id="how-to-submit-expenses-to-managers"><h2 >How to submit expenses to managers</h2><p >When you are ready to submit your expenses to your manager
+(e.g. at the end of a business trip, or once a month),
+go to the menu <span class="menuselection">My Expenses ‣ Expenses to Submit</span>. Select all expenses
+from the list view and click on <span class="menuselection">Action &gt; Submit to Manager</span>.
+Save the newly created expense report (i.e. set of expenses),
+and wait for your manager to approve it.</p><img src="../_images/expense_submit_03.png" style="" class="img-responsive center-block"><p >You can also submit expenses one by one from the <em >Submit to Manager</em>
+button on the form view of an expense.</p><p >All your submitted expense reports can be found in
+<span class="menuselection">Expenses ‣ My Expenses ‣ Expense Reports</span>.</p></section><section id="how-to-approve-expenses"><h2 >How to approve expenses</h2><p >HR and team managers get an overview of all expense reports to
+validate from the top menu <span class="menuselection">To Approve ‣ Expense Reports to Approve</span>.
+Such users must have at least <em >Officers</em> access rights for <em >Expenses</em>.</p><img src="../_images/expense_approval_01.png" style="" class="img-responsive center-block"><p >They can review expense reports, approve or reject them, as well as providing
+feedback thanks to the integrated communication tool.</p><img src="../_images/expense_approval_02.png" style="" class="img-responsive center-block"><p >As a team manager you can easily find the expense reports of your team members.
+You need to be set as manager in the detail form of those employees.</p><img src="../_images/expense_approval_03.png" style="" class="img-responsive center-block"></section><section id="how-to-post-expenses-in-accounting"><h2 >How to post expenses in accounting</h2><p >Once expense reports approved by managers, the accounting department
+goes to <span class="menuselection">Expenses ‣ Accountant ‣ Expense Reports To Post</span> to check
+accounts, products and taxes. They can click <em >Post Journal Entries</em>
+to post related journal entries into your books.
+To do so, the user must have following access rights:</p><ul ><li >Accounting: Accountant or Adviser</li><li >Expenses: Manager</li></ul><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >To post an expense, a <em >Home Address</em> must be set on the employee.
+If you get a related blocking message when posting, click the employee,
+go to <em >Personal Information</em> tab and select/create the contact of your employee
+in the address book.
+A contact has been automatically created if this person is using Odoo.</p></div></section><section id="how-to-reimburse-employees"><h2 >How to reimburse employees</h2><p >You can now see all the expense reports to reimburse in
+<span class="menuselection">Expenses ‣ Accountant ‣ Expense Reports To Pay</span>.
+To record the payment or pay by check, click <em >Register a Payment</em>.</p><p >See how you can easily manage the payment process in Odoo:</p><ul ><li ><a href="../accounting/payables/pay/check.html" class="internal reference"><span class="doc">Pay by Checks</span></a></li><li ><a href="../accounting/payables/pay/sepa.html" class="internal reference"><span class="doc">Pay with SEPA</span></a></li></ul></section><section id="how-to-re-invoice-expenses-to-your-customers"><h2 >How to re-invoice expenses to your customers</h2><p >If you track expenses on customer projects, you can charge them back to
+your customers automatically.</p></section><section id="setup"><h3 >Setup</h3><ul ><li >Enable <strong >Customer Billing</strong> in the Expenses settings</li><li ><p >Go to the product configuration menu and set the invoicing method on
+all your Expense types:</p><ul ><li >Ordered quantities : it will invoice expenses based on the ordered
+quantity</li><li >Delivered quantities :it will invoice expenses based on the
+expenses quantity</li><li >At cost: will invoice expenses at their real cost.</li><li >At sales price: will invoice based on a fixed sales price set on
+the sale order.</li></ul></li></ul><img src="../_images/expense_invoicing_01.png" style="" class="img-responsive center-block"></section><section id="create-an-order"><h3 >Create an order</h3><ul ><li >As a salesman, create and confirm a Sales Order for the services
+delivered to your customer. If you don’t put any expense in the
+order, it will be added automatically once posted by the
+accountant.</li><li >Link the expense to the Sale Order.</li></ul><img src="../_images/expense_invoicing_02.png" style="" class="img-responsive center-block"></section><section id="submit-validate-and-post-expenses"><h3 >Submit, validate and post expenses</h3><ul ><li >As a manager, make sure the analytic account is set on every expense
+line on approving expenses reports. Click the line to add one if
+missing. Employees are already able to set one when submitting.</li></ul><img src="../_images/expense_invoicing_03.png" style="" class="img-responsive center-block"><ul ><li >As an accountant, post journal entries.</li></ul></section><section id="invoice-expenses"><h3 >Invoice expenses</h3><p >Now you can invoice the order. It shows up in
+<span class="menuselection">Sales ‣ Invoicing ‣ Sales</span>
+to Invoice. The expenses have been added automatically in the order
+lines. Such items show up in blue (i.e. to invoice).</p><img src="../_images/expense_invoicing_04.png" style="" class="img-responsive center-block"><p >e (i.e. to invoice).</p></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+<!--
+  <footer>
+    <div id="footer" class="container">
+      <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+      <div class="row">
+        <div class="col-sm-7 col-md-7 col-lg-6">
+          <div class="row">
+            <div class="col-xs-6 col-sm-4">
+              <span class="menu_title">Community</span>
+              <ul>
+                <li><a href="https://github.com/odoo/odoo">Github</a></li>
+                <li><a href="http://www.odoo.com/page/download">Download</a></li>
+                <li class="divider"></li>
+                <li><a href="http://runbot.odoo.com/runbot/repo/git-github-com-odoo-enterprise-7">Runbot</a></li>
+                <li><a href="https://github.com/odoo/odoo/wiki/Translations">Translations</a></li>
+                <li class="divider"></li>
+                <li><a href="http://www.odoo.com/page/odoo-community">Mailing Lists</a></li>
+                <li><a href="http://www.odoo.com/forum/help-1">Forum</a></li>
+              </ul>
+            </div>
+            <div class="col-xs-6 col-sm-4">
+              <span class="menu_title">Services</span>
+              <ul>
+                <li><a href="http://www.odoo.com/pricing">Editions</a></li>
+                <li><a href="http://www.odoo.com/pricing-online">Cloud Pricing</a></li>
+                <li><a href="http://www.odoo.com/page/upgrade">Upgrade</a></li>
+                <li class="divider"></li>
+                <li><a href="http://www.odoo.com/partners">Find a partner</a></li>
+                <li><a href="http://www.odoo.com/page/become-a-partner">Become a partner</a></li>
+                <li class="divider"></li>
+                <li><a href="http://www.odoo.com/page/education-program">Education</a></li>
+                <li class="divider"></li>
+                <li><a href="http://www.odoo.com/page/security">Security</a></li>
+              </ul>
+            </div>
+            <div class="col-sm-4 mb64">
+              <span class="menu_title">About us</span>
+              <ul>
+                <li><a href="http://www.odoo.com/page/about-us">Our company</a></li>
+                <li><a href="http://www.odoo.com/page/contactus">Contact</a></li>
+                <li class="divider" />
+                <li><a href="http://www.odoo.com/event">Events</a></li>
+                <li><a href="http://www.odoo.com/blog/">Blog</a></li>
+                <li><a href="http://www.odoo.com/blog/6">Customers</a></li>
+                <li class="divider" />
+                <li><a href="http://www.odoo.com/jobs">Jobs</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-5 col-md-4 col-md-offset-1 col-lg-5 col-lg-offset-1">
+          <p>
+            <small>
+              Odoo is a suite of open source business apps that cover all your company needs: CRM, eCommerce, accounting, inventory, point of sale, project management, etc.
+              <br/><br/>
+              Odoo's unique value proposition is to be at the same time very easy to use and fully integrated.
+            </small>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="o_footer_bottom">
+      <div class="container">
+        <a class="small" href="http://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+        <div class="social-links pull-right">
+          <a href="http://www.odoo.com/web/about/facebook"><i class="fa fa-facebook"></i></a>
+          <a href="http://www.odoo.com/web/about/twitter"><i class="fa fa-twitter"></i></a>
+          <a href="http://www.odoo.com/web/about/linkedin"><i class="fa fa-linkedin"></i></a>
+          <a href="mailto:info@odoo.com"><i class="fa fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+-->
+  </body>
+</html>
