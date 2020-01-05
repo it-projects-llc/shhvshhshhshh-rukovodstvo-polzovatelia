@@ -310,6 +310,7 @@ github_project = 'documentation-user'
 locale_dirs = ['locale/']
 
 LANGUAGES = {
+    'ru': '&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;',
     'de': 'German',
     'en': 'English',
     'es': 'Spanish',
