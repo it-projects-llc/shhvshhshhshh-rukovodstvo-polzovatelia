@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>How to select the right replenishment strategy &#8212; Odoo 13.0 documentation</title>
+    <title>Как установить правильную стратегию пополнения на складе &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/accounting.css" />
@@ -27,15 +27,19 @@
     <script type="text/javascript" src="../../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../../_static/doc.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/inventory/management/products/strategies.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/inventory/management/products/strategies.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/inventory/management/products/strategies.html" />
+    <link rel="canonical" href="/master/ru/inventory/management/products/strategies.html" />
   
-    <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Warehouses" href="../warehouses.html" />
+    <link rel="index" title="Алфавитный указатель" href="../../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../../search.html" />
+    <link rel="next" title="Склады" href="../warehouses.html" />
     <link rel="prev" title="When Should you Use Packages, Units of Measure or Kits?" href="usage.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
@@ -194,7 +198,7 @@
         
             
                 
-                    <li><a href="../../../inventory.html">Inventory</a></li>
+                    <li><a href="../../../inventory.html">Склад</a></li>
                 
             
         
@@ -211,7 +215,7 @@
             
         
     
-    <li class="active"><a href="#">How to select the right replenishment strategy</a></li>
+    <li class="active"><a href="#">Как установить правильную стратегию пополнения на складе</a></li>
 
               
           </ol>
@@ -227,12 +231,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/inventory/management/products/strategies.html">English</a></li>
+        
+            <li><a href="/13.0/uk/inventory/management/products/strategies.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -259,6 +278,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -268,7 +289,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> How to select the right replenishment strategy </h1>
+        <h1> Как установить правильную стратегию пополнения на складе </h1>
       </div>
     </figure>
     
@@ -281,7 +302,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#terminology" class="ripple internal reference">Terminology</a><ul ><li class="list-group-item"><a href="#minimum-stock-rule" class="ripple internal reference">Minimum stock rule</a></li><li class="list-group-item"><a href="#make-to-order" class="ripple internal reference">Make to Order</a></li></ul></li><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a><ul ><li class="list-group-item"><a href="#minimum-stock-rules" class="ripple internal reference">Minimum stock rules</a></li><li class="list-group-item"><a href="#id1" class="ripple internal reference">Make to Order</a></li><li class="list-group-item"><a href="#choice-between-the-two-options" class="ripple internal reference">Choice between the two options</a></li></ul></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#terminology" class="ripple internal reference">Терминология</a><ul ><li class="list-group-item"><a href="#minimum-stock-rule" class="ripple internal reference">Правило минимального запаса</a></li><li class="list-group-item"><a href="#make-to-order" class="ripple internal reference">Сделать на заказ</a></li></ul></li><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Настройка</a><ul ><li class="list-group-item"><a href="#minimum-stock-rules" class="ripple internal reference">Правила минимального запаса</a></li><li class="list-group-item"><a href="#id1" class="ripple internal reference">Сделать на заказ</a></li><li class="list-group-item"><a href="#choice-between-the-two-options" class="ripple internal reference">Выбор между двумя функциями</a></li></ul></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/inventory/management/products/strategies.rst" class="gith-link">
                   Edit on GitHub
@@ -293,28 +314,7 @@
           <article class="doc-body  ">
             
             
-  <section id="how-to-select-the-right-replenishment-strategy"><p >Minimum Stock rules and Make to Order have similar consequences but
-different rules. They should be used depending on your manufacturing and
-delivery strategies.</p></section><section id="terminology"><h2 >Terminology</h2></section><section id="minimum-stock-rule"><h3 >Minimum stock rule</h3><p >Minimum Stock rules are used to ensure that you always have the minimum
-amount of a product in stock in order to manufacture your products
-and/or answer to your customer needs. When the stock level of a product
-reaches its minimum the system will automatically generate a procurement
-order with the quantity needed to reach the maximum stock level.</p></section><section id="make-to-order"><h3 >Make to Order</h3><p >The Make to Order function will trigger a Purchase Order of the amount
-of the Sales Order related to the product. The system will <strong >not</strong> check
-the current stock. This means that a draft purchase order will be
-generated regardless of the quantity on hand of the product.</p></section><section id="configuration"><h2 >Configuration</h2></section><section id="minimum-stock-rules"><h3 >Minimum stock rules</h3><p >The Minimum Stock Rules configuration is available through your
-Inventory module. In the Inventory Control menu select “Reordering Rule”
-in the drop down menu. There, click on “Create” to set minimum and
-maximum stock values for a given product.</p><img src="../../../_images/strategies01.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >Show tooltips for “minimum quantity”, “maximum quantity” and “quantity multiple”
-fields</p></div><p >Then, click on your product to access the related product form and, on
-the “Inventory submenu”, do not forget to select a supplier.</p><img src="../../../_images/strategies02.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >Don’t forget to select the right product type. A consumable
-can not be stocked and will thus not be accounted for in the stock valuation.</p></div></section><section id="id1"><h3 >Make to Order</h3><p >The Make to Order configuration is available on your product form
-through your <span class="menuselection">Inventory ‣ Inventory control ‣ Products</span> (or any
-other module where products are available).</p><p >On the product form, under Inventory, click on “Make To Order”.</p><img src="../../../_images/strategies03.png" style="" class="img-responsive center-block"></section><section id="choice-between-the-two-options"><h3 >Choice between the two options</h3><p >The choice between the two options is thus dependent of your inventory
-strategy. If you prefer to have a buffer and always have at least a
-minimum amount, the minimum stock rule should be used. If you want to
-reorder your stocks only if your sale is confirmed it is better to use
-the Make to Order.</p></section>
+  <section id="how-to-select-the-right-replenishment-strategy"><p >Правила минимального запаса и Сделать на заказ имеют подобные последствия, но разные правила. Они должны использоваться в зависимости от ваших технологий производства и стратегии доставки.</p></section><section id="terminology"><h2 >Терминология</h2></section><section id="minimum-stock-rule"><h3 >Правило минимального запаса</h3><p >Правила минимального запаса используются для обеспечения того, что у вас всегда есть минимальное количество товара на складе для изготовления вашей продукции и / или ответы на потребности вашего клиента. Когда уровень запаса товара достигает минимального уровня, система автоматически генерирует заказ на закупку с количеством, необходимым для достижения максимального уровня запаса.</p></section><section id="make-to-order"><h3 >Сделать на заказ</h3><p >Функция Сделать по заказу запускает заказ на покупку суммы заказа клиента, связанного с товаром. Система не будет проверять текущий запас. Это означает, что проект заказ на покупку будет сгенерирован независимо от количества, находящихся в наличии товара.</p></section><section id="configuration"><h2 >Настройка</h2></section><section id="minimum-stock-rules"><h3 >Правила минимального запаса</h3><p >Настройка правил минимальных запасов доступно через ваш модуль Состав. В меню Управление складом выберите &amp;quot;Правило дозаказа&amp;quot; в выпадающем меню. Нажмите &amp;quot;Создать&amp;quot;, чтобы установить минимальные и максимальные значения запасов для данного товара.</p><img src="../../../_images/strategies01.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Покажите подсказки для полей &amp;quot;минимальное количество&amp;quot;, &amp;quot;максимальное количество&amp;quot; и &amp;quot;несколько количеств&amp;quot;.</p></div><p >Нажмите товар, чтобы получить доступ к соответствующей формы товара, а в &amp;quot;Подменю состава&amp;quot; не забудьте выбрать поставщика.</p><img src="../../../_images/strategies02.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >Не забудьте выбрать правильный тип товара. Расходный материал не может быть упакован, и поэтому не будет учтено в оценке запасов.</p></div></section><section id="id1"><h3 >Сделать на заказ</h3><p >Настройка Сделать на заказ доступно в вашей форме товара через ваш: menuselection: [UNKNOWN NODE title_reference] (или любой другой модуль, где доступны товары).</p><p >На форме товара в разделе &amp;quot;Склад&amp;quot; нажмите &amp;quot;Сделать заказ&amp;quot;.</p><img src="../../../_images/strategies03.png" style="" class="img-responsive center-block"></section><section id="choice-between-the-two-options"><h3 >Выбор между двумя функциями</h3><p >Выбор между двумя функциями зависит от вашей стратегии состава. Если вы предпочитаете иметь буфер и всегда иметь по крайней мере минимальную сумму, следует использовать правила минимальных запасов. Если вы хотите изменить порядок свои запасы только при условии подтверждения продажи, лучше воспользоваться кнопкой &amp;quot;Сделать по заказу&amp;quot;.</p></section>
 
           </article>
         </div>

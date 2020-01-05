@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>How to manage a bank in a foreign currency? &#8212; Odoo 13.0 documentation</title>
+    <title>Как управлять валютным банковским счетом? &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../../_static/doc.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/accounting/bank/setup/foreign_currency.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/accounting/bank/setup/foreign_currency.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/accounting/bank/setup/foreign_currency.html" />
+    <link rel="canonical" href="/master/ru/accounting/bank/setup/foreign_currency.html" />
   
-    <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Bank Feeds" href="../feeds.html" />
-    <link rel="prev" title="How to manage a cash register?" href="manage_cash_register.html" /> 
+    <link rel="index" title="Алфавитный указатель" href="../../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../../search.html" />
+    <link rel="next" title="Банковский канал" href="../feeds.html" />
+    <link rel="prev" title="Как вести кассовый учет?" href="manage_cash_register.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -194,7 +198,7 @@
         
             
                 
-                    <li><a href="../../../accounting.html">Accounting</a></li>
+                    <li><a href="../../../accounting.html">Бухгалтерский учёт</a></li>
                 
             
         
@@ -211,7 +215,7 @@
             
         
     
-    <li class="active"><a href="#">How to manage a bank in a foreign currency?</a></li>
+    <li class="active"><a href="#">Как управлять валютным банковским счетом?</a></li>
 
               
           </ol>
@@ -227,12 +231,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/accounting/bank/setup/foreign_currency.html">English</a></li>
+        
+            <li><a href="/13.0/uk/accounting/bank/setup/foreign_currency.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -259,6 +278,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -268,7 +289,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> How to manage a bank in a foreign currency? </h1>
+        <h1> Как управлять валютным банковским счетом? </h1>
       </div>
     </figure>
     
@@ -281,7 +302,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a><ul ><li class="list-group-item"><a href="#activate-the-multi-currency-feature" class="ripple internal reference">Activate the multi-currency feature</a></li><li class="list-group-item"><a href="#configure-currencies" class="ripple internal reference">Configure currencies</a></li><li class="list-group-item"><a href="#create-a-new-bank-account" class="ripple internal reference">Create a new bank account</a></li></ul></li><li class="list-group-item"><a href="#example-a-vendor-bill-in-a-foreign-currency" class="ripple internal reference">Example: A vendor bill in a foreign currency</a></li><li class="list-group-item"><a href="#customers-statements" class="ripple internal reference">Customers Statements</a></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Настройка</a><ul ><li class="list-group-item"><a href="#activate-the-multi-currency-feature" class="ripple internal reference">Активируйте мультивалютную функцию</a></li><li class="list-group-item"><a href="#configure-currencies" class="ripple internal reference">Настройте валюту</a></li><li class="list-group-item"><a href="#create-a-new-bank-account" class="ripple internal reference">Создайте новый банковский счет</a></li></ul></li><li class="list-group-item"><a href="#example-a-vendor-bill-in-a-foreign-currency" class="ripple internal reference">Пример: счет поставщика в иностранной валюте</a></li><li class="list-group-item"><a href="#customers-statements" class="ripple internal reference">Сверки с клиентами</a></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/accounting/bank/setup/foreign_currency.rst" class="gith-link">
                   Edit on GitHub
@@ -293,42 +314,7 @@
           <article class="doc-body  ">
             
             
-  <section id="how-to-manage-a-bank-in-a-foreign-currency"><p >In Odoo, every transaction is recorded in the default currency of the
-company. Reports are all based on the currency of the company. But for
-transactions occurring in another currency, Odoo stores both the value
-in the currency of the company and the value in the currency of the
-transaction.</p><p >When you have a bank account in a foreign currencies, for every
-transaction, Odoo stores two values:</p><ul ><li >The debit/credit in the currency of the company</li><li >The debit/credit in the currency of the bank account</li></ul><p >Currency rates are updated automatically using yahoo.com, or the
-European Central bank web-services.</p></section><section id="configuration"><h2 >Configuration</h2></section><section id="activate-the-multi-currency-feature"><h3 >Activate the multi-currency feature</h3><p >In order to allow your company to work with multiple currencies, you
-should activate the multi-currency mode. In the accounting application,
-go into <span class="menuselection">Configuration ‣ Settings ‣ Accounting &amp; Finance Features</span>
-make sure the <strong >Allow Multi-currencies</strong> box is ticked. Provide
-a <strong >Currency Exchange Gain / Loss</strong> account, then click on <strong >Apply</strong>.</p></section><section id="configure-currencies"><h3 >Configure currencies</h3><p >Once the Odoo is configured to support multiple currencies, you should
-activate the currencies you plan to work with. To do that, go to the menu
-<span class="menuselection">Configuration ‣ Currencies</span>. All the currencies are created by default,
-but you should activate the ones you plan to support (to activate a
-currency, check its “Active” field).</p><p >After having activated the currencies, you can configure the parameters
-to automate the currency rate update. These options are also in the
-settings of the Accounting application, in the bottom of the page:</p><img src="../../../_images/foreign01.png" style="" class="img-responsive center-block"><p >Click on the <strong >Update Now</strong> link to update the currency rates now.</p></section><section id="create-a-new-bank-account"><h3 >Create a new bank account</h3><p >In the accounting application, we first go to <span class="menuselection">Configuration ‣
-Accounting / Bank account</span>, and we create a new one.</p><img src="../../../_images/foreign02.png" style="" class="img-responsive center-block"><p >Once you save this bank account, Odoo will create all the documents for
-you:</p><ul ><li >An account in the trial balance</li><li >A journal in your dashboard</li><li >Information about the bank account in the footer of your invoices if
-checked the box <strong >Show in Invoices Footer</strong></li></ul></section><section id="example-a-vendor-bill-in-a-foreign-currency"><h2 >Example: A vendor bill in a foreign currency</h2><p >Based on the above example, let’s assume we receive the following bill
-from a supplier in China.</p><p >In the <span class="menuselection">Purchase ‣ Vendor Bills</span> , this is what you could see:</p><img src="../../../_images/foreign03.png" style="" class="img-responsive center-block"><p >Once you are ready to pay this bill, click on register payment on the
-bill to record a payment.</p><img src="../../../_images/foreign04.png" style="" class="img-responsive center-block"><p >That’s all you have to do. Odoo will automatically post the foreign
-exchange gain or loss at the reconciliation of the payment with the
-invoice, depending if the currency rate increased or decreased between
-the invoice and the payment date.</p><p >Note that you can pay a foreign bill with another currency. In such a
-case, Odoo will automatically convert between the two currencies.</p></section><section id="customers-statements"><h2 >Customers Statements</h2><p >Customers and vendor statements are managed in the currency of the
-invoice. So, the amount due by your customer (to your vendor) is always
-expressed in the currency of the invoice.</p><p >If you have several invoices with different currencies for the same
-customer, Odoo will split the customer statement by currency, as shown
-in the report below.</p><img src="../../../_images/foreign05.png" style="" class="img-responsive center-block"><p >In the above report, the account receivable associated to Camptocamp is
-not managed in a secondary currency, which means that it keeps every
-transaction in its own currency. If you prefer, you can set the account
-receivable for this customer in a secondary currency and all its debts
-will automatically be converted to this currency.</p><p >In such a case, the customer statement always has only one currency. In
-general, this is not what the customer expect as he prefers to see the
-amounts in the currency of the invoices he received;</p></section>
+  <section id="how-to-manage-a-bank-in-a-foreign-currency"><p >В Odoo каждая операция фиксируется в валюте по умолчанию компании. Отчеты составляются с учетом валюты компании. Но для операций, происходящих в другой валюте, Odoo сохраняет как стоимость в валюте компании, так и стоимость в валюте операции.</p><p >Если у вас есть банковский счет в иностранной валюте, для каждой транзакции Odoo сохраняет два значения:</p><ul ><li >Дебет / кредит в валюте компании</li><li >Дебет / кредит в валюте банковского счета</li></ul><p >Курсы валют обновляются автоматически с помощью модуля синхронизации с Нацбанком Украины.</p></section><section id="configuration"><h2 >Настройка</h2></section><section id="activate-the-multi-currency-feature"><h3 >Активируйте мультивалютную функцию</h3><p >Чтобы ваша компания могла работать с несколькими валютами, нужно включить режим мультивалют. В бухгалтерской программе перейдите к разделу: menuselection: [UNKNOWN NODE title_reference] убедитесь, что обозначено поле ** Разрешить мультивалютность [UNKNOWN NODE problematic]. Предоставьте учет ** доходов / расходов курсовой разницы ** и нажмите ** Применить [UNKNOWN NODE problematic].</p></section><section id="configure-currencies"><h3 >Настройте валюту</h3><p >После того, как Odoo будет настроено на поддержку нескольких валют, вам необходимо включить валюты, с которыми вы планируете работать. Чтобы сделать это, перейдите в меню: menuselection: [UNKNOWN NODE title_reference]. Все валюты создаются по умолчанию, но вам следует активировать те, с которым вы планируете поддерживать (чтобы активировать валюту, отметьте это поле, как &amp;quot;Активно&amp;quot;).</p><p >После активации валют вы можете настроить параметры для автоматизации обновления курса валюты. Эти параметры также находятся в настройках бухгалтерской программы в нижней части страницы:</p><img src="../../../_images/foreign01.png" style="" class="img-responsive center-block"><p >Нажмите на ссылку ** Обновить сейчас [UNKNOWN NODE problematic], чтобы обновить курсы валют сейчас.</p></section><section id="create-a-new-bank-account"><h3 >Создайте новый банковский счет</h3><p >В бухгалтерской программе мы сначала переходим к: menuselection: [UNKNOWN NODE title_reference], и создаем новый.</p><img src="../../../_images/foreign02.png" style="" class="img-responsive center-block"><p >После сохранения этого банковского счета Odoo создаст для вас все документы:</p><ul ><li >Аккаунт в пробном балансе</li><li >Журнал на информационной панели</li><li >Информация о банковском счете в нижнем углу ваших счетов-фактур, если обозначено ** Показать в нижней части счета-фактуры **</li></ul></section><section id="example-a-vendor-bill-in-a-foreign-currency"><h2 >Пример: счет поставщика в иностранной валюте</h2><p >Исходя из приведенного выше примера, предположим, что мы получаем следующий счет поставщика в Китае.</p><p >В: menuselection: [UNKNOWN NODE title_reference], то, что вы можете видеть:</p><img src="../../../_images/foreign03.png" style="" class="img-responsive center-block"><p >Когда вы готовы оплатить этот счет, нажмите зарегистрировать платеж на счету, чтобы записать платеж.</p><img src="../../../_images/foreign04.png" style="" class="img-responsive center-block"><p >Это все, что вам нужно сделать. Odoo автоматически публикует прибыль или расходы в иностранной валюте при согласовании платежа по счету-фактуре, в зависимости от того, увеличился или уменьшился курс валюты между счету-фактуре и дате платежа.</p><p >Заметьте, что вы можете оплатить иностранный счет другой валютой. В таком случае Odoo будет автоматически конвертировать между двумя валютами.</p></section><section id="customers-statements"><h2 >Сверки с клиентами</h2><p >Сверки с клиентами и поставщиками руководствуются в валюте счета. Таким образом, сумма, которая принадлежит вашим клиентам (вашим поставщикам), всегда выражается в валюте счета.</p><p >Если у вас есть несколько счетов-фактур с различными валютами для одного и того же клиента, Odoo разделит выписку клиента за валютой, как показано в отчете ниже.</p><img src="../../../_images/foreign05.png" style="" class="img-responsive center-block"><p >В вышеупомянутом отчете дебиторская задолженность, связанная с Camptocamp, не управляется во вторичной валюте, что означает, что она сохраняет каждую операцию в собственной валюте. Если вы предпочитаете этом, вы можете установить дебиторской задолженности по этим клиентом во вторичной валюте, и все его долги автоматически конвертируются в эту валюту.</p><p >В таком случае в сверке с клиентом всегда только одна валюта. В общем, это не то, что ожидает клиент, поскольку он предпочитает видеть суммы в валюте полученных счетов-фактур.</p></section>
 
           </article>
         </div>

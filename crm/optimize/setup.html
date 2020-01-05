@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>Configure your VOIP Asterisk server for Odoo &#8212; Odoo 13.0 documentation</title>
+    <title>Настройте ваш сервер VOIP Asterisk для Odoo &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
     <script type="text/javascript" src="../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../_static/doc.js"></script>
     <script type="text/javascript" src="../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/crm/optimize/setup.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/crm/optimize/setup.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/crm/optimize/setup.html" />
+    <link rel="canonical" href="/master/ru/crm/optimize/setup.html" />
   
-    <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Sales" href="../../sales.html" />
-    <link rel="prev" title="Use VOIP services in Odoo with OnSIP" href="onsip.html" /> 
+    <link rel="index" title="Алфавитный указатель" href="../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../search.html" />
+    <link rel="next" title="Продажи" href="../../sales.html" />
+    <link rel="prev" title="Используйте услугу IP-телефонии в Odoo с OnSIP" href="onsip.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -205,7 +209,7 @@
             
         
     
-    <li class="active"><a href="#">Configure your VOIP Asterisk server for Odoo</a></li>
+    <li class="active"><a href="#">Настройте ваш сервер VOIP Asterisk для Odoo</a></li>
 
               
           </ol>
@@ -221,12 +225,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/crm/optimize/setup.html">English</a></li>
+        
+            <li><a href="/13.0/uk/crm/optimize/setup.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -253,6 +272,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -262,7 +283,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> Configure your VOIP Asterisk server for Odoo </h1>
+        <h1> Настройте ваш сервер VOIP Asterisk для Odoo </h1>
       </div>
     </figure>
     
@@ -275,7 +296,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#installing-asterisk-server" class="ripple internal reference">Installing Asterisk server</a><ul ><li class="list-group-item"><a href="#dependencies" class="ripple internal reference">Dependencies</a></li><li class="list-group-item"><a href="#asterisk" class="ripple internal reference">Asterisk</a></li><li class="list-group-item"><a href="#dtls-certificates" class="ripple internal reference">DTLS Certificates</a></li></ul></li><li class="list-group-item"><a href="#configure-asterisk-server" class="ripple internal reference">Configure Asterisk server</a></li><li class="list-group-item"><a href="#configure-odoo-voip" class="ripple internal reference">Configure Odoo VOIP</a></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#installing-asterisk-server" class="ripple internal reference">Установка сервера Asterisk</a><ul ><li class="list-group-item"><a href="#dependencies" class="ripple internal reference">Зависимости</a></li><li class="list-group-item"><a href="#asterisk" class="ripple internal reference">Asterisk</a></li><li class="list-group-item"><a href="#dtls-certificates" class="ripple internal reference">сертификаты DTLS</a></li></ul></li><li class="list-group-item"><a href="#configure-asterisk-server" class="ripple internal reference">Настройте сервер Asterisk</a></li><li class="list-group-item"><a href="#configure-odoo-voip" class="ripple internal reference">Настройте IP-телефонию Odoo</a></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/crm/optimize/setup.rst" class="gith-link">
                   Edit on GitHub
@@ -287,7 +308,7 @@
           <article class="doc-body  ">
             
             
-  <section id="configure-your-voip-asterisk-server-for-odoo"></section><section id="installing-asterisk-server"><h2 >Installing Asterisk server</h2></section><section id="dependencies"><h3 >Dependencies</h3><p >Before installing Asterisk you need to install the following dependencies:</p><ul ><li >wget</li><li >gcc</li><li >g++</li><li >ncurses-devel</li><li >libxml2-devel</li><li >sqlite-devel</li><li >libsrtp-devel</li><li >libuuid-devel</li><li >openssl-devel</li><li >pkg-config</li></ul><p >In order to install libsrtp, follow the instructions below:</p><div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">cd /usr/local/src/</span>
+  <section id="configure-your-voip-asterisk-server-for-odoo"></section><section id="installing-asterisk-server"><h2 >Установка сервера Asterisk</h2></section><section id="dependencies"><h3 >Зависимости</h3><p >Перед установкой Asterisk вам нужно установить следующие зависимости:</p><ul ><li >wget</li><li >gcc</li><li >g++</li><li >ncurses-devel</li><li >libxml2-devel</li><li >sqlite-devel</li><li >libsrtp-devel</li><li >libuuid-devel</li><li >openssl-devel</li><li >pkg-config</li></ul><p >Для установления libsrtp выполните следующие инструкции:</p><div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">cd /usr/local/src/</span>
 <span class="go">wget http://srtp.sourceforge.net/srtp-1.4.2.tgz</span>
 <span class="go">tar zxvf srtp-1.4.2.tgz</span>
 <span class="go">cd /usr/local/src/srtp</span>
@@ -295,24 +316,24 @@
 <span class="go">make &amp;&amp; make install</span>
 </pre></div>
 </div>
-<p >You also need to install PJSIP, you can download the source <a href="http://www.pjsip.org/download.htm" class="external reference">here</a>. Once the source directory is extracted:</p><ul ><li ><strong >Change to the pjproject source directory:</strong></li></ul><div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> <span class="nb">cd</span> pjproject
+<p >Вам нужно установить PJSIP, вы можете скачать источник [UNKNOWN NODE problematic]здесь &lt;<a href="http://www.pjsip.org/download.htm" class="external reference">http://www.pjsip.org/download.htm</a>&gt; [UNKNOWN NODE problematic]_. После извлечения исходного каталога:</p><ul ><li >** Перейдите в выходной каталог pjproject: **</li></ul><div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> <span class="nb">cd</span> pjproject
 </pre></div>
 </div>
-<ul ><li ><strong >run:</strong></li></ul><div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> ./configure --prefix<span class="o">=</span>/usr --enable-shared --disable-sound --disable-resample --disable-video --disable-opencore-amr <span class="nv">CFLAGS</span><span class="o">=</span><span class="s1">&#39;-O2 -DNDEBUG&#39;</span>
+<ul ><li >** запустите: **</li></ul><div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> ./configure --prefix<span class="o">=</span>/usr --enable-shared --disable-sound --disable-resample --disable-video --disable-opencore-amr <span class="nv">CFLAGS</span><span class="o">=</span><span class="s1">&#39;-O2 -DNDEBUG&#39;</span>
 </pre></div>
 </div>
-<ul ><li ><strong >Build and install pjproject:</strong></li></ul><div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> make dep
+<ul ><li >** Постройте и установите pjproject: **</li></ul><div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> make dep
 <span class="gp">#</span> make
 <span class="gp">#</span> make install
 </pre></div>
 </div>
-<ul ><li ><strong >Update shared library links:</strong></li></ul><div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> ldconfig
+<ul ><li >** Обновите ссылки на общую библиотеку: **</li></ul><div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> ldconfig
 </pre></div>
 </div>
-<ul ><li ><strong >Verify that pjproject is installed:</strong></li></ul><div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> ldconfig -p <span class="p">|</span> grep pj
+<ul ><li >** Проверьте, установлен pjproject: **</li></ul><div class="highlight-console"><div class="highlight"><pre><span></span><span class="gp">#</span> ldconfig -p <span class="p">|</span> grep pj
 </pre></div>
 </div>
-<ul ><li ><strong >The result should be:</strong></li></ul><div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">libpjsua.so (libc6,x86-64) =&gt; /usr/lib/libpjsua.so</span>
+<ul ><li >** Результат должен быть: **</li></ul><div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">libpjsua.so (libc6,x86-64) =&gt; /usr/lib/libpjsua.so</span>
 <span class="go">libpjsip.so (libc6,x86-64) =&gt; /usr/lib/libpjsip.so</span>
 <span class="go">libpjsip-ua.so (libc6,x86-64) =&gt; /usr/lib/libpjsip-ua.so</span>
 <span class="go">libpjsip-simple.so (libc6,x86-64) =&gt; /usr/lib/libpjsip-simple.so</span>
@@ -325,38 +346,38 @@
 <span class="go">libpj.so (libc6,x86-64) =&gt; /usr/lib/libpj.so</span>
 </pre></div>
 </div>
-</section><section id="asterisk"><h3 >Asterisk</h3><ul ><li >In order to install Asterisk 13.7.0, you can download the source directly <a href="http://downloads.asterisk.org/pub/telephony/asterisk/old-releases/asterisk-13.7.0.tar.gz" class="external reference">there</a>.</li><li >Extract Asterisk:</li></ul><div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">tar zxvf asterisk*</span>
+</section><section id="asterisk"><h3 >Asterisk</h3><ul ><li >Чтобы установить Asterisk 13.7.0, вы можете скачать источник непосредственно [UNKNOWN NODE problematic]там &lt;<a href="http://downloads.asterisk.org/pub/telephony/asterisk/old-releases/asterisk-13.7.0.tar.gz" class="external reference">http://downloads.asterisk.org/pub/telephony/asterisk/old-releases/asterisk-13.7.0.tar.gz</a>&gt; [UNKNOWN NODE problematic]_.</li><li >Удалите Asterisk:</li></ul><div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">tar zxvf asterisk*</span>
 </pre></div>
 </div>
-<ul ><li >Enter the Asterisk directory:</li></ul><div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">cd ./asterisk*</span>
+<ul ><li >Введите каталог Asterisk:</li></ul><div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">cd ./asterisk*</span>
 </pre></div>
 </div>
-<ul ><li >Run the Asterisk configure script:</li></ul><div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">./configure --with-pjproject --with-ssl --with-srtp</span>
+<ul ><li >Запустите настройки скрипта Asterisk:</li></ul><div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">./configure --with-pjproject --with-ssl --with-srtp</span>
 </pre></div>
 </div>
-<ul ><li >Run the Asterisk menuselect tool:</li></ul><div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">make menuselect</span>
+<ul ><li >Запустите инструмент выбора меню Asterisk:</li></ul><div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">make menuselect</span>
 </pre></div>
 </div>
-<ul ><li >In the menuselect, go to the resources option and ensure that res_srtp is enabled. If there are 3 x’s next to res_srtp, there is a problem with the srtp library and you must reinstall it. Save the configuration (press x). You should also see stars in front of the res_pjsip lines.</li><li >Compile and install Asterisk:</li></ul><div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">make &amp;&amp; make install</span>
+<ul ><li >В меню выбора перейдите к опции ресурсов и убедитесь, что res_srtp включен. Если у res_srtp есть 3 х, возникают проблемы с библиотекой srtp, и вы должны переустановить его. Сохраните настройки (нажмите x). Вы также должны увидеть звезды перед строками res_pjsip.</li><li >Скомпилируйте и установите Asterisk:</li></ul><div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">make &amp;&amp; make install</span>
 </pre></div>
 </div>
-<ul ><li >If you need the sample configs you can run ‘make samples’ to install the sample configs. If you need to install the Asterisk startup script you can run ‘make config’.</li></ul></section><section id="dtls-certificates"><h3 >DTLS Certificates</h3><ul ><li >After you need to setup the DTLS certificates.</li></ul><div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">mkdir /etc/asterisk/keys</span>
+<ul ><li >Если вам нужны образцы настройки, вы можете запустить 'сделать образцы &amp;quot;для установления образцов настройки. Если вам нужно установить сценарий запуска Asterisk, вы можете запустить 'сделать настр &amp;quot;.</li></ul></section><section id="dtls-certificates"><h3 >сертификаты DTLS</h3><ul ><li >После этого вам нужно установить сертификаты DTLS.</li></ul><div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">mkdir /etc/asterisk/keys</span>
 </pre></div>
 </div>
-<ul ><li >Enter the Asterisk scripts directory:</li></ul><div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">cd /asterisk*/contrib/scripts</span>
+<ul ><li >Введите каталог скриптов Asterisk:</li></ul><div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">cd /asterisk*/contrib/scripts</span>
 </pre></div>
 </div>
-<ul ><li >Create the DTLS certificates (replace pbx.mycompany.com with your ip address or dns name, replace My Super Company with your company name):</li></ul><div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">./ast_tls_cert -C pbx.mycompany.com -O &quot;My Super Company&quot; -d /etc/asterisk/keys</span>
+<ul ><li >Создайте сертификаты DTLS (замените pbx.mycompany.com на свой IP-адрес или имя dns, замените My Super Company на название компании):</li></ul><div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">./ast_tls_cert -C pbx.mycompany.com -O &quot;My Super Company&quot; -d /etc/asterisk/keys</span>
 </pre></div>
 </div>
-</section><section id="configure-asterisk-server"><h2 >Configure Asterisk server</h2><p >For WebRTC, a lot of the settings that are needed MUST be in the peer settings. The global settings do not flow down into the peer settings very well. By default, Asterisk config files are located in /etc/asterisk/. Start by editing http.conf and make sure that the following lines are uncommented:</p><div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">;http.conf</span>
+</section><section id="configure-asterisk-server"><h2 >Настройте сервер Asterisk</h2><p >Для WebRTC большое количество необходимых параметров ДОЛЖНА быть в показанных настройках. Глобальные параметры не очень хорошо попадут в настройки показанных уровней. По умолчанию конфигурационные файлы Asterisk расположены в / etc / asterisk /. Начните с изменения http.conf и убедитесь, что следующие строки не комментируются:</p><div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">;http.conf</span>
 <span class="go">[general]</span>
 <span class="go">enabled=yes</span>
 <span class="go">bindaddr=127.0.0.1 ; Replace this with your IP address</span>
 <span class="go">bindport=8088 ; Replace this with the port you want to listen on</span>
 </pre></div>
 </div>
-<p >Next, edit sip.conf. The WebRTC peer requires encryption, avpf, and icesupport to be enabled. In most cases, directmedia should be disabled. Also under the WebRTC client, the transport needs to be listed as ‘ws’ to allow websocket connections. All of these config lines should be under the peer itself; setting these config lines globally might not work:</p><div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">;sip.conf</span>
+<p >Далее измените файл sip.conf. WebRTC требует расшифровки, avpf и iicesupport. В большинстве случаев, Directmedia должен быть отключен. Также во клиентом WebRTC транспорт нужно указать как &amp;quot;ws&amp;quot;, чтобы разрешить подключение веб-узлов. Все эти конфигурационные линии должны быть под одним уровнем; установка этих конфигурационных строки глобально могут не работать:</p><div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">;sip.conf</span>
 <span class="go">[general]</span>
 <span class="go">realm=127.0.0.1 ; Replace this with your IP address</span>
 <span class="go">udpbindaddr=127.0.0.1 ; Replace this with your IP address</span>
@@ -381,24 +402,16 @@
 <span class="go">dtlssetup=actpass ; Tell Asterisk to use actpass SDP parameter when setting up DTLS</span>
 </pre></div>
 </div>
-<p >In the sip.conf and rtp.conf files you also need to add or uncomment the lines:</p><div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">icesupport = true</span>
+<p >В sip.conf и rtp.conf файлах вам также нужно добавить или отключить строки:</p><div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">icesupport = true</span>
 <span class="go">stunaddr = stun.l.google.com:19302</span>
 </pre></div>
 </div>
-<p >Lastly, set up extensions.conf:</p><div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">;extensions.conf</span>
+<p >Наконец, установите extensions.conf:</p><div class="highlight-console"><div class="highlight"><pre><span></span><span class="go">;extensions.conf</span>
 <span class="go">[default]</span>
 <span class="go">exten =&gt; 1060,1,Dial(SIP/1060) ; Dialing 1060 will call the SIP client registered to 1060</span>
 </pre></div>
 </div>
-</section><section id="configure-odoo-voip"><h2 >Configure Odoo VOIP</h2><p >In Odoo, the configuration should be done in the user’s preferences.</p><p >The SIP Login/Browser’s Extension is the number you configured previously in the
-sip.conf file. In our example, 1060. The SIP Password is the secret you chose in
-the sip.conf file. The extension of your office’s phone is not a required field
-but it is used if you want to transfer your call from Odoo to an external phone
-also configured in the sip.conf file.</p><p >The configuration should also be done in the sale settings under the title “PBX
-Configuration”. You need to put the IP you define in the http.conf file and the
-WebSocket should be: ws://127.0.0.1:8088/ws. The part “127.0.0.1” needs to be
-the same as the IP defined previously and the “8088” is the port you defined in
-the http.conf file.</p></section>
+</section><section id="configure-odoo-voip"><h2 >Настройте IP-телефонию Odoo</h2><p >В Odoo настройки должно выполняться в настройках пользователя.</p><p >Логин SIP / Расширение браузера - это номер, который вы уже настроили в файле sip.conf. В нашем примере 1060. Пароль SIP - секрет, который вы выбрали в файле sip.conf. Расширение телефона вашего офиса не является обязательным полем, но оно используется, если вы хотите передать свой звонок с Odoo на внешний телефон, также настроен в файле sip.conf.</p><p >Настройка также должно быть сделано в настройках продаже под названием &amp;quot;Конфигурация PBX&amp;quot;. Вы должны указать IP, который вы определите в файле http.conf, и WebSocket должно быть: ws: //127.0.0.1: 8088 / ws. Часть &amp;quot;127.0.0.1&amp;quot; должна быть такой же, как IP, определенный ранее, и &amp;quot;8088&amp;quot; - это порт, определенный в файле http.conf.</p></section>
 
           </article>
         </div>

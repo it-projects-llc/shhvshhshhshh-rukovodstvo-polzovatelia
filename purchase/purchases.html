@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>Purchases &#8212; Odoo 13.0 documentation</title>
+    <title>Закупки &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../_static/inventory.js"></script>
     <script type="text/javascript" src="../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
     <script type="text/javascript" src="../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../_static/doc.js"></script>
     <script type="text/javascript" src="../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/purchase/purchases.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/purchase/purchases.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/purchase/purchases.html" />
+    <link rel="canonical" href="/master/ru/purchase/purchases.html" />
   
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Master Data" href="purchases/master.html" />
-    <link rel="prev" title="Purchase" href="../purchase.html" /> 
+    <link rel="index" title="Алфавитный указатель" href="../genindex.html" />
+    <link rel="search" title="Поиск" href="../search.html" />
+    <link rel="next" title="Основные данные" href="purchases/master.html" />
+    <link rel="prev" title="Закупка" href="../purchase.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -194,12 +198,12 @@
         
             
                 
-                    <li><a href="../purchase.html">Purchase</a></li>
+                    <li><a href="../purchase.html">Закупка</a></li>
                 
             
         
     
-    <li class="active"><a href="#">Purchases</a></li>
+    <li class="active"><a href="#">Закупки</a></li>
 
               
           </ol>
@@ -215,12 +219,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/purchase/purchases.html">English</a></li>
+        
+            <li><a href="/13.0/uk/purchase/purchases.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -247,6 +266,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -256,7 +277,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> Purchases </h1>
+        <h1> Закупки </h1>
       </div>
     </figure>
     
@@ -270,7 +291,7 @@
           <article class="doc-body doc-toc ">
             
             
-  <section id="purchases"><div class="toctree-wrapper"><ul ><li class="toctree-l1"><span >Master Data</span><ul ><li class="toctree-l2"><a href="purchases/master/uom.html" class="internal reference">Purchase in different unit of measures than sales</a></li><li class="toctree-l2"><a href="purchases/master/suppliers.html" class="internal reference">Set multiple vendors on a product</a></li><li class="toctree-l2"><a href="purchases/master/import.html" class="internal reference">Import vendors pricelists</a></li></ul></li><li class="toctree-l1"><span >Request for Quotation and Purchase Orders</span><ul ><li class="toctree-l2"><a href="purchases/rfq/create.html" class="internal reference">Create a Request for Quotation</a></li><li class="toctree-l2"><a href="purchases/rfq/bills.html" class="internal reference">Bill Control</a></li><li class="toctree-l2"><a href="purchases/rfq/reception.html" class="internal reference">Control product received (entirely &amp; partially)</a></li><li class="toctree-l2"><a href="purchases/rfq/lock_orders.html" class="internal reference">Lock a purchase order</a></li><li class="toctree-l2"><a href="purchases/rfq/cancel.html" class="internal reference">Cancel a purchase order</a></li><li class="toctree-l2"><a href="purchases/rfq/approvals.html" class="internal reference">Request managers approval for expensive orders</a></li><li class="toctree-l2"><a href="purchases/rfq/analyze.html" class="internal reference">Analyze the performance of my vendors</a></li><li class="toctree-l2"><a href="purchases/rfq/3_way_matching.html" class="internal reference">Determine when to pay a vendor bill with 3-way matching</a></li><li class="toctree-l2"><a href="purchases/rfq/warning.html" class="internal reference">Raise warnings on purchase orders</a></li><li class="toctree-l2"><a href="purchases/rfq/dropshipping.html" class="internal reference">Dropship products</a></li></ul></li><li class="toctree-l1"><span >Purchase Agreements</span><ul ><li class="toctree-l2"><a href="purchases/tender/blanket_orders.html" class="internal reference">Manage Blanket Orders</a></li><li class="toctree-l2"><a href="purchases/tender/call_for_tender.html" class="internal reference">Manage Call for Tender</a></li></ul></li></ul></div></section>
+  <section id="purchases"><div class="toctree-wrapper"><ul ><li class="toctree-l1"><span >Основные данные</span><ul ><li class="toctree-l2"><a href="purchases/master/uom.html" class="internal reference">Как покупать и продавать в разных единицах измерения</a></li><li class="toctree-l2"><a href="purchases/master/suppliers.html" class="internal reference">Установка нескольких поставщиков на товар</a></li><li class="toctree-l2"><a href="purchases/master/import.html" class="internal reference">Импорт прайс-листов поставщика</a></li></ul></li><li class="toctree-l1"><span >Заказ на коммерческое предложение и заказ на покупку</span><ul ><li class="toctree-l2"><a href="purchases/rfq/create.html" class="internal reference">Создайте запрос на коммерческое предложение</a></li><li class="toctree-l2"><a href="purchases/rfq/bills.html" class="internal reference">Контроль счетов</a></li><li class="toctree-l2"><a href="purchases/rfq/reception.html" class="internal reference">Контроль получения товаров (полностью и частично)</a></li><li class="toctree-l2"><a href="purchases/rfq/lock_orders.html" class="internal reference">Блокировка заказ на покупку</a></li><li class="toctree-l2"><a href="purchases/rfq/cancel.html" class="internal reference">Отмена заказа на продажу</a></li><li class="toctree-l2"><a href="purchases/rfq/approvals.html" class="internal reference">Использование утверждения менеджером для дорогих закупок</a></li><li class="toctree-l2"><a href="purchases/rfq/analyze.html" class="internal reference">Анализ эффективности моих поставщиков</a></li><li class="toctree-l2"><a href="purchases/rfq/3_way_matching.html" class="internal reference">Как определить, счет поставщика должен был быть оплачен (3-стороннее согласования)</a></li><li class="toctree-l2"><a href="purchases/rfq/warning.html" class="internal reference">Настройка предупреждений на заказах на покупку</a></li><li class="toctree-l2"><a href="purchases/rfq/dropshipping.html" class="internal reference">Товары дропшипингу</a></li></ul></li><li class="toctree-l1"><span >Соглашения о покупке</span><ul ><li class="toctree-l2"><a href="purchases/tender/blanket_orders.html" class="internal reference">Управление долгосрочным заказом</a></li><li class="toctree-l2"><a href="purchases/tender/call_for_tender.html" class="internal reference">Управление призывом к участию в тендере</a></li></ul></li></ul></div></section>
 
           </article>
         </div>

@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>Create a Request for Quotation &#8212; Odoo 13.0 documentation</title>
+    <title>Создайте запрос на коммерческое предложение &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../../_static/doc.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/purchase/purchases/rfq/create.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/purchase/purchases/rfq/create.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/purchase/purchases/rfq/create.html" />
+    <link rel="canonical" href="/master/ru/purchase/purchases/rfq/create.html" />
   
-    <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Bill Control" href="bills.html" />
-    <link rel="prev" title="Request for Quotation and Purchase Orders" href="../rfq.html" /> 
+    <link rel="index" title="Алфавитный указатель" href="../../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../../search.html" />
+    <link rel="next" title="Контроль счетов" href="bills.html" />
+    <link rel="prev" title="Заказ на коммерческое предложение и заказ на покупку" href="../rfq.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -194,7 +198,7 @@
         
             
                 
-                    <li><a href="../../../purchase.html">Purchase</a></li>
+                    <li><a href="../../../purchase.html">Закупка</a></li>
                 
             
         
@@ -211,7 +215,7 @@
             
         
     
-    <li class="active"><a href="#">Create a Request for Quotation</a></li>
+    <li class="active"><a href="#">Создайте запрос на коммерческое предложение</a></li>
 
               
           </ol>
@@ -227,12 +231,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/purchase/purchases/rfq/create.html">English</a></li>
+        
+            <li><a href="/13.0/uk/purchase/purchases/rfq/create.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -259,6 +278,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -268,7 +289,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> Create a Request for Quotation </h1>
+        <h1> Создайте запрос на коммерческое предложение </h1>
       </div>
     </figure>
     
@@ -281,7 +302,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a><ul ><li class="list-group-item"><a href="#creating-a-request-for-quotation" class="ripple internal reference">Creating a Request for Quotation</a></li></ul></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Настройка</a><ul ><li class="list-group-item"><a href="#creating-a-request-for-quotation" class="ripple internal reference">Создание запроса на коммерческое предложение</a></li></ul></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/purchase/purchases/rfq/create.rst" class="gith-link">
                   Edit on GitHub
@@ -293,28 +314,7 @@
           <article class="doc-body  ">
             
             
-  <section id="create-a-request-for-quotation"><p >A Request for Quotation (RfQ) is used when you plan to purchase some
-products and you would like to receive a quote for those products. In
-Odoo, the Request for Quotation is used to send your list of desired
-products to your supplier. Once your supplier has answered your request,
-you can choose to go ahead with the offer and purchase or to turn down
-the offer.</p></section><section id="configuration"><h2 >Configuration</h2></section><section id="creating-a-request-for-quotation"><h3 >Creating a Request for Quotation</h3><p >In the Purchases module, open <span class="menuselection">Purchase ‣ Requests for Quotation</span>
-and click on <strong >Create</strong>.</p><img src="../../../_images/image041.png" style="" class="img-responsive center-block"><p >Select your supplier in the <strong >Vendor</strong> menu, or create it on-the-fly by
-clicking on <strong >Create and Edit</strong>. In the <strong >Order Date</strong> field, select
-the date to which you wish to proceed to the actual order.</p><div class="code-fields"><div class="code-field"><div class="code-field-name">Receipt</div><div class="code-field-body"><div class="line-block"><div class="line">Incoming Shipments</div></div></div></div><div class="code-field"><div class="code-field-name">Vendor</div><div class="code-field-body"><div class="line-block"><div class="line">You can find a vendor by its Name, TIN, Email or Internal Reference.</div></div></div></div><div class="code-field"><div class="code-field-name">Vendor Reference</div><div class="code-field-body"><div class="line-block"><div class="line">Reference of the sales order or bid sent by the vendor. It’s used to do the matching when you receive the products as this reference is usually written on the delivery order sent by your vendor.</div></div></div></div><div class="code-field"><div class="code-field-name">Order Date</div><div class="code-field-body"><div class="line-block"><div class="line">Depicts the date where the Quotation should be validated and converted into a purchase order.</div></div></div></div><div class="code-field"><div class="code-field-name">Source Document</div><div class="code-field-body"><div class="line-block"><div class="line">Reference of the document that generated this purchase order request (e.g. a sales order)</div></div></div></div><div class="code-field"><div class="code-field-name">Deliver To</div><div class="code-field-body"><div class="line-block"><div class="line">This will determine operation type of incoming shipment</div></div></div></div><div class="code-field"><div class="code-field-name">Drop Ship Address</div><div class="code-field-body"><div class="line-block"><div class="line">Put an address if you want to deliver directly from the vendor to the customer. Otherwise, keep empty to deliver to your own company.</div></div></div></div><div class="code-field"><div class="code-field-name">Destination Location Type</div><div class="code-field-body"><div class="line-block"><div class="line">Technical field used to display the Drop Ship Address</div></div></div></div><div class="code-field"><div class="code-field-name">Incoterm</div><div class="code-field-body"><div class="line-block"><div class="line">International Commercial Terms are a series of predefined commercial terms used in international transactions.</div></div></div></div></div><a href="https://demo.odoo.com?module=purchase.purchase_rfq" class="center-block reference btn-lg btn-primary external btn-block btn">View <em >Request for Quotation</em> in our Online Demonstration</a><p >In <strong >Products</strong>, click on Add an item. Select the product you wish to order
-in the <strong >Product</strong> menu. Specify the <strong >Quantity</strong> by inserting the
-number and selecting the unit of measure. In the <strong >Unit Price</strong> field,
-specify the price you would like to be offered (you can also leave the
-field blank if you don’t know what the price should be) , and add the
-expected delivery date in the Scheduled Date field. Click on <strong >Save</strong>, then
-<strong >Print Rfq</strong> or <strong >Send Rfq by email</strong> (make sure an email address is specified
-for this supplier or enter a new one).</p><img src="../../../_images/image081.png" style="" class="img-responsive center-block"><p >After having clicked on <strong >Send</strong>, you will notice that the RFQ’s status will
-switch from <strong >Draft</strong> to <strong >RFQ Sent</strong>.</p><img src="../../../_images/image061.png" style="" class="img-responsive center-block"><p >Once your supplier has replied with an offer, update the RfQ by clicking
-on <strong >Edit</strong> to fit the quotation (prices, taxes, expected delivery lead
-time, payment terms, etc.), then click on <strong >Save</strong> to issue a Purchase
-Order.</p><p >To proceed with the order, click on <strong >Confirm Order</strong> to send the order to
-the supplier. The RfQ’s status will switch to <strong >Purchase Order</strong>.</p><img src="../../../_images/image111.png" style="" class="img-responsive center-block"><p >The status of the RfQ will change to PURCHASE ORDER. Tabs in the upper
-right corner of the order will show 1 Shipment and 0 Invoice.</p><img src="../../../_images/image10.png" style="" class="img-responsive center-block"></section>
+  <section id="create-a-request-for-quotation"><p >Запрос предложения используется, когда вы планируете приобрести некоторые товары, и хотите получить коммерческое предложение для них. В Odoo запрос предложения используется для отправки вашего списка нужных товаров вашем поставщику. Когда поставщик ответит на ваш запрос, вы можете решить продолжить предложение и приобрести или отклонить предложение.</p></section><section id="configuration"><h2 >Настройка</h2></section><section id="creating-a-request-for-quotation"><h3 >Создание запроса на коммерческое предложение</h3><p >В модуле Покупки откройте: menuselection: [UNKNOWN NODE title_reference] и нажмите ** Создать [UNKNOWN NODE problematic].</p><img src="../../../_images/image041.png" style="" class="img-responsive center-block"><p >Выберите своего поставщика в меню ** Поставщик ** или создайте его прямо нажав на кнопку ** Создать и редактировать [UNKNOWN NODE problematic]. В поле ** Дата заказа ** выберите дату, до которой вы хотите перейти к фактическому заказ.</p><div class="code-fields"><div class="code-field"><div class="code-field-name">Приход</div><div class="code-field-body"><div class="line-block"><div class="line">Поступающие грузы</div></div></div></div><div class="code-field"><div class="code-field-name">Поставщик</div><div class="code-field-body"><div class="line-block"><div class="line">Вы можете найти продавца по своему именем, ИНН, электронной почте или внутренним ссылке.</div></div></div></div><div class="code-field"><div class="code-field-name">Обозначение производителя</div><div class="code-field-body"><div class="line-block"><div class="line">Ссылка заказа продажи или предложение, отправленное поставщиком. Он используется для выполнения сопоставления при получении продукции так как эта ссылка обычно пишется на заказ доставки отправленных поставщиком.</div></div></div></div><div class="code-field"><div class="code-field-name">Дата заказа</div><div class="code-field-body"><div class="line-block"><div class="line">Показывает дату, когда Предложение должно быть подтверждено и преобразовано в заказ на поставку.</div></div></div></div><div class="code-field"><div class="code-field-name">Документ-источник</div><div class="code-field-body"><div class="line-block"><div class="line">Reference of the document that generated this purchase order request (e.g. a sales order)</div></div></div></div><div class="code-field"><div class="code-field-name">Доставить</div><div class="code-field-body"><div class="line-block"><div class="line">Определяет тип операции для входящей поставки</div></div></div></div><div class="code-field"><div class="code-field-name">Адрес Дроп-Шиппинг доставки</div><div class="code-field-body"><div class="line-block"><div class="line">Поместите адрес, если вы хотите доставить напрямую от поставщика к клиенту. В противном случае оставьте пустым для доставки в свою компанию.</div></div></div></div><div class="code-field"><div class="code-field-name">Тип места хранения назначения</div><div class="code-field-body"><div class="line-block"><div class="line">Техническое поле используется для показа Адрес Дроп-Шиппинг доставки</div></div></div></div><div class="code-field"><div class="code-field-name">Инкотермс</div><div class="code-field-body"><div class="line-block"><div class="line">Международные правила по толкованию наиболее широко используемых торговых терминов в области внешней торговли.</div></div></div></div></div><a href="https://demo.odoo.com?module=purchase.purchase_rfq" class="center-block reference btn-lg btn-primary external btn-block btn">Смотрите * Запрос на коммерческое предложение * в нашей демоверсии онлайн</a><p >В ** Товарам ** нажмите Добавить элемент. Выберите товар, который вы хотите заказать меню ** Нет в [UNKNOWN NODE problematic]. Укажите ** Количество [UNKNOWN NODE problematic], вставив номер и выбрав единицу измерения. В поле ** Цена единицы ** укажите цену, которую вы хотите предложить (вы также можете оставить поле пустым, если не знаете, какая цена должна быть), а также добавьте ожидаемую дату доставки в поле Планируемая дата. Нажмите кнопку ** Сохранить [UNKNOWN NODE problematic], затем ** Печать коммерческого предложения ** или ** Отправить коммерческое предложение ** электронной почте (убедитесь, что для этого поставщика указан адрес электронной почты или введите новую).</p><img src="../../../_images/image081.png" style="" class="img-responsive center-block"><p >После нажатия кнопки ** Отправить ** вы заметите, что статус Коммерческого предложения перейдет с ** Черновики ** в ** направленном коммерческое предложение [UNKNOWN NODE problematic].</p><img src="../../../_images/image061.png" style="" class="img-responsive center-block"><p >Когда поставщик ответит на предложение, обновите ее, нажав ** Редактировать [UNKNOWN NODE problematic], чтобы ответить на коммерческое предложение (цены, налоги, ожидаемая стоимость доставки, условия платежа и т.д.), а затем нажмите кнопку ** Сохранить [UNKNOWN NODE problematic], чтобы оформить заказ на покупку.</p><p >Чтобы продолжить заказ, нажмите ** Подтвердить заказ [UNKNOWN NODE problematic], чтобы отправить заказ поставщику. Статус Коммерческой предложения перейдет в ** Заказ на покупку [UNKNOWN NODE problematic].</p><img src="../../../_images/image111.png" style="" class="img-responsive center-block"><p >Статус коммерческого предложения изменится на ЗАКАЗ НА ПОКУПКУ. Вкладки в верхнем правом углу заказ покажут 1 доставку и 0 счета-фактуры.</p><img src="../../../_images/image10.png" style="" class="img-responsive center-block"></section>
 
           </article>
         </div>

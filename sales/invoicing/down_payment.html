@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>Request a down payment &#8212; Odoo 13.0 documentation</title>
+    <title>Запрос на предоплату &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
     <script type="text/javascript" src="../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../_static/doc.js"></script>
     <script type="text/javascript" src="../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/sales/invoicing/down_payment.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/sales/invoicing/down_payment.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/sales/invoicing/down_payment.html" />
+    <link rel="canonical" href="/master/ru/sales/invoicing/down_payment.html" />
   
-    <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Send a pro-forma invoice" href="proforma.html" />
-    <link rel="prev" title="Invoice based on delivered or ordered quantities" href="invoicing_policy.html" /> 
+    <link rel="index" title="Алфавитный указатель" href="../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../search.html" />
+    <link rel="next" title="Отправка проформы счета" href="proforma.html" />
+    <link rel="prev" title="Выставления счета на основе заказанной или доставленной количества" href="invoicing_policy.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -194,7 +198,7 @@
         
             
                 
-                    <li><a href="../../sales.html">Sales</a></li>
+                    <li><a href="../../sales.html">Продажи</a></li>
                 
             
         
@@ -205,7 +209,7 @@
             
         
     
-    <li class="active"><a href="#">Request a down payment</a></li>
+    <li class="active"><a href="#">Запрос на предоплату</a></li>
 
               
           </ol>
@@ -221,12 +225,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/sales/invoicing/down_payment.html">English</a></li>
+        
+            <li><a href="/13.0/uk/sales/invoicing/down_payment.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -253,6 +272,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -262,7 +283,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> Request a down payment </h1>
+        <h1> Запрос на предоплату </h1>
       </div>
     </figure>
     
@@ -275,7 +296,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#first-time-you-request-a-down-payment" class="ripple internal reference">First time you request a down payment</a></li><li class="list-group-item"><a href="#modify-the-income-account-and-customer-taxes" class="ripple internal reference">Modify the income account and customer taxes</a></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#first-time-you-request-a-down-payment" class="ripple internal reference">Первый раз вы спрашиваете предоплату</a></li><li class="list-group-item"><a href="#modify-the-income-account-and-customer-taxes" class="ripple internal reference">Измените счет дохода и налоги клиента</a></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/sales/invoicing/down_payment.rst" class="gith-link">
                   Edit on GitHub
@@ -287,14 +308,7 @@
           <article class="doc-body  ">
             
             
-  <section id="request-a-down-payment"><p >A down payment is an initial, partial payment, with the agreement that
-the rest will be paid later. For expensive orders or projects, it is a
-way to protect yourself and make sure your customer is serious.</p></section><section id="first-time-you-request-a-down-payment"><h2 >First time you request a down payment</h2><p >When you confirm a sale, you can create an invoice and select a down
-payment option. It can either be a fixed amount or a percentage of the
-total amount.</p><p >The first time you request a down payment you can select an income
-account and a tax setting that will be reused for next down payments.</p><img src="../../_images/down_payment01.png" style="" class="img-responsive center-block"><p >You will then see the invoice for the down payment.</p><img src="../../_images/down_payment02.png" style="" class="img-responsive center-block"><p >On the subsequent or final invoice, any prepayment made will be
-automatically deducted.</p><img src="../../_images/down_payment03.png" style="" class="img-responsive center-block"></section><section id="modify-the-income-account-and-customer-taxes"><h2 >Modify the income account and customer taxes</h2><p >From the products list, search for <em >Down Payment</em>.</p><img src="../../_images/down_payment04.png" style="" class="img-responsive center-block"><p >You can then edit it, under the invoicing tab you will be able to change
-the income account &amp; customer taxes.</p><img src="../../_images/down_payment05.png" style="" class="img-responsive center-block"></section>
+  <section id="request-a-down-payment"><p >Предоплата - начальная, частичная оплата, при условии, что остальные будет оплачена позже. Для дорогих заказов или проектов это способ защитить себя и убедиться, что ваш клиент является серьезным.</p></section><section id="first-time-you-request-a-down-payment"><h2 >Первый раз вы спрашиваете предоплату</h2><p >Подтверждая продажу, вы можете создать счет-фактуру и выбрать вариант предоплаты. Это может быть либо фиксированная сумма, или процент от общей суммы.</p><p >В первый раз, когда вы спрашиваете предоплату, вы можете выбрать счет дохода и настройка налога, которое будет использовано для дальнейших предоплат.</p><img src="../../_images/down_payment01.png" style="" class="img-responsive center-block"><p >После этого вы увидите счет-фактуру для предоплаты.</p><img src="../../_images/down_payment02.png" style="" class="img-responsive center-block"><p >На следующем или последнем счете-фактуре любая предоплата будет автоматически вычтена.</p><img src="../../_images/down_payment03.png" style="" class="img-responsive center-block"></section><section id="modify-the-income-account-and-customer-taxes"><h2 >Измените счет дохода и налоги клиента</h2><p >Из перечня товаров найдите * Предоплата [UNKNOWN NODE problematic].</p><img src="../../_images/down_payment04.png" style="" class="img-responsive center-block"><p >После этого вы сможете изменить это на вкладке выставления счетов вы сможете изменить счет дохода и налоги клиента.</p><img src="../../_images/down_payment05.png" style="" class="img-responsive center-block"></section>
 
           </article>
         </div>

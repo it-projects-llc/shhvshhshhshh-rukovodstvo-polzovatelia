@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>When should I use supplier bills or purchase receipts? &#8212; Odoo 13.0 documentation</title>
+    <title>Когда следует применять счета поставщиков или квитанции закупки в Odoo? &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../../_static/doc.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/accounting/payables/supplier_bills/bills_or_receipts.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/accounting/payables/supplier_bills/bills_or_receipts.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/accounting/payables/supplier_bills/bills_or_receipts.html" />
+    <link rel="canonical" href="/master/ru/accounting/payables/supplier_bills/bills_or_receipts.html" />
   
-    <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Vendor Payments" href="../pay.html" />
-    <link rel="prev" title="How to manage vendor Bills?" href="manage.html" /> 
+    <link rel="index" title="Алфавитный указатель" href="../../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../../search.html" />
+    <link rel="next" title="платежи поставщика" href="../pay.html" />
+    <link rel="prev" title="Как управлять счетами поставщиков?" href="manage.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -194,7 +198,7 @@
         
             
                 
-                    <li><a href="../../../accounting.html">Accounting</a></li>
+                    <li><a href="../../../accounting.html">Бухгалтерский учёт</a></li>
                 
             
         
@@ -211,7 +215,7 @@
             
         
     
-    <li class="active"><a href="#">When should I use supplier bills or purchase receipts?</a></li>
+    <li class="active"><a href="#">Когда следует применять счета поставщиков или квитанции закупки в Odoo?</a></li>
 
               
           </ol>
@@ -227,12 +231,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/accounting/payables/supplier_bills/bills_or_receipts.html">English</a></li>
+        
+            <li><a href="/13.0/uk/accounting/payables/supplier_bills/bills_or_receipts.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -259,6 +278,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -268,7 +289,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> When should I use supplier bills or purchase receipts? </h1>
+        <h1> Когда следует применять счета поставщиков или квитанции закупки в Odoo? </h1>
       </div>
     </figure>
     
@@ -281,7 +302,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a></li><li class="list-group-item"><a href="#register-a-receipt" class="ripple internal reference">Register a receipt</a></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Настройка</a></li><li class="list-group-item"><a href="#register-a-receipt" class="ripple internal reference">зарегистрируйте квитанцию</a></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/accounting/payables/supplier_bills/bills_or_receipts.rst" class="gith-link">
                   Edit on GitHub
@@ -293,33 +314,7 @@
           <article class="doc-body  ">
             
             
-  <section id="when-should-i-use-supplier-bills-or-purchase-receipts"><p >Purchase receipts are different than vendor bills. Vendor bills are
-requests for payment. If I issue a Purchase Order my vendor will in most
-business cases send me a Vendor Bill. Depending on his invoice policy I
-then have a defined amount of time to pay the Bill. A Purchase receipts
-are confirmations of received payments. They are my day-to-day ticket
-receipts.</p><p >From an accounting point of view this makes a difference as a Vendor
-Bill will first credit a debt account before reconciling with the bank
-account. On the other hand we usually immediately pay the purchase
-receipts, which means no debt account is necessary.</p><p >Moreover purchase receipts can have a different tax amount per product
-line, as vendors bills apply one tax amount over the entire bill.</p><p >If my company’s bank account is used to pay for goods where only a
-purchase receipt are issued I should use the purchase receipts function
-in Odoo to handle them in accounting.</p><p >Let’s take the following example: we need to buy tea for our
-customers from a local tea store that doesn’t issue bills. We go every
-week buy 50 euros worth of tea and a teapot worth 20 euros. We pay with
-the company’s bank account.</p></section><section id="configuration"><h2 >Configuration</h2><p >To handle purchase receipts in Odoo one module and one app has to be
-installed. Go into the app module and install the accounting app.</p><img src="../../../_images/bill01.png" style="" class="img-responsive center-block"><p >Then, go in the search bar, delete the default module search, and search
-for “purchase”. Install the <strong >Sale &amp; Purchase Vouchers</strong> module.</p><img src="../../../_images/bill02.png" style="" class="img-responsive center-block"></section><section id="register-a-receipt"><h2 >Register a receipt</h2><p >By installing the <strong >Sale &amp; Purchase Vouchers</strong> I’ve made the new
-<strong >Purchase Receipts</strong> drop down menu visible in the accounting app.</p><p >To import our 50 euros worth of tea purchase receipt, enter the
-accounting app, select <span class="menuselection">Purchases ‣ Purchase Receipts</span>.</p><p >Create a new Purchase Receipt and fill in all the necessary information.
-Note that you have the choice in the Payment field between <strong >Pay Later</strong>
-or <strong >Pay Now</strong>. It’s a significant difference as Pay Later will generate
-a debt accounting entry whereas Pay Now will immediately credit the Bank
-account.</p><p >In most cases you immediately pay, we will thus select the Pay Directly
-option. Add the products, the related account and the appropriate taxe.
-For the example we suppose the tea is a 12% taxe and the Tea Pott 21%.</p><img src="../../../_images/bill03.png" style="" class="img-responsive center-block"><p >Validate the Purchase Receipt to post it. Don’t forget you need to
-<a href="../../bank/reconciliation/use_cases.html" class="internal reference"><span class="doc">reconcile payments</span></a> in order to
-completely close the transaction in your accounting.</p></section>
+  <section id="when-should-i-use-supplier-bills-or-purchase-receipts"><p >Квитанции закупки отличаются от счетов поставщика. Счета поставщика - это запросы на оплату. Если вы выдаете заказ на покупку, в большинстве случаев поставщик отправляет счет поставщика. В зависимости от политики по счетов-фактур у вас есть определенное время для оплаты счета. Квитанции закупки являются подтверждениями полученных платежей. Это ваши повседневные квитанции.</p><p >С точки зрения бухгалтерского учета это имеет значение, поскольку счет поставщика сначала кредитует долговой счет, прежде чем согласовать с банковским счетом. С другой стороны, мы обычно немедленно платим квитанции закупки, что означает, что дебетовый счет не нужен.</p><p >Кроме того, квитанции закупки могут иметь разную сумму налога на товарный строку, поскольку счета поставщиков применяют одну сумму налога на весь счет.</p><p >Если банковский счет вашей компании используется для оплаты товаров, в которых выдается квитанция о покупке, я должен использовать функцию квитанций закупки в Odoo для их обработки в бухгалтерском бухучета.</p><p >Давайте рассмотрим такой пример: мы должны покупать чай для наших клиентов из местного магазина чая, который не выдает счета. Мы каждую неделю отдаем 50 евро за чай и чайник стоимостью 20 евро. Мы платим за помощью банковского счета компании.</p></section><section id="configuration"><h2 >Настройка</h2><p >Для обработки квитанций закупки в модуле Odoo нужно установить одно приложение. Перейдите в меню приложений и установите модуль Бухучета.</p><img src="../../../_images/bill01.png" style="" class="img-responsive center-block"><p >Затем перейдите на панель поиска, удалите поиск по модулю по умолчанию и ищите &amp;quot;Закупки&amp;quot;. Установите модуль ** Продажи и Ваучеры покупки [UNKNOWN NODE problematic].</p><img src="../../../_images/bill02.png" style="" class="img-responsive center-block"></section><section id="register-a-receipt"><h2 >зарегистрируйте квитанцию</h2><p >Установив ** Продажа и Ваучеры покупки [UNKNOWN NODE problematic], вы открываете раскрывающемся меню нового приложения ** Квитанции закупки [UNKNOWN NODE problematic], который отражается в бухучете.</p><p >Чтобы импортировать квитанцию закупки чая на сумму 50 евро, введите приложение бухучета, выберите: menuselection: [UNKNOWN NODE title_reference].</p><p >Создайте новую квитанцию покупки и заполните всю необходимую информацию. Обратите внимание, что в поле Платеж является выбор ** Заплатить позднее ** или ** Заплатить сейчас [UNKNOWN NODE problematic]. Это существенное отличие, поскольку функция Заплатить позднее создаст аккаунт долга, тогда как Заплатить сейчас причисляет банковский счет.</p><p >В большинстве случаев вы платите сейчас, таким образом, выбираете опцию Оплатить направления. Добавьте товары, соответствующий счет и соответствующий налог. Например, вы считаете, что чай - 12% налога, а чайник - 21%.</p><img src="../../../_images/bill03.png" style="" class="img-responsive center-block"><p >Проверьте квитанцию закупки, чтобы опубликовать его. Не забывайте, что вам нужно согласовать платежи &amp;lt;../../ bank / reconciliation / use_cases&amp;gt; [UNKNOWN NODE problematic]чтобы полностью завершить транзакцию в вашем бухучета.</p></section>
 
           </article>
         </div>

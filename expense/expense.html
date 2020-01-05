@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>Expenses &#8212; Odoo 13.0 documentation</title>
+    <title>Expenses &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../_static/inventory.js"></script>
     <script type="text/javascript" src="../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
     <script type="text/javascript" src="../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../_static/doc.js"></script>
     <script type="text/javascript" src="../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/expense/expense.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/expense/expense.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/expense/expense.html" />
+    <link rel="canonical" href="/master/ru/expense/expense.html" />
   
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="General" href="../general.html" />
-    <link rel="prev" title="Live Chat" href="../livechat/livechat.html" /> 
+    <link rel="index" title="Алфавитный указатель" href="../genindex.html" />
+    <link rel="search" title="Поиск" href="../search.html" />
+    <link rel="next" title="Общее" href="../general.html" />
+    <link rel="prev" title="Живой чат" href="../livechat/livechat.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -205,12 +209,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/expense/expense.html">English</a></li>
+        
+            <li><a href="/13.0/uk/expense/expense.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -236,6 +255,8 @@
 <script type="text/javascript">$('#searchbox').show(0);</script>
             
 
+            
+              <li class="divider"></li>
             
           </ul>
         </div>
@@ -279,9 +300,9 @@ When a specific expense is reimbursed at a fixed price, set a cost on the produc
 Otherwise keep the cost at 0.0 and employees will report the real cost per expense.</p><img src="../_images/expense_product.png" style="" class="img-responsive center-block"><p >Here are some examples to configure:</p><ul ><li ><p >Restaurant:</p><ul ><li >Cost: 0.00 (the cost of the ticket will be recorded on every expense)</li></ul></li><li ><p >Travel with Personal Car:</p><ul ><li >Cost: 0.30 (the price per mile reimbursed by the company is fixed)</li></ul></li><li ><p >Hotel:</p><ul ><li >Cost: 0.00 (the cost of the ticket will be recorded on every expense)</li></ul></li><li ><p >Others:</p><ul ><li >Cost: 0.0</li></ul></li></ul><p >Don’t forget to set an expense tax on each expense type
 (and an account if you use Odoo Accounting).
 It’s usually a good practice to use a tax that is configured
-with <em >Tax Included in Price</em> (see: <a href="../accounting/others/taxes/tax_included.html" class="internal reference"><span class="doc">How to set tax-included prices</span></a>).
+with <em >Tax Included in Price</em> (see: <a href="../accounting/others/taxes/tax_included.html" class="internal reference"><span class="doc">Как установить цены, которые уже включают налог</span></a>).
 That way, employees report expenses with
-prices including taxes, which is usually the expected behaviour.</p><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >The <em >Sales</em> app allows you to specify unit of measures for your
+prices including taxes, which is usually the expected behaviour.</p><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >The <em >Sales</em> app allows you to specify unit of measures for your
 expense types (units, miles, nights, etc.).
 Go to <span class="menuselection">Sales ‣ Configuration ‣ Settings</span> and check
 <em >Some products may be sold/purchased in different units of measure (advanced)</em>.</p></div></section><section id="how-to-record-expenses"><h2 >How to record expenses</h2></section><section id="manually"><h3 >Manually</h3><p >As an employee (Employee in user access rights), you can record
@@ -294,7 +315,7 @@ That will help the manager and the accountant validate it.</li></ol><img src="..
 Make a snapshot of the receipt and send it by email, or simply forward a bill!</p><p >The only thing to do is setting up an email alias in
 <span class="menuselection">Expenses ‣ Configuration ‣ Settings</span> (e.g. <em >expenses</em> @mycompany.odoo.com).
 For security purposes, only authenticated employee emails
-(cfr. <em >Work Email</em> in employee detail form) are accepted.</p><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >The expense product is set automatically if the mail subject contains
+(cfr. <em >Work Email</em> in employee detail form) are accepted.</p><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >The expense product is set automatically if the mail subject contains
 the product’s internal reference between brackets (e.g. [Food]).
 Type the expense amount in the mail subject to set it on the expense too.</p></div></section><section id="how-to-submit-expenses-to-managers"><h2 >How to submit expenses to managers</h2><p >When you are ready to submit your expenses to your manager
 (e.g. at the end of a business trip, or once a month),
@@ -311,13 +332,13 @@ You need to be set as manager in the detail form of those employees.</p><img src
 goes to <span class="menuselection">Expenses ‣ Accountant ‣ Expense Reports To Post</span> to check
 accounts, products and taxes. They can click <em >Post Journal Entries</em>
 to post related journal entries into your books.
-To do so, the user must have following access rights:</p><ul ><li >Accounting: Accountant or Adviser</li><li >Expenses: Manager</li></ul><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >To post an expense, a <em >Home Address</em> must be set on the employee.
+To do so, the user must have following access rights:</p><ul ><li >Accounting: Accountant or Adviser</li><li >Expenses: Manager</li></ul><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >To post an expense, a <em >Home Address</em> must be set on the employee.
 If you get a related blocking message when posting, click the employee,
 go to <em >Personal Information</em> tab and select/create the contact of your employee
 in the address book.
 A contact has been automatically created if this person is using Odoo.</p></div></section><section id="how-to-reimburse-employees"><h2 >How to reimburse employees</h2><p >You can now see all the expense reports to reimburse in
 <span class="menuselection">Expenses ‣ Accountant ‣ Expense Reports To Pay</span>.
-To record the payment or pay by check, click <em >Register a Payment</em>.</p><p >See how you can easily manage the payment process in Odoo:</p><ul ><li ><a href="../accounting/payables/pay/check.html" class="internal reference"><span class="doc">Pay by Checks</span></a></li><li ><a href="../accounting/payables/pay/sepa.html" class="internal reference"><span class="doc">Pay with SEPA</span></a></li></ul></section><section id="how-to-re-invoice-expenses-to-your-customers"><h2 >How to re-invoice expenses to your customers</h2><p >If you track expenses on customer projects, you can charge them back to
+To record the payment or pay by check, click <em >Register a Payment</em>.</p><p >See how you can easily manage the payment process in Odoo:</p><ul ><li ><a href="../accounting/payables/pay/check.html" class="internal reference"><span class="doc">оплачивайте чеками</span></a></li><li ><a href="../accounting/payables/pay/sepa.html" class="internal reference"><span class="doc">Оплачивайте с SEPA</span></a></li></ul></section><section id="how-to-re-invoice-expenses-to-your-customers"><h2 >How to re-invoice expenses to your customers</h2><p >If you track expenses on customer projects, you can charge them back to
 your customers automatically.</p></section><section id="setup"><h3 >Setup</h3><ul ><li >Enable <strong >Customer Billing</strong> in the Expenses settings</li><li ><p >Go to the product configuration menu and set the invoicing method on
 all your Expense types:</p><ul ><li >Ordered quantities : it will invoice expenses based on the ordered
 quantity</li><li >Delivered quantities :it will invoice expenses based on the

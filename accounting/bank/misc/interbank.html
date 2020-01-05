@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>How to do a bank wire transfer from one bank to another? &#8212; Odoo 13.0 documentation</title>
+    <title>Как делать банковский перевод в Odoo? &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../../_static/doc.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/accounting/bank/misc/interbank.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/accounting/bank/misc/interbank.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/accounting/bank/misc/interbank.html" />
+    <link rel="canonical" href="/master/ru/accounting/bank/misc/interbank.html" />
   
-    <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Bank Reconciliation" href="../reconciliation.html" />
-    <link rel="prev" title="How to manage batch deposits of checks?" href="batch.html" /> 
+    <link rel="index" title="Алфавитный указатель" href="../../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../../search.html" />
+    <link rel="next" title="Сверка с банком" href="../reconciliation.html" />
+    <link rel="prev" title="Как управлять серийными депозитам чеков?" href="batch.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -194,7 +198,7 @@
         
             
                 
-                    <li><a href="../../../accounting.html">Accounting</a></li>
+                    <li><a href="../../../accounting.html">Бухгалтерский учёт</a></li>
                 
             
         
@@ -211,7 +215,7 @@
             
         
     
-    <li class="active"><a href="#">How to do a bank wire transfer from one bank to another?</a></li>
+    <li class="active"><a href="#">Как делать банковский перевод в Odoo?</a></li>
 
               
           </ol>
@@ -227,12 +231,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/accounting/bank/misc/interbank.html">English</a></li>
+        
+            <li><a href="/13.0/uk/accounting/bank/misc/interbank.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -259,6 +278,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -268,7 +289,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> How to do a bank wire transfer from one bank to another? </h1>
+        <h1> Как делать банковский перевод в Odoo? </h1>
       </div>
     </figure>
     
@@ -281,7 +302,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a><ul ><li class="list-group-item"><a href="#check-your-chart-of-accounts-and-default-transfer-account" class="ripple internal reference">Check your Chart of Accounts and default transfer account</a></li><li class="list-group-item"><a href="#create-a-second-bank-account-journal" class="ripple internal reference">Create a second bank account / Journal</a></li></ul></li><li class="list-group-item"><a href="#register-an-internal-transfer-from-one-bank-to-another" class="ripple internal reference">Register an internal transfer from one bank to another.</a><ul ><li class="list-group-item"><a href="#log-an-internal-transfer" class="ripple internal reference">Log an internal transfer</a></li><li class="list-group-item"><a href="#import-bank-statements-and-reconcile" class="ripple internal reference">Import bank statements and reconcile</a></li></ul></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Настройка</a><ul ><li class="list-group-item"><a href="#check-your-chart-of-accounts-and-default-transfer-account" class="ripple internal reference">Проверьте свой график счетов и счет перевода по умолчанию</a></li><li class="list-group-item"><a href="#create-a-second-bank-account-journal" class="ripple internal reference">Создайте второй банковский счет / журнал</a></li></ul></li><li class="list-group-item"><a href="#register-an-internal-transfer-from-one-bank-to-another" class="ripple internal reference">Зарегистрируйте внутренний перевод с одного банковского счета на другой</a><ul ><li class="list-group-item"><a href="#log-an-internal-transfer" class="ripple internal reference">Введите внутренний перевод</a></li><li class="list-group-item"><a href="#import-bank-statements-and-reconcile" class="ripple internal reference">Импорт банковские выписки и согласуйте их</a></li></ul></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/accounting/bank/misc/interbank.rst" class="gith-link">
                   Edit on GitHub
@@ -293,42 +314,7 @@
           <article class="doc-body  ">
             
             
-  <section id="how-to-do-a-bank-wire-transfer-from-one-bank-to-another"><p >A company might have several bank accounts or cash registers. Within
-odoo it is possible to handle internal transfers of money with only a
-couple of clicks.</p><p >We will take the following example to illustrate. My company has two
-bank accounts and I want to transfer 50.000 euros from one of our bank
-accounts to the another one.</p></section><section id="configuration"><h2 >Configuration</h2></section><section id="check-your-chart-of-accounts-and-default-transfer-account"><h3 >Check your Chart of Accounts and default transfer account</h3><p >To handle internal transfers you need a transfer account in your charts
-of account. Odoo will generate an account automatically based on the
-country of your chart of account. To configure your chart of accounts and
-check the default transfer account go into the accounting module settings,
-select <span class="menuselection">Configuration ‣ Settings</span>.</p><p >Your chart of accounts will be pre-installed depending on the country
-specified during your registration, it cannot be changed.</p><img src="../../../_images/interbank04.png" style="" class="img-responsive center-block"><p >The default transfer account will automatically be generated as well
-depending on your country’s legislation. If necessary it can be modified
-from the same page.</p><img src="../../../_images/interbank05.png" style="" class="img-responsive center-block"></section><section id="create-a-second-bank-account-journal"><h3 >Create a second bank account / Journal</h3><p >Before we can register an internal transfer we need to add a new bank to
-our accounting dashboard. To do so enter the accounting module, click on
-<span class="menuselection">Configuration ‣ Bank Accounts</span>. Create a new bank account. You should
-fill in the <strong >Account Number</strong>. You can also create and edit your bank to
-specify your bank’s details.</p><img src="../../../_images/interbank03.png" style="" class="img-responsive center-block"><p >By saving the changes you now have 2 bank accounts.</p><img src="../../../_images/interbank06.png" style="" class="img-responsive center-block"></section><section id="register-an-internal-transfer-from-one-bank-to-another"><h2 >Register an internal transfer from one bank to another.</h2><p >We will now transfer 50.000 euros from our <strong >Bank</strong> to our <strong >Bank BE57 0633
-9533 1498</strong> account.</p></section><section id="log-an-internal-transfer"><h3 >Log an internal transfer</h3><p >The first step is to register the internal payment. To do so go into
-your accounting dashboard, click on the <strong >more</strong> button of one of your banks
-and select <span class="menuselection">New ‣ Internal transfer</span>.</p><img src="../../../_images/interbank01.png" style="" class="img-responsive center-block"><p >Create a new payment. The payment type will automatically be set to
-internal transfer. Select the <strong >Bank</strong> you want to transfer to, specify the
-<strong >Amount</strong> and add a <strong >Memo</strong> if you wish.</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >The memo is important if you wish to automatically reconcile (<a href="#reconcile" class="internal alert-link reference">see</a>).</p></div><img src="../../../_images/interbank02.png" style="" class="img-responsive center-block"><p >Save and confirm the changes to register the payment.</p><p >In terms of accounting the money is now booked in the transfer account.
-We’ll need to import bank statements to book the money in the final
-accounts.</p></section><section id="import-bank-statements-and-reconcile"><i id="reconcile"></i><h3 >Import bank statements and reconcile</h3><p >Note that the bank balance computed by Odoo is different that the last
-statement of your bank.</p><img src="../../../_images/interbank11.png" style="" class="img-responsive center-block"><p >That is because we did not import the bank statement confirming the
-receiving and sending of the money. It’s thus necessary to import your
-bank statement and reconcile the payment with the correct bank statement
-line. Once you receive your bank statements click the <strong >new statement</strong>
-button of the corresponding bank to import them.</p><img src="../../../_images/interbank07.png" style="" class="img-responsive center-block"><p >Fill in your <strong >Transactions line</strong>. Once done, Odoo will display a <strong >Computed
-Balance</strong>. that computed balance is the theorical end balance of your
-bank account. If it’s corresponding to the bank statement, it means that no errors were
-made. Fill in the <strong >Ending balance</strong> and click on the <strong >Reconcile</strong> button.</p><img src="../../../_images/interbank10.png" style="" class="img-responsive center-block"><p >The following window will open:</p><img src="../../../_images/interbank09.png" style="" class="img-responsive center-block"><p >You need to choose counterparts for the payment. Select the correct
-bank statement line corresponding to the payment and click on the
-<strong >reconcile</strong> button. Close the statement to finish the transaction</p><img src="../../../_images/interbank08.png" style="" class="img-responsive center-block"><p >The same steps will need to be repeated once you receive your second
-bank statement. Note that if you specify the same amount and the
-same memo in both bank statements and payment transactions then the
-reconciliation will happen automatically.</p><img src="../../../_images/interbank12.png" style="" class="img-responsive center-block"></section>
+  <section id="how-to-do-a-bank-wire-transfer-from-one-bank-to-another"><p >Компания может иметь несколько банковских счетов или кассовых аппаратов. В рамках odoo можно обрабатывать внутренние переводы денег всего за несколько нажатий.</p><p >Мы покажем такой пример. В моей компании есть два банковских счета, и я хочу перевести 50 000 евро с одного из наших банковских счетов на другой.</p></section><section id="configuration"><h2 >Настройка</h2></section><section id="check-your-chart-of-accounts-and-default-transfer-account"><h3 >Проверьте свой график счетов и счет перевода по умолчанию</h3><p >Для обработки внутренних переводов вам нужен счет перевода в вашем плане счетов. Odoo автоматически создаст счет на основе страны вашего плана счетов. Чтобы настроить ваш план счетов и проверить счет переводов по умолчанию, перейдите к настройкам модуля бухучета, выберите: menuselection: [UNKNOWN NODE title_reference].</p><p >Ваш график счетов будет предварительно установлены в зависимости от страны, указанной при регистрации, ее невозможно изменить.</p><img src="../../../_images/interbank04.png" style="" class="img-responsive center-block"><p >Счет перемещения по умолчанию будет автоматически создан также в зависимости от законодательства вашей страны. При необходимости его можно изменить с той же страницы.</p><img src="../../../_images/interbank05.png" style="" class="img-responsive center-block"></section><section id="create-a-second-bank-account-journal"><h3 >Создайте второй банковский счет / журнал</h3><p >Прежде чем мы можем зарегистрировать внутреннее перемещение, нам нужно добавить новый банковский счет на нашу информационную панель Бухучета. Для этого введите модуль Бухучета, нажмите на: menuselection: [UNKNOWN NODE title_reference]. Создайте новый банковский счет. Вы должны заполнить ** номер счета [UNKNOWN NODE problematic]. Вы также можете создавать и редактировать свой банковский счет, чтобы указать детали своего банка.</p><img src="../../../_images/interbank03.png" style="" class="img-responsive center-block"><p >После сохранения изменений у вас теперь есть 2 банковских счета.</p><img src="../../../_images/interbank06.png" style="" class="img-responsive center-block"></section><section id="register-an-internal-transfer-from-one-bank-to-another"><h2 >Зарегистрируйте внутренний перевод с одного банковского счета на другой</h2><p >Теперь мы перечислим 50 000 евро в нашей ** банковского счета ** на счет ** BE57 0633 9533 1498 [UNKNOWN NODE problematic].</p></section><section id="log-an-internal-transfer"><h3 >Введите внутренний перевод</h3><p >Первый шаг - зарегистрировать внутренний платеж. Для этого перейдите на свою информационную панель Бухучета. нажмите на кнопку ** больше ** одного из ваших банков и выберите: menuselection: [UNKNOWN NODE title_reference].</p><img src="../../../_images/interbank01.png" style="" class="img-responsive center-block"><p >Создайте новый платеж. Тип платежа будет автоматически установлено как внутреннее перемещение. Выберите ** Банк [UNKNOWN NODE problematic], куда вы хотите выполнить перемещение, укажите ** Сумму ** и добавьте ** Примечание [UNKNOWN NODE problematic], если хотите.</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Примечание важна, если вы хотите автоматическое согласование. ( [UNKNOWN NODE problematic]См &lt;<a href="#reconcile" class="internal alert-link reference">Reconcile</a>&gt; [UNKNOWN NODE problematic]_).</p></div><img src="../../../_images/interbank02.png" style="" class="img-responsive center-block"><p >Сохраните и подтвердите изменения, чтобы зарегистрировать платеж.</p><p >С точки зрения бухгалтерского учета деньги сейчас бронируются на счет перевода. Нам нужно будет импортировать банковские выписки, чтобы зачислить деньги конечном счете.</p></section><section id="import-bank-statements-and-reconcile"><i id="reconcile"></i><h3 >Импорт банковские выписки и согласуйте их</h3><p >Заметьте, что баланс, который исчисляется Odoo, отличается от последней банковской выписки.</p><img src="../../../_images/interbank11.png" style="" class="img-responsive center-block"><p >Это потому, что мы не импортировали банковскую выписку, подтверждающую получение и отправление денег. Таким образом, нужно импортировать банковскую выписку и согласовать платеж с правильным строкой выписки банка. Как только вы получите свои банковские выписки, нажмите кнопку ** новая выписка ** соответствующего банка, чтобы импортировать их.</p><img src="../../../_images/interbank07.png" style="" class="img-responsive center-block"><p >Заполните ** Строка транзакций [UNKNOWN NODE problematic]. После завершения работы, Odoo покажет ** Рассчитан баланс [UNKNOWN NODE problematic], что расчетный баланс является теоретическим конечным балансом вашего банковского счета. Если это соответствует банковской выписке, это означает, что ошибок сделано не было. Заполните ** Конечный баланс ** и нажмите кнопку ** Согласовать [UNKNOWN NODE problematic].</p><img src="../../../_images/interbank10.png" style="" class="img-responsive center-block"><p >Откроется следующее окно:</p><img src="../../../_images/interbank09.png" style="" class="img-responsive center-block"><p >Вам нужно выбрать аналоги для платежа. Выберите правильную строку банковской выписки, которая соответствует указанному параметру и нажмите кнопку ** согласовать [UNKNOWN NODE problematic]. Закройте выписку, чтобы завершить транзакцию.</p><img src="../../../_images/interbank08.png" style="" class="img-responsive center-block"><p >Эти же шаги нужно будет повторить после получения второй банковского выписки. Заметьте, что если вы указываете одинаковую сумму и одинаковую примечание как в банковских выписках, так и в платежных операциях, тогда согласования произойдет автоматически.</p><img src="../../../_images/interbank12.png" style="" class="img-responsive center-block"></section>
 
           </article>
         </div>

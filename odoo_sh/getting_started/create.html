@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>Create your project &#8212; Odoo 13.0 documentation</title>
+    <title>Create your project &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/accounting.css" />
@@ -27,14 +27,18 @@
     <script type="text/javascript" src="../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
     <script type="text/javascript" src="../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../_static/doc.js"></script>
     <script type="text/javascript" src="../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/odoo_sh/getting_started/create.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/odoo_sh/getting_started/create.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/odoo_sh/getting_started/create.html" />
+    <link rel="canonical" href="/master/ru/odoo_sh/getting_started/create.html" />
   
-    <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="index" title="Алфавитный указатель" href="../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../search.html" />
     <link rel="next" title="Branches" href="branches.html" />
     <link rel="prev" title="Get started" href="../getting_started.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
@@ -221,12 +225,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/odoo_sh/getting_started/create.html">English</a></li>
+        
+            <li><a href="/13.0/uk/odoo_sh/getting_started/create.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -252,6 +271,8 @@
 <script type="text/javascript">$('#searchbox').show(0);</script>
             
 
+            
+              <li class="divider"></li>
             
           </ul>
         </div>
@@ -296,11 +317,11 @@ Users of these databases can therefore skip this step.</p><p >You can structure 
 For instance, you can put all your modules folder in the root directory of your repository,
 or group the modules in folders by categories that you define (accounting, project, …).</p><p >For community modules available in public Git repositories,
 you can also consider to add them using <a href="../advanced/submodules.html#odoosh-advanced-submodules" class="internal reference"><span class="std std-ref">Submodules</span></a>.</p><p >Then, either <a href="branches.html#odoosh-gettingstarted-branches-stages" class="internal reference"><span class="std std-ref">make this branch the production branch</span></a>,
-or <a href="branches.html#odoosh-gettingstarted-branches-mergingbranches" class="internal reference"><span class="std std-ref">merge it into your production branch</span></a>.</p></section><section id="download-a-backup"><h3 >Download a backup</h3></section><section id="on-premise-databases"><h4 >On-premise databases</h4><p >Access the URL <code class="file">/web/database/manager</code> of your on-premise database and download a backup.</p><div role="alert" class="alert-warning alert"><p class="alert-title">Warning</p><p >If you cannot access the database manager, it may have been disabled by your system administrator.
-See the <a href="https://www.odoo.com/documentation/13.0/setup/deploy.html#database-manager-security" class="external reference alert-link">database manager security documentation</a>.</p></div><p >You will need the master password of your database server. If you do not have it, contact your system administrator.</p><img src="../../_images/create-import-onpremise-backup.png" style="" class="img-responsive center-block"><p >Choose a zip including the filestore as the backup format.</p><img src="../../_images/create-import-onpremise-backup-dialog.png" style="" class="img-responsive center-block"></section><section id="odoo-online-databases"><h4 >Odoo Online databases</h4><p ><a href="https://accounts.odoo.com/my/databases/manage" class="external reference">Access your databases manager</a> and download a backup of your database.</p><img src="../../_images/create-import-online-backup.png" style="" class="img-responsive center-block"><div role="alert" class="alert-warning alert"><p class="alert-title">Warning</p><p >Saas releases (e.g. <em >saas-*</em>) are not supported on Odoo.sh.</p></div></section><section id="upload-the-backup"><h3 >Upload the backup</h3><p >Then, in your Odoo.sh project, in the backups tab of your production branch, import the backup you just downloaded.</p><img src="../../_images/create-import-production.png" style="" class="img-responsive center-block"><p >Once the backup imported, you can access the database using the <em >Connect</em> button in the history of the branch.</p><img src="../../_images/create-import-production-done.png" style="" class="img-responsive center-block"></section><section id="check-your-outgoing-email-servers"><h3 >Check your outgoing email servers</h3><p >There is a default mail server provided with Odoo.sh.
+or <a href="branches.html#odoosh-gettingstarted-branches-mergingbranches" class="internal reference"><span class="std std-ref">merge it into your production branch</span></a>.</p></section><section id="download-a-backup"><h3 >Download a backup</h3></section><section id="on-premise-databases"><h4 >On-premise databases</h4><p >Access the URL <code class="file">/web/database/manager</code> of your on-premise database and download a backup.</p><div role="alert" class="alert-warning alert"><p class="alert-title">Предупреждение</p><p >If you cannot access the database manager, it may have been disabled by your system administrator.
+See the <a href="https://www.odoo.com/documentation/13.0/setup/deploy.html#database-manager-security" class="external reference alert-link">database manager security documentation</a>.</p></div><p >You will need the master password of your database server. If you do not have it, contact your system administrator.</p><img src="../../_images/create-import-onpremise-backup.png" style="" class="img-responsive center-block"><p >Choose a zip including the filestore as the backup format.</p><img src="../../_images/create-import-onpremise-backup-dialog.png" style="" class="img-responsive center-block"></section><section id="odoo-online-databases"><h4 >Odoo Online databases</h4><p ><a href="https://accounts.odoo.com/my/databases/manage" class="external reference">Access your databases manager</a> and download a backup of your database.</p><img src="../../_images/create-import-online-backup.png" style="" class="img-responsive center-block"><div role="alert" class="alert-warning alert"><p class="alert-title">Предупреждение</p><p >Saas releases (e.g. <em >saas-*</em>) are not supported on Odoo.sh.</p></div></section><section id="upload-the-backup"><h3 >Upload the backup</h3><p >Then, in your Odoo.sh project, in the backups tab of your production branch, import the backup you just downloaded.</p><img src="../../_images/create-import-production.png" style="" class="img-responsive center-block"><p >Once the backup imported, you can access the database using the <em >Connect</em> button in the history of the branch.</p><img src="../../_images/create-import-production-done.png" style="" class="img-responsive center-block"></section><section id="check-your-outgoing-email-servers"><h3 >Check your outgoing email servers</h3><p >There is a default mail server provided with Odoo.sh.
 To use it, there must be no enabled outgoing mail server configured in your database in
 <span class="menuselection">Settings ‣ Technical ‣ Outgoing Mail Servers</span> (Developer mode must be activated).</p><p >After the import of your database,
-all outgoing email servers are disabled so you use the Odoo.sh email server provided by default.</p><div role="alert" class="alert-warning alert"><p class="alert-title">Warning</p><p >Port 25 is (and will stay) closed. If you want to connect to an external SMTP server, you should use ports 465 and 587.</p></div></section><section id="check-your-scheduled-actions"><h3 >Check your scheduled actions</h3><p >All scheduled actions are disabled after the import.</p><p >This is to prevent your newly imported database to perform actions that could impact your running production,
+all outgoing email servers are disabled so you use the Odoo.sh email server provided by default.</p><div role="alert" class="alert-warning alert"><p class="alert-title">Предупреждение</p><p >Port 25 is (and will stay) closed. If you want to connect to an external SMTP server, you should use ports 465 and 587.</p></div></section><section id="check-your-scheduled-actions"><h3 >Check your scheduled actions</h3><p >All scheduled actions are disabled after the import.</p><p >This is to prevent your newly imported database to perform actions that could impact your running production,
 such as sending the mails remaining in the queue, processing mass mailings, or third-party services synchronization
 (Calendars, files hosting, …).</p><p >If you plan to make the imported database your production, enable the scheduled actions you need.
 You can check what is enabled in the database of origin and enable the same actions in the imported database.

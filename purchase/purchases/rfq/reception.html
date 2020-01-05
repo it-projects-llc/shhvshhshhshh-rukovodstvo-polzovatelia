@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>Control product received (entirely &amp; partially) &#8212; Odoo 13.0 documentation</title>
+    <title>Контроль получения товаров (полностью и частично) &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../../_static/doc.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/purchase/purchases/rfq/reception.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/purchase/purchases/rfq/reception.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/purchase/purchases/rfq/reception.html" />
+    <link rel="canonical" href="/master/ru/purchase/purchases/rfq/reception.html" />
   
-    <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Lock a purchase order" href="lock_orders.html" />
-    <link rel="prev" title="Bill Control" href="bills.html" /> 
+    <link rel="index" title="Алфавитный указатель" href="../../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../../search.html" />
+    <link rel="next" title="Блокировка заказ на покупку" href="lock_orders.html" />
+    <link rel="prev" title="Контроль счетов" href="bills.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -194,7 +198,7 @@
         
             
                 
-                    <li><a href="../../../purchase.html">Purchase</a></li>
+                    <li><a href="../../../purchase.html">Закупка</a></li>
                 
             
         
@@ -211,7 +215,7 @@
             
         
     
-    <li class="active"><a href="#">Control product received (entirely &amp; partially)</a></li>
+    <li class="active"><a href="#">Контроль получения товаров (полностью и частично)</a></li>
 
               
           </ol>
@@ -227,12 +231,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/purchase/purchases/rfq/reception.html">English</a></li>
+        
+            <li><a href="/13.0/uk/purchase/purchases/rfq/reception.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -259,6 +278,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -268,7 +289,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> Control product received (entirely &amp; partially) </h1>
+        <h1> Контроль получения товаров (полностью и частично) </h1>
       </div>
     </figure>
     
@@ -281,7 +302,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a><ul ><li class="list-group-item"><a href="#install-the-purchase-and-inventory-applications" class="ripple internal reference">Install the Purchase and Inventory applications</a></li><li class="list-group-item"><a href="#create-products" class="ripple internal reference">Create products</a></li></ul></li><li class="list-group-item"><a href="#control-products-receptions" class="ripple internal reference">Control products receptions</a><ul ><li class="list-group-item"><a href="#purchase-products" class="ripple internal reference">Purchase products</a></li><li class="list-group-item"><a href="#receive-products" class="ripple internal reference">Receive Products</a></li></ul></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Настройка</a><ul ><li class="list-group-item"><a href="#install-the-purchase-and-inventory-applications" class="ripple internal reference">Установите программы покупки и состав</a></li><li class="list-group-item"><a href="#create-products" class="ripple internal reference">создайте товары</a></li></ul></li><li class="list-group-item"><a href="#control-products-receptions" class="ripple internal reference">Контроль приема товаров</a><ul ><li class="list-group-item"><a href="#purchase-products" class="ripple internal reference">купите товары</a></li><li class="list-group-item"><a href="#receive-products" class="ripple internal reference">Приход ТМЦ</a></li></ul></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/purchase/purchases/rfq/reception.rst" class="gith-link">
                   Edit on GitHub
@@ -293,44 +314,7 @@
           <article class="doc-body  ">
             
             
-  <section id="control-product-received-entirely-partially"><p >The <strong >Purchase</strong> app allows you to manage your purchase orders, to control
-products to receive and to control supplier bills.</p><p >If you want to get product forecasts and receptions under control, the
-first thing to do is to deploy the Odoo purchase process. Knowing what
-have been purchased is the basis of forecasting and controlling
-receptions.</p></section><section id="configuration"><h2 >Configuration</h2></section><section id="install-the-purchase-and-inventory-applications"><h3 >Install the Purchase and Inventory applications</h3><p >Start by installing the Purchase application from the <strong >Apps</strong> module.
-This will automatically trigger the installation of the <strong >Inventory</strong> app
-(among others), which is required with <strong >Purchase</strong>.</p><img src="../../../_images/reception02.png" style="" class="img-responsive center-block"></section><section id="create-products"><h3 >Create products</h3><p >Then, you need to create the products you want to purchase. Go to the
-<strong >Purchase</strong> app, then <span class="menuselection">Purchase ‣ Products</span>,
-and click on <strong >Create</strong>.</p><img src="../../../_images/reception05.png" style="" class="img-responsive center-block"><p >When creating the product, the <strong >Product Type</strong> field is important:</p><ul ><li ><strong >Stockable &amp; Consumable</strong>: products need to be received in the
-inventory.</li><li ><strong >Services &amp; Digital Products</strong> (only when the <strong >eCommerce</strong> app is
-installed): there is no control about what you receive or not.</li></ul><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >It’s always good to create a <strong >Miscellaneous</strong> product for all
-the products you purchased rarely and for which you don’t want
-to manage the stocks or have purchase/sale statistics.
-If you create such a product, we recommend to set his product
-type field as <strong >Service</strong>.</p></div></section><section id="control-products-receptions"><h2 >Control products receptions</h2></section><section id="purchase-products"><h3 >Purchase products</h3><p >From the purchase application, create a purchase order with a few
-products. If the vendor sent you a sale order or a quotation, put its
-reference in the <strong >Vendor Reference</strong> field. This will allow you to easily
-do the matching with the delivery order later on (as the delivery order
-will probably include the <strong >Vendor Reference</strong> of his sale order).</p><img src="../../../_images/reception03.png" style="" class="img-responsive center-block"></section><section id="receive-products"><h3 >Receive Products</h3><p >If you purchased physical goods (stockable or consumable products), you
-can receive the products from the <strong >Inventory</strong> application. From the
-<strong >Inventory</strong> dashboard, you should see a button <strong >X To Receive</strong>, on the
-receipt box of the related warehouse.</p><img src="../../../_images/reception01.png" style="" class="img-responsive center-block"><p >Click on this button and you access a list of all awaiting orders for
-this warehouse.</p><img src="../../../_images/reception07.png" style="" class="img-responsive center-block"><p >If you have a lot of awaiting orders, you can use the filter bar to
-search on the <strong >Vendor</strong> (also called <strong >Partner</strong> in Odoo), the product or the
-source document, which is the reference of your purchase order. You can
-open the document that matches with the received delivery order and
-process all the lines within it.</p><img src="../../../_images/reception04.png" style="" class="img-responsive center-block"><p >You may validate the whole document at once by clicking on the
-<strong >Validate</strong> button or you can control all products, one by one, by
-manually change the <strong >Done</strong> quantity (what has actually been received).
-When a line is green, it means the quantity received matches to what
-have been expected.</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >If you work with lots or serial numbers, you can not set
-the processed quantity, but you have to provide all the
-lots or serial numbers to record the quantity received.</p></div><p >When you validate the reception, if you have received less products than
-the initial demand, Odoo will ask youthe permission to create a
-backorder.</p><img src="../../../_images/reception06.png" style="" class="img-responsive center-block"><p >If you plan to receive the remaining product in the future, select
-<strong >Create Backorder</strong>. Odoo will create a new documents for the awaiting
-products. If you choose <strong >No Backorder</strong>, the order is considered as
-fulfilled.</p><div role="alert" class="alert-go_to alert"><p class="alert-title">See also</p><ul ><li ><a href="bills.html" class="internal alert-link reference"><span class="doc">Bill Control</span></a></li><li ><a href="cancel.html" class="internal alert-link reference"><span class="doc">Cancel a purchase order</span></a></li></ul></div></section>
+  <section id="control-product-received-entirely-partially"><p >Приложение ** Покупки ** позволяет вам управлять своими заказами на покупку, контролировать прием товаров и контролировать счета поставщиков.</p><p >Если вы хотите контролировать прогнозирования товаров и их прием, первое, что нужно сделать, это развернуть процесс покупки в Odoo. Знание того, что было приобретено, является основой прогнозирования и контроля приема товаров.</p></section><section id="configuration"><h2 >Настройка</h2></section><section id="install-the-purchase-and-inventory-applications"><h3 >Установите программы покупки и состав</h3><p >Начните с установки приложения Покупки из модуля ** Приложения [UNKNOWN NODE problematic]. Это автоматически приведет к установлению модуля ** Состав ** (среди прочих), который требуется с модулем ** Покупки [UNKNOWN NODE problematic].</p><img src="../../../_images/reception02.png" style="" class="img-responsive center-block"></section><section id="create-products"><h3 >создайте товары</h3><p >Затем нужно создать товары, которые вы хотите приобрести. Выделите приложение Покупки, потом: menuselection: [UNKNOWN NODE title_reference] и нажмите кнопку ** Создать [UNKNOWN NODE problematic].</p><img src="../../../_images/reception05.png" style="" class="img-responsive center-block"><p >При создании товара важно указать ** Тип [UNKNOWN NODE problematic]:</p><ul ><li >** Товары, которые хранятся и расходные [UNKNOWN NODE problematic]: товары должны быть получены на складе.</li><li >** Услуги и цифровые товары ** (только тогда, когда установлено приложение ** Электронной коммерции [UNKNOWN NODE problematic]): нет контроля над тем, вы получаете или нет.</li></ul><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >Всегда хорошо создавать ** Другой ** товар для всех товаров, которые вы покупаете редко, и для которых вы не хотите управлять запасами или иметь статистику покупки / продажи. Если вы создаете такой товар, мы рекомендуем установить поле типа товара как ** Услуга [UNKNOWN NODE problematic].</p></div></section><section id="control-products-receptions"><h2 >Контроль приема товаров</h2></section><section id="purchase-products"><h3 >купите товары</h3><p >С модуля покупке создайте заказ на покупку с несколькими товарами. Если поставщик прислал вам заказ на продажу или коммерческое предложение, поставьте его референс в поле ** Референс поставщика [UNKNOWN NODE problematic]. Это позволит вам легко сделать соответствии с заказом на доставку позже (так как заказ на доставку, вероятно, будет включать ** Референс поставщика ** в его заказ на продажу).</p><img src="../../../_images/reception03.png" style="" class="img-responsive center-block"></section><section id="receive-products"><h3 >Приход ТМЦ</h3><p >Если вы купили физические товары (запасы и расходные товары), вы можете получать товары из модуля ** Состав [UNKNOWN NODE problematic]. На информационной панели ** Состав ** вы должны увидеть кнопку ** Получить X [UNKNOWN NODE problematic], в поле поступления связанного состава.</p><img src="../../../_images/reception01.png" style="" class="img-responsive center-block"><p >Нажмите эту кнопку, и вы получите доступ к списку всех ожидаемых заказов для этого состава.</p><img src="../../../_images/reception07.png" style="" class="img-responsive center-block"><p >Если у вас много ожидаемых заказов, вы можете использовать панель фильтров для поиска в ** Поставщика ** (также называется ** Партнером ** в Odoo), товара или исходного документа, который является ссылкой на ваш заказ на покупку. Вы можете открыть документ, который соответствует полученному заказу на доставку, и обработать все строки в нем.</p><img src="../../../_images/reception04.png" style="" class="img-responsive center-block"><p >Вы можете проверить весь документ сразу, нажав кнопку ** Проверить ** или вы можете управлять всеми товарами по очереди, вручную изменяя количество ** Выполнено ** (то, что на самом деле получено). Когда строку зеленый, это означает, что полученное количество соответствует ожидаемой.</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Если вы работаете с партиями или серийными номерами, вы не можете установить обработанную количество, но вам нужно предоставить все партийные или серийные номера для записи полученного количества.</p></div><p >Когда вы подтверждаете прием, если вы получили меньше товаров, чем исходная поставка, Odoo спросит у вас разрешение на создание обратной заказ.</p><img src="../../../_images/reception06.png" style="" class="img-responsive center-block"><p >Если вы планируете получать остальные товары в будущем, выберите ** Создать обратное заказ [UNKNOWN NODE problematic]. Odoo создаст новые документы для ожидаемых товаров. Если вы выберете вариант ** нет обратной заказ [UNKNOWN NODE problematic], заказ считается выполненным.</p><div role="alert" class="alert-go_to alert"><p class="alert-title">См.также</p><ul ><li ><a href="bills.html" class="internal alert-link reference"><span class="doc">Контроль счетов</span></a></li><li ><a href="cancel.html" class="internal alert-link reference"><span class="doc">Отмена заказа на продажу</span></a></li></ul></div></section>
 
           </article>
         </div>

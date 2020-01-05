@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>How to manage withholding taxes? &#8212; Odoo 13.0 documentation</title>
+    <title>Как управления налогами на содержание? &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../../_static/doc.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/accounting/others/taxes/retention.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/accounting/others/taxes/retention.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/accounting/others/taxes/retention.html" />
+    <link rel="canonical" href="/master/ru/accounting/others/taxes/retention.html" />
   
-    <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="How to manage prices for B2B (tax excluded) and B2C (tax included)?" href="B2B_B2C.html" />
-    <link rel="prev" title="How to set tax-included prices" href="tax_included.html" /> 
+    <link rel="index" title="Алфавитный указатель" href="../../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../../search.html" />
+    <link rel="next" title="Как управлять ценами для B2B (с выключенным налогом) и B2C (с включенным налогом)?" href="B2B_B2C.html" />
+    <link rel="prev" title="Как установить цены, которые уже включают налог" href="tax_included.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -194,7 +198,7 @@
         
             
                 
-                    <li><a href="../../../accounting.html">Accounting</a></li>
+                    <li><a href="../../../accounting.html">Бухгалтерский учёт</a></li>
                 
             
         
@@ -211,7 +215,7 @@
             
         
     
-    <li class="active"><a href="#">How to manage withholding taxes?</a></li>
+    <li class="active"><a href="#">Как управления налогами на содержание?</a></li>
 
               
           </ol>
@@ -227,12 +231,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/accounting/others/taxes/retention.html">English</a></li>
+        
+            <li><a href="/13.0/uk/accounting/others/taxes/retention.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -259,6 +278,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -268,7 +289,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> How to manage withholding taxes? </h1>
+        <h1> Как управления налогами на содержание? </h1>
       </div>
     </figure>
     
@@ -281,7 +302,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a></li><li class="list-group-item"><a href="#applying-retention-taxes-on-invoices" class="ripple internal reference">Applying retention taxes on invoices</a></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Настройка</a></li><li class="list-group-item"><a href="#applying-retention-taxes-on-invoices" class="ripple internal reference">Применение налога на содержание в счетах-фактурах</a></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/accounting/others/taxes/retention.rst" class="gith-link">
                   Edit on GitHub
@@ -293,25 +314,7 @@
           <article class="doc-body  ">
             
             
-  <section id="how-to-manage-withholding-taxes"><p >A withholding tax, also called a retention tax, is a government
-requirement for the payer of a customer invoice to withhold or deduct
-tax from the payment, and pay that tax to the government. In most
-jurisdictions, withholding tax applies to employment income.</p><p >With normal taxes, the tax is added to the subtotal to give you the
-total to pay. As opposed to normal taxes, withholding taxes are deducted
-from the amount to pay, as the tax will be paid by the customer.</p><p >As, an example, in Colombia you may have the following invoice:</p><img src="../../../_images/retention03.png" style="" class="img-responsive center-block"><p >In this example, the <strong >company</strong> who sent the invoice owes $20 of taxes to
-the <strong >government</strong> and the <strong >customer</strong> owes $10 of taxes to the <strong >government</strong>.</p></section><section id="configuration"><h2 >Configuration</h2><p >In Odoo, a withholding tax is defined by creating a negative tax. For a
-retention of 10%, you would configure the following tax (accessible
-through <span class="menuselection">Configuration ‣ Taxes</span>):</p><img src="../../../_images/retention04.png" style="" class="img-responsive center-block"><p >In order to make it appear as a retention on the invoice, you should set
-a specific tax group <strong >Retention</strong> on your tax, in the <strong >Advanced Options</strong>
-tab.</p><img src="../../../_images/retention02.png" style="" class="img-responsive center-block"><p >Once the tax is defined, you can use it in your products, sales order or
-invoices.</p><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >If the retention is a percentage of a regular tax, create a Tax with a
-<strong >Tax Computation</strong> as a <strong >Tax Group</strong> and set the two taxes in this group
-(normal tax and retention).</p></div></section><section id="applying-retention-taxes-on-invoices"><h2 >Applying retention taxes on invoices</h2><p >Once your tax is created, you can use it on customer forms, sales order
-or customer invoices. You can apply several taxes on a single customer
-invoice line.</p><img src="../../../_images/retention01.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >When you see the customer invoice on the screen, you get only a
-<strong >Taxes line</strong> summarizing all the taxes (normal taxes &amp; retentions).
-But when you print or send the invoice, Odoo does the correct
-grouping amongst all the taxes.</p></div><p >The printed invoice will show the different amounts in each tax group.</p><img src="../../../_images/retention03.png" style="" class="img-responsive center-block"><div role="alert" class="alert-go_to alert"><p class="alert-title">See also</p><ul ><li ><a href="create.html" class="internal alert-link reference"><span class="doc">How to create new taxes</span></a></li></ul></div></section>
+  <section id="how-to-manage-withholding-taxes"><p >Налог на содержание является государственной требованием плательщика счета-фактуры удерживать или отчислять налог от платежа и платить этот налог правительства. В большинстве юрисдикций налогообложения взимается по налогу на прибыль.</p><p >С обычными налогами этот налог прилагается к итоговой суммы, чтобы вы ее оплатили. В отличие от обычных налогов, налог на содержание взимается от уплаты налога, поскольку он уплачивается заказчиком.</p><p >Например, в Колумбии вы можете иметь следующий счет-фактуру:</p><img src="../../../_images/retention03.png" style="" class="img-responsive center-block"><p >В этом примере ** компания [UNKNOWN NODE problematic], которая прислала счет, обязана ** правительства ** 20 долларов налогов, а ** клиент ** обязан ** правительства ** 10 долларов налогов.</p></section><section id="configuration"><h2 >Настройка</h2><p >В Odoo налог на содержание определяется путем создания отрицательного налога. Для сохранения 10%, вы можете настроить следующий налог (доступен через: menuselection: [UNKNOWN NODE title_reference]):</p><img src="../../../_images/retention04.png" style="" class="img-responsive center-block"><p >Для того, чтобы он отображался как сохранение в счете-фактуре, на вкладке ** Дополнительные параметры ** следует установить определенную группу налогов ** На содержание ** своего налога.</p><img src="../../../_images/retention02.png" style="" class="img-responsive center-block"><p >После определения налога вы можете использовать его в своих товарах, заказах на продажу или счетах-фактурах.</p><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >Если содержание является процентом от обычного налога, создайте налог с ** налоговым расчетом ** как ** налоговую группу ** и установите два налога в этой группе (обычный налог и на содержание).</p></div></section><section id="applying-retention-taxes-on-invoices"><h2 >Применение налога на содержание в счетах-фактурах</h2><p >Когда ваш налог будет создан, вы можете использовать его по форме заказчика, заказы на продажу или счета-фактуры для клиентов. Вы можете подать несколько налогов на одну строку счета-фактуры клиента.</p><img src="../../../_images/retention01.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Когда вы видите счет клиента на экране, вы получаете только налоговый строку, обобщая все налоги (обычные налоги и на содержание). Но когда вы распечатываете или посылаете счет-фактуру, Odoo делает правильную группу среди всех налогов.</p></div><p >В распечатанном счета отображаться различные суммы в каждой налоговой группе.</p><img src="../../../_images/retention03.png" style="" class="img-responsive center-block"><div role="alert" class="alert-go_to alert"><p class="alert-title">См.также</p><ul ><li ><a href="create.html" class="internal alert-link reference"><span class="doc">Как создать новые налоги</span></a></li></ul></div></section>
 
           </article>
         </div>

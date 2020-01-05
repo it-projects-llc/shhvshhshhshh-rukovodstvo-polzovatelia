@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>How is Odoo’s multi-currency working? &#8212; Odoo 13.0 documentation</title>
+    <title>Как действует мультивалютность в Odoo? &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../../_static/doc.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/accounting/others/multicurrencies/how_it_works.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/accounting/others/multicurrencies/how_it_works.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/accounting/others/multicurrencies/how_it_works.html" />
+    <link rel="canonical" href="/master/ru/accounting/others/multicurrencies/how_it_works.html" />
   
-    <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="How to manage invoices &amp; payment in multiple currencies?" href="invoices_payments.html" />
-    <link rel="prev" title="Multicurrency" href="../multicurrencies.html" /> 
+    <link rel="index" title="Алфавитный указатель" href="../../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../../search.html" />
+    <link rel="next" title="Как управлять счетами и оплатой в мультивалютности Odoo?" href="invoices_payments.html" />
+    <link rel="prev" title="мультивалютность" href="../multicurrencies.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -194,7 +198,7 @@
         
             
                 
-                    <li><a href="../../../accounting.html">Accounting</a></li>
+                    <li><a href="../../../accounting.html">Бухгалтерский учёт</a></li>
                 
             
         
@@ -211,7 +215,7 @@
             
         
     
-    <li class="active"><a href="#">How is Odoo’s multi-currency working?</a></li>
+    <li class="active"><a href="#">Как действует мультивалютность в Odoo?</a></li>
 
               
           </ol>
@@ -227,12 +231,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/accounting/others/multicurrencies/how_it_works.html">English</a></li>
+        
+            <li><a href="/13.0/uk/accounting/others/multicurrencies/how_it_works.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -259,6 +278,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -268,7 +289,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> How is Odoo’s multi-currency working? </h1>
+        <h1> Как действует мультивалютность в Odoo? </h1>
       </div>
     </figure>
     
@@ -281,7 +302,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#overview" class="ripple internal reference">Overview</a></li><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a><ul ><li class="list-group-item"><a href="#turn-on-multi-currency" class="ripple internal reference">Turn on multi-currency</a></li><li class="list-group-item"><a href="#exchange-rate-journal" class="ripple internal reference">Exchange Rate Journal</a></li><li class="list-group-item"><a href="#view-or-edit-rate-being-used" class="ripple internal reference">View or edit rate being used</a></li><li class="list-group-item"><a href="#live-currency-rate" class="ripple internal reference">Live Currency Rate</a></li><li class="list-group-item"><a href="#configure-your-charts-of-account" class="ripple internal reference">Configure your charts of account</a></li><li class="list-group-item"><a href="#configure-your-journals" class="ripple internal reference">Configure your journals</a></li></ul></li><li class="list-group-item"><a href="#id1" class="ripple internal reference">How is Odoo’s multi-currency working?</a><ul ><li class="list-group-item"><a href="#sales-orders-and-invoices" class="ripple internal reference">Sales Orders and Invoices</a></li><li class="list-group-item"><a href="#purchases-orders-and-vendor-bills" class="ripple internal reference">Purchases orders and Vendor Bills</a></li><li class="list-group-item"><a href="#payment-registrations" class="ripple internal reference">Payment Registrations</a></li><li class="list-group-item"><a href="#bank-statements" class="ripple internal reference">Bank Statements</a></li><li class="list-group-item"><a href="#id2" class="ripple internal reference">Exchange Rate Journal</a></li></ul></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#overview" class="ripple internal reference">Общий обзор</a></li><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Настройка</a><ul ><li class="list-group-item"><a href="#turn-on-multi-currency" class="ripple internal reference">Включите мультивалютность</a></li><li class="list-group-item"><a href="#exchange-rate-journal" class="ripple internal reference">Журнал курсовых разниц</a></li><li class="list-group-item"><a href="#view-or-edit-rate-being-used" class="ripple internal reference">Смотрите или измените курс</a></li><li class="list-group-item"><a href="#live-currency-rate" class="ripple internal reference">Текущий Курс Валюты</a></li><li class="list-group-item"><a href="#configure-your-charts-of-account" class="ripple internal reference">Настройте ваш план счетов</a></li><li class="list-group-item"><a href="#configure-your-journals" class="ripple internal reference">Настройте ваши журналы</a></li></ul></li><li class="list-group-item"><a href="#id1" class="ripple internal reference">Как действует мультивалютность в Odoo?</a><ul ><li class="list-group-item"><a href="#sales-orders-and-invoices" class="ripple internal reference">Заказ на продажу и счета-фактуры</a></li><li class="list-group-item"><a href="#purchases-orders-and-vendor-bills" class="ripple internal reference">Заказ на покупку и счета поставщиков</a></li><li class="list-group-item"><a href="#payment-registrations" class="ripple internal reference">оплата реестров</a></li><li class="list-group-item"><a href="#bank-statements" class="ripple internal reference">Банковские выписки</a></li><li class="list-group-item"><a href="#id2" class="ripple internal reference">Журнал курсовых разниц</a></li></ul></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/accounting/others/multicurrencies/how_it_works.rst" class="gith-link">
                   Edit on GitHub
@@ -293,42 +314,7 @@
           <article class="doc-body  ">
             
             
-  <section id="how-is-odoo-s-multi-currency-working"></section><section id="overview"><h2 >Overview</h2><p >Choosing to use the multi-currency option in Odoo will allow you to send
-sales invoices, quotes and purchase orders or receive bills and payments
-in currencies other than your own. With multi-currency, you can also set
-up bank accounts in other currencies and run reports on your foreign
-currency activities.</p></section><section id="configuration"><h2 >Configuration</h2></section><section id="turn-on-multi-currency"><h3 >Turn on multi-currency</h3><p >In the accounting module, Go to <span class="menuselection">Configuration ‣ Settings</span> and flag
-<strong >Allow multi currencies</strong>, then click on <strong >Apply</strong>.</p><img src="../../../_images/works01.png" style="" class="img-responsive center-block"></section><section id="exchange-rate-journal"><h3 >Exchange Rate Journal</h3><p >The <strong >Rate Difference Journal</strong> records the differences between the payment
-registration and the expected amount. For example, if a payment is paid
-1 month after the invoice was issued, the exchange rate has probably
-changed. The fluctuation implies some loss or profit that are recorded
-by Odoo.</p><p >You can change it in the settings:</p><img src="../../../_images/works02.png" style="" class="img-responsive center-block"></section><section id="view-or-edit-rate-being-used"><h3 >View or edit rate being used</h3><p >You can manually configure the currency rates in <span class="menuselection">Configuration ‣
-Currencies</span>. Open the currencies you want to use in Odoo and edit it.
-Make sure the currency is active.</p><img src="../../../_images/works03.png" style="" class="img-responsive center-block"><p >Click on <strong >View Rates</strong> to edit it and to see the history :</p><img src="../../../_images/works04.png" style="" class="img-responsive center-block"><p >Click on <strong >Create</strong> to add the rate. Fill in the date and the rate.
-Click on <strong >Save</strong> when you are done.</p><img src="../../../_images/works05.png" style="" class="img-responsive center-block"></section><section id="live-currency-rate"><h3 >Live Currency Rate</h3><p >By default, the currencies need to be updated manually. But you can
-synchronize it with <a href="https://finance.yahoo.com/currency-converter/" class="external reference">Yahoo</a> or
-the <a href="http://www.ecb.europa.eu" class="external reference">European Central Bank</a>. In
-<span class="menuselection">Configuration ‣ Settings</span>, go to the <strong >Live Currency Rate</strong> section.</p><p >Choose the interval : Manually, Daily, Weekly or Monthly. You can always
-force the update by clicking on <strong >Update Now</strong>. Select the provider, and you
-are set !</p><img src="../../../_images/works06.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >Only the <strong >active</strong> currencies are updated</p></div></section><section id="configure-your-charts-of-account"><h3 >Configure your charts of account</h3><p >In the accounting application, go to <span class="menuselection">Adviser ‣ Charts of Accounts</span>.
-On each account, you can set a currency. It will force all moves for
-this account to have the account currency.</p><p >If you leave it empty, it means that it can handle all currencies that
-are Active.</p><img src="../../../_images/works07.png" style="" class="img-responsive center-block"></section><section id="configure-your-journals"><h3 >Configure your journals</h3><p >In order to register payments in other currencies, you have to remove
-the currency constraint on the journal. Go to the accounting
-application, Click on <strong >More</strong> on the journal and <strong >Settings</strong>.</p><img src="../../../_images/works08.png" style="" class="img-responsive center-block"><p >Check if the currency field is empty or in the foreign currency in which
-you will register the payments. If a currency is filled in, it means
-that you can register payments only in this currency.</p><img src="../../../_images/works09.png" style="" class="img-responsive center-block"></section><section id="id1"><h2 >How is Odoo’s multi-currency working?</h2><p >Now that you are working in a multi-currency environment, all
-accountable items will be linked to a currency, domestic or foreign.</p></section><section id="sales-orders-and-invoices"><h3 >Sales Orders and Invoices</h3><p >You are now able to set a different currency than the company one on
-your sale orders and on your invoices. The currency is set for the whole
-document.</p><img src="../../../_images/works10.png" style="" class="img-responsive center-block"></section><section id="purchases-orders-and-vendor-bills"><h3 >Purchases orders and Vendor Bills</h3><p >You are now able to set a different currency than the company one on
-your purchase orders and on your vendor bills. The currency is set for
-the whole document.</p><img src="../../../_images/works11.png" style="" class="img-responsive center-block"></section><section id="payment-registrations"><h3 >Payment Registrations</h3><p >In the accounting application, go to <strong >Sales &gt; Payments</strong>. Register the
-payment and set the currency.</p><img src="../../../_images/works12.png" style="" class="img-responsive center-block"></section><section id="bank-statements"><h3 >Bank Statements</h3><p >When creating or importing bank statements, the amount is in the company
-currency. But there are now two complementary fields, the amount that
-was actually paid and the currency in which it was paid.</p><img src="../../../_images/works13.png" style="" class="img-responsive center-block"><p >When reconciling it, Odoo will directly match the payment with the right
-Invoice. You will get the invoice price in the invoice currency and the
-amount in your company currency.</p></section><section id="id2"><h3 >Exchange Rate Journal</h3><p >Go to <span class="menuselection">Adviser ‣ Journal Entries</span> and look for the Exchange difference
-journal entries. All the exchange rates differences are recorded in it.</p><img src="../../../_images/works14.png" style="" class="img-responsive center-block"><div role="alert" class="alert-go_to alert"><p class="alert-title">See also</p><ul ><li ><a href="invoices_payments.html" class="internal alert-link reference"><span class="doc">How to manage invoices &amp; payment in multiple currencies?</span></a></li><li ><a href="exchange.html" class="internal alert-link reference"><span class="doc">Record exchange rates at payments</span></a></li></ul></div></section>
+  <section id="how-is-odoo-s-multi-currency-working"></section><section id="overview"><h2 >Общий обзор</h2><p >Выбор мультивалютности в Odoo позволит вам отправлять счета-фактуры, коммерческие предложения и заказы на покупку или получать счета и платежи в других валютах. С помощью мультивалютности вы также можете настроить банковские счета в других валютах и создавать отчеты о своей деятельности в иностранной валюте.</p></section><section id="configuration"><h2 >Настройка</h2></section><section id="turn-on-multi-currency"><h3 >Включите мультивалютность</h3><p >В модуле бухучета перейдите к: menuselection: [UNKNOWN NODE title_reference] и отметьте ** Разрешить мультивалютность ** нажмите кнопку ** Применить [UNKNOWN NODE problematic].</p><img src="../../../_images/works01.png" style="" class="img-responsive center-block"></section><section id="exchange-rate-journal"><h3 >Журнал курсовых разниц</h3><p >** Журнал курсовых разниц ** записывает различия между регистрацией платежа и ожидаемой суммой. Например, если оплата уплачивается через 1 месяц после выставления счета-фактуры, курсовая разница, вероятно, изменится. Флуктуация означает некоторые потери или прибыль, которые зафиксированы в Odoo.</p><p >Вы можете изменить ее в настройках:</p><img src="../../../_images/works02.png" style="" class="img-responsive center-block"></section><section id="view-or-edit-rate-being-used"><h3 >Смотрите или измените курс</h3><p >Вы можете вручную настроить курсы валют в: menuselection: [UNKNOWN NODE title_reference]. Откройте валюту, которую хотите использовать в Odoo, и измените ее. Убедитесь, что валюта активна.</p><img src="../../../_images/works03.png" style="" class="img-responsive center-block"><p >Нажмите ** Посмотреть курс ** для редактирования и просмотра истории:</p><img src="../../../_images/works04.png" style="" class="img-responsive center-block"><p >Нажмите кнопку ** Создать [UNKNOWN NODE problematic], чтобы добавить курс. Введите дату и курс. Нажмите кнопку ** Сохранить ** после завершения.</p><img src="../../../_images/works05.png" style="" class="img-responsive center-block"></section><section id="live-currency-rate"><h3 >Текущий Курс Валюты</h3><p >Валюты по умолчанию нужно обновить вручную. Но вы можете синхронизировать их с Нацбанком. В разделе: menuselection: [UNKNOWN NODE title_reference], перейдите к разделу ** Курс валют [UNKNOWN NODE problematic].</p><p >Выберите интервал: вручную, ежедневно, еженедельно или ежемесячно. Вы всегда можете запустить обновление, нажав кнопку ** Обновить сейчас [UNKNOWN NODE problematic]. Выберите поставщика и вы все установили!</p><img src="../../../_images/works06.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Обновляются только ** активные ** валюты.</p></div></section><section id="configure-your-charts-of-account"><h3 >Настройте ваш план счетов</h3><p >В бухгалтерском приложении обратитесь к: menuselection: [UNKNOWN NODE title_reference]. На каждом счете можно установить валюту. Это запустит все шаги для этого счета, чтобы иметь валюту счета.</p><p >Если вы оставите это пустым, это означает, что он может обрабатывать все валюты, которые являются активными.</p><img src="../../../_images/works07.png" style="" class="img-responsive center-block"></section><section id="configure-your-journals"><h3 >Настройте ваши журналы</h3><p >Чтобы зарегистрировать платежи в других валютах, нужно удалить валютном ограничения в журнале. Перейдите к модулю бухучет, нажмите кнопку ** Более ** в журнале и ** Настройка [UNKNOWN NODE problematic].</p><img src="../../../_images/works08.png" style="" class="img-responsive center-block"><p >Проверьте, поле валюты пустое, или в иностранной валюте, в которой вы регистрируете платежи. Если валюта заполнена, это означает, что вы можете зарегистрировать платежи только в этой валюте.</p><img src="../../../_images/works09.png" style="" class="img-responsive center-block"></section><section id="id1"><h2 >Как действует мультивалютность в Odoo?</h2><p >Теперь, когда вы работаете в мультивалютной среде, все подотчетные элементы будут связаны с валютой, внутренней или иностранной.</p></section><section id="sales-orders-and-invoices"><h3 >Заказ на продажу и счета-фактуры</h3><p >Теперь вы можете установить другую валюту в компании, которая принадлежит к заказам на продажу и ваших счетов-фактур. Валюта устанавливается для всего документа.</p><img src="../../../_images/works10.png" style="" class="img-responsive center-block"></section><section id="purchases-orders-and-vendor-bills"><h3 >Заказ на покупку и счета поставщиков</h3><p >Теперь вы можете установить другую валюту в компании, которая имеет свои заказы на покупку и счета поставщиков. Валюта устанавливается для всего документа.</p><img src="../../../_images/works11.png" style="" class="img-responsive center-block"></section><section id="payment-registrations"><h3 >оплата реестров</h3><p >В бухгалтерской программе перейдите в раздел ** Продажи&amp;gt; Платежи [UNKNOWN NODE problematic]. Зарегистрируйте платеж и установите валюту.</p><img src="../../../_images/works12.png" style="" class="img-responsive center-block"></section><section id="bank-statements"><h3 >Банковские выписки</h3><p >При создании или импорте банковских выписок сумма находится в валюте компании. Но сейчас существует два дополнительных поля: фактически уплаченная сумма и валюта, в которой она была оплачена.</p><img src="../../../_images/works13.png" style="" class="img-responsive center-block"><p >Присоединив это, Odoo непосредственно согласовывает платеж с правильным счету-фактуре. Вы получите цену счета-фактуры в валюте счета и сумму в валюте вашей компании.</p></section><section id="id2"><h3 >Журнал курсовых разниц</h3><p >Перейдите к: menuselection: [UNKNOWN NODE title_reference] и ищите записи журнала курсовых разницы в журнале. В нем фиксируются все курсовые разницы.</p><img src="../../../_images/works14.png" style="" class="img-responsive center-block"><div role="alert" class="alert-go_to alert"><p class="alert-title">См.также</p><ul ><li ><a href="invoices_payments.html" class="internal alert-link reference"><span class="doc">Как управлять счетами и оплатой в мультивалютности Odoo?</span></a></li><li ><a href="exchange.html" class="internal alert-link reference"><span class="doc">Учет курсовых разниц при оплате</span></a></li></ul></div></section>
 
           </article>
         </div>

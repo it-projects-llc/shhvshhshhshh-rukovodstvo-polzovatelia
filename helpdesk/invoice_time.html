@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>Record and invoice time for tickets &#8212; Odoo 13.0 documentation</title>
+    <title>Запись времени на задачи и выставления счета &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../_static/inventory.js"></script>
     <script type="text/javascript" src="../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
     <script type="text/javascript" src="../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../_static/doc.js"></script>
     <script type="text/javascript" src="../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/helpdesk/invoice_time.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/helpdesk/invoice_time.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/helpdesk/invoice_time.html" />
+    <link rel="canonical" href="/master/ru/helpdesk/invoice_time.html" />
   
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="After sales features: refund, coupon, return, repair, onsite interventions" href="after_sales.html" />
-    <link rel="prev" title="Get started with Odoo Helpdesk" href="getting_started.html" /> 
+    <link rel="index" title="Алфавитный указатель" href="../genindex.html" />
+    <link rel="search" title="Поиск" href="../search.html" />
+    <link rel="next" title="Послепродажные функции: возмещение, купоны, возврат, ремонт, вмешательства на месте" href="after_sales.html" />
+    <link rel="prev" title="Начните Службу поддержку в Odoo" href="getting_started.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -194,12 +198,12 @@
         
             
                 
-                    <li><a href="../helpdesk.html">Helpdesk</a></li>
+                    <li><a href="../helpdesk.html">Техподдержка</a></li>
                 
             
         
     
-    <li class="active"><a href="#">Record and invoice time for tickets</a></li>
+    <li class="active"><a href="#">Запись времени на задачи и выставления счета</a></li>
 
               
           </ol>
@@ -215,12 +219,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/helpdesk/invoice_time.html">English</a></li>
+        
+            <li><a href="/13.0/uk/helpdesk/invoice_time.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -247,6 +266,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -256,7 +277,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> Record and invoice time for tickets </h1>
+        <h1> Запись времени на задачи и выставления счета </h1>
       </div>
     </figure>
     
@@ -269,7 +290,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#the-modules-needed" class="ripple internal reference">The modules needed</a></li><li class="list-group-item"><a href="#get-started-to-offer-the-helpdesk-service" class="ripple internal reference">Get started to offer the helpdesk service</a><ul ><li class="list-group-item"><a href="#step-1-start-a-helpdesk-project" class="ripple internal reference">Step 1 : start a helpdesk project</a></li><li class="list-group-item"><a href="#step-2-gather-a-helpdesk-team" class="ripple internal reference">Step 2 : gather a helpdesk team</a></li><li class="list-group-item"><a href="#step-3-launch-the-helpdesk-service" class="ripple internal reference">Step 3 : launch the helpdesk service</a></li></ul></li><li class="list-group-item"><a href="#solve-issues-and-record-time-spent" class="ripple internal reference">Solve issues and record time spent</a><ul ><li class="list-group-item"><a href="#step-1-place-an-order" class="ripple internal reference">Step 1 : place an order</a></li><li class="list-group-item"><a href="#step-2-link-the-task-to-the-ticket" class="ripple internal reference">Step 2 : link the task to the ticket</a></li><li class="list-group-item"><a href="#step-3-record-the-time-spent-to-help-the-client" class="ripple internal reference">Step 3 : record the time spent to help the client</a></li><li class="list-group-item"><a href="#step-4-invoice-the-client" class="ripple internal reference">Step 4 : invoice the client</a></li></ul></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#the-modules-needed" class="ripple internal reference">необходимые модули</a></li><li class="list-group-item"><a href="#get-started-to-offer-the-helpdesk-service" class="ripple internal reference">Начните предлагать службу поддержки</a><ul ><li class="list-group-item"><a href="#step-1-start-a-helpdesk-project" class="ripple internal reference">Шаг 1: запустите проект поддержки</a></li><li class="list-group-item"><a href="#step-2-gather-a-helpdesk-team" class="ripple internal reference">Шаг 2: установите команду поддержки</a></li><li class="list-group-item"><a href="#step-3-launch-the-helpdesk-service" class="ripple internal reference">Шаг 3: запустите службу поддержки</a></li></ul></li><li class="list-group-item"><a href="#solve-issues-and-record-time-spent" class="ripple internal reference">Решите проблемы и зафиксируйте потраченное время</a><ul ><li class="list-group-item"><a href="#step-1-place-an-order" class="ripple internal reference">Шаг 1: разместите заказ</a></li><li class="list-group-item"><a href="#step-2-link-the-task-to-the-ticket" class="ripple internal reference">Шаг 2: свяжите задачи по заявке</a></li><li class="list-group-item"><a href="#step-3-record-the-time-spent-to-help-the-client" class="ripple internal reference">Шаг 3: запишите время, затраченное на помощь клиенту</a></li><li class="list-group-item"><a href="#step-4-invoice-the-client" class="ripple internal reference">Шаг 4: выставьте счет-фактуру клиенту</a></li></ul></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/helpdesk/invoice_time.rst" class="gith-link">
                   Edit on GitHub
@@ -281,39 +302,7 @@
           <article class="doc-body  ">
             
             
-  <section id="record-and-invoice-time-for-tickets"><p >You may have service contracts with your clients to provide them
-assistance in case of a problem. For this purpose, Odoo will help you
-record the time spent fixing the issue and most importantly, to invoice
-it to your clients.</p></section><section id="the-modules-needed"><h2 >The modules needed</h2><p >In order to record and invoice time for tickets, the following modules
-are needed : Helpdesk, Project, Timesheets, Sales. If you are missing
-one of them, go to the Apps module, search for it and then click on
-<em >Install</em>.</p></section><section id="get-started-to-offer-the-helpdesk-service"><h2 >Get started to offer the helpdesk service</h2></section><section id="step-1-start-a-helpdesk-project"><h3 >Step 1 : start a helpdesk project</h3><p >To start a dedicated project for the helpdesk service, first go to
-<span class="menuselection">Project ‣ Configuration ‣ Settings</span> and make sure
-that the <em >Timesheets</em> feature is activated.</p><img src="../_images/invoice_time01.png" style="" class="img-responsive center-block"><p >Then, go to your dashboard, create the new project and allow timesheets
-for it.</p></section><section id="step-2-gather-a-helpdesk-team"><h3 >Step 2 : gather a helpdesk team</h3><p >To set a team in charge of the helpdesk, go to <span class="menuselection">Helpdesk
-‣ Configuration ‣ Helpdesk Teams</span> and create a new team or select
-an existing one. On the form, tick the box in front of <em >Timesheet on
-Ticket</em> to activate the feature. Make sure to select the helpdesk
-project you have previously created as well.</p><img src="../_images/invoice_time02.png" style="" class="img-responsive center-block"></section><section id="step-3-launch-the-helpdesk-service"><h3 >Step 3 : launch the helpdesk service</h3><p >Finally, to launch the new helpdesk service, first go to
-<span class="menuselection">Sales ‣ Configuration ‣ Settings</span> and make sure
-that the <em >Units of Measure</em> feature is activated.</p><img src="../_images/invoice_time03.png" style="" class="img-responsive center-block"><p >Then, go to <span class="menuselection">Products ‣ Products</span> and create a new
-one. Make sure that the product is set as a service.</p><img src="../_images/invoice_time04.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >Here, we suggest that you set the <em >Unit of Measure</em> as
-<em >Hour(s)</em>, but any unit will do.</p></div><p >Finally, select the invoicing management you would like to have under
-the <em >Sales</em> tab of the product form. Here, we recommend the following
-configuration :</p><img src="../_images/invoice_time05.png" style="" class="img-responsive center-block"><p >Now, you are ready to start receiving tickets !</p></section><section id="solve-issues-and-record-time-spent"><h2 >Solve issues and record time spent</h2></section><section id="step-1-place-an-order"><h3 >Step 1 : place an order</h3><p >You are now in the Helpdesk module and you have just received a ticket
-from a client. To place a new order, go to <span class="menuselection">Sales ‣
-Orders ‣ Orders</span> and create one for the help desk service product you
-have previously recorded. Set the number of hours needed to assist the
-client and confirm the sale.</p><img src="../_images/invoice_time06.png" style="" class="img-responsive center-block"></section><section id="step-2-link-the-task-to-the-ticket"><h3 >Step 2 : link the task to the ticket</h3><p >If you access the dedicated helpdesk project, you will notice that a new
-task has automatically been generated with the order. To link this task
-with the client ticket, go to the Helpdesk module, access the ticket in
-question and select the task on its form.</p><img src="../_images/invoice_time07.png" style="" class="img-responsive center-block"></section><section id="step-3-record-the-time-spent-to-help-the-client"><h3 >Step 3 : record the time spent to help the client</h3><p >The job is done and the client’s issue is sorted out. To record the
-hours performed for this task, go back to the ticket form and add them
-under the <em >Timesheets</em> tab.</p><img src="../_images/invoice_time08.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >The hours recorded on the ticket will also automatically appear
-in the Timesheet module and on the dedicated task.</p></div></section><section id="step-4-invoice-the-client"><h3 >Step 4 : invoice the client</h3><p >To invoice the client, go back to the Sales module and select the order
-that had been placed. Notice that the hours recorded on the ticket form
-now appear as the delivered quantity.</p><img src="../_images/invoice_time09.png" style="" class="img-responsive center-block"><p >All that is left to do, is to create the invoice from the order and then
-validate it. Now you just have to wait for the client’s payment !</p></section>
+  <section id="record-and-invoice-time-for-tickets"><p >Вы можете иметь контракты на обслуживание с клиентами, чтобы оказать им помощь в случае возникновения проблемы. Для этого Odoo поможет вам записать время, затрачиваемое на решение задачи, а главное, выставлять счета своим клиентам.</p></section><section id="the-modules-needed"><h2 >необходимые модули</h2><p >Для записи и выставления счетов-фактур на задание нужны следующие модули: Служба поддержки Проект, Табели, Продажи. Если вам не хватает одного из них, перейдите к модулю Приложения, найдите и нажмите кнопку * Установить [UNKNOWN NODE problematic].</p></section><section id="get-started-to-offer-the-helpdesk-service"><h2 >Начните предлагать службу поддержки</h2></section><section id="step-1-start-a-helpdesk-project"><h3 >Шаг 1: запустите проект поддержки</h3><p >Чтобы запустить специальный проект для поддержки, сначала перейдите к: menuselection: [UNKNOWN NODE title_reference] и убедитесь, что функция * Табели * активирована.</p><img src="../_images/invoice_time01.png" style="" class="img-responsive center-block"><p >Затем перейдите на свою информационную панель, создайте новый проект и позвольте табели для него.</p></section><section id="step-2-gather-a-helpdesk-team"><h3 >Шаг 2: установите команду поддержки</h3><p >Чтобы установить команду, которая отвечает за службу поддержки, перейдите к: menuselection: [UNKNOWN NODE title_reference] и создайте новую команду или выберите существующую. На форме, отметьте поле перед * Табелем на заявке [UNKNOWN NODE problematic], чтобы активировать эту функцию. Не забудьте выбрать ранее созданный вами проект поддержки.</p><img src="../_images/invoice_time02.png" style="" class="img-responsive center-block"></section><section id="step-3-launch-the-helpdesk-service"><h3 >Шаг 3: запустите службу поддержки</h3><p >Наконец, чтобы запустить новую службу поддержки, сначала перейдите к: menuselection: [UNKNOWN NODE title_reference] и убедитесь, что включена функция * Единица измерения [UNKNOWN NODE problematic].</p><img src="../_images/invoice_time03.png" style="" class="img-responsive center-block"><p >Затем перейдите на: menuselection: [UNKNOWN NODE title_reference] и создайте новый. Убедитесь, что товар установлен как услугу.</p><img src="../_images/invoice_time04.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Здесь мы предлагаем установить * Единицу измерения * как * Час (ы) [UNKNOWN NODE problematic], но любая единица будет выполняться.</p></div><p >Наконец, выберите управления счетами-фактурами, которые вы хотите иметь на вкладке * Продажи * формы товара. Здесь мы рекомендуем следующее настройки:</p><img src="../_images/invoice_time05.png" style="" class="img-responsive center-block"><p >Теперь вы готовы получать задания!</p></section><section id="solve-issues-and-record-time-spent"><h2 >Решите проблемы и зафиксируйте потраченное время</h2></section><section id="step-1-place-an-order"><h3 >Шаг 1: разместите заказ</h3><p >Вы находитесь в модуле Служба поддержки, и вы только что получили заявку от клиента. Чтобы разместить новый заказ, перейдите на: menuselection: [UNKNOWN NODE title_reference] и создайте его для услуги поддержки, которую вы ранее записали. Установите количество часов, необходимых для предоставления услуги клиенту и подтвердите продажу.</p><img src="../_images/invoice_time06.png" style="" class="img-responsive center-block"></section><section id="step-2-link-the-task-to-the-ticket"><h3 >Шаг 2: свяжите задачи по заявке</h3><p >Если вы получаете доступ к конкретному проекту поддержки, вы заметите, что с заказом было автоматически создано новое задание. Чтобы связать эту задачу с клиентской заявке, перейдите к модулю Служба поддержки, получите доступ к соответствующей заявки и выберите задачу в ее форме.</p><img src="../_images/invoice_time07.png" style="" class="img-responsive center-block"></section><section id="step-3-record-the-time-spent-to-help-the-client"><h3 >Шаг 3: запишите время, затраченное на помощь клиенту</h3><p >Работа выполнена, а заявка клиента отсортирована. Чтобы записать часа, выполненные для этой задачи, вернитесь к форме заявки и добавьте ее на вкладку * Табели [UNKNOWN NODE problematic].</p><img src="../_images/invoice_time08.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >Времена, записанные в заявке, также автоматически появятся в модуле табеля и в конкретном задании.</p></div></section><section id="step-4-invoice-the-client"><h3 >Шаг 4: выставьте счет-фактуру клиенту</h3><p >Чтобы выставить счет-фактуру клиенту, вернитесь к модулю продаж и выберите заказ, который был размещен. Обратите внимание, что часы, записанные в форме заявки, теперь отображаются как доставлена количество.</p><img src="../_images/invoice_time09.png" style="" class="img-responsive center-block"><p >Все, что нужно сделать - это создать счет-фактуру по заказу, а затем проверить его. Теперь вам просто придется ждать оплату клиента!</p></section>
 
           </article>
         </div>

@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>How to get paid with Authorize.Net &#8212; Odoo 13.0 documentation</title>
+    <title>Как получить оплату с помощью Authorize.Net &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
     <script type="text/javascript" src="../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../_static/doc.js"></script>
     <script type="text/javascript" src="../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/ecommerce/shopper_experience/authorize.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/ecommerce/shopper_experience/authorize.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/ecommerce/shopper_experience/authorize.html" />
+    <link rel="canonical" href="/master/ru/ecommerce/shopper_experience/authorize.html" />
   
-    <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="How to get paid with wire transfers" href="wire_transfer.html" />
-    <link rel="prev" title="Configure your Paypal account" href="paypal.html" /> 
+    <link rel="index" title="Алфавитный указатель" href="../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../search.html" />
+    <link rel="next" title="Как получить платеж через банковский перевод" href="wire_transfer.html" />
+    <link rel="prev" title="Настройте ваш аккаунт Paypal" href="paypal.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -205,7 +209,7 @@
             
         
     
-    <li class="active"><a href="#">How to get paid with Authorize.Net</a></li>
+    <li class="active"><a href="#">Как получить оплату с помощью Authorize.Net</a></li>
 
               
           </ol>
@@ -221,12 +225,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/ecommerce/shopper_experience/authorize.html">English</a></li>
+        
+            <li><a href="/13.0/uk/ecommerce/shopper_experience/authorize.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -253,6 +272,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -262,7 +283,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> How to get paid with Authorize.Net </h1>
+        <h1> Как получить оплату с помощью Authorize.Net </h1>
       </div>
     </figure>
     
@@ -275,7 +296,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#create-an-authorize-net-account" class="ripple internal reference">Create an Authorize.Net account</a></li><li class="list-group-item"><a href="#set-up-odoo" class="ripple internal reference">Set up Odoo</a></li><li class="list-group-item"><a href="#go-live" class="ripple internal reference">Go live</a></li><li class="list-group-item"><a href="#assess-authorize-net-as-payment-solution" class="ripple internal reference">Assess Authorize.Net as payment solution</a></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#create-an-authorize-net-account" class="ripple internal reference">Создайте аккаунт Authorize.Net</a></li><li class="list-group-item"><a href="#set-up-odoo" class="ripple internal reference">Настройте Odoo</a></li><li class="list-group-item"><a href="#go-live" class="ripple internal reference">начните</a></li><li class="list-group-item"><a href="#assess-authorize-net-as-payment-solution" class="ripple internal reference">Оцените Authorize.Net как платежное решение</a></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/ecommerce/shopper_experience/authorize.rst" class="gith-link">
                   Edit on GitHub
@@ -287,28 +308,7 @@
           <article class="doc-body  ">
             
             
-  <section id="how-to-get-paid-with-authorize-net"><p >Authorize.Net is one of the most popular eCommerce payment platforms in North America.
-Unlike most of the other payment acquirers compatible with Odoo,
-Authorize.Net can be used as <a href="https://www.authorize.net/solutions/merchantsolutions/pricing/?p=gwo" class="external reference">payment gateway</a> only.
-That way you can use the <a href="https://www.authorize.net/partners/resellerprogram/processorlist/" class="external reference">payment processor or merchant</a> that you like.</p></section><section id="create-an-authorize-net-account"><h2 >Create an Authorize.Net account</h2><ul ><li >Create an <a href="https://www.authorize.net" class="external reference">Authorize.Net account</a>
-by clicking ‘Get Started’.</li><li ><p >In the pricing page, press <em >Sign up now</em> if you want to use Authorize.net as
-both payment gateway and merchant. If you want to use your own merchant, press
-the related option.</p><img src="../../_images/authorize01.png" style="" class="img-responsive center-block"></li><li >Go through the registration steps.</li><li >The account is set as a test account by default. You can use this test
-account to process a test transaction from Odoo.</li><li >Once ready, switch to <strong >Production</strong> mode.</li></ul></section><section id="set-up-odoo"><h2 >Set up Odoo</h2><ul ><li >Activate Authorize.Net in Odoo from <span class="menuselection">Website or Sales or Accounting
-‣ Settings ‣ Payment Acquirers</span>.</li><li ><p >Enter both your <strong >Login ID</strong>
-and your <strong >API Transaction Key</strong>.</p><img src="../../_images/authorize02.png" style="" class="img-responsive center-block"><p >To get those credentials in Authorize.Net, you can rely on
-<em >API Login ID and Transaction Key</em> video of
-<a href="https://www.authorize.net/videos/" class="external reference">Authorize.Net Video Tutorials</a>.
-Such videos give meaningful insights about how to set up your
-Authorize.Net account according to your needs.</p></li></ul></section><section id="go-live"><h2 >Go live</h2><p >Your configuration is now ready!
-You can make Authorize.Net visible on your merchant interface
-and activate the <strong >Production</strong> mode.</p><img src="../../_images/paypal_live.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >Credentials provided by Authorize.net are different for both
-test and production mode. Don’t forget to update them in Odoo when you
-turn on the production mode.</p></div></section><section id="assess-authorize-net-as-payment-solution"><h2 >Assess Authorize.Net as payment solution</h2><p >You can test and assess Authorize.Net for free by creating a <a href="https://developer.authorize.net" class="external reference">developer account</a>.</p><p >Once the account created you receive sandbox credentials.
-Enter them in Odoo as explained here above and make sure
-you are still in <em >Test</em> mode.</p><p >You can also log in to <a href="https://sandbox.authorize.net/" class="external reference">Authorize.Net sandbox platform</a>
-to configure your sandbox account.</p><p >To perform ficticious transactions you can use fake card numbers
-provided in the <a href="https://developer.authorize.net/hello_world/testing_guide/" class="external reference">Authorize.Net Testing Guide</a>.</p><div role="alert" class="alert-go_to alert"><p class="alert-title">See also</p><ul ><li ><a href="payment.html" class="internal alert-link reference"><span class="doc">How to get paid with payment acquirers</span></a></li><li ><a href="payment_acquirer.html" class="internal alert-link reference"><span class="doc">How to manage orders paid with payment acquirers</span></a></li></ul></div></section>
+  <section id="how-to-get-paid-with-authorize-net"><p >Authorize.Net является одной из самых популярных платформ электронной коммерции в Северной Америке. В отличие от большинства других поставщиков платежей, совместимых с Odoo, Authorize.Net может использоваться только как платежный шлюз. &lt;<a href="https://www.authorize.net/solutions/merchantsolutions/pricing/?p=gwo" class="external reference">https://www.authorize.net/solutions/merchantsolutions/pricing/?p=gwo</a>&gt; [UNKNOWN NODE problematic]__ Таким образом, вы можете воспользоваться процессором платежа или продавцом, &lt;<a href="https://www.authorize.net/partners/resellerprogram/processorlist/" class="external reference">https://www.authorize.net/partners/resellerprogram/processorlist/</a>&gt; [UNKNOWN NODE problematic]__ который вам нравится.</p></section><section id="create-an-authorize-net-account"><h2 >Создайте аккаунт Authorize.Net</h2><ul ><li >Создайте аккаунт Authorize.Net, &lt;<a href="https://www.authorize.net" class="external reference">https://www.authorize.net</a>&gt; [UNKNOWN NODE problematic]__ нажав кнопку&amp;quot; Начать работу &amp;quot;.</li><li ><p >На странице ценообразования нажмите * Зарегистрируйтесь * если вы хотите использовать Authorize.net как платежный шлюз и продажу. Если вы хотите использовать свой собственный продажа, нажмите соответствующую опцию.</p><img src="../../_images/authorize01.png" style="" class="img-responsive center-block"></li><li >Перейдите по шагами регистрации.</li><li >По умолчанию учетная запись установлено как тестовый аккаунт. Вы можете использовать этот тестовый аккаунт для обработки тестовой транзакции с Odoo.</li><li >После завершения перейдите в режим ** разработчика [UNKNOWN NODE problematic].</li></ul></section><section id="set-up-odoo"><h2 >Настройте Odoo</h2><ul ><li >Активизируйте Authorize.Net в Odoo с: menuselection: [UNKNOWN NODE title_reference].</li><li ><p >Введите ** ID входа ** и ** Транзакционный ключ API [UNKNOWN NODE problematic].</p><img src="../../_images/authorize02.png" style="" class="img-responsive center-block"><p >Чтобы получить эти учетные данные в Authorize.Net, вы можете положиться на видео с идентификаторами регистрации API и видео-транзакции Video Tutorials Authorize.Net. &lt;<a href="https://www.authorize.net/videos/" class="external reference">https://www.authorize.net/videos/</a>&gt; [UNKNOWN NODE problematic]__. Такие видеозаписи дают содержательную информацию о том, как настроить учетную запись Authorize.Net соответствии с вашими потребностями.</p></li></ul></section><section id="go-live"><h2 >начните</h2><p >Ваше настройки уже готово! Вы можете сделать Authorize.Net видимым в вашем интерфейсе продавца и активировать режим ** разработчика [UNKNOWN NODE problematic].</p><img src="../../_images/paypal_live.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Полномочия, предоставленные Authorize.net, отличаются как для тестирования, так и для режима разработчика. Не забывайте обновлять их в Odoo, когда вы включаете режим разработчика.</p></div></section><section id="assess-authorize-net-as-payment-solution"><h2 >Оцените Authorize.Net как платежное решение</h2><p >Вы можете бесплатно протестировать и оценить Authorize.Net, создав [UNKNOWN NODE problematic]аккаунт разработчика &lt;<a href="https://developer.authorize.net" class="external reference">https://developer.authorize.net</a>&gt; [UNKNOWN NODE problematic]__.</p><p >После создания учетной записи вы получите учетные данные sandbox. Введите их в Odoo, как описано выше, и убедитесь, что вы все еще находитесь в режиме * тестирование [UNKNOWN NODE problematic].</p><p >Вы также можете войти в платформу для автозагрузки Authorize.Net, &lt;<a href="https://sandbox.authorize.net/" class="external reference">https://sandbox.authorize.net/</a>&gt; [UNKNOWN NODE problematic]__ чтобы настроить учетную запись для sandbox.</p><p >Для выполнения фальшивых операций можно использовать поддельные номера карт, указанные в руководстве по тестированию Authorize.Net &lt;<a href="https://developer.authorize.net/hello_world/testing_guide/" class="external reference">https://developer.authorize.net/hello_world/testing_guide/</a>&gt; [UNKNOWN NODE problematic]__.</p><div role="alert" class="alert-go_to alert"><p class="alert-title">См.также</p><ul ><li ><a href="payment.html" class="internal alert-link reference"><span class="doc">Как получить платеж через платежные эквайеры</span></a></li><li ><a href="payment_acquirer.html" class="internal alert-link reference"><span class="doc">Как управлять заказами, оплаченными через платежные эквайеры</span></a></li></ul></div></section>
 
           </article>
         </div>

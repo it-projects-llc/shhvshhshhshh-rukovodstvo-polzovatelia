@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>Credit Notes and Refunds &#8212; Odoo 13.0 documentation</title>
+    <title>Сторно и возмещения &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../../_static/doc.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/accounting/receivables/customer_invoices/credit_notes.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/accounting/receivables/customer_invoices/credit_notes.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/accounting/receivables/customer_invoices/credit_notes.html" />
+    <link rel="canonical" href="/master/ru/accounting/receivables/customer_invoices/credit_notes.html" />
   
-    <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="index" title="Алфавитный указатель" href="../../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../../search.html" />
     <link rel="next" title="Add EPC QR Codes to invoices" href="epc_qr_code.html" />
-    <link rel="prev" title="Deferred Revenues" href="deferred_revenues.html" /> 
+    <link rel="prev" title="Доходы будущих периодов" href="deferred_revenues.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -194,7 +198,7 @@
         
             
                 
-                    <li><a href="../../../accounting.html">Accounting</a></li>
+                    <li><a href="../../../accounting.html">Бухгалтерский учёт</a></li>
                 
             
         
@@ -211,7 +215,7 @@
             
         
     
-    <li class="active"><a href="#">Credit Notes and Refunds</a></li>
+    <li class="active"><a href="#">Сторно и возмещения</a></li>
 
               
           </ol>
@@ -227,12 +231,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/accounting/receivables/customer_invoices/credit_notes.html">English</a></li>
+        
+            <li><a href="/13.0/uk/accounting/receivables/customer_invoices/credit_notes.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -259,6 +278,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -268,7 +289,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> Credit Notes and Refunds </h1>
+        <h1> Сторно и возмещения </h1>
       </div>
     </figure>
     
@@ -281,7 +302,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#issue-a-credit-note" class="ripple internal reference">Issue a Credit Note</a><ul ><li class="list-group-item"><a href="#partial-refund" class="ripple internal reference">Partial Refund</a></li><li class="list-group-item"><a href="#full-refund" class="ripple internal reference">Full Refund</a></li><li class="list-group-item"><a href="#full-refund-and-new-draft-invoice" class="ripple internal reference">Full refund and new draft invoice</a></li></ul></li><li class="list-group-item"><a href="#record-a-vendor-refund" class="ripple internal reference">Record a Vendor Refund</a></li><li class="list-group-item"><a href="#journal-entries" class="ripple internal reference">Journal Entries</a></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#issue-a-credit-note" class="ripple internal reference">создание сторно</a><ul ><li class="list-group-item"><a href="#partial-refund" class="ripple internal reference">возвращение частями</a></li><li class="list-group-item"><a href="#full-refund" class="ripple internal reference">полный возврат</a></li><li class="list-group-item"><a href="#full-refund-and-new-draft-invoice" class="ripple internal reference">Полный возврат и новая черновик счета</a></li></ul></li><li class="list-group-item"><a href="#record-a-vendor-refund" class="ripple internal reference">Запись возвращения поставщика</a></li><li class="list-group-item"><a href="#journal-entries" class="ripple internal reference">Записи журнала</a></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/accounting/receivables/customer_invoices/credit_notes.rst" class="gith-link">
                   Edit on GitHub
@@ -293,28 +314,7 @@
           <article class="doc-body  ">
             
             
-  <section id="credit-notes-and-refunds"><p >A <strong >credit note</strong>, or <strong >credit memo</strong>, is a document issued
-to a customer that notifies them that they have been credited
-a certain amount.</p><dl ><dt >There are several reasons that can lead to a credit note, such as:</dt><dd ><ul ><li >a mistake in the invoice</li><li >a return of the goods, or a rejection of the services</li><li >the goods delivered are damaged</li></ul></dd></dl><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >Issuing a credit note is the only legal way to cancel,
-refund or modify a validated invoice. Don’t forget to
-<em >register the payment</em> afterward if you need to send money
-back to your customer.</p></div></section><section id="issue-a-credit-note"><h2 >Issue a Credit Note</h2><p >You can create a credit note from scratch by going to
-<span class="menuselection">Accounting ‣ Customers ‣ Credit Notes</span>,
-and by clicking on <em >Create</em>. Filling the Credit Note’s form
-works the same way as the Invoice’s form.</p><p >However, most of the time, credit notes are generated directly
-from the invoices they are related to.</p><p >To do so, open the <em >Customer Invoice</em>, and click on <em >Add Credit Note</em>.</p><img src="../../../_images/credit_notes01.png" style="" class="img-responsive center-block"><dl ><dt >You can choose between three options:</dt><dd ><ul ><li >Partial Refund</li><li >Full Refund</li><li >Full refund and new draft invoice</li></ul></dd></dl><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >Credit Notes’ numbers start with “R” and are followed by the
-number of the document they are related to (e.g., RINV/2019/0004).</p></div></section><section id="partial-refund"><h3 >Partial Refund</h3><p >Odoo creates a draft credit note already prefilled with all the
-necessary information from the original invoice.</p><p >This is the option to choose to do a partial refund, or if you
-want to modify any detail on the credit note.</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >This is the only option available for invoices that are already marked as <em >Paid</em>.</p></div></section><section id="full-refund"><h3 >Full Refund</h3><p >Odoo creates a credit note, automatically validates it, and
-reconciles the original invoice with it.</p><img src="../../../_images/credit_notes02.png" style="" class="img-responsive center-block"><p >This is the option to choose to do a full refund or cancel
-a validated invoice.</p></section><section id="full-refund-and-new-draft-invoice"><h3 >Full refund and new draft invoice</h3><p >Odoo creates a credit note, automatically validates it, reconciles
-the original invoice with it, and open a new draft invoice
-prefilled with the same details from the original invoice.</p><p >This is the option to choose to modify the content of a validated invoice.</p></section><section id="record-a-vendor-refund"><h2 >Record a Vendor Refund</h2><p ><strong >Vendor Refunds</strong> are recorded the same way you would do with invoices’ credit notes:</p><p >You can either create a credit note from scratch by going
-to <span class="menuselection">Accounting ‣ Vendors ‣ Refund</span>, and
-by clicking on <em >Create</em>, or by opening the validated <em >Vendor Bill</em>,
-and clicking on <em >Add Credit Note</em>.</p></section><section id="journal-entries"><h2 >Journal Entries</h2><p >Issuing a credit note from an invoice creates a <strong >reverse entry</strong>
-that zeroes out the journal items generated by the original invoice.</p><p >Here is an example of an invoice’s journal entry:</p><img src="../../../_images/credit_notes03.png" style="" class="img-responsive center-block"><p >And here is the credit note’s journal entry generated to reverse
-the original invoice above:</p><img src="../../../_images/credit_notes04.png" style="" class="img-responsive center-block"></section>
+  <section id="credit-notes-and-refunds"><p >** Сторно ** - это документ, выданный заказчику, который сообщает им, что им было засчитано определенную сумму.</p><dl ><dt >Есть несколько причин, которые могут привести к сторно, такие как:</dt><dd ><ul ><li >ошибка в счете-фактуре</li><li >возврат товаров или отклонения услуг</li><li >доставлены товары повреждены</li></ul></dd></dl><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Выдача сторно - это единственный законный способ отменить, вернуть или изменить утвержден счет-фактуру. Не забудьте впоследствии * зарегистрировать платеж * если вам нужно вернуть деньги клиенту.</p></div></section><section id="issue-a-credit-note"><h2 >создание сторно</h2><p >Вы можете создать сторно, перейдя в: menuselection: [UNKNOWN NODE title_reference] и нажав * Стовриты [UNKNOWN NODE problematic]. Заполнение формы сторно работает так же, как и форма счета.</p><p >Однако обычно сторно создаются непосредственно со счетов-фактур, с которыми они связаны.</p><p >Чтобы сделать это, откройте * Счет клиента * и нажмите * Добавить сторно [UNKNOWN NODE problematic].</p><img src="../../../_images/credit_notes01.png" style="" class="img-responsive center-block"><dl ><dt >Вы можете выбрать из трех опций:</dt><dd ><ul ><li >возвращение частями</li><li >полный возврат</li><li >Полный возврат и новая черновик счета</li></ul></dd></dl><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Номера сторно начинаются с &amp;quot;R&amp;quot; и следуют по номеру документа, с которым они связаны (например., RINV / 2019/0004).</p></div></section><section id="partial-refund"><h3 >возвращение частями</h3><p >Odoo создает черновик сторно, которая уже полностью заполнена со всей необходимой информацией из оригинального счета.</p><p >Это опция для частичного возврата, или, если вы хотите изменить любую деталь на сторно.</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Эта функция доступна только для счетов, которые обозначены, как * Ополчения [UNKNOWN NODE problematic].</p></div></section><section id="full-refund"><h3 >полный возврат</h3><p >Odoo создает сторно, автоматически подтверждает его, и согласовывает его с оригинальным счету.</p><img src="../../../_images/credit_notes02.png" style="" class="img-responsive center-block"><p >Это опция для полного возврата или отмены подтвержденного счета.</p></section><section id="full-refund-and-new-draft-invoice"><h3 >Полный возврат и новая черновик счета</h3><p >Odoo создает сторно, автоматически подтверждает его, согласовывает его с оригинальным счету, и открывает новую черновик счета, предварительно заполненную с теми же деталями и в оригинальном счета.</p><p >Это опция для изменения содержания подтвержденного счета.</p></section><section id="record-a-vendor-refund"><h2 >Запись возвращения поставщика</h2><p >** Возвращение поставщика ** записываются так же, как вы должны делать со сторны счетов:</p><p >Вы можете создать сторно перейдя в: menuselection: [UNKNOWN NODE title_reference] и нажав * Создать * или открыв подтвержден * Счет поставщика * и нажав * Добавить сторно [UNKNOWN NODE problematic].</p></section><section id="journal-entries"><h2 >Записи журнала</h2><p >Создание сторно со счета создает ** обратная запись [UNKNOWN NODE problematic], который онулюе элементы журнала, созданные оригинальным счету.</p><p >Вот пример записи журнала счета:</p><img src="../../../_images/credit_notes03.png" style="" class="img-responsive center-block"><p >И здесь запись журнала сторно создается, чтобы вернуть первоначальный счет-фактуру выше:</p><img src="../../../_images/credit_notes04.png" style="" class="img-responsive center-block"></section>
 
           </article>
         </div>

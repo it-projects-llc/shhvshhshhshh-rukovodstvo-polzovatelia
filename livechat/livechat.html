@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>Live Chat &#8212; Odoo 13.0 documentation</title>
+    <title>Живой чат &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../_static/inventory.js"></script>
     <script type="text/javascript" src="../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
     <script type="text/javascript" src="../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../_static/doc.js"></script>
     <script type="text/javascript" src="../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/livechat/livechat.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/livechat/livechat.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/livechat/livechat.html" />
+    <link rel="canonical" href="/master/ru/livechat/livechat.html" />
   
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
+    <link rel="index" title="Алфавитный указатель" href="../genindex.html" />
+    <link rel="search" title="Поиск" href="../search.html" />
     <link rel="next" title="Expenses" href="../expense/expense.html" />
-    <link rel="prev" title="After sales features: refund, coupon, return, repair, onsite interventions" href="../helpdesk/after_sales.html" /> 
+    <link rel="prev" title="Послепродажные функции: возмещение, купоны, возврат, ремонт, вмешательства на месте" href="../helpdesk/after_sales.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -189,7 +193,7 @@
             <li><a href="../index.html">Документация пользователя</a></li>
         
     
-    <li class="active"><a href="#">Live Chat</a></li>
+    <li class="active"><a href="#">Живой чат</a></li>
 
               
           </ol>
@@ -205,12 +209,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/livechat/livechat.html">English</a></li>
+        
+            <li><a href="/13.0/uk/livechat/livechat.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -237,6 +256,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -248,7 +269,7 @@
     <figure class="card top has_banner">
       <span class="card-img" style="background-image: url('../_static/banners/livechat.jpg');"></span>
       <div class="container text-center">
-        <h1> Live Chat </h1>
+        <h1> Живой чат </h1>
       </div>
     </figure>
     
@@ -261,7 +282,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#chat-in-real-time-with-website-visitors" class="ripple internal reference">Chat in real time with website visitors</a></li><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a></li><li class="list-group-item"><a href="#add-the-live-chat-to-an-odoo-website" class="ripple internal reference">Add the live chat to an Odoo website</a></li><li class="list-group-item"><a href="#add-the-live-chat-to-an-external-website" class="ripple internal reference">Add the live chat to an external website</a></li><li class="list-group-item"><a href="#hide-display-the-live-chat-according-to-rules" class="ripple internal reference">Hide / display the live chat according to rules</a></li><li class="list-group-item"><a href="#prepare-automatic-messages" class="ripple internal reference">Prepare automatic messages</a></li><li class="list-group-item"><a href="#start-chatting-with-customers" class="ripple internal reference">Start chatting with customers</a></li><li class="list-group-item"><a href="#use-commands" class="ripple internal reference">Use commands</a></li><li class="list-group-item"><a href="#send-canned-responses" class="ripple internal reference">Send canned responses</a></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#chat-in-real-time-with-website-visitors" class="ripple internal reference">Общайтесь с посетителями сайта в реальном времени</a></li><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Настройка</a></li><li class="list-group-item"><a href="#add-the-live-chat-to-an-odoo-website" class="ripple internal reference">Добавьте онлайн-чат на сайт Odoo</a></li><li class="list-group-item"><a href="#add-the-live-chat-to-an-external-website" class="ripple internal reference">Добавьте онлайн-чат на внешний сайт</a></li><li class="list-group-item"><a href="#hide-display-the-live-chat-according-to-rules" class="ripple internal reference">Спрячьте / покажите онлайн-чат в соответствии с правилами</a></li><li class="list-group-item"><a href="#prepare-automatic-messages" class="ripple internal reference">Подготовьте автоматические сообщения</a></li><li class="list-group-item"><a href="#start-chatting-with-customers" class="ripple internal reference">Начните общаться с клиентами</a></li><li class="list-group-item"><a href="#use-commands" class="ripple internal reference">используйте команды</a></li><li class="list-group-item"><a href="#send-canned-responses" class="ripple internal reference">Присылайте фиксированные ответы</a></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/livechat/livechat.rst" class="gith-link">
                   Edit on GitHub
@@ -273,47 +294,7 @@
           <article class="doc-body  ">
             
             
-  <section id="live-chat"></section><section id="chat-in-real-time-with-website-visitors"><h2 >Chat in real time with website visitors</h2><p >With Odoo Live Chat, you can establish a direct contact with your
-website visitors. A simple dialog box will be available on their screen
-and will allow them to get in touch with one of your sales
-representatives. This way, you can easily turn prospects into potential
-business opportunities. You will also be able to provide assistance to
-your customers. Overall, this is the perfect tool to improve customer
-satisfaction.</p></section><section id="configuration"><h2 >Configuration</h2><p >To get the Live Chat feature, open the Apps module, search for “Live
-Chat” and then click on install.</p><img src="../_images/live_chat01.png" style="" class="img-responsive center-block"><p >The Live Chat module provides you a direct access to your channels.
-There, operators can easily join and leave the chat.</p><img src="../_images/live_chat02.png" style="" class="img-responsive center-block"></section><section id="add-the-live-chat-to-an-odoo-website"><h2 >Add the live chat to an Odoo website</h2><p >If your website was created with Odoo, then the live chat is
-automatically added to it. All that is left to do, is to go to
-<span class="menuselection">Website ‣ Configuration ‣ Settings</span> to select the
-channel to be linked to the website.</p><img src="../_images/live_chat03.png" style="" class="img-responsive center-block"></section><section id="add-the-live-chat-to-an-external-website"><h2 >Add the live chat to an external website</h2><p >If your website was not created with Odoo, go to the Live Chat module
-and then select the channel to be linked. There, you can simply copy
-paste the code available into your website. A specific url you can send
-to customers or suppliers for them to access the live chat is also
-provided.</p></section><section id="hide-display-the-live-chat-according-to-rules"><h2 >Hide / display the live chat according to rules</h2><p >Rules for the live chat can be defined on the channel form. For
-instance, you can choose to display the chat in the countries you speak
-the language of. On the contrary, you are able to hide the chat in
-countries your company does not sell in. If you select <em >Auto popup</em>,
-you can also set the length of time it takes for the chat to appear.</p><img src="../_images/live_chat04.png" style="" class="img-responsive center-block"></section><section id="prepare-automatic-messages"><h2 >Prepare automatic messages</h2><p >On the channel form, in the <em >Options</em> section, several messages can be
-typed to appear automatically on the chat. This will entice visitors to
-reach you through the live chat.</p><img src="../_images/live_chat05.png" style="" class="img-responsive center-block"></section><section id="start-chatting-with-customers"><h2 >Start chatting with customers</h2><p >In order to start chatting with customers, first make sure that the
-channel is published on your website. To do so, select <em >Unpublished on
-Website</em> on the top right corner of the channel form to toggle the
-<em >Published</em> setting. Then, the live chat can begin once an operator
-has joined the channel.</p><img src="../_images/live_chat06.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >If no operator is available and/or if the channel is
-unpublished on the website, then the live chat button will not appear to
-visitors.</p></div><p >Conversations initiated by visitors also appear in
-the Discuss module in addition to popping up as a direct message. Therefore,
-inquiries can be answered wherever you are in Odoo.</p><p >If there are several operators who have all joined a channel, the system will
-dispatch visitor sessions randomly between them.</p></section><section id="use-commands"><h2 >Use commands</h2><p >Commands are useful shortcuts for completing certain actions or to
-access information you might need. To use this feature, simply type the
-commands into the chat. The following actions are available :</p><p ><strong >/help</strong> : show a helper message.</p><p ><strong >/helpdesk</strong> : create a helpdesk ticket.</p><p ><strong >/helpdesk_search</strong> : search for a helpdesk ticket.</p><p ><strong >/history</strong> : see 15 last visited pages.</p><p ><strong >/lead</strong> : create a new lead.</p><p ><strong >/leave</strong> : leave the channel.</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >If a helpdesk ticket is created from the chat, then the
-conversation it was generated from will automatically appear as the
-description of the ticket. The same goes for the creation of a lead.</p></div></section><section id="send-canned-responses"><h2 >Send canned responses</h2><p >Canned responses allow you to create substitutes to generic sentences
-you frequently use. Typing a word instead of several will save you a lot
-of time. To add canned responses, go to <span class="menuselection">LIVE CHAT ‣
-Configuration ‣ Canned Responses</span> and create as many as you need to.
-Then, to use them during a chat, simply type “:” followed by the
-shortcut you assigned.</p><img src="../_images/live_chat07.png" style="" class="img-responsive center-block"><p >You now have all of the tools needed to chat in live with your website
-visitors, enjoy !</p></section>
+  <section id="live-chat"></section><section id="chat-in-real-time-with-website-visitors"><h2 >Общайтесь с посетителями сайта в реальном времени</h2><p >С Онлайн-чатом Odoo вы можете установить прямой контакт с посетителями вашего сайта. Простое диалоговое окно появится на экране и позволит им связаться с одним из ваших торговых представителей. Таким образом, вы можете легко превратить лиды в возможности. Вы также сможете оказывать помощь своим клиентам. В общем, это идеальный инструмент для улучшения удовлетворенности клиентов.</p></section><section id="configuration"><h2 >Настройка</h2><p >Чтобы получить функцию Онлайн-чат откройте модуль Приложения, найдите &amp;quot;Онлайн-чат&amp;quot;, а затем нажмите кнопку Установить.</p><img src="../_images/live_chat01.png" style="" class="img-responsive center-block"><p >Модуль Онлайн-чат предоставляет прямой доступ к вашим каналов. Там операторы могут легко присоединиться и выходить из чата.</p><img src="../_images/live_chat02.png" style="" class="img-responsive center-block"></section><section id="add-the-live-chat-to-an-odoo-website"><h2 >Добавьте онлайн-чат на сайт Odoo</h2><p >Если ваш сайт был создан с помощью Odoo, то автоматически будет добавлен онлайн-чат. Все, что нужно сделать, это перейти на: menuselection: [UNKNOWN NODE title_reference], чтобы выбрать канал, который будет связан с сайтом.</p><img src="../_images/live_chat03.png" style="" class="img-responsive center-block"></section><section id="add-the-live-chat-to-an-external-website"><h2 >Добавьте онлайн-чат на внешний сайт</h2><p >Если ваш сайт не был создан с помощью Odoo, перейдите к модулю Онлайн-чат, выберите канал, который нужно привязать. Там вы можете просто скопировать доступен код на свой сайт. Также предоставляется конкретная URL-адрес, который вы можете отправить клиентам или поставщикам для доступа к чату.</p></section><section id="hide-display-the-live-chat-according-to-rules"><h2 >Спрячьте / покажите онлайн-чат в соответствии с правилами</h2><p >Правила онлайн-чата можно определить по форме канала. Например, вы можете выбрать показ чата в странах, в которых вы владеете языком. Напротив, вы можете скрыть чат в странах, где ваша компания не ведет деятельность. Если вы выберете Автоматическое всплывающее окно [UNKNOWN NODE problematic], вы также можете установить, сколько времени нужно для показа чата.</p><img src="../_images/live_chat04.png" style="" class="img-responsive center-block"></section><section id="prepare-automatic-messages"><h2 >Подготовьте автоматические сообщения</h2><p >В форме канала, в разделе Параметры * несколько сообщений могут быть набраны, чтобы появляться автоматически в чате. Это побуждает посетителей обратиться к вам через онлайн-чат.</p><img src="../_images/live_chat05.png" style="" class="img-responsive center-block"></section><section id="start-chatting-with-customers"><h2 >Начните общаться с клиентами</h2><p >Чтобы начать общение с клиентами, сначала убедитесь, что канал публикуется на вашем сайте. Чтобы сделать это, выберите * неопубликованных на веб-сайте * в верхнем правом углу формы канала, чтобы переключить параметр * Опубликовано [UNKNOWN NODE problematic]. Затем можно начать чат, когда оператор присоединится к каналу.</p><img src="../_images/live_chat06.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Если ни один оператор не доступен или если канал не опубликовано на сайте, кнопка онлайн-чата не будет отображаться посетителям.</p></div><p >Разговор, инициированный посетителями, также загорается в модуле Обсуждение кроме того, что появляется как прямое сообщение. Поэтому на запросы можно ответить, где бы вы ни были в Odoo.</p><p >Если есть несколько операторов, которые присоединились к каналу, система будет отправлять сессии посетителей случайным образом между ними.</p></section><section id="use-commands"><h2 >используйте команды</h2><p >Команды полезны для выполнения определенных действий или доступа к информации, которая вам может понадобиться. Чтобы использовать эту функцию, введите команды в чат. Доступны следующие действия:</p><p >** / help ** Показать вспомогательное сообщение.</p><p >** / helpdesk [UNKNOWN NODE problematic]: создать заявку службы поддержки.</p><p >** / helpdesk _search ** искать заявку технической поддержки.</p><p >** / history [UNKNOWN NODE problematic]: смотреть 15 последних посещенных страниц.</p><p >** / lead [UNKNOWN NODE problematic]: создать новый лед.</p><p >** / leave [UNKNOWN NODE problematic]: оставить канал.</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Если из чата создан заявку поддержки, тогда разговор, из которой она была сгенерирована автоматически отображаться как описание заявки. То же самое касается и создания лида.</p></div></section><section id="send-canned-responses"><h2 >Присылайте фиксированные ответы</h2><p >Фиксированные ответы позволяют создавать заменители общих предложений, которые вы часто используете. Введите вместо нескольких, это сэкономит вам много времени. Чтобы добавить фиксированные ответы, перейдите к: menuselection: [UNKNOWN NODE title_reference] и создайте столько ответов, сколько нужно. Чтобы использовать их во время чата, введите &amp;quot;:&amp;quot; к ярлыку, который вы назначили.</p><img src="../_images/live_chat07.png" style="" class="img-responsive center-block"><p >Теперь у вас есть все инструменты, необходимые для общения в онлайн с посетителями вашего сайта. Наслаждайтесь!</p></section>
 
           </article>
         </div>

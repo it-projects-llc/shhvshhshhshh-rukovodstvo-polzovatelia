@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>How to follow Twitter feed from Odoo &#8212; Odoo 13.0 documentation</title>
+    <title>Как следить за Twitter в Odoo &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../_static/inventory.js"></script>
     <script type="text/javascript" src="../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
     <script type="text/javascript" src="../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../_static/doc.js"></script>
     <script type="text/javascript" src="../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/discuss/mail_twitter.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/discuss/mail_twitter.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/discuss/mail_twitter.html" />
+    <link rel="canonical" href="/master/ru/discuss/mail_twitter.html" />
   
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="How to use my mail server to send and receive emails in Odoo" href="email_servers.html" />
-    <link rel="prev" title="How to efficiently communicate in team using channels" href="team_communication.html" /> 
+    <link rel="index" title="Алфавитный указатель" href="../genindex.html" />
+    <link rel="search" title="Поиск" href="../search.html" />
+    <link rel="next" title="Как использовать свой почтовый сервер для отправки и получения электронных писем в Odoo" href="email_servers.html" />
+    <link rel="prev" title="Как эффективно коммуницировать в команде, используя каналы" href="team_communication.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -194,12 +198,12 @@
         
             
                 
-                    <li><a href="../discuss.html">Discuss</a></li>
+                    <li><a href="../discuss.html">Общение</a></li>
                 
             
         
     
-    <li class="active"><a href="#">How to follow Twitter feed from Odoo</a></li>
+    <li class="active"><a href="#">Как следить за Twitter в Odoo</a></li>
 
               
           </ol>
@@ -215,12 +219,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/discuss/mail_twitter.html">English</a></li>
+        
+            <li><a href="/13.0/uk/discuss/mail_twitter.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -247,6 +266,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -256,7 +277,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> How to follow Twitter feed from Odoo </h1>
+        <h1> Как следить за Twitter в Odoo </h1>
       </div>
     </figure>
     
@@ -269,7 +290,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#setting-up-the-app-on-twitter-s-side" class="ripple internal reference">Setting up the App on Twitter’s side</a></li><li class="list-group-item"><a href="#getting-the-api-key-and-secret" class="ripple internal reference">Getting the API key and secret</a></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#setting-up-the-app-on-twitter-s-side" class="ripple internal reference">Настройка программы по стороны Twitter</a></li><li class="list-group-item"><a href="#getting-the-api-key-and-secret" class="ripple internal reference">Получение ключа API и секретности</a></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/discuss/mail_twitter.rst" class="gith-link">
                   Edit on GitHub
@@ -281,16 +302,7 @@
           <article class="doc-body  ">
             
             
-  <section id="how-to-follow-twitter-feed-from-odoo"><img src="../_images/twitter_user-image.png" style="" class="img-responsive center-block"><p >You can follow specific hashtags on Twitter and see the tweets within the
-Odoo Discuss channels of your choice. The tweets are retrieved periodically from Twitter.
-An authenticated user can retweet the messages.</p></section><section id="setting-up-the-app-on-twitter-s-side"><h2 >Setting up the App on Twitter’s side</h2><p >Twitter uses an “App” on its side which is opens a gate to which Odoo asks for
-tweets, and through which a user can retweet.
-To set up this app, go to <a href="http://apps.twitter.com/app/new" class="external reference">http://apps.twitter.com/app/new</a> and put in the values:</p><ul ><li >Name: this is the name of the application on Twitter</li><li >Website: this is the external url of your Odoo database, with “/web” added.
-For example, if your Odoo instance is hosted at “<a href="http://www.example.com" class="external reference">http://www.example.com</a>”, you
-should put “<a href="http://www.example.com/web" class="external reference">http://www.example.com/web</a>” in this field.</li><li >Callback URL: this is the address on which Twitter will respond. Following the
-previous example you should write “<a href="http://www.example.com/web/twitter/callback" class="external reference">http://www.example.com/web/twitter/callback</a>”.</li></ul><p >Do not forget to accept the terms <strong >Developer agreement</strong> of use and click on
-<strong >Create your Twitter application</strong> at the bottom of the page.</p></section><section id="getting-the-api-key-and-secret"><h2 >Getting the API key and secret</h2><p >When on the App dashboard, switch to the <strong >Keys and Access Tokens</strong> tab.</p><img src="../_images/api_key.png" style="" class="img-responsive center-block"><p >And copy those values in Odoo in <span class="menuselection">Settings‣ General Settings‣ Twitter discuss integration</span>
-and click on <strong >Save</strong> to save the settings.</p></section>
+  <section id="how-to-follow-twitter-feed-from-odoo"><img src="../_images/twitter_user-image.png" style="" class="img-responsive center-block"><p >Вы можете следить за конкретными хэш-тегами в Twitter и просматривать твиты в пределах каналов Обсуждение Odoo по вашему выбору. Твиты периодически извлекаются из Twitter. Прошедшие проверку может ретвититы сообщения.</p></section><section id="setting-up-the-app-on-twitter-s-side"><h2 >Настройка программы по стороны Twitter</h2><p >Twitter использует &amp;quot;Программа&amp;quot; со своей стороны, открывает путь, к которому Odoo требует твитов, и с помощью которого пользователь может восстановить ретвиты. Чтобы настроить эту программу, перейдите на страницу <a href="http://apps.twitter.com/app/new" class="external reference">http://apps.twitter.com/app/new</a> и введите значения:</p><ul ><li >Название: это название программы на Twitter</li><li >Сайт: это внешняя URL-адрес базы данных Odoo, добавив &amp;quot;/ web&amp;quot;. Например, если ваша версия Odoo размещена на &amp;quot;http://www.example.com&amp;quot;, в этом поле следует добавить &amp;quot;http://www.example.com/web&amp;quot;.</li><li >Обратная URL-адрес: это адрес, по которому Twitter отвечает. После предыдущего примера следует написать &amp;quot;http://www.example.com/web/twitter/callback&amp;quot;.</li></ul><p >Не забудьте принять условия использования соглашения для разработчиков и нажмите кнопку ** Создать свое приложение Twitter ** в нижней части страницы.</p></section><section id="getting-the-api-key-and-secret"><h2 >Получение ключа API и секретности</h2><p >Когда вы на информационной панели программы, перейдите на вкладку ** Токены ключей и доступа [UNKNOWN NODE problematic].</p><img src="../_images/api_key.png" style="" class="img-responsive center-block"><p >Скопируйте эти значения в Odoo в: menuselection: [UNKNOWN NODE title_reference] и нажмите кнопку ** Сохранить [UNKNOWN NODE problematic], чтобы сохранить настройки.</p></section>
 
           </article>
         </div>

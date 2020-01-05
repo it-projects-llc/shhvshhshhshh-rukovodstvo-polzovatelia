@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>Using product variants &#8212; Odoo 13.0 documentation</title>
+    <title>Использование вариантов товара &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../../_static/doc.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/sales/products_prices/products/variants.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/sales/products_prices/products/variants.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/sales/products_prices/products/variants.html" />
+    <link rel="canonical" href="/master/ru/sales/products_prices/products/variants.html" />
   
-    <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Set taxes" href="../taxes.html" />
-    <link rel="prev" title="How to import products with categories and variants" href="import.html" /> 
+    <link rel="index" title="Алфавитный указатель" href="../../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../../search.html" />
+    <link rel="next" title="установите налоги" href="../taxes.html" />
+    <link rel="prev" title="Как импортировать товары с категориями и вариантами в Odoo" href="import.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -194,7 +198,7 @@
         
             
                 
-                    <li><a href="../../../sales.html">Sales</a></li>
+                    <li><a href="../../../sales.html">Продажи</a></li>
                 
             
         
@@ -211,7 +215,7 @@
             
         
     
-    <li class="active"><a href="#">Using product variants</a></li>
+    <li class="active"><a href="#">Использование вариантов товара</a></li>
 
               
           </ol>
@@ -227,12 +231,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/sales/products_prices/products/variants.html">English</a></li>
+        
+            <li><a href="/13.0/uk/sales/products_prices/products/variants.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -259,6 +278,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -268,7 +289,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> Using product variants </h1>
+        <h1> Использование вариантов товара </h1>
       </div>
     </figure>
     
@@ -281,7 +302,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#impact-of-variants" class="ripple internal reference">Impact of variants</a></li><li class="list-group-item"><a href="#should-you-use-variants" class="ripple internal reference">Should you use variants?</a><ul ><li class="list-group-item"><a href="#when-should-you-use-variants" class="ripple internal reference">When should you use variants?</a></li><li class="list-group-item"><a href="#when-should-you-avoid-using-variants" class="ripple internal reference">When should you avoid using variants?</a></li></ul></li><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a><ul ><li class="list-group-item"><a href="#activate-the-variant-feature" class="ripple internal reference">Activate the variant feature</a></li><li class="list-group-item"><a href="#creating-products-with-variants" class="ripple internal reference">Creating products with variants</a></li></ul></li><li class="list-group-item"><a href="#managing-product-variants" class="ripple internal reference">Managing Product Variants</a><ul ><li class="list-group-item"><a href="#introduction" class="ripple internal reference">Introduction</a></li><li class="list-group-item"><a href="#managing-combination-possibilities" class="ripple internal reference">Managing combination possibilities</a></li><li class="list-group-item"><a href="#setting-a-price-per-variant" class="ripple internal reference">Setting a price per variant</a></li></ul></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#impact-of-variants" class="ripple internal reference">влияние вариантов</a></li><li class="list-group-item"><a href="#should-you-use-variants" class="ripple internal reference">Стоит ли использовать варианты?</a><ul ><li class="list-group-item"><a href="#when-should-you-use-variants" class="ripple internal reference">Когда следует использовать варианты?</a></li><li class="list-group-item"><a href="#when-should-you-avoid-using-variants" class="ripple internal reference">Когда следует избегать использования вариантов?</a></li></ul></li><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Настройка</a><ul ><li class="list-group-item"><a href="#activate-the-variant-feature" class="ripple internal reference">Активизируйте функцию варианта</a></li><li class="list-group-item"><a href="#creating-products-with-variants" class="ripple internal reference">Создание продуктов с различными вариантами</a></li></ul></li><li class="list-group-item"><a href="#managing-product-variants" class="ripple internal reference">Управление вариантами товара</a><ul ><li class="list-group-item"><a href="#introduction" class="ripple internal reference">Введение</a></li><li class="list-group-item"><a href="#managing-combination-possibilities" class="ripple internal reference">Управление возможностями комбинации</a></li><li class="list-group-item"><a href="#setting-a-price-per-variant" class="ripple internal reference">Установление цены за вариант</a></li></ul></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/sales/products_prices/products/variants.rst" class="gith-link">
                   Edit on GitHub
@@ -293,76 +314,7 @@
           <article class="doc-body  ">
             
             
-  <section id="using-product-variants"><p >Product variants are used to manage products having different
-variations, like size, color, etc. It allows managing the product at the
-template level (for all variations) and at the variant level (specific
-attributes).</p><p >As an example, a company selling t-shirts may have the following
-product:</p><ul ><li ><p >B&amp;C T-shirt</p><ul ><li >Sizes: S, M, L, XL, XXL</li><li >Colors: Blue, Red, White, Black</li></ul></li></ul><p >In this example, <strong >B&amp;C T-Shirt</strong> is called the product template and
-<strong >B&amp;C T-Shirt, S, Blue</strong> is a variant. Sizes and color are
-<strong >attributes</strong>.</p><p >The above example has a total of 20 different products (5 sizes x 4
-colors). Each one of these products has its own inventory, sales, etc.</p></section><section id="impact-of-variants"><h2 >Impact of variants</h2><ul ><li ><strong >Barcode</strong>: the code and barcode is associated to a variant, not the
-template. Every variant may have its own barcode / SKU.</li><li ><strong >Price</strong>: every product variant has its own public price that is
-computed based on the template price ($20) with an optional extra
-for every variant (+$3 for color red). However, you can define
-pricelist rules that apply on the template or the variant.</li><li ><strong >Inventory</strong>: the inventory is managed by product variant. You don’t
-own t-shirts, you only own “T-shirts, S, Red”, or “T-Shirts, M,
-Blue”. For information purpose, on the product template form, you
-get the inventory that is the sum of every variant. (but the
-actual inventory is computed by variant)</li><li ><strong >Picture</strong>: the picture is related to the variant, every variation
-of a product may have its own primary picture.</li><li ><strong >Other fields</strong>: most of the other fields belongs to the product
-template. If you update them, it updates automatically all the
-variants. (example: Income Account, Taxes)</li></ul></section><section id="should-you-use-variants"><h2 >Should you use variants?</h2></section><section id="when-should-you-use-variants"><h3 >When should you use variants?</h3><p >Using variants has the following impacts:</p><ul ><li ><strong >eCommerce</strong>: in your online shop, the customer will only see
-product templates in the catalog page. Once the visitor click on
-such a product, he will have options to choose amongst the
-variants (colors, sizes, …)</li><li ><strong >Manufacturing</strong>: Using variants allows to define only one bill of
-material for a product template and slight variations for some of
-the variants. Example: instead of creating a Bill of Material for
-“T-shirt, Red, S”, you create a bill of material for “T-shirt”
-and add some lines that are specific to the dimension S, and
-other lines specific to the color Red.</li><li ><strong >Pricing</strong>: The default price of a product is computed using the
-price of the product template and add the optional extra price on
-each dimension of the variant. This way, variant prices are
-easier to maintain since you don’t have to set the price for
-every variant. However, it’s possible to create pricelist rules
-to fix price per variants too.</li></ul></section><section id="when-should-you-avoid-using-variants"><h3 >When should you avoid using variants?</h3><p >Using variants may add a level of complexity on the way you use Odoo.
-You should consider using variants only if you need it to reduce the
-complexity of managing lots of products that are similars.</p><p >As an example, importing your initial product catalog is more complex if
-you use variants. You can’t just import a list of products, you must
-import product templates and all their related variations.</p><p >In addition to that, you should also carefully select the dimensions
-that you manage as separate product templates and those as variants. As
-an example, a company having these products:</p><ul ><li >Quality: T-Shirts, Polos, Shirts</li><li >Color: Red, Blue</li><li >Size: S, M, L, XL</li></ul><p >In such a use case, you could create 1 template with three dimensions of
-variants (Layout, T-Shirts, Polos). But, it’s recommended to create two
-different product templates as T-shirts may highly differ from polos or
-shirts and customer expect to see these as two different products in the
-e-Commerce:</p><ul ><li ><p >Product Template: T-shirt</p><ul ><li >Color: Red, Blue</li><li >Size: S, M, L, XL</li></ul></li><li ><p >Product Template: Polos</p><ul ><li >Color: Red, Blue</li><li >Size: S, M, L, XL</li></ul></li></ul></section><section id="configuration"><h2 >Configuration</h2></section><section id="activate-the-variant-feature"><h3 >Activate the variant feature</h3><p >Before you can use product variants, you must first activate the product
-variants in the settings. To do so, you must go to the Sales app. In the
-menu <span class="menuselection">Configuration ‣ Settings</span>, locate the <strong >Products Variants</strong> line,
-and tick the option <strong >Products can have several attributes</strong>, then click
-on <strong >Apply</strong>.</p><img src="../../../_images/variant01.png" style="" class="img-responsive center-block"></section><section id="creating-products-with-variants"><h3 >Creating products with variants</h3><p >Once you have activated the variant option, you can add variants to your
-products. To do so, go to the Sales module, <span class="menuselection">Sales ‣ Products</span>.
-It is also accessible from the Purchase and inventory modules.</p><p >Now, click on the product you wish to add variants to.</p><p >In the product page, a new tab called Variants has appeared. The number
-in purple written on top is the number of variants this product
-currently has. To add new variants, click on the tile. In the new
-window, click on <strong >Create</strong>.</p><p >In <strong >Attributes</strong>, click on the rolldown menu and select the type of
-variance you wish to add. If the variant does not yet exist, you can
-create it on the fly by clicking on Create and edit…</p><img src="../../../_images/variant02.png" style="" class="img-responsive center-block"><p >In the Attributes window, the <strong >Value</strong> field is the description of the
-attribute such as Green, Plastic or 32GB. The <strong >Attribute</strong> field is the
-type of variant such as Color, Material or Memory.</p><img src="../../../_images/variant03.png" style="" class="img-responsive center-block"><p >You can add a cost for the variant on the fly by adding it in the
-<strong >Attribute Price Extra</strong> field, or choose to modify it later. Click on
-<strong >Save</strong>.</p><p >You can also add a different barcode and internal reference to the
-variant.</p><p >When you have entered all the specifications of the variant, click on
-<strong >Save</strong>.</p></section><section id="managing-product-variants"><h2 >Managing Product Variants</h2></section><section id="introduction"><h3 >Introduction</h3><p >The examples below are all based on this product template that has two
-variant attributes :</p><ul ><li ><p >T-Shirt B&amp;C</p><ul ><li >Color: Red, Blue, White</li><li >Size: S, M, L, XL, XXL</li></ul></li></ul></section><section id="managing-combination-possibilities"><h3 >Managing combination possibilities</h3><p >By default, with the above product template, you get 15 different
-products (3 colors, 5 sizes). If the XXL size only exists for red and
-blue t-shirts, you can deactivate the white product variant.</p><p >To do this, click on the <strong >Variants</strong> button, select the XXL, White
-T-shirt. From the product form, uncheck the <strong >Active</strong> box of the T-shirt
-White, XXL.</p><img src="../../../_images/variant04.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >That deactivating a product is different than having an inventory of 0.</p></div></section><section id="setting-a-price-per-variant"><h3 >Setting a price per variant</h3><p >You can add a cost over the main price for some of the variants of a
-product.</p><p >Once you have activated the variant option, you can add variants to your
-products. To do so, go to the Sales module, open <span class="menuselection">Sales ‣ Products</span>
-and click on the product you want to modify. Click on the <strong >Variant Prices</strong>
-button to access the list of variant values.</p><img src="../../../_images/variant05.png" style="" class="img-responsive center-block"><p >Click on the variant name you wish to add a value to, to make the 3
-fields editable. In the <strong >Attribute Price Extra</strong> field, add the cost of
-the variant that will be added to the original price.</p><img src="../../../_images/variant06.png" style="" class="img-responsive center-block"><p >When you have entered all the extra values, click on <strong >Save</strong>.</p></section>
+  <section id="using-product-variants"><p >Варианты товара используются для управления товарами, имеющими разные варианты, например размер, цвет и т. Это позволяет управлять товаром на уровне шаблона (для всех вариантов) и на уровне вариантов (специфические атрибуты).</p><p >Например, компания, продающая футболки, может иметь такой товар:</p><ul ><li ><p >Футболка B &amp;amp; C</p><ul ><li >Размеры: S, M, L, XL, XXL</li><li >Цвета: синий, красный, белый, черный</li></ul></li></ul><p >В этом примере ** Топ B &amp;amp; C ** называется шаблоном товара, а ** Топ B &amp;amp; C, S [UNKNOWN NODE problematic], синий - это вариант. Размеры и цвет является ** атрибутами [UNKNOWN NODE problematic].</p><p >В приведенном выше примере в общей сложности 20 различных товаров (5 размеров на 4 цвета). Каждый из этих товаров имеет собственную инвентаризацию, продажа и др.</p></section><section id="impact-of-variants"><h2 >влияние вариантов</h2><ul ><li >** Штрих-код ** код и штрих-код ассоциируются с вариантом, а не с шаблоном. Каждый вариант может иметь свой штрих-код / ​​SKU.</li><li >** Цена [UNKNOWN NODE problematic]: каждый вариант товара имеет свою публичную цену, которая исчисляется на основе цены шаблона ($ 20) за дополнительным аксессуаром для каждого варианта (+ 3 долл. США за красный цвет). Тем не менее, вы можете определить ценовые правила, применяемые к шаблону или варианта.</li><li >** фото [UNKNOWN NODE problematic]: запас руководствуется вариантом товара. Вы не владеете футболками, у вас есть только &amp;quot;Футболки, S, красный&amp;quot; или &amp;quot;Футболки, M, синий&amp;quot;. Для информационного назначения, в форме шаблона товара вы получаете запас, который является суммой каждого варианта (но фактический запас исчисляется по варианту).</li><li >** Изображения [UNKNOWN NODE problematic]: картинка связана с вариантом, каждая вариация товара может иметь свою основную картину.</li><li >** Другие поля [UNKNOWN NODE problematic]: большинство других полей принадлежит к шаблону товара. Если вы их обновляете, он автоматически обновляет все варианты (пример: Счет дохода, Налоги).</li></ul></section><section id="should-you-use-variants"><h2 >Стоит ли использовать варианты?</h2></section><section id="when-should-you-use-variants"><h3 >Когда следует использовать варианты?</h3><p >Использование вариантов имеет следующие последствия:</p><ul ><li >** Электронная коммерция [UNKNOWN NODE problematic]: в вашем интернет-магазине клиент увидит только шаблоны товаров на странице каталога. Когда посетитель нажимает на такой товар, он будет иметь варианты выбора среди вариантов (цвета, размеры, …)</li><li >** Производство ** Использование вариантов позволяет определить лишь одну спецификацию для шаблона товара и небольшие вариации для некоторых вариантов. Пример: вместо создания спецификации для &amp;quot;Футболки, красный, S&amp;quot; вы создаете спецификацию для &amp;quot;футболки&amp;quot; и добавляете строки, соответствующие конкретному размера S, а также другие строки, специфичные для красного цвета.</li><li >** Ценообразование [UNKNOWN NODE problematic]: цена товара по умолчанию вычисляется по цене шаблона товара и добавляет необязательную дополнительную цену за каждым размером варианта. Таким образом, варианты цены проще поддерживать, поскольку вам не нужно устанавливать цены по каждому варианту. Однако можно создать ценовые правила, чтобы установить цену за вариантом.</li></ul></section><section id="when-should-you-avoid-using-variants"><h3 >Когда следует избегать использования вариантов?</h3><p >Использование вариантов может добавить уровень сложности в том, как вы используете Odoo. Вы должны рассмотреть возможность использования вариантов только в том случае, когда вам это нужно, чтобы уменьшить сложность управления многими товарами, которые являются аналогами.</p><p >Например, импорт начального каталога товаров является более сложным, если вы используете варианты. Вы не можете просто импортировать список товаров, вы должны импортировать шаблоны товаров и все связанные с ними варианты.</p><p >Кроме того, вы также должны тщательно выбрать параметры, которыми вы управляете как отдельными шаблонами товаров, и те, что являются вариантами. Например, компания, которая имеет эти товары:</p><ul ><li >Качество: футболки, поло</li><li >Цвет: красный, синий</li><li >Размер: S, M, L, XL</li></ul><p >В таком случае вы можете создать 1 шаблон с тремя параметрами вариантов (Компоновка, футболки, поло). Но рекомендуется создать два разных шаблоны товаров, поскольку футболки могут сильно отличаться от поло или рубашек, и потребитель надеется увидеть их как два разных товара в электронной коммерции:</p><ul ><li ><p >Шаблон товара: футболка</p><ul ><li >Цвет: красный, синий</li><li >Размер: S, M, L, XL</li></ul></li><li ><p >Шаблон товара: поло</p><ul ><li >Цвет: красный, синий</li><li >Размер: S, M, L, XL</li></ul></li></ul></section><section id="configuration"><h2 >Настройка</h2></section><section id="activate-the-variant-feature"><h3 >Активизируйте функцию варианта</h3><p >Прежде чем использовать варианты товара, сначала нужно активировать варианты товара в настройках. Для этого нужно перейти к приложению Продажи. В меню: menuselection: [UNKNOWN NODE title_reference] найдите строку ** Варианты товара ** и поставьте флажок ** Товары могут иметь несколько атрибутов [UNKNOWN NODE problematic], затем нажмите ** Применить [UNKNOWN NODE problematic].</p><img src="../../../_images/variant01.png" style="" class="img-responsive center-block"></section><section id="creating-products-with-variants"><h3 >Создание продуктов с различными вариантами</h3><p >После активации вариантов, вы можете добавить варианты в ваших товаров. Для этого перейдите к модулю: menuselection: [UNKNOWN NODE title_reference]. Он также доступен в модуле Покупки и Состав.</p><p >Теперь нажмите на товар, к которому нужно добавить варианты.</p><p >На странице товара появилась новая вкладка Варианты. Фиолетовый номер, написанный сверху, - это количество вариантов этого товара в настоящее время. Чтобы добавить новые варианты, нажмите на плитку. В новом окне нажмите кнопку ** Создать [UNKNOWN NODE problematic].</p><p >В разделе ** Атрибуты ** щелкните на развернутом меню и выберите тип разницы, какой вы хотите добавить. Если вариант еще не существует, вы можете создать его на лету, нажав кнопку Создать и изменение …</p><img src="../../../_images/variant02.png" style="" class="img-responsive center-block"><p >В окне Атрибуты поле ** Значение ** - это описание атрибута, такого как Зеленый, Пластиковый или «32 Гб». Поле ** Атрибут ** - это тип варианта, такого как Цвет, Материал или Память.</p><img src="../../../_images/variant03.png" style="" class="img-responsive center-block"><p >Вы можете добавить стоимость варианта на лету, добавив его в поле ** Дополнительные характеристики ** или выберите позже. Нажмите кнопку ** Сохранить [UNKNOWN NODE problematic].</p><p >Вы также можете добавить другой штрих-код и внутренняя ссылка на вариант.</p><p >Когда вы ввели все спецификации этого варианта, нажмите кнопку ** Сохранить [UNKNOWN NODE problematic].</p></section><section id="managing-product-variants"><h2 >Управление вариантами товара</h2></section><section id="introduction"><h3 >Введение</h3><p >Приведенные ниже примеры являются основой этого шаблона товара, который имеет два атрибуты варианта:</p><ul ><li ><p >Футболка B &amp;amp; C</p><ul ><li >Цвет: красный, синий, белый</li><li >Размер: S, M, L, XL, XXL</li></ul></li></ul></section><section id="managing-combination-possibilities"><h3 >Управление возможностями комбинации</h3><p >По умолчанию, используя указанный выше шаблон товара, вы получаете 15 различных товаров (3 цвета, 5 размеров). Если размер XXL существует только для красных и синих футболок, вы можете отключить вариант белого товара.</p><p >Для этого нажмите кнопку ** Варианты [UNKNOWN NODE problematic], выберите XXL, белая футболка. Из формы товара снимите обозначения ** Активно ** футболки белого цвета XXL.</p><img src="../../../_images/variant04.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >Отключение товара отличается от наличия инвентаризации 0.</p></div></section><section id="setting-a-price-per-variant"><h3 >Установление цены за вариант</h3><p >Вы можете добавить стоимость по основной цене для некоторых вариантов товара.</p><p >После активации вариантов, вы можете добавить варианты в ваших товаров. Для этого перейдите к модулю Продажи, откройте: menuselection: [UNKNOWN NODE title_reference] и нажмите на товар, который нужно изменить. Нажмите кнопку ** Варианты цен [UNKNOWN NODE problematic], чтобы посмотреть список вариантов значений.</p><img src="../../../_images/variant05.png" style="" class="img-responsive center-block"><p >Нажмите на названии варианта, к которому нужно добавить значение, чтобы сделать 3 поля редактируемыми. В поле ** Атрибут дополнительной характеристики ** добавьте стоимость варианта, который будет добавлен к начальной цены.</p><img src="../../../_images/variant06.png" style="" class="img-responsive center-block"><p >Когда вы введете все дополнительные значения, нажмите кнопку ** Сохранить [UNKNOWN NODE problematic].</p></section>
 
           </article>
         </div>

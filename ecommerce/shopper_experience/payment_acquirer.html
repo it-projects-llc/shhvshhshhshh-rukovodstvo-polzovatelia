@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>How to manage orders paid with payment acquirers &#8212; Odoo 13.0 documentation</title>
+    <title>Как управлять заказами, оплаченными через платежные эквайеры &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
     <script type="text/javascript" src="../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../_static/doc.js"></script>
     <script type="text/javascript" src="../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/ecommerce/shopper_experience/payment_acquirer.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/ecommerce/shopper_experience/payment_acquirer.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/ecommerce/shopper_experience/payment_acquirer.html" />
+    <link rel="canonical" href="/master/ru/ecommerce/shopper_experience/payment_acquirer.html" />
   
-    <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="How customers can access their customer account" href="portal.html" />
-    <link rel="prev" title="How to get paid with wire transfers" href="wire_transfer.html" /> 
+    <link rel="index" title="Алфавитный указатель" href="../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../search.html" />
+    <link rel="next" title="Как клиенты могут получить доступ к клиентского аккаунта" href="portal.html" />
+    <link rel="prev" title="Как получить платеж через банковский перевод" href="wire_transfer.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -205,7 +209,7 @@
             
         
     
-    <li class="active"><a href="#">How to manage orders paid with payment acquirers</a></li>
+    <li class="active"><a href="#">Как управлять заказами, оплаченными через платежные эквайеры</a></li>
 
               
           </ol>
@@ -221,12 +225,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/ecommerce/shopper_experience/payment_acquirer.html">English</a></li>
+        
+            <li><a href="/13.0/uk/ecommerce/shopper_experience/payment_acquirer.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -253,6 +272,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -262,7 +283,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> How to manage orders paid with payment acquirers </h1>
+        <h1> Как управлять заказами, оплаченными через платежные эквайеры </h1>
       </div>
     </figure>
     
@@ -275,7 +296,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#what-are-the-payment-status" class="ripple internal reference">What are the payment status</a></li><li class="list-group-item"><a href="#auto-validate-invoices-at-order" class="ripple internal reference">Auto-validate invoices at order</a></li><li class="list-group-item"><a href="#capture-the-payment-after-the-delivery" class="ripple internal reference">Capture the payment after the delivery</a></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#what-are-the-payment-status" class="ripple internal reference">Какой статус платежа</a></li><li class="list-group-item"><a href="#auto-validate-invoices-at-order" class="ripple internal reference">Автоматически проверены счета по заказу</a></li><li class="list-group-item"><a href="#capture-the-payment-after-the-delivery" class="ripple internal reference">Зафиксируйте платеж после доставки</a></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/ecommerce/shopper_experience/payment_acquirer.rst" class="gith-link">
                   Edit on GitHub
@@ -287,33 +308,14 @@
           <article class="doc-body  ">
             
             
-  <section id="how-to-manage-orders-paid-with-payment-acquirers"><p >Odoo confirms orders automatically as soon as the payment is authorized
-by a payment acquirer. This triggers the delivery.
-If you invoice based on ordered quantities,
-you are also requested to invoice the order.</p></section><section id="what-are-the-payment-status"><h2 >What are the payment status</h2><p >At anytime, the salesman can check the transaction status from the order.</p><img src="../../_images/payment_transaction.png" style="" class="img-responsive center-block"><ul ><li ><em >Draft</em>: transaction under processing.</li><li ><em >Pending</em>: the payment acquirer keeps the transaction on hold and you
+  <section id="how-to-manage-orders-paid-with-payment-acquirers"><p >Odoo подтверждает заказ автоматически, как только платеж будет авторизовано платежным эквайером. Это запускает доставку. Если вы выставили счет-фактуру на основе заказных количеств, вам также предлагается начислить стоимость заказа.</p></section><section id="what-are-the-payment-status"><h2 >Какой статус платежа</h2><p >В любое время продавец может проверить состояние транзакции по заказу.</p><img src="../../_images/payment_transaction.png" style="" class="img-responsive center-block"><ul ><li ><em >Draft</em>: transaction under processing.</li><li ><em >Pending</em>: the payment acquirer keeps the transaction on hold and you
 need to authorize it from the acquirer interface.</li><li ><em >Authorized</em>: the payment has been authorized but not yet captured.
 In Odoo, the order is already confirmed. Once the delivery done, you
 can capture the amount from the acquirer interface (or from Odoo if you use
 Authorize.net).</li><li ><em >Done</em>: the payment is authorized and captured. The order has been confirmed.</li><li ><em >Error</em>: an error has occured during the transaction.
 The customer needs to retry the payment.
 The order is still in draft.</li><li ><em >Cancelled</em>: when the customer cancels the payment in the payment acquirer form.
-They are taken back to Odoo in order to modify the order.</li></ul><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >Specific messages are provided to your customers for every
-payment status, when they are redirected to Odoo after the transaction.
-To edit such messages, go to the <em >Messages</em> tab of the payment
-method.</p></div></section><section id="auto-validate-invoices-at-order"><h2 >Auto-validate invoices at order</h2><p >When the order is confirmed you can also have an invoice automatically issued
-and paid. This fully-automated made for businesses that invoice
-orders straight on.</p><img src="../../_images/payment_invoice.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >If you choose this mode you are requested to select a payment journal
-in order to record payments in your books.
-This payment is automatically reconcilied with the invoice, marking it as paid.
-Select your <strong >bank account</strong> if you get paid immediately on your bank account.
-If you don’t you can create a specific journal for the payment acquirer
-(type = Bank). That way, you can track online payments in an intermediary
-account of your books until you get paid into your bank account
-(see <a href="../../accounting/receivables/customer_payments/credit_cards.html" class="external reference alert-link">How to register credit card payments</a>).</p></div></section><section id="capture-the-payment-after-the-delivery"><h2 >Capture the payment after the delivery</h2><p >With this mode, the order is confirmed but the amount is kept on hold.
-Once the delivery processed, you can capture the payment from Odoo.
-This mode is only available with Authorize.net.</p><img src="../../_images/payment_capture_mode.png" style="" class="img-responsive center-block"><p >To capture the payment, open the transaction from the order.
-Then click <em >Capture Transaction</em>.</p><img src="../../_images/payment_capture.png" style="" class="img-responsive center-block"><p >With other payment acquirers, you can manage the capture in
-their own interfaces, not from Odoo.</p></section>
+They are taken back to Odoo in order to modify the order.</li></ul><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Специальные сообщения предоставляются вашим клиентам по каждому платежному статусом, когда они перенаправляются в Odoo после транзакции. Чтобы отредактировать такие, перейдите на вкладку * Сообщение * метода оплаты.</p></div></section><section id="auto-validate-invoices-at-order"><h2 >Автоматически проверены счета по заказу</h2><p >Когда заказ подтвержден, вы можете иметь счет-фактуру, выставляемый автоматически и оплачивается. Это полностью автоматизировано для предприятий, которым выставляется заказ.</p><img src="../../_images/payment_invoice.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Если вы выберете этот режим, вам будет предложено выбрать журнал платежей для записи в ваших книгах. Этот платеж автоматически согласуется со счетом-фактурой, обозначая его как оплаченный. Выберите банковский счет, если вы сразу получаете платеж на своем банковском счете. Если вы не можете, вы можете создать отдельный журнал для покупателя платежа (тип = Банк). Таким образом, вы можете отслеживать онлайн-платежи через промежуточный счет ваших бухгалтерских книг, пока вы не получите оплату на свой банковский счет (см. Как регистрировать платежи кредитной картой &amp;lt;../../ accounting / receivables / customer_payments / credit_cards.html&amp;gt; [UNKNOWN NODE problematic]__).</p></div></section><section id="capture-the-payment-after-the-delivery"><h2 >Зафиксируйте платеж после доставки</h2><p >С помощью этого режима заказ подтвержден, но сумма удерживается. После обработки доставки вы можете получить платеж от Odoo. Этот режим доступен только с Authorize.net.</p><img src="../../_images/payment_capture_mode.png" style="" class="img-responsive center-block"><p >Чтобы отобразить платеж, откройте транзакцию по заказу. Нажмите * Удержать транзакцию [UNKNOWN NODE problematic].</p><img src="../../_images/payment_capture.png" style="" class="img-responsive center-block"><p >С другими платежными еквайермы вы можете управлять содержанием в собственных интерфейсах, а не с Odoo.</p></section>
 
           </article>
         </div>

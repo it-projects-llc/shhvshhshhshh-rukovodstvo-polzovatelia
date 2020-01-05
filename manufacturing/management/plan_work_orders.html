@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>Plan Work Orders &#8212; Odoo 13.0 documentation</title>
+    <title>Plan Work Orders &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/accounting.css" />
@@ -27,15 +27,19 @@
     <script type="text/javascript" src="../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
     <script type="text/javascript" src="../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../_static/doc.js"></script>
     <script type="text/javascript" src="../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/manufacturing/management/plan_work_orders.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/manufacturing/management/plan_work_orders.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/manufacturing/management/plan_work_orders.html" />
+    <link rel="canonical" href="/master/ru/manufacturing/management/plan_work_orders.html" />
   
-    <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Using an alternative Work Center" href="alternative_wc.html" />
+    <link rel="index" title="Алфавитный указатель" href="../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../search.html" />
+    <link rel="next" title="Используя альтернативный рабочий центр" href="alternative_wc.html" />
     <link rel="prev" title="Use flexible components consumption" href="flexible_components_consumption.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
@@ -194,7 +198,7 @@
         
             
                 
-                    <li><a href="../../manufacturing.html">Manufacturing</a></li>
+                    <li><a href="../../manufacturing.html">Производство</a></li>
                 
             
         
@@ -221,12 +225,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/manufacturing/management/plan_work_orders.html">English</a></li>
+        
+            <li><a href="/13.0/uk/manufacturing/management/plan_work_orders.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -252,6 +271,8 @@
 <script type="text/javascript">$('#searchbox').show(0);</script>
             
 
+            
+              <li class="divider"></li>
             
           </ul>
         </div>
@@ -296,10 +317,10 @@ the planning. And, if you plan two work orders at the same work center,
 at the same hour, the second one will be scheduled right after the first
 one, avoiding work superposition.</p></section><section id="create-the-work-orders"><h2 >Create the Work Orders</h2><p >The first thing you need to do is to open the <em >Manufacturing</em> app.
 Then, Go to the settings and enable the <em >Work Orders</em> feature.</p><img src="../../_images/plan_work_order_01.png" style="" class="img-responsive center-block"><p >Now, go to the <em >Manufacturing Orders</em> menu and hit <em >Create</em>. Choose
-your product and add a <em >Planned Start Date</em>.</p><img src="../../_images/plan_work_order_02.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >The “Deadline Start” field is informative. It shows you until when you
+your product and add a <em >Planned Start Date</em>.</p><img src="../../_images/plan_work_order_02.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >The “Deadline Start” field is informative. It shows you until when you
 can launch the manufacturing order to fulfill the initial demand.</p></div><p >Mark your <em >Manufacturing Order</em> as todo and plan it. By going to the
 <em >Planning</em> menu, you can access to the scheduled orders. Here is the
-one we just created:</p><img src="../../_images/plan_work_order_03.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >If you plan two work orders at the same hour, the second one will be
+one we just created:</p><img src="../../_images/plan_work_order_03.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >If you plan two work orders at the same hour, the second one will be
 scheduled after the first one if the jobs need to be done at the same
 work center. The start date will, then, be automatically updated
 considering the first free slot on the work center.</p></div><p >If you overrun the planned date and begin the job later, you will have a

@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>Overview of the invoicing process &#8212; Odoo 13.0 documentation</title>
+    <title>Обзор процесса выставления счетов &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../../_static/doc.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/accounting/receivables/customer_invoices/overview.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/accounting/receivables/customer_invoices/overview.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/accounting/receivables/customer_invoices/overview.html" />
+    <link rel="canonical" href="/master/ru/accounting/receivables/customer_invoices/overview.html" />
   
-    <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Offer cash discounts" href="cash_discounts.html" />
-    <link rel="prev" title="Customer Invoices" href="../customer_invoices.html" /> 
+    <link rel="index" title="Алфавитный указатель" href="../../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../../search.html" />
+    <link rel="next" title="денежные скидки" href="cash_discounts.html" />
+    <link rel="prev" title="Счета заказчику" href="../customer_invoices.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -194,7 +198,7 @@
         
             
                 
-                    <li><a href="../../../accounting.html">Accounting</a></li>
+                    <li><a href="../../../accounting.html">Бухгалтерский учёт</a></li>
                 
             
         
@@ -211,7 +215,7 @@
             
         
     
-    <li class="active"><a href="#">Overview of the invoicing process</a></li>
+    <li class="active"><a href="#">Обзор процесса выставления счетов</a></li>
 
               
           </ol>
@@ -227,12 +231,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/accounting/receivables/customer_invoices/overview.html">English</a></li>
+        
+            <li><a href="/13.0/uk/accounting/receivables/customer_invoices/overview.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -259,6 +278,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -268,7 +289,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> Overview of the invoicing process </h1>
+        <h1> Обзор процесса выставления счетов </h1>
       </div>
     </figure>
     
@@ -281,7 +302,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#sales" class="ripple internal reference">Sales</a><ul ><li class="list-group-item"><a href="#sales-order-invoice" class="ripple internal reference">Sales Order ‣ Invoice</a></li><li class="list-group-item"><a href="#sales-order-delivery-order-invoice" class="ripple internal reference">Sales Order ‣ Delivery Order ‣ Invoice</a></li><li class="list-group-item"><a href="#ecommerce-order-invoice" class="ripple internal reference">eCommerce Order ‣ Invoice</a></li></ul></li><li class="list-group-item"><a href="#contracts" class="ripple internal reference">Contracts</a><ul ><li class="list-group-item"><a href="#regular-contracts-invoices" class="ripple internal reference">Regular Contracts ‣ Invoices</a></li><li class="list-group-item"><a href="#recurring-contracts-invoices" class="ripple internal reference">Recurring Contracts ‣ Invoices</a></li></ul></li><li class="list-group-item"><a href="#others" class="ripple internal reference">Others</a><ul ><li class="list-group-item"><a href="#creating-an-invoice-manually" class="ripple internal reference">Creating an invoice manually</a></li><li class="list-group-item"><a href="#specific-modules" class="ripple internal reference">Specific modules</a></li></ul></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#sales" class="ripple internal reference">Продажи</a><ul ><li class="list-group-item"><a href="#sales-order-invoice" class="ripple internal reference">Заказ на продажу ‣ Счет-фактура</a></li><li class="list-group-item"><a href="#sales-order-delivery-order-invoice" class="ripple internal reference">Заказ на продажу ‣ заказ на доставку ‣ Счет-фактура</a></li><li class="list-group-item"><a href="#ecommerce-order-invoice" class="ripple internal reference">Заказ в электронной коммерции ‣ Счет-фактура</a></li></ul></li><li class="list-group-item"><a href="#contracts" class="ripple internal reference">Договоры</a><ul ><li class="list-group-item"><a href="#regular-contracts-invoices" class="ripple internal reference">Обычные контракты ‣ Счета-фактуры</a></li><li class="list-group-item"><a href="#recurring-contracts-invoices" class="ripple internal reference">Повторяющиеся контракты ‣ Счета-фактуры</a></li></ul></li><li class="list-group-item"><a href="#others" class="ripple internal reference">другие</a><ul ><li class="list-group-item"><a href="#creating-an-invoice-manually" class="ripple internal reference">Создание счета-фактуры вручную</a></li><li class="list-group-item"><a href="#specific-modules" class="ripple internal reference">специальные модули</a></li></ul></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/accounting/receivables/customer_invoices/overview.rst" class="gith-link">
                   Edit on GitHub
@@ -293,42 +314,7 @@
           <article class="doc-body  ">
             
             
-  <section id="overview-of-the-invoicing-process"><p >Depending on your business and the application you use, there are
-different ways to automate the customer invoice creation in Odoo.
-Usually, draft invoices are created by the system (with information
-coming from other documents like sales order or contracts) and
-accountant just have to validate draft invoices and send the invoices in
-batch (by regular mail or email).</p><p >Depending on your business, you may opt for one of the following way to
-create draft invoices:</p></section><section id="sales"><h2 >Sales</h2></section><section id="sales-order-invoice"><h3 >Sales Order ‣ Invoice</h3><p >In most companies, salespeople create quotations that become sales order
-once they are validated. Then, draft invoices are created based on the
-sales order. You have different options like:</p><ul ><li >Invoice manually: use a button on the sale order to trigger the draft
-invoice</li><li >Invoice before delivery: invoice the full order before triggering the
-delivery order</li><li >Invoice based on delivery order: see next section</li></ul><p >Invoice before delivery is usually used by the eCommerce application
-when the customer pays at the order and we deliver afterwards.
-(pre-paid)</p><p >For most other use cases, it’s recommended to invoice manually. It
-allows the salesperson to trigger the invoice on demand with options:
-invoice the whole order, invoice a percentage (advance), invoice some
-lines, invoice a fixed advance.</p><p >This process is good for both services and physical products.</p></section><section id="sales-order-delivery-order-invoice"><h3 >Sales Order ‣ Delivery Order ‣ Invoice</h3><p >Retailers and eCommerce usually invoice based on delivery orders,
-instead of sales order. This approach is suitable for businesses where
-the quantities you deliver may differs from the ordered quantities:
-foods (invoice based on actual Kg).</p><p >This way, if you deliver a partial order, you only invoice for what you
-really delivered. If you do back orders (deliver partially and the rest
-later), the customer will receive two invoices, one for each delivery
-order.</p></section><section id="ecommerce-order-invoice"><h3 >eCommerce Order ‣ Invoice</h3><p >An eCommerce order will also trigger the creation of the order when it
-is fully paid. If you allow paying orders by check or wire transfer,
-Odoo only creates an order and the invoice will be triggered once the
-payment is received.</p></section><section id="contracts"><h2 >Contracts</h2></section><section id="regular-contracts-invoices"><h3 >Regular Contracts ‣ Invoices</h3><p >If you use contracts, you can trigger invoice based on time and material
-spent, expenses or fixed lines of services/products. Every month, the
-salesperson will trigger invoice based on activities on the contract.</p><p >Activities can be:</p><ul ><li >fixed products/services, coming from a sale order linked to this contract</li><li >materials purchased (that you will re-invoiced)</li><li >time and material based on timesheets or purchases (subcontracting)</li><li >expenses like travel and accommodation that you re-invoice to the customer</li></ul><p >You can invoice at the end of the contract or trigger intermediate
-invoices. This approach is used by services companies that invoice
-mostly based on time and material. For services companies that invoice
-on fix price, they use a regular sales order.</p></section><section id="recurring-contracts-invoices"><h3 >Recurring Contracts ‣ Invoices</h3><p >For subscriptions, an invoice is triggered periodically, automatically.
-The frequency of the invoicing and the services/products invoiced are
-defined on the contract.</p></section><section id="others"><h2 >Others</h2></section><section id="creating-an-invoice-manually"><h3 >Creating an invoice manually</h3><p >Users can also create invoices manually without using contracts or a
-sales order. It’s a recommended approach if you do not need to manage
-the sales process (quotations), or the delivery of the products or
-services.</p><p >Even if you generate the invoice from a sales order, you may need to
-create invoices manually in exceptional use cases:</p><ul ><li >if you need to create a refund</li><li >If you need to give a discount</li><li >if you need to change an invoice created from a sales order</li><li >if you need to invoice something not related to your core business</li></ul></section><section id="specific-modules"><h3 >Specific modules</h3><p >Some specific modules are also able to generate draft invoices:</p><ul ><li ><strong >membership</strong>: invoice your members every year</li><li ><strong >repairs</strong>: invoice your after-sale services</li></ul></section>
+  <section id="overview-of-the-invoicing-process"><p >В зависимости от вашего бизнеса и программы, которую вы используете, существуют различные способы автоматизировать создание счетов-фактур в Odoo. Обычно проекты счетов-фактур создаются системой (с информацией, поступающей из других документов, например по заказу на продажу или контрактов), и бухгалтер должен просто проверить очередные счета-фактуры и отправлять счета в пакетном режиме (обычной почтой или электронной почтой).</p><p >В зависимости от вашего бизнеса, вы можете выбрать один из способов создания очередных счетов:</p></section><section id="sales"><h2 >Продажи</h2></section><section id="sales-order-invoice"><h3 >Заказ на продажу ‣ Счет-фактура</h3><p >В большинстве компаний продавцы создают коммерческие предложения, которые становятся заказу на продажу после их проверки. Затем проекты счетов-фактур создаются на основе заказа на продажу. У вас есть различные варианты, такие как:</p><ul ><li >Счет-фактура вручную используйте кнопку в заказе на продажу, чтобы запустить черновик счета-фактуры</li><li >Счет перед доставкой: выписывайте полное заказ перед тем, как запустить заказ на доставку</li><li >Счет-фактура на основе заказа на доставку: смотрите следующий раздел</li></ul><p >Счет-фактура перед доставкой обычно используется приложением eCommerce, когда клиент платит по заказу, и мы доставляем его после этого. (Подписка)</p><p >Для большинства других случаев использования рекомендуется вручную зачислять счет. Это позволяет продавцу инициировать счет-фактуру по требованию с помощью вариантов: счет-фактура на весь заказ, счет-фактура на процент (аванс), счет-фактура на несколько строк, счет-фактура фиксированного аванса.</p><p >Этот процесс полезен как для предоставления услуг, так и для продажи товаров.</p></section><section id="sales-order-delivery-order-invoice"><h3 >Заказ на продажу ‣ заказ на доставку ‣ Счет-фактура</h3><p >Розничная торговля и электронная коммерция, как правило, выставляют счет-фактуру на основе заказов на доставку, а не заказ на продажу. Этот метод подходит для предприятий, где количество, которое вы доставляете может отличаться от заказанных количеств продукты питания (счет-фактура на основе фактических кг).</p><p >Таким образом, если вы доставляете частичное заказ, вы платите только то, что вы действительно доставили. Если вы возвращаете заказ (частично доставьте, а остальные позже), клиент получит два счета-фактуры, по одному для каждого заказа на доставку.</p></section><section id="ecommerce-order-invoice"><h3 >Заказ в электронной коммерции ‣ Счет-фактура</h3><p >Заказ в электронной коммерции также приводит к созданию заказа на продажу, когда оно полностью оплаченное. Если вы позволяете осуществлять заказ с помощью чеков или банковских переводов, Odoo создает только заказ, а счет-фактура будет активирован после получения платежа.</p></section><section id="contracts"><h2 >Договоры</h2></section><section id="regular-contracts-invoices"><h3 >Обычные контракты ‣ Счета-фактуры</h3><p >Если вы используете контракты, вы можете запускать счет-фактуру на основе времени и потраченных материалов, расходов или фиксированных строк услуг / товаров. Ежемесячно продавец запускает счет, исходя из действий на контракте.</p><p >Действия могут быть следующие:</p><ul ><li >фиксированные товары / услуги, поступающие от заказа продажи, связанного с этим контрактом</li><li >приобретенные материалы (которые вы будете предоставлять)</li><li >время и материалы на основе табеля или покупки (субподряд)</li><li >расходы, такие как путешествия и проживание, которые вы переводите клиенту</li></ul><p >Вы можете насчитать счет в конце контракта или запустить промежуточные счета-фактуры. Такой подход используется компаниями-поставщиками услуг, оказываемых счет-фактуру в основном по времени и материалом. Для услуг компании, которые выставляют счета-фактуры за установленную цену, они используют обычный заказ на продажу.</p></section><section id="recurring-contracts-invoices"><h3 >Повторяющиеся контракты ‣ Счета-фактуры</h3><p >Для подписок счет-фактура выставляется периодически и автоматически. Частота выставления счетов и услуг / товаров, на которые выставлен счет, определяются на контракте.</p></section><section id="others"><h2 >другие</h2></section><section id="creating-an-invoice-manually"><h3 >Создание счета-фактуры вручную</h3><p >Пользователи также могут создавать счета-фактуры вручную, не используя контракты или заказ на продажу. Это рекомендуемый подход, если вам не нужно управлять процессом продажи (коммерческие предложения) или доставкой товаров или услуг.</p><p >Даже если вы создадите счет-фактуру по заказу на продажу, вам может понадобиться создание счета-фактуры вручную в исключительных случаях использования:</p><ul ><li >если вам нужно создать возмещения</li><li >если вам нужно предоставить скидку</li><li >если вам нужно изменить счет, созданный по заказу на продажу</li><li >если вам нужно начислить то не связано с основным бизнесом</li></ul></section><section id="specific-modules"><h3 >специальные модули</h3><p >Некоторые специальные модули также могут создавать проекты счетов-фактур:</p><ul ><li >** членство [UNKNOWN NODE problematic]: выставляйте счета своих членов ежегодно</li><li >** налаживания [UNKNOWN NODE problematic]: выставляйте счета на услуги послепродажного обслуживания</li></ul></section>
 
           </article>
         </div>

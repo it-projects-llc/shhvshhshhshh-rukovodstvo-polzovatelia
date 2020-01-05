@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>How to manage multiple packs for the same delivery order? &#8212; Odoo 13.0 documentation</title>
+    <title>Как управлять несколькими пакетами для одного заказа на доставку? &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../../_static/doc.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/inventory/shipping/operation/multipack.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/inventory/shipping/operation/multipack.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/inventory/shipping/operation/multipack.html" />
+    <link rel="canonical" href="/master/ru/inventory/shipping/operation/multipack.html" />
   
-    <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="How to print shipping labels?" href="labels.html" />
-    <link rel="prev" title="How to invoice the shipping cost to the customer?" href="invoicing.html" /> 
+    <link rel="index" title="Алфавитный указатель" href="../../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../../search.html" />
+    <link rel="next" title="Как распечатать накладную?" href="labels.html" />
+    <link rel="prev" title="Как зачесть стоимость доставки клиенту?" href="invoicing.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -194,7 +198,7 @@
         
             
                 
-                    <li><a href="../../../inventory.html">Inventory</a></li>
+                    <li><a href="../../../inventory.html">Склад</a></li>
                 
             
         
@@ -211,7 +215,7 @@
             
         
     
-    <li class="active"><a href="#">How to manage multiple packs for the same delivery order?</a></li>
+    <li class="active"><a href="#">Как управлять несколькими пакетами для одного заказа на доставку?</a></li>
 
               
           </ol>
@@ -227,12 +231,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/inventory/shipping/operation/multipack.html">English</a></li>
+        
+            <li><a href="/13.0/uk/inventory/shipping/operation/multipack.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -259,6 +278,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -268,7 +289,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> How to manage multiple packs for the same delivery order? </h1>
+        <h1> Как управлять несколькими пакетами для одного заказа на доставку? </h1>
       </div>
     </figure>
     
@@ -281,7 +302,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#overview" class="ripple internal reference">Overview</a></li><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a></li><li class="list-group-item"><a href="#sale-process" class="ripple internal reference">Sale process</a><ul ><li class="list-group-item"><a href="#sale-order" class="ripple internal reference">Sale order</a></li><li class="list-group-item"><a href="#multi-packages-delivery" class="ripple internal reference">Multi-packages Delivery</a></li><li class="list-group-item"><a href="#multi-packages-with-a-3rd-party-shipper" class="ripple internal reference">Multi-packages with a 3rd party-shipper</a></li></ul></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#overview" class="ripple internal reference">Общий обзор</a></li><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Настройка</a></li><li class="list-group-item"><a href="#sale-process" class="ripple internal reference">процесс продажи</a><ul ><li class="list-group-item"><a href="#sale-order" class="ripple internal reference">Заказ на продажу</a></li><li class="list-group-item"><a href="#multi-packages-delivery" class="ripple internal reference">Доставка нескольких пакетов</a></li><li class="list-group-item"><a href="#multi-packages-with-a-3rd-party-shipper" class="ripple internal reference">Несколько пакетов с посторонним перевозчиком</a></li></ul></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/inventory/shipping/operation/multipack.rst" class="gith-link">
                   Edit on GitHub
@@ -293,19 +314,7 @@
           <article class="doc-body  ">
             
             
-  <section id="how-to-manage-multiple-packs-for-the-same-delivery-order"></section><section id="overview"><h2 >Overview</h2><p >By default, Odoo considers that your delivery is composed of one
-package. But you can easily ship your deliveries with more than one
-package. It is fully integrated with the third-party shippers.</p></section><section id="configuration"><h2 >Configuration</h2><p >To configure the use of packages, go to the menu
-<span class="menuselection">Inventory ‣ Configuration ‣ Settings</span>.
-Locate the <strong >Packages</strong> section and tick <strong >Record
-packages used on packing: pallets, boxes,…</strong></p><img src="../../../_images/multipack03.png" style="" class="img-responsive center-block"><p >Click on <strong >Apply</strong> when you are done.</p></section><section id="sale-process"><h2 >Sale process</h2></section><section id="sale-order"><h3 >Sale order</h3><img src="../../../_images/multipack06.png" style="" class="img-responsive center-block"><p >Click on a <strong >Delivery Method</strong> to choose the right one.</p><p >The price is computed when you <strong >save</strong> the sale order or when you click on
-<strong >Set price</strong>.</p></section><section id="multi-packages-delivery"><h3 >Multi-packages Delivery</h3><p >The delivery created from the sale order will take the shipping
-information from it.</p><img src="../../../_images/multipack07.png" style="" class="img-responsive center-block"><p >From here, you can split your delivery into multiple packages.</p><p >Choose the quantity you want to put in the first pack in the <strong >Done</strong>
-column, then click on the link <strong >Put in Pack</strong>.</p><img src="../../../_images/multipack02.png" style="" class="img-responsive center-block"><p >It will automatically create a pack with the requested quantity.</p><p >Do the same steps for the other pieces you want to pack in.</p><img src="../../../_images/multipack04.png" style="" class="img-responsive center-block"><p >Click on <strong >Validate</strong> when you are done.</p></section><section id="multi-packages-with-a-3rd-party-shipper"><h3 >Multi-packages with a 3rd party-shipper</h3><p >Once the delivery order is validated, you will receive the tracking
-number. The <strong >carrier Tracking ref</strong> field will automatically be filled.
-Click on the <strong >Tracking</strong> button to check your delivery on the provider
-website.</p><img src="../../../_images/multipack05.png" style="" class="img-responsive center-block"><p >The <strong >labels</strong> to stick on your packages are available in the history
-underneath:</p><img src="../../../_images/multipack01.png" style="" class="img-responsive center-block"><div role="alert" class="alert-go_to alert"><p class="alert-title">See also</p><ul ><li ><a href="invoicing.html" class="internal alert-link reference"><span class="doc">How to invoice the shipping cost to the customer?</span></a></li><li ><a href="labels.html" class="internal alert-link reference"><span class="doc">How to print shipping labels?</span></a></li></ul></div></section>
+  <section id="how-to-manage-multiple-packs-for-the-same-delivery-order"></section><section id="overview"><h2 >Общий обзор</h2><p >По умолчанию Odoo считает, что ваша доставка состоит из одного пакета. Но вы можете легко доставить свои поставки более чем на один пакет. Он полностью интегрирован со сторонними поставщиками.</p></section><section id="configuration"><h2 >Настройка</h2><p >Чтобы настроить использование пакетов, перейдите к меню: menuselection: [UNKNOWN NODE title_reference]. Найдите раздел ** Упаковка ** и обозначьте ** Записать пакеты, используемые на упаковке: поддоны, коробки … **</p><img src="../../../_images/multipack03.png" style="" class="img-responsive center-block"><p >Нажмите ** Применить [UNKNOWN NODE problematic], когда вы закончите.</p></section><section id="sale-process"><h2 >процесс продажи</h2></section><section id="sale-order"><h3 >Заказ на продажу</h3><img src="../../../_images/multipack06.png" style="" class="img-responsive center-block"><p >Нажмите на ** Метод доставки [UNKNOWN NODE problematic], чтобы выбрать правильный.</p><p >Цена рассчитывается, когда вы ** храните ** заказ на продажу или нажимаете ** Установить цену [UNKNOWN NODE problematic].</p></section><section id="multi-packages-delivery"><h3 >Доставка нескольких пакетов</h3><p >Доставка, созданная по заказу на продажу, примет информацию о доставке.</p><img src="../../../_images/multipack07.png" style="" class="img-responsive center-block"><p >Отсюда можно разделить вашу доставку на несколько пакетов.</p><p >Выберите количество, которое вы хотите разместить в первом пакете в столбце ** Готово [UNKNOWN NODE problematic], после чего нажмите на ссылку ** Упаковать [UNKNOWN NODE problematic].</p><img src="../../../_images/multipack02.png" style="" class="img-responsive center-block"><p >Это автоматически создаст пакет с запрашиваемым количеством.</p><p >Сделайте те же шаги для других позиций, которые вы хотите запаковать.</p><img src="../../../_images/multipack04.png" style="" class="img-responsive center-block"><p >Нажмите ** Подтвердить [UNKNOWN NODE problematic], когда вы закончите.</p></section><section id="multi-packages-with-a-3rd-party-shipper"><h3 >Несколько пакетов с посторонним перевозчиком</h3><p >После того, как заказ на доставку будет подтверждено, вы получите номер отслеживания. Поле ** отслеживания перевозчика ** автоматически заполняется. Нажмите кнопку ** Отслеживание [UNKNOWN NODE problematic], чтобы проверить свою доставку на сайте поставщика.</p><img src="../../../_images/multipack05.png" style="" class="img-responsive center-block"><p >** Метки [UNKNOWN NODE problematic], которых следует придерживаться в ваших пакетах, доступны в истории:</p><img src="../../../_images/multipack01.png" style="" class="img-responsive center-block"><div role="alert" class="alert-go_to alert"><p class="alert-title">См.также</p><ul ><li ><a href="invoicing.html" class="internal alert-link reference"><span class="doc">Как зачесть стоимость доставки клиенту?</span></a></li><li ><a href="labels.html" class="internal alert-link reference"><span class="doc">Как распечатать накладную?</span></a></li></ul></div></section>
 
           </article>
         </div>

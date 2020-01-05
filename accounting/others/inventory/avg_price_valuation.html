@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>Impact on the average price valuation when returning goods &#8212; Odoo 13.0 documentation</title>
+    <title>Влияние на среднюю цену при возврате товара в Odoo &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../../_static/doc.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/accounting/others/inventory/avg_price_valuation.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/accounting/others/inventory/avg_price_valuation.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/accounting/others/inventory/avg_price_valuation.html" />
+    <link rel="canonical" href="/master/ru/accounting/others/inventory/avg_price_valuation.html" />
   
-    <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="How to do an inventory valuation? (Continental Accounting)" href="../../../inventory/management/reporting/valuation_methods_continental.html" />
-    <link rel="prev" title="Inventory" href="../inventory.html" /> 
+    <link rel="index" title="Алфавитный указатель" href="../../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../../search.html" />
+    <link rel="next" title="Как провести оценку инвентаризации? (Континентальный учет)" href="../../../inventory/management/reporting/valuation_methods_continental.html" />
+    <link rel="prev" title="Склад" href="../inventory.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -194,7 +198,7 @@
         
             
                 
-                    <li><a href="../../../accounting.html">Accounting</a></li>
+                    <li><a href="../../../accounting.html">Бухгалтерский учёт</a></li>
                 
             
         
@@ -211,7 +215,7 @@
             
         
     
-    <li class="active"><a href="#">Impact on the average price valuation when returning goods</a></li>
+    <li class="active"><a href="#">Влияние на среднюю цену при возврате товара в Odoo</a></li>
 
               
           </ol>
@@ -227,12 +231,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/accounting/others/inventory/avg_price_valuation.html">English</a></li>
+        
+            <li><a href="/13.0/uk/accounting/others/inventory/avg_price_valuation.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -259,6 +278,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -268,7 +289,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> Impact on the average price valuation when returning goods </h1>
+        <h1> Влияние на среднюю цену при возврате товара в Odoo </h1>
       </div>
     </figure>
     
@@ -281,7 +302,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#definition-of-average-cost" class="ripple internal reference">Definition of average cost</a><ul ><li class="list-group-item"><a href="#defining-the-purchase-price" class="ripple internal reference">Defining the purchase price</a></li></ul></li><li class="list-group-item"><a href="#average-cost-example" class="ripple internal reference">Average cost example</a></li><li class="list-group-item"><a href="#purchase-return-use-case" class="ripple internal reference">Purchase return use case</a><ul ><li class="list-group-item"><a href="#explanation-counter-example" class="ripple internal reference">Explanation: counter example</a></li><li class="list-group-item"><a href="#further-thoughts-on-anglo-saxon-mode" class="ripple internal reference">Further thoughts on anglo saxon mode</a></li></ul></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#definition-of-average-cost" class="ripple internal reference">Определение средней цены</a><ul ><li class="list-group-item"><a href="#defining-the-purchase-price" class="ripple internal reference">Определение цены покупки</a></li></ul></li><li class="list-group-item"><a href="#average-cost-example" class="ripple internal reference">Пример средней стоимости</a></li><li class="list-group-item"><a href="#purchase-return-use-case" class="ripple internal reference">Случай возвращения покупки</a><ul ><li class="list-group-item"><a href="#explanation-counter-example" class="ripple internal reference">Пояснение: встречный пример</a></li><li class="list-group-item"><a href="#further-thoughts-on-anglo-saxon-mode" class="ripple internal reference">Концепция в англо-саксонском режиме</a></li></ul></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/accounting/others/inventory/avg_price_valuation.rst" class="gith-link">
                   Edit on GitHub
@@ -293,49 +314,7 @@
           <article class="doc-body  ">
             
             
-  <section id="impact-on-the-average-price-valuation-when-returning-goods"><p >As stated in the <a href="https://www.odoo.com/documentation/functional/valuation.html" class="external reference">*inventory valuation
-page*</a>,
-one of the possible costing method you can use in perpetual stock
-valuation, is the average cost.</p><p >This document answers to one recurrent question for companies using that
-method to make their stock valuation: how does a shipping returned to
-its supplier impact the average cost and the accounting entries? This
-document is <strong >only</strong> for the specific use case of a perpetual valuation (as
-opposed to the periodic one) and in average price costing method (as
-opposed to standard of FIFO).</p></section><section id="definition-of-average-cost"><h2 >Definition of average cost</h2><p >The average cost method calculates the cost of ending inventory and cost
-of goods sold on the basis of weighted average cost per unit of
-inventory.</p><p >The weighted average cost per unit is calculated using the following
-formula:</p><ul ><li >When new products arrive in a warehouse, the new average cost is
-recomputed as:</li></ul><img src="../../../_images/avg01.png" style="" class="img-responsive center-block"><ul ><li >When products leave the warehouse: the average cost <strong >does not</strong> change</li></ul></section><section id="defining-the-purchase-price"><h3 >Defining the purchase price</h3><p >The purchase price is estimated at the reception of the products (you
-might not have received the vendor bill yet) and reevaluated at the
-reception of the vendor bill. The purchase price includes the cost you
-pay for the products, but it may also includes additional costs, like
-landed costs.</p></section><section id="average-cost-example"><h2 >Average cost example</h2><table class="table"><thead ><tr ><th >Operation</th><th >Delta Value</th><th >Inventory Value</th><th >Qty On Hand</th><th >Avg Cost</th></tr></thead><tbody ><tr ><td ></td><td ></td><td >$0</td><td >0</td><td >$0</td></tr><tr ><td >Receive 8 Products at $10</td><td >+8*$10</td><td >$80</td><td >8</td><td >$10</td></tr><tr ><td >Receive 4 Products at $16</td><td >+4*$16</td><td >$144</td><td >12</td><td >$12</td></tr><tr ><td >Deliver 10 Products</td><td >-10*$12</td><td >$24</td><td >2</td><td >$12</td></tr><tr ><td ></td><td ></td><td ></td><td ></td><td ></td></tr></tbody></table><p >At the beginning, the Avg Cost is set to 0 set as there is no product in
-the inventory. When the first reception is made, the average cost
-becomes logically the purchase price.</p><p >At the second reception, the average cost is updated because the total
-inventory value is now <code >$80 + 4*$16 = $144</code>. As we have 12 units on
-hand, the average price per unit is <code >$144 / 12 = $12</code>.</p><p >By definition, the delivery of 10 products does not change the average
-cost. Indeed, the inventory value is now $24 as we have only 2 units
-remaining of each <code >$24 / 2 = $12</code>.</p></section><section id="purchase-return-use-case"><h2 >Purchase return use case</h2><p >In case of a product returned to its supplier after reception, the
-inventory value is reduced using the average cost formulae (not at the
-initial price of these products!).</p><p >Which means that the above table will be updated as follow:</p><table class="table"><thead ><tr ><th >Operation</th><th >Delta Value</th><th >Inventory Value</th><th >Qty On Hand</th><th >Avg Cost</th></tr></thead><tbody ><tr ><td ></td><td ></td><td >$24</td><td >2</td><td >$12</td></tr><tr ><td >Return of 1 Product initially bought at $10</td><td >-1*$12</td><td >$12</td><td >1</td><td >$12</td></tr></tbody></table></section><section id="explanation-counter-example"><h3 >Explanation: counter example</h3><p >Remember the definition of <strong >Average Cost</strong>, saying that we do not update
-the average cost of a product leaving the inventory. If you break this
-rule, you may lead to inconsistencies in your inventory.</p><p >As an example, here is the scenario when you deliver one piece to the
-customer and return the other one to your supplier (at the cost you
-purchased it). Here is the operation:</p><table class="table"><thead ><tr ><th >Operation</th><th >Delta Value</th><th >Inventory Value</th><th >Qty On Hand</th><th >Avg Cost</th></tr></thead><tbody ><tr ><td ></td><td ></td><td >$24</td><td >2</td><td >$12</td></tr><tr ><td >Customer Shipping 1 product</td><td >-1*$12</td><td >$12</td><td >1</td><td >$12</td></tr><tr ><td >Return of 1 Product initially bought at $10</td><td >-1*$10</td><td ><strong >$2</strong></td><td ><strong >0</strong></td><td >$12</td></tr></tbody></table><p >As you can see in this example, this is not correct: an inventory
-valuation of $2 for 0 pieces in the warehouse.</p><p >The correct scenario should be to return the goods at the current
-average cost:</p><table class="table"><thead ><tr ><th >Operation</th><th >Delta Value</th><th >Inventory Value</th><th >Qty On Hand</th><th >Avg Cost</th></tr></thead><tbody ><tr ><td ></td><td ></td><td >$24</td><td >2</td><td >$12</td></tr><tr ><td >Customer Shipping 1 product</td><td >-1*$12</td><td >$12</td><td >1</td><td >$12</td></tr><tr ><td >Return of 1 Product initially bought at $10</td><td >-1*$12</td><td ><strong >$0</strong></td><td ><strong >0</strong></td><td >$12</td></tr></tbody></table><p >On the other hand, using the average cost to value the return ensure a
-correct inventory value at all times.</p></section><section id="further-thoughts-on-anglo-saxon-mode"><h3 >Further thoughts on anglo saxon mode</h3><p >For people in using the <strong >anglo saxon accounting</strong> principles, there is
-another concept to take into account: the stock input account of the
-product, which is intended to hold at any time the value of vendor bills
-to receive. So the stock input account will increase on reception of
-incoming shipments and will decrease when receiving the related vendor
-bills.</p><p >Back to our example, we see that when the return is valued at the
-average price, the amount booked in the stock input account is the
-original purchase price:</p><table class="table"><thead ><tr ><th >Operation</th><th >stock input</th><th >price diff</th><th >Inventory Value</th><th >Qty On Hand</th><th >Avg Cost</th></tr></thead><tbody ><tr ><td ></td><td ></td><td ></td><td >$0</td><td >0</td><td >$0</td></tr><tr ><td >Receive 8 Products at $10</td><td >($80)</td><td ></td><td >$80</td><td >8</td><td >$10</td></tr><tr ><td >Receive vendor bill $80</td><td >$0</td><td ></td><td >$80</td><td >8</td><td >$10</td></tr><tr ><td >Receive 4 Products at $16</td><td >($64)</td><td ></td><td >$144</td><td >12</td><td >$12</td></tr><tr ><td >Receive vendor bill $64</td><td >$0</td><td ></td><td >$144</td><td >12</td><td >$12</td></tr><tr ><td >Deliver 10 Products</td><td >$0</td><td ></td><td >$24</td><td >2</td><td >$12</td></tr><tr ><td >Return of 1 Product initially bought at $10</td><td ><strong >$10</strong></td><td ><strong >$2</strong></td><td ><strong >$12</strong></td><td >1</td><td >$12</td></tr><tr ><td >Receive vendor refund $10</td><td >$0</td><td >$2</td><td >$12</td><td >1</td><td >$12</td></tr></tbody></table><p >This is because the vendor refund will be made using the original
-purchase price, so to zero out the effect of the return in the stock
-input in last operation, we need to reuse the original price. The price
-difference account located on the product category is used to book the
-difference between the average cost and the original purchase price.</p></section>
+  <section id="impact-on-the-average-price-valuation-when-returning-goods"><p >Как указано в документации * оценки инвентаризации * &lt;<a href="https://www.odoo.com/documentation/functional/valuation.html" class="external reference">https://www.odoo.com/documentation/functional/valuation.html</a>&gt; [UNKNOWN NODE problematic]__, один из возможных методов определения цены, который можно использовать для непрерывной оценки, - это средняя цена.</p><p >Эта документация отвечает на один повторяющееся вопрос для компаний, которые используют этот метод для оценки их стоимости: как отгрузки возвращено поставщику, влияет на среднюю стоимость и записи бухгалтерского учета? Этот документ предназначен только для конкретного случая использования непрерывной оценки (в отличие от периодической) и метода среднего ценообразования (в отличие от стандарта FIFO).</p></section><section id="definition-of-average-cost"><h2 >Определение средней цены</h2><p >Метод определения средней цены вычисляет стоимость на конец инвентаризации и стоимость товаров, продаваемых на основе средневзвешенной стоимости единицы инвентаризации.</p><p >Средневзвешенная стоимость единицы рассчитывается по формуле:</p><ul ><li >Когда новые товары попадают в состав, новые средние расходы перечисляются как:</li></ul><img src="../../../_images/avg01.png" style="" class="img-responsive center-block"><ul ><li >Когда товары выходят из состава: средняя стоимость ** НЕ ** меняется</li></ul></section><section id="defining-the-purchase-price"><h3 >Определение цены покупки</h3><p >Цена приобретения оценивается при получении товаров (возможно, вы еще не получили счет поставщика) и переоценили на получение счета поставщика. Цена приобретения включает стоимость, которую вы платите за товары, но может также включать дополнительные расходы, например размер расходов.</p></section><section id="average-cost-example"><h2 >Пример средней стоимости</h2><table class="table"><thead ><tr ><th >Операция</th><th >значение дельты</th><th >Величина запасов</th><th >Количество в наличии</th><th >Средняя стоимость</th></tr></thead><tbody ><tr ><td ></td><td ></td><td >$0</td><td >0</td><td >$0</td></tr><tr ><td >Получить 8 товаров на 10 долларов</td><td >+8*$10</td><td >$80</td><td >8</td><td >$10</td></tr><tr ><td >Получить 4 товары на 16 долларов</td><td >+4*$16</td><td >$144</td><td >12</td><td >$12</td></tr><tr ><td >Доставить 10 товаров</td><td >-10*$12</td><td >$24</td><td >2</td><td >$12</td></tr><tr ><td ></td><td ></td><td ></td><td ></td><td ></td></tr></tbody></table><p >Сначала среднюю стоимость установлена на 0, так что на складе нет товара. Когда осуществляется первый прием, средняя стоимость логично становится закупочной цене.</p><p >На второй приема средняя стоимость обновляется, поскольку общая стоимость инвентаризации сейчас становить`` $ 80 + 4 * $ 16 = $ 144``. Поскольку у нас 12 единиц в наличии, средняя цена за единицу составляет [UNKNOWN NODE title_reference].</p><p >По определению, доставка 10 товаров не меняет среднюю стоимость. Действительно, стоимость инвентаризации сейчас составляет 24 доллара, потому что у нас осталось всего 2 единицы, оставшиеся от каждых [UNKNOWN NODE title_reference].</p></section><section id="purchase-return-use-case"><h2 >Случай возвращения покупки</h2><p >Если товар возвращается поставщику после получения, стоимость инвентаризации уменьшается с использованием средних формул расходов (не по начальной цене этих товаров!).</p><p >Это означает, что приведенная выше таблица будет обновлена следующим образом:</p><table class="table"><thead ><tr ><th >Операция</th><th >значение дельты</th><th >Величина запасов</th><th >Количество в наличии</th><th >Средняя стоимость</th></tr></thead><tbody ><tr ><td ></td><td ></td><td >$24</td><td >2</td><td >$12</td></tr><tr ><td >Возвращение 1 товара, купленного сначала за $ 10</td><td >-1*$12</td><td >$12</td><td >1</td><td >$12</td></tr></tbody></table></section><section id="explanation-counter-example"><h3 >Пояснение: встречный пример</h3><p >Запомните определения ** Средняя цена [UNKNOWN NODE problematic], отметив, что мы не обновляем среднюю стоимость товара, залишаесклад. Если вы нарушите это правило, вы можете привести к несоответствию на вашем складе.</p><p >В качестве примера, вот сценарий, когда вы доставляете один товар клиенту и поворачиваете другой поставщику (по цене, которую вы купили). Вот операция:</p><table class="table"><thead ><tr ><th >Операция</th><th >значение дельты</th><th >Величина запасов</th><th >Количество в наличии</th><th >Средняя стоимость</th></tr></thead><tbody ><tr ><td ></td><td ></td><td >$24</td><td >2</td><td >$12</td></tr><tr ><td >Отправка клиенту 1 товара</td><td >-1*$12</td><td >$12</td><td >1</td><td >$12</td></tr><tr ><td >Возвращение 1 товара, купленного сначала за $ 10</td><td >-1*$10</td><td ><strong >$2</strong></td><td ><strong >0</strong></td><td >$12</td></tr></tbody></table><p >Как вы можете видеть в этом примере, это не правильно: складская оценка 2 долларов за 0 единиц на складе.</p><p >Правильным сценарием должно быть возвращение товара по текущей средней цене:</p><table class="table"><thead ><tr ><th >Операция</th><th >значение дельты</th><th >Величина запасов</th><th >Количество в наличии</th><th >Средняя стоимость</th></tr></thead><tbody ><tr ><td ></td><td ></td><td >$24</td><td >2</td><td >$12</td></tr><tr ><td >Отправка клиенту 1 товара</td><td >-1*$12</td><td >$12</td><td >1</td><td >$12</td></tr><tr ><td >Возвращение 1 товара, купленного сначала за $ 10</td><td >-1*$12</td><td ><strong >$0</strong></td><td ><strong >0</strong></td><td >$12</td></tr></tbody></table><p >С другой стороны, использование средней цены для значения возврата гарантирует правильную складскую оценку в любое время.</p></section><section id="further-thoughts-on-anglo-saxon-mode"><h3 >Концепция в англо-саксонском режиме</h3><p >Для людей, которые используют принципы ** англо-саксонского бухучета [UNKNOWN NODE problematic], существует другая концепция, которая учитывает: счет принятия товара, который намерен в любое время сохранять стоимость получаемых счетов поставщика. Таким образом, счет на принятие товара увеличиваться при получении входящих отправлений и уменьшаться при получении соответствующих счетов поставщика.</p><p >Возвращаясь к нашему примеру, мы видим, что когда прибыль оценивается по средней цене, сумма, забронирована на счету входящего состава, является начальной ценой покупки:</p><table class="table"><thead ><tr ><th >Операция</th><th >получение товара</th><th >разница цен</th><th >Величина запасов</th><th >Количество в наличии</th><th >Средняя стоимость</th></tr></thead><tbody ><tr ><td ></td><td ></td><td ></td><td >$0</td><td >0</td><td >$0</td></tr><tr ><td >Получить 8 товаров на 10 долларов</td><td >($80)</td><td ></td><td >$80</td><td >8</td><td >$10</td></tr><tr ><td >Получить счет поставщика на $ 80</td><td >$0</td><td ></td><td >$80</td><td >8</td><td >$10</td></tr><tr ><td >Получить 4 товары на 16 долларов</td><td >($64)</td><td ></td><td >$144</td><td >12</td><td >$12</td></tr><tr ><td >Получить счет поставщика на $ 64</td><td >$0</td><td ></td><td >$144</td><td >12</td><td >$12</td></tr><tr ><td >Доставить 10 товаров</td><td >$0</td><td ></td><td >$24</td><td >2</td><td >$12</td></tr><tr ><td >Возвращение 1 товара, купленного сначала за $ 10</td><td ><strong >$10</strong></td><td ><strong >$2</strong></td><td ><strong >$12</strong></td><td >1</td><td >$12</td></tr><tr ><td >Возмещение поставщика на $ 10</td><td >$0</td><td >$2</td><td >$12</td><td >1</td><td >$12</td></tr></tbody></table><p >Это происходит потому, что возмещение поставщика будет осуществляться с помощью первой цены закупки, поэтому для того, чтобы снизить эффект от возвращения во входной продукции последней операции, мы должны снова использовать первоочередное цену. Скидка цены, расположена в категории товара, используется для бронирования разницы между средней ценой и начальной ценой закупки.</p></section>
 
           </article>
         </div>

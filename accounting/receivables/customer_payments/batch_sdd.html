@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>Batch Payments: SEPA Direct Debit (SDD) &#8212; Odoo 13.0 documentation</title>
+    <title>Групповые платежи: Прямой дебет SEPA (SDD) &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../../_static/doc.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/accounting/receivables/customer_payments/batch_sdd.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/accounting/receivables/customer_payments/batch_sdd.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/accounting/receivables/customer_payments/batch_sdd.html" />
+    <link rel="canonical" href="/master/ru/accounting/receivables/customer_payments/batch_sdd.html" />
   
-    <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Follow-up on invoices and get paid faster" href="followup.html" />
-    <link rel="prev" title="How to register customer payments by checks?" href="check.html" /> 
+    <link rel="index" title="Алфавитный указатель" href="../../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../../search.html" />
+    <link rel="next" title="Напоминайте о счетах и получайте оплату быстрее" href="followup.html" />
+    <link rel="prev" title="Как зарегистрировать клиентские оплаты чеком?" href="check.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -194,7 +198,7 @@
         
             
                 
-                    <li><a href="../../../accounting.html">Accounting</a></li>
+                    <li><a href="../../../accounting.html">Бухгалтерский учёт</a></li>
                 
             
         
@@ -211,7 +215,7 @@
             
         
     
-    <li class="active"><a href="#">Batch Payments: SEPA Direct Debit (SDD)</a></li>
+    <li class="active"><a href="#">Групповые платежи: Прямой дебет SEPA (SDD)</a></li>
 
               
           </ol>
@@ -227,12 +231,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/accounting/receivables/customer_payments/batch_sdd.html">English</a></li>
+        
+            <li><a href="/13.0/uk/accounting/receivables/customer_payments/batch_sdd.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -259,6 +278,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -268,7 +289,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> Batch Payments: SEPA Direct Debit (SDD) </h1>
+        <h1> Групповые платежи: Прямой дебет SEPA (SDD) </h1>
       </div>
     </figure>
     
@@ -281,7 +302,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a></li><li class="list-group-item"><a href="#sepa-direct-debit-mandates" class="ripple internal reference">SEPA Direct Debit Mandates</a><ul ><li class="list-group-item"><a href="#create-a-mandate" class="ripple internal reference">Create a mandate</a></li><li class="list-group-item"><a href="#close-or-revoke-a-mandate" class="ripple internal reference">Close or revoke a mandate</a></li></ul></li><li class="list-group-item"><a href="#get-paid-with-sdd-batch-payments" class="ripple internal reference">Get paid with SDD Batch Payments</a><ul ><li class="list-group-item"><a href="#customer-invoices" class="ripple internal reference">Customer Invoices</a></li><li class="list-group-item"><a href="#generate-sepa-direct-debit-xml-files-to-submit-payments" class="ripple internal reference">Generate SEPA Direct Debit XML files to submit payments</a></li></ul></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Настройка</a></li><li class="list-group-item"><a href="#sepa-direct-debit-mandates" class="ripple internal reference">Мандаты прямого дебета SEPA</a><ul ><li class="list-group-item"><a href="#create-a-mandate" class="ripple internal reference">создайте</a></li><li class="list-group-item"><a href="#close-or-revoke-a-mandate" class="ripple internal reference">Закройте или отмените мандат</a></li></ul></li><li class="list-group-item"><a href="#get-paid-with-sdd-batch-payments" class="ripple internal reference">Получайте платежи с Групповыми платежами SDD</a><ul ><li class="list-group-item"><a href="#customer-invoices" class="ripple internal reference">Счета заказчику</a></li><li class="list-group-item"><a href="#generate-sepa-direct-debit-xml-files-to-submit-payments" class="ripple internal reference">Создайте XML-файлы Прямого дебета SEPA, чтобы предоставить платежи</a></li></ul></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/accounting/receivables/customer_payments/batch_sdd.rst" class="gith-link">
                   Edit on GitHub
@@ -293,43 +314,7 @@
           <article class="doc-body  ">
             
             
-  <section id="batch-payments-sepa-direct-debit-sdd"><p >SEPA, the Single Euro Payments Area, is a payment-integration
-initiative of the European Union for simplification of bank transfers
-denominated in EURO. With <strong >SEPA Direct Debit</strong>, your customers can
-sign a <strong >mandate</strong> that authorizes you to collect future payments
-from their bank accounts automatically.</p><p >You can record your customer mandates in Odoo, and generate XML
-files containing pending payments made with an SDD mandate.</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><div class="line-block"><div class="line">SDD is supported by all SEPA countries, which includes the 28 member states of the European Union as well as additional countries.</div><div class="line"><a href="https://www.europeanpaymentscouncil.eu/document-library/other/epc-list-sepa-scheme-countries" class="external reference alert-link">List of all SEPA countries.</a></div></div></div></section><section id="configuration"><h2 >Configuration</h2><p >Go to <span class="menuselection">Accounting ‣ Configuration ‣ Settings</span>
-nd activate the <strong >SEPA Direct Debit (SDD)</strong> feature. Enter the
-<strong >Creditor Identifier</strong> of your company. This number is provided
-by your bank, or the authority responsible for delivering them.</p><img src="../../../_images/batch_sdd01.png" style="" class="img-responsive center-block"></section><section id="sepa-direct-debit-mandates"><h2 >SEPA Direct Debit Mandates</h2></section><section id="create-a-mandate"><h3 >Create a mandate</h3><p >The SEPA Direct Debit Mandate is the document that your customers
-sign to authorize you to collect money directly from their bank accounts.</p><p >To create a new one, go to <span class="menuselection">Accounting ‣ Customers
-‣ Direct Debit Mandates</span>, click on <em >Create</em>, and fill out the
-new mandate’s form.</p><img src="../../../_images/batch_sdd02.png" style="" class="img-responsive center-block"><p >First, export the PDF file by clicking on <em >Print</em>.
-It is then up to your customer to sign this document.
-Once done, upload the signed file in the <strong >Original Document</strong>
-field, and click on <em >Validate</em> to start running the mandate.</p><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >First, make sure, that the <strong >IBAN bank accounts details</strong>
-are correctly recorded on the debtor’s contact form, under
-the <em >Accounting</em> tab, and in your own <em >Bank Account</em> settings.</p></div></section><section id="close-or-revoke-a-mandate"><h3 >Close or revoke a mandate</h3><p >Direct Debit mandates are closed automatically after their <em >End Date</em>.
-If this field is left blank, then the mandate keeps being <em >Active</em>
-until it is <em >Closed</em> or <em >Revoked</em>.</p><img src="../../../_images/batch_sdd03.png" style="" class="img-responsive center-block"><p >Clicking on <strong >Close</strong> updates the mandate’s end day to the current day.
-This means that invoices made after the present day won’t be processed
-automatically with an SDD payment.</p><p >Clicking on <strong >Revoke</strong> disables the mandate immediately. No SDD
-payment can be registered anymore, regardless of the invoice’s date.
-However, payments that have already been registered will still be
-included to the next SDD XML file.</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >Once a mandate has been <em >closed</em> or <em >revoked</em>, it cannot be reactivated.
-If a customer requires to pay with SDD payments again, you will have
-to create a new mandate from scratch.</p></div></section><section id="get-paid-with-sdd-batch-payments"><h2 >Get paid with SDD Batch Payments</h2></section><section id="customer-invoices"><h3 >Customer Invoices</h3><p >All new posted invoice issued to customers with an active mandate
-will automatically register payment and have their status marked as <em >Paid</em>.</p><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >If you have unpaid invoices that could be paid with a new mandate,
-it is still possible to do it. Go on the invoice, click on <em >Register Payment</em>
-and choose <em >SEPA Direct Debit</em> as payment method.</p></div></section><section id="generate-sepa-direct-debit-xml-files-to-submit-payments"><h3 >Generate SEPA Direct Debit XML files to submit payments</h3><p >To submit your SDD payments to your bank, you will first generate an
-<strong >XML file</strong> that can be uploaded directly to your bank interface.</p><p >The files generated by Odoo follow the SEPA Direct Debit <strong >PAIN.008.001.02</strong>
-specifications as required by the SEPA customer-to-bank Implementation Guidelines,
-which ensures compatibility with the banks.</p><p >To generate your XML file for the pending SDD payments, go to the related
-<em >bank journal</em> on your <em >Accounting dashboard</em>, then click on
-<em >Direct Debit Payments to Collect</em>.</p><img src="../../../_images/batch_sdd04.png" style="" class="img-responsive center-block"><p >Select all the payments in the list that you want to include in
-your SDD XML file, then click on <em >Action</em> and select <em >Create Batch Payment</em>.</p><img src="../../../_images/batch_sdd05.png" style="" class="img-responsive center-block"><p >Odoo then takes you to your <em >Batch Payment</em>’s form. Click on <em >Validate</em>
-and then download the SDD XML file.</p><img src="../../../_images/batch_sdd06.png" style="" class="img-responsive center-block"><p >Finally, upload this file to your bank to process the payments.</p><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >You can retrieve all the generated SDD XML files by going to
-<span class="menuselection">Accounting ‣ Configuration ‣ Customers ‣ Batch Payments</span>.</p></div><div role="alert" class="alert-go_to alert"><p class="alert-title">See also</p><ul ><li ><a href="../../bank/setup/create_bank_account.html" class="internal alert-link reference"><span class="doc">How to setup a new bank account?</span></a></li><li ><a href="https://www.odoo.com/r/Zxs" class="external reference alert-link">Odoo Academy: SEPA Direct Debit Mandates (SDD)</a></li><li ><a href="https://www.europeanpaymentscouncil.eu/document-library/other/epc-list-sepa-scheme-countries" class="external reference alert-link">List of all SEPA countries.</a></li></ul></div></section>
+  <section id="batch-payments-sepa-direct-debit-sdd"><p >SEPA, единственная область евро-платежей, является платежно-интеграционной инициативе Европейского Союза по упрощению банковских переводов, выраженных в евро. С помощью ** Прямого дебета SEPA ** ваши клиенты могут подписать ** мандат [UNKNOWN NODE problematic], который дает вам возможность автоматически собирать будущие платежи со своих банковских счетов.</p><p >Вы можете записать ваши клиентские мандаты в Odoo и создать XML-файлы, содержащие платежи в ожидании, сделанные с мандатом SDD.</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><div class="line-block"><div class="line">SDD поддерживается всеми странами SEPA, включающий 28 стран-членов Европейского Союза, а также дополнительные страны.</div><div class="line">[UNKNOWN NODE problematic]Список всех стран SEPA. &lt;<a href="https://www.europeanpaymentscouncil.eu/document-library/other/epc-list-sepa-scheme-countries" class="external reference alert-link">https://www.europeanpaymentscouncil.eu/document-library/other/epc-list-sepa-scheme-countries</a>&gt; [UNKNOWN NODE problematic]_</div></div></div></section><section id="configuration"><h2 >Настройка</h2><p >Перейдите в: menuselection: [UNKNOWN NODE title_reference] и активируйте функцию ** Прямого дебета SEPA (SDD) [UNKNOWN NODE problematic]. Введите ** Идентификатор кредитора ** вашей компании. Этот номер предоставляется вашим банком или органом, ответственным за их поставки.</p><img src="../../../_images/batch_sdd01.png" style="" class="img-responsive center-block"></section><section id="sepa-direct-debit-mandates"><h2 >Мандаты прямого дебета SEPA</h2></section><section id="create-a-mandate"><h3 >создайте</h3><p >Мандат прямого дебета SEPA - это документ, который подписывают ваши клиенты для авторизации вас для получения денег прямо с их банковских счетов.</p><p >Чтобы создать новый, перейдите в: menuselection: [UNKNOWN NODE title_reference], нажмите на * Создать * и заполните новую форму мандата.</p><img src="../../../_images/batch_sdd02.png" style="" class="img-responsive center-block"><p >Сначала, экспортировать PDF-файл, нажав * Печать <em >. Затем ваш клиент должен подписать этот документ. После завершения загрузите подписанный файл в поле *</em> Оригинальный документ ** и нажмите * Проверить [UNKNOWN NODE problematic], чтобы приступить к выполнению мандата.</p><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >Сначала убедитесь, что ** Детали банковских счетов IBAN ** верно записанные на форме контакта дебитора, на вкладке * Бухучет * и в ваших собственных настройках * Банковского счета [UNKNOWN NODE problematic].</p></div></section><section id="close-or-revoke-a-mandate"><h3 >Закройте или отмените мандат</h3><p >Мандаты прямого дебета закрываются автоматически после их * Дать окончания [UNKNOWN NODE problematic]. Если это поле оставить пустым, мандат продолжает быть * Активным [UNKNOWN NODE problematic], пока не будет * Закрыто * или * Отменены [UNKNOWN NODE problematic].</p><img src="../../../_images/batch_sdd03.png" style="" class="img-responsive center-block"><p >Если нажать ** Закрыть [UNKNOWN NODE problematic], обновляется конечный день мандата к текущему дню. Это означает, что счета-фактуры, сделанные после этого дня, не разделаются автоматически с помощью SDD-платежа.</p><p >Нажав на ** Отозвать [UNKNOWN NODE problematic], немедленно отключается мандат. Платеж SDD больше не может быть зарегистрирован, независимо от даты счета-фактуры. Однако платежи, которые уже были зарегистрированы, все равно будут включены в следующий XML-файла SDD.</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >После того, как мандат будет * закрыто * или * отозвано [UNKNOWN NODE problematic], его можно будет реактивировать. Если клиент снова потребует оплаты с помощью SDD, вам придется создать новый мандат с нуля.</p></div></section><section id="get-paid-with-sdd-batch-payments"><h2 >Получайте платежи с Групповыми платежами SDD</h2></section><section id="customer-invoices"><h3 >Счета заказчику</h3><p >Все новые опубликованы счета, выданные клиентам с активным мандатом, будут автоматически регистрировать платеж и обозначать их статус как * Ополчения [UNKNOWN NODE problematic].</p><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >Если у вас есть неоплаченные счета, которые могли быть оплачены с новым мандатом, это все еще возможно сделать. Перейдите в счет, нажмите * Зарегистрировать платеж * и выберите * Прямой дебет SEPA * как метод платежа.</p></div></section><section id="generate-sepa-direct-debit-xml-files-to-submit-payments"><h3 >Создайте XML-файлы Прямого дебета SEPA, чтобы предоставить платежи</h3><p >Чтобы предоставить ваши платежи SDD вашем банке, вам сначала нужно создать ** XML-файл [UNKNOWN NODE problematic], который можно загрузить прямо в вашем банковском интерфейсе.</p><p >Файлы, созданные Odoo, следуют по спецификациям Прямого дебета SEPA ** PAIN.008.001.02 [UNKNOWN NODE problematic], которые требуются Руководством по внедрению клиента в банк SEPA, что обеспечивает совместимость с банками.</p><p >Чтобы создать XML-файл для ожидаемых платежей SDD, перейдите на связанный * банковский журнал * на вашей * панели приборов Бухучета * нажмите * Платежи прямого дебета для получения [UNKNOWN NODE problematic].</p><img src="../../../_images/batch_sdd04.png" style="" class="img-responsive center-block"><p >Выберите все платежи в списке, которые вы хотите включить в ваш XML-файл SDD нажмите * Действие * и выберите * Создать групповой платеж [UNKNOWN NODE problematic].</p><img src="../../../_images/batch_sdd05.png" style="" class="img-responsive center-block"><p >Затем Odoo направит вас на форму вашего * Группового платежа [UNKNOWN NODE problematic]. Нажмите на * Подтвердить * и загрузите XML-файл SDD.</p><img src="../../../_images/batch_sdd06.png" style="" class="img-responsive center-block"><p >И наконец загрузите этот файл в ваш банк для обработки платежей.</p><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >Вы можете получить все созданные XML-файлы SDD, перейдя в: menuselection: [UNKNOWN NODE title_reference].</p></div><div role="alert" class="alert-go_to alert"><p class="alert-title">См.также</p><ul ><li ><a href="../../bank/setup/create_bank_account.html" class="internal alert-link reference"><span class="doc">Как установить новый банковский счет</span></a></li><li >[UNKNOWN NODE problematic]Академия Odoo: Мандаты прямого дебета SEPA (SDD) &lt;<a href="https://www.odoo.com/r/Zxs" class="external reference alert-link">https://www.odoo.com/r/Zxs</a>&gt; [UNKNOWN NODE problematic]_</li><li >[UNKNOWN NODE problematic]Список всех стран SEPA. &lt;<a href="https://www.europeanpaymentscouncil.eu/document-library/other/epc-list-sepa-scheme-countries" class="external reference alert-link">https://www.europeanpaymentscouncil.eu/document-library/other/epc-list-sepa-scheme-countries</a>&gt; [UNKNOWN NODE problematic]_</li></ul></div></section>
 
           </article>
         </div>

@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>Invoice based on time and materials &#8212; Odoo 13.0 documentation</title>
+    <title>Выставления счета на основе сроков и материалов &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
     <script type="text/javascript" src="../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../_static/doc.js"></script>
     <script type="text/javascript" src="../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/sales/invoicing/time_materials.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/sales/invoicing/time_materials.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/sales/invoicing/time_materials.html" />
+    <link rel="canonical" href="/master/ru/sales/invoicing/time_materials.html" />
   
-    <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Invoice project milestones" href="milestone.html" />
-    <link rel="prev" title="Send a pro-forma invoice" href="proforma.html" /> 
+    <link rel="index" title="Алфавитный указатель" href="../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../search.html" />
+    <link rel="next" title="Выставление счетов по этапам проекта" href="milestone.html" />
+    <link rel="prev" title="Отправка проформы счета" href="proforma.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -194,7 +198,7 @@
         
             
                 
-                    <li><a href="../../sales.html">Sales</a></li>
+                    <li><a href="../../sales.html">Продажи</a></li>
                 
             
         
@@ -205,7 +209,7 @@
             
         
     
-    <li class="active"><a href="#">Invoice based on time and materials</a></li>
+    <li class="active"><a href="#">Выставления счета на основе сроков и материалов</a></li>
 
               
           </ol>
@@ -221,12 +225,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/sales/invoicing/time_materials.html">English</a></li>
+        
+            <li><a href="/13.0/uk/sales/invoicing/time_materials.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -253,6 +272,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -262,7 +283,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> Invoice based on time and materials </h1>
+        <h1> Выставления счета на основе сроков и материалов </h1>
       </div>
     </figure>
     
@@ -275,7 +296,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#invoice-time-configuration" class="ripple internal reference">Invoice time configuration</a></li><li class="list-group-item"><a href="#invoice-your-time-spent" class="ripple internal reference">Invoice your time spent</a></li><li class="list-group-item"><a href="#expenses-configuration" class="ripple internal reference">Expenses configuration</a></li><li class="list-group-item"><a href="#add-expenses-to-your-sales-order" class="ripple internal reference">Add expenses to your sales order</a></li><li class="list-group-item"><a href="#invoice-purchases" class="ripple internal reference">Invoice purchases</a></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#invoice-time-configuration" class="ripple internal reference">Настройка выставления счета-фактуры по времени</a></li><li class="list-group-item"><a href="#invoice-your-time-spent" class="ripple internal reference">Выставления счета за потраченное время</a></li><li class="list-group-item"><a href="#expenses-configuration" class="ripple internal reference">Настройка расходов</a></li><li class="list-group-item"><a href="#add-expenses-to-your-sales-order" class="ripple internal reference">Добавьте расходы к заказу на продажу</a></li><li class="list-group-item"><a href="#invoice-purchases" class="ripple internal reference">Выставления счетов-фактур на покупку</a></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/sales/invoicing/time_materials.rst" class="gith-link">
                   Edit on GitHub
@@ -287,36 +308,7 @@
           <article class="doc-body  ">
             
             
-  <section id="invoice-based-on-time-and-materials"><p >Time and Materials is generally used in projects in which it is not
-possible to accurately estimate the size of the project, or when it is
-expected that the project requirements would most likely change.</p><p >This is opposed to a fixed-price contract in which the owner agrees to
-pay the contractor a lump sum for the fulfillment of the contract no
-matter what the contractors pay their employees, sub-contractors, and
-suppliers.</p><p >For this documentation I will use the example of a consultant, you will
-need to invoice their time, their various expenses (transport,
-lodging, …) and purchases.</p></section><section id="invoice-time-configuration"><h2 >Invoice time configuration</h2><p >To keep track of progress in the project, you will need the <em >Project</em>
-app. Go to <span class="menuselection">Apps ‣ Project</span> to install it.</p><p >In <em >Project</em> you will use timesheets, to do so go to
-<span class="menuselection">Project ‣ Configuration ‣ Settings</span> and activate the
-<em >Timesheets</em> feature.</p><img src="../../_images/time_materials01.png" style="" class="img-responsive center-block"></section><section id="invoice-your-time-spent"><h2 >Invoice your time spent</h2><p >From a product page set as a service, you will find two options under
-the invoicing tab, select both <em >Timesheets on tasks</em> and <em >Create a
-task in a new project</em>.</p><img src="../../_images/time_materials02.png" style="" class="img-responsive center-block"><p >You could also add the task to an existing project.</p><p >Once confirming a sales order, you will now see two new buttons, one for
-the project overview and one for the current task.</p><img src="../../_images/time_materials03.png" style="" class="img-responsive center-block"><p >You will directly be in the task if you click on it, you can also access
-it from the <em >Project</em> app.</p><p >Under timesheets, you can assign who works on it. You can or they can
-add how many hours they worked on the project so far.</p><img src="../../_images/time_materials04.png" style="" class="img-responsive center-block"><p >From the sales order, you can then invoice those hours.</p><img src="../../_images/time_materials05.png" style="" class="img-responsive center-block"></section><section id="expenses-configuration"><h2 >Expenses configuration</h2><p >To track &amp; invoice expenses, you will need the expenses app. Go to
-<span class="menuselection">Apps ‣ Expenses</span> to install it.</p><p >You should also activate the analytic accounts feature to link expenses
-to the sales order, to do so, go to <span class="menuselection">Invoicing ‣
-Configuration ‣ Settings</span> and activate <em >Analytic Accounting</em>.</p></section><section id="add-expenses-to-your-sales-order"><h2 >Add expenses to your sales order</h2><p >From the expense app, you or your consultant can create a new one, e.g.
-the hotel for the first week on the site of your customer.</p><p >You can then enter a relevant description and select an existing product
-or create a new one from right there.</p><img src="../../_images/time_materials06.png" style="" class="img-responsive center-block"><p >Here, we are creating a <em >Hotel</em> product:</p><img src="../../_images/time_materials07.png" style="" class="img-responsive center-block"><p >under the invoicing tab, select <em >Delivered quantities</em> and either <em >At
-cost</em> or <em >Sales price</em> as well depending if you want to invoice the
-cost of your expense or a previously agreed on sales price.</p><img src="../../_images/time_materials08.png" style="" class="img-responsive center-block"><p >To modify or create more products go to <span class="menuselection">Expenses ‣
-Configuration ‣ Expense products</span>.</p><p >Back on the expense, add the original sale order in the expense to
-submit.</p><img src="../../_images/time_materials09.png" style="" class="img-responsive center-block"><p >It can then be submitted to the manager, approved and finally posted.</p><img src="../../_images/time_materials10.png" style="" class="img-responsive center-block"><img src="../../_images/time_materials11.png" style="" class="img-responsive center-block"><img src="../../_images/time_materials12.png" style="" class="img-responsive center-block"><p >It will then be in the sales order and ready to be invoiced.</p></section><section id="invoice-purchases"><h2 >Invoice purchases</h2><p >The last thing you might need to add to the sale order is purchases made
-for it.</p><p >You will need the <em >Purchase Analytics</em> feature, to activate it, go to
-<span class="menuselection">Invoicing ‣ Configuration ‣ Settings</span> and select
-<em >Purchase Analytics</em>.</p><p >While making the purchase order don’t forget to add the right analytic
-account.</p><img src="../../_images/time_materials08.png" style="" class="img-responsive center-block"><p >Once the PO is confirmed and received, you can create the vendor bill,
-this will automatically add it to the SO where you can invoice it.</p></section>
+  <section id="invoice-based-on-time-and-materials"><p >Время и материалы, как правило, используются в проектах, в которых невозможно точно оценить размер проекта или когда ожидается, что требования проекта, скорее всего, изменятся.</p><p >Это противостоит контракта с фиксированной ценой, по которым владелец соглашается выплатить подрядчику единовременную сумму за выполнение контракта независимо от того, что подрядчики платят своим работникам, субподрядчикам и поставщикам.</p><p >Для этой документации я буду использовать пример консультанта, вам нужно будет учесть свое время, различные расходы (транспорт, проживание, …) и покупки.</p></section><section id="invoice-time-configuration"><h2 >Настройка выставления счета-фактуры по времени</h2><p >Чтобы отслеживать прогресс в проекте, вам понадобится модуль * Проект [UNKNOWN NODE problematic]. Откройте: menuselection: [UNKNOWN NODE title_reference], чтобы установить его.</p><p >В * Проекте * вы будете использовать табели, чтобы сделать это, перейдите к: menuselection: [UNKNOWN NODE title_reference] и активируйте функцию * Табели [UNKNOWN NODE problematic].</p><img src="../../_images/time_materials01.png" style="" class="img-responsive center-block"></section><section id="invoice-your-time-spent"><h2 >Выставления счета за потраченное время</h2><p >Со страницы товара, где установлена услуга, вы найдете две функции на вкладке выставления счетов, оба * Табели на задачах * и * Создание задачи в новом проекте [UNKNOWN NODE problematic].</p><img src="../../_images/time_materials02.png" style="" class="img-responsive center-block"><p >Вы также можете добавить задачу в существующий проект.</p><p >После подтверждения заказа на продажу вы увидите две новые кнопки, один для осмотра проекта и один для текущей задачи.</p><img src="../../_images/time_materials03.png" style="" class="img-responsive center-block"><p >Если вы нажмете на него, вы будете непосредственно находиться в работе, вы также можете получить доступ к нему из модуля * Проект [UNKNOWN NODE problematic].</p><p >Во табелям вы можете назначить того, кто работает на проекте. Вы можете либо они могут добавить, сколько часов они отработали над проектом.</p><img src="../../_images/time_materials04.png" style="" class="img-responsive center-block"><p >По заказу на продажу можно отнести эти часы.</p><img src="../../_images/time_materials05.png" style="" class="img-responsive center-block"></section><section id="expenses-configuration"><h2 >Настройка расходов</h2><p >Для отслеживания затрат и выставления по ним счетов-фактур вам понадобится модуль расходов. Перейдите к: menuselection: [UNKNOWN NODE title_reference], чтобы установить его.</p><p >Вы также должны активизировать функцию аналитических счетов, чтобы связать расходы по заказу на продажу. Чтобы это сделать, перейдите к разделу: menuselection: [UNKNOWN NODE title_reference] и активируйте * Аналитический бухучет [UNKNOWN NODE problematic].</p></section><section id="add-expenses-to-your-sales-order"><h2 >Добавьте расходы к заказу на продажу</h2><p >Из приложения расходов вы или ваш консультант можете создать новые расходы, например, гостиница на первую неделю работы с вашим клиентом.</p><p >Затем вы можете ввести соответствующее описание и выбрать существующий товар или создать новый прямо там.</p><img src="../../_images/time_materials06.png" style="" class="img-responsive center-block"><p >Здесь мы создаем товар * Отель [UNKNOWN NODE problematic]:</p><img src="../../_images/time_materials07.png" style="" class="img-responsive center-block"><p >На вкладке выставления счетов выберите * Доставленные количества * или * По стоимости * или * Цена продажи [UNKNOWN NODE problematic], если вы хотите начислить стоимость своих расходов или ранее согласованную цену продажи.</p><img src="../../_images/time_materials08.png" style="" class="img-responsive center-block"><p >Чтобы изменить или создать больше товаров, перейдите на страницу: menuselection: [UNKNOWN NODE title_reference].</p><p >Вернитесь на расходы, добавьте оригинальное заказ на продажу в расходах для отправки.</p><img src="../../_images/time_materials09.png" style="" class="img-responsive center-block"><p >Затем он может быть передан менеджеру, его можно утвердить и окончательно разместить.</p><img src="../../_images/time_materials10.png" style="" class="img-responsive center-block"><img src="../../_images/time_materials11.png" style="" class="img-responsive center-block"><img src="../../_images/time_materials12.png" style="" class="img-responsive center-block"><p >Он будет в заказе на продажу и готов к выставления счета.</p></section><section id="invoice-purchases"><h2 >Выставления счетов-фактур на покупку</h2><p >Последнее, что нужно добавить к заказу на продажу - это покупки, сделанные для заказа.</p><p >Вам понадобится функция * Аналитики покупок [UNKNOWN NODE problematic]. Чтобы активизировать ее, перейдите к разделу: menuselection: [UNKNOWN NODE title_reference] и выберите * Аналитика покупок [UNKNOWN NODE problematic].</p><p >При оформлении заказа на покупку не забудьте добавить правильный аналитический счет.</p><img src="../../_images/time_materials08.png" style="" class="img-responsive center-block"><p >После того, как СНП будет подтверждено и получено, вы можете создать счет поставщика, автоматически добавит его в СНП, где вы можете выставить счет.</p></section>
 
           </article>
         </div>

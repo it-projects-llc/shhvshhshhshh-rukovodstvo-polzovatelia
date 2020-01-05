@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>Branches &#8212; Odoo 13.0 documentation</title>
+    <title>Branches &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/accounting.css" />
@@ -27,14 +27,18 @@
     <script type="text/javascript" src="../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
     <script type="text/javascript" src="../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../_static/doc.js"></script>
     <script type="text/javascript" src="../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/odoo_sh/getting_started/branches.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/odoo_sh/getting_started/branches.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/odoo_sh/getting_started/branches.html" />
+    <link rel="canonical" href="/master/ru/odoo_sh/getting_started/branches.html" />
   
-    <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="index" title="Алфавитный указатель" href="../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../search.html" />
     <link rel="next" title="Builds" href="builds.html" />
     <link rel="prev" title="Create your project" href="create.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
@@ -221,12 +225,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/odoo_sh/getting_started/branches.html">English</a></li>
+        
+            <li><a href="/13.0/uk/odoo_sh/getting_started/branches.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -252,6 +271,8 @@
 <script type="text/javascript">$('#searchbox').show(0);</script>
             
 
+            
+              <li class="divider"></li>
             
           </ul>
         </div>
@@ -341,7 +362,7 @@ When an operation is successful, you can access the database thanks to the <em >
 The mail catcher is available for your development and
 staging branches as the emails of your production database are really sent instead of being intercepted.</p><a href="../../_images/interface-branches-mails.png" class="internal reference"><img src="../../_images/interface-branches-mails.png" style="" class="img-responsive center-block"></a></section><section id="shell"><h3 >Shell</h3><p >A shell access to your container. You can perform basic linux commands (<code class="code">ls</code>, <code class="code">top</code>)
 and open a shell on your database by typing <code class="code">psql</code>.</p><img src="../../_images/interface-branches-shell.png" style="" class="img-responsive center-block"><p >You can open multiple tabs and drag-and-drop them to arrange the layout as you wish,
-for instance side by side.</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >Long running shell instances are not guaranteed. Idle shells can be
+for instance side by side.</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Long running shell instances are not guaranteed. Idle shells can be
 disconnected at anytime in order to free up resources.</p></div></section><section id="editor"><h3 >Editor</h3><p >An online integrated development environment (IDE) to edit the source code.
 You can also open terminals, Python consoles and even Odoo Shell consoles.</p><img src="../../_images/interface-branches-editor.png" style="" class="img-responsive center-block"><p >You can open multiple tabs and drag-and-drop them to arrange the layout as you wish,
 for instance side by side.</p></section><section id="logs"><h3 >Logs</h3><p >A viewer to have a look to your server logs.</p><img src="../../_images/interface-branches-logs.png" style="" class="img-responsive center-block"><p >Different logs are available:</p><ul ><li >install.log: The logs of the database installation. In a development branch, the logs of the tests are included.</li><li >pip.log: The logs of the Python dependencies installation.</li><li >odoo.log: The logs of the running server.</li><li >update.log: The logs of the database updates.</li><li >pg_long_queries.log: The logs of psql queries that take an unusual amount of time.</li></ul><p >If new lines are added in the logs, they will be displayed automatically.
@@ -361,9 +382,9 @@ the previous build (see the <a href="#stage-production" class="internal referenc
 should the feature you’re working on require a particular setup or configuration, to avoid having
 to manually set it up again on every commit. If you choose new build for a staging branch, it will
 make a fresh copy from the production build every time a commit is pushed. A branch that is put
-back from staging to development will automatically be set to ‘Do nothing’.</p><p ><strong >Test suite</strong></p><p >For development branches, you can choose to enable or disable the test suite. It’s enabled by default.</p><p ><strong >Odoo Version</strong></p><p >For development branches only, you can change the version of Odoo, should you want to test upgraded code or develop
+back from staging to development will automatically be set to „Do nothing“.</p><p ><strong >Test suite</strong></p><p >For development branches, you can choose to enable or disable the test suite. It’s enabled by default.</p><p ><strong >Odoo Version</strong></p><p >For development branches only, you can change the version of Odoo, should you want to test upgraded code or develop
 features while your production database is in the process of being upgraded to a newer version.</p><p >In addition, for each version you have two options regarding the code update.</p><ul ><li >You can choose to benefit from the latest bug, security and performance fixes automatically. The
-sources of your Odoo server will be updated weekly. This is the ‘Latest’ option.</li><li >You can choose to pin the Odoo sources to a specific revision by selecting them from a list of
+sources of your Odoo server will be updated weekly. This is the „Latest“ option.</li><li >You can choose to pin the Odoo sources to a specific revision by selecting them from a list of
 dates. Revisions will expire after 3 months. You will be notified by mail when the expiration
 date approaches and if you don’t take action afterwards, you will automatically be set to the
 latest revision.</li></ul><p ><strong >Custom domains</strong></p><p >Here you can configure additional domains for the selected branch. It’s possible to add other
@@ -381,7 +402,7 @@ accessible through HTTPS.</p><p >While it is currently not possible to configure
 we are considering the feature if there is enough demand.</p><p ><strong >SPF and DKIM compliance</strong></p><p >In case the domain of your users email addresses use SPF (Sender Policy Framework) or DKIM
 (DomainKeys Identified Mail), don’t forget to authorize Odoo as a sending host in your domain name
 settings to increase the deliverability of your outgoing emails.
-The configuration steps are explained in the <a href="../../discuss/email_servers.html#discuss-email-servers-spf-compliant" class="internal reference"><span class="std std-ref">Discuss app documentation</span></a>.</p><div role="alert" class="alert-warning alert"><p class="alert-title">Warning</p><p >Forgetting to configure your SPF or DKIM to authorize Odoo as a sending host can lead to the
+The configuration steps are explained in the <a href="../../discuss/email_servers.html#discuss-email-servers-spf-compliant" class="internal reference"><span class="std std-ref">Discuss app documentation</span></a>.</p><div role="alert" class="alert-warning alert"><p class="alert-title">Предупреждение</p><p >Forgetting to configure your SPF or DKIM to authorize Odoo as a sending host can lead to the
 delivery of your emails as spam in your contacts inbox.</p></div></section><section id="shell-commands"><h2 >Shell commands</h2><p >In the top right-hand corner of the view, different shell commands are available.</p><img src="../../_images/interface-branches-shellcommands.png" style="" class="img-responsive center-block"><p >Each command can be copied in the clipboard to be used in a terminal,
 and some of them can be used directly from Odoo.sh by clicking the <em >run</em> button
 in such case a popup will prompt the user in order to define eventual placeholders
@@ -404,7 +425,7 @@ such as <code >&lt;URL&gt;</code>, <code >&lt;PATH&gt;</code>, …</p></section>
 </pre></div>
 </div>
 <p >You can configure your ssh keys in your profile settings in the top-right menu when clicking on your username.</p><p >Provided you have the <a href="settings.html#odoosh-gettingstarted-settings-collaborators" class="internal reference"><span class="std std-ref">correct access rights</span></a> on the project,
-you’ll be granted ssh access to the build.</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >Long running ssh connections are not guaranteed. Idle connections will be
+you’ll be granted ssh access to the build.</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Long running ssh connections are not guaranteed. Idle connections will be
 disconnected in order to free up resources.</p></div></section><section id="submodule"><h3 >Submodule</h3><p >Add a branch from another repository in your current branch as a <em >submodule</em>.</p><p ><em >Submodules</em> allows you to use modules from other repositories in your project.</p><p >The submodules feature is detailed in the chapter
 <a href="../advanced/submodules.html#odoosh-advanced-submodules" class="internal reference"><span class="std std-ref">Submodules</span></a> of this documentation.</p><div class="highlight-bash"><div class="highlight"><pre><span></span>$ git submodule add -b master &lt;URL&gt; &lt;PATH&gt;
 </pre></div>

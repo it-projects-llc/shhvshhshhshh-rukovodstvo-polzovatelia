@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>How to use my mail server to send and receive emails in Odoo &#8212; Odoo 13.0 documentation</title>
+    <title>Как использовать свой почтовый сервер для отправки и получения электронных писем в Odoo &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../_static/inventory.js"></script>
     <script type="text/javascript" src="../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
     <script type="text/javascript" src="../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../_static/doc.js"></script>
     <script type="text/javascript" src="../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/discuss/email_servers.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/discuss/email_servers.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/discuss/email_servers.html" />
+    <link rel="canonical" href="/master/ru/discuss/email_servers.html" />
   
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Purchase" href="../purchase.html" />
-    <link rel="prev" title="How to follow Twitter feed from Odoo" href="mail_twitter.html" /> 
+    <link rel="index" title="Алфавитный указатель" href="../genindex.html" />
+    <link rel="search" title="Поиск" href="../search.html" />
+    <link rel="next" title="Закупка" href="../purchase.html" />
+    <link rel="prev" title="Как следить за Twitter в Odoo" href="mail_twitter.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -194,12 +198,12 @@
         
             
                 
-                    <li><a href="../discuss.html">Discuss</a></li>
+                    <li><a href="../discuss.html">Общение</a></li>
                 
             
         
     
-    <li class="active"><a href="#">How to use my mail server to send and receive emails in Odoo</a></li>
+    <li class="active"><a href="#">Как использовать свой почтовый сервер для отправки и получения электронных писем в Odoo</a></li>
 
               
           </ol>
@@ -215,12 +219,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/discuss/email_servers.html">English</a></li>
+        
+            <li><a href="/13.0/uk/discuss/email_servers.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -247,6 +266,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -256,7 +277,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> How to use my mail server to send and receive emails in Odoo </h1>
+        <h1> Как использовать свой почтовый сервер для отправки и получения электронных писем в Odoo </h1>
       </div>
     </figure>
     
@@ -269,7 +290,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#how-to-manage-outbound-messages" class="ripple internal reference">How to manage outbound messages</a><ul ><li class="list-group-item"><a href="#can-i-use-an-office-365-server" class="ripple internal reference">Can I use an Office 365 server</a></li><li class="list-group-item"><a href="#how-to-use-a-g-suite-server" class="ripple internal reference">How to use a G Suite server</a></li><li class="list-group-item"><a href="#be-spf-compliant" class="ripple internal reference">Be SPF-compliant</a></li><li class="list-group-item"><a href="#allow-dkim" class="ripple internal reference">Allow DKIM</a></li></ul></li><li class="list-group-item"><a href="#how-to-manage-inbound-messages" class="ripple internal reference">How to manage inbound messages</a></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#how-to-manage-outbound-messages" class="ripple internal reference">Как управлять исходящими сообщениями</a><ul ><li class="list-group-item"><a href="#can-i-use-an-office-365-server" class="ripple internal reference">Можете ли вы использовать сервер Office 365</a></li><li class="list-group-item"><a href="#how-to-use-a-g-suite-server" class="ripple internal reference">Как использовать сервер G Suite</a></li><li class="list-group-item"><a href="#be-spf-compliant" class="ripple internal reference">Будьте совместимыми с SPF</a></li><li class="list-group-item"><a href="#allow-dkim" class="ripple internal reference">Позвольте DKIM</a></li></ul></li><li class="list-group-item"><a href="#how-to-manage-inbound-messages" class="ripple internal reference">Как управлять входящими сообщениями</a></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/discuss/email_servers.rst" class="gith-link">
                   Edit on GitHub
@@ -281,63 +302,7 @@
           <article class="doc-body  ">
             
             
-  <section id="how-to-use-my-mail-server-to-send-and-receive-emails-in-odoo"><p >This document is mainly dedicated to Odoo on-premise users who don’t
-benefit from an out-of-the-box solution to send and receive emails in Odoo,
-unlike <a href="https://www.odoo.com/trial" class="external reference">Odoo Online</a> &amp; <a href="https://www.odoo.sh" class="external reference">Odoo.sh</a>.</p><p >If no one in your company is used to manage email servers, we strongly recommend that
-you opt for those Odoo hosting solutions. Their email system
-works instantly and is monitored by professionals.
-Nevertheless you can still use your own email servers if you want
-to manage your email server’s reputation yourself.</p><p >You will find here below some useful
-information on how to integrate your own email solution with Odoo.</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >Office 365 email servers don’t allow easiliy to send external emails
-from hosts like Odoo.
-Refer to the <a href="https://support.office.com/en-us/article/How-to-set-up-a-multifunction-device-or-application-to-send-email-using-Office-365-69f58e99-c550-4274-ad18-c805d654b4c4" class="external reference alert-link">Microsoft’s documentation</a>
-to make it work.</p></div></section><section id="how-to-manage-outbound-messages"><h2 >How to manage outbound messages</h2><p >As a system admin, go to <span class="menuselection">Settings ‣ General Settings</span>
-and check <em >External Email Servers</em>.
-Then, click <em >Outgoing Mail Servers</em> to create one and reference the SMTP data of your email server.
-Once all the information has been filled out, click on <em >Test Connection</em>.</p><p >Here is a typical configuration for a G Suite server.</p><img src="../_images/outgoing_server.png" style="" class="img-responsive center-block"><p >Then set your email domain name in the General Settings.</p></section><section id="can-i-use-an-office-365-server"><h3 >Can I use an Office 365 server</h3><p >You can use an Office 365 server if you run Odoo on-premise.
-Office 365 SMTP relays are not compatible with Odoo Online.</p><p >Please refer to <a href="https://support.office.com/en-us/article/How-to-set-up-a-multifunction-device-or-application-to-send-email-using-Office-365-69f58e99-c550-4274-ad18-c805d654b4c4" class="external reference">Microsoft’s documentation</a>
-to configure a SMTP relay for your Odoo’s IP address.</p></section><section id="how-to-use-a-g-suite-server"><h3 >How to use a G Suite server</h3><p >You can use an G Suite server for any Odoo hosting type.
-To do so you need to setup the SMTP relay service. The configuration steps are explained in
-<a href="https://support.google.com/a/answer/2956491?hl=en" class="external reference">Google documentation</a>.</p></section><section id="be-spf-compliant"><i id="discuss-email-servers-spf-compliant"></i><h3 >Be SPF-compliant</h3><p >In case you use SPF (Sender Policy Framework) to increase the deliverability
-of your outgoing emails, don’t forget to authorize Odoo as a sending host in your
-domain name settings. Here is the configuration for Odoo Online:</p><ul ><li >If no TXT record is set for SPF, create one with following definition:
-v=spf1 include:_spf.odoo.com ~all</li><li >In case a SPF TXT record is already set, add “include:_spf.odoo.com”.
-e.g. for a domain name that sends emails via Odoo Online and via G Suite it could be:
-v=spf1 include:_spf.odoo.com include:_spf.google.com ~all</li></ul><p >Find <a href="https://www.mail-tester.com/spf/" class="external reference">here</a> the exact procedure to
-create or modify TXT records in your own domain registrar.</p><p >Your new SPF record can take up to 48 hours to go into effect,
-but this usually happens more quickly.</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >Adding more than one SPF record for a domain can cause problems
-with mail delivery and spam classification. Instead, we recommend using
-only one SPF record by modifying it to authorize Odoo.</p></div></section><section id="allow-dkim"><h3 >Allow DKIM</h3><p >You should do the same thing if DKIM (Domain Keys Identified Mail)
-is enabled on your email server. In the case of Odoo Online &amp; Odoo.sh,
-you should add a DNS “odoo._domainkey” CNAME record to
-“odoo._domainkey.odoo.com”.
-For example, for “foo.com” they should have a record “odoo._domainkey.foo.com”
-that is a CNAME with the value “odoo._domainkey.odoo.com”.</p></section><section id="how-to-manage-inbound-messages"><h2 >How to manage inbound messages</h2><p >Odoo relies on generic email aliases to fetch incoming messages.</p><ul ><li ><strong >Reply messages</strong> of messages sent from Odoo are routed to their original
-discussion thread (and to the inbox of all its followers) by the
-catchall alias (<strong >catchall@</strong>).</li><li ><strong >Bounced messages</strong> are routed to <strong >bounce@</strong> in order to track them in Odoo.
-This is especially used in <a href="https://www.odoo.com/page/email-marketing" class="external reference">Odoo Email Marketing</a>
-to opt-out invalid recipients.</li><li ><p ><strong >Original messages</strong>: Several business objects have their own alias to
-create new records in Odoo from incoming emails:</p><ul ><li >Sales Channel (to create Leads or Opportunities in <a href="https://www.odoo.com/page/crm" class="external reference">Odoo CRM</a>),</li><li >Support Channel (to create Tickets in <a href="https://www.odoo.com/page/helpdesk" class="external reference">Odoo Helpdesk</a>),</li><li >Projects (to create new Tasks in <a href="https://www.odoo.com/page/project-management" class="external reference">Odoo Project</a>),</li><li >Job Positions (to create Applicants in <a href="https://www.odoo.com/page/recruitment" class="external reference">Odoo Recruitment</a>),</li><li >etc.</li></ul></li></ul><p >Depending on your mail server, there might be several methods to fetch emails.
-The easiest and most recommended method is to manage one email address per Odoo
-alias in your mail server.</p><ul ><li >Create the corresponding email addresses in your mail server
-(catchall@, bounce@, sales@, etc.).</li><li ><p >Set your domain name in the General Settings.</p><img src="../_images/alias_domain.png" style="" class="img-responsive center-block"></li><li >If you use Odoo on-premise, create an <em >Incoming Mail Server</em> in Odoo for each alias.
-You can do it from the General Settings as well. Fill out the form according
-to your email provider’s settings.
-Leave the <em >Actions to Perform on Incoming Mails</em> blank. Once all the
-information has been filled out, click on <em >TEST &amp; CONFIRM</em>.</li></ul><img src="../_images/incoming_server.png" style="" class="img-responsive center-block"><ul ><li >If you use Odoo Online or Odoo.sh, We do recommend to redirect incoming messages
-to Odoo’s domain name rather than exclusively use your own email server.
-That way you will receive incoming messages without delay. Indeed, Odoo Online is fetching
-incoming messages of external servers once per hour only.
-You should set redirections for all the email addresses to Odoo’s domain name in your
-email server (e.g. <em >catchall@mydomain.ext</em> to <em >catchall@mycompany.odoo.com</em>).</li></ul><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >All the aliases are customizable in Odoo.
-Object aliases can be edited from their  respective configuration view.
-To edit catchall and bounce aliases, you first need to activate the
-developer mode from the Settings Dashboard.</p><img src="../_images/developer_mode.png" style="" class="img-responsive center-block"><p >Then refresh your screen and go to
-<span class="menuselection">Settings ‣ Technical ‣ Parameters ‣ System Parameters</span>
-to customize the aliases (<em >mail.catchall.alias</em> &amp; * mail.bounce.alias*).</p><img src="../_images/system_parameters.png" style="" class="img-responsive center-block"></div><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >By default inbound messages are fetched every 5 minutes in Odoo on-premise.
-You can change this value in developer mode.
-Go to <span class="menuselection">Settings ‣ Technical ‣ Automation ‣
-Scheduled Actions</span> and look for <em >Mail: Fetchmail Service</em>.</p></div></section>
+  <section id="how-to-use-my-mail-server-to-send-and-receive-emails-in-odoo"><p >Этот документ, в основном, посвящен пользователям Odoo на собственном сервере, не пользуются нестандартные решения для передачи и приема электронных писем в Odoo, в отличие от [UNKNOWN NODE title_reference] Odoo.sh &lt;<a href="https://www.odoo.sh" class="external reference">https://www.odoo.sh</a>&gt; [UNKNOWN NODE problematic]__.</p><p >Если ни один из вашей компании не используется для управления почтовыми серверами, мы настоятельно рекомендуем вам выбрать эти решения для хостинга Odoo. Их система электронной почты работает мгновенно и контролируется профессионалами. Тем не менее, вы все еще можете использовать собственные почтовые серверы, если хотите самостоятельно управлять вашим сервером электронной почты.</p><p >Ниже вы найдете некоторую полезную информацию о том, как интегрировать собственное решение электронной почты с Odoo.</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Серверы электронной почты Office 365 не позволяют просто отправлять сторонние электронные письма с хостов, таких как Odoo. Обратитесь к [UNKNOWN NODE problematic]документации Microsoft &lt;<a href="https://support.office.com/en-us/article/How-to-set-up-a-multifunction-device-or-application-to-send-email-using-Office-365-69f58e99-c550-4274-ad18-c805d654b4c4" class="external reference alert-link">https://support.office.com/en-us/article/How-to-set-up-a-multifunction-device-or-application-to-send-email-using-Office-365-69f58e99-c550-4274-ad18-c805d654b4c4</a>&gt; [UNKNOWN NODE problematic]__ чтобы это заработало.</p></div></section><section id="how-to-manage-outbound-messages"><h2 >Как управлять исходящими сообщениями</h2><p >Как администратор системы, перейдите к: menuselection: [UNKNOWN NODE title_reference] и проверьте * внешние серверы электронной почты [UNKNOWN NODE problematic]. Нажмите * Серверы исходящей почты [UNKNOWN NODE problematic], чтобы создать и указать SMTP-данные вашего сервера электронной почты. Когда вся информация будет заполнена, нажмите кнопку * Проверить подключение [UNKNOWN NODE problematic].</p><p >Вот типичное настройки сервера G Suite.</p><img src="../_images/outgoing_server.png" style="" class="img-responsive center-block"><p >Затем установите имя домена электронной почты в общих настройках.</p></section><section id="can-i-use-an-office-365-server"><h3 >Можете ли вы использовать сервер Office 365</h3><p >Вы можете использовать сервер Office 365, если вы запускаете Odoo на собственном сервере. Реестры SMTP Office 365 несовместимы с Odoo Online.</p><p >Пожалуйста, обратитесь к [UNKNOWN NODE problematic]документации Microsoft &lt;<a href="https://support.office.com/en-us/article/How-to-set-up-a-multifunction-device-or-application-to-send-email-using-Office-365-69f58e99-c550-4274-ad18-c805d654b4c4" class="external reference">https://support.office.com/en-us/article/How-to-set-up-a-multifunction-device-or-application-to-send-email-using-Office-365-69f58e99-c550-4274-ad18-c805d654b4c4</a>&gt; [UNKNOWN NODE problematic]__ для настройки ретранслятора SMTP для вашего IP-адреса Odoo.</p></section><section id="how-to-use-a-g-suite-server"><h3 >Как использовать сервер G Suite</h3><p >Вы можете использовать сервер G Suite для любого типа хостинга Odoo. Чтобы это сделать, вам необходимо установить обслуживания SMTP. Шаги настройки объясняются в документации [UNKNOWN NODE problematic]Google &lt;<a href="https://support.google.com/a/answer/2956491?hl=en" class="external reference">https://support.google.com/a/answer/2956491?hl=en</a>&gt; [UNKNOWN NODE problematic]__.</p></section><section id="be-spf-compliant"><i id="discuss-email-servers-spf-compliant"></i><h3 >Будьте совместимыми с SPF</h3><p >Если вы используете SPF (Policy Framework для отправителей), чтобы увеличить производительность выходных электронных писем, не забудьте авторизовать Odoo как отправителя в настройках вашего доменного имени. Вот настройки для Odoo Online:</p><ul ><li >Если для SPF нет записи TXT, создайте его с последующим определением: v = spf1 include: _spf.odoo.com ~ all</li><li >Если запрос SPF TXT уже установлено, добавьте &amp;quot;include: _spf.odoo.com&amp;quot;. например, для доменного имени, которое направляет электронные письма через Odoo Online, и через G Suite это может быть: v = spf1 include: _spf.odoo.com include: _spf.google.com ~ all</li></ul><p >Найдите [UNKNOWN NODE problematic]здесь &lt;<a href="https://www.mail-tester.com/spf/" class="external reference">https://www.mail-tester.com/spf/</a>&gt; [UNKNOWN NODE problematic]__ точную процедуру создания или изменения TXT-записи в собственном регистраторе доменов.</p><p >Завершение вашего нового записи SPF может занять до 48 часов, но это, как правило, происходит быстрее.</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Добавление нескольких записей SPF для домена может вызвать проблемы с доставкой почты и классификации спама. Вместо этого мы рекомендуем использовать только одна запись SPF, изменяя его, чтобы авторизовать Odoo.</p></div></section><section id="allow-dkim"><h3 >Позвольте DKIM</h3><p >Вы должны делать то же самое, если на вашем сервере электронной почты включены DKIM (Domain Keys Identified Mail). В случае с Odoo Online и Odoo.sh, вы должны добавить DNS &amp;quot;odoo._domainkey&amp;quot; запись CNAME на &amp;quot;odoo._domainkey.odoo.com&amp;quot;. Например, для &amp;quot;foo.com&amp;quot; они должны иметь запись &amp;quot;odoo._domainkey.foo.com&amp;quot;, то есть CNAME со значением &amp;quot;odoo._domainkey.odoo.com&amp;quot;.</p></section><section id="how-to-manage-inbound-messages"><h2 >Как управлять входящими сообщениями</h2><p >Odoo возлагается на общие псевдонимы электронной почты, чтобы получать входящие сообщения.</p><ul ><li >** Ответы сообщений <strong >, отправленных с Odoo, направляются в их оригинальный дискуссионный поток (и в папку &amp;quot;Входящие&amp;quot; всех его пиписникив) с помощью псевдонима catchall (</strong> catchall @ [UNKNOWN NODE problematic]).</li><li >** Отсканированные сообщение ** направляются на отказ @, чтобы отслеживать их в Odoo. Это особенно используется в [UNKNOWN NODE problematic]Odoo Email Marketing, &lt;<a href="https://www.odoo.com/page/email-marketing" class="external reference">https://www.odoo.com/page/email-marketing</a>&gt; [UNKNOWN NODE problematic]__ чтобы отказаться от недействительных получателей.</li><li ><p >** Оригинальные сообщение [UNKNOWN NODE problematic]: для некоторых бизнес-объектов является собственный псевдоним для создания новых записей в Odoo из входящих сообщений электронной почты:</p><ul ><li >Канал продаж (для создания лидов или возможностей в [UNKNOWN NODE problematic]Odoo CRM &lt;<a href="https://www.odoo.com/page/crm" class="external reference">https://www.odoo.com/page/crm</a>&gt; [UNKNOWN NODE problematic]__),</li><li >Поддержка канала (для создания заявок в [UNKNOWN NODE problematic]Службе поддержки Odoo &lt;<a href="https://www.odoo.com/page/helpdesk" class="external reference">https://www.odoo.com/page/helpdesk</a>&gt; [UNKNOWN NODE problematic]__),</li><li >Проекты (для создания новых задач в [UNKNOWN NODE problematic]Проекте Odoo &lt;<a href="https://www.odoo.com/page/project-management" class="external reference">https://www.odoo.com/page/project-management</a>&gt; [UNKNOWN NODE problematic]__),</li><li >Вакансии (для создания заявок в [UNKNOWN NODE problematic]Рекрутинга Odoo &lt;<a href="https://www.odoo.com/page/recruitment" class="external reference">https://www.odoo.com/page/recruitment</a>&gt; [UNKNOWN NODE problematic]__),</li><li >и т.д.</li></ul></li></ul><p >В зависимости от вашего почтового сервера может существовать несколько способов получения сообщений электронной почты. Самый и наиболее рекомендуемый способ заключается в управлении одному адресу электронной почты на псевдонимы Odoo на вашем почтовом сервере.</p><ul ><li >Создайте соответствующие электронные адреса на своем почтовом сервере (catchall @, bounce @, sales @ и т.д.).</li><li ><p >Установите свое доменное имя в общих настройках.</p><img src="../_images/alias_domain.png" style="" class="img-responsive center-block"></li><li >Если вы используете Odoo на собственном сервере, создайте * входной почтовый сервер * в Odoo для каждого псевдонима. Вы также можете это сделать в общих настройках. Заполните форму в соответствии с вашими настроек поставщика услуг электронной почты. Оставьте * действия, которые нужно выполнить * на входных письмах, пустыми. Когда вся информация будет заполнена, нажмите на * Проверка и подтверждение [UNKNOWN NODE problematic].</li></ul><img src="../_images/incoming_server.png" style="" class="img-responsive center-block"><ul ><li >Если вы используете Odoo Online или Odoo.sh, мы рекомендуем переадресовывать входящие сообщения на доменное имя Odoo, а не только использовать свой собственный сервер электронной почты. Таким образом вы получите входящие сообщения без задержки. Действительно, Odoo Online получает входящие сообщения внешних серверов только раз в час. Вы должны установить перенаправления для всех адресов электронной почты к доменному имени Odoo на своем сервере электронной почты (например, <em >catchall@mydomain.ext</em>, на <em >catchall@mycompany.odoo.com</em>).</li></ul><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >Все псевдонимы можно настроить в Odoo. Псевдонимы объектов можно редактировать по соответствующему виду настройки. Чтобы изменить атрибуты catchall и bounce, нужно сначала активировать режим разработчика на панели управления настроек.</p><img src="../_images/developer_mode.png" style="" class="img-responsive center-block"><p >Затем обновите свой экран и перейдите к: menuselection: [UNKNOWN NODE title_reference] для настройки псевдонима (* mail.catchall.alias * и * mail.bounce.alias [UNKNOWN NODE problematic]).</p><img src="../_images/system_parameters.png" style="" class="img-responsive center-block"></div><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >По умолчанию входящие сообщения загружаются каждые 5 минут в режиме ожидания в Odoo. Вы можете изменить это значение в режиме разработчика. Перейдите к: menuselection: [UNKNOWN NODE title_reference] и найдите * Mail: Fetchmail Service [UNKNOWN NODE problematic].</p></div></section>
 
           </article>
         </div>

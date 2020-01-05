@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>Warehouse Management &#8212; Odoo 13.0 documentation</title>
+    <title>Управление складом &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/accounting.css" />
@@ -27,15 +27,19 @@
     <script type="text/javascript" src="../_static/inventory.js"></script>
     <script type="text/javascript" src="../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
     <script type="text/javascript" src="../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../_static/doc.js"></script>
     <script type="text/javascript" src="../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/inventory/management.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/inventory/management.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/inventory/management.html" />
+    <link rel="canonical" href="/master/ru/inventory/management.html" />
   
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Products" href="management/products.html" />
+    <link rel="index" title="Алфавитный указатель" href="../genindex.html" />
+    <link rel="search" title="Поиск" href="../search.html" />
+    <link rel="next" title="Продукты" href="management/products.html" />
     <link rel="prev" title="Set your Initial Stock" href="overview/process/initial_stock.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
@@ -194,12 +198,12 @@
         
             
                 
-                    <li><a href="../inventory.html">Inventory</a></li>
+                    <li><a href="../inventory.html">Склад</a></li>
                 
             
         
     
-    <li class="active"><a href="#">Warehouse Management</a></li>
+    <li class="active"><a href="#">Управление складом</a></li>
 
               
           </ol>
@@ -215,12 +219,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/inventory/management.html">English</a></li>
+        
+            <li><a href="/13.0/uk/inventory/management.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -247,6 +266,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -256,7 +277,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> Warehouse Management </h1>
+        <h1> Управление складом </h1>
       </div>
     </figure>
     
@@ -270,7 +291,7 @@
           <article class="doc-body doc-toc ">
             
             
-  <section id="warehouse-management"><div class="toctree-wrapper"><ul ><li class="toctree-l1"><span >Products</span><ul ><li class="toctree-l2"><a href="management/products/uom.html" class="internal reference">Use Different Units of Measure</a></li><li class="toctree-l2"><a href="management/products/usage.html" class="internal reference">When Should you Use Packages, Units of Measure or Kits?</a></li><li class="toctree-l2"><a href="management/products/strategies.html" class="internal reference">How to select the right replenishment strategy</a></li></ul></li><li class="toctree-l1"><span >Warehouses</span><ul ><li class="toctree-l2"><a href="management/warehouses/difference_warehouse_location.html" class="internal reference">What is the difference between warehouses and locations?</a></li><li class="toctree-l2"><a href="management/warehouses/warehouse_creation.html" class="internal reference">Create a New Warehouse</a></li><li class="toctree-l2"><a href="management/warehouses/location_creation.html" class="internal reference">Create a New Location</a></li></ul></li><li class="toctree-l1"><span >Inventory Adjustment</span><ul ><li class="toctree-l2"><a href="management/replenishment_strategies/min_stock_rule_vs_mto.html" class="internal reference">Choose Between Reordering Rules and Make to Order</a></li><li class="toctree-l2"><a href="management/replenishment_strategies/virtual_warehouses.html" class="internal reference">Resupply from another Warehouse</a></li></ul></li><li class="toctree-l1"><span >Delivery Orders</span><ul ><li class="toctree-l2"><a href="management/delivery/inventory_flow.html" class="internal reference">How to choose the right inventory flow to handle delivery orders?</a></li><li class="toctree-l2"><a href="management/delivery/one_step.html" class="internal reference">Process a Receipt in one step (Receipt)</a></li><li class="toctree-l2"><a href="management/delivery/two_steps.html" class="internal reference">Process a Receipt in two steps (Input + Stock)</a></li><li class="toctree-l2"><a href="management/delivery/three_steps.html" class="internal reference">Process a Receipt in three steps (Input + Quality + Stock)</a></li><li class="toctree-l2"><a href="management/delivery/scheduled_dates.html" class="internal reference">How is the scheduled delivery date computed?</a></li><li class="toctree-l2"><a href="management/delivery/dropshipping.html" class="internal reference">Send Products to Customers Directly from Suppliers (Drop-shipping)</a></li><li class="toctree-l2"><a href="management/delivery/label_type.html" class="internal reference">How can I change the label type?</a></li><li class="toctree-l2"><a href="management/delivery/packaging_type.html" class="internal reference">Deliver Products in Packages</a></li><li class="toctree-l2"><a href="management/delivery/delivery_countries.html" class="internal reference">How can I limit a delivery method to a certain number of countries?</a></li><li class="toctree-l2"><a href="management/delivery/cancel_order.html" class="internal reference">How do I cancel a delivery order?</a></li></ul></li><li class="toctree-l1"><span >Incoming Shipments</span><ul ><li class="toctree-l2"><a href="management/incoming/handle_receipts.html" class="internal reference">How to choose the right flow to handle receipts?</a></li><li class="toctree-l2"><a href="management/incoming/one_step.html" class="internal reference">Process a Receipt in one step (Receipt)</a></li><li class="toctree-l2"><a href="management/incoming/two_steps.html" class="internal reference">Process a Receipt in two steps (Input + Stock)</a></li><li class="toctree-l2"><a href="management/incoming/three_steps.html" class="internal reference">Process a Receipt in three steps (Input + Quality + Stock)</a></li></ul></li><li class="toctree-l1"><span >Miscellaneous Operations</span><ul ><li class="toctree-l2"><a href="management/misc/scrap.html" class="internal reference">Scrap Products</a></li><li class="toctree-l2"><a href="management/misc/owned_stock.html" class="internal reference">Manage Stock that you don’t own</a></li><li class="toctree-l2"><a href="management/misc/email_delivery.html" class="internal reference">Send Automated Emails at Delivery</a></li><li class="toctree-l2"><a href="management/misc/sms_delivery.html" class="internal reference">Send Automated SMS at Delivery</a></li></ul></li><li class="toctree-l1"><span >Planning</span><ul ><li class="toctree-l2"><a href="management/planning/scheduled_date.html" class="internal reference">How is the Scheduled Delivery Date Computed?</a></li><li class="toctree-l2"><a href="management/planning/schedulers.html" class="internal reference">Configure and Run Schedulers</a></li></ul></li><li class="toctree-l1"><span >Lots and Serial Numbers</span><ul ><li class="toctree-l2"><a href="management/lots_serial_numbers/differences.html" class="internal reference">What’s the difference between lots and serial numbers?</a></li><li class="toctree-l2"><a href="management/lots_serial_numbers/serial_numbers.html" class="internal reference">Work with serial numbers</a></li><li class="toctree-l2"><a href="management/lots_serial_numbers/lots.html" class="internal reference">Manage lots of identical products</a></li><li class="toctree-l2"><a href="management/lots_serial_numbers/expiration_dates.html" class="internal reference">Manage expiration dates</a></li></ul></li><li class="toctree-l1"><span >Valuation Methods</span><ul ><li class="toctree-l2"><a href="management/reporting/inventory_valuation_config.html" class="internal reference">Inventory valuation configuration</a></li><li class="toctree-l2"><a href="management/reporting/using_inventory_valuation.html" class="internal reference">Using the inventory valuation</a></li><li class="toctree-l2"><a href="management/reporting/integrating_landed_costs.html" class="internal reference">Integrating additional costs to products (landed costs)</a></li><li class="toctree-l2"><a href="management/reporting/valuation_methods_continental.html" class="internal reference">How to do an inventory valuation? (Continental Accounting)</a></li><li class="toctree-l2"><a href="management/reporting/valuation_methods_anglo_saxon.html" class="internal reference">How to do an inventory valuation? (Anglo-Saxon Accounting)</a></li><li class="toctree-l2"><a href="../accounting/others/inventory/avg_price_valuation.html" class="internal reference">Impact on the average price valuation when returning goods</a></li></ul></li></ul></div></section>
+  <section id="warehouse-management"><div class="toctree-wrapper"><ul ><li class="toctree-l1"><span >Продукты</span><ul ><li class="toctree-l2"><a href="management/products/uom.html" class="internal reference">Use Different Units of Measure</a></li><li class="toctree-l2"><a href="management/products/usage.html" class="internal reference">When Should you Use Packages, Units of Measure or Kits?</a></li><li class="toctree-l2"><a href="management/products/strategies.html" class="internal reference">Как установить правильную стратегию пополнения на складе</a></li></ul></li><li class="toctree-l1"><span >Склады</span><ul ><li class="toctree-l2"><a href="management/warehouses/difference_warehouse_location.html" class="internal reference">Какая разница между составом и местонахождением?</a></li><li class="toctree-l2"><a href="management/warehouses/warehouse_creation.html" class="internal reference">Create a New Warehouse</a></li><li class="toctree-l2"><a href="management/warehouses/location_creation.html" class="internal reference">Create a New Location</a></li></ul></li><li class="toctree-l1"><span >Коррекция остатков</span><ul ><li class="toctree-l2"><a href="management/replenishment_strategies/min_stock_rule_vs_mto.html" class="internal reference">Choose Between Reordering Rules and Make to Order</a></li><li class="toctree-l2"><a href="management/replenishment_strategies/virtual_warehouses.html" class="internal reference">Resupply from another Warehouse</a></li></ul></li><li class="toctree-l1"><span >Заказы на доставку</span><ul ><li class="toctree-l2"><a href="management/delivery/inventory_flow.html" class="internal reference">Как выбрать правильное перемещение запасов для обработки заказов на доставку?</a></li><li class="toctree-l2"><a href="management/delivery/one_step.html" class="internal reference">Process a Receipt in one step (Receipt)</a></li><li class="toctree-l2"><a href="management/delivery/two_steps.html" class="internal reference">Process a Receipt in two steps (Input + Stock)</a></li><li class="toctree-l2"><a href="management/delivery/three_steps.html" class="internal reference">Process a Receipt in three steps (Input + Quality + Stock)</a></li><li class="toctree-l2"><a href="management/delivery/scheduled_dates.html" class="internal reference">Как определяется запланированная дата доставки?</a></li><li class="toctree-l2"><a href="management/delivery/dropshipping.html" class="internal reference">Send Products to Customers Directly from Suppliers (Drop-shipping)</a></li><li class="toctree-l2"><a href="management/delivery/label_type.html" class="internal reference">Как можно изменить тип накладной?</a></li><li class="toctree-l2"><a href="management/delivery/packaging_type.html" class="internal reference">Deliver Products in Packages</a></li><li class="toctree-l2"><a href="management/delivery/delivery_countries.html" class="internal reference">Как ограничить способ доставки определенном количестве стран?</a></li><li class="toctree-l2"><a href="management/delivery/cancel_order.html" class="internal reference">Как отменить заказ на доставку?</a></li></ul></li><li class="toctree-l1"><span >Поступающие грузы</span><ul ><li class="toctree-l2"><a href="management/incoming/handle_receipts.html" class="internal reference">Как выбрать правильный способ для обработки товарных чеков?</a></li><li class="toctree-l2"><a href="management/incoming/one_step.html" class="internal reference">Process a Receipt in one step (Receipt)</a></li><li class="toctree-l2"><a href="management/incoming/two_steps.html" class="internal reference">Process a Receipt in two steps (Input + Stock)</a></li><li class="toctree-l2"><a href="management/incoming/three_steps.html" class="internal reference">Process a Receipt in three steps (Input + Quality + Stock)</a></li></ul></li><li class="toctree-l1"><span >Разные Операции</span><ul ><li class="toctree-l2"><a href="management/misc/scrap.html" class="internal reference">Scrap Products</a></li><li class="toctree-l2"><a href="management/misc/owned_stock.html" class="internal reference">Manage Stock that you don’t own</a></li><li class="toctree-l2"><a href="management/misc/email_delivery.html" class="internal reference">Send Automated Emails at Delivery</a></li><li class="toctree-l2"><a href="management/misc/sms_delivery.html" class="internal reference">Send Automated SMS at Delivery</a></li></ul></li><li class="toctree-l1"><span >Планирование</span><ul ><li class="toctree-l2"><a href="management/planning/scheduled_date.html" class="internal reference">How is the Scheduled Delivery Date Computed?</a></li><li class="toctree-l2"><a href="management/planning/schedulers.html" class="internal reference">Configure and Run Schedulers</a></li></ul></li><li class="toctree-l1"><span >Партии и Серийные номера</span><ul ><li class="toctree-l2"><a href="management/lots_serial_numbers/differences.html" class="internal reference">Какая разница между партиями и серийными номерами?</a></li><li class="toctree-l2"><a href="management/lots_serial_numbers/serial_numbers.html" class="internal reference">Work with serial numbers</a></li><li class="toctree-l2"><a href="management/lots_serial_numbers/lots.html" class="internal reference">Manage lots of identical products</a></li><li class="toctree-l2"><a href="management/lots_serial_numbers/expiration_dates.html" class="internal reference">Manage expiration dates</a></li></ul></li><li class="toctree-l1"><span >методы оценки</span><ul ><li class="toctree-l2"><a href="management/reporting/inventory_valuation_config.html" class="internal reference">Inventory valuation configuration</a></li><li class="toctree-l2"><a href="management/reporting/using_inventory_valuation.html" class="internal reference">Using the inventory valuation</a></li><li class="toctree-l2"><a href="management/reporting/integrating_landed_costs.html" class="internal reference">Integrating additional costs to products (landed costs)</a></li><li class="toctree-l2"><a href="management/reporting/valuation_methods_continental.html" class="internal reference">Как провести оценку инвентаризации? (Континентальный учет)</a></li><li class="toctree-l2"><a href="management/reporting/valuation_methods_anglo_saxon.html" class="internal reference">Как провести оценку инвентаризации? (Древнеанглийский бухучет)</a></li><li class="toctree-l2"><a href="../accounting/others/inventory/avg_price_valuation.html" class="internal reference">Влияние на среднюю цену при возврате товара в Odoo</a></li></ul></li></ul></div></section>
 
           </article>
         </div>

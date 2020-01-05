@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>How to manage a cash register? &#8212; Odoo 13.0 documentation</title>
+    <title>Как вести кассовый учет? &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../../_static/doc.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/accounting/bank/setup/manage_cash_register.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/accounting/bank/setup/manage_cash_register.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/accounting/bank/setup/manage_cash_register.html" />
+    <link rel="canonical" href="/master/ru/accounting/bank/setup/manage_cash_register.html" />
   
-    <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="How to manage a bank in a foreign currency?" href="foreign_currency.html" />
-    <link rel="prev" title="How to setup a new bank account?" href="create_bank_account.html" /> 
+    <link rel="index" title="Алфавитный указатель" href="../../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../../search.html" />
+    <link rel="next" title="Как управлять валютным банковским счетом?" href="foreign_currency.html" />
+    <link rel="prev" title="Как установить новый банковский счет" href="create_bank_account.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -194,7 +198,7 @@
         
             
                 
-                    <li><a href="../../../accounting.html">Accounting</a></li>
+                    <li><a href="../../../accounting.html">Бухгалтерский учёт</a></li>
                 
             
         
@@ -211,7 +215,7 @@
             
         
     
-    <li class="active"><a href="#">How to manage a cash register?</a></li>
+    <li class="active"><a href="#">Как вести кассовый учет?</a></li>
 
               
           </ol>
@@ -227,12 +231,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/accounting/bank/setup/manage_cash_register.html">English</a></li>
+        
+            <li><a href="/13.0/uk/accounting/bank/setup/manage_cash_register.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -259,6 +278,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -268,7 +289,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> How to manage a cash register? </h1>
+        <h1> Как вести кассовый учет? </h1>
       </div>
     </figure>
     
@@ -281,7 +302,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a></li><li class="list-group-item"><a href="#usage" class="ripple internal reference">Usage</a><ul ><li class="list-group-item"><a href="#how-to-register-cash-payments" class="ripple internal reference">How to register cash payments?</a></li><li class="list-group-item"><a href="#put-money-in" class="ripple internal reference">Put money in</a></li><li class="list-group-item"><a href="#take-money-out" class="ripple internal reference">Take money out</a></li></ul></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Настройка</a></li><li class="list-group-item"><a href="#usage" class="ripple internal reference">Использование</a><ul ><li class="list-group-item"><a href="#how-to-register-cash-payments" class="ripple internal reference">Как зарегистрировать денежные оплаты?</a></li><li class="list-group-item"><a href="#put-money-in" class="ripple internal reference">положите деньги</a></li><li class="list-group-item"><a href="#take-money-out" class="ripple internal reference">Возьмите деньги</a></li></ul></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/accounting/bank/setup/manage_cash_register.rst" class="gith-link">
                   Edit on GitHub
@@ -293,16 +314,7 @@
           <article class="doc-body  ">
             
             
-  <section id="how-to-manage-a-cash-register"><p >The cash register is a journal to register receivings and payments transactions.
-It calculates the total money in and out, computing the total balance.</p></section><section id="configuration"><h2 >Configuration</h2><img src="../../../_images/journal.png" style="" class="img-responsive center-block"><ol ><li >Configure the Cash journal in <span class="menuselection">Accounting ‣ Configuration ‣
-Journals</span>.</li><li >In the tab Journal Entries, the Default Debit and Credit Account can be
-configured as well as the currency of the journal</li></ol><div class="code-fields"><div class="code-field"><div class="code-field-name">Active</div><div class="code-field-body"><div class="line-block"><div class="line">Set active to false to hide the Journal without removing it.</div></div></div></div><div class="code-field"><div class="code-field-name">Type</div><div class="code-field-body"><div class="line-block"><div class="line">Select ‘Sale’ for customer invoices journals.</div><div class="line">Select ‘Purchase’ for vendor bills journals.</div><div class="line">Select ‘Cash’ or ‘Bank’ for journals that are used in customer or vendor payments.</div><div class="line">Select ‘General’ for miscellaneous operations journals.</div></div></div></div><div class="code-field"><div class="code-field-name">Company</div><div class="code-field-body"><div class="line-block"><div class="line">Company related to this journal</div></div></div></div><div class="code-field"><div class="code-field-name">Bank Feeds</div><div class="code-field-body"><div class="line-block"><div class="line">Defines how the bank statements will be registered</div></div></div></div><div class="code-field"><div class="code-field-name">Synchronization Frequency</div><div class="code-field-body"><div class="line-block"><div class="line">Defines when a new bank statement</div><div class="line">                                               will be created when fetching new transactions</div><div class="line">                                               from your bank account.</div></div></div></div><div class="code-field"><div class="code-field-name">Short Code</div><div class="code-field-body"><div class="line-block"><div class="line">The journal entries of this journal will be named using this prefix.</div></div></div></div><div class="code-field"><div class="code-field-name">Next Number</div><div class="code-field-body"><div class="line-block"><div class="line">The next sequence number will be used for the next invoice.</div></div></div></div><div class="code-field"><div class="code-field-name">Entry Sequence</div><div class="code-field-body"><div class="line-block"><div class="line">This field contains the information related to the numbering of the journal entries of this journal.</div></div></div></div><div class="code-field"><div class="code-field-name">Dedicated Credit Note Sequence</div><div class="code-field-body"><div class="line-block"><div class="line">Check this box if you don’t want to share the same sequence for invoices and credit notes made from this journal</div></div></div></div><div class="code-field"><div class="code-field-name">Credit Notes Next Number</div><div class="code-field-body"><div class="line-block"><div class="line">The next sequence number will be used for the next credit note.</div></div></div></div><div class="code-field"><div class="code-field-name">Credit Note Entry Sequence</div><div class="code-field-body"><div class="line-block"><div class="line">This field contains the information related to the numbering of the credit note entries of this journal.</div></div></div></div><div class="code-field"><div class="code-field-name">Default Debit Account</div><div class="code-field-body"><div class="line-block"><div class="line">It acts as a default account for debit amount</div></div></div></div><div class="code-field"><div class="code-field-name">Default Credit Account</div><div class="code-field-body"><div class="line-block"><div class="line">It acts as a default account for credit amount</div></div></div></div><div class="code-field"><div class="code-field-name">Currency</div><div class="code-field-body"><div class="line-block"><div class="line">The currency used to enter statement</div></div></div></div><div class="code-field"><div class="code-field-name">Communication Type</div><div class="code-field-body"><div class="line-block"><div class="line">You can set here the default communication that will appear on customer invoices, once validated, to help the customer to refer to that particular invoice when making the payment.</div></div></div></div><div class="code-field"><div class="code-field-name">Communication Standard</div><div class="code-field-body"><div class="line-block"><div class="line">You can choose different models for each type of reference. The default one is the Odoo reference.</div></div></div></div><div class="code-field"><div class="code-field-name">Alias Name</div><div class="code-field-body"><div class="line-block"><div class="line">It creates draft invoices and bills by sending an email.</div></div></div></div><div class="code-field"><div class="code-field-name">Profit Account</div><div class="code-field-body"><div class="line-block"><div class="line">Used to register a profit when the ending balance of a cash register differs from what the system computes</div></div></div></div><div class="code-field"><div class="code-field-name">Loss Account</div><div class="code-field-body"><div class="line-block"><div class="line">Used to register a loss when the ending balance of a cash register differs from what the system computes</div></div></div></div><div class="code-field"><div class="code-field-name">Lock Posted Entries with Hash</div><div class="code-field-body"><div class="line-block"><div class="line">If ticked, the accounting entry or invoice receives a hash as soon as it is posted and cannot be modified anymore.</div></div></div></div><div class="code-field"><div class="code-field-name">For Incoming Payments</div><div class="code-field-body"><div class="line-block"><div class="line">Manual: Get paid by cash, check or any other method outside of Odoo.</div><div class="line">Electronic: Get paid automatically through a payment acquirer by requesting a transaction on a card saved by the customer when buying or subscribing online (payment token).</div><div class="line">Batch Deposit: Encase several customer checks at once by generating a batch deposit to submit to your bank. When encoding the bank statement in Odoo,you are suggested to reconcile the transaction with the batch deposit. Enable this option from the settings.</div></div></div></div><div class="code-field"><div class="code-field-name">For Outgoing Payments</div><div class="code-field-body"><div class="line-block"><div class="line">Manual:Pay bill by cash or any other method outside of Odoo.</div><div class="line">Check:Pay bill by check and print it from Odoo.</div><div class="line">SEPA Credit Transfer: Pay bill from a SEPA Credit Transfer file you submit to your bank. Enable this option from the settings.</div></div></div></div><div class="code-field"><div class="code-field-name">Check Printing Payment Method Selected</div><div class="code-field-body"><div class="line-block"><div class="line">Technical feature used to know whether check printing was enabled as payment method.</div></div></div></div><div class="code-field"><div class="code-field-name">Check Sequence</div><div class="code-field-body"><div class="line-block"><div class="line">Checks numbering sequence.</div></div></div></div><div class="code-field"><div class="code-field-name">Manual Numbering</div><div class="code-field-body"><div class="line-block"><div class="line">Check this option if your pre-printed checks are not numbered.</div></div></div></div><div class="code-field"><div class="code-field-name">Next Check Number</div><div class="code-field-body"><div class="line-block"><div class="line">Sequence number of the next printed check.</div></div></div></div></div></section><section id="usage"><h2 >Usage</h2></section><section id="how-to-register-cash-payments"><h3 >How to register cash payments?</h3><p >To register a cash payment specific to another customer, you should follow
-these steps:</p><ol ><li >Go to <span class="menuselection">Accounting ‣ Dashboard ‣ Cash ‣ Register
-Transactions</span></li><li >Fill in the start and ending balance</li><li >Register the transactions, specifying the customers linked to the transaction</li></ol></section><section id="put-money-in"><h3 >Put money in</h3><p >Put money in is used to placed your cash manually before starting your
-transactions. From the Register Transactions window, go to <span class="menuselection">More
-‣ Put money in</span></p><img src="../../../_images/put-money-in.png" style="" class="img-responsive center-block"></section><section id="take-money-out"><h3 >Take money out</h3><p >Take money out is used to collect/get yor your cash manually after
-ending all your transactions. From the Register Transaction windows, go to <span class="menuselection">More
-‣ Take money out</span></p><img src="../../../_images/put-money-out.png" style="" class="img-responsive center-block"><p >The transactions will be added to the current cash payment registration.</p></section>
+  <section id="how-to-manage-a-cash-register"><p >Кассовый учет - это журнал для регистрации дебиторской и платежной операций. Он вычисляет сумму денег через общий баланс.</p></section><section id="configuration"><h2 >Настройка</h2><img src="../../../_images/journal.png" style="" class="img-responsive center-block"><ol ><li >Настройте наличный журнал: menuselection: [UNKNOWN NODE title_reference].</li><li >Во вкладке Записи журнала можно настроить дебетовое и кредитное сообщение по умолчанию, а также валюту журнала.</li></ol><div class="code-fields"><div class="code-field"><div class="code-field-name">Активно</div><div class="code-field-body"><div class="line-block"><div class="line">Переключите «активный» в «ЛОЖЬ», для сокрытия Журнала без его удаления</div></div></div></div><div class="code-field"><div class="code-field-name">Тип</div><div class="code-field-body"><div class="line-block"><div class="line">Выберите &amp;quot;Продажа&amp;quot; для журналов счетов клиентов.</div><div class="line">Выберите &amp;quot;Покупка&amp;quot; для журналов счетов поставщиков.</div><div class="line">Выберите &amp;quot;Наличные&amp;quot; или &amp;quot;Банк&amp;quot; для журналов, которые используются в платежах клиентов или поставщиков.</div><div class="line">Выберите 'Общие' для журналов различных операций.</div></div></div></div><div class="code-field"><div class="code-field-name">Компания</div><div class="code-field-body"><div class="line-block"><div class="line">Компания, связанная с этим журналом</div></div></div></div><div class="code-field"><div class="code-field-name">Банковский канал</div><div class="code-field-body"><div class="line-block"><div class="line">Определяет, как будут зарегистрированы банковские выписки</div></div></div></div><div class="code-field"><div class="code-field-name">частота синхронизации</div><div class="code-field-body"><div class="line-block"><div class="line">Определяет, когда появилась новая банковская выписка</div><div class="line">будет создан при загрузке новых транзакций</div><div class="line">с вашего банковского счета.</div></div></div></div><div class="code-field"><div class="code-field-name">Короткий код</div><div class="code-field-body"><div class="line-block"><div class="line">Записи этого журнала будут называться используя этот префикс.</div></div></div></div><div class="code-field"><div class="code-field-name">Следующее Число</div><div class="code-field-body"><div class="line-block"><div class="line">Последующий номер будет использован для нумерации следующего счета</div></div></div></div><div class="code-field"><div class="code-field-name">Нумерация проводок</div><div class="code-field-body"><div class="line-block"><div class="line">Это поле содержит информацию, связанную с нумерацией проводок этого журнала.</div></div></div></div><div class="code-field"><div class="code-field-name">Назначенная нумерация для кредитных обязательств</div><div class="code-field-body"><div class="line-block"><div class="line">Установите этот флажок, если не хотите сквозную нумерацию счетов и кредитных авизо, относящихся к этому журналу</div></div></div></div><div class="code-field"><div class="code-field-name">Следующий номер сторно</div><div class="code-field-body"><div class="line-block"><div class="line">Последующий номер будет использован для нумерации следующего кредитного авизо</div></div></div></div><div class="code-field"><div class="code-field-name">Начальный номер кредитных авизо</div><div class="code-field-body"><div class="line-block"><div class="line">Это поле содержит информацию о нумерации записей о кредитных авизо в этом журнале</div></div></div></div><div class="code-field"><div class="code-field-name">Дебетовый счет по умолчанию</div><div class="code-field-body"><div class="line-block"><div class="line">Выступает в качестве счета по умолчанию для сумм по дебету</div></div></div></div><div class="code-field"><div class="code-field-name">Кредитовый счет по умолчанию</div><div class="code-field-body"><div class="line-block"><div class="line">Используется как кредитовый счет по умолчанию</div></div></div></div><div class="code-field"><div class="code-field-name">Валюта</div><div class="code-field-body"><div class="line-block"><div class="line">Валюта, используемая в расчетах</div></div></div></div><div class="code-field"><div class="code-field-name">Тип назначения платежа</div><div class="code-field-body"><div class="line-block"><div class="line">Здесь вы можете установить стандартную коммуникацию, которая будет отображаться на счетах-фактурах клиентов, после проверки, чтобы помочь клиенту обратиться к этому конкретному счета при осуществлении платежа.</div></div></div></div><div class="code-field"><div class="code-field-name">стандарт связи</div><div class="code-field-body"><div class="line-block"><div class="line">Вы можете выбрать различные модели для каждого типа референса. Референс Odoo устанавливается по умолчанию.</div></div></div></div><div class="code-field"><div class="code-field-name">Название псевдонима</div><div class="code-field-body"><div class="line-block"><div class="line">Это создает черновики счетов через отправки электронной почты.</div></div></div></div><div class="code-field"><div class="code-field-name">Счет Прибыли</div><div class="code-field-body"><div class="line-block"><div class="line">Используется для регистрации прибыли, когда конечный баланс  кассового аппарата отличается от того, что вычисляет система</div></div></div></div><div class="code-field"><div class="code-field-name">Счет убытков</div><div class="code-field-body"><div class="line-block"><div class="line">Используется для регистрации потери, когда конечный баланс  кассового аппарата отличается от того, что вычисляет система</div></div></div></div><div class="code-field"><div class="code-field-name">Блокируйте опубликованы записи с Аравитянина</div><div class="code-field-body"><div class="line-block"><div class="line">Если обозначено, бухгалтерская запись или счет-фактура получает хеш, как только он будет опубликован, и его больше нельзя будет изменить.</div></div></div></div><div class="code-field"><div class="code-field-name">Для входящих платежей</div><div class="code-field-body"><div class="line-block"><div class="line">Вручную получайте оплату наличными, чеком или любым другим методом за пределами Odoo.</div><div class="line">Электронный: получайте платеж автоматически с помощью оплаты покупателя, отправив запрос на транзакцию на карточке, сохраненной клиентом при покупке или подписки онлайн (платежный токен).</div><div class="line">Пакетный депозит: единовременно засчитывайте несколько клиентских чеков, создав пакетный депозит, для подачи в банк. Во время кодирования выписки из банка в Odoo вам предлагают согласовать транзакцию с депозитом партии. Включите эту опцию в настройках.</div></div></div></div><div class="code-field"><div class="code-field-name">Для исходящих платежей</div><div class="code-field-body"><div class="line-block"><div class="line">Вручную платите счет наличными или любым другим методом за пределами Odoo.</div><div class="line">Чек: платите счет чеком и напечатайте его с Odoo.</div><div class="line">SEPA Credit Transfer: платите счет из файла SEPA Credit Transfer, который вы передаете в свой банк. Включите эту опцию в настройках.</div></div></div></div><div class="code-field"><div class="code-field-name">Метод оплаты печатным чеком выбрано</div><div class="code-field-body"><div class="line-block"><div class="line">Техническая характеристика используется, чтобы узнать, была ли  печать чека включена в качестве метода оплаты.</div></div></div></div><div class="code-field"><div class="code-field-name">Проверьте последовательность</div><div class="code-field-body"><div class="line-block"><div class="line">Последовательность нумерации чеков</div></div></div></div><div class="code-field"><div class="code-field-name">Ручная нумерация</div><div class="code-field-body"><div class="line-block"><div class="line">Проверьте эту опцию, если ваши предварительно напечатанные чеки не пронумерованы</div></div></div></div><div class="code-field"><div class="code-field-name">Номер следующего чека.</div><div class="code-field-body"><div class="line-block"><div class="line">Порядковый номер для следующего напечатанного чека</div></div></div></div></div></section><section id="usage"><h2 >Использование</h2></section><section id="how-to-register-cash-payments"><h3 >Как зарегистрировать денежные оплаты?</h3><p >Чтобы зарегистрировать наличный платеж, специфический для другого клиента, необходимо выполнить следующие действия:</p><ol ><li >Перейдите к: menuselection: [UNKNOWN NODE title_reference]</li><li >Заполните начальный и конечный баланс</li><li >Зарегистрируйте транзакции, указав клиентов, связанных с транзакцией</li></ol></section><section id="put-money-in"><h3 >положите деньги</h3><p >Вложенные деньги используются для размещения наличных вручную перед началом ваших транзакций. Из окна Транзакции кассы перейдите к: menuselection: [UNKNOWN NODE title_reference]</p><img src="../../../_images/put-money-in.png" style="" class="img-responsive center-block"></section><section id="take-money-out"><h3 >Возьмите деньги</h3><p >Забор денег используется для сбора / получения вашей наличности вручную после окончания всех ваших транзакций. Из окна Транзакции кассы перейдите к: menuselection: [UNKNOWN NODE title_reference]</p><img src="../../../_images/put-money-out.png" style="" class="img-responsive center-block"><p >Операции будут добавлены к текущей регистрации денежных оплат.</p></section>
 
           </article>
         </div>

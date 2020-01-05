@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>Inventory valuation configuration &#8212; Odoo 13.0 documentation</title>
+    <title>Inventory valuation configuration &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../../_static/doc.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/inventory/management/reporting/inventory_valuation_config.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/inventory/management/reporting/inventory_valuation_config.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/inventory/management/reporting/inventory_valuation_config.html" />
+    <link rel="canonical" href="/master/ru/inventory/management/reporting/inventory_valuation_config.html" />
   
-    <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="index" title="Алфавитный указатель" href="../../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../../search.html" />
     <link rel="next" title="Using the inventory valuation" href="using_inventory_valuation.html" />
-    <link rel="prev" title="Valuation Methods" href="../reporting.html" /> 
+    <link rel="prev" title="методы оценки" href="../reporting.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -194,7 +198,7 @@
         
             
                 
-                    <li><a href="../../../inventory.html">Inventory</a></li>
+                    <li><a href="../../../inventory.html">Склад</a></li>
                 
             
         
@@ -227,12 +231,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/inventory/management/reporting/inventory_valuation_config.html">English</a></li>
+        
+            <li><a href="/13.0/uk/inventory/management/reporting/inventory_valuation_config.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -259,6 +278,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -281,7 +302,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#costing-methods-standard-fifo-avco" class="ripple internal reference">Costing Methods: Standard, FIFO, AVCO</a><ul ><li class="list-group-item"><a href="#standard-price" class="ripple internal reference">Standard Price</a></li><li class="list-group-item"><a href="#first-in-first-out-fifo" class="ripple internal reference">First In First Out (FIFO)</a></li><li class="list-group-item"><a href="#average-cost-avco" class="ripple internal reference">Average Cost (AVCO)</a></li></ul></li><li class="list-group-item"><a href="#inventory-valuation-manual-or-automated" class="ripple internal reference">Inventory Valuation: Manual or Automated</a><ul ><li class="list-group-item"><a href="#manual-inventory-valuation" class="ripple internal reference">Manual Inventory Valuation</a></li><li class="list-group-item"><a href="#automated-inventory-valuation" class="ripple internal reference">Automated Inventory Valuation</a></li></ul></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#costing-methods-standard-fifo-avco" class="ripple internal reference">Costing Methods: Standard, FIFO, AVCO</a><ul ><li class="list-group-item"><a href="#standard-price" class="ripple internal reference">Стандартная цена</a></li><li class="list-group-item"><a href="#first-in-first-out-fifo" class="ripple internal reference">First In First Out (FIFO)</a></li><li class="list-group-item"><a href="#average-cost-avco" class="ripple internal reference">Average Cost (AVCO)</a></li></ul></li><li class="list-group-item"><a href="#inventory-valuation-manual-or-automated" class="ripple internal reference">Inventory Valuation: Manual or Automated</a><ul ><li class="list-group-item"><a href="#manual-inventory-valuation" class="ripple internal reference">Manual Inventory Valuation</a></li><li class="list-group-item"><a href="#automated-inventory-valuation" class="ripple internal reference">Automated Inventory Valuation</a></li></ul></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/inventory/management/reporting/inventory_valuation_config.rst" class="gith-link">
                   Edit on GitHub
@@ -296,14 +317,14 @@
   <section id="inventory-valuation-configuration"><p >Inventory valuation refers to how you value your stock. It’s a very
 important aspect of a business as the inventory can be the biggest asset
 of a company.</p><p >Inventory valuation implies two main choices:</p><ul ><li >The cost method you use to value your goods (standard, fifo, avco)</li><li >The way you record this value into your accounting books (manually or automatically)</li></ul><p >Those two concepts are explained in the sections below.</p></section><section id="costing-methods-standard-fifo-avco"><h2 >Costing Methods: Standard, FIFO, AVCO</h2><p >The costing method is defined in the product category. There are three
-options available. Each of them is explained in detail below.</p><img src="../../../_images/inventory_valuation_config_01.png" style="" class="img-responsive center-block"></section><section id="standard-price"><h3 >Standard Price</h3><p >In Standard Price, any product will be valued at a cost that you defined
+options available. Each of them is explained in detail below.</p><img src="../../../_images/inventory_valuation_config_01.png" style="" class="img-responsive center-block"></section><section id="standard-price"><h3 >Стандартная цена</h3><p >In Standard Price, any product will be valued at a cost that you defined
 manually on the product form. Usually, this cost is an estimation based
 on the material and labor needed to obtain the product. This cost must
 be reviewed periodically.</p></section><section id="first-in-first-out-fifo"><h3 >First In First Out (FIFO)</h3><p >In FIFO, the products are valued at their purchase cost. When a product
 leaves the stock, that’s the “First in, first out” rule that applies.
 Let’s take an example: I first purchase a t-shirt for $10 and, later,
 one for $20. The first t-shirt that will go out of my stock will be
-valued at $10 and the next one at $20.</p><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >Pay attention, that this is a financial FIFO. This means that the
+valued at $10 and the next one at $20.</p><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >Pay attention, that this is a financial FIFO. This means that the
 locations where the products are stored don’t impact the valuation. The
 first value “in” is the first value “out”, no matter the storage
 location.</p></div></section><section id="average-cost-avco"><h3 >Average Cost (AVCO)</h3><p >In AVCO, each product has the same value and this value is the average
@@ -315,7 +336,7 @@ books. As the costing method, this is defined in your product category.
 Those two methods are detailed below.</p></section><section id="manual-inventory-valuation"><h3 >Manual Inventory Valuation</h3><p >In this case, goods receipts and deliveries won’t have any direct impact
 on your accounting books. Periodically, you create a manual journal
 entry representing the value of what you have in stock. To know that
-value, go in Inventory &gt; Reporting &gt; Inventory Valuation.</p><table class="table"><thead ><tr ><th ></th><th >Debit</th><th >Credit</th></tr></thead><tbody ><tr ><td >Assets: Inventory</td><td >X</td><td ></td></tr><tr ><td >Expenses: Inventory Variations</td><td ></td><td >X</td></tr></tbody></table><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >If the stock value has decreased, the assets account will be credited.</p></div></section><section id="automated-inventory-valuation"><h3 >Automated Inventory Valuation</h3><p >In that case, when a product enters or leaves your stock, an accounting
+value, go in Inventory &gt; Reporting &gt; Inventory Valuation.</p><table class="table"><thead ><tr ><th ></th><th >Дебет</th><th >Кредит</th></tr></thead><tbody ><tr ><td >Активы состав</td><td >X</td><td ></td></tr><tr ><td >Расходы: варианты инвентаризации</td><td ></td><td >X</td></tr></tbody></table><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >If the stock value has decreased, the assets account will be credited.</p></div></section><section id="automated-inventory-valuation"><h3 >Automated Inventory Valuation</h3><p >In that case, when a product enters or leaves your stock, an accounting
 entry will be automatically created. This means your accounting books
 are always up-to-date. This mode is dedicated to expert accountants and
 advanced users only. As opposed to periodic valuation, it requires some
@@ -327,7 +348,7 @@ as the product is received in stock. In anglo-saxon accounting, the cost
 of a good is only recorded as an expense when this good is invoiced to a
 final customer.</p><p >Usually, based on your country, the correct accounting mode will be
 chosen by default. If you want to verify your accounting mode, activate
-the developer mode and open your accounting settings.</p><img src="../../../_images/inventory_valuation_config_03.png" style="" class="img-responsive center-block"><div role="alert" class="alert-go_to alert"><p class="alert-title">See also</p><ul ><li ><a href="https://www.odoo.com/documentation/user/13.0/inventory/management/reporting/valuation_methods_anglo_saxon.html" class="external reference alert-link">How to do an inventory valuation? (Anglo-Saxon Accounting)</a></li><li ><a href="https://www.odoo.com/documentation/user/13.0/inventory/management/reporting/valuation_methods_continental.html" class="external reference alert-link">How to do an inventory valuation? (Continental Accounting)</a></li></ul></div></section>
+the developer mode and open your accounting settings.</p><img src="../../../_images/inventory_valuation_config_03.png" style="" class="img-responsive center-block"><div role="alert" class="alert-go_to alert"><p class="alert-title">См.также</p><ul ><li ><a href="https://www.odoo.com/documentation/user/13.0/inventory/management/reporting/valuation_methods_anglo_saxon.html" class="external reference alert-link">How to do an inventory valuation? (Anglo-Saxon Accounting)</a></li><li ><a href="https://www.odoo.com/documentation/user/13.0/inventory/management/reporting/valuation_methods_continental.html" class="external reference alert-link">How to do an inventory valuation? (Continental Accounting)</a></li></ul></div></section>
 
           </article>
         </div>

@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>How to do an inventory valuation? (Anglo-Saxon Accounting) &#8212; Odoo 13.0 documentation</title>
+    <title>Как провести оценку инвентаризации? (Древнеанглийский бухучет) &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../../_static/doc.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/inventory/management/reporting/valuation_methods_anglo_saxon.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/inventory/management/reporting/valuation_methods_anglo_saxon.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/inventory/management/reporting/valuation_methods_anglo_saxon.html" />
+    <link rel="canonical" href="/master/ru/inventory/management/reporting/valuation_methods_anglo_saxon.html" />
   
-    <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Localizations" href="../../../accounting/localizations.html" />
-    <link rel="prev" title="How to do an inventory valuation? (Continental Accounting)" href="valuation_methods_continental.html" /> 
+    <link rel="index" title="Алфавитный указатель" href="../../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../../search.html" />
+    <link rel="next" title="локализации" href="../../../accounting/localizations.html" />
+    <link rel="prev" title="Как провести оценку инвентаризации? (Континентальный учет)" href="valuation_methods_continental.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted has_code_col">
 <!--
     <div class="o_main_header_main">
@@ -194,7 +198,7 @@
         
             
                 
-                    <li><a href="../../../accounting.html">Accounting</a></li>
+                    <li><a href="../../../accounting.html">Бухгалтерский учёт</a></li>
                 
             
         
@@ -211,7 +215,7 @@
             
         
     
-    <li class="active"><a href="#">How to do an inventory valuation? (Anglo-Saxon Accounting)</a></li>
+    <li class="active"><a href="#">Как провести оценку инвентаризации? (Древнеанглийский бухучет)</a></li>
 
               
           </ol>
@@ -227,12 +231,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/inventory/management/reporting/valuation_methods_anglo_saxon.html">English</a></li>
+        
+            <li><a href="/13.0/uk/inventory/management/reporting/valuation_methods_anglo_saxon.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -259,6 +278,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -268,7 +289,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> How to do an inventory valuation? (Anglo-Saxon Accounting) </h1>
+        <h1> Как провести оценку инвентаризации? (Древнеанглийский бухучет) </h1>
       </div>
     </figure>
     
@@ -281,7 +302,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#costing-method" class="ripple internal reference">Costing Method</a></li><li class="list-group-item"><a href="#periodic-inventory-valuation" class="ripple internal reference">Periodic Inventory Valuation</a></li><li class="list-group-item"><a href="#perpetual-inventory-valuation" class="ripple internal reference">Perpetual Inventory Valuation</a></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#costing-method" class="ripple internal reference">Метод ценообразования</a></li><li class="list-group-item"><a href="#periodic-inventory-valuation" class="ripple internal reference">Периодическое оценки запасов</a></li><li class="list-group-item"><a href="#perpetual-inventory-valuation" class="ripple internal reference">Бессрочное оценки запасов</a></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/inventory/management/reporting/valuation_methods_anglo_saxon.rst" class="gith-link">
                   Edit on GitHub
@@ -293,68 +314,10 @@
           <article class="doc-body  ">
             
             
-  <section id="how-to-do-an-inventory-valuation-anglo-saxon-accounting"><p >Every year your inventory valuation has to be recorded in your
-balance sheet. This implies two main choices:</p><ul ><li >the way you compute the cost of your stored items
-(Standard vs. Average vs. Real Price);</li><li >the way you record the inventory value into your books
-(periodic vs. Perpetual).</li></ul></section><section id="costing-method"><h2 >Costing Method</h2><dl class="doc-aside alternatives"><dt >Standard Price</dt><dd ><table class="table values-table colwidths-given"><thead ><tr ><th >Operation</th><th >Unit Cost</th><th >Qty On Hand</th><th >Delta Value</th><th >Inventory Value</th></tr></thead><tbody ><tr ><td ></td><td >$10</td><td >0</td><td ></td><td >$0</td></tr><tr ><td >Receive 8 Products at $10</td><td >$10</td><td >8</td><td >+8*$10</td><td >$80</td></tr><tr ><td >Receive 4 Products at $16</td><td >$10</td><td >12</td><td >+4*$10</td><td >$120</td></tr><tr ><td >Deliver 10 Products</td><td >$10</td><td >2</td><td ><div class="line-block"><div class="line">-10*$10</div><div class="line"><br /></div></div></td><td >$20</td></tr><tr ><td >Receive 2 Products at $9</td><td >$10</td><td >4</td><td >+2*$10</td><td >$40</td></tr></tbody></table><p ><strong >Standard Price</strong> means you estimate the cost price based
-on direct materials, direct labor and manufacturing overhead
-at the end of a specific period (usually once a year). You
-enter this cost price in the product form.</p></dd><dt >Average Price</dt><dd ><table class="table values-table colwidths-given"><thead ><tr ><th >Operation</th><th >Unit Cost</th><th >Qty On Hand</th><th >Delta Value</th><th >Inventory Value</th></tr></thead><tbody ><tr ><td ></td><td >$0</td><td >0</td><td ></td><td >$0</td></tr><tr ><td >Receive 8 Products at $10</td><td >$10</td><td >8</td><td >+8*$10</td><td >$80</td></tr><tr ><td >Receive 4 Products at $16</td><td >$12</td><td >12</td><td >+4*$16</td><td >$144</td></tr><tr ><td >Deliver 10 Products</td><td >$12</td><td >2</td><td ><div class="line-block"><div class="line">-10*$12</div><div class="line"><br /></div></div></td><td >$24</td></tr><tr ><td >Receive 2 Products at $6</td><td >$9</td><td >4</td><td >+2*$6</td><td >$36</td></tr></tbody></table><p >The <strong >Average Price</strong> method recomputes the cost price as a receipt order
-has been processed, based on prices defined in tied purchase orders:
-FORMULA (see here attached)</p><p >The average cost does not change when products leave the warehouse.</p><p >From an accounting point of view, this method is mainly justified in
-case of huge purchase price variations and is quite unusual due to its
-operational complexity. Your actually need a software like Odoo to
-easily keep this cost up-to-date.</p><p >This method is dedicated to advanced users. It requires well established
-business processes because the order in which you process receipt orders
-matters in the cost computation.</p></dd><dt >FIFO</dt><dd ><table class="table values-table colwidths-given"><thead ><tr ><th >Operation</th><th >Unit Cost</th><th >Qty On Hand</th><th >Delta Value</th><th >Inventory Value</th></tr></thead><tbody ><tr ><td ></td><td >$0</td><td >0</td><td ></td><td >$0</td></tr><tr ><td >Receive 8 Products at $10</td><td >$10</td><td >8</td><td >+8*$10</td><td >$80</td></tr><tr ><td >Receive 4 Products at $16</td><td >$12</td><td >12</td><td >+4*$16</td><td >$144</td></tr><tr ><td >Deliver 10 Products</td><td >$16</td><td >2</td><td ><div class="line-block"><div class="line">-8*$10</div><div class="line">-2*$16</div></div></td><td >$32</td></tr><tr ><td >Receive 2 Products at $6</td><td >$11</td><td >4</td><td >+2*$6</td><td >$44</td></tr></tbody></table><p >For <strong >Real Price</strong> (FIFO, LIFO, FEFO, etc), the costing is further
-refined by the removal strategy set on the warehouse location
-or product’s internal category. The default strategy is FIFO. With
-such method, your inventory value is computed from the real cost
-of your stored products (cfr. Quantitative Valuation) and not from
-the cost price shown in the product form. Whenever you ship items,
-the cost price is reset to the cost of the last item(s) shipped.
-This cost price is used to value any product not received from a
-purchase order (e.g. inventory adjustments).</p><p >FIFO is advised if you manage all your workflow into Odoo (Sales,
-Purchases, Inventory). It suits any kind of users.</p></dd><dt >LIFO (not accepted in IFRS)</dt><dd ><table class="table values-table colwidths-given"><thead ><tr ><th >Operation</th><th >Unit Cost</th><th >Qty On Hand</th><th >Delta Value</th><th >Inventory Value</th></tr></thead><tbody ><tr ><td ></td><td >$0</td><td >0</td><td ></td><td >$0</td></tr><tr ><td >Receive 8 Products at $10</td><td >$10</td><td >8</td><td >+8*$10</td><td >$80</td></tr><tr ><td >Receive 4 Products at $16</td><td >$12</td><td >12</td><td >+4*$16</td><td >$144</td></tr><tr ><td >Deliver 10 Products</td><td >$10</td><td >2</td><td ><div class="line-block"><div class="line">-4*$16</div><div class="line">-6*$10</div></div></td><td >$20</td></tr><tr ><td >Receive 2 Products at $6</td><td >$8</td><td >4</td><td >+2*$6</td><td >$32</td></tr></tbody></table><p >For <strong >Real Price</strong> (FIFO, LIFO, FEFO, etc), the costing is further
-refined by the removal strategy set on the warehouse location
-or product’s internal category. The default strategy is FIFO.
-With such method, your inventory value is computed from the
-real cost of your stored products (cfr. Quantitative Valuation)
-and not from the cost price shown in the product form. Whenever
-you ship items, the cost price is reset to the cost of the last
-item(s) shipped. This cost price is used to value any product
-not received from a purchase order (e.g. inventory adjustments).</p><p >LIFO is not permitted outside the United States.</p></dd></dl><p >Odoo allows any method. The default one is <strong >Standard Price</strong>.
-To change it, check <strong >Use a ‘Fixed’, ‘Real’ or ‘Average’ price
-costing method</strong> in Purchase settings. Then set the costing
-method from products’ internal categories. Categories show up
-in the Inventory tab of the product form.</p><p >Whatever the method is, Odoo provides a full inventory valuation
-in <span class="menuselection">Inventory ‣ Reports ‣ Inventory Valuation</span>
-(i.e. current quantity in stock * cost price).</p></section><section id="periodic-inventory-valuation"><h2 >Periodic Inventory Valuation</h2><p >In a periodic inventory valuation, goods reception and
-outgoing shipments have no direct impact in the accounting.
-At the end of the month or year, the accountant posts one
-journal entry representing the value of the physical inventory.</p><p >This is the default configuration in Odoo and it works
-out-of-the-box. Check following operations and find out how
-Odoo is managing the accounting postings.</p><dl class="doc-aside alternatives"><dt >Vendor Bill</dt><dd ><table class="table values-table"><thead ><tr ><th ></th><th >Debit</th><th >Credit</th></tr></thead><tbody ><tr ><td >Assets: Inventory</td><td >50</td><td ></td></tr><tr ><td >Assets: Deferred Tax Assets</td><td >4.68</td><td ></td></tr><tr ><td >Liabilities: Accounts Payable</td><td ></td><td >54.68</td></tr></tbody></table><dl ><dt >Configuration:</dt><dd ><ul ><li >Purchased Goods: defined on the product or on the internal category of related product
-(Expense Account field)</li><li >Deferred Tax Assets: defined on the tax used on the purchase order line</li><li >Accounts Payable: defined on the vendor related to the bill</li></ul></dd></dl></dd><dt >Goods Receptions</dt><dd >No Journal Entry</dd><dt >Customer Invoice</dt><dd ><table class="table values-table"><thead ><tr ><th ></th><th >Debit</th><th >Credit</th></tr></thead><tbody ><tr ><td >Revenues: Sold Goods</td><td ></td><td >100</td></tr><tr ><td >Liabilities: Deferred Tax Liabilities</td><td ></td><td >9</td></tr><tr ><td >Assets: Accounts Receivable</td><td >109</td><td ></td></tr></tbody></table><dl ><dt >Configuration:</dt><dd ><ul ><li >Revenues: defined on the product or on the internal category of related
-product (Income Account field)</li><li >Deferred Tax Liabilities: defined on the tax used on the invoice line</li><li >Accounts Receivable: defined on the customer (Receivable Account)</li></ul></dd></dl><p >The fiscal position used on the invoice may have a rule that replaces the
-Income Account or the tax defined on the product by another one.</p></dd><dt >Customer Shipping</dt><dd >No Journal Entry</dd><dt >Manufacturing Orders</dt><dd >No Journal Entry</dd></dl><hr style="float: none; visibility: hidden; margin: 0;"><p >At the end of the month/year, your company does a physical inventory
-or just relies on the inventory in Odoo to value the stock into your books.</p><p >Then you need to break down the purchase balance into both the inventory and
-the cost of goods sold using the following formula:</p><p >Cost of goods sold (COGS) = Starting inventory value + Purchases – Closing inventory value</p><p >To update the stock valuation in your books, record such an entry:</p><div class="doc-aside"><table class="table values-table"><thead ><tr ><th ></th><th >Debit</th><th >Credit</th></tr></thead><tbody ><tr ><td >Assets: Inventory (closing value)</td><td >X</td><td ></td></tr><tr ><td >Expenses: Cost of Good Sold</td><td >X</td><td ></td></tr><tr ><td >Expenses: Purchased Goods</td><td ></td><td >X</td></tr><tr ><td >Assets: Inventory (starting value)</td><td ></td><td >X</td></tr></tbody></table></div>
-</section><section id="perpetual-inventory-valuation"><h2 >Perpetual Inventory Valuation</h2><p >In a perpetual inventory valuation, goods receptions and
-outgoing shipments are posted in your books in real time.
-The books are therefore always up-to-date. This mode is
-dedicated to expert accountants and advanced users only.
-As opposed to periodic valuation, it requires some extra
-configuration &amp; testing.</p><p >Let’s take the case of a reseller.</p><div class="doc-aside valuation-chart-anglo-saxon"></div>
-<hr style="float: none; visibility: hidden; margin: 0;"><div class="doc-aside"><p ><strong >Configuration:</strong></p><ul ><li >Accounts Receivable/Payable: defined on the partner (Accounting tab)</li><li >Deferred Tax Assets/Liabilities: defined on the tax used on the
-invoice line</li><li >Revenues: defined on the product category as a default, or specifically
-to a specific product.</li><li >Expenses: this is where you should set the “Cost of Goods Sold” account.
-Defined on the product category as a default value, or specifically on
-the product form.</li><li >Goods Received Not Purchased: to set as Stock Input Account in product’s
-internal category</li><li >Goods Issued Not Invoiced: to set as Stock Output Account in product’s
-internal category</li><li >Inventory: to set as Stock Valuation Account in product’s internal category</li><li >Price Difference: to set in product’s internal category or in product
-form as a specific replacement value</li></ul></div>
-<div role="alert" class="alert-go_to alert"><p class="alert-title">See also</p><ul ><li ><a href="../../routes/strategies/removal.html" class="internal alert-link reference"><span class="doc">What is a removal strategy (FIFO, LIFO, and FEFO)?</span></a></li><li ><a href="../../../accounting/others/inventory/avg_price_valuation.html" class="internal alert-link reference"><span class="doc">Impact on the average price valuation when returning goods</span></a></li><li ><a href="integrating_landed_costs.html" class="internal alert-link reference"><span class="doc">Integrating additional costs to products (landed costs)</span></a></li></ul></div></section>
+  <section id="how-to-do-an-inventory-valuation-anglo-saxon-accounting"><p >Ежегодно ваша оценка инвентаризации должна быть записана в вашем балансе. Это предполагает два основных варианта выбора:</p><ul ><li >способ, которым вы вычисляете стоимость ваших сохранившихся элементов (стандарт против среднего или реального)</li><li >как вы фиксируете стоимость рекламных ресурсов в своих книгах (периодический или бессрочный).</li></ul></section><section id="costing-method"><h2 >Метод ценообразования</h2><dl class="doc-aside alternatives"><dt >Стандартная цена</dt><dd ><table class="table values-table colwidths-given"><thead ><tr ><th >Операция</th><th >Себестоимость единицы</th><th >Количество в наличии</th><th >значение дельты</th><th >Величина запасов</th></tr></thead><tbody ><tr ><td ></td><td >$10</td><td >0</td><td ></td><td >$0</td></tr><tr ><td >Получить 8 товаров на 10 долларов</td><td >$10</td><td >8</td><td >+8*$10</td><td >$80</td></tr><tr ><td >Получить 4 товары на 16 долларов</td><td >$10</td><td >12</td><td >+4*$10</td><td >$120</td></tr><tr ><td >Доставить 10 товаров</td><td >$10</td><td >2</td><td ><div class="line-block"><div class="line">-10*$10</div><div class="line"><br /></div></div></td><td >$20</td></tr><tr ><td >Получить 2 товара за $ 9</td><td >$10</td><td >4</td><td >+2*$10</td><td >$40</td></tr></tbody></table><p >** Стандартная цена ** означает, что вы оцениваете себестоимость, исходя из прямых материалов, прямых расходов и производственных накладных расходов в конце определенного периода (как правило, один раз в год). Вы вводите эту себестоимость в форме товара.</p></dd><dt >Средняя цена</dt><dd ><table class="table values-table colwidths-given"><thead ><tr ><th >Операция</th><th >Себестоимость единицы</th><th >Количество в наличии</th><th >значение дельты</th><th >Величина запасов</th></tr></thead><tbody ><tr ><td ></td><td >$0</td><td >0</td><td ></td><td >$0</td></tr><tr ><td >Получить 8 товаров на 10 долларов</td><td >$10</td><td >8</td><td >+8*$10</td><td >$80</td></tr><tr ><td >Получить 4 товары на 16 долларов</td><td >$12</td><td >12</td><td >+4*$16</td><td >$144</td></tr><tr ><td >Доставить 10 товаров</td><td >$12</td><td >2</td><td ><div class="line-block"><div class="line">-10*$12</div><div class="line"><br /></div></div></td><td >$24</td></tr><tr ><td >Получить 2 товара за $ 6</td><td >$9</td><td >4</td><td >+2*$6</td><td >$36</td></tr></tbody></table><p >Метод ** Средняя цена ** перераспределяет себестоимость, поскольку обработка заказа на получение была обработана, исходя из цен, определенных в привязанных заказам на закупку: FORMULA (см. Здесь приложение)</p><p >Средняя стоимость не меняется, когда товары забирают со склада.</p><p >С точки зрения бухгалтерского учета, этот метод в основном оправдан в случае больших колебаний цен на покупке и достаточно необычным из-за его операционную сложность. На самом деле вам нужно такое программное обеспечение, как Odoo, чтобы легко обновлять эти расходы.</p><p >Этот метод предназначен для опытных пользователей. Это требует хорошо сформированных бизнес-процессов, поскольку порядок, в котором вы обрабатываете заказ на обеспечение, имеет значение для расчета стоимости.</p></dd><dt >FIFO</dt><dd ><table class="table values-table colwidths-given"><thead ><tr ><th >Операция</th><th >Себестоимость единицы</th><th >Количество в наличии</th><th >значение дельты</th><th >Величина запасов</th></tr></thead><tbody ><tr ><td ></td><td >$0</td><td >0</td><td ></td><td >$0</td></tr><tr ><td >Получить 8 товаров на 10 долларов</td><td >$10</td><td >8</td><td >+8*$10</td><td >$80</td></tr><tr ><td >Получить 4 товары на 16 долларов</td><td >$12</td><td >12</td><td >+4*$16</td><td >$144</td></tr><tr ><td >Доставить 10 товаров</td><td >$16</td><td >2</td><td ><div class="line-block"><div class="line">-8*$10</div><div class="line">-2*$16</div></div></td><td >$32</td></tr><tr ><td >Получить 2 товара за $ 6</td><td >$11</td><td >4</td><td >+2*$6</td><td >$44</td></tr></tbody></table><p >По ** Реальной ценой ** (FIFO, LIFO, FEFO т.д.) цена далее совершенствуется стратегией удаления, установленной на месте склада или внутренний категории товара. Стратегия по умолчанию - это FIFO. С помощью такого метода стоимость вашего запаса исчисляется из реальной стоимости ваших товаров, хранящихся (с количественным оцениванием), а не от себестоимости, указанной в форме товара. Каждый раз, когда вы доставляете товары, стоимость восстанавливается в стоимость последнего товара (-ов), отправляемого. Эта себестоимость используется для оценки любого товара, не получено по заказу на покупку (например, инвентаризация).</p><p >FIFO рекомендуется, если вы управляете всем своим рабочим процессом в Odoo (продажи, покупки, склад). Это подходит любому пользователю.</p></dd><dt >LIFO (не приемлем в IFRS)</dt><dd ><table class="table values-table colwidths-given"><thead ><tr ><th >Операция</th><th >Себестоимость единицы</th><th >Количество в наличии</th><th >значение дельты</th><th >Величина запасов</th></tr></thead><tbody ><tr ><td ></td><td >$0</td><td >0</td><td ></td><td >$0</td></tr><tr ><td >Получить 8 товаров на 10 долларов</td><td >$10</td><td >8</td><td >+8*$10</td><td >$80</td></tr><tr ><td >Получить 4 товары на 16 долларов</td><td >$12</td><td >12</td><td >+4*$16</td><td >$144</td></tr><tr ><td >Доставить 10 товаров</td><td >$10</td><td >2</td><td ><div class="line-block"><div class="line">-4*$16</div><div class="line">-6*$10</div></div></td><td >$20</td></tr><tr ><td >Получить 2 товара за $ 6</td><td >$8</td><td >4</td><td >+2*$6</td><td >$32</td></tr></tbody></table><p >По ** Реальной ценой ** (FIFO, LIFO, FEFO т.д.) цена далее совершенствуется стратегией удаления, установленной на месте склада или внутренний категории товара. Стратегия по умолчанию - это FIFO. С помощью такого метода стоимость вашего запаса исчисляется из реальной стоимости ваших товаров, хранящихся (с количественным оцениванием), а не от себестоимости, указанной в форме товара. Каждый раз, когда вы доставляете товары, стоимость восстанавливается в стоимость последнего товара (-ов), отправляемого. Эта себестоимость используется для оценки любого товара, не получено по заказу на покупку (например, инвентаризация).</p><p >LIFO не допускается за пределами Соединенных Штатов.</p></dd></dl><p >Odoo позволяет любой метод. По умолчанию - ** Стандартная цена [UNKNOWN NODE problematic]. Чтобы изменить его, отметьте ** Используйте метод &amp;quot;Исправлено&amp;quot;, &amp;quot;Реальный&amp;quot; или &amp;quot;Средний&amp;quot; ** в настройках покупки. Затем установите метод калькулирования по внутренним категорий товаров. Категории появляются на вкладке Состав в форме товара.</p><p >Независимо от метода, Odoo обеспечивает полную оценку инвентаризации в: menuselection: [UNKNOWN NODE title_reference] (ie текущее количество в наличии * себестоимость).</p></section><section id="periodic-inventory-valuation"><h2 >Периодическое оценки запасов</h2><p >При периодической оценке инвентаризации приемной и выходные отгрузки товаров не имеют прямого влияния на бухгалтерский учет. В конце месяца или года бухгалтер публикует одну запись журнала, отражающий стоимость физической инвентаризации.</p><p >Это настройки по умолчанию в Odoo, и оно работает вне коробки. Проверьте следующие операции и узнайте, как Odoo руководит бухгалтерскими сообщениями.</p><dl class="doc-aside alternatives"><dt >Счет от поставщика</dt><dd ><table class="table values-table"><thead ><tr ><th ></th><th >Дебет</th><th >Кредит</th></tr></thead><tbody ><tr ><td >Активы состав</td><td >50</td><td ></td></tr><tr ><td >Активы: отсроченные налоговые активы</td><td >4.68</td><td ></td></tr><tr ><td >Обязанности: кредиторская задолженность</td><td ></td><td >54.68</td></tr></tbody></table><dl ><dt >настройки:</dt><dd ><ul ><li >Приобретенные товары: определены на товаре или на внутренний категории соответствующего товара (поле счета расходов)</li><li >Будущие налоговые активы: определяется налогом, используемого на строку заказа на приобретение</li><li >Кредиторская задолженность: определяется поставщиком, связанным со счетом</li></ul></dd></dl></dd><dt >прием товаров</dt><dd >Есть журнальных записей</dd><dt >Счет фактура</dt><dd ><table class="table values-table"><thead ><tr ><th ></th><th >Дебет</th><th >Кредит</th></tr></thead><tbody ><tr ><td >Доходы: проданные товары</td><td ></td><td >100</td></tr><tr ><td >Обязанности: отсроченные налоговые обязательства</td><td ></td><td >9</td></tr><tr ><td >Активы: дебиторская задолженность</td><td >109</td><td ></td></tr></tbody></table><dl ><dt >настройки:</dt><dd ><ul ><li >Доходы: определяются по товару или по внутренней категорией соответствующего товара (поле Текущий счет)</li><li >Налоговые обязательства будущих периодов: определяется налогом, используемого на строке счета-фактуры</li><li >Дебиторская задолженность: определяется на клиента (счет на получение)</li></ul></dd></dl><p >Схема налогообложения, использованная в счете-фактуре, может иметь правило, заменяет учет доходов или налог, определенный на товаре другим.</p></dd><dt >клиентская доставка</dt><dd >Есть журнальных записей</dd><dt >Производственные заявки</dt><dd >Есть журнальных записей</dd></dl><hr style="float: none; visibility: hidden; margin: 0;"><p >В конце месяца / года ваша компания осуществляет физическую инвентаризацию или просто опирается на склад в Odoo, чтобы оценить запас в ваши книги.</p><p >Тогда вам нужно разбить баланс покупки как инвентаризацию, так и стоимость проданных товаров по следующей формуле:</p><p >Стоимость проданных товаров (COGS) = Начальная стоимость запаса + Покупки - Завершение инвентаризации</p><p >Чтобы обновить оценку состава в своих книгах, зарегистрируйте следующую запись:</p><div class="doc-aside"><table class="table values-table"><thead ><tr ><th ></th><th >Дебет</th><th >Кредит</th></tr></thead><tbody ><tr ><td >Активы: Инвентаризация (конечная стоимость)</td><td >X</td><td ></td></tr><tr ><td >Расходы: стоимость проданных товаров</td><td >X</td><td ></td></tr><tr ><td >Расходы: приобретенные товары</td><td ></td><td >X</td></tr><tr ><td >Активы: Инвентаризация (начальное значение)</td><td ></td><td >X</td></tr></tbody></table></div>
+</section><section id="perpetual-inventory-valuation"><h2 >Бессрочное оценки запасов</h2><p >При бессрочной оценке инвентаризации, прием товаров и выходные отправления отражаются в книге в реальном времени. Поэтому книги всегда актуальны. Этот режим предназначен только экспертным бухгалтерам и опытным пользователям. В отличие от периодической оценки, это требует дополнительной настройки и тестирования.</p><p >Давайте рассмотрим дело продавца.</p><div class="doc-aside valuation-chart-anglo-saxon"></div>
+<hr style="float: none; visibility: hidden; margin: 0;"><div class="doc-aside"><p >** Настройка: **</p><ul ><li >Дебиторская задолженность / кредиторская задолженность: определенная у партнера (вкладка Учет)</li><li >Отсроченные налоговые активы / обязательства: определяется налогом, используемого на строке счета-фактуры</li><li >Доходы: определяется как категория товара по умолчанию, или для конкретного товара.</li><li >Расходы: здесь вам следует установить учет &amp;quot;Стоимость товаров, продаваемых&amp;quot;. Определены категорию товара как значения по умолчанию или непосредственно на форме товара.</li><li >Полученные товары не были приобретены: чтобы установить входной учет во внутренней категории товара</li><li >Выпущенные товары не учитываются на счетах: для внутренней категории товара назначайте учет выходных расходов</li><li >Инвентаризация: назначать учет стоимости состава во внутренней категории товара</li><li >Разница цен: установить во внутренней категории товара или в форме товара как определенное изменение стоимости</li></ul></div>
+<div role="alert" class="alert-go_to alert"><p class="alert-title">См.также</p><ul ><li ><a href="../../routes/strategies/removal.html" class="internal alert-link reference"><span class="doc">Что такое стратегия изъятия (FIFO, LIFO и FEFO)?</span></a></li><li ><a href="../../../accounting/others/inventory/avg_price_valuation.html" class="internal alert-link reference"><span class="doc">Влияние на среднюю цену при возврате товара в Odoo</span></a></li><li ><a href="integrating_landed_costs.html" class="internal alert-link reference"><span class="doc">Integrating additional costs to products (landed costs)</span></a></li></ul></div></section>
 
           </article>
         </div>

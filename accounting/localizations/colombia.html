@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>Colombia &#8212; Odoo 13.0 documentation</title>
+    <title>Колумбия &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
     <script type="text/javascript" src="../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../_static/doc.js"></script>
     <script type="text/javascript" src="../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/accounting/localizations/colombia.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/accounting/localizations/colombia.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/accounting/localizations/colombia.html" />
+    <link rel="canonical" href="/master/ru/accounting/localizations/colombia.html" />
   
-    <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Colombia (ES)" href="colombia_ES.html" />
-    <link rel="prev" title="Switzerland" href="switzerland.html" /> 
+    <link rel="index" title="Алфавитный указатель" href="../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../search.html" />
+    <link rel="next" title="Колумбия (ES)" href="colombia_ES.html" />
+    <link rel="prev" title="Швейцария" href="switzerland.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -194,7 +198,7 @@
         
             
                 
-                    <li><a href="../../accounting.html">Accounting</a></li>
+                    <li><a href="../../accounting.html">Бухгалтерский учёт</a></li>
                 
             
         
@@ -205,7 +209,7 @@
             
         
     
-    <li class="active"><a href="#">Colombia</a></li>
+    <li class="active"><a href="#">Колумбия</a></li>
 
               
           </ol>
@@ -221,12 +225,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/accounting/localizations/colombia.html">English</a></li>
+        
+            <li><a href="/13.0/uk/accounting/localizations/colombia.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -253,6 +272,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -262,7 +283,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> Colombia </h1>
+        <h1> Колумбия </h1>
       </div>
     </figure>
     
@@ -275,7 +296,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#introduction" class="ripple internal reference">Introduction</a></li><li class="list-group-item"><a href="#workflow" class="ripple internal reference">Workflow</a></li><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a><ul ><li class="list-group-item"><a href="#install-the-colombian-localization-modules" class="ripple internal reference">1. Install the Colombian localization modules</a></li><li class="list-group-item"><a href="#configure-credentials-for-carvajal-t-s-web-service" class="ripple internal reference">2. Configure credentials for Carvajal T&amp;S web service</a></li><li class="list-group-item"><a href="#configure-your-report-data" class="ripple internal reference">3. Configure your report data</a></li><li class="list-group-item"><a href="#configure-data-required-in-the-xml" class="ripple internal reference">4. Configure data required in the XML</a><ul ><li class="list-group-item"><a href="#partner" class="ripple internal reference">4.1 Partner</a><ul ><li class="list-group-item"><a href="#identification" class="ripple internal reference">4.1.1 Identification</a></li><li class="list-group-item"><a href="#fiscal-structure-rut" class="ripple internal reference">4.1.2 Fiscal structure (RUT)</a></li></ul></li><li class="list-group-item"><a href="#taxes" class="ripple internal reference">4.2 Taxes</a></li><li class="list-group-item"><a href="#journals" class="ripple internal reference">4.3 Journals</a></li><li class="list-group-item"><a href="#users" class="ripple internal reference">4.4 Users</a></li></ul></li></ul></li><li class="list-group-item"><a href="#usage-and-testing" class="ripple internal reference">Usage and testing</a><ul ><li class="list-group-item"><a href="#invoice" class="ripple internal reference">1. Invoice</a><ul ><li class="list-group-item"><a href="#invoice-creation" class="ripple internal reference">1.1 Invoice creation</a></li><li class="list-group-item"><a href="#invoice-validation" class="ripple internal reference">1.2 Invoice validation</a></li><li class="list-group-item"><a href="#reception-of-legal-xml-and-pdf" class="ripple internal reference">1.3 Reception of legal XML and PDF</a></li><li class="list-group-item"><a href="#common-errors" class="ripple internal reference">1.4 Common errors</a></li></ul></li><li class="list-group-item"><a href="#additional-use-cases" class="ripple internal reference">2. Additional use cases</a></li></ul></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#introduction" class="ripple internal reference">Введение</a></li><li class="list-group-item"><a href="#workflow" class="ripple internal reference">Рабочий процесс</a></li><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Настройка</a><ul ><li class="list-group-item"><a href="#install-the-colombian-localization-modules" class="ripple internal reference">1. Установите модули колумбийской локализации</a></li><li class="list-group-item"><a href="#configure-credentials-for-carvajal-t-s-web-service" class="ripple internal reference">2. Настройте учетные данные для веб-сервиса Carvajal T &amp;amp; S</a></li><li class="list-group-item"><a href="#configure-your-report-data" class="ripple internal reference">3. Настройте ваши данные отчета</a></li><li class="list-group-item"><a href="#configure-data-required-in-the-xml" class="ripple internal reference">4. Установите данные, необходимые в XML</a><ul ><li class="list-group-item"><a href="#partner" class="ripple internal reference">4.1 Партнер</a><ul ><li class="list-group-item"><a href="#identification" class="ripple internal reference">4.1.1 Идентификация</a></li><li class="list-group-item"><a href="#fiscal-structure-rut" class="ripple internal reference">4.1.2 Фискальная структура (RUT)</a></li></ul></li><li class="list-group-item"><a href="#taxes" class="ripple internal reference">4.2 Налоги</a></li><li class="list-group-item"><a href="#journals" class="ripple internal reference">4.3 Журналы</a></li><li class="list-group-item"><a href="#users" class="ripple internal reference">4.4 Пользователи</a></li></ul></li></ul></li><li class="list-group-item"><a href="#usage-and-testing" class="ripple internal reference">Использование и тестирования</a><ul ><li class="list-group-item"><a href="#invoice" class="ripple internal reference">1. Счет</a><ul ><li class="list-group-item"><a href="#invoice-creation" class="ripple internal reference">1.1 Создание счета</a></li><li class="list-group-item"><a href="#invoice-validation" class="ripple internal reference">1.2 Подтверждение счета</a></li><li class="list-group-item"><a href="#reception-of-legal-xml-and-pdf" class="ripple internal reference">1.3 Получение правовых XML и PDF документов</a></li><li class="list-group-item"><a href="#common-errors" class="ripple internal reference">1.4 Распространенные ошибки</a></li></ul></li><li class="list-group-item"><a href="#additional-use-cases" class="ripple internal reference">2. Дополнительные случаи использования</a></li></ul></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/accounting/localizations/colombia.rst" class="gith-link">
                   Edit on GitHub
@@ -287,68 +308,7 @@
           <article class="doc-body  ">
             
             
-  <section id="colombia"></section><section id="introduction"><h2 >Introduction</h2><p >Electronic invoicing for Colombia is available from Odoo 12 and
-requires the next modules:</p><ol ><li ><strong >l11n_co</strong>: All the basic data to manage the accounting module,
-contains the default setup for: chart of accounts, taxes,
-retentions, identification document types</li><li ><strong >l10n_co_edi</strong>: This module includes all the extra fields that are
-required for the Integration with Carvajal T&amp;S and generate the
-electronic invoice, based on the DIAN legal requirements.</li></ol></section><section id="workflow"><h2 >Workflow</h2><img src="../../_images/colombia01.png" style="" class="img-responsive center-block"></section><section id="configuration"><h2 >Configuration</h2></section><section id="install-the-colombian-localization-modules"><h3 >1. Install the Colombian localization modules</h3><p >For this, go in Apps and search for Colombia. Then click Install for
-the first two modules.</p><img src="../../_images/colombia02.png" style="" class="img-responsive center-block"></section><section id="configure-credentials-for-carvajal-t-s-web-service"><h3 >2. Configure credentials for Carvajal T&amp;S web service</h3><p >Once that the modules are installed, in order to be able to connect
-with Carvajal T&amp;S Web Service, it’s necessary to configure the user
-and credentials, this information will be provided by Carvajal T&amp;S.</p><p >Go to <span class="menuselection">Accounting ‣ Configuration ‣ Settings</span> and
-look for the <em >Colombian Electronic Invoice</em> section.</p><img src="../../_images/colombia03.png" style="" class="img-responsive center-block"><p >Using the Testing mode it is possible to connect with a Carvajal T&amp;S
-testing environment. This allows users to test the complete workflow
-and integration with the CEN Financiero portal, which is accessible
-here: <a href="https://cenfinancierolab.cen.biz" class="external reference">https://cenfinancierolab.cen.biz</a></p><p >Once that Odoo and Carvajal T&amp;S is fully configured and ready for
-production the testing environment can be disabled.</p></section><section id="configure-your-report-data"><h3 >3. Configure your report data</h3><p >As part of the configurable information that is sent in the XML, you
-can define the data for the fiscal section and the bank information in
-the PDF.</p><p >Go to <span class="menuselection">Accounting ‣ Configuration ‣ Settings</span> and
-look for the <em >Colombian Electronic Invoice</em> section.</p><img src="../../_images/colombia04.png" style="" class="img-responsive center-block"></section><section id="configure-data-required-in-the-xml"><h3 >4. Configure data required in the XML</h3></section><section id="partner"><h4 >4.1 Partner</h4></section><section id="identification"><h5 >4.1.1 Identification</h5><p >As part of the Colombian Localization, the document types defined by
-the DIAN are now available on the Partner form. Colombian partners
-have to have their identification number and document type set:</p><img src="../../_images/colombia05.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >When the document type is RUT the identification number needs
-to be configured in Odoo including the verification digit, Odoo
-will split this number when the data to the third party vendor is
-sent.</p></div></section><section id="fiscal-structure-rut"><h5 >4.1.2 Fiscal structure (RUT)</h5><p >The partner’s responsibility codes (section 53 in the RUT document)
-are included as part of the electronic invoice module given that is
-part of the information required by the DIAN .</p><p >These fields can be found in <span class="menuselection">Partner ‣ Sales &amp;
-Purchase Tab ‣ Fiscal Information</span></p><img src="../../_images/colombia06.png" style="" class="img-responsive center-block"><p >Additionally two booleans fields were added in order to specify the
-fiscal regimen of the partner.</p></section><section id="taxes"><h4 >4.2 Taxes</h4><p >If your sales transactions include products with taxes, it’s important
-to consider that an extra field <em >Value Type</em> needs to be configured
-per tax. This option is located in the Advanced Options tab.</p><img src="../../_images/colombia07.png" style="" class="img-responsive center-block"><p >Retention tax types (ICA, IVA, Fuente) are also included in the
-options to configure your taxes. This configuration is used in order
-to correctly display taxes in the invoice PDF.</p><img src="../../_images/colombia08.png" style="" class="img-responsive center-block"></section><section id="journals"><h4 >4.3 Journals</h4><p >Once the DIAN has assigned the official sequence and prefix for the
-electronic invoice resolution, the Sales journals related to your
-invoice documents need to be updated in Odoo.  The sequence can be
-accessed using developer mode: <span class="menuselection">Accounting ‣ Settings
-‣ Configuration Setting ‣ Journals</span>.</p><img src="../../_images/colombia09.png" style="" class="img-responsive center-block"><p >Once that the sequence is opened, the Prefix and Next Number fields
-should be configured and synchronized with the CEN Financiero.</p><img src="../../_images/colombia10.png" style="" class="img-responsive center-block"></section><section id="users"><h4 >4.4 Users</h4><p >The default template that is used by Odoo on the invoice PDF includes
-the job position of the salesperson, so these fields should be
-configured:</p><img src="../../_images/colombia11.png" style="" class="img-responsive center-block"></section><section id="usage-and-testing"><h2 >Usage and testing</h2></section><section id="invoice"><h3 >1. Invoice</h3><p >When all your master data and credentials has been configured, it’s
-possible to start testing the electronic invoice workflow.</p></section><section id="invoice-creation"><h4 >1.1 Invoice creation</h4><p >The functional workflow that takes place before an invoice validation
-doesn’t change. The main changes that are introduced with the
-electronic invoice are the next fields:</p><img src="../../_images/colombia12.png" style="" class="img-responsive center-block"><p >There are three types of documents:</p><ul ><li ><strong >Factura Electronica</strong>: This is the regular type of document and
-its applicable for Invoices, Credit Notes and Debit Notes.</li><li ><strong >Factura de Importación</strong>: This should be selected for importation
-transactions.</li><li ><strong >Factura de contingencia</strong>: This is an exceptional type that is
-used as a manual backup in case that the company is not able to use
-the ERP and it’s necessary to generate the invoice manually, when
-this invoice is added to the ERP, this invoice type should be
-selected.</li></ul></section><section id="invoice-validation"><h4 >1.2 Invoice validation</h4><p >After the invoice is validated an XML file is created and sent
-automatically to Carvajal, this file is displayed in the chatter.</p><img src="../../_images/colombia13.png" style="" class="img-responsive center-block"><p >An extra field is now displayed in “Other Info” tab with the name of
-the XML file. Additionally there is a second extra field that is
-displayed with the Electronic Invoice status, with the initial value
-“In progress”:</p><img src="../../_images/colombia14.png" style="" class="img-responsive center-block"></section><section id="reception-of-legal-xml-and-pdf"><h4 >1.3 Reception of legal XML and PDF</h4><p >The electronic invoice vendor receives the XML file and proceeds to
-validate the structure and the information in it, if everything is
-correct the invoice status changes to “Validated” after using the
-“Check Carvajal Status” button in the Action dropdown. They then
-proceed to generate a Legal XML which includes a digital signature and
-a unique code (CUFE), a PDF invoice that includes a QR code and the
-CUFE is also generated.</p><p >After this:</p><ul ><li >A ZIP containing the legal XML and the PDF is downloaded and
-displayed in the invoice chatter:</li></ul><img src="../../_images/colombia15.png" style="" class="img-responsive center-block"><img src="../../_images/colombia16.png" style="" class="img-responsive center-block"><ul ><li >The Electronic Invoice status changes to “Accepted”</li></ul></section><section id="common-errors"><h4 >1.4 Common errors</h4><p >During the XML validation the most common errors are usually related
-to missing master data. In such cases, error messages are shown in the
-chatter after updating the electronic invoice status.</p><img src="../../_images/colombia17.png" style="" class="img-responsive center-block"><p >After the master data is corrected, it’s possible to reprocess the XML
-with the new data and send the updated version, using the following
-button:</p><img src="../../_images/colombia18.png" style="" class="img-responsive center-block"><img src="../../_images/colombia19.png" style="" class="img-responsive center-block"></section><section id="additional-use-cases"><h3 >2. Additional use cases</h3><p >The process for credit and debit notes is exactly the same as the
-invoice, the functional workflow remains the same as well.</p></section>
+  <section id="colombia"></section><section id="introduction"><h2 >Введение</h2><p >Электронное выставления счетов для Колумбии можно получить из Odoo 12 и требует следующих модулей:</p><ol ><li >** l11n_co ** Все основные данные для управления модулем бухгалтерского учета, содержащие стандартные настройки для: плана счетов счетов, налогов, ретенций, типов идентификационных документов</li><li >** l10n_co_edi ** Этот модуль включает в себя все дополнительные поля, необходимые для интеграции с T &amp;amp; S Carvajal, и генерирования электронного счета-фактуры на основе правовых требований DIAN.</li></ol></section><section id="workflow"><h2 >Рабочий процесс</h2><img src="../../_images/colombia01.png" style="" class="img-responsive center-block"></section><section id="configuration"><h2 >Настройка</h2></section><section id="install-the-colombian-localization-modules"><h3 >1. Установите модули колумбийской локализации</h3><p >Для этого перейдите в Приложения и найдите Колумбию. Затем нажмите кнопку Установить для первых двух модулей.</p><img src="../../_images/colombia02.png" style="" class="img-responsive center-block"></section><section id="configure-credentials-for-carvajal-t-s-web-service"><h3 >2. Настройте учетные данные для веб-сервиса Carvajal T &amp;amp; S</h3><p >После того, как модули установлены, для того, чтобы иметь возможность соединяться с веб-службой Carvajal T &amp;amp; S, необходимо настроить пользователя и учетные данные, эта информация будет предоставлена Carvajal T &amp;amp; S.</p><p >Перейдите к: menuselection: [UNKNOWN NODE title_reference] и найдите раздел * Колумбийские электронные счета [UNKNOWN NODE problematic].</p><img src="../../_images/colombia03.png" style="" class="img-responsive center-block"><p >Используя режим тестирования, можно подключиться к среде тестирования Carvisal T &amp;amp; S. Это позволяет пользователям проверять полный рабочий процесс и интеграцию с порталом CEN Financiero, доступным здесь: <a href="https://cenfinancierolab.cen.biz" class="external reference">https://cenfinancierolab.cen.biz</a></p><p >После того, как Odoo и Carvajal T &amp;amp; S полностью настроены и готовы к производству, среда тестирования может быть отключен.</p></section><section id="configure-your-report-data"><h3 >3. Настройте ваши данные отчета</h3><p >Как часть настроенной информации, направляется в XML, можно определить данные для фискального раздела и банковскую информацию в PDF-файле.</p><p >Перейдите к: menuselection: [UNKNOWN NODE title_reference] и найдите раздел * Колумбийские электронные счета [UNKNOWN NODE problematic].</p><img src="../../_images/colombia04.png" style="" class="img-responsive center-block"></section><section id="configure-data-required-in-the-xml"><h3 >4. Установите данные, необходимые в XML</h3></section><section id="partner"><h4 >4.1 Партнер</h4></section><section id="identification"><h5 >4.1.1 Идентификация</h5><p >Как часть колумбийской локализации, типа документов, определенные DIAN, теперь доступны в форме Партнера. Колумбийские партнеры должны иметь свой идентификационный номер и тип документа:</p><img src="../../_images/colombia05.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >Когда тип документа RUT, идентификационный номер должен быть настроен в Odoo, включая проверочную цифру, Odoo будет разделять этот номер, когда передаются данные третьей стороне.</p></div></section><section id="fiscal-structure-rut"><h5 >4.1.2 Фискальная структура (RUT)</h5><p >Коды ответственности партнера (раздел 53 документа RUT) включены как часть модуля электронного счета, который является частью информации, требуется DIAN.</p><p >Эти поля можно найти в: menuselection: [UNKNOWN NODE title_reference]</p><img src="../../_images/colombia06.png" style="" class="img-responsive center-block"><p >Дополнительно было добавлено два булевых поля для определения фискального режима партнера.</p></section><section id="taxes"><h4 >4.2 Налоги</h4><p >Если ваши операции по продаже включают товары с налогами, важно учитывать, что дополнительное поле * Тип значения * необходимо настроить на налог. Этот параметр находится на вкладке Дополнительные параметры.</p><img src="../../_images/colombia07.png" style="" class="img-responsive center-block"><p >Типы налога на содержание (ICA, IVA, Fuente) также включены в опций настройки налогов. Эта конфигурация используется для корректного отображения налогов в формате PDF.</p><img src="../../_images/colombia08.png" style="" class="img-responsive center-block"></section><section id="journals"><h4 >4.3 Журналы</h4><p >После того, как DIAN назначил официальную последовательность и префикс для решения электронных счетов, журналы продаж, связанные с документами на счете-фактуре, нужно обновлять в Odoo. Последовательности можно обращаться, используя режим разработчика:: menuselection: [UNKNOWN NODE title_reference].</p><img src="../../_images/colombia09.png" style="" class="img-responsive center-block"><p >После того, как последовательность открыта, поля Приставка и Следующий номер должны быть настроены и синхронизированы с CEN Financiero.</p><img src="../../_images/colombia10.png" style="" class="img-responsive center-block"></section><section id="users"><h4 >4.4 Пользователи</h4><p >Шаблон по умолчанию, который используется Odoo на счете-фактуре PDF, включая позицию продавца, поэтому эти поля должны быть настроены:</p><img src="../../_images/colombia11.png" style="" class="img-responsive center-block"></section><section id="usage-and-testing"><h2 >Использование и тестирования</h2></section><section id="invoice"><h3 >1. Счет</h3><p >После настройки всех основных данных и учетных данных можно начать тестирование рабочего процесса электронного счета.</p></section><section id="invoice-creation"><h4 >1.1 Создание счета</h4><p >Функциональный рабочий процесс, который происходит перед проверкой счета-фактуры, не меняется. Основными изменениями, которые вводятся в электронный счет, являются следующие поля:</p><img src="../../_images/colombia12.png" style="" class="img-responsive center-block"><p >Есть три типа документов:</p><ul ><li >** Factura Electronica ** Этот документ является обычным типом и применяется к счетам-фактурам, сторно и дебетовое возвращения.</li><li >** Factura de Importación [UNKNOWN NODE problematic]: этот параметр для операций импорта.</li><li >** Factura de contingencia [UNKNOWN NODE problematic]: Это исключительный тип, который используется как ручное резервное копирование в случае, если компания не может использовать ERP, и необходимо генерировать счет вручную, когда этот счет добавлен к ERP, этот тип счета-фактуры следует выбрать.</li></ul></section><section id="invoice-validation"><h4 >1.2 Подтверждение счета</h4><p >После подтверждения счета XML-файл создается и автоматически направляется в Carvajal, этот файл отображается в чате.</p><img src="../../_images/colombia13.png" style="" class="img-responsive center-block"><p >Дополнительное поле теперь отображается на вкладке &amp;quot;Другая информация&amp;quot; с названием файла XML. Кроме того, есть второе дополнительное поле, которое отображается со статусом электронного счета, с начальным значением &amp;quot;In progress&amp;quot;:</p><img src="../../_images/colombia14.png" style="" class="img-responsive center-block"></section><section id="reception-of-legal-xml-and-pdf"><h4 >1.3 Получение правовых XML и PDF документов</h4><p >Поставщик электронного счета получает XML-файл и продолжает проверку структуры и информации в нем, если все правильно, изменение статуса счета-фактуры на &amp;quot;Проверено&amp;quot; после использования кнопки &amp;quot;Проверить состояние Carvajal&amp;quot; в выпадающем меню Действие. Затем они начинают генерировать правовой XML, включая цифровую подпись и уникальный код (CUFE), а также генерируется фактура PDF, которая включает QR-код и CUFE.</p><p >После этого:</p><ul ><li >ZIP, содержащий XML документов и PDF-файл загружается и отображается в чате счета-фактуры:</li></ul><img src="../../_images/colombia15.png" style="" class="img-responsive center-block"><img src="../../_images/colombia16.png" style="" class="img-responsive center-block"><ul ><li >Состояние электронного счета меняется на &amp;quot;Принято&amp;quot;</li></ul></section><section id="common-errors"><h4 >1.4 Распространенные ошибки</h4><p >Во время проверки XML распространенные ошибки, как правило, связаны с отсутствием основных данных. В таких случаях сообщение об ошибке отображаются в чате после обновления статуса электронного счета.</p><img src="../../_images/colombia17.png" style="" class="img-responsive center-block"><p >После исправления основных данных можно повторно обработать XML с новыми данными и прислать обновленную версию с помощью следующей кнопки:</p><img src="../../_images/colombia18.png" style="" class="img-responsive center-block"><img src="../../_images/colombia19.png" style="" class="img-responsive center-block"></section><section id="additional-use-cases"><h3 >2. Дополнительные случаи использования</h3><p >Процесс получения кредитных и дебетовых возвратов точно такой же, как и счет-фактура, функциональный рабочий процесс также остается неизменным.</p></section>
 
           </article>
         </div>

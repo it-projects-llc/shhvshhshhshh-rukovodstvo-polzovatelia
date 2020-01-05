@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>Analytic account use cases &#8212; Odoo 13.0 documentation</title>
+    <title>Использование аналитического счета в разных случаях &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../../_static/doc.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/accounting/others/analytic/usage.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/accounting/others/analytic/usage.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/accounting/others/analytic/usage.html" />
+    <link rel="canonical" href="/master/ru/accounting/others/analytic/usage.html" />
   
-    <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="How to track costs of human resources with timesheets?" href="timesheets.html" />
-    <link rel="prev" title="Analytic" href="../analytic.html" /> 
+    <link rel="index" title="Алфавитный указатель" href="../../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../../search.html" />
+    <link rel="next" title="Как отслеживать расходы на человеческие ресурсы с расписанием?" href="timesheets.html" />
+    <link rel="prev" title="Аналитический" href="../analytic.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -194,7 +198,7 @@
         
             
                 
-                    <li><a href="../../../accounting.html">Accounting</a></li>
+                    <li><a href="../../../accounting.html">Бухгалтерский учёт</a></li>
                 
             
         
@@ -211,7 +215,7 @@
             
         
     
-    <li class="active"><a href="#">Analytic account use cases</a></li>
+    <li class="active"><a href="#">Использование аналитического счета в разных случаях</a></li>
 
               
           </ol>
@@ -227,12 +231,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/accounting/others/analytic/usage.html">English</a></li>
+        
+            <li><a href="/13.0/uk/accounting/others/analytic/usage.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -259,6 +278,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -268,7 +289,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> Analytic account use cases </h1>
+        <h1> Использование аналитического счета в разных случаях </h1>
       </div>
     </figure>
     
@@ -281,7 +302,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#case-1-industrial-company-costs-analyse" class="ripple internal reference">Case 1: Industrial company: Costs Analyse</a></li><li class="list-group-item"><a href="#case-2-law-firm-costs-of-human-resources" class="ripple internal reference">Case 2: Law Firm: costs of human resources?</a></li><li class="list-group-item"><a href="#case-3-it-services-company-perfomance-analysis" class="ripple internal reference">Case 3: IT Services Company: perfomance analysis</a></li><li class="list-group-item"><a href="#conclusion" class="ripple internal reference">Conclusion</a></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#case-1-industrial-company-costs-analyse" class="ripple internal reference">Случай 1: Промышленная компания: анализ затрат</a></li><li class="list-group-item"><a href="#case-2-law-firm-costs-of-human-resources" class="ripple internal reference">Случай 2: Юридическая фирма: Расходы на человеческие ресурсы?</a></li><li class="list-group-item"><a href="#case-3-it-services-company-perfomance-analysis" class="ripple internal reference">Случай 3: IT-услуги компании: анализ эффективности</a></li><li class="list-group-item"><a href="#conclusion" class="ripple internal reference">вывод</a></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/accounting/others/analytic/usage.rst" class="gith-link">
                   Edit on GitHub
@@ -293,73 +314,7 @@
           <article class="doc-body  ">
             
             
-  <section id="analytic-account-use-cases"><p >The analytic accounting can be used for several purposes:</p><ul ><li >analyse costs of a company</li><li >reinvoice time to a customer</li><li >analyse performance of a service or a project</li></ul><p >To manage analytic accounting, you have to activate it in
-<span class="menuselection">Configuration ‣ Settings</span>:</p><img src="../../../_images/usage01.png" style="" class="img-responsive center-block"><p >To illustrate analytic accounts clearly, you will follow three use
-cases, each in one of three different types of company:</p><ol ><li >Industrial company: Costs Analyse</li><li >Law Firm: reinvoice spent hours</li><li >IT/Services Company: performance analysis</li></ol></section><section id="case-1-industrial-company-costs-analyse"><h2 >Case 1: Industrial company: Costs Analyse</h2><p >In industry, you will often find analytic charts of accounts structured
-into departments and products the company itself is built on.</p><p >The objective is to examine the costs, sales and margins by
-department/resources and by product. The first level of the structure
-comprises the different departments, and the lower levels represent the
-product ranges the company makes and sells.</p><p ><strong >Analytic Chart of Accounts for an Industrial Manufacturing Company</strong>:</p><ol ><li >Marketing Department</li><li >Commercial Department</li><li >Administration Department</li><li >Production Range 1</li><li >Production Range 2</li></ol><p >In daily use, it is useful to mark the analytic account on each purchase
-invoice. When the invoice is approved, it will
-automatically generate the entries for both the general and the
-corresponding analytic accounts. For each entry on the general
-accounts, there is at least one analytic entry that allocates costs to
-the department which incurred them.</p><p >Here is a possible breakdown of some general accounting entries for the
-example above, allocated to various analytic accounts:</p><table class="table"><thead ><tr ><th ><strong >General accounts</strong></th><th ></th><th ></th><th ></th><th ></th><th ><strong >Analytic accounts</strong></th><th ></th></tr></thead><tbody ><tr ><td ><strong >Title</strong></td><td ><strong >Account</strong></td><td ><strong >Debit</strong></td><td ><strong >Credit</strong></td><td ></td><td ><strong >Account</strong></td><td ><strong >Value</strong></td></tr><tr ><td >Purchase of Raw Material</td><td >2122</td><td >1500</td><td ></td><td ></td><td >Production Range 1</td><td >-1 500</td></tr><tr ><td >Subcontractors</td><td >2122</td><td >450</td><td ></td><td ></td><td >Production Range 2</td><td >-450</td></tr><tr ><td >Credit Note for defective materials</td><td >2122</td><td ></td><td >200</td><td ></td><td >Production Range 1</td><td >200</td></tr><tr ><td >Transport charges</td><td >2122</td><td >450</td><td ></td><td ></td><td >Production Range 1</td><td >-450</td></tr><tr ><td >Staff costs</td><td >2121</td><td >10000</td><td ></td><td ></td><td >Marketing</td><td >-2 000</td></tr><tr ><td ></td><td ></td><td ></td><td ></td><td ></td><td >Commercial</td><td >-3 000</td></tr><tr ><td ></td><td ></td><td ></td><td ></td><td ></td><td >Administrative</td><td >-1 000</td></tr><tr ><td ></td><td ></td><td ></td><td ></td><td ></td><td >Production Range 1</td><td >-2 000</td></tr><tr ><td ></td><td ></td><td ></td><td ></td><td ></td><td >Production Range 2</td><td >-2 000</td></tr><tr ><td >PR</td><td >2122</td><td >450</td><td ></td><td ></td><td >Marketing</td><td >-400</td></tr></tbody></table><p >The analytic representation by department enables you to investigate the
-costs allocated to each department in the company. The analytic chart of
-accounts shows the distribution of the company’s costs using the example above:</p><img src="../../../_images/usage02.png" style="" class="img-responsive center-block"><p >In this example of a hierarchical structure in Odoo, you can analyse not
-only the costs of each product range, but also the costs of the whole
-production. A report that relates both general accounts and analytic
-accounts enables you to get a breakdown of costs within a given
-department.</p><img src="../../../_images/usage03.png" style="" class="img-responsive center-block"><p >The examples above are based on a breakdown of the costs of the company.
-Analytic allocations can be just as effective for sales. That gives you
-the profitability (sales - costs) of different departments.</p><p >This analytic representation by department is generally used by trading
-companies and industries.</p><p >A variantion of this, is not to break it down by sales and marketing
-departments, but to assign each cost to its corresponding product range.
-This will give you an analysis of the profitability of each product
-range.</p><p >Choosing one over the other depends on how you look at your marketing
-effort. Is it a global cost allocated in some general way, or is each
-product range responsible for its own marketing costs?</p></section><section id="case-2-law-firm-costs-of-human-resources"><h2 >Case 2: Law Firm: costs of human resources?</h2><p >Law firms generally adopt management by case, where each case represents
-a current client file. All of the expenses and products are then
-attached to a given file/analytic account.</p><p >A principal preoccupation of law firms is the invoicing of hours worked,
-and the profitability by case and by employee.</p><p >Mechanisms used for encoding the hours worked will be covered in detail
-in timesheet documentation. Like most system processes, hours worked are
-integrated into the analytic accounting. In the employee form, specify
-the cost of the employee. The hourly charge is a function of the
-employee’s cost.</p><p >So a law firm will opt for an analytic representation which reflects the
-management of the time that employees work on the different customer
-cases.</p><p >Billing for the different cases is a bit unusual. The cases do not match
-any entry in the general account nor do they come from purchase or sales
-invoices. They are represented by the various analytic operations and do
-not have exact counterparts in the general accounts. They are calculated
-on the basis of the hourly cost per employee.</p><p >At the end of the month when you pay salaries and benefits, you
-integrate them into the general accounts but not in the analytic
-accounts, because they have already been accounted for in billing each
-account. A report that relates data from the analytic and general
-accounts then lets you compare the totals, so you can readjust your
-estimates of hourly cost per employee depending on the time actually
-worked.</p><p >The following table shows an example of different analytic entries that
-you can find for your analytic account:</p><table class="table"><thead ><tr ><th ><strong >Title</strong></th><th ><strong >Account</strong></th><th ><strong >Amount</strong></th><th ></th><th ><strong >General Account</strong></th><th ><strong >Debit</strong></th><th ><strong >Credit</strong></th></tr></thead><tbody ><tr ><td >Study the file (1 h)</td><td >Case 1.1</td><td >-15</td><td ></td><td ></td><td ></td><td ></td></tr><tr ><td >Search for information (3 h)</td><td >Case 1.1</td><td >-45</td><td ></td><td ></td><td ></td><td ></td></tr><tr ><td >Consultation (4 h)</td><td >Case 2.1</td><td >-60</td><td ></td><td ></td><td ></td><td ></td></tr><tr ><td >Service charges</td><td >Case 1.1</td><td >280</td><td ></td><td >705 – Billing services</td><td ></td><td >280</td></tr><tr ><td >Stationery purchase</td><td >Administrative</td><td >-42</td><td ></td><td >601 – Furniture purchase</td><td >42</td><td ></td></tr><tr ><td >Fuel Cost -Client trip</td><td >Case 1.1</td><td >-35</td><td ></td><td >613 – Transports</td><td >35</td><td ></td></tr><tr ><td >Staff salaries</td><td ></td><td ></td><td ></td><td >6201 – Salaries</td><td ></td><td >3 000</td></tr></tbody></table><p >Such a structure allows you to make a detailed study of the
-profitability of various transactions.</p><p >For more details about profitablity, please read the following document:
-<a href="timesheets.html" class="internal reference"><span class="doc">How to track costs of human resources with timesheets?</span></a></p><p >But analytical accounting is not limited to a simple analysis of the
-profitability of different customer. The same data can be used for
-automatic recharging of the services to the customer at the end of the
-month. To invoice customers, just link the analytic account to a sale
-order and sell products that manage timesheet or expenses .</p></section><section id="case-3-it-services-company-perfomance-analysis"><h2 >Case 3: IT Services Company: perfomance analysis</h2><p >Most IT service companies face the following problems:</p><ul ><li >project planning,</li><li >invoicing, profitability and financial follow-up of projects,</li><li >managing support contracts.</li></ul><p >To deal with these problems, you would use an analytic chart of accounts
-structured by project and by sale order.</p><p >The management of services, expenditures and sales is similar to that
-presented above for lawyers. Invoicing and the study of profitability
-are also similar.</p><p >But now look at support contracts. These contracts are usually limited
-to a prepaid number of hours. Each service posted in the analytic
-accounts shows the remaining hours of support. To manage support
-contracts, you would create a product configured to invoice on order and
-link the sale order to an analytic account</p><p >In Odoo, each analytic line lists the number of units sold or used, as
-well as what you would usually find there – the amount in currency units
-(USD or GBP, or whatever other choice you make). So you can sum the
-quantities sold and used on each sale order to determine whether any
-hours of the support contract remain.</p></section><section id="conclusion"><h2 >Conclusion</h2><p >Analytic accounting helps you to analyse costs and revenues whatever the
-use case. You can sell or purchase services, track time or analyse the
-production performance.</p><p >Analytic accounting is flexible and easy to use through all Odoo
-applications (sales, purchase, timesheet, production, invoice, …).</p></section>
+  <section id="analytic-account-use-cases"><p >Аналитический бухучет можно использовать для нескольких целей:</p><ul ><li >проанализируйте расходы компании</li><li >повторно выставьте время в счете клиенту</li><li >проанализируйте эффективность услуги или проекта</li></ul><p >Чтобы управлять аналитическим бухучету, вы должны активировать его в: menuselection: [UNKNOWN NODE title_reference]:</p><img src="../../../_images/usage01.png" style="" class="img-responsive center-block"><p >Чтобы четко проиллюстрировать аналитические счета, вы будете следить за тремя случаями использования, каждый из которых состоит из трех различных типов компаний:</p><ol ><li >Промышленная компания: анализ затрат</li><li >Юридическая фирма: повторное выставление в счете потраченных часов</li><li >IT / Компания по предоставлению услуг: анализ производительности</li></ol></section><section id="case-1-industrial-company-costs-analyse"><h2 >Случай 1: Промышленная компания: анализ затрат</h2><p >В промышленности вы часто найдете аналитические планы счетов, структурированные в отделах и товарам, на которых построена сама компания.</p><p >Цель состоит в изучении затрат, объема продаж и маржи по отделам / ресурсами и за товарами. Первый уровень структуры состоит из различных подразделений, а ниже - продукция, которую компания производит и продает.</p><p >** Аналитический план счетов для промышленной компании: [UNKNOWN NODE problematic]:</p><ol ><li >Отдел маркетинга</li><li >коммерческий отдел</li><li >административный отдел</li><li >Производственный ассортимент 1</li><li >Производственный ассортимент 2</li></ol><p >При ежедневном использовании полезно обозначить аналитический счет на каждом счете-фактуре покупки. Когда счет-фактуру будет одобрен, он автоматически генерирует записи как для общих, так и для соответствующих аналитических счетов. Для каждой записи в общих счетах есть как минимум один аналитический запись, распределяет расходы на отдел, которые понес.</p><p >Ниже приведены возможно разбиение некоторых общих бухгалтерских записей для приведенного выше примера, распределенных на различные аналитические счета:</p><table class="table"><thead ><tr ><th >** Общие счета **</th><th ></th><th ></th><th ></th><th ></th><th >** Аналитические счета **</th><th ></th></tr></thead><tbody ><tr ><td >** Заголовок **</td><td >** Счет **</td><td >** Дебет **</td><td >** Кредит **</td><td ></td><td >** Счет **</td><td >** Значение **</td></tr><tr ><td >закупка сырья</td><td >2122</td><td >1500</td><td ></td><td ></td><td >Производственный ассортимент 1</td><td >-1 500</td></tr><tr ><td >Субпидряникы</td><td >2122</td><td >450</td><td ></td><td ></td><td >Производственный ассортимент 2</td><td >-450</td></tr><tr ><td >Возвращение дефектных материалов</td><td >2122</td><td ></td><td >200</td><td ></td><td >Производственный ассортимент 1</td><td >200</td></tr><tr ><td >транспортные сборы</td><td >2122</td><td >450</td><td ></td><td ></td><td >Производственный ассортимент 1</td><td >-450</td></tr><tr ><td >Расходы на персонал</td><td >2121</td><td >10000</td><td ></td><td ></td><td >Маркетинг</td><td >-2 000</td></tr><tr ><td ></td><td ></td><td ></td><td ></td><td ></td><td >коммерческий</td><td >-3 000</td></tr><tr ><td ></td><td ></td><td ></td><td ></td><td ></td><td >Административный</td><td >-1 000</td></tr><tr ><td ></td><td ></td><td ></td><td ></td><td ></td><td >Производственный ассортимент 1</td><td >-2 000</td></tr><tr ><td ></td><td ></td><td ></td><td ></td><td ></td><td >Производственный ассортимент 2</td><td >-2 000</td></tr><tr ><td >PR</td><td >2122</td><td >450</td><td ></td><td ></td><td >Маркетинг</td><td >-400</td></tr></tbody></table><p >Аналитический отдел позволяет исследовать расходы, выделяемые каждому отделу компании. Аналитический план счетов показывает распределение расходов компании по приведенному выше примеру:</p><img src="../../../_images/usage02.png" style="" class="img-responsive center-block"><p >В этом примере иерархической структуры в Odoo можно проанализировать не только затраты на каждый ассортимент, но и стоимость всего производства. Отчет, который касается как общих счетов, так и аналитических, позволяет получить разбиение расходов в пределах определенного отдела.</p><img src="../../../_images/usage03.png" style="" class="img-responsive center-block"><p >Приведенные выше примеры основаны на распределении расходов компании. Аналитические распределения могут быть столь же эффективными для продаж. Это дает вам рентабельность (продажи - расходы) различных отделов.</p><p >Аналитический отдел, как правило, используется торговыми компаниями и отраслями.</p><p >Такой вариант состоит не в том, чтобы сбить его отделами сбыта и маркетинга, а назначать каждую стоимость для своего соответствующего ассортимента. Это даст вам анализ рентабельности каждого ассортимента.</p><p >Выбор одного над другим зависит от того, как вы смотрите на ваши маркетинговые усилия. Или глобальная стоимость выделяется в некотором общем порядке, или каждый товар отвечает за собственные маркетинговые расходы?</p></section><section id="case-2-law-firm-costs-of-human-resources"><h2 >Случай 2: Юридическая фирма: Расходы на человеческие ресурсы?</h2><p >Юридические фирмы обычно принимают управления, когда каждый случай представляет текущий файл клиента. Все расходы и товары затем добавляются к данному файлу / аналитического счета.</p><p >Основным беспокойством юридических фирм является выставление счетов рабочими часами и прибыльность по каждому случаю и работником.</p><p >Механизмы, используемые для кодирования рабочих часов, будут подробно рассмотрены в документации расписанию. Как и большинство системных процессов, рабочие часы интегрированы в аналитический учет. В форме работника укажите стоимость работника. Почасовая оплата зависит от стоимости работника.</p><p >Поэтому юридическая фирма будет выбирать аналитическое представление, которое отражает управления временем работы сотрудников в разных делах клиентов.</p><p >Платеж за различные случаи есть несколько необычным. Эти дела не соответствуют ни одному записи в общем счете, а также не поступают со счетов-фактур покупки или продажи. Они представлены различными аналитическими операциями и не имеют точных аналогов в общих счетах. Они рассчитываются на основе часовой стоимости одного работника.</p><p >В конце месяца, когда вы платите заработную плату и льготы, вы интегрируете их в общие счета, но не в аналитические, поскольку они уже были учтены при выставлении счетов на каждый из них. Отчет, который связывает данные из аналитических и общих счетов, позволяет сравнить итоги, поэтому вы можете изменить свою стоимость в час на одного сотрудника в зависимости от фактически отработанного времени.</p><p >В приведенной ниже таблице показан пример различных аналитических записей, которые вы можете найти в своем аналитическом счете:</p><table class="table"><thead ><tr ><th >** Заголовок **</th><th >** Счет **</th><th >** Сумма **</th><th ></th><th >** Общая сумма **</th><th >** Дебет **</th><th >** Кредит **</th></tr></thead><tbody ><tr ><td >Изучение файла (1 год)</td><td >случай 1.1</td><td >-15</td><td ></td><td ></td><td ></td><td ></td></tr><tr ><td >Поиск информации (3 часа)</td><td >случай 1.1</td><td >-45</td><td ></td><td ></td><td ></td><td ></td></tr><tr ><td >Консультация (4 часа)</td><td >случай 2.1</td><td >-60</td><td ></td><td ></td><td ></td><td ></td></tr><tr ><td >оплата услуг</td><td >случай 1.1</td><td >280</td><td ></td><td >705 - Выставление услуг в счет</td><td ></td><td >280</td></tr><tr ><td >Канцелярские закупки</td><td >Административный</td><td >-42</td><td ></td><td >601 - Покупка мебели</td><td >42</td><td ></td></tr><tr ><td >Стоимость топлива - клиентская поездка</td><td >случай 1.1</td><td >-35</td><td ></td><td >613 - Транспорт</td><td >35</td><td ></td></tr><tr ><td >оклады персонала</td><td ></td><td ></td><td ></td><td >6201 - Зарплаты</td><td ></td><td >3 000</td></tr></tbody></table><p >Такая структура позволяет детально изучить доходность различных транзакций.</p><p >Чтобы узнать больше о рентабельности, прочитайте следующую документацию:: doc: [UNKNOWN NODE title_reference]</p><p >Но аналитический бухучет не ограничивается простым анализом рентабельности различных клиентов. Эти данные могут быть использованы для автоматического повторного взыскания за услуги клиенту в конце месяца. Чтобы выставлять счет-фактуру клиентам, просто свяжите аналитический счет с заказом на продажу и продавайте товары, которые управляют табелям или затратами.</p></section><section id="case-3-it-services-company-perfomance-analysis"><h2 >Случай 3: IT-услуги компании: анализ эффективности</h2><p >Большинство компаний, которые предоставляют ИТ-услуги, сталкиваются со следующими проблемами:</p><ul ><li >планирование проекта,</li><li >выставления счетов, рентабельность и финансовый контроль за проектами,</li><li >управление контрактами поддержки.</li></ul><p >Для решения этих проблем вы должны использовать аналитическую план счетов, структурированный по проекту и заказу на продажу.</p><p >Управление услугами, расходами и продажами аналогичное тому, что представлено выше для юристов. Выставления счетов и изучение рентабельности тоже похожи.</p><p >Но теперь посмотрите на контракты поддержки. Эти контракты, как правило, ограничиваются заранее оплаченной количеством часов. Каждая служба, размещенная на аналитических счетах, показывает остаточные часа поддержки. Чтобы управлять контрактами на поддержку, вы должны создать товар, настроенный на оплату счетов-фактур по заказу, и связать заказ на продажу из аналитическому счету.</p><p >В Odoo каждый аналитический строку перечисляет количество проданных или использованных единиц, а также то, что вы обычно находите там - сумма в единицах валюты (в долларах США, фунтах стерлингов или любой другой валюте). Таким образом, вы можете подытожить проданную и использованную в каждой продаже количество, чтобы определить, остаются часа контракта на поддержку.</p></section><section id="conclusion"><h2 >вывод</h2><p >Аналитический бухучет помогает вам анализировать расходы и доходы независимо от случая использования. Вы можете продавать или покупать услуги, отслеживать время или анализировать производительность производства.</p><p >Аналитический бухучет является гибким и простым в использовании с помощью всех приложений Odoo (продажа, покупка, табель, производство, счет-фактура …).</p></section>
 
           </article>
         </div>

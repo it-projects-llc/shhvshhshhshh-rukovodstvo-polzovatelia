@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>When Should you Use Packages, Units of Measure or Kits? &#8212; Odoo 13.0 documentation</title>
+    <title>When Should you Use Packages, Units of Measure or Kits? &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/accounting.css" />
@@ -27,15 +27,19 @@
     <script type="text/javascript" src="../../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../../_static/doc.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/inventory/management/products/usage.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/inventory/management/products/usage.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/inventory/management/products/usage.html" />
+    <link rel="canonical" href="/master/ru/inventory/management/products/usage.html" />
   
-    <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="How to select the right replenishment strategy" href="strategies.html" />
+    <link rel="index" title="Алфавитный указатель" href="../../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../../search.html" />
+    <link rel="next" title="Как установить правильную стратегию пополнения на складе" href="strategies.html" />
     <link rel="prev" title="Use Different Units of Measure" href="uom.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
@@ -194,7 +198,7 @@
         
             
                 
-                    <li><a href="../../../inventory.html">Inventory</a></li>
+                    <li><a href="../../../inventory.html">Склад</a></li>
                 
             
         
@@ -227,12 +231,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/inventory/management/products/usage.html">English</a></li>
+        
+            <li><a href="/13.0/uk/inventory/management/products/usage.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -259,6 +278,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -281,7 +302,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#units-of-measure" class="ripple internal reference">Units of Measure</a></li><li class="list-group-item"><a href="#packages" class="ripple internal reference">Packages</a></li><li class="list-group-item"><a href="#packaging" class="ripple internal reference">Packaging</a></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#units-of-measure" class="ripple internal reference">Единицы измерения</a></li><li class="list-group-item"><a href="#packages" class="ripple internal reference">Упаковка</a></li><li class="list-group-item"><a href="#packaging" class="ripple internal reference">Упаковка</a></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/inventory/management/products/usage.rst" class="gith-link">
                   Edit on GitHub
@@ -293,7 +314,7 @@
           <article class="doc-body  ">
             
             
-  <section id="when-should-you-use-packages-units-of-measure-or-kits"></section><section id="units-of-measure"><h2 >Units of Measure</h2><p >Units of measure specify the unit used to handle a product. In Odoo, you
+  <section id="when-should-you-use-packages-units-of-measure-or-kits"></section><section id="units-of-measure"><h2 >Единицы измерения</h2><p >Units of measure specify the unit used to handle a product. In Odoo, you
 have the possibility to specify the unit of measure in which you manage
 your stock and the one which is used when purchasing the product to your
 supplier.</p><img src="../../../_images/usage_01.png" style="" class="img-responsive center-block"><p >The <em >conversion</em> between the different units of measure is done
@@ -301,16 +322,16 @@ automatically. The only condition is that all the units have to be in
 the <em >same category</em> (Unit, Weight, Volume, Length,…)</p><p >For example, if I have the following reordering rule for the egg and I
 run the scheduler, the quantity added in the automatically generated
 purchase order will be in dozens but what will enter the stock will be
-units.</p><img src="../../../_images/usage_02.png" style="" class="img-responsive center-block"><img src="../../../_images/usage_03.png" style="" class="img-responsive center-block"><img src="../../../_images/usage_04.png" style="" class="img-responsive center-block"></section><section id="packages"><h2 >Packages</h2><p >The package is the physical container in which you put one or several
+units.</p><img src="../../../_images/usage_02.png" style="" class="img-responsive center-block"><img src="../../../_images/usage_03.png" style="" class="img-responsive center-block"><img src="../../../_images/usage_04.png" style="" class="img-responsive center-block"></section><section id="packages"><h2 >Упаковка</h2><p >The package is the physical container in which you put one or several
 products from a picking. For example, when you deliver a product, you
 can decide to separate the quantity into two different packages. It then
 allows you to have a report with the quantity of products for each
 package.</p><p >To separate a delivery into different packages you will have to set the
-done qunatity to the desired package quantity then click on “PUT IN
-PACK”, do this for each package.</p><img src="../../../_images/usage_05.png" style="" class="img-responsive center-block"><img src="../../../_images/usage_06.png" style="" class="img-responsive center-block"></section><section id="packaging"><h2 >Packaging</h2><p >The packaging is the physical container that protects your product. If
+done qunatity to the desired package quantity then click on «PUT IN
+PACK», do this for each package.</p><img src="../../../_images/usage_05.png" style="" class="img-responsive center-block"><img src="../../../_images/usage_06.png" style="" class="img-responsive center-block"></section><section id="packaging"><h2 >Упаковка</h2><p >The packaging is the physical container that protects your product. If
 you are selling computers, the packaging contains the computer with the
 notice and the power plug.</p><p >In Odoo, packagings are used for indicative purposes on sale orders.
-They can be specified on the product form, in the inventory tab.</p><img src="../../../_images/usage_07.png" style="" class="img-responsive center-block"><img src="../../../_images/usage_08.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >Another useful use of the packaging is for product reception. By
+They can be specified on the product form, in the inventory tab.</p><img src="../../../_images/usage_07.png" style="" class="img-responsive center-block"><img src="../../../_images/usage_08.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Another useful use of the packaging is for product reception. By
 scanning the barcode of the packaging, Odoo adds the number of units
 contained in the packing on the picking.</p></div></section>
 

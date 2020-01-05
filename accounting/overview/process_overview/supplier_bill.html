@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>From Vendor Bill to Payment &#8212; Odoo 13.0 documentation</title>
+    <title>От счета поставщика к оплате &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../../_static/doc.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/accounting/overview/process_overview/supplier_bill.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/accounting/overview/process_overview/supplier_bill.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/accounting/overview/process_overview/supplier_bill.html" />
+    <link rel="canonical" href="/master/ru/accounting/overview/process_overview/supplier_bill.html" />
   
-    <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Account Receivables" href="../../receivables.html" />
-    <link rel="prev" title="From Customer Invoice to Payments Collection" href="customer_invoice.html" /> 
+    <link rel="index" title="Алфавитный указатель" href="../../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../../search.html" />
+    <link rel="next" title="Расчет с дебиторами" href="../../receivables.html" />
+    <link rel="prev" title="От счета-фактуры клиента к сбору платежей" href="customer_invoice.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -194,7 +198,7 @@
         
             
                 
-                    <li><a href="../../../accounting.html">Accounting</a></li>
+                    <li><a href="../../../accounting.html">Бухгалтерский учёт</a></li>
                 
             
         
@@ -211,7 +215,7 @@
             
         
     
-    <li class="active"><a href="#">From Vendor Bill to Payment</a></li>
+    <li class="active"><a href="#">От счета поставщика к оплате</a></li>
 
               
           </ol>
@@ -227,12 +231,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/accounting/overview/process_overview/supplier_bill.html">English</a></li>
+        
+            <li><a href="/13.0/uk/accounting/overview/process_overview/supplier_bill.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -259,6 +278,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -268,7 +289,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> From Vendor Bill to Payment </h1>
+        <h1> От счета поставщика к оплате </h1>
       </div>
     </figure>
     
@@ -281,7 +302,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#id1" class="ripple internal reference">From Vendor Bill to Payment</a><ul ><li class="list-group-item"><a href="#record-a-new-vendor-bill" class="ripple internal reference">Record a new vendor bill</a></li><li class="list-group-item"><a href="#validate-the-vendor-bill" class="ripple internal reference">Validate The Vendor Bill</a></li><li class="list-group-item"><a href="#pay-a-bill" class="ripple internal reference">Pay a bill</a></li><li class="list-group-item"><a href="#printing-vendor-checks" class="ripple internal reference">Printing vendor Checks</a></li></ul></li><li class="list-group-item"><a href="#reporting" class="ripple internal reference">Reporting</a><ul ><li class="list-group-item"><a href="#aged-payable-balance" class="ripple internal reference">Aged payable balance</a></li></ul></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#id1" class="ripple internal reference">От счета поставщика к оплате</a><ul ><li class="list-group-item"><a href="#record-a-new-vendor-bill" class="ripple internal reference">Запишите новый счет поставщика</a></li><li class="list-group-item"><a href="#validate-the-vendor-bill" class="ripple internal reference">Подтвердите счет поставщика</a></li><li class="list-group-item"><a href="#pay-a-bill" class="ripple internal reference">оплатите счет</a></li><li class="list-group-item"><a href="#printing-vendor-checks" class="ripple internal reference">Напечатайте чеки поставщика</a></li></ul></li><li class="list-group-item"><a href="#reporting" class="ripple internal reference">Отчетность</a><ul ><li class="list-group-item"><a href="#aged-payable-balance" class="ripple internal reference">Отчет расчетов с кредиторами</a></li></ul></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/accounting/overview/process_overview/supplier_bill.rst" class="gith-link">
                   Edit on GitHub
@@ -293,53 +314,7 @@
           <article class="doc-body  ">
             
             
-  <section id="from-vendor-bill-to-payment"><p >Once vendor bills are registered in Odoo, you can easily pay vendors for
-the correct amount and at the right time (not too late, not too early;
-depending on your vendor policy). Odoo also offers reports to track your
-aged payable balances.</p><p >If you want to control vendor bills received from your vendors, you can
-use the Odoo Purchase application that allows you to control and
-pre-complete them automatically based on past purchase orders.</p></section><section id="id1"><h2 >From Vendor Bill to Payment</h2></section><section id="record-a-new-vendor-bill"><h3 >Record a new vendor bill</h3><p >When a vendor bill is received, you can record it from <span class="menuselection">Purchases ‣ Vendor Bills</span>
-in the Accounting application. As a shortcut,
-you can also use the <strong >New Bill</strong> feature on the accounting dashboard.</p><img src="../../../_images/vendor_bill05.png" style="" class="img-responsive center-block"><p >To register a new vendor bill, start by selecting a vendor and inputting
-their invoice as the <strong >Vendor Reference</strong>, then add and confirm the product
-lines, making sure to have the right product quantities, taxes and
-prices.</p><img src="../../../_images/vendor_bill01.png" style="" class="img-responsive center-block"><p >Save the invoice to update the pre tax and tax amounts at the bottom of
-the screen. You will most likely need to configure the prices of your
-products without taxes as Odoo will compute the tax for you.</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >On the bottom left corner, Odoo shows a summary table of all taxes on the vendor bill.
-In several countries, different methods are accepted to round the totals (round per line,
-or round globally). The default rounding method in Odoo is to round the final prices
-per line (as you may have different taxes per product. E.g. Alcohol and cigarettes).
-However if your vendor has a different tax amount on their bill, you can change the
-amount in the bottom left table to adjust and match.</p></div></section><section id="validate-the-vendor-bill"><h3 >Validate The Vendor Bill</h3><p >Once the vendor bill is validated, a journal entry will be generated
-based on the configuration on the invoice. This journal entry may differ
-depending on the the accounting package you choose to use.</p><p >For most European countries, the journal entry will use the following
-accounts:</p><ul ><li ><strong >Accounts Payable:</strong> defined on the vendor form</li><li ><strong >Taxes:</strong> defined on the products and per line</li><li ><strong >Expenses:</strong> defined on the line item product used</li></ul><p >For Anglo-Saxon (US) accounting, the journal entry will use the
-following accounts:</p><ul ><li ><strong >Accounts Payable:</strong> defined on the vendor form</li><li ><strong >Taxes:</strong> defined on the products and per line</li><li ><strong >Goods Received:</strong> defined on the product form</li></ul><p >You can check your Profit &amp; Loss or the Balance Sheet reports after
-having validated a couple of vendor bills to see the impact on your
-general ledger.</p></section><section id="pay-a-bill"><h3 >Pay a bill</h3><p >To create a payment for an open vendor bill directly, you can click on <strong >Register a
-Payment</strong> at the top of the form.</p><p >From there, you select the payment method (i.e. Checking account, credit
-card, check, etc…) and the amount you wish to pay. By default, Odoo will
-propose the entire remaining balance on the bill for payment. In the
-memo field, we recommend you set the vendor invoice number as a
-reference (Odoo will auto fill this field from the from the vendor bill
-if set it correctly).</p><img src="../../../_images/vendor_bill06.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >You can also register a payment to a vendor directly without applying it to a vendor bill.
-To do that, <span class="menuselection">Purchases ‣ Payments</span>. Then,
-from the vendor bill you will be able to reconcile this payment with directly.</p></div></section><section id="printing-vendor-checks"><h3 >Printing vendor Checks</h3><p >If you choose to pay your vendor bills by check, Odoo offers a method to
-do so directly from your vendor payments within Odoo. Whether you do so
-on a daily basis or prefer to do so at the end of the week, you can
-print in checks in batches.</p><p >If you have checks to print, Odoo’s accounting dashboard acts as a to do
-list and reminds you of how many checks you have left to be printed.</p><img src="../../../_images/vendor_bill02.png" style="" class="img-responsive center-block"><p >By selecting the amount of checks to be printed, you can dive right into
-a list of all payments that are ready to be processed.</p><p >Select all the checks you wish to print (use the first checkbox to
-select them all) and set the action to <strong >Print Checks</strong>. Odoo will ask you
-to set the next check number in the sequence and will then print all the
-checks at once.</p><img src="../../../_images/vendor_bill03.png" style="" class="img-responsive center-block"></section><section id="reporting"><h2 >Reporting</h2></section><section id="aged-payable-balance"><h3 >Aged payable balance</h3><p >In order to get a list of open vendor bills and their related due dates,
-you can use the <strong >Aged Payable</strong> report, under the reporting menu, (in
-<span class="menuselection">Reporting ‣ Business Statement ‣ Aged payable</span>) to get a visual of all of
-your outstanding bills.</p><img src="../../../_images/vendor_bill04.png" style="" class="img-responsive center-block"><p >From here, you can click directly on a vendors name to open up the
-details of all outstanding bills and the amounts due, or you can
-annotate any line for managements information. At any point in time
-while you’re looking through the report, you can print directly to Excel
-or PDF and get exactly what you see on the screen.</p><div role="alert" class="alert-go_to alert"><p class="alert-title">See also</p><ul ><li ><a href="customer_invoice.html" class="internal alert-link reference"><span class="doc">From Customer Invoice to Payments Collection</span></a></li></ul></div></section>
+  <section id="from-vendor-bill-to-payment"><p >Когда реквизиты поставщика зарегистрированы в Odoo, вы можете легко заплатить поставщикам правильную сумму и в нужное время (не поздно, не слишком рано, в зависимости от вашей политики поставщиков). Odoo предлагает отчеты для отслеживания вашей временной задолженности.</p><p >Если вы хотите контролировать счета от поставщиков, вы можете воспользоваться модулем Покупки в Odoo, который позволяет контролировать и предварительно заполнять их на основе предварительных заказов на покупку.</p></section><section id="id1"><h2 >От счета поставщика к оплате</h2></section><section id="record-a-new-vendor-bill"><h3 >Запишите новый счет поставщика</h3><p >При получении счета поставщика вы можете записать его с: menuselection: [UNKNOWN NODE title_reference] Как кратчайший путь, вы также можете использовать функцию ** Новый счет ** на информационной панели бухучета.</p><img src="../../../_images/vendor_bill05.png" style="" class="img-responsive center-block"><p >Чтобы зарегистрировать новый счет поставщика, сначала выберите поставщика и введите свой счет-фактуру как ** Референс поставщика [UNKNOWN NODE problematic], затем добавьте и подтвердите строки товаров, убедившись в том, что они нужны товары, налоги и цены.</p><img src="../../../_images/vendor_bill01.png" style="" class="img-responsive center-block"><p >Сохраните счет-фактуру, чтобы обновить суммы предыдущего налогообложения и налога в нижней части экрана. Вам, скорее всего, придется настроить цены на ваши товары без налогов, поскольку Odoo будет исчислять налог для вас.</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >В нижнем левом углу Odoo показывает сводную таблицу всех налогов на счет поставщика. В нескольких странах принимаются различные методы, чтобы обойти итоговые данные (округление строки или глобальное округления). Метод округления по умолчанию в Odoo - это округление конечных цен на строку (у вас могут быть разные налоги на товар, например, алкоголь и сигареты). Однако, если ваш поставщик другую сумму налога на своем счету, вы можете изменить сумму в нижней левой таблицы, чтобы настроить и сопоставить сумму.</p></div></section><section id="validate-the-vendor-bill"><h3 >Подтвердите счет поставщика</h3><p >После подтверждения счета поставщика запись журнала будет сгенерирован на основе настроек счета-фактуры. Эта запись журнала может отличаться в зависимости от пакета бухгалтерского учета, который вы выбрали для использования.</p><p >Для большинства европейских стран журнал будет использовать следующие счета:</p><ul ><li >** Кредиторская задолженность: ** определена в форме поставщика</li><li >** Налоги: ** определяются на товары и на строку</li><li >** Расходы: ** определено на использованном элементе строки товара</li></ul><p >Для англосаксонского бухучета (США) запись журнала использовать такие учетные записи:</p><ul ><li >** Кредиторская задолженность: ** определена в форме поставщика</li><li >** Налоги: ** определяются на товары и на строку</li><li >** Присланные товары: ** определены в форме товара</li></ul><p >Вы можете проверить отчеты о доходах и расходах или баланс после проверки нескольких счетов поставщиков, чтобы увидеть влияние на вашу общую бухгалтерскую книгу.</p></section><section id="pay-a-bill"><h3 >оплатите счет</h3><p >Чтобы создать платеж непосредственно на открытом счета поставщика, вы можете нажать кнопку ** Зарегистрировать платеж ** в верхней части формы</p><p >Оттуда вы выберете способ оплаты (например, проверка счета, кредитная карточка, чек и т.п.) и сумму, которую вы платите. По умолчанию Odoo предложит весь остаток на счете для оплаты. В поле заметки мы рекомендуем установить номер счета-фактуры поставщика как референс (Odoo будет автоматически заполнять это поле с поля счета поставщика, если он правильно установлен).</p><img src="../../../_images/vendor_bill06.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Вы также можете зарегистрировать платеж поставщику напрямую, не применяя его в счет поставщика. Для этого нажмите: [UNKNOWN NODE title_reference]. Тогда, со счета поставщика вы сможете непосредственно согласовать этот платеж.</p></div></section><section id="printing-vendor-checks"><h3 >Напечатайте чеки поставщика</h3><p >Если вы решите оплатить счета своих поставщиков с помощью чеков, Odoo предлагает способ, чтобы сделать это непосредственно по платежам поставщиков в Odoo. Независимо от того, вы делаете это ежедневно, либо в конце недели, вы можете печатать чеки группой.</p><p >Если у вас есть чек для печати, панель приборов бухучета Odoo действует как список дел и напоминает вам о том, сколько чеков вы оставили для печати.</p><img src="../../../_images/vendor_bill02.png" style="" class="img-responsive center-block"><p >Выбрав количество чеков для печати, вы можете пойти прямо в список платежей, которые готовы к отделке.</p><p >Выберите все чеки, которые вы хотите распечатать (используйте первый флажок, чтобы выбрать их все) и установите действие на ** Печать чеков [UNKNOWN NODE problematic]. Odoo попросит вас установить следующий номер чека в последовательности, а затем напечатать все чеки одновременно.</p><img src="../../../_images/vendor_bill03.png" style="" class="img-responsive center-block"></section><section id="reporting"><h2 >Отчетность</h2></section><section id="aged-payable-balance"><h3 >Отчет расчетов с кредиторами</h3><p >Чтобы получить список открытых счетов поставщиков и связанных с ними терминов, вы можете воспользоваться отчетом ** Расчеты с кредиторами [UNKNOWN NODE problematic], в меню отчетов (в меню: menuselection: [UNKNOWN NODE title_reference]) , чтобы получить визуальную информацию о всех выплаченных счета.</p><img src="../../../_images/vendor_bill04.png" style="" class="img-responsive center-block"><p >Отсюда вы можете кликнуть непосредственно на названии поставщиков, чтобы открыть подробности всех непогашенных счетов и сумм, подлежащих оплате, или вы можете записать любую строку для информации управления. В любой момент времени, когда вы просматриваете отчет, вы можете напечатать непосредственно в Excel или PDF и получить именно то, что вы видите на экране.</p><div role="alert" class="alert-go_to alert"><p class="alert-title">См.также</p><ul ><li ><a href="customer_invoice.html" class="internal alert-link reference"><span class="doc">От счета-фактуры клиента к сбору платежей</span></a></li></ul></div></section>
 
           </article>
         </div>

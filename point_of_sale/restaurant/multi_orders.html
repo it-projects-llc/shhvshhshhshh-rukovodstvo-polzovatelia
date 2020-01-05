@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>Register multiple orders &#8212; Odoo 13.0 documentation</title>
+    <title>Регистрация нескольких заказов &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
     <script type="text/javascript" src="../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../_static/doc.js"></script>
     <script type="text/javascript" src="../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/point_of_sale/restaurant/multi_orders.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/point_of_sale/restaurant/multi_orders.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/point_of_sale/restaurant/multi_orders.html" />
+    <link rel="canonical" href="/master/ru/point_of_sale/restaurant/multi_orders.html" />
   
-    <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Payment Terminals" href="../payment.html" />
-    <link rel="prev" title="Transfer customers between tables" href="transfer.html" /> 
+    <link rel="index" title="Алфавитный указатель" href="../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../search.html" />
+    <link rel="next" title="Платежные терминалы" href="../payment.html" />
+    <link rel="prev" title="Перемещение клиентов между столами" href="transfer.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -194,7 +198,7 @@
         
             
                 
-                    <li><a href="../../point_of_sale.html">Point of Sale</a></li>
+                    <li><a href="../../point_of_sale.html">Точка продаж</a></li>
                 
             
         
@@ -205,7 +209,7 @@
             
         
     
-    <li class="active"><a href="#">Register multiple orders</a></li>
+    <li class="active"><a href="#">Регистрация нескольких заказов</a></li>
 
               
           </ol>
@@ -221,12 +225,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/point_of_sale/restaurant/multi_orders.html">English</a></li>
+        
+            <li><a href="/13.0/uk/point_of_sale/restaurant/multi_orders.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -253,6 +272,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -262,7 +283,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> Register multiple orders </h1>
+        <h1> Регистрация нескольких заказов </h1>
       </div>
     </figure>
     
@@ -275,7 +296,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#register-an-additional-order" class="ripple internal reference">Register an additional order</a></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#register-an-additional-order" class="ripple internal reference">Зарегистрируйте дополнительный заказ</a></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/point_of_sale/restaurant/multi_orders.rst" class="gith-link">
                   Edit on GitHub
@@ -287,11 +308,7 @@
           <article class="doc-body  ">
             
             
-  <section id="register-multiple-orders"><p >The Odoo Point of Sale App allows you to register multiple orders
-simultaneously giving you all the flexibility you need.</p></section><section id="register-an-additional-order"><h2 >Register an additional order</h2><p >When you are registering any order, you can use the <em >+</em> button to add
-a new order.</p><p >You can then move between each of your orders and process the payment
-when needed.</p><img src="../../_images/multi_orders01.png" style="" class="img-responsive center-block"><p >By using the <em >-</em> button, you can remove the order you are currently
-on.</p></section>
+  <section id="register-multiple-orders"><p >Программа точка продажи Odoo позволяет зарегистрировать несколько заказов одновременно, предоставляя вам всю необходимую гибкость.</p></section><section id="register-an-additional-order"><h2 >Зарегистрируйте дополнительный заказ</h2><p >Когда вы регистрируете любой заказ, вы можете использовать кнопку &amp;quot;+&amp;quot;, чтобы добавить новый заказ.</p><p >Затем вы можете перемещаться между каждым из ваших заказов и обрабатывать платеж при необходимости.</p><img src="../../_images/multi_orders01.png" style="" class="img-responsive center-block"><p >Используя кнопку &amp;quot;-&amp;quot;, вы можете удалить заказ, вы сейчас обрабатываете.</p></section>
 
           </article>
         </div>

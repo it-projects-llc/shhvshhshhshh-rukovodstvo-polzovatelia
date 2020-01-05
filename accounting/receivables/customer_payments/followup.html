@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>Follow-up on invoices and get paid faster &#8212; Odoo 13.0 documentation</title>
+    <title>Напоминайте о счетах и получайте оплату быстрее &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../../_static/doc.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/accounting/receivables/customer_payments/followup.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/accounting/receivables/customer_payments/followup.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/accounting/receivables/customer_payments/followup.html" />
+    <link rel="canonical" href="/master/ru/accounting/receivables/customer_payments/followup.html" />
   
-    <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Account Payables" href="../../payables.html" />
-    <link rel="prev" title="Batch Payments: SEPA Direct Debit (SDD)" href="batch_sdd.html" /> 
+    <link rel="index" title="Алфавитный указатель" href="../../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../../search.html" />
+    <link rel="next" title="учетные платежи" href="../../payables.html" />
+    <link rel="prev" title="Групповые платежи: Прямой дебет SEPA (SDD)" href="batch_sdd.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -194,7 +198,7 @@
         
             
                 
-                    <li><a href="../../../accounting.html">Accounting</a></li>
+                    <li><a href="../../../accounting.html">Бухгалтерский учёт</a></li>
                 
             
         
@@ -211,7 +215,7 @@
             
         
     
-    <li class="active"><a href="#">Follow-up on invoices and get paid faster</a></li>
+    <li class="active"><a href="#">Напоминайте о счетах и получайте оплату быстрее</a></li>
 
               
           </ol>
@@ -227,12 +231,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/accounting/receivables/customer_payments/followup.html">English</a></li>
+        
+            <li><a href="/13.0/uk/accounting/receivables/customer_payments/followup.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -259,6 +278,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -268,7 +289,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> Follow-up on invoices and get paid faster </h1>
+        <h1> Напоминайте о счетах и получайте оплату быстрее </h1>
       </div>
     </figure>
     
@@ -281,7 +302,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#manage-your-follow-ups" class="ripple internal reference">Manage your follow-ups</a></li><li class="list-group-item"><a href="#send-reminders-in-batch" class="ripple internal reference">Send reminders in batch</a></li><li class="list-group-item"><a href="#plan-a-follow-up-process" class="ripple internal reference">Plan a follow-up process</a></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#manage-your-follow-ups" class="ripple internal reference">Управление вашими напоминаниями</a></li><li class="list-group-item"><a href="#send-reminders-in-batch" class="ripple internal reference">Отправка групповых напоминаний</a></li><li class="list-group-item"><a href="#plan-a-follow-up-process" class="ripple internal reference">планирование напоминаний</a></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/accounting/receivables/customer_payments/followup.rst" class="gith-link">
                   Edit on GitHub
@@ -293,33 +314,7 @@
           <article class="doc-body  ">
             
             
-  <section id="follow-up-on-invoices-and-get-paid-faster"><p >It is essential for your business to collect payments when they are
-overdue. Odoo will help you identify payments that are late and will
-allow you to send the appropriate reminders.</p></section><section id="manage-your-follow-ups"><h2 >Manage your follow-ups</h2><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >We recommend that you reconcile your bank statements before
-launching your follow-up process. It will avoid you the trouble of
-sending a statement to a customer that has already paid you.</p></div><p >The overdue invoices you need to follow-up on are available by default
-in <span class="menuselection">Accounting ‣ Sales ‣ Follow-up Reports</span>. There,
-you can easily send a reminder by email or print it as a letter. Then,
-you can click on the <em >Done</em> button to view the next follow-up that
-needs your attention.</p><p >Otherwise, if now is not the time for a reminder, click on <em >Remind me
-later</em>. You will get the next report according to the <em >Next Reminder
-Date</em> set on the statement.</p><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >To avoid sending too many reminders in a short period of time,
-change the number of days calculated between each report by going to
-<span class="menuselection">Accounting ‣ Configuration ‣ Settings ‣ Payment
-Follow-up</span>.</p></div><p >You can also set a trust level for your customers by marking them as
-bad, normal or good debtors on the follow-up reports.</p><img src="../../../_images/followup01.png" style="" class="img-responsive center-block"></section><section id="send-reminders-in-batch"><h2 >Send reminders in batch</h2><p >To get your follow-up process easier, you can send reminder emails in
-batch from your follow-up reports page. Select all the reports you would
-like to process, click on <em >Action</em> and then on <em >Process Follow-ups</em>.
-A pdf document containing all of the follow-up letters for you to print
-will also be automatically generated.</p><img src="../../../_images/followup02.png" style="" class="img-responsive center-block"></section><section id="plan-a-follow-up-process"><h2 >Plan a follow-up process</h2><p >To plan a follow-up process, go to <span class="menuselection">Accounting ‣
-Configuration ‣ Settings</span> and activate the <em >Follow-up Levels</em>
-feature under the <em >Customer Payments</em> section. Then, click on the new
-<em >Follow-up Levels</em> button that has appeared on your settings page.</p><p >A follow-up plan with several actions is available by default in Odoo,
-but you can customize it any way you want. Depending on a specific
-number of overdue days, plan to send an email, a letter or to undertake
-a manual action. You can also edit the template used for the statement
-according to the stage of the process.</p><img src="../../../_images/followup03.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >If you would like to get a reminder before the actual due date,
-set a negative number of due days.</p></div></section>
+  <section id="follow-up-on-invoices-and-get-paid-faster"><p >Важно, чтобы ваша компания получала платежи, когда они просроченные. Odoo поможет вам определить платежи, которые задерживаются, и позволит вам отправлять соответствующие напоминания.</p></section><section id="manage-your-follow-ups"><h2 >Управление вашими напоминаниями</h2><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >Мы рекомендуем согласовать выписки из банка перед запуском процесса дальнейших действий. Это позволит избежать трудностей при отправке выписки клиенту, который уже заплатил вам.</p></div><p >Просроченные счета-фактуры, которые нужно оплатить, доступные по умолчанию в: menuselection: [UNKNOWN NODE title_reference]. Там вы можете легко направить напоминание по электронной почте или распечатать его как письмо. После этого можно нажать кнопку * Готово [UNKNOWN NODE problematic], чтобы посмотреть напоминание, которые нуждаются в вашем внимании.</p><p >Если сейчас не время для напоминания, нажмите кнопку * Напомнить позже [UNKNOWN NODE problematic]. Вы получите следующий отчет согласно * Следующей датой напоминания [UNKNOWN NODE problematic], установленной на выписке.</p><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >Чтобы избежать частых отправляться заметок короткий промежуток времени, измените количество дней, вычисленных между каждым отчетом, перейдя к меню: menuselection: [UNKNOWN NODE title_reference].</p></div><p >Вы также можете установить уровень доверия для ваших клиентов, обозначив их как плохих, нормальных или хороших должников в отчетах о напоминания.</p><img src="../../../_images/followup01.png" style="" class="img-responsive center-block"></section><section id="send-reminders-in-batch"><h2 >Отправка групповых напоминаний</h2><p >Чтобы облегчить процесс отслеживания, вы можете отправить электронные письма с напоминанием группой со страницы отчетов о напоминания. Выберите все отчеты, которые нужно обработать, нажмите * Действие [UNKNOWN NODE problematic], а затем * Выполнить напоминание [UNKNOWN NODE problematic]. Также будет автоматически создан PDF-документ, содержащий все письма, которые вы можете напечатать.</p><img src="../../../_images/followup02.png" style="" class="img-responsive center-block"></section><section id="plan-a-follow-up-process"><h2 >планирование напоминаний</h2><p >Чтобы спланировать напоминание, перейдите к меню: menuselection: [UNKNOWN NODE title_reference] и активируйте функцию * Уровни напоминаний * в разделе * Платежи клиентов [UNKNOWN NODE problematic]. Затем нажмите кнопку * Уровни напоминаний [UNKNOWN NODE problematic], которая появилась на странице настроек.</p><p >По умолчанию в Odoo доступный план напоминаний с несколькими действиями, но вы можете настроить его так, как хотите. В зависимости от определенного количества просроченных дней планируем отправить сообщение, письмо или осуществить ручную действие. Вы также можете редактировать шаблон, который используется для выписки в соответствии с этапа процесса.</p><img src="../../../_images/followup03.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >Если вы хотите получить напоминание перед фактической датой, установите отрицательное число дней.</p></div></section>
 
           </article>
         </div>

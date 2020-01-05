@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>How to manage prices for B2B (tax excluded) and B2C (tax included)? &#8212; Odoo 13.0 documentation</title>
+    <title>Как управлять ценами для B2B (с выключенным налогом) и B2C (с включенным налогом)? &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../../_static/doc.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/accounting/others/taxes/B2B_B2C.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/accounting/others/taxes/B2B_B2C.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/accounting/others/taxes/B2B_B2C.html" />
+    <link rel="canonical" href="/master/ru/accounting/others/taxes/B2B_B2C.html" />
   
-    <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="How to manage cash basis taxes" href="cash_basis_taxes.html" />
-    <link rel="prev" title="How to manage withholding taxes?" href="retention.html" /> 
+    <link rel="index" title="Алфавитный указатель" href="../../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../../search.html" />
+    <link rel="next" title="Как управлять налогами, начисленных кассовым методом" href="cash_basis_taxes.html" />
+    <link rel="prev" title="Как управления налогами на содержание?" href="retention.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -194,7 +198,7 @@
         
             
                 
-                    <li><a href="../../../accounting.html">Accounting</a></li>
+                    <li><a href="../../../accounting.html">Бухгалтерский учёт</a></li>
                 
             
         
@@ -211,7 +215,7 @@
             
         
     
-    <li class="active"><a href="#">How to manage prices for B2B (tax excluded) and B2C (tax included)?</a></li>
+    <li class="active"><a href="#">Как управлять ценами для B2B (с выключенным налогом) и B2C (с включенным налогом)?</a></li>
 
               
           </ol>
@@ -227,12 +231,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/accounting/others/taxes/B2B_B2C.html">English</a></li>
+        
+            <li><a href="/13.0/uk/accounting/others/taxes/B2B_B2C.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -259,6 +278,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -268,7 +289,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> How to manage prices for B2B (tax excluded) and B2C (tax included)? </h1>
+        <h1> Как управлять ценами для B2B (с выключенным налогом) и B2C (с включенным налогом)? </h1>
       </div>
     </figure>
     
@@ -281,7 +302,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a><ul ><li class="list-group-item"><a href="#introduction" class="ripple internal reference">Introduction</a></li><li class="list-group-item"><a href="#setting-your-products" class="ripple internal reference">Setting your products</a></li><li class="list-group-item"><a href="#setting-the-b2c-fiscal-position" class="ripple internal reference">Setting the B2C fiscal position</a></li></ul></li><li class="list-group-item"><a href="#test-by-creating-a-quotation" class="ripple internal reference">Test by creating a quotation</a></li><li class="list-group-item"><a href="#avoid-changing-every-sale-order" class="ripple internal reference">Avoid changing every sale order</a></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Настройка</a><ul ><li class="list-group-item"><a href="#introduction" class="ripple internal reference">Введение</a></li><li class="list-group-item"><a href="#setting-your-products" class="ripple internal reference">Настройте ваши товары</a></li><li class="list-group-item"><a href="#setting-the-b2c-fiscal-position" class="ripple internal reference">Установите схему налогообложения B2C</a></li></ul></li><li class="list-group-item"><a href="#test-by-creating-a-quotation" class="ripple internal reference">Проверьте, создав коммерческое предложение</a></li><li class="list-group-item"><a href="#avoid-changing-every-sale-order" class="ripple internal reference">Избегайте изменений в каждом заказе на продажу</a></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/accounting/others/taxes/B2B_B2C.rst" class="gith-link">
                   Edit on GitHub
@@ -293,72 +314,7 @@
           <article class="doc-body  ">
             
             
-  <section id="how-to-manage-prices-for-b2b-tax-excluded-and-b2c-tax-included"><p >When working with consumers, prices are usually expressed with taxes
-included in the price (e.g., in most eCommerce). But, when you work in a
-B2B environment, companies usually negotiate prices with taxes excluded.</p><p >Odoo manages both use cases easily, as long as you register your prices
-on the product with taxes excluded or included, but not both together.
-If you manage all your prices with tax included (or excluded) only, you
-can still easily do sales order with a price having taxes excluded (or
-included): that’s easy.</p><p >This documentation is only for the specific use case where you need to
-have two references for the price (tax included or excluded), for the
-same product. The reason of the complexity is that there is not a
-symmetrical relationship with prices included and prices excluded, as
-shown in this use case, in belgium with a tax of 21%:</p><ul ><li >Your eCommerce has a product at <strong >10€ (taxes included)</strong></li><li >This would do <strong >8.26€ (taxes excluded)</strong> and a <strong >tax of 1.74€</strong></li></ul><p >But for the same use case, if you register the price without taxes on
-the product form (8.26€), you get a price with tax included at 9.99€,
-because:</p><ul ><li ><strong >8.26€ * 1.21 = 9.99€</strong></li></ul><p >So, depending on how you register your prices on the product form, you
-will have different results for the price including taxes and the price
-excluding taxes:</p><ul ><li >Taxes Excluded: <strong >8.26€ &amp; 10.00€</strong></li><li >Taxes Included: <strong >8.26€ &amp; 9.99€</strong></li></ul><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >If you buy 100 pieces at 10€ taxes included, it gets even more
-tricky. You will get: <strong >1000€ (taxes included) = 826.45€ (price) +
-173.55€ (taxes)</strong> Which is very different from a price per piece at
-8.26€ tax excluded.</p></div><p >This documentation explains how to handle the very specific use case
-where you need to handle the two prices (tax excluded and included) on
-the product form within the same company.</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >In terms of finance, you have no more revenues selling your
-product at 10€ instead of 9.99€ (for a 21% tax), because your revenue
-will be exactly the same at 9.99€, only the tax is 0.01€ higher. So, if
-you run an eCommerce in Belgium, make your customer a favor and set your
-price at 9.99€ instead of 10€. Please note that this does not apply to
-20€ or 30€, or other tax rates, or a quantity &gt;1. You will also make you
-a favor since you can manage everything tax excluded, which is less
-error prone and easier for your salespeople.</p></div></section><section id="configuration"><h2 >Configuration</h2></section><section id="introduction"><h3 >Introduction</h3><p >The best way to avoid this complexity is to choose only one way of
-managing your prices and stick to it: price without taxes or price with
-taxes included. Define which one is the default stored on the product
-form (on the default tax related to the product), and let Odoo compute
-the other one automatically, based on the pricelist and fiscal position.
-Negotiate your contracts with customers accordingly. This perfectly
-works out-of-the-box and you have no specific configuration to do.</p><p >If you can not do that and if you really negotiate some prices with tax
-excluded and, for other customers, others prices with tax included, you
-must:</p><ol ><li >always store the default price TAX EXCLUDED on the product form, and
-apply a tax (price included on the product form)</li><li >create a pricelist with prices in TAX INCLUDED, for specific
-customers</li><li >create a fiscal position that switches the tax excluded to a tax
-included</li><li >assign both the pricelist and the fiscal position to customers who
-want to benefit to this pricelist and fiscal position</li></ol><p >For the purpose of this documentation, we will use the above use case:</p><ul ><li >your product default sale price is 8.26€ tax excluded</li><li >but we want to sell it at 10€, tax included, in our shops or
-eCommerce website</li></ul></section><section id="setting-your-products"><h3 >Setting your products</h3><p >Your company must be configured with tax excluded by default. This is
-usually the default configuration, but you can check your <strong >Default Sale
-Tax</strong> from the menu <span class="menuselection">Configuration ‣ Settings</span>
-of the Accounting application.</p><img src="../../../_images/price_B2C_B2B01.png" style="" class="img-responsive center-block"><p >Once done, you can create a <strong >B2C</strong> pricelist. You can activate the
-pricelist feature per customer from the menu:
-<span class="menuselection">Configuration ‣ Settings</span> of the Sale application.
-Choose the option <strong >different prices per customer segment</strong>.</p><p >Once done, create a B2C pricelist from the menu
-<span class="menuselection">Configuration ‣ Pricelists</span>.
-It’s also good to rename the default pricelist into B2B to avoid confusion.</p><p >Then, create a product at 8.26€, with a tax of 21% (defined as tax not
-included in price) and set a price on this product for B2C customers at
-10€, from the <span class="menuselection">Sales ‣ Products</span>
-menu of the Sales application:</p><img src="../../../_images/price_B2C_B2B02.png" style="" class="img-responsive center-block"></section><section id="setting-the-b2c-fiscal-position"><h3 >Setting the B2C fiscal position</h3><p >From the accounting application, create a B2C fiscal position from this
-menu: <span class="menuselection">Configuration ‣ Fiscal Positions</span>.
-This fiscal position should map the VAT 21% (tax excluded of price)
-with a VAT 21% (tax included in price)</p><img src="../../../_images/price_B2C_B2B03.png" style="" class="img-responsive center-block"></section><section id="test-by-creating-a-quotation"><h2 >Test by creating a quotation</h2><p >Create a quotation from the Sale application, using the
-<span class="menuselection">Sales ‣ Quotations</span> menu. You should have the
-following result: 8.26€ + 1.73€ = 9.99€.</p><img src="../../../_images/price_B2C_B2B04.png" style="" class="img-responsive center-block"><p >Then, create a quotation but <strong >change the pricelist to B2C and the
-fiscal position to B2C</strong> on the quotation, before adding your product.
-You should have the expected result, which is a total price of 10€ for
-the customer: 8.26€ + 1.74€ = 10.00€.</p><img src="../../../_images/price_B2C_B2B05.png" style="" class="img-responsive center-block"><p >This is the expected behavior for a customer of your shop.</p></section><section id="avoid-changing-every-sale-order"><h2 >Avoid changing every sale order</h2><p >If you negotiate a contract with a customer, whether you negotiate tax
-included or tax excluded, you can set the pricelist and the fiscal
-position on the customer form so that it will be applied automatically
-at every sale of this customer.</p><p >The pricelist is in the <strong >Sales &amp; Purchases</strong> tab of the customer form,
-and the fiscal position is in the accounting tab.</p><p >Note that this is error prone: if you set a fiscal position with tax
-included in prices but use a pricelist that is not included, you might
-have wrong prices calculated for you. That’s why we usually recommend
-companies to only work with one price reference.</p></section>
+  <section id="how-to-manage-prices-for-b2b-tax-excluded-and-b2c-tax-included"><p >Работая с клиентами, цены обычно выражаются с налогами, включенными в цену (например, в большинстве электронной коммерции). Но, когда вы работаете в B2B, компании обычно ведут переговоры о ценах без налогов.</p><p >Odoo легко управляет обоими случаями использования, если вы регистрируете свои цены на товар с выключенными или включенными налогами, но не оба вместе. Если вы управляете всеми своими ценами только с налогом (или выключенным), вы все равно можете легко выполнить заказ на продажу с ценой, не включая налоги (или включает): это просто.</p><p >Эта документация предназначена только для конкретного случая использования, когда вам нужно иметь два Проекты на цену (включая НДС или без НДС) для этого самого товара. Причиной сложности является то, что не существует симметричного соотношение с ценами с включенным налогом и ценам с выключенным налогом, как показано в данном случае, в Бельгии с налогом в размере 21%:</p><ul ><li >Ваша электронная коммерция имеет товар на ** 10 евро (включая налогами) **</li><li >Это будет ** 8,26 евро (без налогов) ** и ** налог 1,74 евро **</li></ul><p >Но для того же случае, если вы регистрируете цену без налогов в форме товара (8,26 €), вы получаете цену с налогом в размере 9,99 €, поскольку:</p><ul ><li ><strong >8.26€ * 1.21 = 9.99€</strong></li></ul><p >Итак, в зависимости от того, как вы регистрируете свои цены на форме товара, вы получите разные результаты по цене, включая налоги и цену за вычетом налогов:</p><ul ><li >Налоги исключено: ** 8.26 € &amp;amp; 10.00 € **</li><li >Налоги включены: ** 8.26 € &amp;amp; 9.99 € **</li></ul><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Если вы покупаете 100 единиц с налогами 10 евро, это становится еще сложнее. Вы получите: ** 1000 € (с учетом налогов) = 826.45 € (цена) + 173.55 € (налоги) [UNKNOWN NODE problematic], сильно отличается от цены за единицу за 8.26 € без налога.</p></div><p >В этой документации объясняется, как управлять очень конкретным случаем использования, когда вам нужно справиться с двумя ценам (без налога и с включенным налогом) в форме товара в пределах одной компании.</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >С точки зрения финансов, вы больше не получаете прибыль от продажи товара за 10 евро, а не 9,99 евро (по налогу в размере 21%), поскольку ваша прибыль будет таким же по 9,99 евро, только налог на 0,01 евро выше. Итак, если вы запускаете электронной коммерции в Бельгии, сделайте услугу своему клиенту и установите цену на уровне 9,99 евро вместо 10 евро. Обратите внимание, что это не касается 20 евро или 30 евро, или других ставок налога или количестве&amp;gt; 1. Вы также сделаете себе пользу, поскольку вы можете управлять всеми налоговыми правами, менее подвержены ошибкам и проще для ваших продавцов.</p></div></section><section id="configuration"><h2 >Настройка</h2></section><section id="introduction"><h3 >Введение</h3><p >Лучшим способом избежать этой сложности есть выбор только одного способа управления вашими ценами и соблюдения его: цена без налогов или цены с включенными налогами. Определите, какой тип по умолчанию сохраняется в форме товара (по умолчанию налог, относящийся к товару), и Odoo автоматически вычисляет другой, исходя из ПРАЙСЛИСТ и схемы налогообложения. Обсудите свои контракты с клиентами. Это прекрасно работает &amp;quot;из коробки&amp;quot;, и у вас нет конкретных настроек.</p><p >Если вы не можете это сделать, и если вы действительно договариваетесь о некоторых цены за вычетом налогов, а для других покупателей - другим ценам с налогом, то вам необходимо:</p><ol ><li >всегда сохраняйте цену по умолчанию, исключенного на форме товара, и указывайте налог (цена указана в форме товара)</li><li >создайте прайслист с ценами с включенным налогом, для конкретных клиентов</li><li >создайте схему налогообложения, переключает цену без налога на цену с включенным налогом</li><li >назначьте как прайслист, так и схему налогообложения клиентам, которые хотят воспользоваться этой цене и схеме налогообложения</li></ol><p >Для целей настоящей документации мы будем использовать вышеизложенное использования:</p><ul ><li >ваша цена по умолчанию не равна 8.26 €</li><li >но мы хотим продать его за 10 евро, включая цену, в наших магазинах или на сайте электронной коммерции</li></ul></section><section id="setting-your-products"><h3 >Настройте ваши товары</h3><p >Ваша компания должна быть настроена по цене по умолчанию. Обычно это настройки по умолчанию, но вы можете проверить ** налог на продажу по умолчанию ** в меню: menuselection: [UNKNOWN NODE title_reference] в модуле Бухучет.</p><img src="../../../_images/price_B2C_B2B01.png" style="" class="img-responsive center-block"><p >После этого вы можете создать прайслист ** B2C [UNKNOWN NODE problematic]. Вы можете активировать функцию ПРАЙСЛИСТ для каждого клиента в меню:: menuselection: [UNKNOWN NODE title_reference] приложении Продажа. Выберите опцию ** разные цены на сегмент клиента [UNKNOWN NODE problematic].</p><p >После этого создайте прайслист B2C меню: menuselection: [UNKNOWN NODE title_reference]. Также хорошо переименовать прайслист по умолчанию на B2B, чтобы избежать путаницы.</p><p >Затем создайте товар на 8,26 евро с налогом в размере 21% (определяется как налог, который не входит в стоимость), и установите цену на этот товар для клиентов B2C на уровне 10 евро с меню: menuselection: [UNKNOWN NODE problematic]Продажи -&amp;gt; Товары [UNKNOWN NODE problematic]из приложения Продажи:</p><img src="../../../_images/price_B2C_B2B02.png" style="" class="img-responsive center-block"></section><section id="setting-the-b2c-fiscal-position"><h3 >Установите схему налогообложения B2C</h3><p >В бухгалтерском приложении создайте схему налогообложения В2С из этого меню:: menuselection: [UNKNOWN NODE title_reference]. Эта схема налогообложения должна отражать НДС 21% (без учета налога) с НДС 21% (налог входит в стоимость)</p><img src="../../../_images/price_B2C_B2B03.png" style="" class="img-responsive center-block"></section><section id="test-by-creating-a-quotation"><h2 >Проверьте, создав коммерческое предложение</h2><p >Создайте коммерческое предложение по программе Продажи с помощью меню: menuselection: [UNKNOWN NODE title_reference]. Вы следующий результат: 8.26 € + 1.73 € = 9.99 €.</p><img src="../../../_images/price_B2C_B2B04.png" style="" class="img-responsive center-block"><p >Затем создайте коммерческое предложение, но ** измените прайслист на B2C и схему налогообложения B2C ** на коммерческое предложение, прежде чем добавлять свой товар. Вы должны получить ожидаемый результат, общая цена которого 10 € для клиента: 8.26 € + 1.74 € = 10.00 €.</p><img src="../../../_images/price_B2C_B2B05.png" style="" class="img-responsive center-block"><p >Это ожидаемое поведение для покупателя вашего магазина.</p></section><section id="avoid-changing-every-sale-order"><h2 >Избегайте изменений в каждом заказе на продажу</h2><p >Если вы заключаете договор с клиентом, обсуждаете цену, с включенным налогом или выключенным, вы можете установить прайслист и схему налогообложения в форме клиента, чтобы она применялась автоматически при каждой продаже этого клиента.</p><p >Прайслист на вкладке ** Продажи и Покупки ** в форме клиента, а схема налогообложения находится на вкладке бухучета.</p><p >Обратите внимание, что может возникнуть ошибка: если вы устанавливаете схему налогообложения по налогу, включенным в стоимость, но используете прайслист, без включенного налога, для вас могут быть выбраны неправильные цены. Вот почему мы обычно рекомендуем компаниям работать только с одним ценовым референсом.</p></section>
 
           </article>
         </div>

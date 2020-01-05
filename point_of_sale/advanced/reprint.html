@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>Reprint Receipts &#8212; Odoo 13.0 documentation</title>
+    <title>Повторная печать чеков &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/accounting.css" />
@@ -27,15 +27,19 @@
     <script type="text/javascript" src="../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
     <script type="text/javascript" src="../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../_static/doc.js"></script>
     <script type="text/javascript" src="../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/point_of_sale/advanced/reprint.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/point_of_sale/advanced/reprint.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/point_of_sale/advanced/reprint.html" />
+    <link rel="canonical" href="/master/ru/point_of_sale/advanced/reprint.html" />
   
-    <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Accept credit card payment using Mercury" href="mercury.html" />
+    <link rel="index" title="Алфавитный указатель" href="../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../search.html" />
+    <link rel="next" title="Прием оплаты кредитной картой через Mercury" href="mercury.html" />
     <link rel="prev" title="Log in with employee" href="multicashiers.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
@@ -194,7 +198,7 @@
         
             
                 
-                    <li><a href="../../point_of_sale.html">Point of Sale</a></li>
+                    <li><a href="../../point_of_sale.html">Точка продаж</a></li>
                 
             
         
@@ -205,7 +209,7 @@
             
         
     
-    <li class="active"><a href="#">Reprint Receipts</a></li>
+    <li class="active"><a href="#">Повторная печать чеков</a></li>
 
               
           </ol>
@@ -221,12 +225,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/point_of_sale/advanced/reprint.html">English</a></li>
+        
+            <li><a href="/13.0/uk/point_of_sale/advanced/reprint.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -253,6 +272,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -262,7 +283,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> Reprint Receipts </h1>
+        <h1> Повторная печать чеков </h1>
       </div>
     </figure>
     
@@ -275,7 +296,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a></li><li class="list-group-item"><a href="#reprint-a-receipt" class="ripple internal reference">Reprint a receipt</a></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Настройка</a></li><li class="list-group-item"><a href="#reprint-a-receipt" class="ripple internal reference">Повторно введите чек</a></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/point_of_sale/advanced/reprint.rst" class="gith-link">
                   Edit on GitHub
@@ -287,9 +308,8 @@
           <article class="doc-body  ">
             
             
-  <section id="reprint-receipts"><p >Use the <em >Reprint receipt</em> feature if you have the need to reprint a ticket.</p></section><section id="configuration"><h2 >Configuration</h2><p >To activate <em >Reprint Receipt</em>, go to <span class="menuselection">Point of Sale
-‣ Configuration ‣ Point of sale</span>. and select your PoS interface.</p><p >Under the Bills &amp; Receipts category, you will find <em >Reprint Receipt</em>
-option.</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >In order to allow the option reprint receipt, you need to activate the receipt printer.</p></div><img src="../../_images/reprint01.png" style="" class="img-responsive center-block"></section><section id="reprint-a-receipt"><h2 >Reprint a receipt</h2><p >On your PoS interface, you now have a <em >Reprint receipt</em> button.</p><img src="../../_images/reprint02.png" style="" class="img-responsive center-block"><p >When you use it, you can then reprint your last receipt.</p><img src="../../_images/reprint03.png" style="" class="img-responsive center-block"></section>
+  <section id="reprint-receipts"><p >Используйте функцию подтверждения * повторный печати [UNKNOWN NODE problematic], если вам нужно повторно печатать чек.</p></section><section id="configuration"><h2 >Настройка</h2><p >To activate <em >Reprint Receipt</em>, go to <span class="menuselection">Point of Sale
+‣ Configuration ‣ Point of sale</span>. and select your PoS interface.</p><p >В разделе Счета и чеки вы найдете функцию * Повторная печать чека [UNKNOWN NODE problematic].</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >In order to allow the option reprint receipt, you need to activate the receipt printer.</p></div><img src="../../_images/reprint01.png" style="" class="img-responsive center-block"></section><section id="reprint-a-receipt"><h2 >Повторно введите чек</h2><p >В вашем интерфейсе точки продаж теперь кнопка подтверждения * повторной печати [UNKNOWN NODE problematic].</p><img src="../../_images/reprint02.png" style="" class="img-responsive center-block"><p >Когда вы используете его, вы можете повторно печатать последний чек.</p><img src="../../_images/reprint03.png" style="" class="img-responsive center-block"></section>
 
           </article>
         </div>

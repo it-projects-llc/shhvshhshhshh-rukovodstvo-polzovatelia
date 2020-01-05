@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>How to use routes? &#8212; Odoo 13.0 documentation</title>
+    <title>Как использовать маршруты? &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../../_static/doc.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/inventory/routes/concepts/use_routes.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/inventory/routes/concepts/use_routes.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/inventory/routes/concepts/use_routes.html" />
+    <link rel="canonical" href="/master/ru/inventory/routes/concepts/use_routes.html" />
   
-    <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="What is a procurement rule?" href="procurement_rule.html" />
-    <link rel="prev" title="Concepts" href="../concepts.html" /> 
+    <link rel="index" title="Алфавитный указатель" href="../../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../../search.html" />
+    <link rel="next" title="Что такое правила закупки?" href="procurement_rule.html" />
+    <link rel="prev" title="понятие" href="../concepts.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -194,7 +198,7 @@
         
             
                 
-                    <li><a href="../../../inventory.html">Inventory</a></li>
+                    <li><a href="../../../inventory.html">Склад</a></li>
                 
             
         
@@ -211,7 +215,7 @@
             
         
     
-    <li class="active"><a href="#">How to use routes?</a></li>
+    <li class="active"><a href="#">Как использовать маршруты?</a></li>
 
               
           </ol>
@@ -227,12 +231,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/inventory/routes/concepts/use_routes.html">English</a></li>
+        
+            <li><a href="/13.0/uk/inventory/routes/concepts/use_routes.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -259,6 +278,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -268,7 +289,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> How to use routes? </h1>
+        <h1> Как использовать маршруты? </h1>
       </div>
     </figure>
     
@@ -281,7 +302,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#overview" class="ripple internal reference">Overview</a></li><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a></li><li class="list-group-item"><a href="#pre-configured-routes" class="ripple internal reference">Pre-configured routes</a></li><li class="list-group-item"><a href="#custom-routes" class="ripple internal reference">Custom Routes</a><ul ><li class="list-group-item"><a href="#routes-applied-on-warehouses" class="ripple internal reference">Routes applied on warehouses</a></li><li class="list-group-item"><a href="#routes-applied-on-products" class="ripple internal reference">Routes applied on products</a></li><li class="list-group-item"><a href="#routes-applied-on-product-category" class="ripple internal reference">Routes applied on Product Category</a></li><li class="list-group-item"><a href="#routes-applied-on-sales-order-lines" class="ripple internal reference">Routes applied on Sales Order lines</a></li></ul></li><li class="list-group-item"><a href="#procurement-and-push-rules" class="ripple internal reference">Procurement and push rules</a></li><li class="list-group-item"><a href="#procurement-configuration" class="ripple internal reference">Procurement configuration</a></li><li class="list-group-item"><a href="#make-to-order-route" class="ripple internal reference">Make-to-Order Route</a></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#overview" class="ripple internal reference">Общий обзор</a></li><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Настройка</a></li><li class="list-group-item"><a href="#pre-configured-routes" class="ripple internal reference">Предварительно настроенные маршруты</a></li><li class="list-group-item"><a href="#custom-routes" class="ripple internal reference">Настройка маршрутов</a><ul ><li class="list-group-item"><a href="#routes-applied-on-warehouses" class="ripple internal reference">Маршруты применяются на складах</a></li><li class="list-group-item"><a href="#routes-applied-on-products" class="ripple internal reference">Маршруты применяются к товарам</a></li><li class="list-group-item"><a href="#routes-applied-on-product-category" class="ripple internal reference">Маршруты, примененные к категории</a></li><li class="list-group-item"><a href="#routes-applied-on-sales-order-lines" class="ripple internal reference">Маршруты, применены к строкам заказа на продажу</a></li></ul></li><li class="list-group-item"><a href="#procurement-and-push-rules" class="ripple internal reference">Закупки и правила выталкивания</a></li><li class="list-group-item"><a href="#procurement-configuration" class="ripple internal reference">Настройка закупок</a></li><li class="list-group-item"><a href="#make-to-order-route" class="ripple internal reference">Маршрут на заказ</a></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/inventory/routes/concepts/use_routes.rst" class="gith-link">
                   Edit on GitHub
@@ -293,34 +314,7 @@
           <article class="doc-body  ">
             
             
-  <section id="how-to-use-routes"></section><section id="overview"><h2 >Overview</h2><p >A route is a collection of procurement rules and push rules. Odoo can
-manage advanced push/pull routes configuration, for example:</p><ul ><li >Manage product manufacturing chains</li><li >Manage default locations per product</li><li >Define routes within your warehouse according to business needs, such
-as quality control, after sales services or supplier returns</li><li >Help rental management, by generating automated return moves for
-rented products</li></ul></section><section id="configuration"><h2 >Configuration</h2><p >Procurement rules are part of the routes. Go to the <strong >Inventory</strong>
-application, <span class="menuselection">Configuration ‣ Settings</span> and tick
-<strong >Advance routing of products using rules</strong>.</p><img src="../../../_images/use_routes01.png" style="" class="img-responsive center-block"></section><section id="pre-configured-routes"><h2 >Pre-configured routes</h2><p >Odoo has some pre-configured routes for your warehouses.</p><p >In the Inventory application, go to
-<span class="menuselection">Configuration ‣ Warehouses</span>.</p><p >In the <strong >Warehouse Configuration</strong> tab, <strong >Incoming Shipments</strong> and <strong >Outgoing
-Shippings</strong> options set some routes according to your choices.</p><img src="../../../_images/use_routes02.png" style="" class="img-responsive center-block"></section><section id="custom-routes"><h2 >Custom Routes</h2><p >In the <strong >Inventory</strong> application, go to
-<span class="menuselection">Configuration ‣ Routes</span>.</p><img src="../../../_images/use_routes03.png" style="" class="img-responsive center-block"><p >First, you have to select the places where this route can be selected.
-You can combine several choices.</p></section><section id="routes-applied-on-warehouses"><h3 >Routes applied on warehouses</h3><p >If you tick <strong >Warehouses</strong>, you have to choose on which warehouse it will
-be applied. The route will be set for all transfer in that warehouse
-that would meet the conditions of the procurement and push rules.</p><img src="../../../_images/use_routes04.png" style="" class="img-responsive center-block"></section><section id="routes-applied-on-products"><h3 >Routes applied on products</h3><p >If you tick <strong >Products</strong>, you have to manually set on which product it
-will be applied.</p><img src="../../../_images/use_routes05.png" style="" class="img-responsive center-block"><p >Open the product on which you want to apply the routes
-(<span class="menuselection">Inventory ‣ Control ‣ Products</span>).
-In the Inventory Tab, select the route(s):</p><img src="../../../_images/use_routes06.png" style="" class="img-responsive center-block"></section><section id="routes-applied-on-product-category"><h3 >Routes applied on Product Category</h3><p >If you tick <strong >Product Categories</strong>, you have to manually set on which
-categories it will be applied.</p><img src="../../../_images/use_routes07.png" style="" class="img-responsive center-block"><p >Open the product on which you want to apply the routes
-(<span class="menuselection">Configuration ‣ Product Categories</span>).
-Select the route(s) under the <strong >Logistics</strong> section :</p><img src="../../../_images/use_routes08.png" style="" class="img-responsive center-block"></section><section id="routes-applied-on-sales-order-lines"><h3 >Routes applied on Sales Order lines</h3><p >If you tick <strong >Sales order lines</strong>, you have to manually set the route
-every time you make a sale order.</p><img src="../../../_images/use_routes09.png" style="" class="img-responsive center-block"><p >In order to make it work, you also have to activate the use of the
-routes on the sales order.</p><p >In the Sales application, go to
-<span class="menuselection">Configuration ‣ Settings</span> and tick
-<strong >Choose specific routes on sales order lines (advanced)</strong>.</p><img src="../../../_images/use_routes10.png" style="" class="img-responsive center-block"><p >You can now choose the routes for each lines of your sales orders:</p><img src="../../../_images/use_routes11.png" style="" class="img-responsive center-block"></section><section id="procurement-and-push-rules"><h2 >Procurement and push rules</h2><p >Please refer to the documents:</p><ul ><li ><a href="procurement_rule.html" class="internal reference"><span class="doc">What is a procurement rule?</span></a></li><li ><a href="push_rule.html" class="internal reference"><span class="doc">What is a push rule?</span></a></li></ul></section><section id="procurement-configuration"><h2 >Procurement configuration</h2><p >When doing a procurement request, you can force the route you want to
-use. On the product (<span class="menuselection">Inventory Control ‣ Products</span>),
-click on <strong >Procurement Request</strong>. Choose the route you want to use next to
-<strong >Preferred Routes</strong>:</p><img src="../../../_images/use_routes12.png" style="" class="img-responsive center-block"></section><section id="make-to-order-route"><h2 >Make-to-Order Route</h2><p >If you work with no stock, or with minimum stock rules, it is better to
-use the <strong >Make To Order</strong> route. Combine it with the route <strong >Buy</strong> or
-<strong >Manufacture</strong> and it will trigger automatically the purchase order or
-the Manufacturing Order when your products are out-of-stock.</p><div role="alert" class="alert-go_to alert"><p class="alert-title">See also</p><ul ><li ><a href="push_rule.html" class="internal alert-link reference"><span class="doc">What is a push rule?</span></a></li><li ><a href="inter_warehouse.html" class="internal alert-link reference"><span class="doc">How to do inter-warehouses transfers?</span></a></li><li ><a href="cross_dock.html" class="internal alert-link reference"><span class="doc">Organize a cross-dock in a warehouse</span></a></li></ul></div></section>
+  <section id="how-to-use-routes"></section><section id="overview"><h2 >Общий обзор</h2><p >Маршрут - это совокупность правил закупок и правил перемещения. Odoo может управлять дополнительными настройками маршрутов выталкивания / вытягивания, например</p><ul ><li >Управляйте производственной цепочкой продукта</li><li >Управление местоположениями по умолчанию для каждого продукта</li><li >Определение маршрутов на вашем складе в соответствии с потребностями бизнеса, таких как контроль качества, послепродажное обслуживание или возврат поставщикам</li><li >Помощь по аренде, путем создания автоматизированных перемещений возврата для арендованных продуктов</li></ul></section><section id="configuration"><h2 >Настройка</h2><p >Правила закупок является частью маршрутов. Выделите приложение ** Состав [UNKNOWN NODE problematic],: menuselection: [UNKNOWN NODE title_reference] и выберите пункт ** Дополнительные маршруты товаров, используют правила [UNKNOWN NODE problematic].</p><img src="../../../_images/use_routes01.png" style="" class="img-responsive center-block"></section><section id="pre-configured-routes"><h2 >Предварительно настроенные маршруты</h2><p >Odoo имеет некоторые предустановленные маршруты для ваших складов.</p><p >В программе Состав перейдите к: menuselection: [UNKNOWN NODE title_reference].</p><p >На вкладке ** Настройка состава ** параметры ** Входные отправления ** и ** Выходные отправления ** устанавливают некоторые маршруты в соответствии с вашего выбора.</p><img src="../../../_images/use_routes02.png" style="" class="img-responsive center-block"></section><section id="custom-routes"><h2 >Настройка маршрутов</h2><p >В программе ** Состав ** перейдите к: menuselection: [UNKNOWN NODE title_reference].</p><img src="../../../_images/use_routes03.png" style="" class="img-responsive center-block"><p >Во-первых, вам следует выбрать места, где можно выбрать этот маршрут. Вы можете объединить несколько вариантов выбора.</p></section><section id="routes-applied-on-warehouses"><h3 >Маршруты применяются на складах</h3><p >Если вы отметите ** Склады [UNKNOWN NODE problematic], вы должны выбрать, какой состав будет применено. Маршрут будет установлено для всего перемещения на этом складе, который будет отвечать условиям закупок и правилам перемещения.</p><img src="../../../_images/use_routes04.png" style="" class="img-responsive center-block"></section><section id="routes-applied-on-products"><h3 >Маршруты применяются к товарам</h3><p >Если вы отметите ** Товары [UNKNOWN NODE problematic], вам нужно вручную установить, какой товар он будет применяться.</p><img src="../../../_images/use_routes05.png" style="" class="img-responsive center-block"><p >Откройте продукт, на котором вы хотите применить маршруты (: menuselection: [UNKNOWN NODE title_reference]). На вкладке Состав выберите маршруты:</p><img src="../../../_images/use_routes06.png" style="" class="img-responsive center-block"></section><section id="routes-applied-on-product-category"><h3 >Маршруты, примененные к категории</h3><p >Если вы отметите ** Категории товаров [UNKNOWN NODE problematic], вам нужно вручную установить, к каким категориям он будет применяться.</p><img src="../../../_images/use_routes07.png" style="" class="img-responsive center-block"><p >Откройте товар, на который вы хотите применить маршруты (: menuselection: [UNKNOWN NODE title_reference]). Выберите маршруты в разделе ** Логистики [UNKNOWN NODE problematic]:</p><img src="../../../_images/use_routes08.png" style="" class="img-responsive center-block"></section><section id="routes-applied-on-sales-order-lines"><h3 >Маршруты, применены к строкам заказа на продажу</h3><p >Если вы отметите ** Строки заказа на продажу [UNKNOWN NODE problematic], вам придется вручную устанавливать маршрут каждый раз, когда вы хотите сделать заказ на продажу.</p><img src="../../../_images/use_routes09.png" style="" class="img-responsive center-block"><p >Для того, чтобы это заработало, вы также должны активировать использование маршрутов в заказе клиента.</p><p >В приложении Продажи перейдите к: menuselection: [UNKNOWN NODE title_reference] и отметьте пункт ** Выбрать конкретные маршруты по строкам заказа на продажу (расширенные) [UNKNOWN NODE problematic].</p><img src="../../../_images/use_routes10.png" style="" class="img-responsive center-block"><p >Теперь вы можете выбрать маршруты для каждой строки ваших заказов на продажу:</p><img src="../../../_images/use_routes11.png" style="" class="img-responsive center-block"></section><section id="procurement-and-push-rules"><h2 >Закупки и правила выталкивания</h2><p >Пожалуйста, обратитесь к документации:</p><ul ><li ><a href="procurement_rule.html" class="internal reference"><span class="doc">Что такое правила закупки?</span></a></li><li ><a href="push_rule.html" class="internal reference"><span class="doc">Что такое правило выталкивания?</span></a></li></ul></section><section id="procurement-configuration"><h2 >Настройка закупок</h2><p >Во время запроса на закупку можно применить маршрут, который вы хотите использовать. На товаре (: menuselection: [UNKNOWN NODE title_reference]), нажмите на ** Запрос на закупку [UNKNOWN NODE problematic]. Выберите маршрут, который вы хотите использовать рядом с ** Рекомендованными маршрутами [UNKNOWN NODE problematic]:</p><img src="../../../_images/use_routes12.png" style="" class="img-responsive center-block"></section><section id="make-to-order-route"><h2 >Маршрут на заказ</h2><p >Если вы работаете без состава, или с минимальными правилами закупки, лучше воспользоваться маршруту ** на заказ [UNKNOWN NODE problematic]. Соедините его с маршрутом ** Покупка ** или ** Производство [UNKNOWN NODE problematic], и он автоматически запускает заказа на закупку или заказ на производство, когда ваши товары недоступны.</p><div role="alert" class="alert-go_to alert"><p class="alert-title">См.также</p><ul ><li ><a href="push_rule.html" class="internal alert-link reference"><span class="doc">Что такое правило выталкивания?</span></a></li><li ><a href="inter_warehouse.html" class="internal alert-link reference"><span class="doc">Как делать внутренне складские перемещения?</span></a></li><li ><a href="cross_dock.html" class="internal alert-link reference"><span class="doc">Organize a cross-dock in a warehouse</span></a></li></ul></div></section>
 
           </article>
         </div>

@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>How to sell in foreign currencies &#8212; Odoo 13.0 documentation</title>
+    <title>Как продавать в иностранной валюте &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../../_static/doc.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/sales/products_prices/prices/currencies.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/sales/products_prices/prices/currencies.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/sales/products_prices/prices/currencies.html" />
+    <link rel="canonical" href="/master/ru/sales/products_prices/prices/currencies.html" />
   
-    <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Amazon MWS Connector" href="../../sale_amazon.html" />
-    <link rel="prev" title="How to adapt your prices to your customers and apply discounts" href="pricing.html" /> 
+    <link rel="index" title="Алфавитный указатель" href="../../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../../search.html" />
+    <link rel="next" title="Коннектор Amazon MWS" href="../../sale_amazon.html" />
+    <link rel="prev" title="Как адаптировать цены до ваших клиентов и применять скидки" href="pricing.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -194,7 +198,7 @@
         
             
                 
-                    <li><a href="../../../sales.html">Sales</a></li>
+                    <li><a href="../../../sales.html">Продажи</a></li>
                 
             
         
@@ -211,7 +215,7 @@
             
         
     
-    <li class="active"><a href="#">How to sell in foreign currencies</a></li>
+    <li class="active"><a href="#">Как продавать в иностранной валюте</a></li>
 
               
           </ol>
@@ -227,12 +231,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/sales/products_prices/prices/currencies.html">English</a></li>
+        
+            <li><a href="/13.0/uk/sales/products_prices/prices/currencies.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -259,6 +278,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -268,7 +289,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> How to sell in foreign currencies </h1>
+        <h1> Как продавать в иностранной валюте </h1>
       </div>
     </figure>
     
@@ -281,7 +302,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#automatic-conversion-from-public-price" class="ripple internal reference">Automatic conversion from public price</a></li><li class="list-group-item"><a href="#set-your-own-prices" class="ripple internal reference">Set your own prices</a></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#automatic-conversion-from-public-price" class="ripple internal reference">Автоматическая конвертация по открытой цене</a></li><li class="list-group-item"><a href="#set-your-own-prices" class="ripple internal reference">Установите свои собственные цены</a></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/sales/products_prices/prices/currencies.rst" class="gith-link">
                   Edit on GitHub
@@ -293,14 +314,7 @@
           <article class="doc-body  ">
             
             
-  <section id="how-to-sell-in-foreign-currencies"><p >Pricelists can also be used to manage prices in foreign currencies.</p><ul ><li >Check <em >Allow multi currencies</em> in <span class="menuselection">Invoicing/Accounting ‣ Settings</span>.
-As admin, you need <em >Adviser</em> access rights on Invoicing/Accounting apps.</li><li >Create one pricelist per currency. A new <em >Currency</em> field shows up in pricelist setup form.</li></ul><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >To activate a new currency, go to <span class="menuselection">Accounting ‣ Configuration ‣ Currencies</span>,
-select it in the list and press <em >Activate</em> in the top-right corner. Now it will show up in
-currencies drop-down lists.</p></div><p >Prices in foreign currencies can be defined in two fashions.</p></section><section id="automatic-conversion-from-public-price"><h2 >Automatic conversion from public price</h2><p >The public price is in your company’s main currency (see
-<span class="menuselection">Accounting ‣ Settings</span>) and is set in product detail form.</p><img src="../../../_images/public_price.png" style="" class="img-responsive center-block"><p >The conversion rates can be found in
-<span class="menuselection">Accounting ‣ Configuration ‣ Currencies</span>. They can be updated
-from Yahoo or the European Central Bank at your convenience: manually, daily, weekly,
-etc. See <span class="menuselection">Accounting ‣ Settings</span>.</p><img src="../../../_images/currency_rate.png" style="" class="img-responsive center-block"><img src="../../../_images/prices_conversion.png" style="" class="img-responsive center-block"></section><section id="set-your-own-prices"><h2 >Set your own prices</h2><p >This is advised if you don’t want your pricing to change along with currency rates.</p><img src="../../../_images/pricing_currency.png" style="" class="img-responsive center-block"><div role="alert" class="alert-go_to alert"><p class="alert-title">See also</p><ul ><li ><a href="pricing.html" class="internal alert-link reference"><span class="doc">How to adapt your prices to your customers and apply discounts</span></a></li></ul></div></section>
+  <section id="how-to-sell-in-foreign-currencies"><p >Прайс-лист может также использоваться для управления ценами в иностранной валюте.</p><ul ><li >Проверьте * Разрешить использование нескольких валют * в разделе: menuselection: [UNKNOWN NODE title_reference]. Как администратору вам нужны права доступа * Консультантов * для приложений Выставление счетов-фактур / Бухучета.</li><li >Создайте один прайс-лист на одну валюту. Новое поле * Валюты * отображается в форме установления прайс-листа.</li></ul><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >Чтобы активировать новую валюту, перейдите к: menuselection: [UNKNOWN NODE title_reference], выберите в списке и нажмите * Активировать * в верхнем правом углу. Теперь он появится в выпадающих списках валют.</p></div><p >Цены в иностранной валюте можно определить двумя способами.</p></section><section id="automatic-conversion-from-public-price"><h2 >Автоматическая конвертация по открытой цене</h2><p >Публичная цена в основной валюте вашей компании (см.: Menuselection: [UNKNOWN NODE title_reference]) и установлен в форме детальной информации о товаре.</p><img src="../../../_images/public_price.png" style="" class="img-responsive center-block"><p >Коэффициенты переходов можно найти в: menuselection: [UNKNOWN NODE title_reference]. Они могут быть обновлены из Нацбанка Украины: вручную, ежедневно, еженедельно и тому подобное. См. : Menuselection: [UNKNOWN NODE title_reference].</p><img src="../../../_images/currency_rate.png" style="" class="img-responsive center-block"><img src="../../../_images/prices_conversion.png" style="" class="img-responsive center-block"></section><section id="set-your-own-prices"><h2 >Установите свои собственные цены</h2><p >Установление собственных цен рекомендуется, если вы не хотите, чтобы ваши цены менялись вместе с курсом валют.</p><img src="../../../_images/pricing_currency.png" style="" class="img-responsive center-block"><div role="alert" class="alert-go_to alert"><p class="alert-title">См.также</p><ul ><li ><a href="pricing.html" class="internal alert-link reference"><span class="doc">Как адаптировать цены до ваших клиентов и применять скидки</span></a></li></ul></div></section>
 
           </article>
         </div>

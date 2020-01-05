@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>How to plan and track employees’ assignments? &#8212; Odoo 13.0 documentation</title>
+    <title>Как планировать и отслеживать задачи сотрудников? &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
     <script type="text/javascript" src="../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../_static/doc.js"></script>
     <script type="text/javascript" src="../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/project/planning/assignments.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/project/planning/assignments.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/project/planning/assignments.html" />
+    <link rel="canonical" href="/master/ru/project/planning/assignments.html" />
   
-    <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="How to forecast tasks?" href="forecast.html" />
-    <link rel="prev" title="Planning your project" href="../planning.html" /> 
+    <link rel="index" title="Алфавитный указатель" href="../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../search.html" />
+    <link rel="next" title="Как прогнозировать задачи?" href="forecast.html" />
+    <link rel="prev" title="Планирование вашего проекта" href="../planning.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -194,7 +198,7 @@
         
             
                 
-                    <li><a href="../../project.html">Project</a></li>
+                    <li><a href="../../project.html">Проект</a></li>
                 
             
         
@@ -205,7 +209,7 @@
             
         
     
-    <li class="active"><a href="#">How to plan and track employees’ assignments?</a></li>
+    <li class="active"><a href="#">Как планировать и отслеживать задачи сотрудников?</a></li>
 
               
           </ol>
@@ -221,12 +225,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/project/planning/assignments.html">English</a></li>
+        
+            <li><a href="/13.0/uk/project/planning/assignments.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -253,6 +272,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -262,7 +283,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> How to plan and track employees’ assignments? </h1>
+        <h1> Как планировать и отслеживать задачи сотрудников? </h1>
       </div>
     </figure>
     
@@ -275,7 +296,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a></li><li class="list-group-item"><a href="#manage-tasks-with-views" class="ripple internal reference">Manage tasks with views</a><ul ><li class="list-group-item"><a href="#get-an-overview-of-activities-with-the-kanban-view" class="ripple internal reference">Get an overview of activities with the kanban view</a><ul ><li class="list-group-item"><a href="#add-rearrange-stages" class="ripple internal reference">Add/rearrange stages</a></li><li class="list-group-item"><a href="#sort-tasks-by-priority" class="ripple internal reference">Sort tasks by priority</a></li></ul></li><li class="list-group-item"><a href="#track-the-progress-of-each-task-with-the-list-view" class="ripple internal reference">Track the progress of each task with the list view</a></li><li class="list-group-item"><a href="#keep-an-eye-on-deadlines-with-the-calendar-view" class="ripple internal reference">Keep an eye on deadlines with the Calendar view</a></li></ul></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Настройка</a></li><li class="list-group-item"><a href="#manage-tasks-with-views" class="ripple internal reference">Управляйте заданиями по просмотрам</a><ul ><li class="list-group-item"><a href="#get-an-overview-of-activities-with-the-kanban-view" class="ripple internal reference">Ознакомьтесь с действиями с просмотром канбан</a><ul ><li class="list-group-item"><a href="#add-rearrange-stages" class="ripple internal reference">Добавить / переставить этапы</a></li><li class="list-group-item"><a href="#sort-tasks-by-priority" class="ripple internal reference">Сортируйте задачи по приоритету</a></li></ul></li><li class="list-group-item"><a href="#track-the-progress-of-each-task-with-the-list-view" class="ripple internal reference">Отслеживайте прогресс каждой задачи с помощью просмотра списка</a></li><li class="list-group-item"><a href="#keep-an-eye-on-deadlines-with-the-calendar-view" class="ripple internal reference">Следите за дедлайнами в календаре</a></li></ul></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/project/planning/assignments.rst" class="gith-link">
                   Edit on GitHub
@@ -287,51 +308,7 @@
           <article class="doc-body  ">
             
             
-  <section id="how-to-plan-and-track-employees-assignments"><p >Following and planning your employees’ assignments can be a heavy
-challenge especially when you manage several people. Luckily, using Odoo
-Project, you can handle it in only a couple of clicks.</p></section><section id="configuration"><h2 >Configuration</h2><p >The only necessary configuration is to install the <strong >Project Management</strong>
-module. To do so, go in the application module, search for project and
-install the application.</p><img src="../../_images/assignments01.png" style="" class="img-responsive center-block"><p >If you wish to manage time estimation, you will need to enable
-timesheets on tasks. From the <strong >Project</strong> application, go to
-<span class="menuselection">Configuration ‣ Settings</span> in the dropdown menu.
-Then, under <strong >Time Work Estimation</strong>, select the <strong >manage time
-estimation on tasks</strong> option. Do not forget to apply your changes.</p><img src="../../_images/assignments02.png" style="" class="img-responsive center-block"><p >This feature will create a progress bar in the form view of your tasks.
-Every time your salesperson will add working time in his timesheet, the
-bar will be updated accordingly, based on the initially planned hours.</p><img src="../../_images/assignments03.png" style="" class="img-responsive center-block"></section><section id="manage-tasks-with-views"><h2 >Manage tasks with views</h2><p >You can have an overview of your different task thanks to the multiple
-views available with Odoo. Three main views will help you to plan and
-follow up on your employees’ tasks: the kanban view, the list view
-(using timesheets) and the calendar view.</p><p >Create and edit tasks in order to fill up your pipeline. Don’t forget to
-fill in a responsible person and an estimated time if you have one.</p></section><section id="get-an-overview-of-activities-with-the-kanban-view"><h3 >Get an overview of activities with the kanban view</h3><p >The Kanban view is a post-it like view, divided in different stages. It
-enables you to have a clear view on the stages your tasks are in and the
-ones having the higher priorities.</p><p >The Kanban view is the default view when accessing a project, but if you
-are on another view, you can go back to it any time by clicking the
-kanban view logo in the upper right corner</p><img src="../../_images/assignments04.png" style="" class="img-responsive center-block"></section><section id="add-rearrange-stages"><h4 >Add/rearrange stages</h4><p >You can easily personalize your project to suit your business needs by
-creating new columns. From the Kanban view of your project, you can add
-stages by clicking on <strong >Add new column</strong> (see image below). If you
-want to rearrange the order of your stages, you can easily do so by
-dragging and dropping the column you want to move to the desired
-location. You can also fold or unfold your stages by using the <strong >setting</strong>
-icon on your desired stage.</p><img src="../../_images/assignments10.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >Create one column per stage in your working process. For example,
-in a development project, stages might be: Specifications,
-Development, Test, Done.</p></div></section><section id="sort-tasks-by-priority"><h4 >Sort tasks by priority</h4><p >On each one of your columns, you have the ability to sort your tasks by
-priority. Tasks with a higher priority will automatically be moved to
-the top of the column. From the Kanban view, click on the star in the
-bottom left of a task to tag it as <strong >high priority</strong>. For the tasks that
-are not tagged, Odoo will automatically classify them according to their
-deadlines.</p><p >Note that dates that passed their deadlines will appear in red( in the
-list view too) so you can easily follow up the progression of different
-tasks.</p><img src="../../_images/assignments06.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >Don’t forget you can filter your tasks with the filter menu.</p></div></section><section id="track-the-progress-of-each-task-with-the-list-view"><h3 >Track the progress of each task with the list view</h3><p >If you enabled the <strong >Manage Time Estimation on Tasks</strong>, your employees
-will be able to log their activities on tasks under the <strong >Timesheets</strong>
-sub-menu along with their duration. The <strong >Working Time Progress</strong> bar will
-be updated each time the employee will add an activity.</p><img src="../../_images/assignments07.png" style="" class="img-responsive center-block"><p >As a manager, you can easily overview the time spent on tasks for all
-employees by using the list view. To do so, access the project of your
-choice and click on the List view icon (see below). The last column will
-show you the progression of each task.</p><img src="../../_images/assignments08.png" style="" class="img-responsive center-block"></section><section id="keep-an-eye-on-deadlines-with-the-calendar-view"><h3 >Keep an eye on deadlines with the Calendar view</h3><p >If you add a deadline in your task, they will appear in the calendar
-view. As a manager, this view enables you to keep an eye on all
-deadlines in a single window.</p><img src="../../_images/assignments09.png" style="" class="img-responsive center-block"><p >All the tasks are tagged with a color corresponding to the employee
-assigned to them. You can easily filter the deadlines by employees by
-ticking the related boxes on the right of the calendar view.</p><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >You can easily change the deadline from the Calendar view by
-dragging and dropping the task to another case.</p></div><div role="alert" class="alert-go_to alert"><p class="alert-title">See also</p><ul ><li ><a href="../configuration/setup.html" class="internal alert-link reference"><span class="doc">How to set up &amp; configure a project?</span></a></li><li ><a href="forecast.html" class="internal alert-link reference"><span class="doc">How to forecast tasks?</span></a></li></ul></div></section>
+  <section id="how-to-plan-and-track-employees-assignments"><p >Слежения и планирования задач ваших сотрудников могут быть трудной задачей, особенно когда вы управляете несколькими людьми. К счастью, используя Проект Odoo, вы можете справиться с ним всего за несколько кликов.</p></section><section id="configuration"><h2 >Настройка</h2><p >Единственное необходимое конфигурация - установить модуль ** Управление проектами [UNKNOWN NODE problematic]. Для этого перейдите в модуль приложений, найдите Проект и установите его.</p><img src="../../_images/assignments01.png" style="" class="img-responsive center-block"><p >Если вы хотите управлять оценкой времени, вам нужно будет включить табели для задач. В программе ** Проект ** перейдите к: menuselection: [UNKNOWN NODE title_reference] в выпадающем меню. Затем, под ** Оценкой времени работы [UNKNOWN NODE problematic], выберите ** управления оценкой времени задач ** в параметрах. Не забудьте применить свои изменения.</p><img src="../../_images/assignments02.png" style="" class="img-responsive center-block"><p >Эта функция создаст панель прогресса в виде просмотра ваших задач. Каждый раз, когда ваш продавец придаст рабочее время в свой табель, панель будет обновлен в соответствии с запланированными ранее часов.</p><img src="../../_images/assignments03.png" style="" class="img-responsive center-block"></section><section id="manage-tasks-with-views"><h2 >Управляйте заданиями по просмотрам</h2><p >Вы можете получить обзор ваших различных задач благодаря разнообразным просмотрам с Odoo. Три основные просмотры помогут вам планировать и отслеживать задачи своих сотрудников: вид канбан, просмотр списка (с помощью расчетных таблиц) и просмотр календаря.</p><p >Создайте и измените задача, чтобы заполнить конвейер. Не забудьте заполнить ответственное лицо и примерное время, если он есть.</p></section><section id="get-an-overview-of-activities-with-the-kanban-view"><h3 >Ознакомьтесь с действиями с просмотром канбан</h3><p >Просмотр канбан - пост-образный просмотр, разделен на разные этапы. Это позволяет иметь четкое представление об этапах выполнения ваших задач и то, что имеет более высокие приоритеты.</p><p >Канбан является просмотром по умолчанию при доступе к проекту, но если вы находитесь в другом просмотре, вы можете в любой момент вернуться к нему, нажав значок канбан в верхнем правом углу.</p><img src="../../_images/assignments04.png" style="" class="img-responsive center-block"></section><section id="add-rearrange-stages"><h4 >Добавить / переставить этапы</h4><p >Вы можете легко настроить свой проект в соответствии с потребностями вашего бизнеса, создав новые столбцы. С просмотра канбан на ваш проект, вы можете добавить этапы, нажав на ** Добавить новый столбец ** (см. Рисунок ниже). Если вы хотите изменить порядок ваших этапов, вы можете легко сделать это, перетащив столбик, который нужно переместить в нужное место. Вы также можете составить или развернуть этапы, используя значок ** настройки ** на нужном этапе.</p><img src="../../_images/assignments10.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >Создавайте один столбец на этап для вашего рабочего процесса. Например, в разработке этапами могут быть: спецификация, разработка, тестирование, завершение.</p></div></section><section id="sort-tasks-by-priority"><h4 >Сортируйте задачи по приоритету</h4><p >В каждом из ваших колонок можно сортировать свои задачи по приоритету. Задача с высшим приоритетом автоматически перемещаются в верхней части столбца. В режиме просмотра канбан нажмите на звездочку в левой нижней части задачи, чтобы обозначить его как ** высокий приоритет [UNKNOWN NODE problematic]. Для задач, которые не обозначены, Odoo автоматически классифицировать их в соответствии с их сроков.</p><p >Обратите внимание, что даты, прошли их сроки, будут отражаться красным (также в просмотре списка), чтобы вы могли легко отслеживать прогресс различных задач.</p><img src="../../_images/assignments06.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >Не забывайте, что вы можете фильтровать свои задачи с помощью меню фильтра.</p></div></section><section id="track-the-progress-of-each-task-with-the-list-view"><h3 >Отслеживайте прогресс каждой задачи с помощью просмотра списка</h3><p >Если вы включили ** Управление оценкой времени на задачах [UNKNOWN NODE problematic], ваши сотрудники смогут зарегистрировать свою деятельность на задачах под меню ** Табели ** вместе с их продолжительностью. ** Прогресс рабочего времени ** будет обновляться каждый раз, когда работник придаст активность.</p><img src="../../_images/assignments07.png" style="" class="img-responsive center-block"><p >Как менеджер, вы можете легко просмотреть время, потраченное на задачу для всех сотрудников, с помощью просмотра списка. Для этого откройте проект по вашему выбору и нажмите значок списка (см. Ниже). Последний столбец покажет вам прогресс каждой задачи.</p><img src="../../_images/assignments08.png" style="" class="img-responsive center-block"></section><section id="keep-an-eye-on-deadlines-with-the-calendar-view"><h3 >Следите за дедлайнами в календаре</h3><p >Если вы добавите дедлайн в своем задании, они появятся в окне календаря. Этот пересмотр позволяет менеджеру следить за всеми конечными сроками в одном окне.</p><img src="../../_images/assignments09.png" style="" class="img-responsive center-block"><p >Все задания обозначаются соответствующим цветом, предназначенном работнику. Вы можете легко отфильтровать дедлайны сотрудников, обозначая соответствующие поля справа на экране календаря.</p><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >Вы можете легко изменить конечный срок с просмотра календаря, перетащив задачи в другой.</p></div><div role="alert" class="alert-go_to alert"><p class="alert-title">См.также</p><ul ><li ><a href="../configuration/setup.html" class="internal alert-link reference"><span class="doc">Как установить и настроить проект?</span></a></li><li ><a href="forecast.html" class="internal alert-link reference"><span class="doc">Как прогнозировать задачи?</span></a></li></ul></div></section>
 
           </article>
         </div>

@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>Cash Rounding &#8212; Odoo 13.0 documentation</title>
+    <title>Округление наличных денег &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../../_static/doc.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/accounting/receivables/customer_invoices/cash_rounding.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/accounting/receivables/customer_invoices/cash_rounding.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/accounting/receivables/customer_invoices/cash_rounding.html" />
+    <link rel="canonical" href="/master/ru/accounting/receivables/customer_invoices/cash_rounding.html" />
   
-    <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="How to setup and use payment terms" href="payment_terms.html" />
-    <link rel="prev" title="Offer cash discounts" href="cash_discounts.html" /> 
+    <link rel="index" title="Алфавитный указатель" href="../../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../../search.html" />
+    <link rel="next" title="Как установить и использовать условия оплаты" href="payment_terms.html" />
+    <link rel="prev" title="денежные скидки" href="cash_discounts.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -194,7 +198,7 @@
         
             
                 
-                    <li><a href="../../../accounting.html">Accounting</a></li>
+                    <li><a href="../../../accounting.html">Бухгалтерский учёт</a></li>
                 
             
         
@@ -211,7 +215,7 @@
             
         
     
-    <li class="active"><a href="#">Cash Rounding</a></li>
+    <li class="active"><a href="#">Округление наличных денег</a></li>
 
               
           </ol>
@@ -227,12 +231,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/accounting/receivables/customer_invoices/cash_rounding.html">English</a></li>
+        
+            <li><a href="/13.0/uk/accounting/receivables/customer_invoices/cash_rounding.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -259,6 +278,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -268,7 +289,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> Cash Rounding </h1>
+        <h1> Округление наличных денег </h1>
       </div>
     </figure>
     
@@ -281,7 +302,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a></li><li class="list-group-item"><a href="#apply-roundings" class="ripple internal reference">Apply roundings</a></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Настройка</a></li><li class="list-group-item"><a href="#apply-roundings" class="ripple internal reference">примените округления</a></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/accounting/receivables/customer_invoices/cash_rounding.rst" class="gith-link">
                   Edit on GitHub
@@ -297,11 +318,11 @@
 of currency, or the smallest coin, is higher than the minimum unit
 of account.</p><p >For example, some countries require their companies to round up or
 down the total amount of an invoice to the nearest five cents, when
-the payment is made in cash.</p></section><section id="configuration"><h2 >Configuration</h2><p >Go to <span class="menuselection">Accounting ‣ Configuration ‣ Settings</span>
+the payment is made in cash.</p></section><section id="configuration"><h2 >Настройка</h2><p >Go to <span class="menuselection">Accounting ‣ Configuration ‣ Settings</span>
 and enable <em >Cash Rounding</em>, then click on <em >Save</em>.</p><img src="../../../_images/cash_rounding01.png" style="" class="img-responsive center-block"><p >Go to <span class="menuselection">Accounting ‣ Configuration ‣ Cash Roundings</span>,
 and click on <em >Create</em>.</p><p >Define here your <em >Rounding Precision</em>, <em >Rounding Strategy</em>, and
 <em >Rounding Method</em>.</p><p >Odoo supports two <strong >rounding strategies</strong>:</p><ol ><li ><strong >Add a rounding line</strong>: a <em >rounding</em> line is added on the invoice.
-You have to define which account records the cash roundings.</li><li ><strong >Modify tax amount</strong>: the rounding is applied in the taxes section.</li></ol></section><section id="apply-roundings"><h2 >Apply roundings</h2><p >When editing a draft invoice, open the <em >Other Info</em> tab, go to the
+You have to define which account records the cash roundings.</li><li ><strong >Modify tax amount</strong>: the rounding is applied in the taxes section.</li></ol></section><section id="apply-roundings"><h2 >примените округления</h2><p >When editing a draft invoice, open the <em >Other Info</em> tab, go to the
 <em >Accounting Information</em> section, and select the appropriate <em >Cash
 Rounding Method</em>.</p></section>
 

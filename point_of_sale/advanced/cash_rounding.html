@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>Cash Rounding &#8212; Odoo 13.0 documentation</title>
+    <title>Округление наличных денег &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
     <script type="text/javascript" src="../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../_static/doc.js"></script>
     <script type="text/javascript" src="../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/point_of_sale/advanced/cash_rounding.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/point_of_sale/advanced/cash_rounding.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/point_of_sale/advanced/cash_rounding.html" />
+    <link rel="canonical" href="/master/ru/point_of_sale/advanced/cash_rounding.html" />
   
-    <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="index" title="Алфавитный указатель" href="../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../search.html" />
     <link rel="next" title="Advanced Pricing Features" href="../advanced_pricing_features.html" />
-    <link rel="prev" title="Accept credit card payment using Mercury" href="mercury.html" /> 
+    <link rel="prev" title="Прием оплаты кредитной картой через Mercury" href="mercury.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -194,7 +198,7 @@
         
             
                 
-                    <li><a href="../../point_of_sale.html">Point of Sale</a></li>
+                    <li><a href="../../point_of_sale.html">Точка продаж</a></li>
                 
             
         
@@ -205,7 +209,7 @@
             
         
     
-    <li class="active"><a href="#">Cash Rounding</a></li>
+    <li class="active"><a href="#">Округление наличных денег</a></li>
 
               
           </ol>
@@ -221,12 +225,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/point_of_sale/advanced/cash_rounding.html">English</a></li>
+        
+            <li><a href="/13.0/uk/point_of_sale/advanced/cash_rounding.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -253,6 +272,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -262,7 +283,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> Cash Rounding </h1>
+        <h1> Округление наличных денег </h1>
       </div>
     </figure>
     
@@ -275,7 +296,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Настройка</a></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/point_of_sale/advanced/cash_rounding.rst" class="gith-link">
                   Edit on GitHub
@@ -292,15 +313,15 @@ of currency, or the smallest coin, is higher than the minimum unit
 of account.</p><p >For example, some countries require their companies to round up or
 down the total amount of an invoice to the nearest five cents, when
 the payment is made in cash.</p><p >Each point of sale in Odoo can be configured to apply cash rounding
-to the totals of its bills or receipts.</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >This feature will soon be added to Odoo. We are currently working
-to make it available for all supported versions as soon as possible.</p></div></section><section id="configuration"><h2 >Configuration</h2><p >Go to <span class="menuselection">Point of Sale ‣ Configuration ‣ Settings</span>
+to the totals of its bills or receipts.</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >This feature will soon be added to Odoo. We are currently working
+to make it available for all supported versions as soon as possible.</p></div></section><section id="configuration"><h2 >Настройка</h2><p >Go to <span class="menuselection">Point of Sale ‣ Configuration ‣ Settings</span>
 and enable <em >Cash Rounding</em>, then click on <em >Save</em>.</p><img src="../../_images/cash_rounding011.png" style="" class="img-responsive center-block"><p >Go to <span class="menuselection">Point of Sale ‣ Configuration ‣ Point of
 Sale</span>, open the point of sale you want to configure, and enable the
 <em >Cash Rounding</em> option.</p><p >To define the <strong >Rounding Method</strong>, open the drop-down list and click
 on <em >Create and Edit…</em>.</p><p >Define here your <em >Rounding Precision</em>, <em >Profit Account</em>, and
 <em >Loss Account</em>, then save both the Rounding Method and your Point
 of Sale settings.</p><img src="../../_images/cash_rounding02.png" style="" class="img-responsive center-block"><p >All total amounts of this point of sale now add a line to apply the
-rounding according to your settings.</p><img src="../../_images/cash_rounding03.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >Odoo Point of Sale only support the <em >Add a rounding line</em>
+rounding according to your settings.</p><img src="../../_images/cash_rounding03.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Odoo Point of Sale only support the <em >Add a rounding line</em>
 rounding strategies and <em >Half-up</em> rounding methods.</p></div></section>
 
           </article>

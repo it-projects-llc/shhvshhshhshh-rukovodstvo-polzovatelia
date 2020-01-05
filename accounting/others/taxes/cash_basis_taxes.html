@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>How to manage cash basis taxes &#8212; Odoo 13.0 documentation</title>
+    <title>Как управлять налогами, начисленных кассовым методом &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../../_static/doc.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/accounting/others/taxes/cash_basis_taxes.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/accounting/others/taxes/cash_basis_taxes.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/accounting/others/taxes/cash_basis_taxes.html" />
+    <link rel="canonical" href="/master/ru/accounting/others/taxes/cash_basis_taxes.html" />
   
-    <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Adviser" href="../adviser.html" />
-    <link rel="prev" title="How to manage prices for B2B (tax excluded) and B2C (tax included)?" href="B2B_B2C.html" /> 
+    <link rel="index" title="Алфавитный указатель" href="../../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../../search.html" />
+    <link rel="next" title="Консультант" href="../adviser.html" />
+    <link rel="prev" title="Как управлять ценами для B2B (с выключенным налогом) и B2C (с включенным налогом)?" href="B2B_B2C.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -194,7 +198,7 @@
         
             
                 
-                    <li><a href="../../../accounting.html">Accounting</a></li>
+                    <li><a href="../../../accounting.html">Бухгалтерский учёт</a></li>
                 
             
         
@@ -211,7 +215,7 @@
             
         
     
-    <li class="active"><a href="#">How to manage cash basis taxes</a></li>
+    <li class="active"><a href="#">Как управлять налогами, начисленных кассовым методом</a></li>
 
               
           </ol>
@@ -227,12 +231,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/accounting/others/taxes/cash_basis_taxes.html">English</a></li>
+        
+            <li><a href="/13.0/uk/accounting/others/taxes/cash_basis_taxes.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -259,6 +278,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -268,7 +289,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> How to manage cash basis taxes </h1>
+        <h1> Как управлять налогами, начисленных кассовым методом </h1>
       </div>
     </figure>
     
@@ -281,7 +302,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#how-to-configure-cash-basis-taxes" class="ripple internal reference">How to configure cash basis taxes ?</a></li><li class="list-group-item"><a href="#what-is-the-impact-of-cash-basis-taxes-in-my-accounting" class="ripple internal reference">What is the impact of cash basis taxes in my accounting ?</a></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#how-to-configure-cash-basis-taxes" class="ripple internal reference">Как настроить налоги, начисленные кассовым методом?</a></li><li class="list-group-item"><a href="#what-is-the-impact-of-cash-basis-taxes-in-my-accounting" class="ripple internal reference">Каково влияние налогов, начисленных кассовым методом, на мой бухучет?</a></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/accounting/others/taxes/cash_basis_taxes.rst" class="gith-link">
                   Edit on GitHub
@@ -293,27 +314,7 @@
           <article class="doc-body  ">
             
             
-  <section id="how-to-manage-cash-basis-taxes"><p >The cash basis taxes are due when the payment has been done and not at
-the validation of the invoice (as it is the case with standard taxes).
-Reporting your income and expenses to the administration based on the
-cash basis method is legal in some countries and under some conditions.</p><p >Example : You sell a product in the 1st quarter of your fiscal year and
-receive the payment the 2nd quarter of your fiscal year. Based on the
-cash basis method, the tax you have to pay to the administration is due
-for the 2nd quarter.</p></section><section id="how-to-configure-cash-basis-taxes"><h2 >How to configure cash basis taxes ?</h2><p >You first have to activate the setting in
-<span class="menuselection">Accounting ‣ Configuration ‣ Settings ‣ Allow Tax Cash Basis</span>.
-You will be asked to define the Tax Cash Basis Journal.</p><a href="../../../_images/cash_basis_taxes01.png" class="internal reference"><img src="../../../_images/cash_basis_taxes01.png" style="width:5.04688in; height:0.79688in" class="img-responsive center-block"></a><p >Once this is done, you can configure your taxes in
-<span class="menuselection">Accounting ‣ Configuration ‣ Taxes</span>.
-At first set the proper transitional accounts to post taxes
-until you register the payment.</p><img src="../../../_images/cash_basis_taxes02.png" style="" class="img-responsive center-block"><p >In the <em >Advanced Options</em> tab you will turn <em >Tax Due</em> to
-<em >Based on Payment</em>. You will then have to
-define the <em >Tax Received</em> account in which to post the tax amount
-when the payment is received and the <em >Base Tax Received Account</em>
-to post the base tax amount for an accurate tax report.</p><img src="../../../_images/cash_basis_taxes03.png" style="" class="img-responsive center-block"></section><section id="what-is-the-impact-of-cash-basis-taxes-in-my-accounting"><h2 >What is the impact of cash basis taxes in my accounting ?</h2><p >Let’s take an example. You make a sale of $100 with a 15% cash basis
-tax. When you validate the customer invoice, the following entry is
-created in your accounting:</p><table class="table"><thead ><tr ><th >Customer Invoices Journal</th><th ></th></tr></thead><tbody ><tr ><td ><strong >Debit</strong></td><td ><strong >Credit</strong></td></tr><tr ><td >Receivables $115</td><td ></td></tr><tr ><td ></td><td >Temporary Tax Account $15</td></tr><tr ><td ></td><td >Income Account $100</td></tr></tbody></table><p >A few days later, you receive the payment:</p><table class="table"><thead ><tr ><th >Bank Journal</th><th ></th></tr></thead><tbody ><tr ><td ><strong >Debit</strong></td><td ><strong >Credit</strong></td></tr><tr ><td >Bank $115</td><td ></td></tr><tr ><td ></td><td >Receivables $115</td></tr></tbody></table><p >When you reconcile the invoice and the payment, this entry is generated:</p><table class="table"><thead ><tr ><th >Tax Cash Basis Journal</th></tr></thead><tbody ><tr ><td ><strong >Debit</strong></td><td ><strong >Credit</strong></td></tr><tr ><td >Temporary Tax Account $15</td><td ></td></tr><tr ><td ></td><td >Tax Received Account $15</td></tr><tr ><td >Income Account $100</td><td ></td></tr><tr ><td ></td><td >Income Account $100</td></tr></tbody></table><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >The last two journal items are neutral but they are needed to insure
-correct tax reports in Odoo with accurate base tax amounts.
-We advise to use a default revenue account.
-The balance of this account will then always be at zero.</p></div></section>
+  <section id="how-to-manage-cash-basis-taxes"><p >Налоги, начисленные кассовым методом, должны быть осуществлены после осуществления платежа, а не при подтверждении счета-фактуры (как в случае с обычными налогами). Отчет о ваших доходах и расходах на основе кассового метода является законным в некоторых странах и при определенных условиях.</p><p >Пример: вы продаете товар в 1 квартале вашего финансового года и получаете платеж во 2 квартале вашего финансового года. Исходя из кассового метода, налог, который вы должны оплатить налоговой администрации, должно быть оплачено в течение 2-го квартала.</p></section><section id="how-to-configure-cash-basis-taxes"><h2 >Как настроить налоги, начисленные кассовым методом?</h2><p >Вы должны сначала активизировать настройки в: menuselection: [UNKNOWN NODE title_reference]. Вам будет предложено определить журнал Налогов, начисленных кассовым методом.</p><a href="../../../_images/cash_basis_taxes01.png" class="internal reference"><img src="../../../_images/cash_basis_taxes01.png" style="width:5.04688in; height:0.79688in" class="img-responsive center-block"></a><p >После того, как это будет сделано, вы можете настроить ваши налоги в: menuselection: [UNKNOWN NODE title_reference]. Сначала установите необходимые счета транзакции для публикации налогов, пока вы не зарегистрируете платеж.</p><img src="../../../_images/cash_basis_taxes02.png" style="" class="img-responsive center-block"><p >На вкладке * Дополнительные параметры * вы превратите * Налог на прибыль * в * На основе платежа [UNKNOWN NODE problematic]. Тогда вам придется определить * Налоговый счет [UNKNOWN NODE problematic], на котором нужно размещать сумму налога при получении платежа, и * Счет полученного базового налога [UNKNOWN NODE problematic], чтобы разместить базовую сумму налога для точного налогового отчета.</p><img src="../../../_images/cash_basis_taxes03.png" style="" class="img-responsive center-block"></section><section id="what-is-the-impact-of-cash-basis-taxes-in-my-accounting"><h2 >Каково влияние налогов, начисленных кассовым методом, на мой бухучет?</h2><p >Давайте рассмотрим пример. Вы осуществляете продажу в размере 100 долларов с 15% налогом, начисленным кассовым методом. Когда вы проверяете счет-фактуру клиента, в вашем бухучета создается следующая запись:</p><table class="table"><thead ><tr ><th >Журнал счетов клиента</th><th ></th></tr></thead><tbody ><tr ><td >** Дебет **</td><td >** Кредит **</td></tr><tr ><td >Полученные $ 115</td><td ></td></tr><tr ><td ></td><td >Временный налоговый счет $ 15</td></tr><tr ><td ></td><td >Счет дохода $ 100</td></tr></tbody></table><p >Через несколько дней вы получаете платеж:</p><table class="table"><thead ><tr ><th >Журнал Банка</th><th ></th></tr></thead><tbody ><tr ><td >** Дебет **</td><td >** Кредит **</td></tr><tr ><td >Банк $ 115</td><td ></td></tr><tr ><td ></td><td >Полученные $ 115</td></tr></tbody></table><p >Когда вы согласовываете счет-фактуру и платеж, создается следующая запись:</p><table class="table"><thead ><tr ><th >Журнал Налога на Наличной Основе</th></tr></thead><tbody ><tr ><td >** Дебет **</td><td >** Кредит **</td></tr><tr ><td >Временный налоговый счет $ 15</td><td ></td></tr><tr ><td ></td><td >Счет полученного налога $ 15</td></tr><tr ><td >Счет дохода $ 100</td><td ></td></tr><tr ><td ></td><td >Счет дохода $ 100</td></tr></tbody></table><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >Последние две статьи журнала являются нейтральными, но они необходимы для обеспечения правильных налоговых отчетов в Odoo с точными базовыми суммами налога. Советуем использовать счет дохода по умолчанию. Остаток этого счета всегда будет на нуле.</p></div></section>
 
           </article>
         </div>

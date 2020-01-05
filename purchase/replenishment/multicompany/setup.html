@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>How to setup a multi-company sale/purchase flow? &#8212; Odoo 13.0 documentation</title>
+    <title>Настройка процесса покупки / продажи в нескольких компаниях &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../../_static/doc.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/purchase/replenishment/multicompany/setup.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/purchase/replenishment/multicompany/setup.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/purchase/replenishment/multicompany/setup.html" />
+    <link rel="canonical" href="/master/ru/purchase/replenishment/multicompany/setup.html" />
   
-    <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Inventory" href="../../../inventory.html" />
-    <link rel="prev" title="Multi-Companies" href="../multicompany.html" /> 
+    <link rel="index" title="Алфавитный указатель" href="../../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../../search.html" />
+    <link rel="next" title="Склад" href="../../../inventory.html" />
+    <link rel="prev" title="Мульти-компании" href="../multicompany.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -194,7 +198,7 @@
         
             
                 
-                    <li><a href="../../../purchase.html">Purchase</a></li>
+                    <li><a href="../../../purchase.html">Закупка</a></li>
                 
             
         
@@ -211,7 +215,7 @@
             
         
     
-    <li class="active"><a href="#">How to setup a multi-company sale/purchase flow?</a></li>
+    <li class="active"><a href="#">Настройка процесса покупки / продажи в нескольких компаниях</a></li>
 
               
           </ol>
@@ -227,12 +231,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/purchase/replenishment/multicompany/setup.html">English</a></li>
+        
+            <li><a href="/13.0/uk/purchase/replenishment/multicompany/setup.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -259,6 +278,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -268,7 +289,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> How to setup a multi-company sale/purchase flow? </h1>
+        <h1> Настройка процесса покупки / продажи в нескольких компаниях </h1>
       </div>
     </figure>
     
@@ -281,7 +302,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#overview" class="ripple internal reference">Overview</a></li><li class="list-group-item"><a href="#manage-intercompany-rules" class="ripple internal reference">Manage intercompany rules</a></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#overview" class="ripple internal reference">Общий обзор</a></li><li class="list-group-item"><a href="#manage-intercompany-rules" class="ripple internal reference">Управление мижкомпанийськимы правилам</a></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/purchase/replenishment/multicompany/setup.rst" class="gith-link">
                   Edit on GitHub
@@ -293,21 +314,7 @@
           <article class="doc-body  ">
             
             
-  <section id="how-to-setup-a-multi-company-sale-purchase-flow"></section><section id="overview"><h2 >Overview</h2><p >Odoo is an outstanding solution to help small companies growing their
-business. But it also perfectly meets the needs of multinational
-companies.The inter-company feature helps you to buy and/or sell
-products and services between different branches within your
-conglomerate.</p><img src="../../../_images/setup014.png" style="" class="img-responsive center-block"><ol ><li >Purchase orders and sales orders can be related. If a company within
-your group creates a purchase or a sales order, the corresponding
-document is automatically created for your company. All you
-have to do is check that everything is correct and confirm the
-sale. You can automate the validation on your sales and purchase
-orders.</li><li >It is also possible to only handle invoices and refunds.</li></ol></section><section id="manage-intercompany-rules"><h2 >Manage intercompany rules</h2><p >Go to <span class="menuselection">Settings ‣ General Settings</span>.
-Flag <strong >Manage multiple companies</strong> and then <strong >Manage Inter Company</strong>.</p><p >Click on <strong >Apply</strong>.</p><img src="../../../_images/setup024.png" style="" class="img-responsive center-block"><p >New options will appear.</p><img src="../../../_images/setup033.png" style="" class="img-responsive center-block"><p >In the drop-down list, choose the company on which you want to add
-rules.</p><p >If you click on <strong >SO and PO setting for inter company</strong>, you will get
-extra options.</p><img src="../../../_images/setup043.png" style="" class="img-responsive center-block"><p >When you are done, click on <strong >Apply</strong>, then you can repeat the same steps
-for the other companies.</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >In order to be able to manage the inter-company rules, be sure
-that your user has the rights to manage the companies.</p></div></section>
+  <section id="how-to-setup-a-multi-company-sale-purchase-flow"></section><section id="overview"><h2 >Общий обзор</h2><p >Odoo - это выдающееся решение, которое поможет небольшим компаниям, развивающим свой бизнес. Но система также идеально соответствует потребностям мульти-компаниям. Мижкомпанийська функция помогает вам покупать и / или продавать товары и услуги между различными отраслями в вашем конгломерате.</p><img src="../../../_images/setup014.png" style="" class="img-responsive center-block"><ol ><li >Заказ на покупку и заказ на продажу могут быть связаны между собой. Если компания в вашей группе создает покупку или заказ на продажу, соответствующий документ автоматически создается для вашей компании. Все, что вам нужно сделать, это убедиться, что все правильно и подтвердить продажу. Вы можете автоматизировать проверку своих заказов на покупку и продажу.</li><li >Также можно обрабатывать только счета-фактуры и возмещения.</li></ol></section><section id="manage-intercompany-rules"><h2 >Управление мижкомпанийськимы правилам</h2><p >Перейдите к: menuselection: [UNKNOWN NODE title_reference]. Отметьте ** Управлять несколькими компаниями [UNKNOWN NODE problematic], а затем ** Управлять между компаниями [UNKNOWN NODE problematic].</p><p >Нажмите ** Применить [UNKNOWN NODE problematic].</p><img src="../../../_images/setup024.png" style="" class="img-responsive center-block"><p >Появятся новые параметры.</p><img src="../../../_images/setup033.png" style="" class="img-responsive center-block"><p >В выпадающем списке выберите компанию, на которую вы хотите добавить правила.</p><p >Если вы нажмете на ** СНП и ВНК для настройки между компаниями [UNKNOWN NODE problematic], вы получите дополнительные возможности.</p><img src="../../../_images/setup043.png" style="" class="img-responsive center-block"><p >Когда вы закончите, нажмите кнопку ** Применить [UNKNOWN NODE problematic], после чего вы можете повторить те же шаги для других компаний.</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Чтобы иметь возможность управлять правилами между компаниями, убедитесь, что ваш пользователь имеет право управлять компаниями.</p></div></section>
 
           </article>
         </div>

@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>Bill Control &#8212; Odoo 13.0 documentation</title>
+    <title>Контроль счетов &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../../_static/doc.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/purchase/purchases/rfq/bills.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/purchase/purchases/rfq/bills.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/purchase/purchases/rfq/bills.html" />
+    <link rel="canonical" href="/master/ru/purchase/purchases/rfq/bills.html" />
   
-    <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Control product received (entirely &amp; partially)" href="reception.html" />
-    <link rel="prev" title="Create a Request for Quotation" href="create.html" /> 
+    <link rel="index" title="Алфавитный указатель" href="../../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../../search.html" />
+    <link rel="next" title="Контроль получения товаров (полностью и частично)" href="reception.html" />
+    <link rel="prev" title="Создайте запрос на коммерческое предложение" href="create.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -194,7 +198,7 @@
         
             
                 
-                    <li><a href="../../../purchase.html">Purchase</a></li>
+                    <li><a href="../../../purchase.html">Закупка</a></li>
                 
             
         
@@ -211,7 +215,7 @@
             
         
     
-    <li class="active"><a href="#">Bill Control</a></li>
+    <li class="active"><a href="#">Контроль счетов</a></li>
 
               
           </ol>
@@ -227,12 +231,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/purchase/purchases/rfq/bills.html">English</a></li>
+        
+            <li><a href="/13.0/uk/purchase/purchases/rfq/bills.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -259,6 +278,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -268,7 +289,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> Bill Control </h1>
+        <h1> Контроль счетов </h1>
       </div>
     </figure>
     
@@ -281,7 +302,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a></li><li class="list-group-item"><a href="#change-the-control-policy" class="ripple internal reference">Change the control policy</a></li><li class="list-group-item"><a href="#verify-your-vendor-bill" class="ripple internal reference">Verify your Vendor Bill</a></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Настройка</a></li><li class="list-group-item"><a href="#change-the-control-policy" class="ripple internal reference">Измените политику контроля</a></li><li class="list-group-item"><a href="#verify-your-vendor-bill" class="ripple internal reference">Проверьте ваш счет поставщика</a></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/purchase/purchases/rfq/bills.rst" class="gith-link">
                   Edit on GitHub
@@ -293,18 +314,7 @@
           <article class="doc-body  ">
             
             
-  <section id="bill-control"><p >With Odoo, you can define a setting to help the control of your bills.
-<em >Bill Control</em> lets you choose if the supplier sends you the bill
-before or after you receive the goods.</p></section><section id="configuration"><h2 >Configuration</h2><p >For this feature to work, go to <span class="menuselection">Purchases ‣
-Configuration ‣ Settings</span> and select which way you want to control your
-bills.</p><img src="../../../_images/bills01.png" style="" class="img-responsive center-block"></section><section id="change-the-control-policy"><h2 >Change the control policy</h2><p >While the setting above will be your default method of bill control, you
-can always select which way you want to invoice your product on each
-product page under the <em >Purchase</em> tab.</p><p >You might want to use different settings for different types of
-products.</p><img src="../../../_images/bills02.png" style="" class="img-responsive center-block"></section><section id="verify-your-vendor-bill"><h2 >Verify your Vendor Bill</h2><p >If you didn’t receive any of your product yet on <em >Purchase Order</em>
-under the <em >Shipment</em> tab,</p><img src="../../../_images/bills03.png" style="" class="img-responsive center-block"><p >Depending on the billing policy defined above. If you’re supposed to be
-billed based on ordered quantity, Odoo will suggest a bill for the
-number of units ordered. If you’re supposed to be billed based on the
-received quantities, Odoo will suggest a bill for 0 as shown above.</p><img src="../../../_images/bills04.png" style="" class="img-responsive center-block"></section>
+  <section id="bill-control"><p >В Odoo вы можете определять настройки, которые помогут в контроле ваших счетов. Контроль счетов * позволяет выбирать, поставщик присылает вам счета до или после получения товаров.</p></section><section id="configuration"><h2 >Настройка</h2><p >Чтобы эта функция работала, перейдите в: menuselection: [UNKNOWN NODE title_reference] и выберите, каким образом вы хотите контролировать счета.</p><img src="../../../_images/bills01.png" style="" class="img-responsive center-block"></section><section id="change-the-control-policy"><h2 >Измените политику контроля</h2><p >Пока настройки выше будут вашим методом контроля счетов по умолчанию, вы сможете всегда выбирать, каким образом вы хотите выставлять счет-фактуру на каждый товар на странице товара под вкладкой * Покупки [UNKNOWN NODE problematic].</p><p >Вы возможно хотите использовать различные настройки для различных типов товаров.</p><img src="../../../_images/bills02.png" style="" class="img-responsive center-block"></section><section id="verify-your-vendor-bill"><h2 >Проверьте ваш счет поставщика</h2><p >Если вы еще не получили ни одного вашего товара в * Заявке на покупку * под вкладкой * Доставка *</p><img src="../../../_images/bills03.png" style="" class="img-responsive center-block"><p >В зависимости от политики оплаты, определенной выше. Если вам предстоит выставить счет на основе заказанного количества, Odoo предложит счет количества заказанных единиц. Если вам предстоит выставить счет на основе полученных количеств, Odoo предложит счет за 0, как показано выше.</p><img src="../../../_images/bills04.png" style="" class="img-responsive center-block"></section>
 
           </article>
         </div>

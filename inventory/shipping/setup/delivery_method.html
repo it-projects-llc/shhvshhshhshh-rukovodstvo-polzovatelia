@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>How to setup a delivery method? &#8212; Odoo 13.0 documentation</title>
+    <title>Как установить метод доставки? &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../../_static/doc.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/inventory/shipping/setup/delivery_method.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/inventory/shipping/setup/delivery_method.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/inventory/shipping/setup/delivery_method.html" />
+    <link rel="canonical" href="/master/ru/inventory/shipping/setup/delivery_method.html" />
   
-    <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="How to integrate a third party shipper?" href="third_party_shipper.html" />
-    <link rel="prev" title="Shipping Setup" href="../setup.html" /> 
+    <link rel="index" title="Алфавитный указатель" href="../../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../../search.html" />
+    <link rel="next" title="Как настроить стороннего перевозчика в Odoo?" href="third_party_shipper.html" />
+    <link rel="prev" title="Настройка доставки" href="../setup.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -194,7 +198,7 @@
         
             
                 
-                    <li><a href="../../../inventory.html">Inventory</a></li>
+                    <li><a href="../../../inventory.html">Склад</a></li>
                 
             
         
@@ -211,7 +215,7 @@
             
         
     
-    <li class="active"><a href="#">How to setup a delivery method?</a></li>
+    <li class="active"><a href="#">Как установить метод доставки?</a></li>
 
               
           </ol>
@@ -227,12 +231,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/inventory/shipping/setup/delivery_method.html">English</a></li>
+        
+            <li><a href="/13.0/uk/inventory/shipping/setup/delivery_method.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -259,6 +278,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -268,7 +289,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> How to setup a delivery method? </h1>
+        <h1> Как установить метод доставки? </h1>
       </div>
     </figure>
     
@@ -281,7 +302,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#overview" class="ripple internal reference">Overview</a></li><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a><ul ><li class="list-group-item"><a href="#install-the-inventory-module" class="ripple internal reference">Install the inventory module</a></li><li class="list-group-item"><a href="#configure-the-delivery-method" class="ripple internal reference">Configure the delivery method</a></li></ul></li><li class="list-group-item"><a href="#delivery-process" class="ripple internal reference">Delivery process</a><ul ><li class="list-group-item"><a href="#sale-order" class="ripple internal reference">Sale order</a></li><li class="list-group-item"><a href="#delivery" class="ripple internal reference">Delivery</a></li></ul></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#overview" class="ripple internal reference">Общий обзор</a></li><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Настройка</a><ul ><li class="list-group-item"><a href="#install-the-inventory-module" class="ripple internal reference">Установите модуль состава</a></li><li class="list-group-item"><a href="#configure-the-delivery-method" class="ripple internal reference">Настройте метод доставки</a></li></ul></li><li class="list-group-item"><a href="#delivery-process" class="ripple internal reference">процесс доставки</a><ul ><li class="list-group-item"><a href="#sale-order" class="ripple internal reference">Заказ на продажу</a></li><li class="list-group-item"><a href="#delivery" class="ripple internal reference">Доставка</a></li></ul></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/inventory/shipping/setup/delivery_method.rst" class="gith-link">
                   Edit on GitHub
@@ -293,28 +314,7 @@
           <article class="doc-body  ">
             
             
-  <section id="how-to-setup-a-delivery-method"></section><section id="overview"><h2 >Overview</h2><p >Odoo can handle various delivery methods, but it is not activated by
-default. Delivery methods can be used for your sale orders, your
-deliveries but also on your e-commerce.</p><p >Delivery methods allow you to manage the transport company, the price
-and the destination. You can even integrate Odoo with external shippers
-to compute the real price and the packagings.</p></section><section id="configuration"><h2 >Configuration</h2></section><section id="install-the-inventory-module"><h3 >Install the inventory module</h3><p >Delivery methods are handled by the <strong >Delivery costs</strong> module. Go to
-<strong >Apps</strong> and search for the module. You should remove the <strong >Apps</strong> filter in
-order to see it :</p><img src="../../../_images/setup05.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >If you want to integrate delivery methods in your e-commerce,
-you’ll have to install the <strong >eCommerce Delivery</strong> module.</p></div></section><section id="configure-the-delivery-method"><h3 >Configure the delivery method</h3><p >To configure your delivery methods, go to the <strong >Inventory</strong> module,
-click on <span class="menuselection">Configuration ‣ Delivery Methods</span>.</p><p >First set a name and a transporter company.</p><img src="../../../_images/setup03.png" style="" class="img-responsive center-block"><p >Then you’ll have to set the pricing. It can be fixed or based on rules.</p><ul ><li >If the price is fixed, tick <strong >Fixed price</strong>. You’ll just have to define
-the price. If you want the delivery to be free above a certain
-amount, tick the option <strong >Free if Order total is more
-than</strong> and set a price.</li></ul><img src="../../../_images/setup06.png" style="" class="img-responsive center-block"><ul ><li >If the price varies according to rules, tick <strong >Based on Rules</strong>. Click
-on <strong >add an item to a pricing rule</strong>. Choose a condition based on
-either the weight, the volume, the price or the quantity.</li></ul><img src="../../../_images/setup04.png" style="" class="img-responsive center-block"><p >Finally you can limit the delivery method to a few destinations. The
-limit can be applied to some countries, states or even zip codes. This
-feature limits the list of countries on your e-commerce.</p><img src="../../../_images/setup021.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >You can integrate Odoo with external shippers in order to compute the
-real price and packagings, and handle the printing the shipping labels.
-See <a href="third_party_shipper.html" class="internal alert-link reference"><span class="doc">How to integrate a third party shipper?</span></a></p></div></section><section id="delivery-process"><h2 >Delivery process</h2></section><section id="sale-order"><h3 >Sale order</h3><img src="../../../_images/setup07.png" style="" class="img-responsive center-block"><p >You can now choose the <strong >Delivery Method</strong> on your sale order. If you want
-to invoice the price of the delivery charge on the sale order, click on
-<strong >Set price</strong>, it will add a line with the name of the delivery method as
-a product.</p></section><section id="delivery"><h3 >Delivery</h3><p >You can add or change the delivery method on the delivery itself.</p><img src="../../../_images/setup011.png" style="" class="img-responsive center-block"><p >On the delivery, check the <strong >Carrier Information</strong>. The carrier is the
-chosen delivery method.</p><div role="alert" class="alert-go_to alert"><p class="alert-title">See also</p><ul ><li ><a href="third_party_shipper.html" class="internal alert-link reference"><span class="doc">How to integrate a third party shipper?</span></a></li><li ><a href="../operation/invoicing.html" class="internal alert-link reference"><span class="doc">How to invoice the shipping cost to the customer?</span></a></li></ul></div></section>
+  <section id="how-to-setup-a-delivery-method"></section><section id="overview"><h2 >Общий обзор</h2><p >Odoo может обрабатывать различные способы доставки, но по умолчанию они не активированы. Методы доставки могут использоваться для заказов на продажу, ваших поставок, а также для вашей электронной коммерции.</p><p >Методы доставки позволяют вам управлять транспортной компанией, цене и назначению. Вы даже можете интегрировать Odoo с внешними грузоотправителями, чтобы вычислить реальную цену и тару.</p></section><section id="configuration"><h2 >Настройка</h2></section><section id="install-the-inventory-module"><h3 >Установите модуль состава</h3><p >Методы доставки обрабатываются модулем ** Расходы на доставку [UNKNOWN NODE problematic]. Перейдите к ** программ ** и найдите модуль. Чтобы увидеть, следует изъять фильтр ** Программы [UNKNOWN NODE problematic]:</p><img src="../../../_images/setup05.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Если вы хотите интегрировать методы доставки в свою электронную коммерцию, вам придется установить модуль ** Доставка электронной коммерции [UNKNOWN NODE problematic].</p></div></section><section id="configure-the-delivery-method"><h3 >Настройте метод доставки</h3><p >Чтобы настроить способы доставки, перейдите к модулю ** Состав [UNKNOWN NODE problematic], нажмите: menuselection: [UNKNOWN NODE title_reference].</p><p >Сначала установите название и транспортную компанию.</p><img src="../../../_images/setup03.png" style="" class="img-responsive center-block"><p >Тогда вам придется установить цену. Она может быть фиксированной или основанной на правилах.</p><ul ><li >Если цена установлена, нажмите ** Фиксированная цена [UNKNOWN NODE problematic]. Вам просто придется определить цену. Если вы хотите, чтобы доставка была бесплатной выше определенной суммы, отметьте пункт ** Свободная, если общая сумма заказов превышает ** и установите цену.</li></ul><img src="../../../_images/setup06.png" style="" class="img-responsive center-block"><ul ><li >Если цена изменяется в соответствии с правилами, отметьте пункт ** На основе правил [UNKNOWN NODE problematic]. Нажмите на ** добавить элемент в правила ценообразования [UNKNOWN NODE problematic]. Выберите условие, в зависимости от веса, объема, цены или количества.</li></ul><img src="../../../_images/setup04.png" style="" class="img-responsive center-block"><p >Наконец, вы можете ограничить способ доставки несколькими пунктами назначения. Ограничения можно применить в некоторые страны, районов или даже почтовых индексов. Эта функция ограничивает список стран в вашей электронной торговли.</p><img src="../../../_images/setup021.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Вы можете интегрировать Odoo с внешними отправителями, чтобы вычислить реальную цену и упаковку, а также обрабатывать печать этикеток. Смотрите: doc: [UNKNOWN NODE title_reference]</p></div></section><section id="delivery-process"><h2 >процесс доставки</h2></section><section id="sale-order"><h3 >Заказ на продажу</h3><img src="../../../_images/setup07.png" style="" class="img-responsive center-block"><p >Теперь вы можете выбрать ** Метод доставки ** в своем заказе на продажу. Если вы хотите начислить стоимость доставки в заказе на продажу, нажмите ** Установить цену [UNKNOWN NODE problematic], она придаст строку с названием метода доставки как товар.</p></section><section id="delivery"><h3 >Доставка</h3><p >Вы можете добавить или изменить способ доставки на саму доставку.</p><img src="../../../_images/setup011.png" style="" class="img-responsive center-block"><p >На доставке проверьте ** Количество перевозчика [UNKNOWN NODE problematic]. Перевозчик - это выбранный метод доставки.</p><div role="alert" class="alert-go_to alert"><p class="alert-title">См.также</p><ul ><li ><a href="third_party_shipper.html" class="internal alert-link reference"><span class="doc">Как настроить стороннего перевозчика в Odoo?</span></a></li><li ><a href="../operation/invoicing.html" class="internal alert-link reference"><span class="doc">Как зачесть стоимость доставки клиенту?</span></a></li></ul></div></section>
 
           </article>
         </div>

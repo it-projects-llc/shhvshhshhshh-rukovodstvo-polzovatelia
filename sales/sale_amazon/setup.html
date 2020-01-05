@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>Configure Amazon MWS Connector in Odoo &#8212; Odoo 13.0 documentation</title>
+    <title>Configure Amazon MWS Connector in Odoo &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
     <script type="text/javascript" src="../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../_static/doc.js"></script>
     <script type="text/javascript" src="../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/sales/sale_amazon/setup.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/sales/sale_amazon/setup.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/sales/sale_amazon/setup.html" />
+    <link rel="canonical" href="/master/ru/sales/sale_amazon/setup.html" />
   
-    <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="index" title="Алфавитный указатель" href="../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../search.html" />
     <link rel="next" title="Manage Amazon orders in Odoo" href="manage.html" />
-    <link rel="prev" title="Amazon MWS Connector" href="../sale_amazon.html" /> 
+    <link rel="prev" title="Коннектор Amazon MWS" href="../sale_amazon.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -194,7 +198,7 @@
         
             
                 
-                    <li><a href="../../sales.html">Sales</a></li>
+                    <li><a href="../../sales.html">Продажи</a></li>
                 
             
         
@@ -221,12 +225,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/sales/sale_amazon/setup.html">English</a></li>
+        
+            <li><a href="/13.0/uk/sales/sale_amazon/setup.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -252,6 +271,8 @@
 <script type="text/javascript">$('#searchbox').show(0);</script>
             
 
+            
+              <li class="divider"></li>
             
           </ul>
         </div>
@@ -292,7 +313,7 @@ instructions to register as a developer.</p><p >Fill the Developer Registration 
 information in the <strong >Developer contact information</strong> section. For the other sections, take care to
 adapt your responses accordingly to your business case. In particular, select the correct region of
 your seller account and uncheck the <strong >Merchant Fulfilled Shipping</strong> function if you plan to sell
-exclusively with the Fulfillment by Amazon service.</p><div role="alert" class="alert-warning alert"><p class="alert-title">Warning</p><p >If you select the <strong >Merchant Fulfilled Shipping</strong> function (i.e. you request access to
+exclusively with the Fulfillment by Amazon service.</p><div role="alert" class="alert-warning alert"><p class="alert-title">Предупреждение</p><p >If you select the <strong >Merchant Fulfilled Shipping</strong> function (i.e. you request access to
 Personally Identifiable Information (PII) of your customers), Amazon may request you
 to fill out a second form, depending on the data protection policy in the region of
 your seller account (e.g. GDPR in Europe).</p></div><img src="../../_images/dev_form.png" style="" class="img-responsive"></section><section id="register-your-amazon-account-in-odoo"><h2 >Register your Amazon account in Odoo</h2><p >To register your seller account in Odoo, navigate to <span class="menuselection">Sales ‣ Configuration
@@ -307,17 +328,17 @@ one for the gift wrapping charges (if any).</p><p >The selection of a database p
 charges, and the <strong >gift wrapping</strong> code for gift wrapping charges.</p><p >For marketplace products, matchings are saved as <strong >Amazon Offers</strong> which are listed under the
 <strong >Offers</strong> stat button on the account form. Offers are automatically created when the matching is
 established and are used for subsequent orders to lookup SKUs. If no offer with a matching SKU is
-found, <a href="#matching" class="internal reference"><span class="std std-ref">the internal reference is used instead</span></a>.</p><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >It is possible to force the matching of a marketplace item with a specific product by
+found, <a href="#matching" class="internal reference"><span class="std std-ref">the internal reference is used instead</span></a>.</p><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >It is possible to force the matching of a marketplace item with a specific product by
 changing either the product or the SKU of an offer. The offer can be manually created if
 it was not automatically done yet. This is useful if you do not use the internal
 reference as the SKU or if you sell the product under different conditions.</p></div><p >If no database product with a matching internal reference is found for a given SKU or gift wrapping
 code, a default database product <strong >Amazon Sale</strong> is used. The same is done with the default product
-<strong >Amazon Shipping</strong> and the shipping code.</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >To modify the default products, activate the <strong >Developer mode</strong> and navigate to
+<strong >Amazon Shipping</strong> and the shipping code.</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >To modify the default products, activate the <strong >Developer mode</strong> and navigate to
 <span class="menuselection">Sales ‣ Configuration ‣ Settings ‣ Connectors ‣ Amazon Sync ‣
 Default Products</span>.</p></div></section><section id="configure-taxes-of-products"><h2 >Configure taxes of products</h2><p >To allow for tax reporting of Amazon sales with Odoo, the taxes applied to the sales order items are
 those set on the product or determined by the fiscal position. Make sure to have set the correct
 taxes on your products in Odoo or to have it done by a fiscal position, to avoid discrepancies in
-the subtotals between Seller Central and Odoo.</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >As Amazon does not necessarily apply the same taxes as those configured in Odoo, it may
+the subtotals between Seller Central and Odoo.</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >As Amazon does not necessarily apply the same taxes as those configured in Odoo, it may
 happen that order totals differ by a few cents from that on Seller Central. Those
 differences can be resolved with a write-off when reconciling the payments in Odoo.</p></div></section>
 

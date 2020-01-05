@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>Define Quality Control Points &#8212; Odoo 13.0 documentation</title>
+    <title>Define Quality Control Points &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
     <script type="text/javascript" src="../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../_static/doc.js"></script>
     <script type="text/javascript" src="../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/quality/control/control_points.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/quality/control/control_points.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/quality/control/control_points.html" />
+    <link rel="canonical" href="/master/ru/quality/control/control_points.html" />
   
-    <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Alert" href="../alert.html" />
-    <link rel="prev" title="Control" href="../control.html" /> 
+    <link rel="index" title="Алфавитный указатель" href="../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../search.html" />
+    <link rel="next" title="Предупреждение" href="../alert.html" />
+    <link rel="prev" title="Контроль" href="../control.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -194,7 +198,7 @@
         
             
                 
-                    <li><a href="../../quality.html">Quality</a></li>
+                    <li><a href="../../quality.html">Качество</a></li>
                 
             
         
@@ -221,12 +225,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/quality/control/control_points.html">English</a></li>
+        
+            <li><a href="/13.0/uk/quality/control/control_points.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -253,6 +272,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -275,7 +296,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#quality-control-points" class="ripple internal reference">Quality Control Points</a></li><li class="list-group-item"><a href="#quality-control-point-types" class="ripple internal reference">Quality Control Point Types</a><ul ><li class="list-group-item"><a href="#text" class="ripple internal reference">Text</a></li><li class="list-group-item"><a href="#take-a-picture" class="ripple internal reference">Take a Picture</a></li><li class="list-group-item"><a href="#pass-fail" class="ripple internal reference">Pass-Fail</a></li><li class="list-group-item"><a href="#take-a-measure" class="ripple internal reference">Take a Measure</a></li><li class="list-group-item"><a href="#register-consumed-materials" class="ripple internal reference">Register Consumed Materials</a></li><li class="list-group-item"><a href="#register-by-products" class="ripple internal reference">Register By-Products</a></li><li class="list-group-item"><a href="#print-label" class="ripple internal reference">Print Label</a></li></ul></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#quality-control-points" class="ripple internal reference">Контрольные точки качества</a></li><li class="list-group-item"><a href="#quality-control-point-types" class="ripple internal reference">Quality Control Point Types</a><ul ><li class="list-group-item"><a href="#text" class="ripple internal reference">Текст</a></li><li class="list-group-item"><a href="#take-a-picture" class="ripple internal reference">сделать изображение</a></li><li class="list-group-item"><a href="#pass-fail" class="ripple internal reference">Pass-Fail</a></li><li class="list-group-item"><a href="#take-a-measure" class="ripple internal reference">Take a Measure</a></li><li class="list-group-item"><a href="#register-consumed-materials" class="ripple internal reference">Register Consumed Materials</a></li><li class="list-group-item"><a href="#register-by-products" class="ripple internal reference">Register By-Products</a></li><li class="list-group-item"><a href="#print-label" class="ripple internal reference">Print Label</a></li></ul></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/quality/control/control_points.rst" class="gith-link">
                   Edit on GitHub
@@ -287,7 +308,7 @@
           <article class="doc-body  ">
             
             
-  <section id="define-quality-control-points"></section><section id="quality-control-points"><h2 >Quality Control Points</h2><p >If it is the first <em >Quality Control Point</em> that you create, know that
+  <section id="define-quality-control-points"></section><section id="quality-control-points"><h2 >Контрольные точки качества</h2><p >If it is the first <em >Quality Control Point</em> that you create, know that
 you need to open the <em >Quality</em> app. Then, go to <em >Quality Control &gt;
 Control Points</em>. Once there, you have to define the product on which
 the quality control will take place, as well as the operation at which
@@ -296,8 +317,8 @@ the manufacturing process of the products. If you work with routings on
 your <em >Bill of Materials</em>, you have to precise at which step of the
 manufacturing process the quality control point should be applied.</p><p >The control type defines at which frequency the quality checks should
 take place:</p><ul ><li >All Operations: all the operations will generate quality checks to perform;</li><li >Randomly: the quality checks will only be performed on x% of the operation. You must define the percentage yourself, on the control point;</li><li >Periodically: the quality checks will be performed periodically. The periodicity is based on the period you define (once a day, once a week).</li></ul><img src="../../_images/control_points_01.png" style="" class="img-responsive center-block"></section><section id="quality-control-point-types"><h2 >Quality Control Point Types</h2><p >Now that the rest is configured, you need to define the type of quality
-check.</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >Some of the types are only available with the manufacturing application.</p></div></section><section id="text"><h3 >Text</h3><p >This control point type allows you to give instructions to your workers
-during the transfer, or the manufacturing process.</p><img src="../../_images/control_points_01.png" style="" class="img-responsive center-block"><img src="../../_images/control_points_02.png" style="" class="img-responsive center-block"><img src="../../_images/control_points_03.png" style="" class="img-responsive center-block"></section><section id="take-a-picture"><h3 >Take a Picture</h3><p >This control point type asks you to take a picture of the product in a
+check.</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Some of the types are only available with the manufacturing application.</p></div></section><section id="text"><h3 >Текст</h3><p >This control point type allows you to give instructions to your workers
+during the transfer, or the manufacturing process.</p><img src="../../_images/control_points_01.png" style="" class="img-responsive center-block"><img src="../../_images/control_points_02.png" style="" class="img-responsive center-block"><img src="../../_images/control_points_03.png" style="" class="img-responsive center-block"></section><section id="take-a-picture"><h3 >сделать изображение</h3><p >This control point type asks you to take a picture of the product in a
 transfer, or when manufacturing it.</p><img src="../../_images/control_points_04.png" style="" class="img-responsive center-block"><img src="../../_images/control_points_05.png" style="" class="img-responsive center-block"><img src="../../_images/control_points_06.png" style="" class="img-responsive center-block"></section><section id="pass-fail"><h3 >Pass-Fail</h3><p >This type of control point requires that you specify if the products
 pass or fail a specific text. It can be applied for both transfers or
 manufacturing orders.</p><img src="../../_images/control_points_07.png" style="" class="img-responsive center-block"><p >For this kind of control point type, you have the possibility to define

@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>How to track costs of human resources with timesheets? &#8212; Odoo 13.0 documentation</title>
+    <title>Как отслеживать расходы на человеческие ресурсы с расписанием? &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../../_static/doc.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/accounting/others/analytic/timesheets.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/accounting/others/analytic/timesheets.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/accounting/others/analytic/timesheets.html" />
+    <link rel="canonical" href="/master/ru/accounting/others/analytic/timesheets.html" />
   
-    <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="How to track costs of purchases, expenses, subcontracting?" href="purchases_expenses.html" />
-    <link rel="prev" title="Analytic account use cases" href="usage.html" /> 
+    <link rel="index" title="Алфавитный указатель" href="../../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../../search.html" />
+    <link rel="next" title="Как отслеживать расходы, сотрудников и субподряд?" href="purchases_expenses.html" />
+    <link rel="prev" title="Использование аналитического счета в разных случаях" href="usage.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -194,7 +198,7 @@
         
             
                 
-                    <li><a href="../../../accounting.html">Accounting</a></li>
+                    <li><a href="../../../accounting.html">Бухгалтерский учёт</a></li>
                 
             
         
@@ -211,7 +215,7 @@
             
         
     
-    <li class="active"><a href="#">How to track costs of human resources with timesheets?</a></li>
+    <li class="active"><a href="#">Как отслеживать расходы на человеческие ресурсы с расписанием?</a></li>
 
               
           </ol>
@@ -227,12 +231,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/accounting/others/analytic/timesheets.html">English</a></li>
+        
+            <li><a href="/13.0/uk/accounting/others/analytic/timesheets.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -259,6 +278,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -268,7 +289,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> How to track costs of human resources with timesheets? </h1>
+        <h1> Как отслеживать расходы на человеческие ресурсы с расписанием? </h1>
       </div>
     </figure>
     
@@ -281,7 +302,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a><ul ><li class="list-group-item"><a href="#create-an-employee" class="ripple internal reference">Create an employee</a></li><li class="list-group-item"><a href="#issue-a-sales-order" class="ripple internal reference">Issue a Sales Order</a></li><li class="list-group-item"><a href="#fill-in-timesheet" class="ripple internal reference">Fill in timesheet</a></li><li class="list-group-item"><a href="#analytic-accounting" class="ripple internal reference">Analytic accounting</a><ul ><li class="list-group-item"><a href="#without-filters" class="ripple internal reference">Without filters</a></li><li class="list-group-item"><a href="#with-filters" class="ripple internal reference">With filters</a></li></ul></li></ul></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Настройка</a><ul ><li class="list-group-item"><a href="#create-an-employee" class="ripple internal reference">создайте сотрудника</a></li><li class="list-group-item"><a href="#issue-a-sales-order" class="ripple internal reference">Оформите заказ на продажу</a></li><li class="list-group-item"><a href="#fill-in-timesheet" class="ripple internal reference">заполните табель</a></li><li class="list-group-item"><a href="#analytic-accounting" class="ripple internal reference">Аналитический учёт</a><ul ><li class="list-group-item"><a href="#without-filters" class="ripple internal reference">без фильтров</a></li><li class="list-group-item"><a href="#with-filters" class="ripple internal reference">С фильтрами</a></li></ul></li></ul></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/accounting/others/analytic/timesheets.rst" class="gith-link">
                   Edit on GitHub
@@ -293,53 +314,7 @@
           <article class="doc-body  ">
             
             
-  <section id="how-to-track-costs-of-human-resources-with-timesheets"><p >Human resource of course has a cost. It is interesting to see how much a
-particular contract costs the company in term of human power in relation
-to the invoiced amounts.</p><p >We will take the following example: Our two employees <strong >Harry Potter</strong> and
-<strong >Cedric Digory</strong> both work on a <strong >Consultancy pack</strong> for our customer
-<strong >Smith&amp;Co</strong>. Harry is paid 18€ p.h. and Cedric’s salary is 12€ p.h. We
-would like to track their timesheet costs within the accounting app, and
-compare them with the revenue of the consultancy service.</p></section><section id="configuration"><h2 >Configuration</h2><p >First, install the three applications necessary to use this
-functionality, namely <strong >Accounting</strong>, <strong >Sales</strong> and <strong >Timesheet</strong>. Enter the apps
-module name and install them.</p><img src="../../../_images/timesheets14.png" style="" class="img-responsive center-block"><img src="../../../_images/timesheets05.png" style="" class="img-responsive center-block"><img src="../../../_images/timesheets11.png" style="" class="img-responsive center-block"><p >Next you will need to enable analytical accounting. To do so enter the
-<strong >Accounting app</strong>. Select <span class="menuselection">Configuration ‣ Settings</span> and tick the
-<strong >Analytic accounting</strong> option (see picture below)</p><img src="../../../_images/timesheets06.png" style="" class="img-responsive center-block"><p >Apply your changes.</p></section><section id="create-an-employee"><h3 >Create an employee</h3><p >In order to check the revenue of an employee you need to have one. To
-create an employee enter the <strong >Employee</strong> app. Select <strong >Employees</strong> and
-create a new employee, fill in the name and the basic information.</p><p >On the employee sheet enter the <strong >HR settings</strong> tab. Here you are able to
-specify the <strong >Timesheet Cost</strong> of your employee. In this case Harry has a
-cost of 18 euros / hours. We will thus fill in 18 in this field.</p><img src="../../../_images/timesheets07.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >If you want the employee to be able to enter timesheets he
-needs to be related to a User.</p></div><p >Repeat the operation to create the Cedric Digory employee. Don’t forget
-to specify its related user and <strong >Timesheet Costs</strong>.</p></section><section id="issue-a-sales-order"><h3 >Issue a Sales Order</h3><p >We created two employees called Harry Potter and Cedric Diggory in the
-<strong >Employee</strong> app. Both of them will work on a consultancy contract for our
-customer Smith&amp;Co where they will point their hours on a timesheet.</p><p >We thus need to create a <strong >sales order</strong> with a <strong >service</strong> product invoiced
-<strong >based on time and material</strong> and tracked by timesheets with <strong >hours</strong> as unit
-of measures.</p><img src="../../../_images/timesheets03.png" style="" class="img-responsive center-block"><p >For more information on how to create a sales order based on time and
-material please see: <em >How to invoice based on time and material</em> (Work in Progress).</p><p >We save a Sales Order with the service product <strong >External Consulting</strong>. An
-analytical account will automatically be generated once the <strong >Sales Order</strong>
-is confirmed. Our employees will have to point to that account (in this
-case <strong >SO002-Smith&amp;Co</strong>) in order to be able to invoice their hours (see
-picture below).</p><img src="../../../_images/timesheets10.png" style="" class="img-responsive center-block"></section><section id="fill-in-timesheet"><h3 >Fill in timesheet</h3><p >As an employee linked to a user, Harry can enter the <strong >Timesheet</strong> app and
-specify his timesheets for the contract. Logged on Harry’s account we enter the
-<strong >Timesheet</strong> app and enter a detailed line pointing to the <strong >Analytical
-Account</strong> discussed above.</p><p >Harry worked three hours on a SWOT analysis for Smith&amp;Co.</p><img src="../../../_images/timesheets01.png" style="" class="img-responsive center-block"><p >In the meantime, Cedric discussed businesses needs with the customer for
-1 hour and specified it as well in his personal timesheet, pointing as
-well on the <strong >Analytic Account</strong>.</p><p >In the <strong >Sales Order</strong> we notice that the delivered amounts of hours is
-automatically computed (see picture below).</p><img src="../../../_images/timesheets02.png" style="" class="img-responsive center-block"></section><section id="analytic-accounting"><h3 >Analytic accounting</h3><p >Thanks to analytic accounts we are able to have an overview of HR cost
-and revenues. All the revenues and cost of this transactions have been
-registered in the <strong >SO002-Smith&amp;Co</strong> account.</p><p >We can use two methods to analyze this situation.</p></section><section id="without-filters"><h4 >Without filters</h4><p >If we pointed all our costs and revenues of the project on the correct
-analytical account we can easily retrieve the cost and revenues related
-to this analytical account. Enter the <em >Accounting</em> app, select
-<span class="menuselection">Adviser ‣ Analytic Accounts ‣ Open Charts</span>.</p><p >Note : you can specify a period for <strong >Analysis</strong>. If you want to open the
-current situation you should keep the fields empty. We can already note
-the credit and debit balance of the account.</p><img src="../../../_images/timesheets12.png" style="" class="img-responsive center-block"><p >If we click on the account a special button is provided to have the
-details of cost and revenues (see picture below).</p><img src="../../../_images/timesheets13.png" style="" class="img-responsive center-block"><p >Click the button <strong >Cost/Revenue</strong> to have an overview of cost and revenues with the
-corresponding description.</p></section><section id="with-filters"><h4 >With filters</h4><p >We can thus filter this information from the <strong >Analytic Entries</strong>.</p><p >Enter the <strong >Accounting</strong> app, and click on <span class="menuselection">Adviser ‣ Analytic Entries</span>.
-In this menu we have several options to analyse the human resource cost.</p><ol ><li ><p >We filter on the <strong >Analytic account</strong> so we can see the cost and revenues
-of the project. Add a custom <strong >Filter</strong> where the <strong >Analytic Account</strong>
-contains the <strong >Sales Order</strong> number.</p><img src="../../../_images/timesheets04.png" style="" class="img-responsive center-block"><p >In the results we see timesheets activities and invoiced lines with
-the corresponding costs and revenues.</p><img src="../../../_images/timesheets09.png" style="" class="img-responsive center-block"></li><li ><p >We can group the different analytical accounts together and check
-their respective revenues. Simply group by <strong >Analytic account</strong> and
-select the <strong >Graph view</strong> to have a clear overview.</p><img src="../../../_images/timesheets08.png" style="" class="img-responsive center-block"></li></ol></section>
+  <section id="how-to-track-costs-of-human-resources-with-timesheets"><p >Человеческий ресурс обычно имеет стоимость. Интересно посмотреть, насколько конкретный договор стоит перед компанией в терминах человеческой силы в отношении суммы, подлежащие оплате.</p><p >Мы рассмотрим такой пример: наши два сотрудника ** Гарри Поттер ** и ** Седрик Диггори ** работают на ** консультационном пакете ** для нашего клиента ** Smith &amp;amp; Co [UNKNOWN NODE problematic]. Гарри получает 18 € в час, а зарплата Седрика составляет 12 € в час. Мы хотели бы отслеживать расходы в приложении бухучета и сравнивать их с доходами консультационной услуги.</p></section><section id="configuration"><h2 >Настройка</h2><p >Во-первых, установите три программы, необходимые для использования этой функции, а именно ** Бухучет [UNKNOWN NODE problematic], ** Продажи ** и ** Табели [UNKNOWN NODE problematic]. Введите название модулей и установите их.</p><img src="../../../_images/timesheets14.png" style="" class="img-responsive center-block"><img src="../../../_images/timesheets05.png" style="" class="img-responsive center-block"><img src="../../../_images/timesheets11.png" style="" class="img-responsive center-block"><p >Далее вам нужно будет включить аналитический бухучет. Для этого введите приложение ** Бухучета [UNKNOWN NODE problematic]. Выберите: menuselection: [UNKNOWN NODE title_reference] и отметьте опцию ** Аналитический бухучет ** (см. Изображение ниже).</p><img src="../../../_images/timesheets06.png" style="" class="img-responsive center-block"><p >Примените изменения.</p></section><section id="create-an-employee"><h3 >создайте сотрудника</h3><p >Чтобы проверить доход работника, нужно иметь его. Чтобы создать сотрудника, введите приложение ** Сотрудник [UNKNOWN NODE problematic]. Выберите ** Сотрудники ** и создайте нового сотрудника, введите имя и основную информацию.</p><p >На листке сотрудника введите вкладку ** Параметры персонала [UNKNOWN NODE problematic]. Здесь вы можете указать ** Стоимость табеля ** своего сотрудника. В этом случае Гарри имеет стоимость 18 евро / час. Таким образом, мы заполним 18 в этом поле.</p><img src="../../../_images/timesheets07.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Если вы хотите, чтобы работник мог вводить расписание, он должен быть связан с пользователем.</p></div><p >Повторите операцию, чтобы создать работника Седрик Диггори. Не забудьте указать связанные с ним пользователи и ** Стоимость табеля [UNKNOWN NODE problematic].</p></section><section id="issue-a-sales-order"><h3 >Оформите заказ на продажу</h3><p >Мы создали двух сотрудников под названием Гарри Поттер и Седрик Диггори в приложении ** Сотрудники [UNKNOWN NODE problematic]. Оба они будут работать на консультационном контракте с нашим клиентом Smith &amp;amp; Co, где они указывают свои часы в расписании.</p><p >Итак, нам нужно создать ** заказ на продажу ** с товаром ** услуга [UNKNOWN NODE problematic], на который выставлен счет ** основан на времени и материале [UNKNOWN NODE problematic], и отслеживается табелю с ** часами ** как единица измерений.</p><img src="../../../_images/timesheets03.png" style="" class="img-responsive center-block"><p >Для получения дополнительной информации о том, как создать заказ на продажу, в зависимости от времени и материала, просмотрите такую информацию: Как выставлять счета на основе времени и материалов * (работа в процессе).</p><p >Мы экономим заказ на продажу с помощью сервисного товара ** Внешний консалтинг [UNKNOWN NODE problematic]. Аналитический бухучет будет автоматически создан после подтверждения ** заказ на продажу [UNKNOWN NODE problematic]. Наши сотрудники должны указать на этот счет (в этом случае ** SO002-Smith &amp;amp; Co [UNKNOWN NODE problematic]), чтобы иметь возможность выставлять счета за часы (см. Изображение ниже).</p><img src="../../../_images/timesheets10.png" style="" class="img-responsive center-block"></section><section id="fill-in-timesheet"><h3 >заполните табель</h3><p >Как работник, связанный с пользователем, Гарри может войти в приложение ** Табель ** и указать его табель для контракта. Войдя на учет Гарри, мы заходим в приложение ** Табель ** и вводим детальный строку, указывающий на ** аналитический бухучет [UNKNOWN NODE problematic], описанный выше.</p><p >Гарри работал 3:00 на SWOT-анализе для Smith &amp;amp; Co.</p><img src="../../../_images/timesheets01.png" style="" class="img-responsive center-block"><p >Между тем, Седрик обсудил потребности бизнеса с заказчиком за 1:00 и указал ее также в своей личной табели, указывая также в ** Аналитическом бухучета [UNKNOWN NODE problematic].</p><p >В ** Заявке на продажу ** мы замечаем, что количество доставленных часов автоматически вычисляется (см. Изображение ниже).</p><img src="../../../_images/timesheets02.png" style="" class="img-responsive center-block"></section><section id="analytic-accounting"><h3 >Аналитический учёт</h3><p >Благодаря аналитическим счетам мы можем иметь обзор расходов и доходов персонала. Все доходы и стоимость этих операций зарегистрированы на счету ** SO002-Smith &amp;amp; Co [UNKNOWN NODE problematic].</p><p >Мы можем использовать два способа анализа этой ситуации.</p></section><section id="without-filters"><h4 >без фильтров</h4><p >Если мы указали все наши расходы и доходы проекта на правильный аналитический счет, мы сможем легко получить средства и доходы, связанные с этим аналитическому счету. Введите модуль * Бухучет * выберите: menuselection: [UNKNOWN NODE title_reference].</p><p >Примечание: вы можете указать период для ** анализа [UNKNOWN NODE problematic]. Если вы хотите открыть текущую ситуацию, вы должны оставить поля пустыми. Мы уже можем отметить кредитный и дебетовый баланс счета.</p><img src="../../../_images/timesheets12.png" style="" class="img-responsive center-block"><p >Если мы нажмем на счет, будет предоставлена специальная кнопка, которая содержит информацию о стоимости и доходах (см. Изображение ниже).</p><img src="../../../_images/timesheets13.png" style="" class="img-responsive center-block"><p >Нажмите кнопку ** Стоимость / доход [UNKNOWN NODE problematic], чтобы иметь обзор стоимости и доходов с соответствующим описанием.</p></section><section id="with-filters"><h4 >С фильтрами</h4><p >Таким образом, мы можем фильтровать эту информацию с ** Аналитических записей [UNKNOWN NODE problematic].</p><p >Введите модуль ** Бухучет ** и нажмите кнопку: menuselection: [UNKNOWN NODE title_reference]. В этом меню мы имеем несколько вариантов анализа стоимости человеческих ресурсов.</p><ol ><li ><p >Мы фильтруем ** Аналитический бухучет [UNKNOWN NODE problematic], чтобы мы могли видеть стоимость и доходы проекта. Добавьте индивидуальный ** Фильтр [UNKNOWN NODE problematic], где ** Аналитический счет ** содержит номер ** Заказ на продажу [UNKNOWN NODE problematic].</p><img src="../../../_images/timesheets04.png" style="" class="img-responsive center-block"><p >В результате мы видим, что действия табелей и строки счетов есть с соответствующими расходами и доходами.</p><img src="../../../_images/timesheets09.png" style="" class="img-responsive center-block"></li><li ><p >Мы можем вместе группировать различные аналитические счета и проверять их соответствующие доходы. Просто группируйте за ** Аналитическим счету ** и выберите ** Просмотр графику [UNKNOWN NODE problematic], чтобы иметь четкий обзор.</p><img src="../../../_images/timesheets08.png" style="" class="img-responsive center-block"></li></ol></section>
 
           </article>
         </div>

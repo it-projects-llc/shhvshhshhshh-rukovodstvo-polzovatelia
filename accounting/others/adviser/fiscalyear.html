@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>How to do a year end in Odoo? (close a fiscal year) &#8212; Odoo 13.0 documentation</title>
+    <title>Как закрыть летний период в Odoo? (Закрытие отчетного периода) &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../../_static/doc.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/accounting/others/adviser/fiscalyear.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/accounting/others/adviser/fiscalyear.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/accounting/others/adviser/fiscalyear.html" />
+    <link rel="canonical" href="/master/ru/accounting/others/adviser/fiscalyear.html" />
   
-    <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="How to manage a financial budget?" href="budget.html" />
-    <link rel="prev" title="Manage your fixed assets" href="assets.html" /> 
+    <link rel="index" title="Алфавитный указатель" href="../../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../../search.html" />
+    <link rel="next" title="Как управлять финансовым бюджетом?" href="budget.html" />
+    <link rel="prev" title="Управление основными средствами" href="assets.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -194,7 +198,7 @@
         
             
                 
-                    <li><a href="../../../accounting.html">Accounting</a></li>
+                    <li><a href="../../../accounting.html">Бухгалтерский учёт</a></li>
                 
             
         
@@ -211,7 +215,7 @@
             
         
     
-    <li class="active"><a href="#">How to do a year end in Odoo? (close a fiscal year)</a></li>
+    <li class="active"><a href="#">Как закрыть летний период в Odoo? (Закрытие отчетного периода)</a></li>
 
               
           </ol>
@@ -227,12 +231,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/accounting/others/adviser/fiscalyear.html">English</a></li>
+        
+            <li><a href="/13.0/uk/accounting/others/adviser/fiscalyear.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -259,6 +278,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -268,7 +289,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> How to do a year end in Odoo? (close a fiscal year) </h1>
+        <h1> Как закрыть летний период в Odoo? (Закрытие отчетного периода) </h1>
       </div>
     </figure>
     
@@ -281,7 +302,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#year-end-checklist" class="ripple internal reference">Year-end checklist</a></li><li class="list-group-item"><a href="#closing-the-fiscal-year" class="ripple internal reference">Closing the fiscal year</a></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#year-end-checklist" class="ripple internal reference">Перечень проверок на конец года</a></li><li class="list-group-item"><a href="#closing-the-fiscal-year" class="ripple internal reference">Закрытие отчетного периода</a></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/accounting/others/adviser/fiscalyear.rst" class="gith-link">
                   Edit on GitHub
@@ -293,41 +314,7 @@
           <article class="doc-body  ">
             
             
-  <section id="how-to-do-a-year-end-in-odoo-close-a-fiscal-year"><p >Before going ahead with closing a fiscal year, there are a few steps one
-should typically take to ensure that your accounting is correct, up to
-date, and accurate:</p><ul ><li >Make sure you have fully reconciled your <strong >bank account(s)</strong> up to
-year end and confirm that your ending book balances agree with
-your bank statement balances.</li><li >Verify that all <strong >customer invoices</strong> have been entered and approved.</li><li >Confirm that you have entered and agreed all <strong >vendor bills</strong>.</li><li >Validate all <strong >expenses</strong>, ensuring their accuracy.</li><li >Corroborate that all <strong >received payments</strong> have been entered and
-recorded accurately.</li></ul></section><section id="year-end-checklist"><h2 >Year-end checklist</h2><ul ><li >Run a <strong >Tax report</strong>, and verify that your tax information is correct.</li><li ><p >Reconcile all accounts on your <strong >Balance Sheet</strong>:</p><ul ><li >Agree your bank balances in Odoo against your actual bank balances
-on your statements. Utilize the <strong >Bank Reconciliation</strong> report to
-assist with this.</li><li >Reconcile all transactions in your cash and bank accounts by
-running your <strong >Aged Receivables</strong> and <strong >Aged Payables</strong> reports.</li><li >Audit your accounts, being sure to fully understand the
-transactions affecting them and the nature of the
-transactions, making sure to include loans and fixed assets.</li></ul></li><li >Run the optional <strong >Payments Matching</strong> feature, under the <strong >More</strong>
-dropdown on the dashboard, validating any open <strong >Vendor Bills</strong> and
-<strong >Customer Invoices</strong> with their payments. This step is optional,
-however it may assist the year-end process if all outstanding
-payments and invoices are reconciled, and could lead finding
-errors or mistakes in the system.</li><li ><p >Your accountant/bookkeeper will likely verify your balance sheet
-items and book entries for:</p><ul ><li >Year-end manual adjustments, using the <strong >Adviser Journal Entries</strong>
-menu (For example, the <strong >Current Year Earnings</strong> and <strong >Retained
-Earnings</strong> reports).</li><li ><strong >Work in Progress</strong>.</li><li ><strong >Depreciation Journal Entries</strong>.</li><li ><strong >Loans</strong>.</li><li ><strong >Tax adjustments</strong>.</li></ul></li></ul><p >If your accountant/bookkeeper is going through end of the year auditing,
-they may want to have paper copies of all balance sheet items (such as
-loans, bank accounts, prepayments, sales tax statements, etc…) to
-agree these against your Odoo balances.</p><p >During this process, it is good practice to set the <strong >Lock date for
-Non-Advisers</strong> to the last day of the preceding financial year, which is
-set under the accounting configuration. This way, the accountant can be
-confident that nobody is changing the previous year transactions
-while auditing the books.</p><img src="../../../_images/fiscalyear01.png" style="" class="img-responsive center-block"></section><section id="closing-the-fiscal-year"><h2 >Closing the fiscal year</h2><p >In Odoo there is no need to do a specific year end closing entry in order to
-close out income statement accounts. The reports are created in
-real-time, meaning that the <strong >Income statement</strong> corresponds directly with
-the year-end date you specify in Odoo. Therefore, any time you generate
-the <strong >Income Statement</strong>, the beginning date will correspond with the
-beginning of the <strong >Fiscal Year</strong> and the account balances will all be 0.</p><p >Once the accountant/bookkeeper has created the journal entry to allocate
-the <strong >Current Year Earnings</strong>, you should set the <strong >Lock Date</strong> to the last day
-of the fiscal year. Making sure that before doing so, you confirm
-whether or not the current year earnings in the <strong >Balance Sheet</strong> is
-correctly reporting a 0 balance.</p><div role="alert" class="alert-go_to alert"><p class="alert-title">See also</p><ul ><li ><a href="../configuration/fiscal_year.html" class="internal alert-link reference"><span class="doc">Manage Fiscal Years</span></a></li></ul></div></section>
+  <section id="how-to-do-a-year-end-in-odoo-close-a-fiscal-year"><p >Прежде чем закрывать летний период, нужно выполнить несколько шагов, чтобы убедиться, что ваш бухучет является правильным, обновленным и точным:</p><ul ><li >Убедитесь, что вы полностью согласовали ** банковский счет (-а) ** до конца года и подтверждаете, что ваш баланс на дату согласуется с вашими балансами банковских выписок.</li><li >Убедитесь, что все ** счета-фактуры клиентов ** были введены и одобрены.</li><li >Подтвердите, что вы ввели и согласовали все ** счета поставщиков [UNKNOWN NODE problematic].</li><li >Проверьте все ** расходы [UNKNOWN NODE problematic], обеспечивая их точность.</li><li >Подтвердите, что все ** полученные платежи ** были введены и записаны точно.</li></ul></section><section id="year-end-checklist"><h2 >Перечень проверок на конец года</h2><ul ><li >Проверьте ** Налоговый отчет ** и убедитесь, что ваша налоговая информация является правильной.</li><li ><p >Согласуйте все ваши счета со ** Отчетом баланса [UNKNOWN NODE problematic]:</p><ul ><li >Согласуйте свои банковские балансы в Odoo с вашими фактическими остатками баланса на ваших выписках. Используйте отчет ** Согласование с банковской выпиской [UNKNOWN NODE problematic], чтобы помочь этому.</li><li >Подключите все транзакции на своих денежных и банковских счетах, выполняя отчеты ** расчетов с кредиторами ** и отчеты ** расчетов с дебиторами [UNKNOWN NODE problematic].</li><li >Проверьте свои счета, не забудьте убедиться в том, какие операции влияют на них и характер операций, убедившись во включении кредитов и основных средств.</li></ul></li><li >Выполните необязательную функцию ** Сопоставление платежей ** в выпадающем меню ** Более ** на информационной панели, проверяя все ** Счета поставщиков ** и ** Счета клиентов ** с их платежами. Этот шаг является необязательным, но это может помочь в процессе закрытия года, если все неуплаченные платежи и счета-фактуры будут согласованными, то могут привести к ошибкам или ошибок в системе.</li><li ><p >Ваш бухгалтер, вероятно, подтвердит ваши элементы баланса и запись книг для:</p><ul ><li >Инструкции по коррекции на конец года, используя меню ** журнальных записей консультантов ** (например, отчеты ** прибыли текущего периода ** и ** Сохранившиеся прибыли [UNKNOWN NODE problematic]).</li><li >** Работа в процессе [UNKNOWN NODE problematic].</li><li >** Записи журнала амортизации [UNKNOWN NODE problematic].</li><li >** Займы [UNKNOWN NODE problematic].</li><li >** Налоговые корректировки [UNKNOWN NODE problematic].</li></ul></li></ul><p >Если ваш бухгалтер заканчивает аудиторскую проверку года, ему могут понадобиться бумажные копии всех отчетов баланса (например, займы, банковские счета, подписки, отчеты о налоге и прибыль и т.д.), чтобы согласовать их с балансом в Odoo.</p><p >Во время этого процесса лучшим шагом является установление ** Дать блокировки для не-консультантов ** до последнего дня предыдущего финансового года, который устанавливается в настройках бухучета. Таким образом, бухгалтер может быть уверен в том, что во время аудита никто не меняет операции прошлого года.</p><img src="../../../_images/fiscalyear01.png" style="" class="img-responsive center-block"></section><section id="closing-the-fiscal-year"><h2 >Закрытие отчетного периода</h2><p >В Odoo нет необходимости делать конкретную запись для закрытия года. Отчеты создаются в режиме реального времени, что означает, что ** Отчет о доходах ** непосредственно отвечает дате конечной даты, которую вы указали в Odoo. Поэтому, если вы создаете ** Отчет о доходах [UNKNOWN NODE problematic], начальная дата соответствует началу ** отчетном периоде [UNKNOWN NODE problematic], а остаток будет 0.</p><p >После того, как бухгалтер создаст запись журнала для распределения ** Прибыли текущего периода [UNKNOWN NODE problematic], следует установить ** Дата блокировки ** до последнего дня отчетного периода. Убедитесь, что перед тем, как это сделать, вы подтвердили, или доходы текущего периода в ** Отчете баланса ** правильно отвечают нулевому балансу.</p><div role="alert" class="alert-go_to alert"><p class="alert-title">См.также</p><ul ><li ><a href="../configuration/fiscal_year.html" class="internal alert-link reference"><span class="doc">Управление отчетным периодом</span></a></li></ul></div></section>
 
           </article>
         </div>

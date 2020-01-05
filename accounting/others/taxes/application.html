@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>How to adapt taxes to my customer status or localization &#8212; Odoo 13.0 documentation</title>
+    <title>Как переключить налоги в соответствии со схемой налогообложения клиента или его местонахождение &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../../_static/doc.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/accounting/others/taxes/application.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/accounting/others/taxes/application.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/accounting/others/taxes/application.html" />
+    <link rel="canonical" href="/master/ru/accounting/others/taxes/application.html" />
   
-    <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="How to get correct tax rates in the United States using TaxCloud" href="taxcloud.html" />
-    <link rel="prev" title="How to set default taxes" href="default_taxes.html" /> 
+    <link rel="index" title="Алфавитный указатель" href="../../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../../search.html" />
+    <link rel="next" title="Как получить правильную ставку налога в США, используя TaxCloud" href="taxcloud.html" />
+    <link rel="prev" title="Установление типовых налогов" href="default_taxes.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -194,7 +198,7 @@
         
             
                 
-                    <li><a href="../../../accounting.html">Accounting</a></li>
+                    <li><a href="../../../accounting.html">Бухгалтерский учёт</a></li>
                 
             
         
@@ -211,7 +215,7 @@
             
         
     
-    <li class="active"><a href="#">How to adapt taxes to my customer status or localization</a></li>
+    <li class="active"><a href="#">Как переключить налоги в соответствии со схемой налогообложения клиента или его местонахождение</a></li>
 
               
           </ol>
@@ -227,12 +231,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/accounting/others/taxes/application.html">English</a></li>
+        
+            <li><a href="/13.0/uk/accounting/others/taxes/application.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -259,6 +278,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -268,7 +289,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> How to adapt taxes to my customer status or localization </h1>
+        <h1> Как переключить налоги в соответствии со схемой налогообложения клиента или его местонахождение </h1>
       </div>
     </figure>
     
@@ -281,7 +302,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#create-tax-mapping" class="ripple internal reference">Create tax mapping</a></li><li class="list-group-item"><a href="#adapt-taxes-to-your-customer-status" class="ripple internal reference">Adapt taxes to your customer status</a></li><li class="list-group-item"><a href="#adapt-taxes-to-your-customer-address-destination-based" class="ripple internal reference">Adapt taxes to your customer address (destination-based)</a></li><li class="list-group-item"><a href="#specific-use-cases" class="ripple internal reference">Specific use cases</a></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#create-tax-mapping" class="ripple internal reference">Создайте сопоставление налогов</a></li><li class="list-group-item"><a href="#adapt-taxes-to-your-customer-status" class="ripple internal reference">Переключите налоги относительно схемы налогообложения вашего клиента</a></li><li class="list-group-item"><a href="#adapt-taxes-to-your-customer-address-destination-based" class="ripple internal reference">Сопоставьте налоги в соответствии с адресом клиента (на основе назначения)</a></li><li class="list-group-item"><a href="#specific-use-cases" class="ripple internal reference">Конкретные случаи использования</a></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/accounting/others/taxes/application.rst" class="gith-link">
                   Edit on GitHub
@@ -293,25 +314,7 @@
           <article class="doc-body  ">
             
             
-  <section id="how-to-adapt-taxes-to-my-customer-status-or-localization"><p >Most often sales tax rates depend on your customer status or localization.
-To map taxes, Odoo brings the so-called <em >Fiscal Positions</em>.</p></section><section id="create-tax-mapping"><h2 >Create tax mapping</h2><p >A fiscal position is just a set of rules that maps default taxes (as defined
-on product form) into other taxes. In the screenshot below, foreign customers
-get a 0% tax instead of the default 15%, for both sales and purchases.</p><img src="../../../_images/application02.png" style="" class="img-responsive center-block"><p >The main fiscal positions are automatically created according to your
-localization. But you may have to create fiscal positions for specific use cases.
-To define fiscal positions, go to
-<span class="menuselection">Invoicing/Accounting ‣ Configuration ‣ Fiscal Positions</span>.</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >If you use Odoo Accounting, you can also map the Income/Expense accounts according to the fiscal
-position. For example, in some countries, revenues from sales are not posted in
-the same account than revenues from sales in foreign countries.</p></div></section><section id="adapt-taxes-to-your-customer-status"><h2 >Adapt taxes to your customer status</h2><p >If a customer falls into a specific taxation rule, you need to apply a tax-mapping.
-To do so, create a fiscal position and assign it to your customers.</p><img src="../../../_images/application01.png" style="" class="img-responsive center-block"><p >Odoo will use this specific fiscal position for any order/invoice recorded for the customer.</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >If you set the fiscal position in the sales order or invoice manually, it will only
-apply to this document and not to future orders/invoices of the same customer.</p></div></section><section id="adapt-taxes-to-your-customer-address-destination-based"><h2 >Adapt taxes to your customer address (destination-based)</h2><p >Depending on your localization, sales taxes may be origin-based or destination-based.
-Most states or countries require you to collect taxes at the rate of the destination
-(i.e. your buyer’s address) while some others require to collect them at the rate effective
-at the point of origin (i.e. your office or warehouse).</p><p >If you are under the destination-based rule, create one fiscal position per tax-mapping to apply.</p><ul ><li >Check the box <em >Detect Automatically</em>.</li><li >Select a country group, country, state or city to trigger the tax-mapping.</li></ul><img src="../../../_images/application04.png" style="" class="img-responsive center-block"><p >This way if no fiscal position is set on the customer, Odoo will choose the fiscal position matching the
-shipping address on creating an order.</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >For eCommerce orders, the tax of the visitor’s cart will automatically
-update and apply the new tax after the visitor has logged in or filled
-in his shipping address.</p></div></section><section id="specific-use-cases"><h2 >Specific use cases</h2><p >If, for some fiscal positions, you want to remove a tax, instead of
-replacing by another, just keep the <em >Tax to Apply</em> field empty.</p><img src="../../../_images/application03.png" style="" class="img-responsive center-block"><p >If, for some fiscal positions, you want to replace a tax by two other
-taxes, just create two lines having the same <em >Tax on Product</em>.</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >The fiscal positions are not applied on assets and deferred revenues.</p></div><div role="alert" class="alert-go_to alert"><p class="alert-title">See also</p><ul ><li ><a href="create.html" class="internal alert-link reference"><span class="doc">How to create new taxes</span></a></li><li ><a href="taxcloud.html" class="internal alert-link reference"><span class="doc">How to get correct tax rates in the United States using TaxCloud</span></a></li><li ><a href="tax_included.html" class="internal alert-link reference"><span class="doc">How to set tax-included prices</span></a></li><li ><a href="B2B_B2C.html" class="internal alert-link reference"><span class="doc">How to manage prices for B2B (tax excluded) and B2C (tax included)?</span></a></li></ul></div></section>
+  <section id="how-to-adapt-taxes-to-my-customer-status-or-localization"><p >Чаще всего ставки налога зависят от схемы налогообложения или местонахождение вашего клиента. Чтобы отразить налоги, Odoo предлагает так называемые * Схемы налогообложения [UNKNOWN NODE problematic].</p></section><section id="create-tax-mapping"><h2 >Создайте сопоставление налогов</h2><p >Схема налогообложения - это лишь набор правил, который сопоставляет типичные налоги (как это определено в форме товара) с другими налогами. На снимке экрана ниже иностранные покупатели получают 0% налогов вместо 15%, как для продаж, так и для покупок.</p><img src="../../../_images/application02.png" style="" class="img-responsive center-block"><p >Основные схемы налогообложения автоматически создаются в соответствии с вашим местонахождения. Но вам может понадобиться создание схемы налогообложения для конкретных случаев использования. Чтобы определить схемы налогообложения, перейдите к: menuselection: [UNKNOWN NODE title_reference].</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Если вы используете Бухучет Odoo, вы можете сопоставить счета доходов / расходов в соответствии со схемой налогообложения. Например, в некоторых странах доходы от продажи не размещаются на одном счете, по сравнению с доходами от продаж в зарубежных странах.</p></div></section><section id="adapt-taxes-to-your-customer-status"><h2 >Переключите налоги относительно схемы налогообложения вашего клиента</h2><p >Если клиент попадает в конкретное правило налогообложения, вам нужно применить сопоставление налогов. Для этого создайте схему налогообложения и назначьте ее своим клиентам.</p><img src="../../../_images/application01.png" style="" class="img-responsive center-block"><p >Odoo будет использовать эту конкретную схему налогообложения для любого заказа / счета, записанного для клиента.</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Если вы установите схему налогообложения в заказе клиента или счет-фактуру вручную, она будет применяться только к этому документу, а не к будущим заказов / счетов-фактур того же клиента.</p></div></section><section id="adapt-taxes-to-your-customer-address-destination-based"><h2 >Сопоставьте налоги в соответствии с адресом клиента (на основе назначения)</h2><p >В зависимости от вашего месторасположения налоги на продажу могут быть на основе исходной точке или назначения. Большинство государств или стран требуют, чтобы вы собирали налоги в соответствии с назначением (например, адреса вашего покупателя), тогда как некоторые другие требуют собирать их по ставке, действующей в начальной точке (например, ваш офис или склад).</p><p >Если вы находитесь под правилом на основе назначения, создайте одну схему налогообложения для сопоставления налогов.</p><ul ><li >Отметьте * Автоматически определять [UNKNOWN NODE problematic].</li><li >Выберите страну, область или город, чтобы запустить сопоставления налогов.</li></ul><img src="../../../_images/application04.png" style="" class="img-responsive center-block"><p >Таким образом, если для клиента не установлен схему налогообложения, Odoo выберет сопоставления схемы налогообложения, соответствует адресу отправления при создании заказа.</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Для заказов электронной коммерции налог корзины посетителя автоматически обновляется и применяется новый налог после того, как посетитель вошел в систему или заполнил адрес своей доставки.</p></div></section><section id="specific-use-cases"><h2 >Конкретные случаи использования</h2><p >Если для некоторых схем налогообложения вы хотите удалить налог, а не заменить другим, просто оставьте поле * налога, который нужно применить * незаполненным.</p><img src="../../../_images/application03.png" style="" class="img-responsive center-block"><p >Если для некоторых схем налогообложения вы хотите заменить налог двумя другими налогами, просто создайте две строки, имеющие одинаковый * налог на товаре [UNKNOWN NODE problematic].</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Схемы налогообложения не применяются к основным средствам и доходов будущих периодов.</p></div><div role="alert" class="alert-go_to alert"><p class="alert-title">См.также</p><ul ><li ><a href="create.html" class="internal alert-link reference"><span class="doc">Как создать новые налоги</span></a></li><li ><a href="taxcloud.html" class="internal alert-link reference"><span class="doc">Как получить правильную ставку налога в США, используя TaxCloud</span></a></li><li ><a href="tax_included.html" class="internal alert-link reference"><span class="doc">Как установить цены, которые уже включают налог</span></a></li><li ><a href="B2B_B2C.html" class="internal alert-link reference"><span class="doc">Как управлять ценами для B2B (с выключенным налогом) и B2C (с включенным налогом)?</span></a></li></ul></div></section>
 
           </article>
         </div>

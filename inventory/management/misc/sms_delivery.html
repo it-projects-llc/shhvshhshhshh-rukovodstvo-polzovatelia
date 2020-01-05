@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>Send Automated SMS at Delivery &#8212; Odoo 13.0 documentation</title>
+    <title>Send Automated SMS at Delivery &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/accounting.css" />
@@ -27,15 +27,19 @@
     <script type="text/javascript" src="../../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../../_static/doc.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/inventory/management/misc/sms_delivery.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/inventory/management/misc/sms_delivery.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/inventory/management/misc/sms_delivery.html" />
+    <link rel="canonical" href="/master/ru/inventory/management/misc/sms_delivery.html" />
   
-    <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Planning" href="../planning.html" />
+    <link rel="index" title="Алфавитный указатель" href="../../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../../search.html" />
+    <link rel="next" title="Планирование" href="../planning.html" />
     <link rel="prev" title="Send Automated Emails at Delivery" href="email_delivery.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
@@ -194,7 +198,7 @@
         
             
                 
-                    <li><a href="../../../inventory.html">Inventory</a></li>
+                    <li><a href="../../../inventory.html">Склад</a></li>
                 
             
         
@@ -227,12 +231,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/inventory/management/misc/sms_delivery.html">English</a></li>
+        
+            <li><a href="/13.0/uk/inventory/management/misc/sms_delivery.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -259,6 +278,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -281,7 +302,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a></li><li class="list-group-item"><a href="#send-sms-at-delivery-validation" class="ripple internal reference">Send SMS at delivery validation</a></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Настройка</a></li><li class="list-group-item"><a href="#send-sms-at-delivery-validation" class="ripple internal reference">Send SMS at delivery validation</a></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/inventory/management/misc/sms_delivery.rst" class="gith-link">
                   Edit on GitHub
@@ -293,11 +314,11 @@
           <article class="doc-body  ">
             
             
-  <section id="send-automated-sms-at-delivery"></section><section id="configuration"><h2 >Configuration</h2><p >To send automated SMS, you need to activate the <em >SMS Confirmation</em>
+  <section id="send-automated-sms-at-delivery"></section><section id="configuration"><h2 >Настройка</h2><p >To send automated SMS, you need to activate the <em >SMS Confirmation</em>
 feature. To do so, go to the <em >Inventory</em> app <em >Settings</em> and enable
 the feature. In multi-company, this feature is company-specific.</p><img src="../../../_images/sms_delivery_01.png" style="" class="img-responsive center-block"><p >Of course, an SMS template already exists by default in Odoo. You can
 modify it by clicking on the arrow on the right.</p><img src="../../../_images/sms_delivery_02.png" style="" class="img-responsive center-block"></section><section id="send-sms-at-delivery-validation"><h2 >Send SMS at delivery validation</h2><p >To use this feature, try to <em >Create</em> a delivery order for a specific
-partner and add some products to it. Then, <em >Validate</em> the delivery.</p><img src="../../../_images/sms_delivery_03.png" style="" class="img-responsive center-block"><p >Now, the automated SMS that has been sent appears in the chatter.</p><img src="../../../_images/sms_delivery_04.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >The partner which is set on the transfer needs to have a phone number
+partner and add some products to it. Then, <em >Validate</em> the delivery.</p><img src="../../../_images/sms_delivery_03.png" style="" class="img-responsive center-block"><p >Now, the automated SMS that has been sent appears in the chatter.</p><img src="../../../_images/sms_delivery_04.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >The partner which is set on the transfer needs to have a phone number
 specified in its contact form for the SMS to be sent.</p></div><p >If you work with a shipping method, and then have a tracking link, it
 will be included in the SMS template.</p><img src="../../../_images/sms_delivery_05.png" style="" class="img-responsive center-block"></section>
 

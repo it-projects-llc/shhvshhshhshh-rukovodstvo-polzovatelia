@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>How to efficiently communicate in team using channels &#8212; Odoo 13.0 documentation</title>
+    <title>Как эффективно коммуницировать в команде, используя каналы &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../_static/inventory.js"></script>
     <script type="text/javascript" src="../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
     <script type="text/javascript" src="../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../_static/doc.js"></script>
     <script type="text/javascript" src="../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/discuss/team_communication.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/discuss/team_communication.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/discuss/team_communication.html" />
+    <link rel="canonical" href="/master/ru/discuss/team_communication.html" />
   
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="How to follow Twitter feed from Odoo" href="mail_twitter.html" />
-    <link rel="prev" title="How to grab attention of other users in my messages" href="mentions.html" /> 
+    <link rel="index" title="Алфавитный указатель" href="../genindex.html" />
+    <link rel="search" title="Поиск" href="../search.html" />
+    <link rel="next" title="Как следить за Twitter в Odoo" href="mail_twitter.html" />
+    <link rel="prev" title="Как привлечь внимание других пользователей к вашим сообщениям" href="mentions.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -194,12 +198,12 @@
         
             
                 
-                    <li><a href="../discuss.html">Discuss</a></li>
+                    <li><a href="../discuss.html">Общение</a></li>
                 
             
         
     
-    <li class="active"><a href="#">How to efficiently communicate in team using channels</a></li>
+    <li class="active"><a href="#">Как эффективно коммуницировать в команде, используя каналы</a></li>
 
               
           </ol>
@@ -215,12 +219,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/discuss/team_communication.html">English</a></li>
+        
+            <li><a href="/13.0/uk/discuss/team_communication.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -247,6 +266,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -256,7 +277,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> How to efficiently communicate in team using channels </h1>
+        <h1> Как эффективно коммуницировать в команде, используя каналы </h1>
       </div>
     </figure>
     
@@ -269,7 +290,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#creating-a-channel" class="ripple internal reference">Creating a channel</a></li><li class="list-group-item"><a href="#configuring-a-channel" class="ripple internal reference">Configuring a channel</a></li><li class="list-group-item"><a href="#how-to-set-up-a-mailing-list" class="ripple internal reference">How to set up a mailing list</a></li><li class="list-group-item"><a href="#locating-a-channel" class="ripple internal reference">Locating a channel</a></li><li class="list-group-item"><a href="#using-filters-to-navigate-within-discuss" class="ripple internal reference">Using filters to navigate within Discuss</a></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#creating-a-channel" class="ripple internal reference">создание канала</a></li><li class="list-group-item"><a href="#configuring-a-channel" class="ripple internal reference">Настройка канала</a></li><li class="list-group-item"><a href="#how-to-set-up-a-mailing-list" class="ripple internal reference">Как настроить список рассылки</a></li><li class="list-group-item"><a href="#locating-a-channel" class="ripple internal reference">Поиск канала</a></li><li class="list-group-item"><a href="#using-filters-to-navigate-within-discuss" class="ripple internal reference">Использование фильтров для навигации в обсуждении</a></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/discuss/team_communication.rst" class="gith-link">
                   Edit on GitHub
@@ -281,42 +302,7 @@
           <article class="doc-body  ">
             
             
-  <section id="how-to-efficiently-communicate-in-team-using-channels"><p >You can use <strong >channels</strong> to organize discussions between individual
-teams, departments, projects, or any other group that requires regular
-communication. By having conversations that everyone in the channel can
-see, it’s easy to keep the whole team in the loop with the latest
-developments.</p></section><section id="creating-a-channel"><h2 >Creating a channel</h2><p >In Discuss there are two types of channels - <strong >public</strong> and
-<strong >private</strong>.</p><p >A <strong >public channel</strong> can only be created by an administrator with
-write privileges and can be seen by everyone in the organization. By
-contrast, a <strong >private channel</strong> can be created by any user and by
-default is only visible to users who have been invited to this
-channel.</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >A public channel is best used when many employees need to
-access information (such as interdepartmental communication or
-company announcements), whereas a private channel should be used
-whenever information should be limited to specific users/employees
-(such as department specific or sensitive information).</p></div></section><section id="configuring-a-channel"><h2 >Configuring a channel</h2><p >You can configure a channel’s name, description, access rights,
-automatic subscription, and emailing from
-<span class="menuselection">#channel-name ‣ Settings</span>.
-Changing channel access rights allows
-you to control which groups can view each channel. You can make a
-channel visible by all users, invited users, or users within a
-selected user group. Note that allowing “Everyone” to follow a
-private channel will let other users view and join it as they would
-a public channel.</p><img src="../_images/discuss02.png" style="" class="img-responsive center-block"></section><section id="how-to-set-up-a-mailing-list"><h2 >How to set up a mailing list</h2><p >A channel can be configured to behave as a mailing list. From within
-<span class="menuselection">#channel-name ‣ Settings</span>, define the email you would like to use.
-Users can then post to the channel and choose to receive
-notifications using the defined email address. An envelope icon will
-appear next to the channel name in the list to indicate that a
-channel will send messages by email.</p></section><section id="locating-a-channel"><h2 >Locating a channel</h2><p >If you do not see a channel on your dashboard, you can search the
-list of <strong >public channels</strong> to locate the correct channel or create
-a new channel by clicking the plus icon.</p><img src="../_images/discuss03.png" style="" class="img-responsive center-block"><p >You can also click the <strong >CHANNELS</strong> heading to browse a list of all
-public channels. This allows the user to manually <strong >join</strong> and
-<strong >leave</strong> public channels from a single screen.</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >It is always wise to search for a channel before creating a new
-one to ensure that duplicate entries are not created for the same topic.</p></div></section><section id="using-filters-to-navigate-within-discuss"><h2 >Using filters to navigate within Discuss</h2><p >The topbar search provides access to the same comprehensive search
-function present in the rest of Odoo. You can apply multiple <strong >filter
-criteria</strong> and <strong >save filters</strong> for later use. The search function
-accepts wildcards by using the underscore character “<strong >_</strong>” to
-represent a <strong >single character wildcard.</strong></p></section>
+  <section id="how-to-efficiently-communicate-in-team-using-channels"><p >Вы можете использовать ** каналы ** для организации обсуждений между отдельными группами, департаментами, проектами или любой другой группой, которая требует регулярного общения. Найдя беседы, каждый, кто видит ее в канале, легко сохранит всю команду в цикле с последними новинками.</p></section><section id="creating-a-channel"><h2 >создание канала</h2><p >В обсуждении есть два типа каналов - ** публичный ** и ** частный [UNKNOWN NODE problematic].</p><p >** Открытый канал ** может быть создан администратором только с правами на запись, и его могут видеть все, кто в организации. Напротив, ** частный канал ** может быть создан любым пользователем, и по умолчанию он отображается только пользователям, приглашенным на этот канал.</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Открытый канал лучше используется, когда многие работники должны иметь доступ к информации (например, межведомственные коммуникации или компании), тогда частный канал должен использоваться, когда информация должна быть ограничена только определенными пользователями / работниками (например, департамент или конфиденциальная информация).</p></div></section><section id="configuring-a-channel"><h2 >Настройка канала</h2><p >Вы можете настраивать название канала, описание, права доступа, автоматическую подписку и отправлять электронные письма с: menuselection: [UNKNOWN NODE title_reference]. Изменяя права доступа к каналу, вы можете контролировать, какие группы могут просматривать каждый канал. Вы можете сделать канал видимым для всех пользователей, приглашенных пользователей или пользователей выбранной группы пользователей. Заметьте, если позволить &amp;quot;всем&amp;quot; пользоваться частным каналом, другие пользователи смогут просматривать и присоединяться к ней, поскольку это будет открытым каналом.</p><img src="../_images/discuss02.png" style="" class="img-responsive center-block"></section><section id="how-to-set-up-a-mailing-list"><h2 >Как настроить список рассылки</h2><p >Канал можно настроить так, чтобы он вел себя как список рассылки. Из списка: menuselection: [UNKNOWN NODE title_reference], определите электронное сообщение, которое вы хотите использовать. После этого пользователи смогут опубликовать в канале и выбрать получение уведомлений с помощью определенной электронной почты. У названия канала в списке появится значок конверта, который покажет, что канал будет посылать сообщение по электронной почте.</p></section><section id="locating-a-channel"><h2 >Поиск канала</h2><p >Если вы не видите канал на информационной панели, вы можете искать в списке ** публичных каналов [UNKNOWN NODE problematic], чтобы найти нужный канал или создать новый канал, нажав значок +.</p><img src="../_images/discuss03.png" style="" class="img-responsive center-block"><p >Вы также можете нажать заголовок ** КАНАЛЫ [UNKNOWN NODE problematic], чтобы просмотреть список всех публичных каналов. Это позволяет пользователю вручную ** присоединяться ** и ** оставлять ** публичные каналы с одной экрана.</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Всегда мудро искать канал, прежде чем создавать новый, чтобы не создавать дублированные записи для одной темы.</p></div></section><section id="using-filters-to-navigate-within-discuss"><h2 >Использование фильтров для навигации в обсуждении</h2><p >Поиск в верхней строке обеспечивает доступ к той же всеобъемлющей функции поиска, присутствует в остальной части Odoo. Вы можете применить несколько ** критериев фильтрации ** и ** сохранять фильтры ** для дальнейшего использования. Функция поиска принимает подстановку символов, используя символ подчеркивания &amp;quot;** _ ** &amp;quot;, чтобы представлять ** подстановку одного символа [UNKNOWN NODE problematic].</p></section>
 
           </article>
         </div>

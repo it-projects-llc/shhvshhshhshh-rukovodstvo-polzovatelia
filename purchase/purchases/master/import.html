@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>Import vendors pricelists &#8212; Odoo 13.0 documentation</title>
+    <title>Импорт прайс-листов поставщика &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../../_static/doc.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/purchase/purchases/master/import.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/purchase/purchases/master/import.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/purchase/purchases/master/import.html" />
+    <link rel="canonical" href="/master/ru/purchase/purchases/master/import.html" />
   
-    <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Request for Quotation and Purchase Orders" href="../rfq.html" />
-    <link rel="prev" title="Set multiple vendors on a product" href="suppliers.html" /> 
+    <link rel="index" title="Алфавитный указатель" href="../../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../../search.html" />
+    <link rel="next" title="Заказ на коммерческое предложение и заказ на покупку" href="../rfq.html" />
+    <link rel="prev" title="Установка нескольких поставщиков на товар" href="suppliers.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -194,7 +198,7 @@
         
             
                 
-                    <li><a href="../../../purchase.html">Purchase</a></li>
+                    <li><a href="../../../purchase.html">Закупка</a></li>
                 
             
         
@@ -211,7 +215,7 @@
             
         
     
-    <li class="active"><a href="#">Import vendors pricelists</a></li>
+    <li class="active"><a href="#">Импорт прайс-листов поставщика</a></li>
 
               
           </ol>
@@ -227,12 +231,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/purchase/purchases/master/import.html">English</a></li>
+        
+            <li><a href="/13.0/uk/purchase/purchases/master/import.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -259,6 +278,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -268,7 +289,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> Import vendors pricelists </h1>
+        <h1> Импорт прайс-листов поставщика </h1>
       </div>
     </figure>
     
@@ -281,7 +302,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a></li><li class="list-group-item"><a href="#import-a-pricelist" class="ripple internal reference">Import a pricelist</a></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Настройка</a></li><li class="list-group-item"><a href="#import-a-pricelist" class="ripple internal reference">Импорт прайс-лист</a></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/purchase/purchases/master/import.rst" class="gith-link">
                   Edit on GitHub
@@ -293,12 +314,7 @@
           <article class="doc-body  ">
             
             
-  <section id="import-vendors-pricelists"><p >It is key for companies to be able to import vendors pricelists to stay
-up to date on products pricing.</p></section><section id="configuration"><h2 >Configuration</h2><p >For this feature to work, go to <span class="menuselection">Purchases ‣
-Configuration ‣ Settings</span> and tick the box in front of “Vendor
-Pricelists”.</p><p >Don’t forget to save your settings in the top left corner.</p><img src="../../../_images/import01.png" style="" class="img-responsive center-block"></section><section id="import-a-pricelist"><h2 >Import a pricelist</h2><p >To import go to <span class="menuselection">Purchase ‣ Vendor Pricelists</span></p><p >Load your file, then you can check if everything is correct before
-clicking import.</p><p >See below a template of the columns used.</p><img src="../../../_images/import02.png" style="" class="img-responsive center-block"><p ><a href="https://docs.google.com/spreadsheets/d/1N8c_eejLV_8NhYMGCfZau_oGCnRkUIT9nwdX7n0shhY/edit#gid=964193981" class="external reference">Template
-download</a></p></section>
+  <section id="import-vendors-pricelists"><p >Компаниям важно иметь возможность импортировать прайс-листы поставщиков, чтобы оставаться в курсе цен на товары.</p></section><section id="configuration"><h2 >Настройка</h2><p >Для включения этой функции перейдите в: menuselection: [UNKNOWN NODE title_reference] и отметьте&amp;quot; Прайс-листы поставщика &amp;quot;.</p><p >Не забудьте сохранить настройки в верхнем левом углу.</p><img src="../../../_images/import01.png" style="" class="img-responsive center-block"></section><section id="import-a-pricelist"><h2 >Импорт прайс-лист</h2><p >Для импорта перейдите в: menuselection: [UNKNOWN NODE title_reference]</p><p >Загрузите файл, после чего вы сможете проверить, все ли правильно, прежде чем нажимать кнопку импорта.</p><p >Ниже приведены шаблон использованных столбцов.</p><img src="../../../_images/import02.png" style="" class="img-responsive center-block"><p >[UNKNOWN NODE problematic]Скачать шаблон &lt;<a href="https://docs.google.com/spreadsheets/d/1N8c_eejLV_8NhYMGCfZau_oGCnRkUIT9nwdX7n0shhY/edit#gid=964193981" class="external reference">https://docs.google.com/spreadsheets/d/1N8c_eejLV_8NhYMGCfZau_oGCnRkUIT9nwdX7n0shhY/edit#gid=964193981</a>&gt; [UNKNOWN NODE problematic]__</p></section>
 
           </article>
         </div>

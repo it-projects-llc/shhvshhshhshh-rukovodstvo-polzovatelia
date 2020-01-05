@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>What’s the difference between lots and serial numbers? &#8212; Odoo 13.0 documentation</title>
+    <title>Какая разница между партиями и серийными номерами? &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../../_static/doc.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/inventory/management/lots_serial_numbers/differences.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/inventory/management/lots_serial_numbers/differences.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/inventory/management/lots_serial_numbers/differences.html" />
+    <link rel="canonical" href="/master/ru/inventory/management/lots_serial_numbers/differences.html" />
   
-    <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="index" title="Алфавитный указатель" href="../../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../../search.html" />
     <link rel="next" title="Work with serial numbers" href="serial_numbers.html" />
-    <link rel="prev" title="Lots and Serial Numbers" href="../lots_serial_numbers.html" /> 
+    <link rel="prev" title="Партии и Серийные номера" href="../lots_serial_numbers.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -194,7 +198,7 @@
         
             
                 
-                    <li><a href="../../../inventory.html">Inventory</a></li>
+                    <li><a href="../../../inventory.html">Склад</a></li>
                 
             
         
@@ -211,7 +215,7 @@
             
         
     
-    <li class="active"><a href="#">What’s the difference between lots and serial numbers?</a></li>
+    <li class="active"><a href="#">Какая разница между партиями и серийными номерами?</a></li>
 
               
           </ol>
@@ -227,12 +231,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/inventory/management/lots_serial_numbers/differences.html">English</a></li>
+        
+            <li><a href="/13.0/uk/inventory/management/lots_serial_numbers/differences.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -259,6 +278,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -268,7 +289,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> What’s the difference between lots and serial numbers? </h1>
+        <h1> Какая разница между партиями и серийными номерами? </h1>
       </div>
     </figure>
     
@@ -281,7 +302,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#introduction" class="ripple internal reference">Introduction</a><ul ><li class="list-group-item"><a href="#when-to-use" class="ripple internal reference">When to use</a></li><li class="list-group-item"><a href="#when-not-to-use" class="ripple internal reference">When not to use</a></li></ul></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#introduction" class="ripple internal reference">Введение</a><ul ><li class="list-group-item"><a href="#when-to-use" class="ripple internal reference">когда использовать</a></li><li class="list-group-item"><a href="#when-not-to-use" class="ripple internal reference">Если не использовать</a></li></ul></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/inventory/management/lots_serial_numbers/differences.rst" class="gith-link">
                   Edit on GitHub
@@ -293,24 +314,7 @@
           <article class="doc-body  ">
             
             
-  <section id="what-s-the-difference-between-lots-and-serial-numbers"></section><section id="introduction"><h2 >Introduction</h2><p >In Odoo, lots and serial numbers have similarities in their functional
-system but are different in their behavior. They are both managed within
-the <strong >Inventory</strong>, <strong >Purchases</strong> and <strong >Sales</strong> app.</p><p ><strong >Lots</strong> correspond to a certain number of products you received and store
-altogether in one single pack.</p><p ><strong >Serial numbers</strong> are identification numbers given to one product in
-particular, to allow to track the history of the item from reception to
-delivery and after-sales.</p></section><section id="when-to-use"><h3 >When to use</h3><p ><strong >Lots</strong> are interesting for products you receive in great quantity and for
-which a lot number can help in reportings, quality controls, or any
-other info. Lots will help identify a number of pieces having for
-instance a production fault. It can be useful for a batch production of
-clothes or food.</p><p ><strong >Serial numbers</strong> are interesting for items that could require after-sales
-service, such as smartphones, laptops, fridges, and any electronic
-devices. You could use the manufacturer’s serial number or your own,
-depending on the way you manage these products</p></section><section id="when-not-to-use"><h3 >When not to use</h3><p >Storing consumable products such as kitchen roll, toilet paper, pens and
-paper blocks in lots would make no sense at all, as there are very few
-chances that you can return them for production fault.</p><p >On the other hand, giving a serial number to every product is a
-time-consuming task that will have a purpose only in the case of items
-that have a warranty and/or after-sales services. Putting a serial
-number on bread, for instance, makes no sense at all.</p><div role="alert" class="alert-go_to alert"><p class="alert-title">See also</p><ul ><li ><a href="serial_numbers.html" class="internal alert-link reference"><span class="doc">Work with serial numbers</span></a></li><li ><a href="lots.html" class="internal alert-link reference"><span class="doc">Manage lots of identical products</span></a></li></ul></div></section>
+  <section id="what-s-the-difference-between-lots-and-serial-numbers"></section><section id="introduction"><h2 >Введение</h2><p >В Odoo партии и серийные номера имеют сходство в своей функциональной системе, но разные в своем поведении. Они оба руководствуются в приложениях ** Состав [UNKNOWN NODE problematic], ** Покупки ** и ** Продажи [UNKNOWN NODE problematic].</p><p >** Партии ** соответствуют определенному количеству товаров, которые вы получили и хранятся в одном пакете.</p><p >** Серийные номера ** - идентификационные номера, предоставленные одному товару, в частности, чтобы отслеживать историю товара от приема до доставки и писляпродажу.</p></section><section id="when-to-use"><h3 >когда использовать</h3><p >** Партии ** для товаров, которые вы получаете в большом количестве, и для которых партии могут помочь в отчетах, контроля качества или иной информации. Партии помогут идентифицировать несколько произведений, например, производственную ошибку. Это может быть полезным для серийного производства одежды или пищи.</p><p >** Серийные номера ** интересны товаров, которые могут требовать послепродажное обслуживание, например, смартфоны, ноутбуки, холодильники и любые электронные устройства. Вы можете использовать серийный номер производителя или свой собственный, в зависимости от того, как вы управляете этими товарами.</p></section><section id="when-not-to-use"><h3 >Если не использовать</h3><p >Хранение расходных материалов, таких как кухонный рулон, туалетная бумага, ручки и бумажные блоки в партиях, вообще не будет иметь смысла, потому что есть очень мало шансов, что вы можете вернуть их в производственную ошибку.</p><p >С другой стороны, присвоение серийного номера каждому товару отнимает много времени, и будет целевое значение только в отношении товаров, имеющих гарантийные и / или послепродажные услуги. Например, введение серийного номера на хлеб вообще не имеет смысла.</p><div role="alert" class="alert-go_to alert"><p class="alert-title">См.также</p><ul ><li ><a href="serial_numbers.html" class="internal alert-link reference"><span class="doc">Work with serial numbers</span></a></li><li ><a href="lots.html" class="internal alert-link reference"><span class="doc">Manage lots of identical products</span></a></li></ul></div></section>
 
           </article>
         </div>

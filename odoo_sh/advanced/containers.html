@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>Containers &#8212; Odoo 13.0 documentation</title>
+    <title>Containers &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/accounting.css" />
@@ -27,14 +27,18 @@
     <script type="text/javascript" src="../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
     <script type="text/javascript" src="../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../_static/doc.js"></script>
     <script type="text/javascript" src="../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/odoo_sh/advanced/containers.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/odoo_sh/advanced/containers.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/odoo_sh/advanced/containers.html" />
+    <link rel="canonical" href="/master/ru/odoo_sh/advanced/containers.html" />
   
-    <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="index" title="Алфавитный указатель" href="../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../search.html" />
     <link rel="next" title="Submodules" href="submodules.html" />
     <link rel="prev" title="Advanced" href="../advanced.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
@@ -221,12 +225,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/odoo_sh/advanced/containers.html">English</a></li>
+        
+            <li><a href="/13.0/uk/odoo_sh/advanced/containers.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -252,6 +271,8 @@
 <script type="text/javascript">$('#searchbox').show(0);</script>
             
 
+            
+              <li class="divider"></li>
             
           </ul>
         </div>
@@ -390,14 +411,14 @@ with a browser, but you can for instance:</p><ul ><li >use the Odoo shell,</li><
 </div>
 <p >In the above commands, the argument:</p><ul ><li ><code >--without-demo=all</code> prevents demo data to be loaded for all modules</li><li ><code >--stop-after-init</code> will immediately shutdown the server instance after it completed the operations you asked.</li></ul><p >More options are available and detailed in the
 <a href="https://www.odoo.com/documentation/13.0/reference/cmdline.html" class="external reference">CLI documentation</a>.</p><p >You can find in the logs (<em >~/logs/odoo.log</em>) the addons path used by Odoo.sh to run your server.
-Look for “<em >odoo: addons paths</em>”:</p><div class="highlight-default"><div class="highlight"><pre><span></span>2018-02-19 10:51:39,267 4 INFO ? odoo: Odoo version 13.0
+Look for «<em >odoo: addons paths</em>»:</p><div class="highlight-default"><div class="highlight"><pre><span></span>2018-02-19 10:51:39,267 4 INFO ? odoo: Odoo version 13.0
 2018-02-19 10:51:39,268 4 INFO ? odoo: Using configuration file at /home/odoo/.config/odoo/odoo.conf
 2018-02-19 10:51:39,268 4 INFO ? odoo: addons paths: [&#39;/home/odoo/data/addons/13.0&#39;, &#39;/home/odoo/src/user&#39;, &#39;/home/odoo/src/enterprise&#39;, &#39;/home/odoo/src/themes&#39;, &#39;/home/odoo/src/odoo/addons&#39;, &#39;/home/odoo/src/odoo/odoo/addons&#39;]
 </pre></div>
 </div>
 <p ><strong >Be careful</strong>, especially with your production database.
 Operations that you perform running this Odoo server instance are not isolated:
-Changes will be effective in the database. Always, make your tests in your staging databases.</p></section><section id="debugging-in-odoo-sh"><h2 >Debugging in Odoo.sh</h2><p >Debugging an Odoo.sh build is not really different than another Python app. This article only explains the specificities and limitations of the Odoo.sh platform, and assumes that you already know how to use a debugger.</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >If you don’t know how to debug a Python application yet, there are multiple introductory courses that can be easily found on the Internet.</p></div><p >You can use <code >pdb</code>, <code >pudb</code> or <code >ipdb</code> to debug your code on Odoo.sh.
+Changes will be effective in the database. Always, make your tests in your staging databases.</p></section><section id="debugging-in-odoo-sh"><h2 >Debugging in Odoo.sh</h2><p >Debugging an Odoo.sh build is not really different than another Python app. This article only explains the specificities and limitations of the Odoo.sh platform, and assumes that you already know how to use a debugger.</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >If you don’t know how to debug a Python application yet, there are multiple introductory courses that can be easily found on the Internet.</p></div><p >You can use <code >pdb</code>, <code >pudb</code> or <code >ipdb</code> to debug your code on Odoo.sh.
 As the server is run outside a shell, you cannot launch the debugger directly from your Odoo instance backend as the debugger needs a shell to operate.</p><ul ><li ><a href="https://docs.python.org/3/library/pdb.html" class="external reference">pdb</a> is installed by default in every container.</li><li ><p >If you want to use <a href="https://pypi.org/project/pudb/" class="external reference">pudb</a> or <a href="https://pypi.org/project/ipdb/" class="external reference">ipdb</a> you have to install it before.</p><p >To do so, you have two options:</p><blockquote ><ul ><li ><p >temporary (only in the current build):</p><div class="highlight-bash"><div class="highlight"><pre><span></span>$  pip install pudb --user
 </pre></div>
 </div>

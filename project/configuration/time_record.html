@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>How to record time spent? &#8212; Odoo 13.0 documentation</title>
+    <title>Как записать потраченное время? &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
     <script type="text/javascript" src="../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../_static/doc.js"></script>
     <script type="text/javascript" src="../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/project/configuration/time_record.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/project/configuration/time_record.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/project/configuration/time_record.html" />
+    <link rel="canonical" href="/master/ru/project/configuration/time_record.html" />
   
-    <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Planning your project" href="../planning.html" />
-    <link rel="prev" title="How to manage &amp; collaborate on tasks?" href="collaboration.html" /> 
+    <link rel="index" title="Алфавитный указатель" href="../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../search.html" />
+    <link rel="next" title="Планирование вашего проекта" href="../planning.html" />
+    <link rel="prev" title="Как управлять задачами и сотрудничать на них?" href="collaboration.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -194,7 +198,7 @@
         
             
                 
-                    <li><a href="../../project.html">Project</a></li>
+                    <li><a href="../../project.html">Проект</a></li>
                 
             
         
@@ -205,7 +209,7 @@
             
         
     
-    <li class="active"><a href="#">How to record time spent?</a></li>
+    <li class="active"><a href="#">Как записать потраченное время?</a></li>
 
               
           </ol>
@@ -221,12 +225,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/project/configuration/time_record.html">English</a></li>
+        
+            <li><a href="/13.0/uk/project/configuration/time_record.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -253,6 +272,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -262,7 +283,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> How to record time spent? </h1>
+        <h1> Как записать потраченное время? </h1>
       </div>
     </figure>
     
@@ -275,7 +296,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#overview" class="ripple internal reference">Overview</a></li><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a></li><li class="list-group-item"><a href="#recording-timesheets" class="ripple internal reference">Recording timesheets</a><ul ><li class="list-group-item"><a href="#recording-in-a-project" class="ripple internal reference">Recording in a project</a></li><li class="list-group-item"><a href="#recording-in-a-task" class="ripple internal reference">Recording in a task</a></li></ul></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#overview" class="ripple internal reference">Общий обзор</a></li><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Настройка</a></li><li class="list-group-item"><a href="#recording-timesheets" class="ripple internal reference">запись табелей</a><ul ><li class="list-group-item"><a href="#recording-in-a-project" class="ripple internal reference">Запись в проекте</a></li><li class="list-group-item"><a href="#recording-in-a-task" class="ripple internal reference">Запись в задании</a></li></ul></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/project/configuration/time_record.rst" class="gith-link">
                   Edit on GitHub
@@ -287,18 +308,7 @@
           <article class="doc-body  ">
             
             
-  <section id="how-to-record-time-spent"></section><section id="overview"><h2 >Overview</h2><p >Odoo allows you to record the time spent per employee and per project,
-for simple reports as well as for direct invoicing to the customer.</p></section><section id="configuration"><h2 >Configuration</h2><p >In order to record the time spent on projects, you must first activate
-the invoicing of timesheets. Into the <strong >Project</strong> application, open
-<span class="menuselection">Configuration ‣ Settings</span>. In the <strong >Timesheets</strong> section
-of the page, tick <strong >Activate timesheets on issues</strong>.</p><img src="../../_images/time_record01.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >Activating the option will install the Sales, Invoicing,
-Issue Tracking, Employee and Timesheet apps.</p></div></section><section id="recording-timesheets"><h2 >Recording timesheets</h2><p >You can record the time spent in projects straight from the projects
-application. You can either record timesheets in a project, or in a
-task.</p></section><section id="recording-in-a-project"><h3 >Recording in a project</h3><p >In the <strong >Project</strong> application dashboard, open the <strong >More</strong> menu of the
-project you want to record timesheets for, and click on <strong >Timesheets</strong>.</p><img src="../../_images/time_record02.png" style="" class="img-responsive center-block"><p >In the new window, click on <strong >Create</strong> and insert the required details, then
-click on <strong >Save</strong>.</p><img src="../../_images/time_record03.png" style="" class="img-responsive center-block"></section><section id="recording-in-a-task"><h3 >Recording in a task</h3><p >In the <strong >Project</strong> app, open the project you want to record timesheets for,
-and open the task on which you have been working.</p><p >In the task, click on <strong >Edit</strong>, open the <strong >Timesheets</strong> tab and click on <strong >Add
-an item</strong>. Insert the required details, then click on <strong >Save</strong>.</p><img src="../../_images/time_record04.png" style="" class="img-responsive center-block"></section>
+  <section id="how-to-record-time-spent"></section><section id="overview"><h2 >Общий обзор</h2><p >Odoo позволяет записывать время, затраченное на одного сотрудника в каждый проект, для простых отчетов, а также для прямого выставления счетов клиенту.</p></section><section id="configuration"><h2 >Настройка</h2><p >Чтобы записать время, затраченное на проекты, сначала нужно активировать выставления счетов по времени. В модуле ** Проект ** откройте: menuselection: [UNKNOWN NODE title_reference]. В разделе ** Табели ** отметьте пункт ** Активировать табели на проблемах [UNKNOWN NODE problematic].</p><img src="../../_images/time_record01.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Активация этого параметра позволит установить приложения для продаж, выставления счетов-фактур, отслеживание проблем, работников и табель.</p></div></section><section id="recording-timesheets"><h2 >запись табелей</h2><p >Вы можете зафиксировать время, затраченное на проекты, непосредственно из программы проекта. Вы можете либо записывать табели в проекте или в задании.</p></section><section id="recording-in-a-project"><h3 >Запись в проекте</h3><p >На информационной панели программы ** Проект ** откройте меню ** Более ** проекта, для которого нужно записать табели и нажмите ** Табели [UNKNOWN NODE problematic].</p><img src="../../_images/time_record02.png" style="" class="img-responsive center-block"><p >В новом окне нажмите кнопку ** Создать ** и вставьте необходимые данные и нажмите кнопку ** Сохранить [UNKNOWN NODE problematic].</p><img src="../../_images/time_record03.png" style="" class="img-responsive center-block"></section><section id="recording-in-a-task"><h3 >Запись в задании</h3><p >В модуле ** Проект ** откройте проект, в котором вы хотите записать табель, и откройте задачи, на котором вы работали.</p><p >В этом задании нажмите ** Редактировать [UNKNOWN NODE problematic], откройте вкладку ** Табель ** и нажмите ** Добавить элемент [UNKNOWN NODE problematic]. Вставьте нужные данные, а затем нажмите кнопку ** Сохранить [UNKNOWN NODE problematic].</p><img src="../../_images/time_record04.png" style="" class="img-responsive center-block"></section>
 
           </article>
         </div>

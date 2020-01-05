@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>Settings &#8212; Odoo 13.0 documentation</title>
+    <title>Settings &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/accounting.css" />
@@ -27,14 +27,18 @@
     <script type="text/javascript" src="../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
     <script type="text/javascript" src="../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../_static/doc.js"></script>
     <script type="text/javascript" src="../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/odoo_sh/getting_started/settings.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/odoo_sh/getting_started/settings.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/odoo_sh/getting_started/settings.html" />
+    <link rel="canonical" href="/master/ru/odoo_sh/getting_started/settings.html" />
   
-    <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="index" title="Алфавитный указатель" href="../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../search.html" />
     <link rel="next" title="Online Editor" href="online-editor.html" />
     <link rel="prev" title="Status" href="status.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
@@ -221,12 +225,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/odoo_sh/getting_started/settings.html">English</a></li>
+        
+            <li><a href="/13.0/uk/odoo_sh/getting_started/settings.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -252,6 +271,8 @@
 <script type="text/javascript">$('#searchbox').show(0);</script>
             
 
+            
+              <li class="divider"></li>
             
           </ul>
         </div>
@@ -299,7 +320,7 @@ and all standard modules of Odoo.</li><li ><em >Install a list of modules</em> w
 The names are the technical name of the modules, and they must be comma-separated.</li></ul><p >If the tests are enabled, the standard Odoo modules suite can take up to 1 hour.
 This setting applies to development builds only.
 Staging builds duplicate the production build and the production build only installs base.</p></section><section id="custom-domains"><h2 >Custom domains</h2><p >To configure additional domains please refer to the corresponding branch’s <a href="branches.html#odoosh-gettingstarted-branches-tabs-settings" class="internal reference"><span class="std std-ref">settings tab</span></a>.</p></section><section id="submodules"><i id="odoosh-gettingstarted-settings-submodules"></i><h2 >Submodules</h2><p >Configure the deploy keys for the private repositories you use
-as submodules in your branches to allow Odoo.sh to download them.</p><div role="alert" class="alert-warning alert"><p class="alert-title">Warning</p><p >These settings are required for <strong >private repositories</strong> only.
+as submodules in your branches to allow Odoo.sh to download them.</p><div role="alert" class="alert-warning alert"><p class="alert-title">Предупреждение</p><p >These settings are required for <strong >private repositories</strong> only.
 If you are looking on how to set up your submodules,
 instructions are available in the chapter <a href="../advanced/submodules.html#odoosh-advanced-submodules" class="internal alert-link reference"><span class="std std-ref">Submodules</span></a> of this documentation.</p></div><img src="../../_images/interface-settings-submodules.png" style="" class="img-responsive center-block"><p >When a repository is private, it is not possible to publicly download its branches and revisions.
 For that reason, you need to configure a deploy key for Odoo.sh,
@@ -307,7 +328,7 @@ so the remote Git server allows our platform to download the revisions
 of this private repository.</p><p >To configure the deploy key for a private repository, proceed as follows:</p><ul ><li ><p >in the input, paste the SSH URL of your private sub-repository and click on <em >Add</em>,</p><ul ><li >e.g. <em >git@github.com:USERNAME/REPOSITORY.git</em></li><li >it can be another Git server than Github, such as Bitbucket, Gitlab or even your own self-hosted server</li></ul></li><li ><p >copy the public key,</p><ul ><li >it should look like <em >ssh-rsa some…random…characters…here…==</em></li></ul></li><li ><p >in the settings of the private sub-repository, add the public key amongst the deploy keys.</p><ul ><li >Github.com: <span class="menuselection">Settings ‣ Deploy keys ‣ Add deploy key</span></li><li >Bitbucket.com: <span class="menuselection">Settings ‣ Access keys ‣ Add key</span></li><li >Gitlab.com: <span class="menuselection">Settings ‣ Repository ‣ Deploy Keys</span></li><li >Self-hosted: append the key to the git user’s authorized_keys file in its .ssh directory</li></ul></li></ul></section><section id="storage-size"><h2 >Storage Size</h2><p >This section shows a small description of the storage size used by your project.</p><img src="../../_images/interface-settings-storage.png" style="" class="img-responsive center-block"><p >Should your production database size grow to exceed what’s provisioned in your subscription, it
 will automatically be synchronized with it.</p></section><section id="database-workers"><h2 >Database Workers</h2><p >Additional database workers can be configured here. More workers help increase the load your
 production database is able to handle. If you add more, it will automatically be synchronized
-with your subscription.</p><img src="../../_images/interface-settings-workers.png" style="" class="img-responsive center-block"><div role="alert" class="alert-warning alert"><p class="alert-title">Warning</p><p >Adding more workers will not magically solve all performance issues. It only allows the server
+with your subscription.</p><img src="../../_images/interface-settings-workers.png" style="" class="img-responsive center-block"><div role="alert" class="alert-warning alert"><p class="alert-title">Предупреждение</p><p >Adding more workers will not magically solve all performance issues. It only allows the server
 to handle more connections at the same time. If some operations are unusually slow, it’s most
 likely a problem with the code, if it’s not due to your own customizations you can open a ticket
 <a href="https://www.odoo.com/help" class="external reference alert-link">here</a>.</p></div></section><section id="staging-branches"><h2 >Staging Branches</h2><p >Additional staging branches allow you to develop and test more features at the same time. If you

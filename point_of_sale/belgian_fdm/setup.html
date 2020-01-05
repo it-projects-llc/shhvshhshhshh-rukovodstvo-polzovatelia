@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>Setting up the Fiscal Data Module with the Odoo POS &#8212; Odoo 13.0 documentation</title>
+    <title>Настройка модуля налоговых данных с точкой продажи Odoo &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
     <script type="text/javascript" src="../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../_static/doc.js"></script>
     <script type="text/javascript" src="../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/point_of_sale/belgian_fdm/setup.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/point_of_sale/belgian_fdm/setup.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/point_of_sale/belgian_fdm/setup.html" />
+    <link rel="canonical" href="/master/ru/point_of_sale/belgian_fdm/setup.html" />
   
-    <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Project" href="../../project.html" />
-    <link rel="prev" title="Belgian Fiscal Data Module" href="../belgian_fdm.html" /> 
+    <link rel="index" title="Алфавитный указатель" href="../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../search.html" />
+    <link rel="next" title="Проект" href="../../project.html" />
+    <link rel="prev" title="Бельгийский модуль налоговых данных" href="../belgian_fdm.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -194,7 +198,7 @@
         
             
                 
-                    <li><a href="../../point_of_sale.html">Point of Sale</a></li>
+                    <li><a href="../../point_of_sale.html">Точка продаж</a></li>
                 
             
         
@@ -205,7 +209,7 @@
             
         
     
-    <li class="active"><a href="#">Setting up the Fiscal Data Module with the Odoo POS</a></li>
+    <li class="active"><a href="#">Настройка модуля налоговых данных с точкой продажи Odoo</a></li>
 
               
           </ol>
@@ -221,12 +225,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/point_of_sale/belgian_fdm/setup.html">English</a></li>
+        
+            <li><a href="/13.0/uk/point_of_sale/belgian_fdm/setup.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -253,6 +272,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -262,7 +283,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> Setting up the Fiscal Data Module with the Odoo POS </h1>
+        <h1> Настройка модуля налоговых данных с точкой продажи Odoo </h1>
       </div>
     </figure>
     
@@ -275,7 +296,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#introduction" class="ripple internal reference">Introduction</a></li><li class="list-group-item"><a href="#required-hardware" class="ripple internal reference">Required hardware</a></li><li class="list-group-item"><a href="#setup" class="ripple internal reference">Setup</a><ul ><li class="list-group-item"><a href="#iot-box" class="ripple internal reference">IoT Box</a></li><li class="list-group-item"><a href="#odoo" class="ripple internal reference">Odoo</a></li></ul></li><li class="list-group-item"><a href="#certification-on-premise" class="ripple internal reference">Certification &amp; On-premise</a></li><li class="list-group-item"><a href="#restrictions" class="ripple internal reference">Restrictions</a></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#introduction" class="ripple internal reference">Введение</a></li><li class="list-group-item"><a href="#required-hardware" class="ripple internal reference">необходимое оборудование</a></li><li class="list-group-item"><a href="#setup" class="ripple internal reference">Установка</a><ul ><li class="list-group-item"><a href="#iot-box" class="ripple internal reference">IoT Box</a></li><li class="list-group-item"><a href="#odoo" class="ripple internal reference">Odoo</a></li></ul></li><li class="list-group-item"><a href="#certification-on-premise" class="ripple internal reference">Сертификация и на заказ</a></li><li class="list-group-item"><a href="#restrictions" class="ripple internal reference">ограничения</a></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/point_of_sale/belgian_fdm/setup.rst" class="gith-link">
                   Edit on GitHub
@@ -287,40 +308,7 @@
           <article class="doc-body  ">
             
             
-  <section id="setting-up-the-fiscal-data-module-with-the-odoo-pos"></section><section id="introduction"><h2 >Introduction</h2><p >The Belgian government requires certain businesses to use a
-government-certified device called a <strong >Fiscal Data Module</strong> (also
-known as a <strong >blackbox</strong>). This device works together with the POS
-application and logs certain transactions. On top of that, the used
-POS application must also be certified by the government and must
-adhere to strict standards specified by them. <a href="http://www.systemedecaisseenregistreuse.be/systemes-certifies" class="external reference">Odoo 9 (Enterprise Edition) is a
-certified application</a>. More
-information concerning the Fiscal Data Module can be found on <a href="http://www.systemedecaisseenregistreuse.be/" class="external reference">the
-official website</a>.</p></section><section id="required-hardware"><h2 >Required hardware</h2><ul ><li ><p >A government certified <a href="http://www.systemedecaisseenregistreuse.be/systemes-certifies#FDM%20certifiés" class="external reference">Fiscal Data Module</a>
-per POS, all of them should work, but the Cleancash SC-B is
-recommended, you will also need:</p><ul ><li >Serial null modem cable per FDM (<a href="http://www.startech.com/Cables/Serial-Parallel-PS-2/DB9-DB25/10-ft-Cross-Wired-Serial-Null-Modem-Cable-DB9-FM~SCNM9FM" class="external reference">example</a>)</li><li >Serial-to-USB adapter per FDM (<a href="http://trendnet.com/products/proddetail.asp?prod=265_TU-S9" class="external reference">example</a>)</li></ul></li><li >A registered IoT Box per POS configuration</li></ul></section><section id="setup"><h2 >Setup</h2></section><section id="iot-box"><h3 >IoT Box</h3><p >In order to use a Fiscal Data Module, you will need a registered
-IoT Box. These IoT Boxes are similar to the regular IoT Boxes we sell,
-but they are registered with the Belgian government. This is required
-by law. Attempting to use a Fiscal Data Module on a non-registered
-IoT Box will not work. You can verify that the Fiscal Data Module is
-recognized by the IoT Box by going to the <em >Hardware status page</em> via
-the IoT Box homepage.</p><img src="../../_images/posbox_fdm_hardware_status.png" style="" class="img-responsive center-block"></section><section id="odoo"><h3 >Odoo</h3><p >An Odoo POS app can be given certified POS capabilities by installing
-the <strong >Belgian Registered Cash Register</strong> app (technical name:
-<code >pos_blackbox_be</code>). Because of government restrictions imposed on
-us, this installation cannot be undone. After this, you will have to
-ensure that each POS configuration has a unique registered IoT Box
-associated with it (<span class="menuselection">Point of Sale ‣ Configuration
-‣ Point of Sale</span> and ensure Hardware Proxy / IoT Box and the serial
-number of your IoT Box is set). The first time you open the Point of
-Sale and attempt to do a transaction, you will be asked to input the
-PIN that you received with your VAT signing card.</p><img src="../../_images/vat_signing_card_pin.png" style="" class="img-responsive center-block"></section><section id="certification-on-premise"><h2 >Certification &amp; On-premise</h2><p >The certification granted by the government is restricted to the use on odoo.com
-SaaS instance. The usage of the module from the source or a modified version
-will <strong >not</strong> be certified. For on-premise users, we also support the Fiscal Data
-Module in such installations. The main restriction is that this requires an
-obfuscated version of the <code >pos_blackbox_be</code> module we will provide on request
-for Enterprise customers.</p></section><section id="restrictions"><h2 >Restrictions</h2><p >As mentioned before, in order to get certified the POS application
-must adhere to strict government guidelines. Because of this, a
-certified Odoo POS has some limitations not present in the
-non-certified Odoo POS.</p><ul ><li >Refunding is disabled</li><li >Modifying orderline prices</li><li >Creating/modifying/deleting POS orders</li><li >Selling products without a valid tax</li><li >Multiple Odoo POS configurations per IoT Box are not allowed</li><li >Using the POS without a connection to the IoT Box (and thus FDM)</li><li >Blacklisted modules: pos_discount, pos_reprint, pos_loyalty</li></ul></section>
+  <section id="setting-up-the-fiscal-data-module-with-the-odoo-pos"></section><section id="introduction"><h2 >Введение</h2><p >Бельгийское законодательство требует от некоторых предприятий использовать сертифицированный государством устройство под названием ** Модуль налоговых данных ** (также известный как ** blackbox [UNKNOWN NODE problematic]). Данное устройство вместе с приложением точки продаж и записывает определенные транзакции. Кроме того, используемое приложение точки продаж также должен быть сертифицирован правительством и должен соответствовать установленным им строгим стандартам. [UNKNOWN NODE problematic]Odoo 9 (Enterprise Edition) - сертифицированная программа &lt;<a href="http://www.systemedecaisseenregistreuse.be/systemes-certifies" class="external reference">http://www.systemedecaisseenregistreuse.be/systemes-certifies</a>&gt; _ _. Более подробную информацию о модуля налоговых данных можно найти на официальном веб-сайте <a href="http://www.systemedecaisseenregistreuse.be/&amp;gt" class="external reference">http://www.systemedecaisseenregistreuse.be/&amp;gt</a>; _.</p></section><section id="required-hardware"><h2 >необходимое оборудование</h2><ul ><li ><p >Правительство сертифицировал [UNKNOWN NODE problematic]Модуль налоговых данных &lt;<a href="http://www.systemedecaisseenregistreuse.be/systemes" class="external reference">http://www.systemedecaisseenregistreuse.be/systemes</a>-certifies#FDM%20certifiés&gt; [UNKNOWN NODE problematic]_ Per POS, все они должны работать, но рекомендуется использовать Cleancash SC-B, вам также понадобится:</p><ul ><li >Последовательный нулевой модемный кабель на FDM ( [UNKNOWN NODE problematic]пример &lt;<a href="http://www.startech.com/Cables/Serial-Parallel-PS-2/DB9-DB25/10-ft-Cross-Wired-Serial-Null-Modem-Cable-DB9-FM~SCNM9FM" class="external reference">http://www.startech.com/Cables/Serial-Parallel-PS-2/DB9-DB25/10-ft-Cross-Wired-Serial-Null-Modem-Cable-DB9-FM~SCNM9FM</a>&gt; [UNKNOWN NODE problematic]__)</li><li >Серийный адаптер к USB для FDM ( [UNKNOWN NODE problematic]пример &lt;<a href="http://trendnet.com/products/proddetail.asp?prod=265_TU-S9" class="external reference">http://trendnet.com/products/proddetail.asp?prod=265_TU-S9</a>&gt; [UNKNOWN NODE problematic]__)</li></ul></li><li >Настройка зарегистрированного IoT Box на точку продажи</li></ul></section><section id="setup"><h2 >Установка</h2></section><section id="iot-box"><h3 >IoT Box</h3><p >Для использования модуля фискальных данных вам понадобится зарегистрирован IoT Box. Они похожи на обычные коробки IoT, которые мы продаем, но они зарегистрированы в бельгийском правительстве. Это требует законом. Попытка использовать модуль фискальных данных на незарегистрированном IoT Box не будет. Можно убедиться, что модуль фискальных данных распознается IoT Box, перейдя на страницу статуса * Оборудование * на домашней странице IoT Box.</p><img src="../../_images/posbox_fdm_hardware_status.png" style="" class="img-responsive center-block"></section><section id="odoo"><h3 >Odoo</h3><p >Приложении точки продажи Odoo можно предоставить сертифицированные возможности точки продаж, установив приложение ** бельгийского зарегистрированного кассового аппарата ** (техническое название: [UNKNOWN NODE title_reference]). Из-за ограничений, налагаемых на нас, эту установку нельзя отменить. После этого вам придется убедиться, что каждое настройки точки продаж имеет уникальный зарегистрирован IoT Box, связанный с ней (: menuselection: [UNKNOWN NODE title_reference] и обеспечьте Proxy Оборудование / IoT Box и серийный номер вашего IoT Box). Когда вы впервые открываете точку продажи и пытаетесь осуществить транзакцию, вам будет предложено ввести PIN-код, который вы получили с вашей подписанного карточки НДС.</p><img src="../../_images/vat_signing_card_pin.png" style="" class="img-responsive center-block"></section><section id="certification-on-premise"><h2 >Сертификация и на заказ</h2><p >Сертификация, предоставленная правительством, ограничена использованием на примере SaaS odoo.com. Использование модуля из источника или модифицированной версии ** НЕ ** будет сертифицировано. Для пользователей по умолчанию мы также поддерживаем модуль бюджетных данных в таких установках. Основное ограничение состоит в том, что для этого нужна замаскированная версия модуля [UNKNOWN NODE title_reference], который мы предоставим на заказ для клиентов компании.</p></section><section id="restrictions"><h2 >ограничения</h2><p >Как упоминалось ранее, для получения сертификата заявка на использование точки продажи должна соответствовать строгим правилам правительства. Поэтому сертифицирована точка продажи Odoo имеет определенные ограничения, отсутствующие в сертифицированной точке продажи Odoo.</p><ul ><li >возмещение отключены</li><li >Изменение цен на заказ</li><li >Создание / изменение / удаление заказов точки продаж</li><li >Продажа продукции без действительного налога</li><li >Настройка нескольких точек продаж Odoo на IoT Box не доступны</li><li >Использование точки продажи без подключения к IoT Box (и таким образом FDM)</li><li >Модули с черным списком: pos_discount, pos_reprint, pos_loyalty</li></ul></section>
 
           </article>
         </div>

@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>Process a Receipt in three steps (Input + Quality + Stock) &#8212; Odoo 13.0 documentation</title>
+    <title>Process a Receipt in three steps (Input + Quality + Stock) &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/accounting.css" />
@@ -27,15 +27,19 @@
     <script type="text/javascript" src="../../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../../_static/doc.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/inventory/management/delivery/three_steps.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/inventory/management/delivery/three_steps.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/inventory/management/delivery/three_steps.html" />
+    <link rel="canonical" href="/master/ru/inventory/management/delivery/three_steps.html" />
   
-    <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="How is the scheduled delivery date computed?" href="scheduled_dates.html" />
+    <link rel="index" title="Алфавитный указатель" href="../../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../../search.html" />
+    <link rel="next" title="Как определяется запланированная дата доставки?" href="scheduled_dates.html" />
     <link rel="prev" title="Process a Receipt in two steps (Input + Stock)" href="two_steps.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
@@ -194,7 +198,7 @@
         
             
                 
-                    <li><a href="../../../inventory.html">Inventory</a></li>
+                    <li><a href="../../../inventory.html">Склад</a></li>
                 
             
         
@@ -227,12 +231,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/inventory/management/delivery/three_steps.html">English</a></li>
+        
+            <li><a href="/13.0/uk/inventory/management/delivery/three_steps.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -259,6 +278,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -281,7 +302,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#multi-step-routes" class="ripple internal reference">Multi-Step Routes</a></li><li class="list-group-item"><a href="#warehouse-configuration" class="ripple internal reference">Warehouse configuration</a></li><li class="list-group-item"><a href="#create-a-sales-order" class="ripple internal reference">Create a Sales Order</a></li><li class="list-group-item"><a href="#process-the-picking-packing-and-delivery" class="ripple internal reference">Process the picking, packing, and delivery</a></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#multi-step-routes" class="ripple internal reference">многошаговые маршруты</a></li><li class="list-group-item"><a href="#warehouse-configuration" class="ripple internal reference">Warehouse configuration</a></li><li class="list-group-item"><a href="#create-a-sales-order" class="ripple internal reference">Создать заказ на продажу</a></li><li class="list-group-item"><a href="#process-the-picking-packing-and-delivery" class="ripple internal reference">Process the picking, packing, and delivery</a></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/inventory/management/delivery/three_steps.rst" class="gith-link">
                   Edit on GitHub
@@ -304,7 +325,7 @@ then transfer them into a quality area for <em >quality control</em>. When the
 quality check has been processed, you can move the goods from QC to
 stock. Of course, you may change the quantity and only transfer to stock
 the quantity that is valid and decide that you will return the quantity
-that is not good.</p></section><section id="multi-step-routes"><h2 >Multi-Step Routes</h2><p >First, you will need to activate the <em >multi-step routes</em> option.
+that is not good.</p></section><section id="multi-step-routes"><h2 >многошаговые маршруты</h2><p >First, you will need to activate the <em >multi-step routes</em> option.
 Indeed, routes provide a mechanism to chain different actions together.
 Here, we will chain the picking to the shipping.</p><p >To activate <em >multi-step routes</em>, open the <em >inventory app</em>, and go to
 <em >Configuration &gt; Settings</em> and activate the option. By default,
@@ -315,7 +336,7 @@ you can select the option <em >Pack good, send goods in output and then
 deliver (3 steps)</em> as <em >Outgoing Shipments</em>.</p><img src="../../../_images/three_steps_02.png" style="" class="img-responsive center-block"><p >Activating this option will lead to the creation of two new locations,
 <em >Output</em> and <em >Packing Zone</em>.</p><p >Of course, you can rename them if you want. To do so, go to
 <em >Configuration &gt; Locations</em> and select the one you want to rename.
-Change its name and hit save.</p></section><section id="create-a-sales-order"><h2 >Create a Sales Order</h2><p >In the <em >Sales</em> app, create a quotation with storable products to
+Change its name and hit save.</p></section><section id="create-a-sales-order"><h2 >Создать заказ на продажу</h2><p >In the <em >Sales</em> app, create a quotation with storable products to
 deliver. Then, confirm it and three pickings will be created and linked
 to your sale order.</p><img src="../../../_images/three_steps_03.png" style="" class="img-responsive center-block"><p >Now, click on the button. You should see three different pickings:</p><ul ><li >The first one, with a reference PICK, designates the picking process;</li><li >The second one, with a reference PACK, is for the packing process;</li><li >The third one, with a reference OUT, designates the shipping process.</li></ul><img src="../../../_images/three_steps_04.png" style="" class="img-responsive center-block"></section><section id="process-the-picking-packing-and-delivery"><h2 >Process the picking, packing, and delivery</h2><p >The first operation to be processed is the picking and has a <em >Ready</em>
 status, while the others are <em >Waiting Another Operation</em>. The packing

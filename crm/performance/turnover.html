@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>Get an accurate probable turnover &#8212; Odoo 13.0 documentation</title>
+    <title>Получите точный вероятный оборот &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
     <script type="text/javascript" src="../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../_static/doc.js"></script>
     <script type="text/javascript" src="../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/crm/performance/turnover.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/crm/performance/turnover.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/crm/performance/turnover.html" />
+    <link rel="canonical" href="/master/ru/crm/performance/turnover.html" />
   
-    <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Optimize your Day-to-Day work" href="../optimize.html" />
-    <link rel="prev" title="Check your Win/Loss Ratio" href="win_loss.html" /> 
+    <link rel="index" title="Алфавитный указатель" href="../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../search.html" />
+    <link rel="next" title="Оптимизируйте свою ежедневную работу" href="../optimize.html" />
+    <link rel="prev" title="Проверьте ваш коэффициент пойман / Потеряно" href="win_loss.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -205,7 +209,7 @@
             
         
     
-    <li class="active"><a href="#">Get an accurate probable turnover</a></li>
+    <li class="active"><a href="#">Получите точный вероятный оборот</a></li>
 
               
           </ol>
@@ -221,12 +225,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/crm/performance/turnover.html">English</a></li>
+        
+            <li><a href="/13.0/uk/crm/performance/turnover.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -253,6 +272,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -262,7 +283,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> Get an accurate probable turnover </h1>
+        <h1> Получите точный вероятный оборот </h1>
       </div>
     </figure>
     
@@ -275,7 +296,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configure-your-kanban-stages" class="ripple internal reference">Configure your kanban stages</a></li><li class="list-group-item"><a href="#set-your-opportunity-expected-revenue-closing-date" class="ripple internal reference">Set your opportunity expected revenue &amp; closing date</a></li><li class="list-group-item"><a href="#see-the-overdue-or-closing-soon-opportunities" class="ripple internal reference">See the overdue or closing soon opportunities</a></li><li class="list-group-item"><a href="#view-your-total-expected-revenue-and-probable-turnover" class="ripple internal reference">View your total expected revenue and probable turnover</a></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configure-your-kanban-stages" class="ripple internal reference">Настройте этапы вашего канбан</a></li><li class="list-group-item"><a href="#set-your-opportunity-expected-revenue-closing-date" class="ripple internal reference">Установите ожидаемую прибыль и дату закрытия</a></li><li class="list-group-item"><a href="#see-the-overdue-or-closing-soon-opportunities" class="ripple internal reference">Посмотрите просроченные или случаю на закрытие вскоре</a></li><li class="list-group-item"><a href="#view-your-total-expected-revenue-and-probable-turnover" class="ripple internal reference">Смотрите общий ожидаемый доход и возможный оборот</a></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/crm/performance/turnover.rst" class="gith-link">
                   Edit on GitHub
@@ -287,27 +308,7 @@
           <article class="doc-body  ">
             
             
-  <section id="get-an-accurate-probable-turnover"><p >As you progress in your sales cycle, and move from one stage to another,
-you can expect to have more precise information about a given
-opportunity giving you an better idea of the probability of closing it,
-this is important to see your expected turnover in your various reports.</p></section><section id="configure-your-kanban-stages"><h2 >Configure your kanban stages</h2><p >By default, Odoo Kanban view has four stages: New, Qualified,
-Proposition, Won. Respectively with a 10, 30, 70 and 100% probability of
-success. You can add stages as well as edit them. By refining default
-probability of success for your business on stages, you can make your
-probable turnover more and more accurate.</p><img src="../../_images/turnover01.png" style="" class="img-responsive center-block"><img src="../../_images/turnover02.png" style="" class="img-responsive center-block"><p >Every one of your opportunities will have the probability set by default
-but you can modify them manually of course.</p></section><section id="set-your-opportunity-expected-revenue-closing-date"><h2 >Set your opportunity expected revenue &amp; closing date</h2><p >When you get information on a prospect, it is important to set an
-expected revenue and expected closing date. This will let you see your
-total expected revenue by stage as well as give a more accurate probable
-turnover.</p><img src="../../_images/turnover03.png" style="" class="img-responsive center-block"></section><section id="see-the-overdue-or-closing-soon-opportunities"><h2 >See the overdue or closing soon opportunities</h2><p >In your pipeline, you can filter opportunities by how soon they will be
-closing, letting you prioritize.</p><img src="../../_images/turnover04.png" style="" class="img-responsive center-block"><p >As a sales manager, this tool can also help you see potential ways to
-improve your sale process, for example a lot of opportunities in early
-stages but with near closing date might indicate an issue.</p></section><section id="view-your-total-expected-revenue-and-probable-turnover"><h2 >View your total expected revenue and probable turnover</h2><p >While in your Kanban view you can see the expected revenue for each of
-your stages. This is based on each opportunity expected revenue that you
-set.</p><img src="../../_images/turnover05.png" style="" class="img-responsive center-block"><p >As a manager you can go to <span class="menuselection">CRM ‣ Reporting ‣ Pipeline Analysis</span>
-by default <em >Probable Turnover</em> is set as a measure. This report will take
-into account the revenue you set on each opportunity but also the
-probability they will close. This gives you a much better idea of your
-expected revenue allowing you to make plans and set targets.</p><img src="../../_images/turnover06.png" style="" class="img-responsive center-block"></section>
+  <section id="get-an-accurate-probable-turnover"><p >Когда вы развиваете свой цикл продаж и переходите с одного этапа к другому, вы можете надеяться получить более точные данные о данной возможности, что даст вам лучшее представление о вероятности ее закрытия, это важно, чтобы увидеть ваш ожидаемый оборот в ваших вариантах отчетов.</p></section><section id="configure-your-kanban-stages"><h2 >Настройте этапы вашего канбан</h2><p >По умолчанию Канбан Odoo имеет четыре этапа: Новый, Квалифицированный, предложение, пойманных. Согласно 10, 30, 70 и 100% вероятности успеха. Вы можете добавлять этапы, а также редактировать их. Редактируя вероятность успеха для вашего бизнеса по фазам, вы можете сделать свой возможный оборот более точным.</p><img src="../../_images/turnover01.png" style="" class="img-responsive center-block"><img src="../../_images/turnover02.png" style="" class="img-responsive center-block"><p >Каждая из ваших возможностей будет вероятность, установленную по умолчанию, но, конечно, можно изменить вручную.</p></section><section id="set-your-opportunity-expected-revenue-closing-date"><h2 >Установите ожидаемую прибыль и дату закрытия</h2><p >Когда вы получаете информацию о потенциальном клиенте, важно установить ожидаемый доход и ожидаемую дату закрытия. Это позволит вам увидеть ваш общий ожидаемый доход на этапе, а также дать более точный возможен оборот.</p><img src="../../_images/turnover03.png" style="" class="img-responsive center-block"></section><section id="see-the-overdue-or-closing-soon-opportunities"><h2 >Посмотрите просроченные или случаю на закрытие вскоре</h2><p >В вашем конвейере можно фильтровать возможности, как скоро они будут закрыты, позволяя определить приоритет.</p><img src="../../_images/turnover04.png" style="" class="img-responsive center-block"><p >Как менеджеру по продажуив, этот инструмент также может помочь вам выяснить потенциальные способы улучшить процесс продажи, например, многие возможностей на ранних стадиях, но с близким датой закрытия могут указывать на проблему.</p></section><section id="view-your-total-expected-revenue-and-probable-turnover"><h2 >Смотрите общий ожидаемый доход и возможный оборот</h2><p >Хотя в вашем конвейере канбан вы можете увидеть ожидаемый доход для каждого из ваших этапов. Это основано на каждом из ожидаемых прибылей, которые вы установили.</p><img src="../../_images/turnover05.png" style="" class="img-responsive center-block"><p >Как менеджер вы можете перейти к: menuselection: [UNKNOWN NODE title_reference] по умолчанию * Предполагаемый оборот * установлен как мера. В этом отчете будут учтены доход, установленный по каждой возможностью, а также вероятность ее закрытия. Это дает вам гораздо лучшее представление об ожидаемом доходе, который позволяет составить планы и установить цели.</p><img src="../../_images/turnover06.png" style="" class="img-responsive center-block"></section>
 
           </article>
         </div>

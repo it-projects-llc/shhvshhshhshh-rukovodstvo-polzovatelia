@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>Manage your fixed assets &#8212; Odoo 13.0 documentation</title>
+    <title>Управление основными средствами &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../../_static/doc.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/accounting/others/adviser/assets.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/accounting/others/adviser/assets.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/accounting/others/adviser/assets.html" />
+    <link rel="canonical" href="/master/ru/accounting/others/adviser/assets.html" />
   
-    <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="How to do a year end in Odoo? (close a fiscal year)" href="fiscalyear.html" />
-    <link rel="prev" title="Adviser" href="../adviser.html" /> 
+    <link rel="index" title="Алфавитный указатель" href="../../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../../search.html" />
+    <link rel="next" title="Как закрыть летний период в Odoo? (Закрытие отчетного периода)" href="fiscalyear.html" />
+    <link rel="prev" title="Консультант" href="../adviser.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -194,7 +198,7 @@
         
             
                 
-                    <li><a href="../../../accounting.html">Accounting</a></li>
+                    <li><a href="../../../accounting.html">Бухгалтерский учёт</a></li>
                 
             
         
@@ -211,7 +215,7 @@
             
         
     
-    <li class="active"><a href="#">Manage your fixed assets</a></li>
+    <li class="active"><a href="#">Управление основными средствами</a></li>
 
               
           </ol>
@@ -227,12 +231,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/accounting/others/adviser/assets.html">English</a></li>
+        
+            <li><a href="/13.0/uk/accounting/others/adviser/assets.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -259,6 +278,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -268,7 +289,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> Manage your fixed assets </h1>
+        <h1> Управление основными средствами </h1>
       </div>
     </figure>
     
@@ -281,7 +302,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a><ul ><li class="list-group-item"><a href="#install-the-asset-module" class="ripple internal reference">Install the Asset module</a></li><li class="list-group-item"><a href="#defining-asset-types" class="ripple internal reference">Defining Asset Types</a></li></ul></li><li class="list-group-item"><a href="#create-assets-manually" class="ripple internal reference">Create assets manually</a></li><li class="list-group-item"><a href="#create-assets-automatically-from-a-supplier-bill" class="ripple internal reference">Create assets automatically from a supplier bill</a></li><li class="list-group-item"><a href="#how-to-depreciate-an-asset" class="ripple internal reference">How to depreciate an asset?</a></li><li class="list-group-item"><a href="#how-to-modify-an-existing-asset" class="ripple internal reference">How to modify an existing asset?</a></li><li class="list-group-item"><a href="#how-to-record-the-sale-or-disposal-of-an-asset" class="ripple internal reference">How to record the sale or disposal of an asset?</a></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Настройка</a><ul ><li class="list-group-item"><a href="#install-the-asset-module" class="ripple internal reference">Установите модуль основных средств</a></li><li class="list-group-item"><a href="#defining-asset-types" class="ripple internal reference">Определите типы активов</a></li></ul></li><li class="list-group-item"><a href="#create-assets-manually" class="ripple internal reference">Создайте основные средства вручную</a></li><li class="list-group-item"><a href="#create-assets-automatically-from-a-supplier-bill" class="ripple internal reference">Создание основных средств автоматически со счета поставщика</a></li><li class="list-group-item"><a href="#how-to-depreciate-an-asset" class="ripple internal reference">Как амортизировать актив?</a></li><li class="list-group-item"><a href="#how-to-modify-an-existing-asset" class="ripple internal reference">Как изменить существующий актив?</a></li><li class="list-group-item"><a href="#how-to-record-the-sale-or-disposal-of-an-asset" class="ripple internal reference">Как зарегистрировать ликвидацию или продажу актива?</a></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/accounting/others/adviser/assets.rst" class="gith-link">
                   Edit on GitHub
@@ -293,52 +314,7 @@
           <article class="doc-body  ">
             
             
-  <section id="manage-your-fixed-assets"><p >The “Assets” module allows you to keep track of your fixed assets like
-machinery, land and building. The module allows you to generate monthly
-depreciation entries automatically, get depreciation board, sell or
-dispose assets and perform reports on your company assets.</p><p >As an example, you may buy a car for $36,000 (gross value) and you plan
-to amortize it over 36 months (3 years). Every months (periodicity),
-Odoo will create a depreciation entry automatically reducing your assets
-value by $1,000 and passing $1,000 as an expense. After 3 years, this
-assets accounts for $0 (salvage value) in your balance sheet.</p><p >The different types of assets are grouped into “Assets Types” that
-describe how to deprecate an asset. Here are two examples of assets
-types:</p><ul ><li >Building: 10 years, yearly linear depreciation</li><li >Car: 5 years, monthly linear depreciation</li></ul></section><section id="configuration"><h2 >Configuration</h2></section><section id="install-the-asset-module"><h3 >Install the Asset module</h3><p >Start by <em >installing the Asset module.</em></p><p >Once the module is installed, you should see two new menus in the
-accounting application:</p><ul ><li ><span class="menuselection">Adviser ‣ Assets</span></li><li ><span class="menuselection">Configuration ‣ Asset Types</span></li></ul><p >Before registering your first asset, you must <a href="#accounting-adviser-assets-management-defining" class="internal reference"><span class="std std-ref">define your Asset
-Types</span></a>.</p></section><section id="defining-asset-types"><i id="accounting-adviser-assets-management-defining"></i><h3 >Defining Asset Types</h3><p >Asset type are used to configure all information about an assets: asset
-and deprecation accounts, amortization method, etc. That way, advisers
-can configure asset types and users can further record assets without
-having to provide any complex accounting information. They just need to
-provide an asset type on the supplier bill.</p><p >You should create asset types for every group of assets you frequently
-buy like “Cars: 5 years”, “Computer Hardware: 3 years”. For all other
-assets, you can create generic asset types. Name them according to the
-duration of the asset like “36 Months”, “10 Years”, …</p><p >To define asset types, go to <span class="menuselection">Configuration ‣ Asset
-Types</span></p><img src="../../../_images/image01.png" style="" class="img-responsive center-block"></section><section id="create-assets-manually"><h2 >Create assets manually</h2><p >To register an asset manually, go to the menu <span class="menuselection">Adviser
-‣ Assets</span>.</p><img src="../../../_images/image08.png" style="" class="img-responsive center-block"><p >Once your asset is created, don’t forget to Confirm it. You can also
-click on the Compute Depreciation button to check the depreciation board
-before confirming the asset.</p><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >if you create asset manually, you still need to create the supplier
-bill for this asset. The asset document will only produce the
-depreciation journal entries, not those related to the supplier
-bill.</p></div><p >Explanation of the fields:</p><a href="https://demo.odoo.com?module=account_asset.action_account_asset_asset_form" class="center-block reference btn-lg btn-primary external btn-block btn">Try creating an <em >Asset</em> in our online demonstration</a></section><section id="create-assets-automatically-from-a-supplier-bill"><h2 >Create assets automatically from a supplier bill</h2><p >Assets can be automatically created from supplier bills. All you need to
-do is to set an asset category on your bill line. When the user will
-validate the bill, an asset will be automatically created, using the
-information of the supplier bill.</p><img src="../../../_images/image09.png" style="" class="img-responsive"><p >Depending on the information on the asset category, the asset will be
-created in draft or directly validated<em >.</em> It’s easier to confirm
-assets directly so that you won’t forget to confirm it afterwards.
-(check the field <em >Skip Draft State</em> on <em >Asset Category)</em> Generate assets
-in draft only when you want your adviser to control all the assets
-before posting them to your accounts.</p><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >if you put the asset on the product, the asset category will
-automatically be filled in the supplier bill.</p></div></section><section id="how-to-depreciate-an-asset"><h2 >How to depreciate an asset?</h2><p >Odoo will create depreciation journal entries automatically at the right
-date for every confirmed asset. (not the draft ones). You can control in
-the depreciation board: a green bullet point means that the journal
-entry has been created for this line.</p><p >But you can also post journal entries before the expected date by
-clicking on the green bullet and forcing the creation of related
-depreciation entry.</p><img src="../../../_images/image11.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >In the Depreciation board, click on the red bullet to post
-the journal entry. Click on the <span class="guilabel">Items</span> button on
-the top to see the journal entries which are already posted.</p></div></section><section id="how-to-modify-an-existing-asset"><h2 >How to modify an existing asset?</h2><ul ><li >Click on <span class="guilabel">Modify Depreciation</span></li><li >Change the number of depreciation</li></ul><p >Odoo will automatically recompute a new depreciation board.</p></section><section id="how-to-record-the-sale-or-disposal-of-an-asset"><h2 >How to record the sale or disposal of an asset?</h2><p >If you sell or dispose an asset, you need to deprecate completly this
-asset. Click on the button <span class="guilabel">Sell or Dispose</span>. This action
-will post the full costs of this assets but it will not record the
-sales transaction that should be registered through a customer
-invoice.</p></section>
+  <section id="manage-your-fixed-assets"><p >Приложение «Основные средства» (Активы) позволяет вам следить за вашим активами, такими как оборудование, землей и домом. Модуль позволяет автоматически создавать ежемесячные записи амортизации, получать плату за амортизацию, продавать или распоряжаться активами и выполнять отчеты о своих активах компании.</p><p >Например, вы можете приобрести автомобиль по 36000 долларов (валовая стоимость), и вы планируете амортизировать актив в течение 36 месяцев (3 года). Ежемесячно (периодичность), Odoo создаст амортизационный запись, автоматически уменьшая стоимость активов на 1000 долларов и проводя 1000 долларов в качестве расходов. Через 3 года эти активы составляют 0 долларов (балансовая стоимость) в вашем балансе.</p><p >Различные типы активов сгруппированы в &amp;quot;Типы основных средств&amp;quot;, которые описывают, как отклонить актив. Вот два примера типов основных записей:</p><ul ><li >Строительство 10 лет, годовая линейная амортизация</li><li >Автомобиль 5 лет, ежемесячная линейная амортизация</li></ul></section><section id="configuration"><h2 >Настройка</h2></section><section id="install-the-asset-module"><h3 >Установите модуль основных средств</h3><p >Начните с * установки модуля основных средств [UNKNOWN NODE problematic].</p><p >После установки модуля вы должны увидеть два новых меню в программе бухучета:</p><ul ><li >: Menuselection: [UNKNOWN NODE title_reference]</li><li >: Menuselection: [UNKNOWN NODE title_reference]</li></ul><p >Прежде чем зарегистрировать свой первый актив, вы должны: ref: [UNKNOWN NODE problematic]определить свои типы активов. &lt;accounting/adviser/assets_management/defining&gt; [UNKNOWN NODE problematic].</p></section><section id="defining-asset-types"><i id="accounting-adviser-assets-management-defining"></i><h3 >Определите типы активов</h3><p >Тип актива используется для настройки всей информации об основных средствах: основные средства и счета амортизации, метод амортизации и тому подобное. Таким образом, консультанты могут настроить типы основных средств, а пользователи могут дополнительно записывать активы, не требуя предоставления любой сложной бухгалтерской информации. Они просто должны указать тип основного средства на счета поставщика.</p><p >Вы должны создавать типы основных средств для каждой группы основных средств, которые вы часто покупаете, например &amp;quot;Автомобили 5 лет&amp;quot;, &amp;quot;Компьютерное оборудование 3 года&amp;quot;. Для всех остальных активов можно создать общие типы основных средств. Назовите их по продолжительности актива, например, &amp;quot;36 месяцев&amp;quot;, &amp;quot;10 лет&amp;quot; …</p><p >Чтобы определить типы основных средств, перейдите к разделу: menuselection: [UNKNOWN NODE title_reference]</p><img src="../../../_images/image01.png" style="" class="img-responsive center-block"></section><section id="create-assets-manually"><h2 >Создайте основные средства вручную</h2><p >Чтобы зарегистрировать актив вручную, перейдите к меню: menuselection: [UNKNOWN NODE title_reference].</p><img src="../../../_images/image08.png" style="" class="img-responsive center-block"><p >Когда ваш актив будет создан, не забывайте подтверждать его. Вы также можете нажать кнопку Расчет амортизации, чтобы проверить амортизацию, прежде чем подтвердить актив.</p><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >если вы создаете актив вручную, вам все равно нужно создать счет поставщика для этого основного средства. Документ основных средств отражать только записи об амортизации журнала, а не те, что касаются счета поставщика.</p></div><p >Помощь полей:</p><a href="https://demo.odoo.com?module=account_asset.action_account_asset_asset_form" class="center-block reference btn-lg btn-primary external btn-block btn">Попробуйте создать * Актив * в нашей демо-версии онлайн</a></section><section id="create-assets-automatically-from-a-supplier-bill"><h2 >Создание основных средств автоматически со счета поставщика</h2><p >Активы могут быть автоматически созданы по счетам поставщиков. Все, что вам нужно сделать - это установить категорию основных средств в строке счета. Когда пользователь проверит счет, основные средства будут автоматически созданы, используя информацию о счете поставщика.</p><img src="../../../_images/image09.png" style="" class="img-responsive"><p >В зависимости от информации о категории основных средств, актив будет создан по проекту или непосредственно проверено [UNKNOWN NODE problematic]. * Легче подтверждать основные средства непосредственно, чтобы вы не забыли подтвердить это позже. (Проверьте поле * Пропустить состояние черновики * в * Категорию основных средств [UNKNOWN NODE problematic]). Создавайте активы в проекте только тогда, когда вы хотите, чтобы ваш советник руководил всеми основными средствами перед их размещением в ваших счетах.</p><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >если вы установили актив на товар, категория актива будет автоматически заполнена в счете поставщика.</p></div></section><section id="how-to-depreciate-an-asset"><h2 >Как амортизировать актив?</h2><p >Odoo автоматически создаст записи об амортизации в нужную дату для каждого подтвержденного актива (но не черновик). Вы можете управлять амортизационной таблицей: зеленая точка означает, что для этого строки создан журнал.</p><p >Но вы также можете опубликовать записи журнала до ожидаемой даты, нажав на зеленую точку, заставив создать связан амортизационный запись.</p><img src="../../../_images/image11.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >В таблице амортизации нажмите на красную точку, чтобы опубликовать запись журнала. Нажмите кнопку: guilabel: [UNKNOWN NODE title_reference] вверху, чтобы просмотреть записи журнала, которые уже размещены.</p></div></section><section id="how-to-modify-an-existing-asset"><h2 >Как изменить существующий актив?</h2><ul ><li >Нажмите на: guilabel: [UNKNOWN NODE title_reference]</li><li >Измените количество амортизации</li></ul><p >Odoo автоматически перечислит новую таблицу амортизации.</p></section><section id="how-to-record-the-sale-or-disposal-of-an-asset"><h2 >Как зарегистрировать ликвидацию или продажу актива?</h2><p >Если вы продаете или распоряжаетесь активом, вам нужно полностью прекратить этот актив. Нажмите кнопку: guilabel: [UNKNOWN NODE title_reference]. Это действие будет публиковать полные расходы на эти активы, но не будет зарегистрирована сделка по продаже, которая должна быть зарегистрирована через счет-фактуру клиента.</p></section>
 
           </article>
         </div>

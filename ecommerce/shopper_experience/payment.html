@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>How to get paid with payment acquirers &#8212; Odoo 13.0 documentation</title>
+    <title>Как получить платеж через платежные эквайеры &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
     <script type="text/javascript" src="../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../_static/doc.js"></script>
     <script type="text/javascript" src="../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/ecommerce/shopper_experience/payment.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/ecommerce/shopper_experience/payment.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/ecommerce/shopper_experience/payment.html" />
+    <link rel="canonical" href="/master/ru/ecommerce/shopper_experience/payment.html" />
   
-    <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Configure your Paypal account" href="paypal.html" />
-    <link rel="prev" title="Get paid" href="../shopper_experience.html" /> 
+    <link rel="index" title="Алфавитный указатель" href="../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../search.html" />
+    <link rel="next" title="Настройте ваш аккаунт Paypal" href="paypal.html" />
+    <link rel="prev" title="получите оплату" href="../shopper_experience.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -205,7 +209,7 @@
             
         
     
-    <li class="active"><a href="#">How to get paid with payment acquirers</a></li>
+    <li class="active"><a href="#">Как получить платеж через платежные эквайеры</a></li>
 
               
           </ol>
@@ -221,12 +225,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/ecommerce/shopper_experience/payment.html">English</a></li>
+        
+            <li><a href="/13.0/uk/ecommerce/shopper_experience/payment.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -253,6 +272,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -262,7 +283,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> How to get paid with payment acquirers </h1>
+        <h1> Как получить платеж через платежные эквайеры </h1>
       </div>
     </figure>
     
@@ -275,7 +296,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#what-are-the-payment-methods-available" class="ripple internal reference">What are the payment methods available</a><ul ><li class="list-group-item"><a href="#wire-transfer" class="ripple internal reference">Wire transfer</a></li><li class="list-group-item"><a href="#payment-acquirers" class="ripple internal reference">Payment acquirers</a></li></ul></li><li class="list-group-item"><a href="#how-to-go-live" class="ripple internal reference">How to go live</a></li><li class="list-group-item"><a href="#how-to-let-customers-save-and-reuse-credit-cards" class="ripple internal reference">How to let customers save and reuse credit cards</a></li><li class="list-group-item"><a href="#how-to-debit-credit-cards-to-pay-subscriptions" class="ripple internal reference">How to debit credit cards to pay subscriptions</a></li><li class="list-group-item"><a href="#how-to-use-other-acquirers-advanced" class="ripple internal reference">How to use other acquirers (advanced)</a></li><li class="list-group-item"><a href="#other-configurations" class="ripple internal reference">Other configurations</a></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#what-are-the-payment-methods-available" class="ripple internal reference">Какие доступные способы оплаты?</a><ul ><li class="list-group-item"><a href="#wire-transfer" class="ripple internal reference">банковский перевод</a></li><li class="list-group-item"><a href="#payment-acquirers" class="ripple internal reference">Платежные эквайеры</a></li></ul></li><li class="list-group-item"><a href="#how-to-go-live" class="ripple internal reference">Как это воплотить</a></li><li class="list-group-item"><a href="#how-to-let-customers-save-and-reuse-credit-cards" class="ripple internal reference">Как разрешить клиентам сохранять и повторно использовать кредитные карточки</a></li><li class="list-group-item"><a href="#how-to-debit-credit-cards-to-pay-subscriptions" class="ripple internal reference">Как дебетировать кредитные карты для оплаты подписки</a></li><li class="list-group-item"><a href="#how-to-use-other-acquirers-advanced" class="ripple internal reference">Как пользоваться другими эквайерами (расширенные)</a></li><li class="list-group-item"><a href="#other-configurations" class="ripple internal reference">другие настройки</a></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/ecommerce/shopper_experience/payment.rst" class="gith-link">
                   Edit on GitHub
@@ -287,28 +308,7 @@
           <article class="doc-body  ">
             
             
-  <section id="how-to-get-paid-with-payment-acquirers"><p >Odoo embeds several payment methods to get paid on eCommerce, Sales
-and Invoicing apps.</p></section><section id="what-are-the-payment-methods-available"><h2 >What are the payment methods available</h2></section><section id="wire-transfer"><h3 >Wire transfer</h3><p >Wire Transfer is the default payment method available. The aim is providing your
-customers with your bank details so they can pay on their own via their bank.
-This is very easy to start with but slow and inefficient process-wise.
-Opt for online acquirers as soon as you can!</p></section><section id="payment-acquirers"><h3 >Payment acquirers</h3><p >Redirect your customers to payment platforms to collect money effortless
-and track the payment status (call-back).
-Odoo supports more and more platforms over time:</p><ul ><li ><a href="paypal.html" class="external reference">Paypal</a></li><li >Ingenico</li><li >Authorize.net</li><li >Adyen</li><li >Buckaroo</li><li >PayUmoney</li><li >Sips</li><li >Stripe</li></ul></section><section id="how-to-go-live"><h2 >How to go live</h2><p >Once the payment method ready, make it visible in the payment interface
-and activate the <strong >Production</strong> mode.</p><img src="../../_images/paypal_live.png" style="" class="img-responsive center-block"></section><section id="how-to-let-customers-save-and-reuse-credit-cards"><h2 >How to let customers save and reuse credit cards</h2><p >To ease the payment of returning customers, you can let them
-save and reuse a credit card if they want to.
-If so, a payment token will be saved in Odoo.
-This option is available with Ingenico and Authorize.net.</p><p >You can turn this on from the acquirer configuration form.</p><img src="../../_images/payment_save_card.png" style="" class="img-responsive center-block"></section><section id="how-to-debit-credit-cards-to-pay-subscriptions"><h2 >How to debit credit cards to pay subscriptions</h2><p ><a href="https://www.odoo.com/page/subscriptions" class="external reference">Odoo Subscription</a> allows to
-bill services automatically on a recurring basis.
-Along with it, you can have an automatic debit of the customer’s credit card.</p><p >This option is available with Ingenico and Authorize.net.</p><p >You can turn this on from the acquirer configuration form.</p><img src="../../_images/payment_recurring.png" style="" class="img-responsive center-block"><p >That way a payment token will be recorded when the customer
-goes for the subscription and an automatic debit will occur
-whenever an invoice is issued from the subscription.</p></section><section id="how-to-use-other-acquirers-advanced"><h2 >How to use other acquirers (advanced)</h2><p >Odoo can submit single payment requests and redirect to any payment acquirer.
-But there is no call-back, i.e. Odoo doesn’t track the transaction status.
-So you will confirm orders manually once you get paid.</p><p >How to:</p><ul ><li >Switch to developer mode.</li><li >Take the <strong >Custom</strong> payment method.</li><li >Set up the payment form (S2S Form Template) as instructed by your payment acquirer.
-You can start from <em >default_acquirer_button</em> that you can duplicate.</li></ul></section><section id="other-configurations"><h2 >Other configurations</h2><p >Odoo can also be used for more advanced payment processes
-like installment plans (e.g.
-<a href="https://developer.paypal.com/docs/classic/paypal-payments-standard/integration-guide/installment_buttons" class="external reference">Paypal Installment Plans</a>).</p><p >Such a customization service is made on-demand by our technical experts
-based on your own requirements. A business advisor can reach you out for
-such matter. <a href="https://www.odoo.com/page/contactus" class="external reference">Contact us.</a></p><div role="alert" class="alert-go_to alert"><p class="alert-title">See also</p><ul ><li ><a href="paypal.html" class="internal alert-link reference"><span class="doc">Configure your Paypal account</span></a></li><li ><a href="wire_transfer.html" class="internal alert-link reference"><span class="doc">How to get paid with wire transfers</span></a></li><li ><a href="payment_acquirer.html" class="internal alert-link reference"><span class="doc">How to manage orders paid with payment acquirers</span></a></li></ul></div></section>
+  <section id="how-to-get-paid-with-payment-acquirers"><p >Odoo включает несколько способов оплаты с электронной коммерции, продаж и счетов-фактур.</p></section><section id="what-are-the-payment-methods-available"><h2 >Какие доступные способы оплаты?</h2></section><section id="wire-transfer"><h3 >банковский перевод</h3><p >Банковский перевод - это доступный способ оплаты по умолчанию. Цель - предоставить своим клиентам свои банковские реквизиты, чтобы они могли платить самостоятельно через свой банк. Это очень легко начать, но медленно и неэффективно. Выберите онлайн-покупателей, как только сможете!</p></section><section id="payment-acquirers"><h3 >Платежные эквайеры</h3><p >Переадресовывайте своих клиентов на платформы, чтобы легко получать деньги и отслеживать статус платежа (обратная связь). Odoo поддерживает все больше и больше платформ:</p><ul ><li ><a href="paypal.html" class="external reference">Paypal</a></li><li >Ingenico</li><li >Authorize.net</li><li >Adyen</li><li >Buckaroo</li><li >PayUmoney</li><li >Sips</li><li >Stripe</li></ul></section><section id="how-to-go-live"><h2 >Как это воплотить</h2><p >После того, как способ оплаты готов, сделайте его видимым в интерфейсе платежа и использование режима ** Производство [UNKNOWN NODE problematic].</p><img src="../../_images/paypal_live.png" style="" class="img-responsive center-block"></section><section id="how-to-let-customers-save-and-reuse-credit-cards"><h2 >Как разрешить клиентам сохранять и повторно использовать кредитные карточки</h2><p >Чтобы облегчить уплату возвращенных клиентов, вы можете позволить им сохранять и повторно использовать кредитную карту, если они хотят. Если так, токен платежа будет сохранен в Odoo. Этот параметр доступен для Ingenico и Authorize.net.</p><p >Вы можете включить это с помощью формы настройки эквайера.</p><img src="../../_images/payment_save_card.png" style="" class="img-responsive center-block"></section><section id="how-to-debit-credit-cards-to-pay-subscriptions"><h2 >Как дебетировать кредитные карты для оплаты подписки</h2><p >[UNKNOWN NODE problematic]Подписка Odoo &lt;<a href="https://www.odoo.com/page/subscriptions" class="external reference">https://www.odoo.com/page/subscriptions</a>&gt; [UNKNOWN NODE problematic]__ позволяет автоматически оплачивать услуги на регулярной основе. Наряду с этим, вы можете иметь автоматическое дебетования кредитной карты клиента.</p><p >Этот параметр доступен для Ingenico и Authorize.net.</p><p >Вы можете включить это с помощью формы настройки эквайера.</p><img src="../../_images/payment_recurring.png" style="" class="img-responsive center-block"><p >Таким образом, платежный токен будет фиксироваться, когда пользователь перейдет на подписку, а автоматический дебет запускаться каждый раз, когда счет-фактура выпадает из подписки.</p></section><section id="how-to-use-other-acquirers-advanced"><h2 >Как пользоваться другими эквайерами (расширенные)</h2><p >Odoo может предоставить запросы на единовременную оплату и переадресацию к любому плательщика. Но нет обратной связи, то есть Odoo не отслеживаем состояние транзакции. Таким образом, вы подтвердите заказ вручную, как только вы получите плату.</p><p >Как это сделать:</p><ul ><li >Переключиться в режим разработчика.</li><li >Установите метод платежа ** кастомных [UNKNOWN NODE problematic].</li><li >Настройте форму для оплаты (шаблон формы S2S), как указано вашим платежным эквайером. Вы можете начать с * default_acquirer_button [UNKNOWN NODE problematic], которое вы можете дублировать.</li></ul></section><section id="other-configurations"><h2 >другие настройки</h2><p >Система Odoo также может быть использована для более продвинутых платежных транзакций, таких как платы за рассрочку (напр., [UNKNOWN NODE problematic]Paypal Installment Plans &lt;<a href="https://developer.paypal.com/docs/classic/paypal-payments-standard/integration-guide/installment_buttons" class="external reference">https://developer.paypal.com/docs/classic/paypal-payments-standard/integration-guide/installment_buttons</a>&gt; [UNKNOWN NODE problematic]__).</p><p >Такая служба настройки осуществляется по требованию наших технических экспертов на основе ваших собственных требований. Бизнес-консультант может связаться с вами с таким вопросом. [UNKNOWN NODE problematic]Свяжитесь с нами. &lt;<a href="https://www.odoo.com/page/contactus" class="external reference">https://www.odoo.com/page/contactus</a>&gt; [UNKNOWN NODE problematic]__</p><div role="alert" class="alert-go_to alert"><p class="alert-title">См.также</p><ul ><li ><a href="paypal.html" class="internal alert-link reference"><span class="doc">Настройте ваш аккаунт Paypal</span></a></li><li ><a href="wire_transfer.html" class="internal alert-link reference"><span class="doc">Как получить платеж через банковский перевод</span></a></li><li ><a href="payment_acquirer.html" class="internal alert-link reference"><span class="doc">Как управлять заказами, оплаченными через платежные эквайеры</span></a></li></ul></div></section>
 
           </article>
         </div>

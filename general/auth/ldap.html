@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>How to allow users to sign in with LDAP &#8212; Odoo 13.0 documentation</title>
+    <title>Как разрешить пользователям входить через LDAP &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/accounting.css" />
@@ -27,15 +27,19 @@
     <script type="text/javascript" src="../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
     <script type="text/javascript" src="../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../_static/doc.js"></script>
     <script type="text/javascript" src="../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/general/auth/ldap.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/general/auth/ldap.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/general/auth/ldap.html" />
+    <link rel="canonical" href="/master/ru/general/auth/ldap.html" />
   
-    <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="In-App Purchase" href="../in_app_purchase.html" />
+    <link rel="index" title="Алфавитный указатель" href="../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../search.html" />
+    <link rel="next" title="Покупки в приложении" href="../in_app_purchase.html" />
     <link rel="prev" title="OAuth" href="azure.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
@@ -194,7 +198,7 @@
         
             
                 
-                    <li><a href="../../general.html">General</a></li>
+                    <li><a href="../../general.html">Общее</a></li>
                 
             
         
@@ -205,7 +209,7 @@
             
         
     
-    <li class="active"><a href="#">How to allow users to sign in with LDAP</a></li>
+    <li class="active"><a href="#">Как разрешить пользователям входить через LDAP</a></li>
 
               
           </ol>
@@ -221,12 +225,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/general/auth/ldap.html">English</a></li>
+        
+            <li><a href="/13.0/uk/general/auth/ldap.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -253,6 +272,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -262,7 +283,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> How to allow users to sign in with LDAP </h1>
+        <h1> Как разрешить пользователям входить через LDAP </h1>
       </div>
     </figure>
     
@@ -287,7 +308,7 @@
           <article class="doc-body  ">
             
             
-  <section id="how-to-allow-users-to-sign-in-with-ldap"><ul ><li >Install the LDAP module in General Settings.</li><li >Click on <strong >Create</strong> in Setup your LDAP Server.</li></ul><img src="../../_images/ldap01.png" style="" class="img-responsive center-block"><img src="../../_images/ldap02.png" style="" class="img-responsive center-block"><ul ><li >Choose the company about to use the LDAP.</li></ul><img src="../../_images/ldap03.png" style="" class="img-responsive center-block"><ul ><li >In <strong >Server Information</strong>, enter the IP address of your server and the port it listens to.</li><li >Tick <strong >User TLS</strong> if your server is compatible.</li></ul><img src="../../_images/ldap04.png" style="" class="img-responsive center-block"><ul ><li >In <strong >Login Information</strong>, enter ID and password of the account used to query the server. If left empty, the server will be queried anonymously.</li></ul><img src="../../_images/ldap05.png" style="" class="img-responsive center-block"><ul ><li >In <strong >Process Parameter</strong>, enter the domain name of your LDAP server in LDAP nomenclature (e.g. <code >dc=example,dc=com</code>).</li><li >In <strong >LDAP filter</strong>, enter <code >uid=%s</code></li></ul><img src="../../_images/ldap06.png" style="" class="img-responsive center-block"><ul ><li >In <strong >User Information</strong>, tick <em >Create User</em> if you want Odoo to create a User profile the first time someone log in with LDAP.</li><li >In <strong >Template User</strong>, indicate a template for the new profiles created. If left blanked, the admin profile will be used as template.</li></ul><img src="../../_images/ldap07.png" style="" class="img-responsive center-block"></section>
+  <section id="how-to-allow-users-to-sign-in-with-ldap"><ul ><li >Установите модуль LDAP в Общем настройках.</li><li >Нажмите ** Создать ** в настройках вашего сервера LDAP.</li></ul><img src="../../_images/ldap01.png" style="" class="img-responsive center-block"><img src="../../_images/ldap02.png" style="" class="img-responsive center-block"><ul ><li >Выберите о компании для использования LDAP.</li></ul><img src="../../_images/ldap03.png" style="" class="img-responsive center-block"><ul ><li >В ** Информация сервера [UNKNOWN NODE problematic], введите IP-адрес вашего сервера и его порт.</li><li >Отметьте ** TLS пользователя [UNKNOWN NODE problematic], если ваш сервер совместим.</li></ul><img src="../../_images/ldap04.png" style="" class="img-responsive center-block"><ul ><li >В ** информации входа [UNKNOWN NODE problematic], введите ID и пароль учетной записи, который используется для запроса сервера. Если оставите пустым, сервер будет запрашиваться анонимно.</li></ul><img src="../../_images/ldap05.png" style="" class="img-responsive center-block"><ul ><li >В ** Настройках оброки [UNKNOWN NODE problematic], введите доменное имя вашего сервера LDAP в номенклатуре LDAP (например. [UNKNOWN NODE title_reference]).</li><li >В ** фильтре LDAP [UNKNOWN NODE problematic], введите [UNKNOWN NODE title_reference]</li></ul><img src="../../_images/ldap06.png" style="" class="img-responsive center-block"><ul ><li >В ** Информация пользователя ** обозначьте * Создать пользователя * если вы хотите, чтобы Odoo создала профиль, когда кто-то впервые войдет через LDAP.</li><li >В ** шаблоне пользователя [UNKNOWN NODE problematic], укажите шаблон для вновь профилей. Если оставить заблокированным, профиль администратора, будет использоваться в качестве шаблона.</li></ul><img src="../../_images/ldap07.png" style="" class="img-responsive center-block"></section>
 
           </article>
         </div>

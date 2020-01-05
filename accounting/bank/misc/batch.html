@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>How to manage batch deposits of checks? &#8212; Odoo 13.0 documentation</title>
+    <title>Как управлять серийными депозитам чеков? &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../../_static/doc.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/accounting/bank/misc/batch.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/accounting/bank/misc/batch.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/accounting/bank/misc/batch.html" />
+    <link rel="canonical" href="/master/ru/accounting/bank/misc/batch.html" />
   
-    <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="How to do a bank wire transfer from one bank to another?" href="interbank.html" />
-    <link rel="prev" title="Miscellaneous" href="../misc.html" /> 
+    <link rel="index" title="Алфавитный указатель" href="../../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../../search.html" />
+    <link rel="next" title="Как делать банковский перевод в Odoo?" href="interbank.html" />
+    <link rel="prev" title="Разное" href="../misc.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -194,7 +198,7 @@
         
             
                 
-                    <li><a href="../../../accounting.html">Accounting</a></li>
+                    <li><a href="../../../accounting.html">Бухгалтерский учёт</a></li>
                 
             
         
@@ -211,7 +215,7 @@
             
         
     
-    <li class="active"><a href="#">How to manage batch deposits of checks?</a></li>
+    <li class="active"><a href="#">Как управлять серийными депозитам чеков?</a></li>
 
               
           </ol>
@@ -227,12 +231,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/accounting/bank/misc/batch.html">English</a></li>
+        
+            <li><a href="/13.0/uk/accounting/bank/misc/batch.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -259,6 +278,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -268,7 +289,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> How to manage batch deposits of checks? </h1>
+        <h1> Как управлять серийными депозитам чеков? </h1>
       </div>
     </figure>
     
@@ -281,7 +302,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a><ul ><li class="list-group-item"><a href="#install-the-batch-deposit-feature" class="ripple internal reference">Install the batch deposit feature</a></li><li class="list-group-item"><a href="#activate-the-feature-on-your-bank-accounts" class="ripple internal reference">Activate the feature on your bank accounts</a></li></ul></li><li class="list-group-item"><a href="#from-checks-received-to-the-bank" class="ripple internal reference">From checks received to the bank</a><ul ><li class="list-group-item"><a href="#receive-customer-checks" class="ripple internal reference">Receive customer checks</a></li><li class="list-group-item"><a href="#prepare-a-batch-deposit" class="ripple internal reference">Prepare a batch deposit</a></li><li class="list-group-item"><a href="#reconciling-the-deposit-with-the-bank-statement" class="ripple internal reference">Reconciling the Deposit with the Bank Statement</a></li></ul></li><li class="list-group-item"><a href="#troubleshooting" class="ripple internal reference">Troubleshooting</a><ul ><li class="list-group-item"><a href="#i-don-t-see-the-batch-deposit-link-on-bank-statements" class="ripple internal reference">I don’t see the batch deposit link on bank statements?</a></li><li class="list-group-item"><a href="#what-happens-if-a-check-was-refused" class="ripple internal reference">What happens if a check was refused?</a></li></ul></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Настройка</a><ul ><li class="list-group-item"><a href="#install-the-batch-deposit-feature" class="ripple internal reference">Установите функцию пакетного депозита</a></li><li class="list-group-item"><a href="#activate-the-feature-on-your-bank-accounts" class="ripple internal reference">Включите эту функцию на своих банковских счетах</a></li></ul></li><li class="list-group-item"><a href="#from-checks-received-to-the-bank" class="ripple internal reference">С чеков, полученных в банк</a><ul ><li class="list-group-item"><a href="#receive-customer-checks" class="ripple internal reference">Получить чеки клиентов</a></li><li class="list-group-item"><a href="#prepare-a-batch-deposit" class="ripple internal reference">Подготовить пакетный депозит</a></li><li class="list-group-item"><a href="#reconciling-the-deposit-with-the-bank-statement" class="ripple internal reference">Согласование депозита с банковской выпиской</a></li></ul></li><li class="list-group-item"><a href="#troubleshooting" class="ripple internal reference">Решение проблем</a><ul ><li class="list-group-item"><a href="#i-don-t-see-the-batch-deposit-link-on-bank-statements" class="ripple internal reference">Я не вижу ссылки пакетного депозита на банковских выписках?</a></li><li class="list-group-item"><a href="#what-happens-if-a-check-was-refused" class="ripple internal reference">Что произойдет, если чек был отклонен?</a></li></ul></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/accounting/bank/misc/batch.rst" class="gith-link">
                   Edit on GitHub
@@ -293,47 +314,7 @@
           <article class="doc-body  ">
             
             
-  <section id="how-to-manage-batch-deposits-of-checks"><p >When your company’s collections group receives checks from customers
-they will often place this money into their bank account in batches. As
-this money has been received in a physical form, someone in your company
-must manually bring the checks to the bank.</p><p >The bank will ask for a deposit ticket (also referred to as deposit
-slip) to be filled-in with the details of the checks or cash to be
-included in the transactions.</p><p >The bank statement will reflect the total amount that was deposited and
-the reference to the deposit ticket, not the individual checks.</p><p >Odoo assists you to prepare and print your deposit tickets, and later on
-reconcile them with your bank statement easily.</p></section><section id="configuration"><h2 >Configuration</h2></section><section id="install-the-batch-deposit-feature"><h3 >Install the batch deposit feature</h3><p >In order to use the batch deposit feature, you need the module <strong >Batch
-Deposit</strong> to be installed.</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >Usually, this module is automatically
-installed if checks are widely used in your country.</p></div><p >To verify that the <strong >Batch Deposit</strong> feature is installed, go to the
-<span class="menuselection">Configuration ‣ Settings</span> menu of the accounting application.
-Check the feature: <strong >Allow batch deposit</strong>.</p><img src="../../../_images/batch01.png" style="" class="img-responsive center-block"></section><section id="activate-the-feature-on-your-bank-accounts"><h3 >Activate the feature on your bank accounts</h3><p >Once you have installed this feature, Odoo automatically activate bank
-deposits on your main bank accounts.</p><p >To control which bank account can do batch deposit and which can not, go
-to the journal that you defined to pay your checks, usually called
-‘Checks’ or ‘Bank’ (see <a href="../../receivables/customer_payments/check.html" class="internal reference"><span class="doc">How to register customer payments by checks?</span></a>,
-in the Accounting apps, <span class="menuselection">Configuration ‣ Accounting ‣ Journals</span>.</p><p >In <strong >Advanced Settings</strong> tab, in section <strong >Miscellaneous</strong>, set Debit Method to
-<strong >Batch Deposit</strong>.</p><img src="../../../_images/batch02.png" style="" class="img-responsive center-block"><p >If you check <strong >Batch Deposit</strong> in your debit method field, it means that
-payments created using this Journal (called Payment method when you want
-to make or receive a payment) will be applicable for the creation of
-Batch Deposits afterwards.</p></section><section id="from-checks-received-to-the-bank"><h2 >From checks received to the bank</h2></section><section id="receive-customer-checks"><h3 >Receive customer checks</h3><p >Once your checks are received, record them on the bank account on
-which you plan to deposit them. Once you select the bank account (or
-check journal if you configured Odoo that way), Odoo proposes you to use
-a batch deposit. Select this option if you plan to deposit the check to
-your bank.</p><img src="../../../_images/batch03.png" style="" class="img-responsive center-block"><p >In the memo field, you can set the reference of the check.</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >payments can be registered from the menu <span class="menuselection">Sales ‣ Payments</span>,
-or directly on the related invoice, using the <strong >Register Payment</strong> button.</p></div></section><section id="prepare-a-batch-deposit"><h3 >Prepare a batch deposit</h3><p >From the Accounting application, go to the menu <span class="menuselection">Sales ‣ Batch Deposit</span>,
-and create a new <strong >Batch Deposit</strong>.</p><img src="../../../_images/batch04.png" style="" class="img-responsive center-block"><p >Select the bank, then select the payments (checks) you want to add in
-this deposit. By default, Odoo proposes you all the checks that have not
-been deposited yet. That way you can verify that you do not forget or
-lost a check.</p><img src="../../../_images/batch05.png" style="" class="img-responsive center-block"><p >You can then print the batch deposit, which will be very useful
-to prepare the deposit slip that the bank usually requires to complete.</p></section><section id="reconciling-the-deposit-with-the-bank-statement"><h3 >Reconciling the Deposit with the Bank Statement</h3><p >When you process the bank statement reconciliation you will see the
-deposit ticket number referenced in the statement. When the reconciliation
-process is run, the user will be able to select the batch deposit that
-matches with the bank statement line.</p><img src="../../../_images/batch06.png" style="" class="img-responsive center-block"><p >If you select a batch deposit, Odoo will automatically fill all the
-checks contained in this deposit for the matching. (2 checks were in
-the batch deposit in the example below)</p><img src="../../../_images/batch07.png" style="" class="img-responsive center-block"></section><section id="troubleshooting"><h2 >Troubleshooting</h2></section><section id="i-don-t-see-the-batch-deposit-link-on-bank-statements"><h3 >I don’t see the batch deposit link on bank statements?</h3><p >If you don’t have a batch deposit link in your bank statement, there
-could be two reasons:</p><ul ><li >After having installed the batch deposit features you need to reload
-the page so that the browser is aware of this new feature. Just
-click the reload button of your browser.</li><li >You do not have a batch deposit created for this bank account.</li></ul></section><section id="what-happens-if-a-check-was-refused"><h3 >What happens if a check was refused?</h3><p >If you have a smaller amount in your bank statement than the actual
-amount in your batch deposit, it probably means that one of your check
-has been refused.</p><p >In this case click on the line related to this check to remove it from
-the bank statement matching.</p></section>
+  <section id="how-to-manage-batch-deposits-of-checks"><p >Когда группа вашей компании получает чеки от клиентов, они часто группой размещают эти деньги на их банковский счет. Поскольку эти деньги были получены в физической форме, кто-то в вашей компании должен вручную принести чеки в банк.</p><p >Банк попросит предоставить депозитный билет (также называется депозитарная расписка), который должен быть заполнен, с учетом деталей чеков или наличных, подлежащих включению в операции.</p><p >В выписке с банковского счета будет отображаться общая сумма депозита и ссылки на депозитный билет, а не отдельные чеки.</p><p >Odoo помогает вам подготовить и распечатать свои депозитные билеты, а потом с легкостью согласовать их с банковской выпиской.</p></section><section id="configuration"><h2 >Настройка</h2></section><section id="install-the-batch-deposit-feature"><h3 >Установите функцию пакетного депозита</h3><p >Чтобы использовать функцию пакетного депозита, вам нужно установить модуль ** Пакетный депозит [UNKNOWN NODE problematic].</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Обычно этот модуль автоматически устанавливается, если чеки широко используются в вашей стране.</p></div><p >Чтобы проверить, установлен функцию ** Пакетный депозит [UNKNOWN NODE problematic], перейдите в меню: menuselection: [UNKNOWN NODE title_reference] приложении Бухучет. проверьте функцию: ** Разрешить пакетный депозит [UNKNOWN NODE problematic].</p><img src="../../../_images/batch01.png" style="" class="img-responsive center-block"></section><section id="activate-the-feature-on-your-bank-accounts"><h3 >Включите эту функцию на своих банковских счетах</h3><p >После того, как вы установили эту функцию, Odoo автоматически активирует банковские депозиты на ваших основных банковских счетах.</p><p >Чтобы контролировать, банковский счет может осуществлять депозит, а какой не может, перейдите в журнал, который вы определили, чтобы оплачивать свои чеки, которые обычно называют &amp;quot;Чеки&amp;quot; или &amp;quot;Банк&amp;quot; (смотрите: doc: [UNKNOWN NODE title_reference], в приложении Бухучет,: menuselection: [UNKNOWN NODE title_reference].</p><p >В разделе ** Расширенные настройки [UNKNOWN NODE problematic], раздел ** Разное [UNKNOWN NODE problematic], установите метод дебетования ** Пакетный депозит [UNKNOWN NODE problematic].</p><img src="../../../_images/batch02.png" style="" class="img-responsive center-block"><p >Если вы проверяете ** Пакетный депозит ** в поле вашего метода дебету, это означает, что платежи, созданные с помощью этого журнала (который называется Метод платежа, когда вы хотите осуществить или получить платеж), будет применяться для создания пакетных депозитов позже.</p></section><section id="from-checks-received-to-the-bank"><h2 >С чеков, полученных в банк</h2></section><section id="receive-customer-checks"><h3 >Получить чеки клиентов</h3><p >После того, как вы получите чеки, запишите их на банковский счет, на который вы планируете их внести. Выбрав банковский счет (или чековый журнал, если вы настроили Odoo таким образом), Odoo предлагает использовать пакетный депозит. Выберите этот вариант, если планируете сдать чек в свой банк.</p><img src="../../../_images/batch03.png" style="" class="img-responsive center-block"><p >В поле заметки можно установить референс чеке.</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >платежи могут быть зарегистрированы в меню: menuselection: [UNKNOWN NODE title_reference], или непосредственно на соответствующий счет-фактуру, используя кнопку ** Регистрация платежа [UNKNOWN NODE problematic].</p></div></section><section id="prepare-a-batch-deposit"><h3 >Подготовить пакетный депозит</h3><p >Из программы бухучета перейдите к меню: menuselection: [UNKNOWN NODE title_reference], и создайте новый ** Пакетный депозит [UNKNOWN NODE problematic].</p><img src="../../../_images/batch04.png" style="" class="img-responsive center-block"><p >Выберите банк выберите платежи (чеки), которые нужно добавить в этот депозит. По умолчанию Odoo предлагает все чеки, которые еще не были сданы на хранение. Таким образом вы сможете убедиться, что вы не забыли или потеряли чек.</p><img src="../../../_images/batch05.png" style="" class="img-responsive center-block"><p >Затем вы можете напечатать пакетный депозит, который будет очень полезным для подготовки депозитной расписки, которую обычно требует банк.</p></section><section id="reconciling-the-deposit-with-the-bank-statement"><h3 >Согласование депозита с банковской выпиской</h3><p >При обработке выписки с банковского счета вы увидите номер заявки на депозит, указанный в выписке. Когда процесс согласования выполняется, пользователь сможет выбирать депозит, который отвечает банковской выписке.</p><img src="../../../_images/batch06.png" style="" class="img-responsive center-block"><p >Если вы выберете пакетный депозит, Odoo автоматически заполнит все чеки, содержащиеся в этом депозите для сопоставления. (2 чеки были в пакетном депозите в примере ниже)</p><img src="../../../_images/batch07.png" style="" class="img-responsive center-block"></section><section id="troubleshooting"><h2 >Решение проблем</h2></section><section id="i-don-t-see-the-batch-deposit-link-on-bank-statements"><h3 >Я не вижу ссылки пакетного депозита на банковских выписках?</h3><p >Если в банковской выписке нет ссылки на пакетный депозит, это может иметь две причины:</p><ul ><li >После установки функции пакетного депозита вам нужно перезагрузить страницу, чтобы браузер знал об этой новой функции. Просто нажмите кнопку перезагрузки браузера.</li><li >В вас нет пакетного депозита, созданного для этого банковского счета.</li></ul></section><section id="what-happens-if-a-check-was-refused"><h3 >Что произойдет, если чек был отклонен?</h3><p >Если вы меньшую сумму в банковской выписке, чем фактическая сумма в вашем пакетном депозите, это, вероятно, означает, что один из ваших чеков было отклонено.</p><p >В этом случае нажмите на строку, связанный с этим чеком, чтобы исключить его из сопоставления банковских выписок.</p></section>
 
           </article>
         </div>

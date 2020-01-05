@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>How to sell accessories and optional products (cross-selling) &#8212; Odoo 13.0 documentation</title>
+    <title>Как продавать аксессуары и функциональные товары (перекрестный продажа) &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
     <script type="text/javascript" src="../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../_static/doc.js"></script>
     <script type="text/javascript" src="../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/ecommerce/maximizing_revenue/cross_selling.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/ecommerce/maximizing_revenue/cross_selling.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/ecommerce/maximizing_revenue/cross_selling.html" />
+    <link rel="canonical" href="/master/ru/ecommerce/maximizing_revenue/cross_selling.html" />
   
-    <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="How to enable comments &amp; rating" href="reviews.html" />
-    <link rel="prev" title="How to sell pricier alternative products (upselling)" href="upselling.html" /> 
+    <link rel="index" title="Алфавитный указатель" href="../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../search.html" />
+    <link rel="next" title="Как включить комментарии и рейтинг в электронной коммерции" href="reviews.html" />
+    <link rel="prev" title="Как продавать альтернативные товары (допродажа)" href="upselling.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -205,7 +209,7 @@
             
         
     
-    <li class="active"><a href="#">How to sell accessories and optional products (cross-selling)</a></li>
+    <li class="active"><a href="#">Как продавать аксессуары и функциональные товары (перекрестный продажа)</a></li>
 
               
           </ol>
@@ -221,12 +225,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/ecommerce/maximizing_revenue/cross_selling.html">English</a></li>
+        
+            <li><a href="/13.0/uk/ecommerce/maximizing_revenue/cross_selling.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -253,6 +272,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -262,7 +283,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> How to sell accessories and optional products (cross-selling) </h1>
+        <h1> Как продавать аксессуары и функциональные товары (перекрестный продажа) </h1>
       </div>
     </figure>
     
@@ -275,7 +296,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#accessory-products-when-checking-out" class="ripple internal reference">Accessory products when checking out</a></li><li class="list-group-item"><a href="#optional-products-when-adding-to-cart" class="ripple internal reference">Optional products when adding to cart</a></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#accessory-products-when-checking-out" class="ripple internal reference">Аксессуары при проверке</a></li><li class="list-group-item"><a href="#optional-products-when-adding-to-cart" class="ripple internal reference">Дополнительные товары при добавлении в корзину</a></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/ecommerce/maximizing_revenue/cross_selling.rst" class="gith-link">
                   Edit on GitHub
@@ -287,14 +308,7 @@
           <article class="doc-body  ">
             
             
-  <section id="how-to-sell-accessories-and-optional-products-cross-selling"><p >You sell computers. Why not stimulating your customers to buy a top-notch
-screen or an extra-warranty? That’s the goal of cross-selling functionalities:</p><ul ><li >Accessory products on checkout page,</li><li >Optional products on a new <em >Add to Cart</em> screen (not installed by default).</li></ul></section><section id="accessory-products-when-checking-out"><h2 >Accessory products when checking out</h2><p >Accessories (e.g. for computers: mouse, keyboard) show up when the customer
-reviews the cart before paying.</p><img src="../../_images/cross_sell_accessory_web.png" style="" class="img-responsive center-block"><p >Select accessories in the <em >Sales</em> tab of the product detail page.</p><img src="../../_images/cross_sell_accessory.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >There is an algorithm to figure out the best accessories to display in case
-several items are added to cart. If any item is the accessory of several products
-added to cart, it is most likely that it will be atop the list of suggested accessories.</p></div></section><section id="optional-products-when-adding-to-cart"><h2 >Optional products when adding to cart</h2><p >Optional products are directly related to the item added to cart (e.g. for computers:
-warranty, OS software, extra components). Whenever the main product is added to cart,
-such a new screen pops up as an extra step.</p><img src="../../_images/cross_sell_optional_web.png" style="" class="img-responsive center-block"><p >To publish optional products:</p><ul ><li >Install <em >eCommerce Optional Products</em> addon in <em >Apps</em> menu. Remove the default filter to
-search on addons as well, otherwise only main apps show up.</li></ul><img src="../../_images/cross_sell_optional_install.png" style="" class="img-responsive center-block"><ul ><li >Select optional items from the <em >Sales</em> tab of the product detail form.</li></ul><img src="../../_images/cross_sell_optional.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >The quantity of optional items added to cart is the same than the main item.</p></div></section>
+  <section id="how-to-sell-accessories-and-optional-products-cross-selling"><p >Вы продаете компьютеры. Почему бы не стимулировать своих клиентов покупать лучший экран или дополнительную гарантию? Это цель перекрестных продаж:</p><ul ><li >Аксессуары на странице оформления заказа,</li><li >Дополнительные товары на новом экране * Добавить в корзину * (не установлен по умолчанию).</li></ul></section><section id="accessory-products-when-checking-out"><h2 >Аксессуары при проверке</h2><p >Аксессуары (например, для компьютеров: мышь, клавиатура) появляются, когда пользователь просматривает корзину перед оплатой.</p><img src="../../_images/cross_sell_accessory_web.png" style="" class="img-responsive center-block"><p >Выберите аксессуары на вкладке * Продажи * на странице сведений о товаре.</p><img src="../../_images/cross_sell_accessory.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Существует алгоритм выявления лучших аксессуаров для отображения, если в корзину добавлено несколько элементов. Если любой элемент является аксессуаром нескольких товаров, добавленных в корзину, то, скорее всего, он будет вверху списка предложенных аксессуаров.</p></div></section><section id="optional-products-when-adding-to-cart"><h2 >Дополнительные товары при добавлении в корзину</h2><p >Необязательные товары напрямую связаны с элементом, добавленным в корзину (например, для компьютеров гарантия, программное обеспечение для ОS, дополнительные компоненты). Каждый раз, когда основной товар добавляется в корзину, такой новый экран появляется как дополнительный шаг.</p><img src="../../_images/cross_sell_optional_web.png" style="" class="img-responsive center-block"><p >Опубликовать дополнительные товары:</p><ul ><li >Установите * Дополнительные товары электронной коммерции * в меню * Приложения [UNKNOWN NODE problematic]. Удалите фильтр по умолчанию для поиска в аддонах, иначе появятся только основные модули.</li></ul><img src="../../_images/cross_sell_optional_install.png" style="" class="img-responsive center-block"><ul ><li >Выберите дополнительные элементы на вкладке * Продажи * формы товара.</li></ul><img src="../../_images/cross_sell_optional.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Количество дополнительных элементов, добавленных в корзину, совпадает с основным элементом.</p></div></section>
 
           </article>
         </div>

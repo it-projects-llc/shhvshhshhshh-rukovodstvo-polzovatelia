@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>Set routings on kit Bills of materials &#8212; Odoo 13.0 documentation</title>
+    <title>Set routings on kit Bills of materials &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/accounting.css" />
@@ -27,14 +27,18 @@
     <script type="text/javascript" src="../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
     <script type="text/javascript" src="../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../_static/doc.js"></script>
     <script type="text/javascript" src="../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/manufacturing/management/routing_kit_bom.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/manufacturing/management/routing_kit_bom.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/manufacturing/management/routing_kit_bom.html" />
+    <link rel="canonical" href="/master/ru/manufacturing/management/routing_kit_bom.html" />
   
-    <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="index" title="Алфавитный указатель" href="../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../search.html" />
     <link rel="next" title="Use the Master Production Schedule" href="use_mps.html" />
     <link rel="prev" title="Subcontract the manufacturing" href="subcontracting.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
@@ -194,7 +198,7 @@
         
             
                 
-                    <li><a href="../../manufacturing.html">Manufacturing</a></li>
+                    <li><a href="../../manufacturing.html">Производство</a></li>
                 
             
         
@@ -221,12 +225,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/manufacturing/management/routing_kit_bom.html">English</a></li>
+        
+            <li><a href="/13.0/uk/manufacturing/management/routing_kit_bom.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -253,6 +272,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -275,7 +296,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#finished-product-kit-component-have-the-same-routing" class="ripple internal reference">Finished Product &amp; Kit Component have the same Routing</a><ul ><li class="list-group-item"><a href="#create-bom-for-the-finished-product" class="ripple internal reference">Create BoM for the Finished Product</a></li><li class="list-group-item"><a href="#create-a-kit-bom-for-the-kit-component" class="ripple internal reference">Create a Kit BoM for the Kit Component</a></li><li class="list-group-item"><a href="#manufacturing-order" class="ripple internal reference">Manufacturing Order</a></li></ul></li><li class="list-group-item"><a href="#finished-product-kit-component-havent-the-same-routing" class="ripple internal reference">Finished Product &amp; Kit Component haven’t the same Routing</a><ul ><li class="list-group-item"><a href="#kit-consumption-set-on-finished-product-bom" class="ripple internal reference">Kit Consumption set on Finished Product BoM</a><ul ><li class="list-group-item"><a href="#id1" class="ripple internal reference">Create BoM for the Finished Product</a></li><li class="list-group-item"><a href="#id2" class="ripple internal reference">Create a Kit BoM for the Kit Component</a></li><li class="list-group-item"><a href="#id3" class="ripple internal reference">Manufacturing Order</a></li></ul></li><li class="list-group-item"><a href="#kit-consumption-set-on-kit-bom" class="ripple internal reference">Kit Consumption set on Kit BoM</a><ul ><li class="list-group-item"><a href="#id4" class="ripple internal reference">Create BoM for the Finished Product</a></li><li class="list-group-item"><a href="#id5" class="ripple internal reference">Create a Kit BoM for the Kit Component</a></li><li class="list-group-item"><a href="#id6" class="ripple internal reference">Manufacturing Order</a></li></ul></li></ul></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#finished-product-kit-component-have-the-same-routing" class="ripple internal reference">Finished Product &amp; Kit Component have the same Routing</a><ul ><li class="list-group-item"><a href="#create-bom-for-the-finished-product" class="ripple internal reference">Create BoM for the Finished Product</a></li><li class="list-group-item"><a href="#create-a-kit-bom-for-the-kit-component" class="ripple internal reference">Create a Kit BoM for the Kit Component</a></li><li class="list-group-item"><a href="#manufacturing-order" class="ripple internal reference">Производственная заявка</a></li></ul></li><li class="list-group-item"><a href="#finished-product-kit-component-havent-the-same-routing" class="ripple internal reference">Finished Product &amp; Kit Component haven’t the same Routing</a><ul ><li class="list-group-item"><a href="#kit-consumption-set-on-finished-product-bom" class="ripple internal reference">Kit Consumption set on Finished Product BoM</a><ul ><li class="list-group-item"><a href="#id1" class="ripple internal reference">Create BoM for the Finished Product</a></li><li class="list-group-item"><a href="#id2" class="ripple internal reference">Create a Kit BoM for the Kit Component</a></li><li class="list-group-item"><a href="#id3" class="ripple internal reference">Производственная заявка</a></li></ul></li><li class="list-group-item"><a href="#kit-consumption-set-on-kit-bom" class="ripple internal reference">Kit Consumption set on Kit BoM</a><ul ><li class="list-group-item"><a href="#id4" class="ripple internal reference">Create BoM for the Finished Product</a></li><li class="list-group-item"><a href="#id5" class="ripple internal reference">Create a Kit BoM for the Kit Component</a></li><li class="list-group-item"><a href="#id6" class="ripple internal reference">Производственная заявка</a></li></ul></li></ul></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/manufacturing/management/routing_kit_bom.rst" class="gith-link">
                   Edit on GitHub
@@ -296,7 +317,7 @@ configurations.</p></section><section id="finished-product-kit-component-have-th
 component. Set a routing on your BoM, for example, <em >Assemble
 Furniture</em>.</p><img src="../../_images/routing_kit_bom_01.png" style="" class="img-responsive center-block"></section><section id="create-a-kit-bom-for-the-kit-component"><h3 >Create a Kit BoM for the Kit Component</h3><p >Update the kit component to define its BoM. Make sure that the routing
 which is set on this BoM is the same one than on the Finished Product.</p><img src="../../_images/routing_kit_bom_02.png" style="" class="img-responsive center-block"><p >You can define the operations in which the kit components are used
-directly in the BoM of the kit.</p></section><section id="manufacturing-order"><h3 >Manufacturing Order</h3><p >In the list of components, the kit is split. Two work orders are created
+directly in the BoM of the kit.</p></section><section id="manufacturing-order"><h3 >Производственная заявка</h3><p >In the list of components, the kit is split. Two work orders are created
 as we have two operations defined in the <em >Assemble Furniture</em> routing.
 The components of the kits are well consumed in the operations defined
 in the kit BoM.</p><img src="../../_images/routing_kit_bom_03.png" style="" class="img-responsive center-block"><img src="../../_images/routing_kit_bom_04.png" style="" class="img-responsive center-block"><img src="../../_images/routing_kit_bom_05.png" style="" class="img-responsive center-block"></section><section id="finished-product-kit-component-havent-the-same-routing"><h2 >Finished Product &amp; Kit Component haven’t the same Routing</h2></section><section id="kit-consumption-set-on-finished-product-bom"><h3 >Kit Consumption set on Finished Product BoM</h3></section><section id="id1"><h4 >Create BoM for the Finished Product</h4><p >Create a manufactured BoM for the finished product which includes a kit
@@ -304,7 +325,7 @@ component. Set a routing on your BoM, for example, <em >Assemble
 Furniture</em>.</p><img src="../../_images/routing_kit_bom_01.png" style="" class="img-responsive center-block"></section><section id="id2"><h4 >Create a Kit BoM for the Kit Component</h4><p >Update the kit component to define its BoM. In this use case, the
 routing which is set on this Kit BoM is different than the one of the
 Finished Product. Specify the operations at which the kit components are
-consumed in this BoM.</p><img src="../../_images/routing_kit_bom_06.png" style="" class="img-responsive center-block"></section><section id="id3"><h4 >Manufacturing Order</h4><p >When the manufacturing order is created for the Manufactured product,
+consumed in this BoM.</p><img src="../../_images/routing_kit_bom_06.png" style="" class="img-responsive center-block"></section><section id="id3"><h4 >Производственная заявка</h4><p >When the manufacturing order is created for the Manufactured product,
 the kit is split among its components. When the manufacturing order is
 planned, three work orders are created in our case, one coming from the
 routing of the manufactured products, the two other ones coming from the
@@ -312,7 +333,7 @@ routing of the kit BoM.</p><img src="../../_images/routing_kit_bom_07.png" style
 component. Set a routing on your BoM, for example, <em >Assemble
 Furniture</em>. Precise the consumption of the components on this BoM.</p><img src="../../_images/routing_kit_bom_10.png" style="" class="img-responsive center-block"></section><section id="id5"><h4 >Create a Kit BoM for the Kit Component</h4><p >Update the kit component to define its BoM. In this use case, the
 routing which is set on this Kit BoM is different than the one of the
-Finished Product.</p><img src="../../_images/routing_kit_bom_11.png" style="" class="img-responsive center-block"></section><section id="id6"><h4 >Manufacturing Order</h4><p >When the manufacturing order is created for the Manufactured product,
+Finished Product.</p><img src="../../_images/routing_kit_bom_11.png" style="" class="img-responsive center-block"></section><section id="id6"><h4 >Производственная заявка</h4><p >When the manufacturing order is created for the Manufactured product,
 the kit is split among its components. When the manufacturing order is
 planned, three work orders are created in our case, one coming from the
 routing of the manufactured products, the two other ones coming from the

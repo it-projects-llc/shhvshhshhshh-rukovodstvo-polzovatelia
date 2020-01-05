@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>How to allow users to sign in with their Google account &#8212; Odoo 13.0 documentation</title>
+    <title>Как разрешить пользователям входить с помощью аккаунта Google &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
     <script type="text/javascript" src="../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../_static/doc.js"></script>
     <script type="text/javascript" src="../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/general/auth/google.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/general/auth/google.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/general/auth/google.html" />
+    <link rel="canonical" href="/master/ru/general/auth/google.html" />
   
-    <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="index" title="Алфавитный указатель" href="../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../search.html" />
     <link rel="next" title="OAuth" href="azure.html" />
-    <link rel="prev" title="Authentication" href="../auth.html" /> 
+    <link rel="prev" title="Авторизация" href="../auth.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -194,7 +198,7 @@
         
             
                 
-                    <li><a href="../../general.html">General</a></li>
+                    <li><a href="../../general.html">Общее</a></li>
                 
             
         
@@ -205,7 +209,7 @@
             
         
     
-    <li class="active"><a href="#">How to allow users to sign in with their Google account</a></li>
+    <li class="active"><a href="#">Как разрешить пользователям входить с помощью аккаунта Google</a></li>
 
               
           </ol>
@@ -221,12 +225,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/general/auth/google.html">English</a></li>
+        
+            <li><a href="/13.0/uk/general/auth/google.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -253,6 +272,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -262,7 +283,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> How to allow users to sign in with their Google account </h1>
+        <h1> Как разрешить пользователям входить с помощью аккаунта Google </h1>
       </div>
     </figure>
     
@@ -287,7 +308,7 @@
           <article class="doc-body  ">
             
             
-  <section id="how-to-allow-users-to-sign-in-with-their-google-account"><ul ><li >Connect to your Google account and go to <a href="https://console.developers.google.com/" class="external reference">https://console.developers.google.com/</a>.</li><li >Click on <strong >Create Project</strong> and enter the project name and other details.</li></ul><img src="../../_images/google01.png" style="" class="img-responsive center-block"><img src="../../_images/google02.png" style="" class="img-responsive center-block"><ul ><li >Click on <strong >Use Google APIs</strong></li></ul><img src="../../_images/google03.png" style="" class="img-responsive center-block"><ul ><li >On the left side menu, select the sub menu <strong >Credentials</strong> (from <strong >API Manager</strong>) then select <strong >OAuth consent screen</strong>.</li></ul><img src="../../_images/google04.png" style="" class="img-responsive center-block"><ul ><li >Fill in your address, email and the product name (for example odoo) and then save.</li></ul><img src="../../_images/google05.png" style="" class="img-responsive center-block"><ul ><li >Then click on <strong >Add Credentials</strong> and select the second option (OAuth 2.0 Client ID).</li></ul><img src="../../_images/google06.png" style="" class="img-responsive center-block"><img src="../../_images/google07.png" style="" class="img-responsive center-block"><ul ><li >Check that the application type is set on <strong >Web Application</strong>. Now configure the allowed pages on which you will be redirected.</li><li >To achieve this, complete the field <strong >Authorized redirect URIs</strong>. Copy paste the following link in the box: <a href="http://mydomain.odoo.com/auth_oauth/signin" class="external reference">http://mydomain.odoo.com/auth_oauth/signin</a>. Then click on <strong >Create</strong></li></ul><img src="../../_images/google08.png" style="" class="img-responsive center-block"><img src="../../_images/google09.png" style="" class="img-responsive center-block"><ul ><li >Once done, you receive two information (your Client ID and Client Secret). You have to insert your Client ID in the <strong >General Settings</strong>.</li></ul></section>
+  <section id="how-to-allow-users-to-sign-in-with-their-google-account"><ul ><li >Подключитесь к учетной записи Google и перейдите на страницу [UNKNOWN NODE problematic]<a href="https://console.developers.google.com/" class="external reference">https://console.developers.google.com/</a> &lt;<a href="https://console.developers.google.com/" class="external reference">https://console.developers.google.com/</a>&gt; [UNKNOWN NODE problematic]_.</li><li >Нажмите ** Создать проект ** и введите название проекта и другие детали.</li></ul><img src="../../_images/google01.png" style="" class="img-responsive center-block"><img src="../../_images/google02.png" style="" class="img-responsive center-block"><ul ><li >Нажмите ** Использовать Google API **</li></ul><img src="../../_images/google03.png" style="" class="img-responsive center-block"><ul ><li >В левой части меню выберите подменю ** Перечень ** (в ** Менеджер API [UNKNOWN NODE problematic]), затем выберите ** Экран согласия OAuth [UNKNOWN NODE problematic].</li></ul><img src="../../_images/google04.png" style="" class="img-responsive center-block"><ul ><li >Введите адрес, электронную почту и название товара (например, odoo), а затем сохраните.</li></ul><img src="../../_images/google05.png" style="" class="img-responsive center-block"><ul ><li >Нажмите ** Добавить полномочия ** и выберите второй вариант (OAuth 2.0 Client ID).</li></ul><img src="../../_images/google06.png" style="" class="img-responsive center-block"><img src="../../_images/google07.png" style="" class="img-responsive center-block"><ul ><li >Проверьте, установлен тип программы на ** Веб-приложение [UNKNOWN NODE problematic]. Теперь настройте разрешены страницы, на которые вас будет перенаправлен.</li><li >Для этого заполните поле ** Авторизованные URI перенаправления [UNKNOWN NODE problematic]. Скопируйте и вставьте следующую ссылку в поле: <a href="http://mydomain.odoo.com/auth_oauth/signin" class="external reference">http://mydomain.odoo.com/auth_oauth/signin</a>. Нажмите ** Создать [UNKNOWN NODE problematic].</li></ul><img src="../../_images/google08.png" style="" class="img-responsive center-block"><img src="../../_images/google09.png" style="" class="img-responsive center-block"><ul ><li >После этого вы получаете две информации (ваш ID клиента и Секретный ключ клиента). Вам нужно вставить свой ID клиента в ** Общих настройках [UNKNOWN NODE problematic].</li></ul></section>
 
           </article>
         </div>

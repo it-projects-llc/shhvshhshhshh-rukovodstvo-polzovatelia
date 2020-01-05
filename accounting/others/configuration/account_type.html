@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>What is an account type and how do I configure it? &#8212; Odoo 13.0 documentation</title>
+    <title>Что такое тип счета и как его настроить? &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../../_static/doc.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/accounting/others/configuration/account_type.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/accounting/others/configuration/account_type.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/accounting/others/configuration/account_type.html" />
+    <link rel="canonical" href="/master/ru/accounting/others/configuration/account_type.html" />
   
-    <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Manage Fiscal Years" href="fiscal_year.html" />
-    <link rel="prev" title="Configuration" href="../configuration.html" /> 
+    <link rel="index" title="Алфавитный указатель" href="../../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../../search.html" />
+    <link rel="next" title="Управление отчетным периодом" href="fiscal_year.html" />
+    <link rel="prev" title="Настройка" href="../configuration.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -194,7 +198,7 @@
         
             
                 
-                    <li><a href="../../../accounting.html">Accounting</a></li>
+                    <li><a href="../../../accounting.html">Бухгалтерский учёт</a></li>
                 
             
         
@@ -211,7 +215,7 @@
             
         
     
-    <li class="active"><a href="#">What is an account type and how do I configure it?</a></li>
+    <li class="active"><a href="#">Что такое тип счета и как его настроить?</a></li>
 
               
           </ol>
@@ -227,12 +231,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/accounting/others/configuration/account_type.html">English</a></li>
+        
+            <li><a href="/13.0/uk/accounting/others/configuration/account_type.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -259,6 +278,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -268,7 +289,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> What is an account type and how do I configure it? </h1>
+        <h1> Что такое тип счета и как его настроить? </h1>
       </div>
     </figure>
     
@@ -281,7 +302,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#what-is-an-account-type" class="ripple internal reference">What is an account type ?</a></li><li class="list-group-item"><a href="#which-are-the-account-types-in-odoo" class="ripple internal reference">Which are the account types in Odoo ?</a></li><li class="list-group-item"><a href="#how-do-i-configure-my-accounts" class="ripple internal reference">How do I configure my accounts?</a></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#what-is-an-account-type" class="ripple internal reference">Что такое тип счета?</a></li><li class="list-group-item"><a href="#which-are-the-account-types-in-odoo" class="ripple internal reference">Какие типы счетов является в Odoo?</a></li><li class="list-group-item"><a href="#how-do-i-configure-my-accounts" class="ripple internal reference">Как настроить мои счета?</a></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/accounting/others/configuration/account_type.rst" class="gith-link">
                   Edit on GitHub
@@ -293,18 +314,7 @@
           <article class="doc-body  ">
             
             
-  <section id="what-is-an-account-type-and-how-do-i-configure-it"></section><section id="what-is-an-account-type"><h2 >What is an account type ?</h2><p >An account type is a name or code given to an account that indicates the
-account’s purpose.</p><p >In Odoo, Account Types are used for information purpose, to generate
-country-specific legal reports, set the rules to close a fiscal year and
-generate opening entries.</p><p >Basically Account types categorize general account with some specific
-category according to its behaviour or purpose.</p></section><section id="which-are-the-account-types-in-odoo"><h2 >Which are the account types in Odoo ?</h2><p >Odoo covers all accounting types. Therefore, you cannot create new
-account types. Just pick the one related to your account.</p><table class="table"><thead ><tr ><th ><strong >List of account types</strong></th></tr></thead><tbody ><tr ><td >Receivable</td></tr><tr ><td >Payable</td></tr><tr ><td >Bank and Cash</td></tr><tr ><td >Current Assets</td></tr><tr ><td >Non-current Assets</td></tr><tr ><td >Prepayments</td></tr><tr ><td >Fixed Assets</td></tr><tr ><td >Current Liabilities</td></tr><tr ><td >Non-current Liabilities</td></tr><tr ><td >Equity</td></tr><tr ><td >Current Year Earnings</td></tr><tr ><td >Other Income</td></tr><tr ><td >Income</td></tr><tr ><td >Depreciation</td></tr><tr ><td >Expenses</td></tr><tr ><td >Direct Costs</td></tr></tbody></table></section><section id="how-do-i-configure-my-accounts"><h2 >How do I configure my accounts?</h2><p >Account types are automatically created when installing a chart of
-account. By default, Odoo provides a lot of chart of accounts, just
-install the one related to your country.</p><p >It will install generic accounts. But if it does not cover all your
-cases, you can create your own accounts too.</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >If you are a Saas User, your country chart of account is
-automatically installed.</p></div><p >To create a new accounts, go to the Accounting application. Open the
-menu <span class="menuselection">Adviser ‣ Chart of Accounts</span>, the click on the
-<strong >Create</strong> button.</p><img src="../../../_images/type01.png" style="" class="img-responsive center-block"><div class="code-fields"><div class="code-field"><div class="code-field-name">Type</div><div class="code-field-body"><div class="line-block"><div class="line">Account Type is used for information purpose, to generate country-specific legal reports, and set the rules to close a fiscal year and generate opening entries.</div></div></div></div><div class="code-field"><div class="code-field-name">Can Create Asset</div><div class="code-field-body"><div class="line-block"><div class="line">Technical field specifying if the account can generate asset depending on it’s type. It is used in the account form view.</div></div></div></div><div class="code-field"><div class="code-field-name">Asset Model</div><div class="code-field-body"><div class="line-block"><div class="line">If this is selected, an asset will be created automatically when Journal Items on this account are posted.</div></div></div></div><div class="code-field"><div class="code-field-name">Tags</div><div class="code-field-body"><div class="line-block"><div class="line">Optional tags you may want to assign for custom reporting</div></div></div></div><div class="code-field"><div class="code-field-name">Account Currency</div><div class="code-field-body"><div class="line-block"><div class="line">Forces all moves for this account to have this account currency.</div></div></div></div><div class="code-field"><div class="code-field-name">Internal Type</div><div class="code-field-body"><div class="line-block"><div class="line">The ‘Internal Type’ is used for features available on different types of accounts: liquidity type is for cash or bank accounts, payable/receivable is for vendor/customer accounts.</div></div></div></div><div class="code-field"><div class="code-field-name">Internal Group</div><div class="code-field-body"><div class="line-block"><div class="line">The ‘Internal Group’ is used to filter accounts based on the internal group set on the account type.</div></div></div></div><div class="code-field"><div class="code-field-name">Allow Reconciliation</div><div class="code-field-body"><div class="line-block"><div class="line">Check this box if this account allows invoices &amp; payments matching of journal items.</div></div></div></div></div><a href="https://demo.odoo.com?module=account.action_account_form" class="center-block reference btn-lg btn-primary external btn-block btn">View <em >Create Account</em> in our Online Demonstration</a></section>
+  <section id="what-is-an-account-type-and-how-do-i-configure-it"></section><section id="what-is-an-account-type"><h2 >Что такое тип счета?</h2><p >Тип счета - это название или код, предоставленный счета, указывающий на цель счета.</p><p >В Odoo типа счета используются для информационных целей, для создания юридических отчетов для конкретных стран, устанавливаются правила для закрытия отчетного периода и создания открытых записей.</p><p >В основном типа счета классифицируют счет в определенной категории в соответствии с его поведения или цели.</p></section><section id="which-are-the-account-types-in-odoo"><h2 >Какие типы счетов является в Odoo?</h2><p >Odoo охватывает все типы счетов. Поэтому вы не можете. Просто выберите тот тип, который касается вашего счета.</p><table class="table"><thead ><tr ><th >** Список типов счета **</th></tr></thead><tbody ><tr ><td >Дебиторская задолженность</td></tr><tr ><td >Кредиторская задолженность</td></tr><tr ><td >Банк и наличность</td></tr><tr ><td >Текущие Активы</td></tr><tr ><td >Внеоборотные Активы</td></tr><tr ><td >Авансовые платежи</td></tr><tr ><td >Основные Активы</td></tr><tr ><td >Текущие Обязательства</td></tr><tr ><td >Долгосрочные Обязательства</td></tr><tr ><td >Собственные средства</td></tr><tr ><td >Прибыль Текущего Года</td></tr><tr ><td >Другие доходы</td></tr><tr ><td >Доход</td></tr><tr ><td >Амортизация</td></tr><tr ><td >Расходы</td></tr><tr ><td >Прямые Затраты</td></tr></tbody></table></section><section id="how-do-i-configure-my-accounts"><h2 >Как настроить мои счета?</h2><p >Типы счетов автоматически создаются при установке плана счетов. По умолчанию Odoo предоставляет очень много планов счетов, просто установите тот, который связан с вашей страной.</p><p >Он будет устанавливать общие счета. Но если он не охватывает все ваши случаи, вы можете создать собственные счета.</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Если вы являетесь пользователем Saas, ваша страна автоматически устанавливает план счетов.</p></div><p >Чтобы создать новые счета, перейдите в программу Бухучета. Откройте меню: menuselection: [UNKNOWN NODE title_reference], нажмите кнопку ** Создать [UNKNOWN NODE problematic].</p><img src="../../../_images/type01.png" style="" class="img-responsive center-block"><div class="code-fields"><div class="code-field"><div class="code-field-name">Тип</div><div class="code-field-body"><div class="line-block"><div class="line">Тип счёта используется в информационных целях, при создании официальных отчётов для конкретной страны, определении правил закрытия финансового года и проводок открытия.</div></div></div></div><div class="code-field"><div class="code-field-name">Может создать актив</div><div class="code-field-body"><div class="line-block"><div class="line">Техническое поле с указанием, счет может генерировать актив в зависимости от его типа. Он используется в режиме просмотра формы счета.</div></div></div></div><div class="code-field"><div class="code-field-name">модель актива</div><div class="code-field-body"><div class="line-block"><div class="line">Если этот параметр, объект будет создан автоматически, когда будет опубликовано элементы журнала на этом аккаунте.</div></div></div></div><div class="code-field"><div class="code-field-name">Теги</div><div class="code-field-body"><div class="line-block"><div class="line">Дополнительные теги вы можете назначить для пользовательских отчетов</div></div></div></div><div class="code-field"><div class="code-field-name">Валюта счёта</div><div class="code-field-body"><div class="line-block"><div class="line">Все операции по этому счету принудительно будут иметь эту валюту.</div></div></div></div><div class="code-field"><div class="code-field-name">Внутренний тип</div><div class="code-field-body"><div class="line-block"><div class="line">«Внутренний тип» используется для функций, доступных на различных типах счетов: тип ликвидности для денежных средств или банковских счетов, получения/оплаты для бухгалтерских счетов поставщика/заказчика.</div></div></div></div><div class="code-field"><div class="code-field-name">Внутренняя группа</div><div class="code-field-body"><div class="line-block"><div class="line">&amp;quot;Внутренняя группа&amp;quot; используется для фильтрации счетов на основе внутреннего набора групп для типа счета.</div></div></div></div><div class="code-field"><div class="code-field-name">Разрешить сверку</div><div class="code-field-body"><div class="line-block"><div class="line">Установите этот флажок, если данный счёт допускает сверку позиций журнала со счетами-фактурами и оплатами.</div></div></div></div></div><a href="https://demo.odoo.com?module=account.action_account_form" class="center-block reference btn-lg btn-primary external btn-block btn">Посмотреть * Создать аккаунт * в нашей демо-версии онлайн</a></section>
 
           </article>
         </div>

@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>How to create new taxes &#8212; Odoo 13.0 documentation</title>
+    <title>Как создать новые налоги &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../../_static/doc.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/accounting/others/taxes/create.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/accounting/others/taxes/create.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/accounting/others/taxes/create.html" />
+    <link rel="canonical" href="/master/ru/accounting/others/taxes/create.html" />
   
-    <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="How to set default taxes" href="default_taxes.html" />
-    <link rel="prev" title="Taxes" href="../taxes.html" /> 
+    <link rel="index" title="Алфавитный указатель" href="../../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../../search.html" />
+    <link rel="next" title="Установление типовых налогов" href="default_taxes.html" />
+    <link rel="prev" title="Налоги" href="../taxes.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -194,7 +198,7 @@
         
             
                 
-                    <li><a href="../../../accounting.html">Accounting</a></li>
+                    <li><a href="../../../accounting.html">Бухгалтерский учёт</a></li>
                 
             
         
@@ -211,7 +215,7 @@
             
         
     
-    <li class="active"><a href="#">How to create new taxes</a></li>
+    <li class="active"><a href="#">Как создать новые налоги</a></li>
 
               
           </ol>
@@ -227,12 +231,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/accounting/others/taxes/create.html">English</a></li>
+        
+            <li><a href="/13.0/uk/accounting/others/taxes/create.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -259,6 +278,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -268,7 +289,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> How to create new taxes </h1>
+        <h1> Как создать новые налоги </h1>
       </div>
     </figure>
     
@@ -281,7 +302,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#advanced-configuration" class="ripple internal reference">Advanced configuration</a></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#advanced-configuration" class="ripple internal reference">расширенные настройки</a></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/accounting/others/taxes/create.rst" class="gith-link">
                   Edit on GitHub
@@ -293,24 +314,7 @@
           <article class="doc-body  ">
             
             
-  <section id="how-to-create-new-taxes"><p >Odoo’s tax engine is very flexible and support many different type of
-taxes: value added taxes (VAT), eco-taxes, federal/states/city taxes, retention,
-withholding taxes, etc. For most countries, your system is pre-configured with the
-right taxes.</p><p >This section details how you can define new taxes for specific use cases.</p><ul ><li >Go to <span class="menuselection">Accounting ‣ Configuration ‣ Taxes</span>. From this menu, you
-get all the taxes you can use: sales taxes and purchase taxes.</li></ul><img src="../../../_images/create01.png" style="" class="img-responsive center-block"><ul ><li >Choose a scope: Sales, Purchase or None (e.g. deprecated tax).</li><li ><p >Select a computation method:</p><ul ><li ><strong >Fixed</strong>: eco-taxes, etc.</li><li ><strong >Percentage of Price</strong>: most common (e.g. 15% sales tax)</li><li ><strong >Percentage of Price Tax Included</strong>: used in Brazil, etc.</li><li ><strong >Group of taxes</strong>: allows to have a compound tax</li></ul></li></ul><img src="../../../_images/create02.png" style="" class="img-responsive center-block"><ul ><li >If you use Odoo Accounting, set a tax account (i.e. where the tax journal item will be
-posted). This field is optional, if you keep it empty, Odoo posts
-the tax journal item in the income account.</li></ul><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >If you want to avoid using a tax, you can not delete it because the tax
-is probably used in several invoices. So, in order to avoid users to
-continue using this tax, you should set the field <em >Tax Scope</em> to <em >None</em>.</p></div><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >If you need more advanced tax mechanism, you can install the
-module <strong >account_tax_python</strong> and you will be able to define new taxes
-with Python code.</p></div></section><section id="advanced-configuration"><h2 >Advanced configuration</h2><ul ><li ><strong >Label on Invoices</strong>: a short text on how you want this tax to be
-printed on invoice line. For example, a tax named “15% on
-Services” can have the following label on invoice “15%”.</li><li ><strong >Tax Group</strong>: defines where this tax is summed in the invoice footer.
-All the tax belonging to the same tax group will be grouped on
-the invoice footer. Examples of tax group: VAT, Retention.</li><li ><strong >Include in Analytic Cost</strong>: the tax is counted as a cost and, thus,
-generate an analytic entry if your invoice uses analytic
-accounts.</li><li ><strong >Tags</strong>: are used for custom reports. Usually, you can keep this field
-empty.</li></ul><div role="alert" class="alert-go_to alert"><p class="alert-title">See also</p><ul ><li ><a href="application.html" class="internal alert-link reference"><span class="doc">How to adapt taxes to my customer status or localization</span></a></li><li ><a href="tax_included.html" class="internal alert-link reference"><span class="doc">How to set tax-included prices</span></a></li></ul></div></section>
+  <section id="how-to-create-new-taxes"><p >Налоговый двигатель Odoo очень гибкий и поддерживает много различных налогов: налоги на добавленную стоимость, экологические налоги, федеральные / штатные / городские налоги, содержание, уплата налогов и т. Д. Для большинства стран ваша система предварительно настроена на необходимые налоги.</p><p >В этом разделе описано, как можно определить новые налоги для конкретных случаев использования.</p><ul ><li >Перейдите к: menuselection: [UNKNOWN NODE title_reference]. В этом меню вы получаете все налоги, которые вы можете использовать: налоги на продажу и налоги на покупку.</li></ul><img src="../../../_images/create01.png" style="" class="img-responsive center-block"><ul ><li >Выберите область: продажа, покупки или ничего (например, устаревший налог).</li><li ><p >Выберите метод вычисления:</p><ul ><li >** Фиксированные [UNKNOWN NODE problematic]: экологические налоги и тому подобное.</li><li >** Процент от цены [UNKNOWN NODE problematic]: распространенные (например, 15% налога с продаж)</li><li >** Процент от цены, которая уже включает налог [UNKNOWN NODE problematic]: используется в Бразилии и др.</li><li >** Группа налогов [UNKNOWN NODE problematic]: позволяет иметь сложный налог</li></ul></li></ul><img src="../../../_images/create02.png" style="" class="img-responsive center-block"><ul ><li >Если вы используете Бухучет Odoo, установите налоговый учет (то есть, где будет размещен элемент налогового журнала). Это поле необязательно, если вы храните его пустым, Odoo публикует элемент налогового журнала во входном счета.</li></ul><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >Если вы хотите избежать использования налога, его нельзя удалить, поскольку налог, вероятно, используется в нескольких счетах-фактурах. Итак, чтобы избежать того, что пользователи продолжают пользоваться этим налогом, вам следует установить поле * Учет налогов * в * Нет [UNKNOWN NODE problematic].</p></div><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Если вам нужен более продвинутый налоговый механизм, вы можете установить модуль ** account_tax_python [UNKNOWN NODE problematic], и вы сможете определить новые налоги с помощью кода Python.</p></div></section><section id="advanced-configuration"><h2 >расширенные настройки</h2><ul ><li >** Метка на счетах-фактурах [UNKNOWN NODE problematic]: краткий текст о том, как вы хотите напечатать этот налог в строке счета-фактуры. Например, налог с названием &amp;quot;15% на услуги&amp;quot; может содержать такую метку в счете &amp;quot;15%&amp;quot;.</li><li >** Налоговая группа [UNKNOWN NODE problematic]: определяет, где этот налог суммируется в нижней части счета-фактуры. Все налоги, относящихся к одной налоговой группы, будут сгруппированы в нижней части счета-фактуры. Примеры налоговой группы: НДС, содержание.</li><li >** Включение в аналитическую стоимость [UNKNOWN NODE problematic]: налог рассчитывается как стоимость, и, таким образом, генерирует аналитический запись, если ваш счет-фактура использует аналитические счета.</li><li >** Теги [UNKNOWN NODE problematic]: используются для специальных отчетов. Обычно вы можете оставить это поле пустым.</li></ul><div role="alert" class="alert-go_to alert"><p class="alert-title">См.также</p><ul ><li ><a href="application.html" class="internal alert-link reference"><span class="doc">Как переключить налоги в соответствии со схемой налогообложения клиента или его местонахождение</span></a></li><li ><a href="tax_included.html" class="internal alert-link reference"><span class="doc">Как установить цены, которые уже включают налог</span></a></li></ul></div></section>
 
           </article>
         </div>

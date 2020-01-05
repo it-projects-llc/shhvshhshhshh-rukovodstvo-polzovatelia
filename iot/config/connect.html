@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>Connect an IoT Box to your database &#8212; Odoo 13.0 documentation</title>
+    <title>Подключение IoT Box к вашей базе данных &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
     <script type="text/javascript" src="../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../_static/doc.js"></script>
     <script type="text/javascript" src="../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/iot/config/connect.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/iot/config/connect.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/iot/config/connect.html" />
+    <link rel="canonical" href="/master/ru/iot/config/connect.html" />
   
-    <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Flashing your SD Card" href="flash_sdcard.html" />
-    <link rel="prev" title="Configuration" href="../config.html" /> 
+    <link rel="index" title="Алфавитный указатель" href="../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../search.html" />
+    <link rel="next" title="Запись вашей SD карточки" href="flash_sdcard.html" />
+    <link rel="prev" title="Настройка" href="../config.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -194,7 +198,7 @@
         
             
                 
-                    <li><a href="../../iot.html">Internet of Things (IoT)</a></li>
+                    <li><a href="../../iot.html">Интернет вещей (IoT)</a></li>
                 
             
         
@@ -205,7 +209,7 @@
             
         
     
-    <li class="active"><a href="#">Connect an IoT Box to your database</a></li>
+    <li class="active"><a href="#">Подключение IoT Box к вашей базе данных</a></li>
 
               
           </ol>
@@ -221,12 +225,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/iot/config/connect.html">English</a></li>
+        
+            <li><a href="/13.0/uk/iot/config/connect.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -253,6 +272,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -262,7 +283,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> Connect an IoT Box to your database </h1>
+        <h1> Подключение IoT Box к вашей базе данных </h1>
       </div>
     </figure>
     
@@ -275,7 +296,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#ethernet-connection" class="ripple internal reference">Ethernet Connection</a></li><li class="list-group-item"><a href="#wifi-connection" class="ripple internal reference">WiFi Connection</a></li><li class="list-group-item"><a href="#iot-box-schema" class="ripple internal reference">IoT Box Schema</a></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#ethernet-connection" class="ripple internal reference">подключение Ethernet</a></li><li class="list-group-item"><a href="#wifi-connection" class="ripple internal reference">Соединение с WiFi</a></li><li class="list-group-item"><a href="#iot-box-schema" class="ripple internal reference">Схема IoT Box</a></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/iot/config/connect.rst" class="gith-link">
                   Edit on GitHub
@@ -287,17 +308,7 @@
           <article class="doc-body  ">
             
             
-  <section id="connect-an-iot-box-to-your-database"><p >Install the Internet of Things (IoT) App on your Odoo Database.</p><img src="../../_images/connect01.png" style="" class="img-responsive center-block"><p >Go in the IoT App and click on Connect on the IoT Boxes page.</p><img src="../../_images/connect02.png" style="" class="img-responsive center-block"><p >Follow the steps to connect your IoT Box.</p><img src="../../_images/connect03.png" style="" class="img-responsive center-block"></section><section id="ethernet-connection"><h2 >Ethernet Connection</h2><ol ><li >Connect to the IoT Box all the devices that have to be connected with
-cables (ethernet, usb devices, etc.).</li><li >Power on the IoT Box.</li><li >Then click on the Scan button.</li></ol><img src="../../_images/connect04.png" style="" class="img-responsive center-block"></section><section id="wifi-connection"><h2 >WiFi Connection</h2><ol ><li >Power on the IoT Box</li><li >Copy the token</li></ol><img src="../../_images/connect05.png" style="" class="img-responsive center-block"><ol ><li >Connect to the IoT Box WiFi Network (make sure there is no ethernet
-cable plugged in your computer).</li></ol><img src="../../_images/connect06.png" style="" class="img-responsive center-block"><ol ><li >You will be redirected to the IoT Box Homepage (if it doesn’t work,
-connect to the IP address of the box). Give a name to your IoT Box (not
-required) and paste the token, then click on next.</li></ol><img src="../../_images/connect07.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >If you are on Runbot, do not forget to add the -all or -base in the
-token (e.g. this token
-<strong >http://375228-saas-11-5-iot-f3f920.runbot16.odoo.com|4957098401</strong>
-should become
-<strong >http://375228-saas-11-5-iot-f3f920-all.runbot16.odoo.com|4957098401</strong>).</p></div><ol ><li >Choose the WiFi network you want to connect with (enter the password
-if there is one) and click on Submit. Wait a few seconds before being
-redirected to your database.</li></ol><img src="../../_images/connect08.png" style="" class="img-responsive center-block"><p >You should now see the IoT Box.</p><img src="../../_images/connect09.png" style="" class="img-responsive center-block"></section><section id="iot-box-schema"><h2 >IoT Box Schema</h2><img src="../../_images/connect10.png" style="" class="img-responsive center-block"></section>
+  <section id="connect-an-iot-box-to-your-database"><p >Установите программу Интернет вещей (IoT) на базу данных Odoo.</p><img src="../../_images/connect01.png" style="" class="img-responsive center-block"><p >Зайдите в приложение IoT и нажмите на Подключить на странице IoT Boxes.</p><img src="../../_images/connect02.png" style="" class="img-responsive center-block"><p >Следуйте инструкциям по подключению IoT Box.</p><img src="../../_images/connect03.png" style="" class="img-responsive center-block"></section><section id="ethernet-connection"><h2 >подключение Ethernet</h2><ol ><li >Подключите к IoT Box все устройства, которые должны быть соединены кабелями (Ethernet, USB-устройства и т.д.).</li><li >Включите IoT Box.</li><li >Затем нажмите на кнопку Поиск.</li></ol><img src="../../_images/connect04.png" style="" class="img-responsive center-block"></section><section id="wifi-connection"><h2 >Соединение с WiFi</h2><ol ><li >Включите IoT Box.</li><li >Скопируйте токен</li></ol><img src="../../_images/connect05.png" style="" class="img-responsive center-block"><ol ><li >Подключите WiFi до IoT Box (убедитесь, что в компьютере не подключены кабель Ethernet).</li></ol><img src="../../_images/connect06.png" style="" class="img-responsive center-block"><ol ><li >Вы будете перенаправлены на главную страницу IoT Box (если она не работает, подключитесь к IP-адреса коробки). Дайте название вашему IoT Box (не обязательно) и вставьте токен, а затем нажмите кнопку Далее.</li></ol><img src="../../_images/connect07.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >Если вы на Runbot, не забудьте добавить -all или -base в токене (например, этот токен ** http: //375228-saas-11-5-iot-f3f920.runbot16.odoo.com | 4957098401 ** должен стать ** http: //375228-saas-11-5-iot-f3f920-all.runbot16.odoo.com | 4957098401 [UNKNOWN NODE problematic]).</p></div><ol ><li >Выберите сеть WiFi, которую вы хотите подключить (введите пароль, если таковой имеется) и нажмите кнопку Отправить. Подождите несколько секунд, прежде чем перенаправитися в базу данных.</li></ol><img src="../../_images/connect08.png" style="" class="img-responsive center-block"><p >Теперь вы можете видеть IoT Box.</p><img src="../../_images/connect09.png" style="" class="img-responsive center-block"></section><section id="iot-box-schema"><h2 >Схема IoT Box</h2><img src="../../_images/connect10.png" style="" class="img-responsive center-block"></section>
 
           </article>
         </div>

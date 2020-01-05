@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>Manage multiple sales teams &#8212; Odoo 13.0 documentation</title>
+    <title>Управление несколькими командами продажи &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
     <script type="text/javascript" src="../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../_static/doc.js"></script>
     <script type="text/javascript" src="../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/crm/pipeline/multi_sales_team.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/crm/pipeline/multi_sales_team.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/crm/pipeline/multi_sales_team.html" />
+    <link rel="canonical" href="/master/ru/crm/pipeline/multi_sales_team.html" />
   
-    <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Acquire leads" href="../acquire_leads.html" />
-    <link rel="prev" title="Manage lost opportunities" href="lost_opportunities.html" /> 
+    <link rel="index" title="Алфавитный указатель" href="../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../search.html" />
+    <link rel="next" title="получите лиды" href="../acquire_leads.html" />
+    <link rel="prev" title="Управление потерянными нагодами" href="lost_opportunities.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -205,7 +209,7 @@
             
         
     
-    <li class="active"><a href="#">Manage multiple sales teams</a></li>
+    <li class="active"><a href="#">Управление несколькими командами продажи</a></li>
 
               
           </ol>
@@ -221,12 +225,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/crm/pipeline/multi_sales_team.html">English</a></li>
+        
+            <li><a href="/13.0/uk/crm/pipeline/multi_sales_team.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -253,6 +272,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -262,7 +283,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> Manage multiple sales teams </h1>
+        <h1> Управление несколькими командами продажи </h1>
       </div>
     </figure>
     
@@ -275,7 +296,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#create-a-new-sales-channel" class="ripple internal reference">Create a new sales channel</a><ul ><li class="list-group-item"><a href="#add-members-to-your-sales-channel" class="ripple internal reference">Add members to your sales channel</a></li></ul></li><li class="list-group-item"><a href="#sales-channel-dashboard" class="ripple internal reference">Sales channel dashboard</a></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#create-a-new-sales-channel" class="ripple internal reference">Создайте новый канал продаж</a><ul ><li class="list-group-item"><a href="#add-members-to-your-sales-channel" class="ripple internal reference">Добавьте участников к своему канала продаж</a></li></ul></li><li class="list-group-item"><a href="#sales-channel-dashboard" class="ripple internal reference">Информационная панель канала продаж</a></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/crm/pipeline/multi_sales_team.rst" class="gith-link">
                   Edit on GitHub
@@ -287,17 +308,7 @@
           <article class="doc-body  ">
             
             
-  <section id="manage-multiple-sales-teams"><p >In Odoo, you can manage several sales teams, departments or channels
-with specific sales processes. To do so, we use the concept of <em >Sales
-Channel</em>.</p></section><section id="create-a-new-sales-channel"><h2 >Create a new sales channel</h2><p >To create a new <em >Sales Channel</em>, go to <span class="menuselection">Configuration ‣ Sales Channels</span>.</p><p >There you can set an email alias to it. Every message sent to that email
-address will create a lead/opportunity.</p><img src="../../_images/multi_sales_team01.png" style="" class="img-responsive center-block"></section><section id="add-members-to-your-sales-channel"><h3 >Add members to your sales channel</h3><p >You can add members to any channel; that way those members will see the
-pipeline structure of the sales channel when opening it. Any
-lead/opportunity assigned to them will link to the sales channel.
-Therefore, you can only be a member of one channel.</p><p >This will ease the process review of the team manager.</p><img src="../../_images/multi_sales_team02.png" style="" class="img-responsive center-block"><p >If you now filter on this specific channel in your pipeline, you will
-find all of its opportunities.</p><img src="../../_images/multi_sales_team03.png" style="" class="img-responsive center-block"></section><section id="sales-channel-dashboard"><h2 >Sales channel dashboard</h2><p >To see the operations and results of any sales channel at a glance, the
-sales manager also has access to the <em >Sales Channel Dashboard</em> under
-<em >Reporting</em>.</p><p >It is shared with the whole ecosystem so every revenue stream is
-included in it: Sales, eCommerce, PoS, etc.</p></section>
+  <section id="manage-multiple-sales-teams"><p >В Odoo вы можете управлять несколькими командами продаж, отделами или каналами с конкретными процессами продаж. Для этого мы используем концепцию * канала продаж [UNKNOWN NODE problematic].</p></section><section id="create-a-new-sales-channel"><h2 >Создайте новый канал продаж</h2><p >Чтобы создать новый * Канал Продаж * перейдите к: menuselection: [UNKNOWN NODE title_reference].</p><p >Здесь вы можете указать ему псевдоним электронной почты. Каждое сообщение, отправленное на этот адрес электронной почты, создаст лед / возможность.</p><img src="../../_images/multi_sales_team01.png" style="" class="img-responsive center-block"></section><section id="add-members-to-your-sales-channel"><h3 >Добавьте участников к своему канала продаж</h3><p >Вы можете добавить участников к любому каналу; таким образом, эти участники увидят конвейерную структуру канала продажи при его открытии. Любой лед / возможность, предназначенная им, будет ссылаться на канал продаж. Поэтому вы можете быть участником только одного канала.</p><p >Это облегчит процесс обзора менеджера команды.</p><img src="../../_images/multi_sales_team02.png" style="" class="img-responsive center-block"><p >Если вы сейчас отфильтрует этот конкретный канал в вашем конвейере, вы найдете все его возможности.</p><img src="../../_images/multi_sales_team03.png" style="" class="img-responsive center-block"></section><section id="sales-channel-dashboard"><h2 >Информационная панель канала продаж</h2><p >Чтобы увидеть операции и результаты любого канала продаж, мгновенный обзор менеджера по продажам также имеет доступ к информационной панели * канала продаж * в разделе * Отчетность [UNKNOWN NODE problematic].</p><p >Это делится со всей экосистемой, поэтому все доходы включают в себя: продажи, электронную коммерцию, точку продажи и тому подобное.</p></section>
 
           </article>
         </div>

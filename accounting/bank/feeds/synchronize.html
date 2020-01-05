@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>How to synchronize Odoo with your bank? &#8212; Odoo 13.0 documentation</title>
+    <title>Синхронизация Odoo с вашим банковским счетом? &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../../_static/doc.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/accounting/bank/feeds/synchronize.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/accounting/bank/feeds/synchronize.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/accounting/bank/feeds/synchronize.html" />
+    <link rel="canonical" href="/master/ru/accounting/bank/feeds/synchronize.html" />
   
-    <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Import OFX statement files" href="ofx.html" />
-    <link rel="prev" title="Bank Feeds" href="../feeds.html" /> 
+    <link rel="index" title="Алфавитный указатель" href="../../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../../search.html" />
+    <link rel="next" title="Импорт файлов операций OFX" href="ofx.html" />
+    <link rel="prev" title="Банковский канал" href="../feeds.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -194,7 +198,7 @@
         
             
                 
-                    <li><a href="../../../accounting.html">Accounting</a></li>
+                    <li><a href="../../../accounting.html">Бухгалтерский учёт</a></li>
                 
             
         
@@ -211,7 +215,7 @@
             
         
     
-    <li class="active"><a href="#">How to synchronize Odoo with your bank?</a></li>
+    <li class="active"><a href="#">Синхронизация Odoo с вашим банковским счетом?</a></li>
 
               
           </ol>
@@ -227,12 +231,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/accounting/bank/feeds/synchronize.html">English</a></li>
+        
+            <li><a href="/13.0/uk/accounting/bank/feeds/synchronize.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -259,6 +278,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -268,7 +289,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> How to synchronize Odoo with your bank? </h1>
+        <h1> Синхронизация Odoo с вашим банковским счетом? </h1>
       </div>
     </figure>
     
@@ -281,7 +302,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a><ul ><li class="list-group-item"><a href="#odoo-online-users" class="ripple internal reference">Odoo Online Users</a></li><li class="list-group-item"><a href="#odoo-enterprise-users" class="ripple internal reference">Odoo Enterprise Users</a></li></ul></li><li class="list-group-item"><a href="#sync-your-bank-feeds" class="ripple internal reference">Sync your bank feeds</a></li><li class="list-group-item"><a href="#faq" class="ripple internal reference">FAQ</a><ul ><li class="list-group-item"><a href="#the-synchronization-is-not-working-in-real-time-is-it-normal" class="ripple internal reference">The synchronization is not working in real time, is it normal?</a></li><li class="list-group-item"><a href="#is-the-yodlee-feature-included-in-my-contract" class="ripple internal reference">Is the Yodlee feature included in my contract?</a></li><li class="list-group-item"><a href="#some-banks-have-a-status-beta-what-does-it-mean" class="ripple internal reference">Some banks have a status “Beta”, what does it mean?</a></li><li class="list-group-item"><a href="#all-my-past-transactions-are-not-in-odoo-why" class="ripple internal reference">All my past transactions are not in Odoo, why?</a></li></ul></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Настройка</a><ul ><li class="list-group-item"><a href="#odoo-online-users" class="ripple internal reference">Онлайн пользователи Odoo</a></li><li class="list-group-item"><a href="#odoo-enterprise-users" class="ripple internal reference">Пользователи Odoo Enterprise</a></li></ul></li><li class="list-group-item"><a href="#sync-your-bank-feeds" class="ripple internal reference">Синхронизация свои банковские выписки</a></li><li class="list-group-item"><a href="#faq" class="ripple internal reference">FAQ</a><ul ><li class="list-group-item"><a href="#the-synchronization-is-not-working-in-real-time-is-it-normal" class="ripple internal reference">Синхронизация не работает в режиме реального времени, нормально?</a></li><li class="list-group-item"><a href="#is-the-yodlee-feature-included-in-my-contract" class="ripple internal reference">Включена функция Yodlee в вашем контракте?</a></li><li class="list-group-item"><a href="#some-banks-have-a-status-beta-what-does-it-mean" class="ripple internal reference">Некоторые банки имеют статус &amp;quot;Бета&amp;quot;, что это значит?</a></li><li class="list-group-item"><a href="#all-my-past-transactions-are-not-in-odoo-why" class="ripple internal reference">Все ваши прошлые операции не в Odoo, почему?</a></li></ul></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/accounting/bank/feeds/synchronize.rst" class="gith-link">
                   Edit on GitHub
@@ -293,35 +314,7 @@
           <article class="doc-body  ">
             
             
-  <section id="how-to-synchronize-odoo-with-your-bank"><p >Odoo is able to synchronize directly with your bank in order to get all
-bank statements imported automatically in Odoo every 4 hours. Before
-moving forward in this tutorial, you should check if your bank is
-supported. You can find it out from the <a href="https://www.odoo.com/page/accounting-features" class="external reference">Odoo Accounting Features</a></p><img src="../../../_images/synchronize01.png" style="" class="img-responsive center-block"><p >Search for your bank name in the above page. If your bank appears in the
-proposition, it means it is supported by Odoo. The countries which are
-fully supported (meaning more than 95% of the banks) include: United
-States, Canada, New Zealand, Austria. More than 30 countries are
-partially supported, including: Colombia, India, France, Spain, etc.</p><p >In order to connect with the banks, Odoo uses two web-services:</p><ul ><li >Plaid: for the main banks in the U.S.</li><li >Yodlee: for all other banks</li></ul></section><section id="configuration"><h2 >Configuration</h2></section><section id="odoo-online-users"><h3 >Odoo Online Users</h3><p >If you we support banks of your country, the bank integration feature
-should already been installed. If it’s not installed, you can manually
-install the module <strong >account_yodlee</strong>.</p></section><section id="odoo-enterprise-users"><h3 >Odoo Enterprise Users</h3><p >If you plan to use a bank interface with your Odoo Enterprise
-subscription, you don’t have to do anything special, just make sure that your database is registered with your Odoo Enterprise contract.</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >you might want to check that you don’t have a firewall/proxy blocking the following addresses</p><ul ><li ><a href="https://onlinesync.odoo.com/" class="external reference alert-link">https://onlinesync.odoo.com/</a></li><li ><a href="https://api.plaid.com/" class="external reference alert-link">https://api.plaid.com/</a></li></ul></div></section><section id="sync-your-bank-feeds"><h2 >Sync your bank feeds</h2><p >Once the Plaid or Yodlee interface is installed, you can connect Odoo to
-your bank. To do that, click on <strong >More</strong> on the bank of your
-choice from the accounting dashboard. In the menu, click on Settings to
-configure this bank account.</p><img src="../../../_images/synchronize02.png" style="" class="img-responsive center-block"><p >In the bank form, from the Bank Account tab, set the bank feeds option
-to <strong >Bank Synchronization</strong>.</p><img src="../../../_images/synchronize03.png" style="" class="img-responsive center-block"><p >Once it’s done, go back to your accounting dashboard. You should see a
-<strong >Online Synchronization</strong> button on your bank card. Click on this button
-and fill in your bank credentials.</p><p >Once you filled in your credentials, your bank feeds will be
-synchronized every 4 hours.</p></section><section id="faq"><h2 >FAQ</h2></section><section id="the-synchronization-is-not-working-in-real-time-is-it-normal"><h3 >The synchronization is not working in real time, is it normal?</h3><p >Yodlee tries to get the data from a bank account once a day. However, this doesn’t
-always happen at the same time. And sometimes the process can fail. In that case,
-Yodlee retries one hour or two later. This is why in Odoo there is a cron that is
-running every 4 hours to fetch the information from Yodlee.</p><p >You can however force this synchronization by clicking on the button “Synchronize now”
-from the accounting dashboard.</p><p >Moreover, a transaction can be visible in your bank account but not being fetched
-by Yodlee. Indeed, the transaction in your bank account can have the status “pending”
-and not the status “posted”. In that case, Yodlee won’t import it, you will have to
-wait till the status changes.</p><p >What is important to remember is that Yodlee is not a service fetching transactions
-in real time. This is a service to facilitate the import of the bank statements to the database.</p></section><section id="is-the-yodlee-feature-included-in-my-contract"><h3 >Is the Yodlee feature included in my contract?</h3><ul ><li >Enterprise Version: Yes, if you have a valid enterprise contract linked to your database.</li><li >Community Version: No, this feature is not included in the Community Version.</li><li >Online Version: Yes, even if you benefit from the One App Free contract.</li></ul></section><section id="some-banks-have-a-status-beta-what-does-it-mean"><h3 >Some banks have a status “Beta”, what does it mean?</h3><p >This means that Yodlee is only currently working on developing the synchronization
-with this bank. The synchronization could already work or it may need a bit more time
-to have a 100% working synchronization. Unfortunately, there is not much to do about it
-except for being patient.</p></section><section id="all-my-past-transactions-are-not-in-odoo-why"><h3 >All my past transactions are not in Odoo, why?</h3><p >Yodlee only allows to fetch transactions up to 3 months in the past.</p></section>
+  <section id="how-to-synchronize-odoo-with-your-bank"><p >Odoo может синхронизироваться непосредственно с банковским счетом, чтобы все банковские выписки автоматически импортировались в Odoo каждые 4:00. Прежде чем перейти к этому руководству, следует проверить, поддерживается ваш банк. Вы можете узнать это из функций бухучета Odoo &lt;<a href="https://www.odoo.com/page/accounting-features" class="external reference">https://www.odoo.com/page/accounting-features</a>&gt; [UNKNOWN NODE problematic]__</p><img src="../../../_images/synchronize01.png" style="" class="img-responsive center-block"><p >Найдите название своего банка на приведенной выше странице. Если ваш банк появится в предложении, это означает, что Odoo его поддерживает. Страны, которые полностью поддерживаются (то есть более 95% банков), включают: Соединенные Штаты, Канада, Новая Зеландия, Австрия. Частично поддерживается более 30 стран, в том числе: Колумбия, Индия, Франция, Испания и др.</p><p >Для связи с банками, Odoo использует два веб-сервисы:</p><ul ><li >Plaid: для основных банков США</li><li >Yodlee: для всех остальных банков</li></ul></section><section id="configuration"><h2 >Настройка</h2></section><section id="odoo-online-users"><h3 >Онлайн пользователи Odoo</h3><p >Если вы поддерживаете банки своей страны, функция интеграции с банком уже была установлена. Если она не установлена, вы можете вручную установить модуль ** account_yodlee [UNKNOWN NODE problematic].</p></section><section id="odoo-enterprise-users"><h3 >Пользователи Odoo Enterprise</h3><p >Если вы планируете использовать интерфейс банка с подпиской Odoo Enterprise, не нужно делать ничего особенного, просто убедитесь, что ваша база данных зарегистрирована в вашем контракте с Odoo Enterprise.</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >вы можете проверить, нет ли сетевого экрана / прокси-сервера, который блокирует следующие адреса:</p><ul ><li ><a href="https://onlinesync.odoo.com/" class="external reference alert-link">https://onlinesync.odoo.com/</a></li><li ><a href="https://api.plaid.com/" class="external reference alert-link">https://api.plaid.com/</a></li></ul></div></section><section id="sync-your-bank-feeds"><h2 >Синхронизация свои банковские выписки</h2><p >После установки интерфейса Plaid или Yodlee вы можете подключить Odoo в свой банк. Для этого нажмите кнопку ** Дополнительно ** на выбранном вами банке на информационной панели учета. В меню нажмите Настройка, чтобы настроить этот банковский счет.</p><img src="../../../_images/synchronize02.png" style="" class="img-responsive center-block"><p >В банковской форме на вкладке Банковский счет установите опцию банковских выписок для ** Синхронизации банковской выписки [UNKNOWN NODE problematic].</p><img src="../../../_images/synchronize03.png" style="" class="img-responsive center-block"><p >После этого вернитесь на информационную панель бухучета. Вы должны увидеть кнопку ** Синхронизация Онлайн ** на вашей банковской карточке. Нажмите эту кнопку и введите свои банковские реквизиты.</p><p >Только вы заполните свои учетные данные, ваши каналы банка будут синхронизированы каждые 4:00.</p></section><section id="faq"><h2 >FAQ</h2></section><section id="the-synchronization-is-not-working-in-real-time-is-it-normal"><h3 >Синхронизация не работает в режиме реального времени, нормально?</h3><p >Yodlee пытается получить данные с банковского счета один раз в день. Однако это не всегда происходит одновременно. И иногда процесс может провалиться. В таком случае Yodlee повторит на один час или два позже. Вот почему в Odoo есть cron, который работает каждые 4:00, чтобы получить информацию от Yodlee.</p><p >Однако вы можете запустить синхронизацию, нажав кнопку &amp;quot;Синхронизировать сейчас&amp;quot; на панели приборов бухучета.</p><p >Более того, транзакция может быть заметна на вашем банковском счете, но Yodlee ее не может получить. Действительно, транзакция на вашем банковском счете может иметь статус &amp;quot;в ожидании&amp;quot;, а не статус &amp;quot;опубликовано&amp;quot;. В таком случае Yodlee не импортирует его, вам придется подождать, пока статус изменится.</p><p >Важно помнить, что Yodlee не является операцией по получению услуг в режиме реального времени. Это сервис для облегчения импорта банковских выписок в базу данных.</p></section><section id="is-the-yodlee-feature-included-in-my-contract"><h3 >Включена функция Yodlee в вашем контракте?</h3><ul ><li >Версия Enterprise: Да, если у вас есть действующий контракт предприятия, связанный с вашей базой данных.</li><li >Версия сообщества: Нет, эта функция не включена в версию сообщества.</li><li >Онлайн-версия: Да, даже если вы воспользуетесь контракту One App Free.</li></ul></section><section id="some-banks-have-a-status-beta-what-does-it-mean"><h3 >Некоторые банки имеют статус &amp;quot;Бета&amp;quot;, что это значит?</h3><p >Это означает, что Yodlee только сейчас работает над синхронизацией с этим банком. Синхронизация может уже работать, или для 100% рабочей синхронизации может потребоваться немного больше времени. К сожалению, необходимо немного терпения.</p></section><section id="all-my-past-transactions-are-not-in-odoo-why"><h3 >Все ваши прошлые операции не в Odoo, почему?</h3><p >Yodlee позволяет осуществлять транзакции только до 3 месяцев.</p></section>
 
           </article>
         </div>

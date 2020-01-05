@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>Integrating additional costs to products (landed costs) &#8212; Odoo 13.0 documentation</title>
+    <title>Integrating additional costs to products (landed costs) &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/accounting.css" />
@@ -27,15 +27,19 @@
     <script type="text/javascript" src="../../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../../_static/doc.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/inventory/management/reporting/integrating_landed_costs.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/inventory/management/reporting/integrating_landed_costs.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/inventory/management/reporting/integrating_landed_costs.html" />
+    <link rel="canonical" href="/master/ru/inventory/management/reporting/integrating_landed_costs.html" />
   
-    <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Shipping" href="../../shipping.html" />
+    <link rel="index" title="Алфавитный указатель" href="../../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../../search.html" />
+    <link rel="next" title="Доставка" href="../../shipping.html" />
     <link rel="prev" title="Using the inventory valuation" href="using_inventory_valuation.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
@@ -194,7 +198,7 @@
         
             
                 
-                    <li><a href="../../../inventory.html">Inventory</a></li>
+                    <li><a href="../../../inventory.html">Склад</a></li>
                 
             
         
@@ -227,12 +231,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/inventory/management/reporting/integrating_landed_costs.html">English</a></li>
+        
+            <li><a href="/13.0/uk/inventory/management/reporting/integrating_landed_costs.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -259,6 +278,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -281,7 +302,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a></li><li class="list-group-item"><a href="#add-costs-to-products" class="ripple internal reference">Add costs to products</a><ul ><li class="list-group-item"><a href="#receive-the-vendor-bill" class="ripple internal reference">Receive the vendor bill</a></li></ul></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Настройка</a></li><li class="list-group-item"><a href="#add-costs-to-products" class="ripple internal reference">Add costs to products</a><ul ><li class="list-group-item"><a href="#receive-the-vendor-bill" class="ripple internal reference">Receive the vendor bill</a></li></ul></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/inventory/management/reporting/integrating_landed_costs.rst" class="gith-link">
                   Edit on GitHub
@@ -295,18 +316,18 @@
             
   <section id="integrating-additional-costs-to-products-landed-costs"><p >The landed cost feature in Odoo allows to include additional costs
 (shipment, insurance, customs duties, etc.) into the cost of the
-product.</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >Landed costs can only be applied to products with a FIFO or AVCO costing
+product.</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Landed costs can only be applied to products with a FIFO or AVCO costing
 method and an automated inventory valuation (which requires the
-accounting application to be installed).</p></div></section><section id="configuration"><h2 >Configuration</h2><p >First, you need to go in <em >Inventory &gt; Configuration &gt; Settings</em> and
+accounting application to be installed).</p></div></section><section id="configuration"><h2 >Настройка</h2><p >First, you need to go in <em >Inventory &gt; Configuration &gt; Settings</em> and
 activate the landed costs feature. You can also determine the default
 journal in which the landed cost accounting entries will be recorded.</p><img src="../../../_images/integrating_landed_costs_01.png" style="" class="img-responsive center-block"></section><section id="add-costs-to-products"><h2 >Add costs to products</h2></section><section id="receive-the-vendor-bill"><h3 >Receive the vendor bill</h3><p >Let’s imagine I receive a bill from custom duties for a shipment. I’ll
-tick the box <em >Landed Costs</em> on the vendor bill line.</p><img src="../../../_images/integrating_landed_costs_02.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >The landed cost product must be of type service.</p></div><p >If this product is always a landed cost, you can also define it on the
+tick the box <em >Landed Costs</em> on the vendor bill line.</p><img src="../../../_images/integrating_landed_costs_02.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >The landed cost product must be of type service.</p></div><p >If this product is always a landed cost, you can also define it on the
 product and avoid having to tick the box on each vendor bill.</p><img src="../../../_images/integrating_landed_costs_03.png" style="" class="img-responsive center-block"><p >At the top of my vendor bill, I’ll see a button <em >create landed costs</em>.
 I click on this button and a landed cost is automatically created. I can
 now decide on which picking those additional costs should apply.</p><img src="../../../_images/integrating_landed_costs_04.png" style="" class="img-responsive center-block"><p >I can now click on <em >Compute</em> and go in the tab <em >Valuation
 Adjustments</em> to see the impact on my products costs. The last step is
 to validate the landed cost.</p><p >I can access the journal entry that has been created by the landed cost
-by clicking on the journal entry.</p><img src="../../../_images/integrating_landed_costs_05.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >You are not forced to start from the vendor bill, you can also go in
+by clicking on the journal entry.</p><img src="../../../_images/integrating_landed_costs_05.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >You are not forced to start from the vendor bill, you can also go in
 <em >Inventory &gt; Operations &gt; Landed Costs</em> and directly create the landed
 cost from there.</p></div></section>
 

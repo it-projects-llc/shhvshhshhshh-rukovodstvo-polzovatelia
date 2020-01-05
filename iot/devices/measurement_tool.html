@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>Connect a Measurement Tool &#8212; Odoo 13.0 documentation</title>
+    <title>Подключите инструмент измерения &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
     <script type="text/javascript" src="../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../_static/doc.js"></script>
     <script type="text/javascript" src="../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/iot/devices/measurement_tool.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/iot/devices/measurement_tool.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/iot/devices/measurement_tool.html" />
+    <link rel="canonical" href="/master/ru/iot/devices/measurement_tool.html" />
   
-    <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Connect a Camera" href="camera.html" />
-    <link rel="prev" title="Devices" href="../devices.html" /> 
+    <link rel="index" title="Алфавитный указатель" href="../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../search.html" />
+    <link rel="next" title="Подключите камеру" href="camera.html" />
+    <link rel="prev" title="Устройства" href="../devices.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -194,7 +198,7 @@
         
             
                 
-                    <li><a href="../../iot.html">Internet of Things (IoT)</a></li>
+                    <li><a href="../../iot.html">Интернет вещей (IoT)</a></li>
                 
             
         
@@ -205,7 +209,7 @@
             
         
     
-    <li class="active"><a href="#">Connect a Measurement Tool</a></li>
+    <li class="active"><a href="#">Подключите инструмент измерения</a></li>
 
               
           </ol>
@@ -221,12 +225,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/iot/devices/measurement_tool.html">English</a></li>
+        
+            <li><a href="/13.0/uk/iot/devices/measurement_tool.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -253,6 +272,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -262,7 +283,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> Connect a Measurement Tool </h1>
+        <h1> Подключите инструмент измерения </h1>
       </div>
     </figure>
     
@@ -275,7 +296,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#connect-in-usb" class="ripple internal reference">Connect in USB</a></li><li class="list-group-item"><a href="#connect-in-bluetooth" class="ripple internal reference">Connect in Bluetooth</a></li><li class="list-group-item"><a href="#link-a-measurement-tool-to-a-quality-control-point" class="ripple internal reference">Link a measurement tool to a quality control point</a><ul ><li class="list-group-item"><a href="#with-the-manufacturing-app" class="ripple internal reference">With the Manufacturing app</a></li></ul></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#connect-in-usb" class="ripple internal reference">Подключите через USB</a></li><li class="list-group-item"><a href="#connect-in-bluetooth" class="ripple internal reference">Подключитесь через Bluetooth</a></li><li class="list-group-item"><a href="#link-a-measurement-tool-to-a-quality-control-point" class="ripple internal reference">Соедините инструмент измерения пункту контроля качества</a><ul ><li class="list-group-item"><a href="#with-the-manufacturing-app" class="ripple internal reference">С модулем производство</a></li></ul></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/iot/devices/measurement_tool.rst" class="gith-link">
                   Edit on GitHub
@@ -287,21 +308,7 @@
           <article class="doc-body  ">
             
             
-  <section id="connect-a-measurement-tool"><p >With Odoo’s <em >IoT Box</em>, it is possible to connect measurement tools to
-your database. Find the list of supported devices here: <a href="https://www.odoo.com/page/iot-hardware" class="external reference">Supported
-devices</a>,.</p></section><section id="connect-in-usb"><h2 >Connect in USB</h2><p >To add a device connected by USB, just plug the USB cable in the <em >IoT
-Box</em>, restart the Box and the device should appear in your Odoo
-database.</p><img src="../../_images/measurement_tool_01.png" style="" class="img-responsive center-block"><p >If the device is not found, make sure the drivers have well been loaded
-on your IoT Box. For this, connect to the <em >IoT Box Homepage</em> and click
-on load drivers.</p><img src="../../_images/measurement_tool_02.png" style="" class="img-responsive center-block"></section><section id="connect-in-bluetooth"><h2 >Connect in Bluetooth</h2><p >Activate the Bluetooth on your device (see your device manual for
-further explanation) and the IoT Box will automatically try to connect
-to the device.</p><p >Here is an example of what it should look like:</p><img src="../../_images/measurement_tool_03.png" style="" class="img-responsive center-block"></section><section id="link-a-measurement-tool-to-a-quality-control-point"><h2 >Link a measurement tool to a quality control point</h2></section><section id="with-the-manufacturing-app"><h3 >With the Manufacturing app</h3><p >In your <em >Quality app</em>, you can setup a device on your <em >Quality
-Control Points</em>. To do so, go to the <em >Control Points</em> menu, under
-<em >Quality Control</em> and open the control point to which you want to
-assign a measurement tool.</p><p >Now, you can edit the control point and choose the device from the
-dropdown list. Then, hit save.</p><img src="../../_images/measurement_tool_04.png" style="" class="img-responsive center-block"><p >Now, your measurement tool is linked to the chosen <em >Control Point</em>.
-The value, which needs to be changed manually, will be automatically
-updated while the tool is being used.</p><img src="../../_images/measurement_tool_05.png" style="" class="img-responsive center-block"></section>
+  <section id="connect-a-measurement-tool"><p >С * IoT Box * Odoo возможно подключить инструменты измерения к вашей базе данных. Найдите список поддерживаемых устройств здесь: [UNKNOWN NODE problematic]Поддерживаемые устройства &lt;<a href="https://www.odoo.com/page/iot-hardware" class="external reference">https://www.odoo.com/page/iot-hardware</a>&gt; [UNKNOWN NODE problematic]__ ,.</p></section><section id="connect-in-usb"><h2 >Подключите через USB</h2><p >Чтобы добавить устройство, подключенное через USB, просто вставьте кабель USB в * IoT Box * перезагрузите Box и устройство должно появиться в вашей базе данных Odoo.</p><img src="../../_images/measurement_tool_01.png" style="" class="img-responsive center-block"><p >Если устройство найдено, убедитесь, что драйверы верно загружены на ваш IoT Box. Для этого установите подключение * Домашней страницей IoT Box * и нажмите на загрузку драйверов.</p><img src="../../_images/measurement_tool_02.png" style="" class="img-responsive center-block"></section><section id="connect-in-bluetooth"><h2 >Подключитесь через Bluetooth</h2><p >Активируйте Bluetooth на вашем устройстве (см. Руководство по устройству для дальнейшего объяснения) и IoT Box автоматически попытается подключиться к устройствам.</p><p >Вот пример, как это должно выглядеть:</p><img src="../../_images/measurement_tool_03.png" style="" class="img-responsive center-block"></section><section id="link-a-measurement-tool-to-a-quality-control-point"><h2 >Соедините инструмент измерения пункту контроля качества</h2></section><section id="with-the-manufacturing-app"><h3 >С модулем производство</h3><p >В вашем * модули Качества [UNKNOWN NODE problematic], вы можете установить устройство в ваши * Пункты контроля качества [UNKNOWN NODE problematic]. Чтобы сделать это, перейдите в меню * Пункты контроля * под * Контролем качества * и откройте пункт контроля, в который вы хотите назначить инструмент измерения.</p><p >Теперь вы можете редактировать пункт контроля и выбирать устройство из выпадающего списка. Сохраните настройки.</p><img src="../../_images/measurement_tool_04.png" style="" class="img-responsive center-block"><p >Теперь ваш инструмент измерения соединены с избранным * Пунктом контроля [UNKNOWN NODE problematic]. Значение, которое требует изменений вручную, автоматически обновлен, пока используется инструмент.</p><img src="../../_images/measurement_tool_05.png" style="" class="img-responsive center-block"></section>
 
           </article>
         </div>

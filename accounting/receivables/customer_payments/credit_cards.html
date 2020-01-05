@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>How to register credit card payments on invoices? &#8212; Odoo 13.0 documentation</title>
+    <title>Как зарегистрировать оплаты кредитной картой в счетах-фактурах? &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../../_static/doc.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/accounting/receivables/customer_payments/credit_cards.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/accounting/receivables/customer_payments/credit_cards.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/accounting/receivables/customer_payments/credit_cards.html" />
+    <link rel="canonical" href="/master/ru/accounting/receivables/customer_payments/credit_cards.html" />
   
-    <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="How to register customer payments by checks?" href="check.html" />
-    <link rel="prev" title="What are the different ways to record a payment?" href="recording.html" /> 
+    <link rel="index" title="Алфавитный указатель" href="../../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../../search.html" />
+    <link rel="next" title="Как зарегистрировать клиентские оплаты чеком?" href="check.html" />
+    <link rel="prev" title="Какие есть способы записи оплаты?" href="recording.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -194,7 +198,7 @@
         
             
                 
-                    <li><a href="../../../accounting.html">Accounting</a></li>
+                    <li><a href="../../../accounting.html">Бухгалтерский учёт</a></li>
                 
             
         
@@ -211,7 +215,7 @@
             
         
     
-    <li class="active"><a href="#">How to register credit card payments on invoices?</a></li>
+    <li class="active"><a href="#">Как зарегистрировать оплаты кредитной картой в счетах-фактурах?</a></li>
 
               
           </ol>
@@ -227,12 +231,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/accounting/receivables/customer_payments/credit_cards.html">English</a></li>
+        
+            <li><a href="/13.0/uk/accounting/receivables/customer_payments/credit_cards.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -259,6 +278,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -268,7 +289,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> How to register credit card payments on invoices? </h1>
+        <h1> Как зарегистрировать оплаты кредитной картой в счетах-фактурах? </h1>
       </div>
     </figure>
     
@@ -281,7 +302,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#option-1-undeposited-funds" class="ripple internal reference">Option 1: Undeposited Funds</a><ul ><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a></li><li class="list-group-item"><a href="#from-credit-card-payments-to-bank-statements" class="ripple internal reference">From credit card payments to bank statements</a></li></ul></li><li class="list-group-item"><a href="#option-2-one-journal-entry-only" class="ripple internal reference">Option 2: One journal entry only</a><ul ><li class="list-group-item"><a href="#id1" class="ripple internal reference">Configuration</a></li><li class="list-group-item"><a href="#id2" class="ripple internal reference">From credit card payments to bank statements</a></li></ul></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#option-1-undeposited-funds" class="ripple internal reference">Вариант 1: незачтенные средства</a><ul ><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Настройка</a></li><li class="list-group-item"><a href="#from-credit-card-payments-to-bank-statements" class="ripple internal reference">От платежей кредитной карты с банковскими выписками</a></li></ul></li><li class="list-group-item"><a href="#option-2-one-journal-entry-only" class="ripple internal reference">Вариант 2: только один журнал</a><ul ><li class="list-group-item"><a href="#id1" class="ripple internal reference">Настройка</a></li><li class="list-group-item"><a href="#id2" class="ripple internal reference">От платежей кредитной карты с банковскими выписками</a></li></ul></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/accounting/receivables/customer_payments/credit_cards.rst" class="gith-link">
                   Edit on GitHub
@@ -293,52 +314,7 @@
           <article class="doc-body  ">
             
             
-  <section id="how-to-register-credit-card-payments-on-invoices"><p >There are two ways to handle payments received by credit cards. Odoo
-support both approaches so that you can use the one that better fits
-your habits.</p><ol ><li ><strong >Undeposited Funds</strong> (mostly used in european countries): once you
-receive the credit card payment authorization, you record a
-payment by credit card on the invoice (using a Credit card
-journal and posted on the Undeposited Fund account). Then, once
-the credit card payments arrives in your bank account, move money
-from Undeposited Funds to your bank account.</li><li ><strong >One journal entry only</strong> (mostly used in the U.S.): once your
-receive the credit card payment, you record a payment on your
-bank, paid by credit card, without going through the Undeposited
-Funds. Once you process your bank statement, you do the matching
-with your bank feed and the credit card payment, without creating
-a dedicated journal entry .</li></ol><p >We recommend the first approach as it is more accurate (your bank
-account balance is accurate, taking into accounts credit cards that have
-not been cashed yet). Both approaches require the same effort.</p><p >If you use eCommerce and an automated payment gateway, you will only
-need to take care of the bank reconciliation part as paid invoice will
-be automatically recorded in the right journal. You will use the second
-approach.</p><p >Even if the first method is cleaner, Odoo support the second approach
-because some accountants are used to it (<em >QuickBooks</em> and <em >Peachtree</em>
-users).</p></section><section id="option-1-undeposited-funds"><h2 >Option 1: Undeposited Funds</h2></section><section id="configuration"><h3 >Configuration</h3><p >On the Accounting module, go to <span class="menuselection">Configuration ‣ Journals ‣ Create</span></p><p >Create a Journal called ‘Credit card payments’ with the following data:</p><ul ><li ><strong >Journal Name</strong>: Credit card</li><li ><strong >Default debit account</strong>: Credit cards</li><li ><strong >Default credit account</strong>: Credit cards</li></ul><p >The account type should be “Credit Card”. Once it’s done, don’t forget to set the “Credit cards” account as “Allow
-Reconciliation”.</p><img src="../../../_images/credit01.png" style="" class="img-responsive center-block"></section><section id="from-credit-card-payments-to-bank-statements"><h3 >From credit card payments to bank statements</h3><p >The first way to handle credit cards is to create a credit card journal.
-Thus, credit cards become a payment method in itself and you will record
-two transactions.</p><p >Once you receive a customer credit card payment, go to the related
-invoice and click on Register Payment. Fill in the information about the
-payment:</p><ul ><li ><strong >Payment method</strong>: Credit card</li><li ><strong >Memo</strong>: write the invoice reference</li></ul><img src="../../../_images/credit02.png" style="" class="img-responsive center-block"><p >This operation will produce the following journal entry:</p><table class="table"><thead ><tr ><th >Account</th><th >Statement Match</th><th >Debit</th><th >Credit</th></tr></thead><tbody ><tr ><td >Account Receivable</td><td ></td><td ></td><td >100.00</td></tr><tr ><td >Credit Cards</td><td ></td><td >100.00</td><td ></td></tr></tbody></table><p >The invoice is marked as paid as soon as you record the credit card
-payment.</p><p >Then, once you get the bank statements, you will match this statement
-with the credit card that is in the ‘Credit card’ account.</p><table class="table"><thead ><tr ><th >Account</th><th >Statement Match</th><th >Debit</th><th >Credit</th></tr></thead><tbody ><tr ><td >Credit cards</td><td >X</td><td ></td><td >100.00</td></tr><tr ><td >Bank</td><td ></td><td >100.00</td><td ></td></tr></tbody></table><p >If you use this approach to manage credit cards payments, you get the
-list of credit cards payments that have not been cashed in the “Credit
-card” account (accessible, for example, from the general ledger).</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >Both methods will produce the same data in your accounting at the end of the
-process. But, if you have credit cards that have not been cashed, this one
-is cleaner because those credit cards have not been reported yet on your bank
-account.</p></div></section><section id="option-2-one-journal-entry-only"><h2 >Option 2: One journal entry only</h2></section><section id="id1"><h3 >Configuration</h3><p >There is nothing to configure if you plan to manage your credit cards
-using this method.</p></section><section id="id2"><h3 >From credit card payments to bank statements</h3><p >Once you receive a customer credit card payment, go to the related
-invoice and click on Register Payment. Fill in the information about the
-payment:</p><ul ><li ><strong >Payment method</strong>: the bank that will be used for the deposit</li><li ><strong >Memo</strong>: write the credit card transaction number</li></ul><img src="../../../_images/credit03.png" style="" class="img-responsive center-block"><p >The invoice is marked as paid as soon as the credit card payment has
-been recorded. Once you receive the bank statements, you will do the
-matching with the statement and this actual payment (technically: point
-this payment and relate it to the statement line).</p><p >With this approach, you will get the following journal entry in your
-books:</p><table class="table"><thead ><tr ><th >Account</th><th >Statement Match</th><th >Debit</th><th >Credit</th></tr></thead><tbody ><tr ><td >Account Receivable</td><td >X</td><td ></td><td >100.00</td></tr><tr ><td >Bank</td><td ></td><td >100.00</td><td ></td></tr></tbody></table><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >You may also record the payment directly without going on the customer
-invoice, using the top menu <span class="menuselection">Sales ‣ Payments</span>. This method may be more
-convenient if you have a lot of credit cards to record in a batch but you
-will have to reconcile entries afterwards (matching payments with invoices).</p></div><p >If you use this approach to manage received credit cards, you can use
-the report “Bank Reconciliation Report” to verify which credit cards
-have been received or paid by the bank (this report is available from
-the “More” option from the Accounting dashboard on the related bank
-account).</p><img src="../../../_images/credit04.png" style="" class="img-responsive center-block"><div role="alert" class="alert-go_to alert"><p class="alert-title">See also</p><ul ><li ><a href="recording.html" class="internal alert-link reference"><span class="doc">What are the different ways to record a payment?</span></a></li><li ><a href="../../bank/feeds/paypal.html" class="internal alert-link reference"><span class="doc">How to synchronize your PayPal account with Odoo?</span></a></li><li ><a href="check.html" class="internal alert-link reference"><span class="doc">How to register customer payments by checks?</span></a></li><li ><a href="followup.html" class="internal alert-link reference"><span class="doc">Follow-up on invoices and get paid faster</span></a></li></ul></div></section>
+  <section id="how-to-register-credit-card-payments-on-invoices"><p >Есть два способа обработки платежей, оплаченных кредитными карточками. Odoo поддерживает оба подхода, чтобы вы могли использовать тот, который лучше соответствует вашим привычкам.</p><ol ><li >** Незасчитанные средства ** (чаще всего используются в европейских странах): после получения разрешения на оплату кредитной картой вы причисляете платеж с помощью кредитной карты в счете-фактуре (используя журнал кредитной карты и размещая на счету незачтенные средства). Затем, когда платежи кредитной карты поступают на ваш банковский счет, переместите деньги с незасчитанных средств на свой банковский счет.</li><li >** Только одна запись журнала ** (чаще всего используется в США) после того, как вы получите оплату с помощью кредитной карты, вы причисляете платеж в ваш банк, оплачивая кредитной картой, не переходя на незачтенные средства. Только вы обрабатываете выписку с банковского счета, вы выполняете соответствие с помощью банковского канала и платежа по кредитной карте, не создавая специальную публикацию журнала.</li></ol><p >Мы рекомендуем первый подход, поскольку он является более точным (баланс вашего банковского счета точный, учитывая кредитные карточки, которые еще не были начислены). Оба подхода требуют одинаковых усилий.</p><p >Если вы пользуетесь электронной коммерцией и автоматизированным шлюзом платежей, вам нужно будет лишь взять под контроль часть согласования банковских выписок, поскольку оплаченный счет-фактура будет автоматически записано в правильный журнал. Тогда вы будете использовать второй подход.</p><p >Даже если первый способ является более понятным, Odoo поддерживает второй подход, поскольку его используют некоторые бухгалтеры (пользователи * QuickBooks * и * Peachtree [UNKNOWN NODE problematic]).</p></section><section id="option-1-undeposited-funds"><h2 >Вариант 1: незачтенные средства</h2></section><section id="configuration"><h3 >Настройка</h3><p >В модуле Бухучет перейдите к: menuselection: [UNKNOWN NODE title_reference]</p><p >Создайте журнал под названием &amp;quot;Платежи по кредитной карте&amp;quot; с такими данными:</p><ul ><li >** Название журнала [UNKNOWN NODE problematic]: кредитная карта</li><li >** Дебетовый счет по умолчанию [UNKNOWN NODE problematic]: кредитные карточки</li><li >** Кредитный счет по умолчанию [UNKNOWN NODE problematic]: кредитные карточки</li></ul><p >Тип счета должно быть &amp;quot;Кредитная карта&amp;quot;. После этого не забывайте устанавливать счет &amp;quot;Кредитные карты&amp;quot; как &amp;quot;Разрешить согласования&amp;quot;.</p><img src="../../../_images/credit01.png" style="" class="img-responsive center-block"></section><section id="from-credit-card-payments-to-bank-statements"><h3 >От платежей кредитной карты с банковскими выписками</h3><p >Первым способом обработки кредитных карт является создание журнала кредитных карточек. Таким образом, кредитные карты становятся самостоятельным способом оплаты, а вы будете записывать две транзакции.</p><p >Получив платеж с помощью кредитной карты клиента, перейдите на соответствующий счет-фактуру и нажмите &amp;quot;Регистрация платежа&amp;quot;. Заполните информацию о платеже:</p><ul ><li >** Способ оплаты [UNKNOWN NODE problematic]: кредитная карта</li><li >** Назначение [UNKNOWN NODE problematic]: напишите референс счета-фактуры</li></ul><img src="../../../_images/credit02.png" style="" class="img-responsive center-block"><p >Эта операция выдаст следующую запись журнала:</p><table class="table"><thead ><tr ><th >Счёт</th><th >согласование выписки</th><th >Дебет</th><th >Кредит</th></tr></thead><tbody ><tr ><td >Дебиторская задолженность</td><td ></td><td ></td><td >100.00</td></tr><tr ><td >Кредитные карты</td><td ></td><td >100.00</td><td ></td></tr></tbody></table><p >Счет-фактура обозначается как оплачен, как только вы записываете платеж с помощью кредитной карты.</p><p >Затем, как только вы получите банковские выписки, вы согласовываете эту выписку по кредитной карте, которая находится на счете &amp;quot;Кредитная карта&amp;quot;.</p><table class="table"><thead ><tr ><th >Счёт</th><th >согласование выписки</th><th >Дебет</th><th >Кредит</th></tr></thead><tbody ><tr ><td >Кредитные карты</td><td >X</td><td ></td><td >100.00</td></tr><tr ><td >Банк</td><td ></td><td >100.00</td><td ></td></tr></tbody></table><p >Если вы используете этот подход для управления платежами по кредитным картам, вы получаете перечень платежей по кредитным картам, которые не были засчитаны в счете &amp;quot;Кредитная карта&amp;quot; (доступные, например, с главной книги).</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Оба метода дадут те же данные в вашем бухучета в конце процесса. Но если у вас есть кредитные карточки, которые не были выплачены наличными, это будет прозрачнее, так как на этих банковских счетах пока не сообщается об этих кредитные карточки.</p></div></section><section id="option-2-one-journal-entry-only"><h2 >Вариант 2: только один журнал</h2></section><section id="id1"><h3 >Настройка</h3><p >Нет ничего для настройки, если вы планируете управлять своими кредитными карточками с помощью этого метода.</p></section><section id="id2"><h3 >От платежей кредитной карты с банковскими выписками</h3><p >Получив платеж с помощью кредитной карты клиента, перейдите на соответствующий счет-фактуру и нажмите &amp;quot;Регистрация платежа&amp;quot;. Заполните информацию о платеже:</p><ul ><li >** Способ оплаты [UNKNOWN NODE problematic]: банк, который будет использоваться для депозита</li><li >** Назначение [UNKNOWN NODE problematic]: напишите номер транзакции кредитной карты</li></ul><img src="../../../_images/credit03.png" style="" class="img-responsive center-block"><p >Счет-фактура обозначается как оплачен, как только будет осуществлен платеж с помощью кредитной карты. Только вы получите банковские выписки, вы сделаете согласования с выпиской и этим фактическим платежом (технически: укажите этот платеж и свяжите его со строкой выписки).</p><p >С помощью этого подхода вы получите следующую запись журнала:</p><table class="table"><thead ><tr ><th >Счёт</th><th >согласование выписки</th><th >Дебет</th><th >Кредит</th></tr></thead><tbody ><tr ><td >Дебиторская задолженность</td><td >X</td><td ></td><td >100.00</td></tr><tr ><td >Банк</td><td ></td><td >100.00</td><td ></td></tr></tbody></table><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >Вы также можете непосредственно зарегистрировать платеж без счета-фактуры клиента, воспользовавшись главным меню: menuselection: [UNKNOWN NODE title_reference]. Этот метод может быть более удобным, если у вас есть много кредитных карточек для группового записи, но вам придется согласовать записи позже (соответствующие платежи со счетами-фактурами).</p></div><p >Если вы используете этот подход для управления полученными кредитными карточками, вы можете использовать отчет &amp;quot;Отчет о согласовании банковских выписок&amp;quot;, чтобы проверить, какие кредитные карточки были получены или оплачены банком (этот отчет доступен с опции &amp;quot;Дополнительно&amp;quot; на панели инструментов бухучета на соответствующий банковский счет).</p><img src="../../../_images/credit04.png" style="" class="img-responsive center-block"><div role="alert" class="alert-go_to alert"><p class="alert-title">См.также</p><ul ><li ><a href="recording.html" class="internal alert-link reference"><span class="doc">Какие есть способы записи оплаты?</span></a></li><li ><a href="../../bank/feeds/paypal.html" class="internal alert-link reference"><span class="doc">Как синхронизировать счет PayPal с Odoo</span></a></li><li ><a href="check.html" class="internal alert-link reference"><span class="doc">Как зарегистрировать клиентские оплаты чеком?</span></a></li><li ><a href="followup.html" class="internal alert-link reference"><span class="doc">Напоминайте о счетах и получайте оплату быстрее</span></a></li></ul></div></section>
 
           </article>
         </div>

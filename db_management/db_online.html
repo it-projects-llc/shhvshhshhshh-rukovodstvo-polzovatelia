@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>Online Database management &#8212; Odoo 13.0 documentation</title>
+    <title>Управления базами данных онлайн &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../_static/inventory.js"></script>
     <script type="text/javascript" src="../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
     <script type="text/javascript" src="../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../_static/doc.js"></script>
     <script type="text/javascript" src="../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/db_management/db_online.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/db_management/db_online.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/db_management/db_online.html" />
+    <link rel="canonical" href="/master/ru/db_management/db_online.html" />
   
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="On-premises Database management" href="db_premise.html" />
-    <link rel="prev" title="Users and Features" href="documentation.html" /> 
+    <link rel="index" title="Алфавитный указатель" href="../genindex.html" />
+    <link rel="search" title="Поиск" href="../search.html" />
+    <link rel="next" title="Управления базами данных на собственном сервере" href="db_premise.html" />
+    <link rel="prev" title="Пользователи и приложения" href="documentation.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -189,7 +193,7 @@
             <li><a href="../index.html">Документация пользователя</a></li>
         
     
-    <li class="active"><a href="#">Online Database management</a></li>
+    <li class="active"><a href="#">Управления базами данных онлайн</a></li>
 
               
           </ol>
@@ -205,12 +209,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/db_management/db_online.html">English</a></li>
+        
+            <li><a href="/13.0/uk/db_management/db_online.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -237,6 +256,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -248,7 +269,7 @@
     <figure class="card top has_banner">
       <span class="card-img" style="background-image: url('../_static/banners/db_online.jpg');"></span>
       <div class="container text-center">
-        <h1> Online Database management </h1>
+        <h1> Управления базами данных онлайн </h1>
       </div>
     </figure>
     
@@ -261,7 +282,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#upgrade" class="ripple internal reference">Upgrade</a></li><li class="list-group-item"><a href="#duplicating-a-database" class="ripple internal reference">Duplicating a database</a></li><li class="list-group-item"><a href="#rename-a-database" class="ripple internal reference">Rename a Database</a></li><li class="list-group-item"><a href="#deleting-a-database" class="ripple internal reference">Deleting a Database</a></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#upgrade" class="ripple internal reference">Обновить</a></li><li class="list-group-item"><a href="#duplicating-a-database" class="ripple internal reference">Копирование базы данных</a></li><li class="list-group-item"><a href="#rename-a-database" class="ripple internal reference">Переименование базы данных</a></li><li class="list-group-item"><a href="#deleting-a-database" class="ripple internal reference">Удаление базы данных</a></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/db_management/db_online.rst" class="gith-link">
                   Edit on GitHub
@@ -273,84 +294,7 @@
           <article class="doc-body  ">
             
             
-  <section id="online-database-management"><i id="db-online"></i><p >To manage your databases, access the <a href="https://www.odoo.com/my/databases" class="external reference">database management page</a> (you will have to sign in). Then click
-on the <a href="https://www.odoo.com/my/databases/manage" class="external reference">Manage Your Databases</a>
-button.</p><img src="../_images/databases.png" style="" class="img-responsive center-block"><p >Make sure you are connected as the administrator of the database you
-want to manage - many operations depends on indentifying you remotely to that
-database.</p><p >Several actions are available:</p><img src="../_images/db_buttons.png" style="" class="img-responsive center-block"><ul ><li ><dl ><dt ><a href="#upgrade-button" class="internal reference"><span class="std std-ref">Upgrade</span></a></dt><dd >Upgrade your database to the latest Odoo version to enjoy cutting-edge
-features</dd></dl></li><li ><dl ><dt ><a href="#duplicate-online" class="internal reference"><span class="std std-ref">Duplicate</span></a></dt><dd >Make an exact copy of your database, if you want
-to try out new apps or new flows without compromising
-your daily operations</dd></dl></li><li ><dl ><dt ><a href="#rename-online-database" class="internal reference"><span class="std std-ref">Rename</span></a></dt><dd >Rename your database (and its URL)</dd></dl></li><li ><dl ><dt ><strong >Backup</strong></dt><dd >Download an instant backup of your database; note that we
-back up databases daily according to our Odoo Cloud SLA</dd></dl></li><li ><dl ><dt ><a href="../website/publish/domain_name.html#custom-domain" class="internal reference"><span class="std std-ref">Domains</span></a></dt><dd >Configure custom domains to access your
-database via another URL</dd></dl></li><li ><dl ><dt ><a href="#delete-online-database" class="internal reference"><span class="std std-ref">Delete</span></a></dt><dd >Delete a database instantly</dd></dl></li><li ><dl ><dt >Contact Support</dt><dd >Access our <a href="https://www.odoo.com/help" class="external reference">support page</a>
-with the correct database already selected</dd></dl></li></ul></section><section id="upgrade"><i id="upgrade-button"></i><h2 >Upgrade</h2><div role="alert" class="alert-warning alert"><p class="alert-title">Warning</p><p >Upgrading your database to a newer version of Odoo is a complex operation
-that require time and caution. It is extremely important that you
-fully test the process before upgrading your production database.</p></div><p >Odoo releases new versions regularly (at least once a year), and upgrading your
-database to enjoy new Odoo features is part of the Odoo Online experience.</p><p >The upgrade process can take some time, especially if you use multiple apps or
-apps that manage sensitive data (e.g. Accounting, Inventory, etc.). In general,
-the ‘smaller’ the database, the quickest the upgrade. A single-user
-database that uses only CRM will be processed faster than a multi-company,
-multi-user database that uses Accounting, Sales, Purchase and Manufacturing.</p><p >Unfortunately, it is impossible to give time estimates for every upgrade request,
-since Odoo.com will test manually every database upgrade at least once and will
-need to correct/adapt changes made to the standard Odoo Apps (e.g. through Studio
-or through a Success Pack) on a case-by-case basis. This can make the process
-slower, since requests are treated in the order they arrive. This is especially
-true in the months following the release of a new major version, which can lengthen
-the upgrade delay significantly.</p><p >The upgrade process is quite simple from your point of view:</p><ol ><li >You request a test upgrade</li><li >Once all tests have been validated <strong >by you</strong>, you upgrade your actual database</li></ol><p >The process to request a test or a production (<em >actual</em>) upgrade is the same.</p><p >First, make sure to be connected to the database you want to upgrade and access the
-<a href="https://www.odoo.com/my/databases" class="external reference">database management page</a>.</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >You have to have an active session with access to the Settings app
-in the database you want to upgrade for the button to be visible.</p></div><p >On the line of the database you want to upgrade, click
-on the “Cog” menu. If an newer version of Odoo is available, you will see an ‘Upgrade’
-button.</p><img src="../_images/upgrade1.png" style="" class="img-responsive center-block"><p >You have the possibility to choose the target version of the upgrade. By default,
-we select the highest available version available for your database; if you were
-already in the process of testing an upgrade, we will automatically select the
-version you were already testing (even if we released a more recent version during
-your tests).</p><img src="../_images/upgrade_test.png" style="" class="img-responsive center-block"><p >By clicking on the “Test upgrade” button, an upgrade request will be generated.
-Only one request can be made at time for each database; if a request has already
-been made, you will see an ‘Upgrade Queued’ note instead and asking another
-request will not be possible.</p><p >A test upgrade will create a copy of your database, upgrade it and make it
-available to you automatically once successful. If this is the first test you
-request for this particular database, a manual testing phase will be done by
-Odoo.com - this could take time (up to several weeks). Subsequent requests
-will not go through that manual testing step and will usually be made
-available in a few hours. Once the test database is available, you should
-receive an e-mail with the URL of the test database.</p><p ><strong >Testing your database is the most important step of the upgrade process!</strong>
-Even though we test all upgrades manually, we do not know your work processes.
-A change in standard worfklows of Odoo in new versions might require you to
-change internal processes, or some of the customizations you made through Odoo
-Studio might now work properly. <em >It is up to you to make sure that everything
-works as it should!</em> You can report issues with your test database through our
-<a href="https://www.odoo.com/help" class="external reference">Support page</a>.</p><p >Make sure to do one last test of your upgrade right before the final upgrade
-(e.g. the day before) to ensure everything will run smoothly. Downgrading is
-not possible and post-poning an upgrade is always easier than being prevented
-to work by an upgrade issue after the fact!</p><p >Once you are ready and you have validated all your tests, you can click
-again on the Upgrade button and confirm by clicking on Upgrade (the button
-with the little rocket!) to switch your production database to the new version.
-Your database will then be taken offline within the next 10 minutes and will be
-upgraded automatically; you receive a confirmation
-e-mail once the process is completed.</p><img src="../_images/upgrade_prod.png" style="" class="img-responsive center-block"><div role="alert" class="alert-warning alert"><p class="alert-title">Warning</p><p >Your database will be taken offline during the upgrade
-(usually between 30min up to several hours for big databases),
-so make sure to plan your migration during non-business hours.</p></div></section><section id="duplicating-a-database"><i id="duplicate-online"></i><h2 >Duplicating a database</h2><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >Database duplication, renaming, custom DNS, etc. is not available
-for trial databases on our Online platform. Paid Databases and “One App
-Free” database can duplicate without problem.</p></div><p >In the line of the database you want to duplicate, you will have a few
-buttons. To duplicate your database, just click <strong >Duplicate</strong>. You will
-have to give a name to your duplicate, then click <strong >Duplicate Database</strong>.</p><img src="../_images/db_duplicate.png" style="" class="img-responsive center-block"><div role="alert" class="alert-danger alert"><p class="alert-title">Danger</p><p >If you do not check the “For testing purposes” checkbox when
-duplicating a database, all external communication will remain active:</p><ul ><li >Emails are sent</li><li >Payments are processed (in the e-commerce or Subscriptions apps, for
-example)</li><li >Delivery orders (shipping providers) are sent</li><li >Etc.</li></ul><p >Make sure to check the checkbox “For testing purposes” if you want these
-behaviours to be disabled.</p></div><p >After a few seconds, you will be logged in your duplicated database.
-Notice that the url uses the name you chose for your duplicated
-database.</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >Duplicate databases expire automatically after 15 days.</p><img src="../_images/dup_expires.png" style="" class="img-responsive center-block"></div></section><section id="rename-a-database"><i id="rename-online-database"></i><h2 >Rename a Database</h2><p >To rename your database, make sure you are connected to the database you want
-to rename, access the <a href="https://www.odoo.com/my/databases" class="external reference">database management page</a>
-and click <strong >Rename</strong>. You will have to give a new name to your database,
-then click <strong >Rename Database</strong>.</p><img src="../_images/rename.png" style="" class="img-responsive center-block"></section><section id="deleting-a-database"><i id="delete-online-database"></i><h2 >Deleting a Database</h2><p >You can only delete databases of which you are the administrator.</p><div role="alert" class="alert-danger alert"><p class="alert-title">Danger</p><p >When you delete your database all the data will be permanently lost.
-The deletion is instant and for all the Users. We advise you to do an
-instant backup of your database before deleting it, since the last automated
-daily backup may be several hours old at that point.</p></div><p >From the <a href="https://www.odoo.com/my/databases" class="external reference">database management page</a>,
-on the line of the database you want to delete, click on the “Delete” button.</p><img src="../_images/delete_button.png" style="" class="img-responsive center-block"><p >Read carefully the warning message that will appear and proceed only if you
-fully understand the implications of deleting a database:</p><img src="../_images/delete_warning.png" style="" class="img-responsive center-block"><p >After a few seconds, the database will be deleted and the page will
-reload automatically.</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><ul ><li >If you need to re-use this database name, it will be immediately available.</li><li >It is not possible to delete a database if it is expired or linked
-to a Subscription. In these cases contact
-<a href="https://www.odoo.com/help" class="external reference alert-link">Odoo Support</a></li><li >If you want to delete your Account, please contact
-<a href="https://www.odoo.com/help" class="external reference alert-link">Odoo Support</a></li></ul></div></section>
+  <section id="online-database-management"><i id="db-online"></i><p >Чтобы управлять базами данных, откройте [UNKNOWN NODE problematic]страницу Управление базой данных &lt;<a href="https://www.odoo.com/my/databases" class="external reference">https://www.odoo.com/my/databases</a>&gt; [UNKNOWN NODE problematic]__ (вам придется войти в систему). Затем нажмите кнопку [UNKNOWN NODE problematic]Управление вашими базами данных &lt;<a href="https://www.odoo.com/my/databases/manage" class="external reference">https://www.odoo.com/my/databases/manage</a>&gt; [UNKNOWN NODE problematic]__.</p><img src="../_images/databases.png" style="" class="img-responsive center-block"><p >Убедитесь, что вы подключены как администратор базы данных, которой хотите управлять - многие операции зависят от того, как вы отдаленно идентифицируете эту базу данных.</p><p >Доступно несколько действий:</p><img src="../_images/db_buttons.png" style="" class="img-responsive center-block"><ul ><li ><dl ><dt >: Ref: [UNKNOWN NODE problematic]Обновления &lt;upgrade_button&gt; `</dt><dd >Обновите вашу базу данных до последней версии Odoo, чтобы насладиться передовыми функциями</dd></dl></li><li ><dl ><dt >: Ref: [UNKNOWN NODE problematic]Копирование &lt;duplicate_online&gt; `</dt><dd >Создайте точную копию вашей базы данных, если вы хотите попробовать новые модули или новые процессы, не покладая опасности ежедневные операции</dd></dl></li><li ><dl ><dt >: Ref: [UNKNOWN NODE problematic]Переименование &lt;rename_online_database&gt; `</dt><dd >Переименуйте вашу базу данных (и ее URL-адрес)</dd></dl></li><li ><dl ><dt >** Резервное копирование **</dt><dd >Загрузите мгновенную резервную копию вашей базы данных; Обратите внимание, что мы создаем резервные копии баз данных ежедневно по нашим Odoo Cloud SLA</dd></dl></li><li ><dl ><dt >: Ref: [UNKNOWN NODE problematic]Домены &lt;custom_domain&gt; `</dt><dd >Настройте собственные домены для доступа к вашей базе данных с помощью другой URL-адреса</dd></dl></li><li ><dl ><dt >: Ref: [UNKNOWN NODE problematic]Удаление &lt;delete_online_database&gt; `</dt><dd >Удалите базу данных мгновенно</dd></dl></li><li ><dl ><dt >Связь с техподдержкой</dt><dd >Получите доступ к нашей [UNKNOWN NODE problematic]страницы поддержки &lt;<a href="https://www.odoo.com/help" class="external reference">https://www.odoo.com/help</a>&gt; [UNKNOWN NODE problematic]__ с уже выбранной правильной базой данных</dd></dl></li></ul></section><section id="upgrade"><i id="upgrade-button"></i><h2 >Обновить</h2><div role="alert" class="alert-warning alert"><p class="alert-title">Предупреждение</p><p >Обновление вашей базы данных в новой версии Odoo - это сложная операция, которая требует времени и осторожности. Очень важно, чтобы вы полностью протестировали процесс перед обновлением производственной базы.</p></div><p >Odoo регулярно выпускает новые версии (по крайней мере один раз в год), а обновление базы данных, чтобы пользоваться новыми функциями Odoo, является частью опыта Odoo Online.</p><p >Процесс обновления может занять некоторое время, особенно если вы используете несколько приложений или программ, которые управляют конфиденциальными данными (например, Бухучет, Состав и др.). В общем, чем меньше база данных, тем быстрее будет обновлен. База данных для одного пользователя, которая использует только CRM, будет обрабатываться быстрее, чем база данных мульти-компаний и многих пользователей, которая использует Бухучет, Продажа, Покупки и Производство.</p><p >К сожалению, невозможно дать оценку времени для каждого запроса на обновление, поскольку Odoo.com по меньшей мере один раз проверять вручную каждое обновление базы данных и нужно будет исправить / адаптировать изменения, внесенные в стандартных модулей Odoo (например, через Студию или через Пакет услуг) в каждом конкретном случае. Это может сделать процесс медленнее, поскольку запросы обрабатываются в порядке их поступления. Особенно это касается месяцев после выхода новой основной версии, которая может значительно продлить задержку обновления.</p><p >Процесс обновления с вашей стороны довольно прост:</p><ol ><li >Ваш запрос на тестовое обновление</li><li >Когда все тесты будут подтверждены ** вами [UNKNOWN NODE problematic], вы обновляете вашу фактическую базу данных</li></ol><p >Обработка запроса на тестовое или рабочее (* фактическое [UNKNOWN NODE problematic]) обновления одинакова.</p><p >Сначала убедитесь, что вы подключены к базе данных, которую вы хотите обновить и получите доступ к [UNKNOWN NODE problematic]страницы управления базой данных &lt;<a href="https://www.odoo.com/my/databases" class="external reference">https://www.odoo.com/my/databases</a>&gt; [UNKNOWN NODE problematic]__.</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Нужно иметь активную сессию с доступом к модулю Настройка в базе данных, которую вы хотите обновить, чтобы кнопка была видимой.</p></div><p >В строке базы данных, которую вы хотите обновить, нажмите на меню &amp;quot;Cog&amp;quot;. Если доступна новая версия Odoo, вы увидите кнопку «Обновить».</p><img src="../_images/upgrade1.png" style="" class="img-responsive center-block"><p >У вас есть возможность выбрать целевую версию обновления. По умолчанию мы выбираем самую высокую версию, доступную для вашей базы данных; если вы уже были в процессе тестирования обновления, мы автоматически выберем версию, которую вы уже тестировали (даже если мы выпустили более новую версию во время ваших тестов).</p><img src="../_images/upgrade_test.png" style="" class="img-responsive center-block"><p >Нажав кнопку &amp;quot;Тестировать обновления&amp;quot;, будет создан запрос на обновление. Вовремя можно сделать один запрос для каждой базы данных; если запрос уже сделан, вы увидите заметку &amp;quot;Обновить очередь&amp;quot;, и запрос на другой запрос будет невозможным.</p><p >Тестовое обновление создаст копию вашей базы данных, обновит ее и автоматически сделает ее доступной для вас. Если это первый тест, который вы спрашиваете для этой конкретной базы данных, Odoo.com осуществит этап ручного тестирования - это может занять время (до нескольких недель). Дальнейшие запросы не пройдут этот шаг тестирования вручную, и обычно они будут доступны через несколько часов. После того, как тестовая база данных будет доступна, вы должны получить электронное письмо с URL-адресом тестовой базы данных.</p><p >** Тестирование вашей базы данных является важнейшим шагом процесса обновления! ** Хотя мы проверяем все обновления вручную, мы не знаем ваших рабочих процессов. Изменение стандартных технологий Odoo в новых версиях может потребовать изменить внутренние процессы, или некоторые настройки, сделанные через Odoo Studio, теперь могут работать. * Вы должны убедиться, что все работает как следует! * О проблемах со своей тестовой базой данных вы можете сообщать через нашу [UNKNOWN NODE problematic]Страница поддержки &lt;<a href="https://www.odoo.com/help" class="external reference">https://www.odoo.com/help</a>&gt; [UNKNOWN NODE problematic]__.</p><p >Не забудьте сделать последний тест обновления непосредственно перед окончательным обновлением (например, накануне), чтобы гарантировать, что все будет работать бесперебойно. Возобновление версии невозможно, а писляналаштовуване обновления всегда проще, чем предотвращение работе над обновлением после факта!</p><p >После того, как вы будете готовы и подтвердили все свои тесты, вы можете снова нажать кнопку «Обновить» и подтвердить, нажав «Обновить» (кнопку с маленькой ракетой!), Чтобы переключить вашу рабочую базу данных на новую версию. Затем ваша база данных будет перенесена оффлайн в течение следующих 10 минут и будет обновлена автоматически; вы получите письмо с подтверждением, когда процесс завершен.</p><img src="../_images/upgrade_prod.png" style="" class="img-responsive center-block"><div role="alert" class="alert-warning alert"><p class="alert-title">Предупреждение</p><p >Ваша база данных будет загружаться в режиме во время обновления (обычно от 30 минут до нескольких часов для больших баз данных), поэтому обязательно планируйте миграцию в течение нерабочих часов.</p></div></section><section id="duplicating-a-database"><i id="duplicate-online"></i><h2 >Копирование базы данных</h2><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Дублирование базы данных, переименование, пользовательский DNS и т. Д. Недоступны для пробных баз данных на нашей онлайн-платформе. Оплачены базы данных и база данных &amp;quot;One App Free&amp;quot; может дублировать без проблем.</p></div><p >В строке базы данных, которую вы хотите дублировать, у вас будет несколько кнопок. Чтобы копировать вашу базу данных, просто нажмите кнопку ** Копировать [UNKNOWN NODE problematic]. Вам придется назвать свою копию, затем нажмите кнопку ** Копировать базу данных [UNKNOWN NODE problematic].</p><img src="../_images/db_duplicate.png" style="" class="img-responsive center-block"><div role="alert" class="alert-danger alert"><p class="alert-title">Опасно</p><p >Если вы не проверяете обозначения &amp;quot;Для целей тестирования&amp;quot; при копировании базы данных, все внешние процессы будут оставаться активными:</p><ul ><li >Отправка электронных писем</li><li >Платежи обрабатываются (например, в программах электронной коммерции или подписки)</li><li >Заказ на доставку (поставщики доставки) отправляются</li><li >И т.д ..</li></ul><p >Проверьте обозначения &amp;quot;Для целей тестирования&amp;quot;, если вы хотите, чтобы эти действия были выключены.</p></div><p >Через несколько секунд вы будете входить в копию базы данных. Обратите внимание, что URL-адрес использует ваше название для копий базы данных.</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Копии баз данных заканчиваются автоматически через 15 дней.</p><img src="../_images/dup_expires.png" style="" class="img-responsive center-block"></div></section><section id="rename-a-database"><i id="rename-online-database"></i><h2 >Переименование базы данных</h2><p >Чтобы переименовать вашу базу данных, убедитесь, что вы подключены к базе данных, которую вы хотите переименовать, откройте [UNKNOWN NODE problematic]страницу управления базой данных &lt;<a href="https://www.odoo.com/my/databases" class="external reference">https://www.odoo.com/my/databases</a>&gt; [UNKNOWN NODE problematic]__ и нажмите ** Переименовать [UNKNOWN NODE problematic]. Вам нужно будет указать новое название в вашей базе данных, а затем нажать ** Переименовать базу данных [UNKNOWN NODE problematic].</p><img src="../_images/rename.png" style="" class="img-responsive center-block"></section><section id="deleting-a-database"><i id="delete-online-database"></i><h2 >Удаление базы данных</h2><p >Вы можете удалить только те базы данных, где вы администратором.</p><div role="alert" class="alert-danger alert"><p class="alert-title">Опасно</p><p >Когда вы удалите базу данных, все данные будут потеряны навсегда. Удаление является мгновенным и для всех пользователей. Мы советуем вам немедленно сделать резервную копию вашей базы данных, прежде чем удалить ее, поскольку последнее автоматическое ежедневное резервное копирование может составлять несколько часов в тот момент.</p></div><p >На [UNKNOWN NODE problematic]странице управления базой данных &lt;<a href="https://www.odoo.com/my/databases" class="external reference">https://www.odoo.com/my/databases</a>&gt; [UNKNOWN NODE problematic]__, в строке базы данных, которую вы хотите удалить, нажмите кнопку&amp;quot; Удалить &amp;quot;.</p><img src="../_images/delete_button.png" style="" class="img-responsive center-block"><p >Пожалуйста, внимательно прочитайте предупреждение, которое появится и будет висеть, пока вы полностью не поймете последствия удаления базы данных:</p><img src="../_images/delete_warning.png" style="" class="img-responsive center-block"><p >Через несколько секунд база данных будет удалена, и страница будет автоматически перезагружена.</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><ul ><li >Если вам нужно будет повторно использовать это название базы данных, она будет доступна</li><li >Невозможно удалить базу данных, если она прошла или связана с подпиской. В этих случаях обращайтесь в [UNKNOWN NODE problematic]Службу поддержки Odoo &lt;<a href="https://www.odoo.com/help" class="external reference alert-link">https://www.odoo.com/help</a>&gt; [UNKNOWN NODE problematic]__</li><li >Если вы хотите удалить свой аккаунт, обратитесь к [UNKNOWN NODE problematic]Службы поддержки Odoo &lt;<a href="https://www.odoo.com/help" class="external reference alert-link">https://www.odoo.com/help</a>&gt; [UNKNOWN NODE problematic]__</li></ul></div></section>
 
           </article>
         </div>

@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>How to forecast tasks? &#8212; Odoo 13.0 documentation</title>
+    <title>Как прогнозировать задачи? &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
     <script type="text/javascript" src="../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../_static/doc.js"></script>
     <script type="text/javascript" src="../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/project/planning/forecast.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/project/planning/forecast.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/project/planning/forecast.html" />
+    <link rel="canonical" href="/master/ru/project/planning/forecast.html" />
   
-    <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Advanced" href="../advanced.html" />
-    <link rel="prev" title="How to plan and track employees’ assignments?" href="assignments.html" /> 
+    <link rel="index" title="Алфавитный указатель" href="../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../search.html" />
+    <link rel="next" title="Расширенный" href="../advanced.html" />
+    <link rel="prev" title="Как планировать и отслеживать задачи сотрудников?" href="assignments.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -194,7 +198,7 @@
         
             
                 
-                    <li><a href="../../project.html">Project</a></li>
+                    <li><a href="../../project.html">Проект</a></li>
                 
             
         
@@ -205,7 +209,7 @@
             
         
     
-    <li class="active"><a href="#">How to forecast tasks?</a></li>
+    <li class="active"><a href="#">Как прогнозировать задачи?</a></li>
 
               
           </ol>
@@ -221,12 +225,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/project/planning/forecast.html">English</a></li>
+        
+            <li><a href="/13.0/uk/project/planning/forecast.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -253,6 +272,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -262,7 +283,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> How to forecast tasks? </h1>
+        <h1> Как прогнозировать задачи? </h1>
       </div>
     </figure>
     
@@ -275,7 +296,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#introduction-to-forecast" class="ripple internal reference">Introduction to forecast</a></li><li class="list-group-item"><a href="#how-to-configure-the-projects" class="ripple internal reference">How to configure the projects?</a><ul ><li class="list-group-item"><a href="#configure-the-project-application" class="ripple internal reference">Configure the project application</a></li><li class="list-group-item"><a href="#configure-a-specific-project" class="ripple internal reference">Configure a specific project.</a></li><li class="list-group-item"><a href="#how-to-create-a-forecast" class="ripple internal reference">How to create a forecast?</a></li></ul></li><li class="list-group-item"><a href="#what-are-the-difference-between-the-views" class="ripple internal reference">What are the difference between the views?</a><ul ><li class="list-group-item"><a href="#by-users-people-management" class="ripple internal reference">By users : people management</a><ul ><li class="list-group-item"><a href="#plan-the-workload" class="ripple internal reference">Plan the workload</a></li><li class="list-group-item"><a href="#gantt-view-advantages" class="ripple internal reference">Gantt view advantages</a></li></ul></li><li class="list-group-item"><a href="#by-projects-project-management" class="ripple internal reference">By projects: project management</a><ul ><li class="list-group-item"><a href="#id1" class="ripple internal reference">Gantt view advantages</a></li></ul></li></ul></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#introduction-to-forecast" class="ripple internal reference">Введение в прогнозирование</a></li><li class="list-group-item"><a href="#how-to-configure-the-projects" class="ripple internal reference">Как настроить проекты?</a><ul ><li class="list-group-item"><a href="#configure-the-project-application" class="ripple internal reference">Настройте приложение проекта</a></li><li class="list-group-item"><a href="#configure-a-specific-project" class="ripple internal reference">Настройте конкретный проект</a></li><li class="list-group-item"><a href="#how-to-create-a-forecast" class="ripple internal reference">Как создать прогнозирования?</a></li></ul></li><li class="list-group-item"><a href="#what-are-the-difference-between-the-views" class="ripple internal reference">Какая разница между просмотрами?</a><ul ><li class="list-group-item"><a href="#by-users-people-management" class="ripple internal reference">Пользователями: управление людьми</a><ul ><li class="list-group-item"><a href="#plan-the-workload" class="ripple internal reference">План рабочей нагрузки</a></li><li class="list-group-item"><a href="#gantt-view-advantages" class="ripple internal reference">Преимущества диаграммы Ганта</a></li></ul></li><li class="list-group-item"><a href="#by-projects-project-management" class="ripple internal reference">По проектам: управление проектами</a><ul ><li class="list-group-item"><a href="#id1" class="ripple internal reference">Преимущества диаграммы Ганта</a></li></ul></li></ul></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/project/planning/forecast.rst" class="gith-link">
                   Edit on GitHub
@@ -287,68 +308,7 @@
           <article class="doc-body  ">
             
             
-  <section id="how-to-forecast-tasks"></section><section id="introduction-to-forecast"><h2 >Introduction to forecast</h2><p >Scheduling and forecasting tasks is another way to manage projects. In
-Odoo, the Forecast option gives you access to the Gantt chart.</p><p >So far, you’ve been working with the Kanban view, which shows you the
-progress of a project and its related tasks.</p><p >Now, with the Forecast option, the Gantt view gives you the big picture.
-It’s highly visual which is a real plus for complex projects, and it
-helps team members to collaborate better.</p><p >This option is a real benefit in terms of planning and organizing the
-workload and human resources.</p></section><section id="how-to-configure-the-projects"><h2 >How to configure the projects?</h2></section><section id="configure-the-project-application"><h3 >Configure the project application</h3><p >The <strong >Forecast</strong> option helps you to organize your projects. This is perfect
-when you need to set up a project with a specific deadline. Therefore,
-each task is assigned a specific timeframe (amount of hours) in which
-your employee should complete it!</p><p >First you need to activate the <strong >Forecast</strong> option for the whole project
-application:</p><p >Go to <span class="menuselection">Project ‣ Configuration ‣ Settings</span>.
-Select the Forecast option and click <strong >Apply</strong>.</p><img src="../../_images/forecast011.png" style="" class="img-responsive center-block"><p >Once this is done, you still need to activate the <strong >Forecast</strong> option
-specifically for your <strong >Project</strong> (maybe you don’t need the Gantt chart for
-all the projects that you manage).</p></section><section id="configure-a-specific-project"><h3 >Configure a specific project.</h3><p >When creating a new project, make sure to select the option “Allow
-Forecast” in your project settings.</p><p >You’ll see the <strong >Forecast</strong> option appearing in the top menu.</p><img src="../../_images/forecast021.png" style="" class="img-responsive center-block"><p >If you add the Forecasting option to an existing project, whether there
-are task deadlines or not scheduled, the task won’t be displayed.</p><p >The tasks of a project are not related to a forecast.</p></section><section id="how-to-create-a-forecast"><h3 >How to create a forecast?</h3><p >Before creating a project with forecast, list all the tasks with the
-projected time they should take. It will help you to coordinate the
-work.</p><p >In order to display the projects in the Gantt chart, you need to create
-the forecast from the task page. To create a forecast, click on the top
-left corner of the task, <strong >Create a Forecast</strong>.</p><img src="../../_images/forecast031.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >You can also create a new Forecast easily by directly clicking on an empty
-space in the Gantt chart calendar.</p></div><p >The Forecast interface will fill in the name of the Project and the task
-automatically. You just need to add the dates and the time the task
-should take.</p><img src="../../_images/forecast041.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >The “Effective hours” field appears only if you have the <strong >Timesheet</strong> app
-installed on your database. This option helps you to see the progress of a
-task thanks to the integration with Timesheet.</p><p >For example: When a user fills in a Timesheet with your Project name
-(Analytic account), with 10 hours spent, the forecast will display 10 hours
-in the Effective hours field.</p></div></section><section id="what-are-the-difference-between-the-views"><h2 >What are the difference between the views?</h2><p >In the <strong >Project</strong> app menu you have a <strong >Forecast</strong> menu. This sub-menu helps
-you to see the Gantt chart from different points of view: by users or by
-projects.</p></section><section id="by-users-people-management"><h3 >By users : people management</h3><p >This option displays the Gantt chart with the people assigned. Odoo’s
-Gantt chart shows you who’s involved; it gives you the big picture of
-the project. It’s very useful to allocate your resources effectively.</p><p >On the left side, first level, you can see which users are involved.
-Then, on the second level you see which projects they are assigned to.
-On the third, you see which tasks they’re on.</p><p >Each task is represented by a coloured rectangle. This rectangle
-reflects the duration of the task in the calendar.</p><p >The top rectangle on the first level is the sum of all the tasks
-compiled from the third level. If it’s green, it means that the total
-time allocated to that user is less than 100%. When it’s red, it means
-that this user is assigned to multiple tasks which total more than 100%
-of his/her time.</p><img src="../../_images/forecast05.png" style="" class="img-responsive center-block"></section><section id="plan-the-workload"><h4 >Plan the workload</h4><p >When creating a forecast, you have to select the time the user should
-spend on it. 100% means that your user should work on it full time
-during those days. He/She has no other tasks to work on. So you can
-decide from 1 to 100% how your users should organize their time between
-different tasks.</p><p >The power of integration helps you to avoid double booking an employee.
-For example, if your expert is already at 40% on another task in another
-project, you can book him/her for only 60% for that period.</p><p >In the example below, the user “Administrator” is working on 2 projects
-(“IT1367 Delivery Phases” and “Implementation Process56”). The user is
-assigned to both projects with a total of 110% of their time. This is
-too much so the Project Manager should change the users assigned to the
-task. Otherwise, the PM can change the dedicated time or the dates, to
-make sure that this is feasible.</p><img src="../../_images/forecast06.png" style="" class="img-responsive center-block"></section><section id="gantt-view-advantages"><h4 >Gantt view advantages</h4><p >This Gantt view ‘by user’ helps you to better plan your human resources.
-You avoid confusion about the the tasks and the assignations of the
-users. The Gantt Chart is highly visual and helps to comprehend all the
-different elements at once. Also, you immediately know what has to be
-done next. This method helps you to better understand the relations
-between the tasks.</p><p >The dynamic view of the Gantt in Odoo allows you to:</p><ul ><li >change the time and date of a forecast by clicking and sliding the
-tasks in the future or in the past</li><li >create a new forecast into the Gantt chart immediately</li><li >modify an existing forecast</li><li >change the length of a task by extending or shortening the rectangle.</li></ul></section><section id="by-projects-project-management"><h3 >By projects: project management</h3><p >The Gantt Chart is the perfect view of a project to better understand
-the interactions between the tasks. You can avoid overlapping tasks or
-starting one too early if another one isn’t finished. Odoo Gantt chart
-is clear and helps you to coordinate tasks efficiently.</p><p >This option displays the Gantt chart by showing the projects on the
-first level of hierarchy.</p><p >On the left side, first level, you can see the projects. Then, on the
-second level you see which users are assigned. On the third, you see
-which tasks they’re on.</p><p >This view won’t show your HR time. The colours don’t apply. (see <strong >By
-Users</strong> section)</p><img src="../../_images/forecast07.png" style="" class="img-responsive center-block"></section><section id="id1"><h4 >Gantt view advantages</h4><p >The dynamic view of the Gantt in Odoo allows you to:</p><ul ><li >change the time and date of a forecast by clicking and sliding the
-tasks in the future or in the past</li><li >create a new forecast into the Gantt chart immediately</li><li >modify an existing forecast</li><li >change the length of a task by extending or shortening the rectangle.</li></ul></section>
+  <section id="how-to-forecast-tasks"></section><section id="introduction-to-forecast"><h2 >Введение в прогнозирование</h2><p >Планирование и прогнозирование задача - это еще один способ управлять проектами. В Odoo параметр Прогнозирование дает вам доступ к диаграмме Ганта.</p><p >Пока вы работали с канбан, который показывает вам прогресс проекта и связанные с ним задачи.</p><p >Теперь, если выбрать параметр Прогнозирование, диаграмма Ганта отражает большую картину. Это очень визуальное изображение, которое является настоящим плюсом для сложных проектов, и это помогает членам команды работать лучше.</p><p >Этот вариант выгоден для планирования и организации рабочей нагрузки и человеческих ресурсов.</p></section><section id="how-to-configure-the-projects"><h2 >Как настроить проекты?</h2></section><section id="configure-the-project-application"><h3 >Настройте приложение проекта</h3><p >Параметр ** Прогнозирование ** поможет вам организовать свои проекты. Он идеально подходит, когда вам нужно настроить проект с определенным дедлайном. Поэтому для каждой задачи назначается определенный временной промежуток (количество часов), в который ваш работник должен его заполнить!</p><p >Сначала нужно активировать параметр ** Прогнозирование ** для всего модуля проекта:</p><p >Перейдите к: menuselection: [UNKNOWN NODE title_reference]. Выберите опцию Прогноз и нажмите кнопку ** Применить [UNKNOWN NODE problematic].</p><img src="../../_images/forecast011.png" style="" class="img-responsive center-block"><p >После этого вам все равно нужно активировать параметр ** Прогнозирование ** специально для вашего ** проекта ** (возможно, вам не нужна диаграмма Ганта для всех проектов, которыми вы управляете).</p></section><section id="configure-a-specific-project"><h3 >Настройте конкретный проект</h3><p >При создании нового проекта обязательно выберите &amp;quot;Разрешить прогноз&amp;quot; в настройках проекта.</p><p >Вы увидите параметр ** Прогнозирование [UNKNOWN NODE problematic], который появится в верхнем меню.</p><img src="../../_images/forecast021.png" style="" class="img-responsive center-block"><p >Если вы добавляете параметр Прогнозирование в существующий проект, будь то сроки задач или незапланированные, задача не будут.</p><p >Задача проекта не связаны с прогнозом.</p></section><section id="how-to-create-a-forecast"><h3 >Как создать прогнозирования?</h3><p >Перед созданием проекта прогнозу перечислите все задачи по прогнозируемым временем, которое они должны взять. Это поможет вам координировать работу.</p><p >Для просмотра проекты в диаграмме Ганта, нужно создать прогноз на странице задачи. Чтобы создать прогноз, нажмите на верхнем левом углу задача ** Создать прогнозирования [UNKNOWN NODE problematic].</p><img src="../../_images/forecast031.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >Вы также можете легко создать новое Прогнозирование, просто нажав на пустое пространство в календаре диаграммы Ганта.</p></div><p >Интерфейс Прогнозирование автоматически заполнит название проекта и задачи. Вам просто нужно добавить дату и время выполнения задания.</p><img src="../../_images/forecast041.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >Поле &amp;quot;Эффективные часа&amp;quot; появляется, только если в вашей базе данных установлено приложение ** Табель [UNKNOWN NODE problematic]. Этот параметр помогает вам увидеть прогресс задач благодаря интеграции с Табелем.</p><p >Например: когда пользователь заполняет таблицу с названием своего проекта (аналитический учет), при этом расходуется 10:00, прогноз будет отражать 10:00 в поле Эффективные часа.</p></div></section><section id="what-are-the-difference-between-the-views"><h2 >Какая разница между просмотрами?</h2><p >В меню модуля ** Проект ** есть меню ** Прогнозирование [UNKNOWN NODE problematic]. Это подменю помогает просматривать диаграмму Ганта с разных точек зрения: пользователями или проектами.</p></section><section id="by-users-people-management"><h3 >Пользователями: управление людьми</h3><p >Этот параметр отражает диаграмму Ганта с назначенными людьми. Диаграмма Ганта показывает привлеченных; это дает вам общую картину проекта. Очень полезно эффективно распределять ресурсы.</p><p >На левой стороне, на первом уровне, вы можете увидеть задействованных пользователей. Затем на втором уровне вы видите, к проектам они предназначены. В-третьих, вы видите, какие задачи они выполняют.</p><p >Каждое задание обозначено цветным прямоугольником. Этот прямоугольник отражает продолжительность задачи в календаре.</p><p >Верхний прямоугольник на первом уровне - это сумма всех задач, составленная из третьего уровня. Если он зеленый, это означает, что общее время, предназначенное для пользователя, составляет менее 100%. Когда он красный, это означает, что этот пользователь предназначен для выполнения нескольких задач, которые составляют более 100% своего времени.</p><img src="../../_images/forecast05.png" style="" class="img-responsive center-block"></section><section id="plan-the-workload"><h4 >План рабочей нагрузки</h4><p >При создании прогнозирования нужно выбрать время, которое пользователь должен потратить на него. 100% означает, что ваш пользователь должен работать на полный рабочий день в течение этих дней. Он / она не имеет других задач для работы. Таким образом, вы можете решить от 1 до 100%, как ваши пользователи должны организовать свое время между различными задачами.</p><p >Интеграция помогает вам избежать двойного бронирования сотрудника. Например, если ваш эксперт уже имеет 40% иной задачи в другом проекте, вы можете забронировать его лишь на 60% за этот период.</p><p >В приведенном ниже примере пользователь &amp;quot;Администратор&amp;quot; работает над двумя проектами ( &amp;quot;Фазы доставки IT1367&amp;quot; и &amp;quot;Процесс выполнения 56&amp;quot;). Пользователь предназначен для обоих проектов общим объемом в 110% своего времени. Это слишком много, поэтому Менеджер проектов должен изменить пользователей, предназначенных для задания. В противном случае менеджер проектов может изменить определенное время или дату, чтобы убедиться, что это возможно.</p><img src="../../_images/forecast06.png" style="" class="img-responsive center-block"></section><section id="gantt-view-advantages"><h4 >Преимущества диаграммы Ганта</h4><p >Диаграмма Ганта &amp;quot;за пользователем&amp;quot; помогает вам лучше спланировать свои кадры. Вы избегаете путаницы относительно задач и назначений пользователей. Диаграмма Ганта является визуальной и помогает понять все различные элементы одновременно. Также вы немедленно знаете, что нужно сделать дальше. Этот метод поможет вам лучше понять отношения между задачами.</p><p >Динамический просмотр Ганта в Odoo позволяет</p><ul ><li >изменить время и дату прогноза, нажав и передвинув задачи в будущем или в прошлом</li><li >немедленно создать новый прогноз в диаграмме Ганта</li><li >изменить существующий прогноз</li><li >изменить длину задачи путем расширения или сокращения прямоугольника.</li></ul></section><section id="by-projects-project-management"><h3 >По проектам: управление проектами</h3><p >Диаграмма Ганта - это идеальное представление о проекте, чтобы лучше понять взаимодействие между задачами. Вы можете избегать дублирования задач или запускать их слишком рано, если другой не завершен. Диаграмма Ганта в Odoo является четкой и помогает вам эффективно координировать задачи.</p><p >Этот параметр отражает график Ганта, показывая проекты на первом уровне иерархии.</p><p >Слева, на первом уровне, вы можете увидеть проекты. Затем на втором уровне вы видите предназначенных пользователей. В-третьих, вы видите, какие задачи они выполняют.</p><p >Этот просмотр не покажет ваше время HR. Цвета не применяются. (См. ** Пользователями [UNKNOWN NODE problematic])</p><img src="../../_images/forecast07.png" style="" class="img-responsive center-block"></section><section id="id1"><h4 >Преимущества диаграммы Ганта</h4><p >Динамический просмотр Ганта в Odoo позволяет</p><ul ><li >изменить время и дату прогноза, нажав и передвинув задачи в будущем или в прошлом</li><li >немедленно создать новый прогноз в диаграмме Ганта</li><li >изменить существующий прогноз</li><li >изменить длину задачи путем расширения или сокращения прямоугольника.</li></ul></section>
 
           </article>
         </div>

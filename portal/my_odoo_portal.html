@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>My Odoo Portal &#8212; Odoo 13.0 documentation</title>
+    <title>Мой портал Odoo &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../_static/inventory.js"></script>
     <script type="text/javascript" src="../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
     <script type="text/javascript" src="../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../_static/doc.js"></script>
     <script type="text/javascript" src="../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/portal/my_odoo_portal.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/portal/my_odoo_portal.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/portal/my_odoo_portal.html" />
+    <link rel="canonical" href="/master/ru/portal/my_odoo_portal.html" />
   
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
+    <link rel="index" title="Алфавитный указатель" href="../genindex.html" />
+    <link rel="search" title="Поиск" href="../search.html" />
     <link rel="next" title="Support" href="../support.html" />
-    <link rel="prev" title="On-premises Database management" href="../db_management/db_premise.html" /> 
+    <link rel="prev" title="Управления базами данных на собственном сервере" href="../db_management/db_premise.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -189,7 +193,7 @@
             <li><a href="../index.html">Документация пользователя</a></li>
         
     
-    <li class="active"><a href="#">My Odoo Portal</a></li>
+    <li class="active"><a href="#">Мой портал Odoo</a></li>
 
               
           </ol>
@@ -205,12 +209,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/portal/my_odoo_portal.html">English</a></li>
+        
+            <li><a href="/13.0/uk/portal/my_odoo_portal.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -237,6 +256,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -248,7 +269,7 @@
     <figure class="card top has_banner">
       <span class="card-img" style="background-image: url('../_static/banners/my_odoo_portal.jpg');"></span>
       <div class="container text-center">
-        <h1> My Odoo Portal </h1>
+        <h1> Мой портал Odoo </h1>
       </div>
     </figure>
     
@@ -261,7 +282,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#quotations" class="ripple internal reference">Quotations</a></li><li class="list-group-item"><a href="#sales-orders" class="ripple internal reference">Sales Orders</a></li><li class="list-group-item"><a href="#invoices" class="ripple internal reference">Invoices</a></li><li class="list-group-item"><a href="#tickets" class="ripple internal reference">Tickets</a></li><li class="list-group-item"><a href="#subscriptions" class="ripple internal reference">Subscriptions</a></li><li class="list-group-item"><a href="#success-packs" class="ripple internal reference">Success Packs</a></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#quotations" class="ripple internal reference">Коммерческие предложения</a></li><li class="list-group-item"><a href="#sales-orders" class="ripple internal reference">Заказы продаж</a></li><li class="list-group-item"><a href="#invoices" class="ripple internal reference">Счета</a></li><li class="list-group-item"><a href="#tickets" class="ripple internal reference">Заявки</a></li><li class="list-group-item"><a href="#subscriptions" class="ripple internal reference">Подписки</a></li><li class="list-group-item"><a href="#success-packs" class="ripple internal reference">пакеты услуг</a></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/portal/my_odoo_portal.rst" class="gith-link">
                   Edit on GitHub
@@ -273,36 +294,7 @@
           <article class="doc-body  ">
             
             
-  <section id="my-odoo-portal"><p >In this section of the portal, you will find all the communications between you
-and Odoo: documents such as quotations, sales orders, invoices and subscriptions.</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >To access this section, you have to log with your username and password
-to <a href="https://www.odoo.com/my/home" class="external reference alert-link">Odoo</a> . If you are already logged in, just
-click on your name on the top-right corner and select “My Account”.</p></div><img src="../_images/my_portal.png" style="" class="img-responsive center-block"></section><section id="quotations"><h2 >Quotations</h2><p >Here you will find all the quotations sent to you by Odoo. For example, a
-quotation can be generated for you after adding an application or a user to your
-database or if your contract has to be renewed.</p><img src="../_images/quotations.png" style="" class="img-responsive center-block"><p >The <em >Valid Until</em> column shows the date through which the quotation is valid; after that date,
-the quotation will be “Expired”. By clicking on the quotation, you will see all
-the details of the offer, such as the pricing and other useful information.</p><img src="../_images/quotation_accept.png" style="" class="img-responsive center-block"><p >If you want to accept the quotation, just click “Accept &amp; Pay,” and the quote
-will get confirmed. If you don’t want to accept it, or you need to ask for some
-modifications, click on “Ask Changes Reject.”</p></section><section id="sales-orders"><h2 >Sales Orders</h2><p >All your purchases within Odoo (Upsells, Themes, Applications, etc.)
-will be registered under this section.</p><img src="../_images/sales.png" style="" class="img-responsive center-block"><p >By clicking on the sale order, you can review the details of the products purchased
-and process the payment.</p></section><section id="invoices"><h2 >Invoices</h2><p >All the invoices of your subscriptions and/or sales orders will be
-shown in this section. The tag before the Amount Due will indicate if the
-invoice has been paid.</p><img src="../_images/invoices.png" style="" class="img-responsive center-block"><p >Just click on the invoice if you wish to see more information, pay the invoice,
-or download a PDF version of the document.</p></section><section id="tickets"><h2 >Tickets</h2><p >When you submit a ticket through [UNKNOWN NODE title_reference],
-a ticket will be created. Here you can find all the tickets that you have opened,
-the conversations between you and our Agents, and the statuses and IDs (# Ref) of the tickets.</p><img src="../_images/tickets.png" style="" class="img-responsive center-block"></section><section id="subscriptions"><h2 >Subscriptions</h2><p >You can access your subscriptions with Odoo from this section. The first page
-shows you the subscriptions that you have and their status.</p><img src="../_images/subscriptionstatus.png" style="" class="img-responsive center-block"><p >By clicking on the subscription you will access all the details regarding your
-plan: the number of applications purchased, the billing information,
-and the payment method.</p><p >To change the payment method, click on “Change Payment Method” and enter the new
-credit card details.</p><img src="../_images/changemethod.png" style="" class="img-responsive center-block"><p >If you want to remove the credit cards that are saved, you can do so by clicking on
-“Manage your payment methods” at the bottom of the page. Click “Delete” to
-delete the payment method.</p><img src="../_images/managepayment.png" style="" class="img-responsive center-block"><div role="alert" class="alert-warning alert"><p class="alert-title">Warning</p><p >At the date of the next invoice, if there is no payment
-information provided or if your credit card has expired, the status of your
-subscription will change to “To Renew”.  You will then have 7 days to
-provide a valid method of payment. After this delay, the subscription will
-be closed, and you will no longer be able to access the database.</p></div></section><section id="success-packs"><h2 >Success Packs</h2><p >With a Success Pack/Partner Success Pack, you are assigned an expert to provide
-unique personalized assistance to help you customize your solution and optimize
-your workflows as part of your initial implementation. These hours never expire,
-allowing you to utilize them whenever you need support.</p><div role="alert" class="alert-go_to alert"><p class="alert-title">See also</p><p >If you need information about how to manage your database see <a href="../db_management/db_online.html#db-online" class="internal alert-link reference"><span class="std std-ref">Online Database management</span></a></p></div></section>
+  <section id="my-odoo-portal"><p >В этой секции портала вы найдете всю коммуникацию между вами и Odoo: документы, такие как коммерческие предложения, заказы на продажу, счета и подписки.</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Чтобы получить доступ к этой секции, вам необходимо войти с именем пользователя и паролем в [UNKNOWN NODE problematic]Odoo &lt;<a href="https://www.odoo.com/my/home" class="external reference alert-link">https://www.odoo.com/my/home</a>&gt; [UNKNOWN NODE problematic]__. Если вы уже вошли, просто нажмите на ваше имя в верхнем правом углу и выберите &amp;quot;Мой аккаунт&amp;quot;.</p></div><img src="../_images/my_portal.png" style="" class="img-responsive center-block"></section><section id="quotations"><h2 >Коммерческие предложения</h2><p >Здесь вы найдете все коммерческие предложения, направленные Odoo. Например, коммерческое предложение может быть создана для вас после добавления заявки или пользователя в вашу базу данных или когда ваш контракт нужно обновить.</p><img src="../_images/quotations.png" style="" class="img-responsive center-block"><p >Колонка * Действительно до * показывает дату, до которой действует коммерческое предложение; после этой даты коммерческое предложение будет &amp;quot;просроченные&amp;quot;. Нажав на коммерческое предложение, вы увидите все детали предложения, такие как цена и другая полезная информация.</p><img src="../_images/quotation_accept.png" style="" class="img-responsive center-block"><p >Если вы хотите принять коммерческое предложение, просто нажмите &amp;quot;Принять и Оплатить,&amp;quot; и коммерческое предложение будет подтверждена. Если вы не хотите подтверждать ее или вы хотите попросить о некоторых изменениях, нажмите &amp;quot;Попросить об отклонении изменений.&amp;quot;</p></section><section id="sales-orders"><h2 >Заказы продаж</h2><p >Все ваши покупки внутри Odoo (к продаже, Темы, Модули и т.д.) будут зарегистрированы в этой секцией.</p><img src="../_images/sales.png" style="" class="img-responsive center-block"><p >Нажав на заказ на продажу, вы можете просмотреть детали купленных товаров и обработать платеж.</p></section><section id="invoices"><h2 >Счета</h2><p >Все счета ваших подписок и / или заказов на продажу будут отображаться в этой секции. Тег перед задолженной суммой будет указывать, счет-фактуру оплачен.</p><img src="../_images/invoices.png" style="" class="img-responsive center-block"><p >Просто нажмите на счет, если вы хотите увидеть больше информации, оплатить счет или скачать PDF-версию документа.</p></section><section id="tickets"><h2 >Заявки</h2><p >Когда вы отправляете заявку через [UNKNOWN NODE problematic]Поддержку Odoo &lt;<a href="https://www.odoo.com/help" class="external reference">https://www.odoo.com/help</a>&gt; [UNKNOWN NODE problematic], Будет создан заявку. Здесь вы можете найти все заявки, которые вы открыли, разговор между вами и нашими агентами, статусы и ID (# Ref) заявок.</p><img src="../_images/tickets.png" style="" class="img-responsive center-block"></section><section id="subscriptions"><h2 >Подписки</h2><p >Вы можете получить доступ к вашим подписок через Odoo из этого раздела. Первая страница показывает вам подписки, которые у вас есть, и их статус.</p><img src="../_images/subscriptionstatus.png" style="" class="img-responsive center-block"><p >Нажав на подписку, вы получите доступ на все детали вашего плана: количество купленных модулей, информацию о выставлении счета, и метод платежа.</p><p >Чтобы изменить способ оплаты, нажмите на &amp;quot;Изменить способ оплаты&amp;quot; и введите новые данные кредитной карты.</p><img src="../_images/changemethod.png" style="" class="img-responsive center-block"><p >Если вы хотите удалить сохраненные кредитные карты, вы можете сделать это, нажав на &amp;quot;Управление вашими методами платежа&amp;quot; внизу страницы. Нажмите &amp;quot;Удалить&amp;quot;, чтобы удалить метод платежа.</p><img src="../_images/managepayment.png" style="" class="img-responsive center-block"><div role="alert" class="alert-warning alert"><p class="alert-title">Предупреждение</p><p >На дату следующего счета, если не предоставлено никакой информации о платеже или, если ваша кредитная карта просроченная, статус вашей подписки изменится на «Обновить». Тогда у вас будет 7 дней предоставить действительный способ оплаты. После этой задержки, подписку будет закрыт и вы больше не сможете получить доступ к вашей базе данных.</p></div></section><section id="success-packs"><h2 >пакеты услуг</h2><p >С пакетом услуг / Партнерским пакетом услуг вам предназначен эксперт для предоставления персонализированной помощи в настройке вашего решения и оптимизации ваших рабочих процессов как части вашего внутреннего применения. Эти часы никогда не теряют срок действия, позволяя вам использовать их тогда, когда вам нужна поддержка.</p><div role="alert" class="alert-go_to alert"><p class="alert-title">См.также</p><p >Если вам нужна информация о том, как управлять своей базой данных, смотрите: ref: [UNKNOWN NODE title_reference]</p></div></section>
 
           </article>
         </div>

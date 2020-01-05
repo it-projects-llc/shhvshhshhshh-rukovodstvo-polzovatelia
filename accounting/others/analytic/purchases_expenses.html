@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>How to track costs of purchases, expenses, subcontracting? &#8212; Odoo 13.0 documentation</title>
+    <title>Как отслеживать расходы, сотрудников и субподряд? &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../../_static/doc.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/accounting/others/analytic/purchases_expenses.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/accounting/others/analytic/purchases_expenses.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/accounting/others/analytic/purchases_expenses.html" />
+    <link rel="canonical" href="/master/ru/accounting/others/analytic/purchases_expenses.html" />
   
-    <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Taxes" href="../taxes.html" />
-    <link rel="prev" title="How to track costs of human resources with timesheets?" href="timesheets.html" /> 
+    <link rel="index" title="Алфавитный указатель" href="../../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../../search.html" />
+    <link rel="next" title="Налоги" href="../taxes.html" />
+    <link rel="prev" title="Как отслеживать расходы на человеческие ресурсы с расписанием?" href="timesheets.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -194,7 +198,7 @@
         
             
                 
-                    <li><a href="../../../accounting.html">Accounting</a></li>
+                    <li><a href="../../../accounting.html">Бухгалтерский учёт</a></li>
                 
             
         
@@ -211,7 +215,7 @@
             
         
     
-    <li class="active"><a href="#">How to track costs of purchases, expenses, subcontracting?</a></li>
+    <li class="active"><a href="#">Как отслеживать расходы, сотрудников и субподряд?</a></li>
 
               
           </ol>
@@ -227,12 +231,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/accounting/others/analytic/purchases_expenses.html">English</a></li>
+        
+            <li><a href="/13.0/uk/accounting/others/analytic/purchases_expenses.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -259,6 +278,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -268,7 +289,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> How to track costs of purchases, expenses, subcontracting? </h1>
+        <h1> Как отслеживать расходы, сотрудников и субподряд? </h1>
       </div>
     </figure>
     
@@ -281,7 +302,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#overview" class="ripple internal reference">Overview</a></li><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a><ul ><li class="list-group-item"><a href="#enable-analytical-accounting" class="ripple internal reference">Enable Analytical accounting</a></li></ul></li><li class="list-group-item"><a href="#create-an-analytical-account" class="ripple internal reference">Create an Analytical account.</a></li><li class="list-group-item"><a href="#record-an-expense" class="ripple internal reference">Record an expense</a><ul ><li class="list-group-item"><a href="#create-an-expense-product" class="ripple internal reference">Create an expense product</a></li><li class="list-group-item"><a href="#book-the-expense" class="ripple internal reference">Book the expense</a></li></ul></li><li class="list-group-item"><a href="#create-a-purchase-order-linked-to-the-analytical-account" class="ripple internal reference">Create a Purchase Order linked to the analytical account</a><ul ><li class="list-group-item"><a href="#purchase-product" class="ripple internal reference">Purchase Product</a></li><li class="list-group-item"><a href="#subcontracting" class="ripple internal reference">Subcontracting</a></li></ul></li><li class="list-group-item"><a href="#track-costs-in-accounting" class="ripple internal reference">Track costs in accounting</a></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#overview" class="ripple internal reference">Общий обзор</a></li><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Настройка</a><ul ><li class="list-group-item"><a href="#enable-analytical-accounting" class="ripple internal reference">Включите аналитический учет</a></li></ul></li><li class="list-group-item"><a href="#create-an-analytical-account" class="ripple internal reference">Создайте Аналитический бухучет</a></li><li class="list-group-item"><a href="#record-an-expense" class="ripple internal reference">Запишите расходы</a><ul ><li class="list-group-item"><a href="#create-an-expense-product" class="ripple internal reference">Создайте затратный товар</a></li><li class="list-group-item"><a href="#book-the-expense" class="ripple internal reference">зарегистрируйте расходы</a></li></ul></li><li class="list-group-item"><a href="#create-a-purchase-order-linked-to-the-analytical-account" class="ripple internal reference">Создайте заказ на покупку, связанное с аналитическим бухучету</a><ul ><li class="list-group-item"><a href="#purchase-product" class="ripple internal reference">покупки товара</a></li><li class="list-group-item"><a href="#subcontracting" class="ripple internal reference">субподряд</a></li></ul></li><li class="list-group-item"><a href="#track-costs-in-accounting" class="ripple internal reference">Отслеживайте расходы в бухучете</a></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/accounting/others/analytic/purchases_expenses.rst" class="gith-link">
                   Edit on GitHub
@@ -293,44 +314,7 @@
           <article class="doc-body  ">
             
             
-  <section id="how-to-track-costs-of-purchases-expenses-subcontracting"></section><section id="overview"><h2 >Overview</h2><p >Thanks to analytical accounting we can track costs of purchases,
-expenses and subcontracting in the accounting module.</p><p >We’ll take the following example. We sold a consulting package for a
-customer. The package is all inclusive meaning no extra cost can be
-added. We would however like to follow which cost were attached to this
-transaction as we need to pay for purchases, expenses, and
-subcontracting costs related to the project.</p></section><section id="configuration"><h2 >Configuration</h2><p >The following modules needs to be installed to track cost. Enter the app
-module and install the following apps:</p><table class="table"><thead ><tr ><th ><img src="../../../_images/purchase01.png" style="" class="img-responsive"></th><th ><img src="../../../_images/purchase02.png" style="" class="img-responsive"></th><th ><img src="../../../_images/purchase03.png" style="" class="img-responsive"></th></tr></thead><tbody ><tr ><td ></td><td ></td><td ></td></tr></tbody></table><p >Please note that the applications provided by these apps only allows us
-to <strong >track</strong> the costs. We won’t be able to automatically re invoice
-those costs to our customers. To track and <strong >re invoice costs</strong> you
-should install the Sales management app as well.</p><img src="../../../_images/purchase04.png" style="" class="img-responsive center-block"></section><section id="enable-analytical-accounting"><h3 >Enable Analytical accounting</h3><p >Next step is to activate the analytical accounting. In the accounting
-app, select <span class="menuselection">Configuration ‣ Settings</span> and thick the Analytic
-accounting box.</p><img src="../../../_images/purchase05.png" style="" class="img-responsive center-block"><p >Moreover, scroll down and tick the <strong >Analytic accounting for purchases</strong>
-box.</p><img src="../../../_images/purchase06.png" style="" class="img-responsive center-block"><p >Don’t forget to save your changes.</p></section><section id="create-an-analytical-account"><h2 >Create an Analytical account.</h2><p >First of all you should create an Analytical account on which you can
-point all your expenses. Enter the accounting app, select
-<span class="menuselection">Configuration ‣ Analytic Accounts</span>. Create a new one. In this
-case we will call it “consulting pack” for our customer Smith&amp;Co.</p><img src="../../../_images/purchase07.png" style="" class="img-responsive center-block"><p >We will point all our costs to this account to keep track of them.</p></section><section id="record-an-expense"><h2 >Record an expense</h2><p >We start by booking an expense. Our
-IT technician had to take a train to go see our customer. He paid for
-his ticket himself.</p></section><section id="create-an-expense-product"><h3 >Create an expense product</h3><p >We first need to create an expense product. Enter the <strong >Expense</strong> module,
-Click on <span class="menuselection">Configuration ‣ Expense Products</span>. Create a new product
-called Train ticket and set the cost price to 15.50 euros. Make sure the <strong >Can be
-expensed</strong> box is ticked.</p><img src="../../../_images/purchase08.png" style="" class="img-responsive center-block"></section><section id="book-the-expense"><h3 >Book the expense</h3><p >Enter the Expense module, click on <span class="menuselection">My expenses ‣ Create</span>. Select the
-Train ticket product and link it to the analytical account discussed
-above.</p><img src="../../../_images/purchase09.png" style="" class="img-responsive center-block"><p >Submit to manager and wait for the manager to approve and post the
-journal entries.</p></section><section id="create-a-purchase-order-linked-to-the-analytical-account"><h2 >Create a Purchase Order linked to the analytical account</h2></section><section id="purchase-product"><h3 >Purchase Product</h3><p >We also need to buy a software for our customers. In the purchase app
-create a purchase order for the software product.
-Within the line we can link the product’s cost with the analytical
-account. Specify the order line and select the correct analytical
-account. Confirm the sale.</p><img src="../../../_images/purchase10.png" style="" class="img-responsive center-block"><p >Accept the delivery and enter the invoice. Once the invoice is entered the cost
-price (<strong >Vendor Price</strong> field) will be booked in the analytical account.</p></section><section id="subcontracting"><h3 >Subcontracting</h3><p >The purchase module can be used in the same way as seen previously to
-handle subcontracting. if we purchase a service from another company we
-can re invoice this cost by linking the purchase order line to the
-correct analytical account. We simply need to create the correct vendors
-product.</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >You can also track cost with timesheets, see: <a href="timesheets.html" class="internal alert-link reference"><span class="doc">How to track costs of human resources with timesheets?</span></a></p></div></section><section id="track-costs-in-accounting"><h2 >Track costs in accounting</h2><p >Now that everything is booked and points to the analytical account.
-Simply open it to check the costs related to that account.</p><p >Enter the accounting module, click on <span class="menuselection">Advisers ‣ Analytic Accounts
-‣ Open Charts</span>.</p><p >Select “consulting pack - Smith” and click on the cost and revenue
-button to have an overview of all cost linked to the account.</p><img src="../../../_images/purchase11.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >If you would like to have the revenue as well you should
-invoice the Consulting Pack in the Invoice menu and link the invoice
-line to this same analytical account.</p></div></section>
+  <section id="how-to-track-costs-of-purchases-expenses-subcontracting"></section><section id="overview"><h2 >Общий обзор</h2><p >Благодаря аналитическом бухучета мы можем отслеживать стоимость закупки, расходы и субподряд в модуле бухгалтерского учета.</p><p >Мы приведем следующий пример. Мы продали пакет консультаций для клиента. Пакет, где все включено, означает, что дополнительных расходов добавить нельзя. Однако мы хотим определить, какие расходы были привязаны к этой транзакции, поскольку нам нужно оплатить покупки, расходы и расходы на субподряд, связанные с проектом.</p></section><section id="configuration"><h2 >Настройка</h2><p >Для отслеживания стоимости нужно установить следующие модули. Введите модуль приложений и установите следующие программы:</p><table class="table"><thead ><tr ><th ><img src="../../../_images/purchase01.png" style="" class="img-responsive"></th><th ><img src="../../../_images/purchase02.png" style="" class="img-responsive"></th><th ><img src="../../../_images/purchase03.png" style="" class="img-responsive"></th></tr></thead><tbody ><tr ><td ></td><td ></td><td ></td></tr></tbody></table><p >Обратите внимание, что эти приложения позволяют ** отслеживать ** расходы. Мы не сможем автоматически перечислить эти расходы наших клиентов. Чтобы отслеживать расходы на ** выставления счетов ** и перечислить их, нужно также установить приложение для управления продажами.</p><img src="../../../_images/purchase04.png" style="" class="img-responsive center-block"></section><section id="enable-analytical-accounting"><h3 >Включите аналитический учет</h3><p >Следующим шагом является активация аналитического бухучета. В приложении бухучета выберите: menuselection: [UNKNOWN NODE title_reference] и разверните раздел Аналитический бухучет.</p><img src="../../../_images/purchase05.png" style="" class="img-responsive center-block"><p >Кроме того, прокрутите вниз и отметьте пункт ** Аналитический бухучет для покупок [UNKNOWN NODE problematic].</p><img src="../../../_images/purchase06.png" style="" class="img-responsive center-block"><p >Не забудьте сохранить изменения.</p></section><section id="create-an-analytical-account"><h2 >Создайте Аналитический бухучет</h2><p >Прежде всего вы должны создать аналитический бухучет, на котором вы сможете указать все свои расходы. Введите приложение бухучета, выберите: menuselection: [UNKNOWN NODE title_reference]. Создайте новый. В этом случае мы называем это &amp;quot;пакет консультаций&amp;quot; для нашего клиента Smith &amp;amp; Co.</p><img src="../../../_images/purchase07.png" style="" class="img-responsive center-block"><p >Мы будем указывать все наши расходы на этот учет, чтобы следить за ними.</p></section><section id="record-an-expense"><h2 >Запишите расходы</h2><p >Начнем с регистрации расходов. Наш ИТ-специалист должен был поехать поездом, чтобы увидеть нашего клиента. Он сам заплатил за свой билет.</p></section><section id="create-an-expense-product"><h3 >Создайте затратный товар</h3><p >Сначала нужно создать затратный продукт. Введите модуль ** Расходы [UNKNOWN NODE problematic], нажмите на: menuselection: [UNKNOWN NODE title_reference]. Создайте новый продукт под названием билет на поезд и установите себестоимость до 15,50 евро. Убедитесь, что обозначено строку ** Может быть потрачен [UNKNOWN NODE problematic].</p><img src="../../../_images/purchase08.png" style="" class="img-responsive center-block"></section><section id="book-the-expense"><h3 >зарегистрируйте расходы</h3><p >Введите модуль Расходы, нажмите: menuselection: [UNKNOWN NODE title_reference]. Выберите товар Билет на поезд и свяжите его с аналитическим бухучету, описанным выше.</p><img src="../../../_images/purchase09.png" style="" class="img-responsive center-block"><p >Отправьте менеджеру и подождите, пока менеджер утвердит и опубликует записи журнала.</p></section><section id="create-a-purchase-order-linked-to-the-analytical-account"><h2 >Создайте заказ на покупку, связанное с аналитическим бухучету</h2></section><section id="purchase-product"><h3 >покупки товара</h3><p >Мы также должны приобрести программное обеспечение для наших клиентов. В модуле покупки создайте заказ на покупку товара программного обеспечения. В рамках строки мы можем связать стоимость товара с аналитическому счету. Укажите строку заказа и выберите правильный аналитический счет. Подтвердите продажу.</p><img src="../../../_images/purchase10.png" style="" class="img-responsive center-block"><p >Примите доставку и введите счет-фактуру. После введения счета-фактуры себестоимость (поле ** Цена поставщика [UNKNOWN NODE problematic]) будет зачислена на аналитический бухучет.</p></section><section id="subcontracting"><h3 >субподряд</h3><p >Модуль покупки может использоваться таким же образом, как и ранее, для обработки субподрядных контрактов. Если мы покупаем услугу по другой компании, мы можем перечислить эту стоимость, связав строку заказа на правильный аналитический бухучет. Нам просто нужно создать правильный товар поставщика.</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Вы также можете отслеживать стоимость табелю, смотрите:: doc: [UNKNOWN NODE title_reference]</p></div></section><section id="track-costs-in-accounting"><h2 >Отслеживайте расходы в бухучете</h2><p >Теперь все, что регистрируется, указывает на аналитический бухучет. Просто откройте его, чтобы проверить расходы, связанные с этим счетом.</p><p >Введите модуль бухгалтерского учета, нажмите кнопку: menuselection: [UNKNOWN NODE title_reference].</p><p >Выберите &amp;quot;пакет консультаций - Smith&amp;quot; и нажмите кнопку Стоимость и доход, чтобы просмотреть все расходы, связанные с учетом.</p><img src="../../../_images/purchase11.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Если вы хотите получать прибыль, вы должны начислить консалтинговый пакет в меню &amp;quot;Счет-фактура&amp;quot; и связать строку счета с этим аналитическим учетной записью.</p></div></section>
 
           </article>
         </div>

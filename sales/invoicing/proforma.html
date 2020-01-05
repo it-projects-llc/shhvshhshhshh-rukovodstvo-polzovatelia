@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>Send a pro-forma invoice &#8212; Odoo 13.0 documentation</title>
+    <title>Отправка проформы счета &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
     <script type="text/javascript" src="../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../_static/doc.js"></script>
     <script type="text/javascript" src="../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/sales/invoicing/proforma.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/sales/invoicing/proforma.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/sales/invoicing/proforma.html" />
+    <link rel="canonical" href="/master/ru/sales/invoicing/proforma.html" />
   
-    <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Invoice based on time and materials" href="time_materials.html" />
-    <link rel="prev" title="Request a down payment" href="down_payment.html" /> 
+    <link rel="index" title="Алфавитный указатель" href="../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../search.html" />
+    <link rel="next" title="Выставления счета на основе сроков и материалов" href="time_materials.html" />
+    <link rel="prev" title="Запрос на предоплату" href="down_payment.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -194,7 +198,7 @@
         
             
                 
-                    <li><a href="../../sales.html">Sales</a></li>
+                    <li><a href="../../sales.html">Продажи</a></li>
                 
             
         
@@ -205,7 +209,7 @@
             
         
     
-    <li class="active"><a href="#">Send a pro-forma invoice</a></li>
+    <li class="active"><a href="#">Отправка проформы счета</a></li>
 
               
           </ol>
@@ -221,12 +225,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/sales/invoicing/proforma.html">English</a></li>
+        
+            <li><a href="/13.0/uk/sales/invoicing/proforma.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -253,6 +272,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -262,7 +283,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> Send a pro-forma invoice </h1>
+        <h1> Отправка проформы счета </h1>
       </div>
     </figure>
     
@@ -275,7 +296,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#activate-the-feature" class="ripple internal reference">Activate the feature</a></li><li class="list-group-item"><a href="#id1" class="ripple internal reference">Send a pro-forma invoice</a></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#activate-the-feature" class="ripple internal reference">Включите эту функцию</a></li><li class="list-group-item"><a href="#id1" class="ripple internal reference">Отправка проформы счета</a></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/sales/invoicing/proforma.rst" class="gith-link">
                   Edit on GitHub
@@ -287,15 +308,7 @@
           <article class="doc-body  ">
             
             
-  <section id="send-a-pro-forma-invoice"><p >A pro-forma invoice is an abridged or estimated invoice in advance of a
-delivery of goods. It notes the kind and quantity of goods, their value,
-and other important information such as weight and transportation
-charges. Pro-forma invoices are commonly used as preliminary invoices
-with a quotation, or for customs purposes in importation. They differ
-from a normal invoice in not being a demand or request for payment.</p></section><section id="activate-the-feature"><h2 >Activate the feature</h2><p >Go to <span class="menuselection">SALES ‣ Configuration ‣ Settings</span> and activate
-the <em >Pro-Forma Invoice</em> feature.</p><img src="../../_images/proforma01.png" style="" class="img-responsive center-block"></section><section id="id1"><h2 >Send a pro-forma invoice</h2><p >From any quotation or sales order, you know have an option to send a
-pro-forma invoice.</p><img src="../../_images/proforma02.png" style="" class="img-responsive center-block"><p >When you click on send, Odoo will send an email with the pro-forma
-invoice in attachment.</p><img src="../../_images/proforma03.png" style="" class="img-responsive center-block"></section>
+  <section id="send-a-pro-forma-invoice"><p >Проформа счета - сокращенный или ориентировочный счет-фактура перед выставлением счета на доставленный товар. Он отмечает вид и количество товаров, их стоимость и другую важную информацию, такую как вес и транспортные расходы. Файлы проформы обычно используются как предварительные счета-фактуры с коммерческим предложением, или для таможенных целей при импорте. Они отличаются от обычного счета-фактуры, поскольку не является требованием или запросом на оплату.</p></section><section id="activate-the-feature"><h2 >Включите эту функцию</h2><p >Перейдите к: menuselection: [UNKNOWN NODE title_reference] и активируйте функцию * Проформа счета-фактуры [UNKNOWN NODE problematic].</p><img src="../../_images/proforma01.png" style="" class="img-responsive center-block"></section><section id="id1"><h2 >Отправка проформы счета</h2><p >С любой коммерческой предложения или заказ на продажу вы можете прислать проформу счета-фактуры.</p><img src="../../_images/proforma02.png" style="" class="img-responsive center-block"><p >Когда вы нажмете на Отправить, Odoo пришлет электронное письмо с проформой счета-фактуры во вложении.</p><img src="../../_images/proforma03.png" style="" class="img-responsive center-block"></section>
 
           </article>
         </div>

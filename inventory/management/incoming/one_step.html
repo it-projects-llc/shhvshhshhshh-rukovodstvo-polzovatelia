@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>Process a Receipt in one step (Receipt) &#8212; Odoo 13.0 documentation</title>
+    <title>Process a Receipt in one step (Receipt) &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../../_static/doc.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/inventory/management/incoming/one_step.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/inventory/management/incoming/one_step.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/inventory/management/incoming/one_step.html" />
+    <link rel="canonical" href="/master/ru/inventory/management/incoming/one_step.html" />
   
-    <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="index" title="Алфавитный указатель" href="../../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../../search.html" />
     <link rel="next" title="Process a Receipt in two steps (Input + Stock)" href="two_steps.html" />
-    <link rel="prev" title="How to choose the right flow to handle receipts?" href="handle_receipts.html" /> 
+    <link rel="prev" title="Как выбрать правильный способ для обработки товарных чеков?" href="handle_receipts.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -194,7 +198,7 @@
         
             
                 
-                    <li><a href="../../../inventory.html">Inventory</a></li>
+                    <li><a href="../../../inventory.html">Склад</a></li>
                 
             
         
@@ -227,12 +231,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/inventory/management/incoming/one_step.html">English</a></li>
+        
+            <li><a href="/13.0/uk/inventory/management/incoming/one_step.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -259,6 +278,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -281,7 +302,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#create-a-purchase-order" class="ripple internal reference">Create a Purchase Order</a></li><li class="list-group-item"><a href="#process-a-receipt" class="ripple internal reference">Process a Receipt</a></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#create-a-purchase-order" class="ripple internal reference">Создайте заказ на покупку</a></li><li class="list-group-item"><a href="#process-a-receipt" class="ripple internal reference">Process a Receipt</a></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/inventory/management/incoming/one_step.rst" class="gith-link">
                   Edit on GitHub
@@ -299,7 +320,7 @@ vendors to the stock.</p><p >However, if advanced routes have been activated and
 incoming configuration on your warehouse, you can set it back to the
 one-step receipt configuration. To do so, go to <em >Configuration &gt;
 Warehouses</em> and edit the warehouse in question.</p><p >Set the <em >Incoming Shipments</em> option to <em >Receive goods directly (1
-step)</em>.</p><img src="../../../_images/one_step_011.png" style="" class="img-responsive center-block"></section><section id="create-a-purchase-order"><h2 >Create a Purchase Order</h2><p >To create a <em >Request for Quotation</em>, go to the <em >Purchase</em>
+step)</em>.</p><img src="../../../_images/one_step_011.png" style="" class="img-responsive center-block"></section><section id="create-a-purchase-order"><h2 >Создайте заказ на покупку</h2><p >To create a <em >Request for Quotation</em>, go to the <em >Purchase</em>
 application and click on <em >Create</em>. Then, add some storable products to
 receive and confirm the <em >RfQ</em>.</p><p >Notice that, now, we see 1 receipt associated with the purchase order
 you just created. If you click on the button, you will see your receipt

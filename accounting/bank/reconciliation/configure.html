@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>Configure model of entries &#8212; Odoo 13.0 documentation</title>
+    <title>Настройка модели записей банковской выписки &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../../_static/doc.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/accounting/bank/reconciliation/configure.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/accounting/bank/reconciliation/configure.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/accounting/bank/reconciliation/configure.html" />
+    <link rel="canonical" href="/master/ru/accounting/bank/reconciliation/configure.html" />
   
-    <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Others" href="../../others.html" />
-    <link rel="prev" title="Use cases in the bank reconciliation process?" href="use_cases.html" /> 
+    <link rel="index" title="Алфавитный указатель" href="../../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../../search.html" />
+    <link rel="next" title="другие" href="../../others.html" />
+    <link rel="prev" title="Используйте различные варианты в процессе согласования банковской выписки" href="use_cases.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -194,7 +198,7 @@
         
             
                 
-                    <li><a href="../../../accounting.html">Accounting</a></li>
+                    <li><a href="../../../accounting.html">Бухгалтерский учёт</a></li>
                 
             
         
@@ -211,7 +215,7 @@
             
         
     
-    <li class="active"><a href="#">Configure model of entries</a></li>
+    <li class="active"><a href="#">Настройка модели записей банковской выписки</a></li>
 
               
           </ol>
@@ -227,12 +231,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/accounting/bank/reconciliation/configure.html">English</a></li>
+        
+            <li><a href="/13.0/uk/accounting/bank/reconciliation/configure.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -259,6 +278,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -268,7 +289,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> Configure model of entries </h1>
+        <h1> Настройка модели записей банковской выписки </h1>
       </div>
     </figure>
     
@@ -281,7 +302,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#overview" class="ripple internal reference">Overview</a></li><li class="list-group-item"><a href="#create-reconciliation-models" class="ripple internal reference">Create Reconciliation Models</a></li><li class="list-group-item"><a href="#register-your-payments-based-on-a-reconciliation-model" class="ripple internal reference">Register your payments based on a reconciliation model</a></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#overview" class="ripple internal reference">Общий обзор</a></li><li class="list-group-item"><a href="#create-reconciliation-models" class="ripple internal reference">Создайте модель согласования</a></li><li class="list-group-item"><a href="#register-your-payments-based-on-a-reconciliation-model" class="ripple internal reference">Зарегистрируйте свои платежи на основе модели согласования</a></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/accounting/bank/reconciliation/configure.rst" class="gith-link">
                   Edit on GitHub
@@ -293,21 +314,7 @@
           <article class="doc-body  ">
             
             
-  <section id="configure-model-of-entries"></section><section id="overview"><h2 >Overview</h2><p >In Odoo you have the possibility to pre-fill some accounting entries in
-order to easily reconcile recurrent entries such as bank fees.</p><p >We will take the following example to illustrate the concept : Every
-month my company receives a bank fee cost, which depends of our bank
-account current balance. This fee is thus variable.</p></section><section id="create-reconciliation-models"><h2 >Create Reconciliation Models</h2><p >First, we need to configure two model reconciliation entries. To do so,
-go to the accounting application dashboard. On your bank journal, click
-on <span class="menuselection">More ‣ Reconciliation Models</span>.</p><img src="../../../_images/configure01.png" style="" class="img-responsive center-block"><p >We want to be able to book our bank fees easily. Our bank deducts fees
-depending on our balance, meaning that it can vary every month.</p><p >We create a button Label called Bank fees, select the correct account to
-book those fees. Moreover we also need to specify that the amount type
-is “Percentage of balance” with an Amount of 100%. This parameter will
-tell Odoo to take the entire fee into account.</p><img src="../../../_images/configure02.png" style="" class="img-responsive center-block"><p >Save your changes when you are done.</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >If the amount of your bank fee is fixed, you can as well select <strong >Fixed</strong>
-under amount type and specify the amount in the amount tap.</p></div><div role="alert" class="alert-go_to alert"><p class="alert-title">See also</p><p >You can also use this functionality to handle discounts. Please refer to
-<a href="../../receivables/customer_invoices/cash_discounts.html" class="internal alert-link reference"><span class="doc">Offer cash discounts</span></a></p></div></section><section id="register-your-payments-based-on-a-reconciliation-model"><h2 >Register your payments based on a reconciliation model</h2><p >Register your payment by importing your bank statements that will be
-impacted by the payment of the bank fee.</p><p >When doing the reconciliation, you can select an open balance and click
-the <strong >Reconciliation Model</strong> button (in this case, <strong >Bank Fees</strong>) to get all
-the relevant data instantly.</p><img src="../../../_images/configure03.png" style="" class="img-responsive center-block"><p >Finally, click on <strong >Reconcile</strong> to finish the process.</p><div role="alert" class="alert-go_to alert"><p class="alert-title">See also</p><ul ><li ><a href="../feeds/manual.html" class="internal alert-link reference"><span class="doc">Register bank statements manually</span></a></li><li ><a href="../feeds/ofx.html" class="internal alert-link reference"><span class="doc">Import OFX statement files</span></a></li><li ><a href="use_cases.html" class="internal alert-link reference"><span class="doc">Use cases in the bank reconciliation process?</span></a></li></ul></div></section>
+  <section id="configure-model-of-entries"></section><section id="overview"><h2 >Общий обзор</h2><p >В Odoo у вас есть возможность предварительно заполнить некоторые бухгалтерские записи, чтобы легко согласовать периодические записи, такие как банковские комиссии.</p><p >Мы приведем такой пример, чтобы проиллюстрировать концепцию: каждый месяц наша компания получает стоимость банковской комиссии, которая зависит от текущего баланса нашего банковского счета. Таким образом, эта плата является переменной.</p></section><section id="create-reconciliation-models"><h2 >Создайте модель согласования</h2><p >Во-первых, нам нужно настроить две модели согласования. Для этого перейдите на панель приборов модуля бухучета. В своем банковском журнале нажмите на ссылку: menuselection: [UNKNOWN NODE title_reference].</p><img src="../../../_images/configure01.png" style="" class="img-responsive center-block"><p >Мы хотим, чтобы мы могли легко бронировать нашу банковскую комиссию. Наш банк высчитывает комиссию в зависимости от нашего баланса, а это значит, что она может меняться ежемесячно.</p><p >Мы создаем кнопку Метка, которая называется Банковская комиссия, выбираем правильный счет, чтобы заказать эти комиссии. Кроме того, нам также нужно указать, что тип суммы &amp;quot;Процент баланса&amp;quot; с суммой 100%. Этот параметр позволит Odoo взять всю комиссию в счет.</p><img src="../../../_images/configure02.png" style="" class="img-responsive center-block"><p >Сохраните свои изменения, когда закончите.</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Если фиксированная сумма вашей банковской комиссии, вы также можете выбрать ** Исправлено ** по типу суммы и укажите сумму.</p></div><div role="alert" class="alert-go_to alert"><p class="alert-title">См.также</p><p >Вы также можете использовать эту функцию для обработки скидок. Пожалуйста, обратитесь к: doc: [UNKNOWN NODE title_reference]</p></div></section><section id="register-your-payments-based-on-a-reconciliation-model"><h2 >Зарегистрируйте свои платежи на основе модели согласования</h2><p >Зарегистрируйте платеж, импортируя свои банковские выписки, которые повлияют на оплату банковской комиссии.</p><p >При осуществлении согласования вы можете выбрать открытый баланс и нажать кнопку ** Модель согласования ** (в данном случае - ** Банковские комиссии [UNKNOWN NODE problematic]), чтобы мгновенно получать все соответствующие данные.</p><img src="../../../_images/configure03.png" style="" class="img-responsive center-block"><p >Наконец, нажмите ** Согласовать [UNKNOWN NODE problematic], чтобы завершить процесс.</p><div role="alert" class="alert-go_to alert"><p class="alert-title">См.также</p><ul ><li ><a href="../feeds/manual.html" class="internal alert-link reference"><span class="doc">Регистрация банковской выписки в Odoo вручную</span></a></li><li ><a href="../feeds/ofx.html" class="internal alert-link reference"><span class="doc">Импорт файлов операций OFX</span></a></li><li ><a href="use_cases.html" class="internal alert-link reference"><span class="doc">Используйте различные варианты в процессе согласования банковской выписки</span></a></li></ul></div></section>
 
           </article>
         </div>

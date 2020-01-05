@@ -1,12 +1,12 @@
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>How to do inter-warehouses transfers? &#8212; Odoo 13.0 documentation</title>
+    <title>Как делать внутренне складские перемещения? &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/accounting.css" />
@@ -27,16 +27,20 @@
     <script type="text/javascript" src="../../../_static/inventory.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
     <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
     <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../../_static/doc.js"></script>
     <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
-    <link rel="canonical" href="" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/inventory/routes/concepts/inter_warehouse.html" />
+    <link rel="alternate" hreflang="x-default" href="/13.0/inventory/routes/concepts/inter_warehouse.html" />
+    <link rel="alternate" hreflang="uk" href="/13.0/uk/inventory/routes/concepts/inter_warehouse.html" />
+    <link rel="canonical" href="/master/ru/inventory/routes/concepts/inter_warehouse.html" />
   
-    <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="index" title="Алфавитный указатель" href="../../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../../search.html" />
     <link rel="next" title="Organize a cross-dock in a warehouse" href="cross_dock.html" />
-    <link rel="prev" title="What is a push rule?" href="push_rule.html" /> 
+    <link rel="prev" title="Что такое правило выталкивания?" href="push_rule.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -194,7 +198,7 @@
         
             
                 
-                    <li><a href="../../../inventory.html">Inventory</a></li>
+                    <li><a href="../../../inventory.html">Склад</a></li>
                 
             
         
@@ -211,7 +215,7 @@
             
         
     
-    <li class="active"><a href="#">How to do inter-warehouses transfers?</a></li>
+    <li class="active"><a href="#">Как делать внутренне складские перемещения?</a></li>
 
               
           </ol>
@@ -227,12 +231,27 @@
 
             
             
+<li class="languages dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        &#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/inventory/routes/concepts/inter_warehouse.html">English</a></li>
+        
+            <li><a href="/13.0/uk/inventory/routes/concepts/inter_warehouse.html">Ukrainian</a></li>
+        
+    </ul>
+</li>
+
 
 
             
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
             
 
             
@@ -259,6 +278,8 @@
             
 
             
+              <li class="divider"></li>
+            
           </ul>
         </div>
       </div>
@@ -268,7 +289,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> How to do inter-warehouses transfers? </h1>
+        <h1> Как делать внутренне складские перемещения? </h1>
       </div>
     </figure>
     
@@ -281,7 +302,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a></li><li class="list-group-item"><a href="#creating-a-new-warehouse" class="ripple internal reference">Creating a new warehouse</a></li><li class="list-group-item"><a href="#creating-a-new-inventory" class="ripple internal reference">Creating a new inventory</a></li><li class="list-group-item"><a href="#create-an-internal-transfer" class="ripple internal reference">Create an internal transfer</a></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Настройка</a></li><li class="list-group-item"><a href="#creating-a-new-warehouse" class="ripple internal reference">Создание нового состава</a></li><li class="list-group-item"><a href="#creating-a-new-inventory" class="ripple internal reference">Создание новой инвентаризации</a></li><li class="list-group-item"><a href="#create-an-internal-transfer" class="ripple internal reference">Создайте внутреннее перемещение</a></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/inventory/routes/concepts/inter_warehouse.rst" class="gith-link">
                   Edit on GitHub
@@ -293,46 +314,9 @@
           <article class="doc-body  ">
             
             
-  <section id="how-to-do-inter-warehouses-transfers"><p >If you own different warehouses you might want to transfer goods from
-one warehouse to the other. This is very easy thanks to the inventory
-application in Odoo.</p></section><section id="configuration"><h2 >Configuration</h2><p >First of all you have to select the multi locations option. Go to
-<span class="menuselection">Configuration ‣ Settings</span> in the <strong >Inventory application</strong>.
-Then tick the <strong >Manage several locations per
-warehouse</strong> option. Please don’t forget to <strong >apply</strong> your changes.</p><img src="../../../_images/inter01.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >This option should also be ticked if you wish to manage different
-locations and routes in your warehouse.</p></div></section><section id="creating-a-new-warehouse"><h2 >Creating a new warehouse</h2><p >The next step is to create your new warehouse. In the Inventory application
-click on <span class="menuselection">Configuration ‣ Warehouse Management ‣
-Warehouses</span>. You are now able to create your warehouse by clicking on
-<strong >Create</strong>.</p><p >Fill in a <strong >Warehouse Name</strong> and a <strong >Short Name</strong>. The short name is 5
-characters maximum.</p><img src="../../../_images/inter02.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >please note that the <strong >Short Name</strong> is very important as it will
-appear on your transfer orders and other warehouse documents. It might
-be smart to use an understandable one (e.g.: WH/[first letters of
-location]).</p></div><p >If you go back to your dashboard, new operations will automatically have
-been generated for your new warehouse.</p><img src="../../../_images/inter03.png" style="" class="img-responsive center-block"></section><section id="creating-a-new-inventory"><h2 >Creating a new inventory</h2><p >If you create a new warehouse you might already have an existing
-physical inventory in it. In that case you should create an inventory in
-Odoo, if not you can skip this step.</p><p >Go into the inventory application, select <span class="menuselection">Inventory Control ‣
-Inventory Adjustment</span>. You can then create a new inventory by clicking on
-<strong >Create</strong>. Fill in the <strong >Inventory Reference</strong>, <strong >Date</strong>
-and be sure to select the right warehouse and location.</p><img src="../../../_images/inter04.png" style="" class="img-responsive center-block"><p >Next, click on <strong >Start Inventory</strong>. A new window will open where you will
-be able to input your existing products. Select add an item and indicate
-the <strong >Real Quantity</strong> available in the warehouse. The theoretical quantity
-can not be changed as it represents a computed quantity from purchase
-and sales orders.</p><img src="../../../_images/inter05.png" style="" class="img-responsive center-block"><p >Don’t forget to validate your inventory once you have recorder the state of
-all yours product.</p></section><section id="create-an-internal-transfer"><h2 >Create an internal transfer</h2><p >The final step is to create your internal transfer. If you want to
-tranfer 2 units of a product from your first warehouse to another one in
-Brussels, proceed as follows:</p><p >From your dashboard, select a internal movement of one of the two
-warehouses. To do so, click on <span class="menuselection">More  ‣ Transfer</span>.</p><img src="../../../_images/inter06.png" style="" class="img-responsive center-block"><p >A new window will open where you will be able to select the source
-location zone (in this case our “old warehouse”) and the destination
-location zone (in this case our “new” warehouse located in Brussels).</p><p >Add the products you want to transfer by clicking on <strong >Add an Item</strong> and
-don’t forget to <strong >Validate</strong> or <strong >Mark as TODO</strong> once you are done.</p><img src="../../../_images/inter07.png" style="" class="img-responsive center-block"><p >If you select <strong >Validate</strong>, Odoo will process all quantities to transfer.</p><p >If you select <strong >Mark as TODO</strong>, Odoo will put the transfer in <strong >Waiting
-Availability</strong> status. Click on <strong >Reserve</strong> to reserve the amount of
-products in your source warehouse.</p><p >It is also possible to manually transfer each product:</p><ol ><li ><p >Via your dashboard, select the transfer order in the source location.</p><img src="../../../_images/inter08.png" style="" class="img-responsive center-block"></li><li ><p >Select the right transfer order</p><img src="../../../_images/inter09.png" style="" class="img-responsive center-block"></li></ol><p >3. Click on the little pencil logo in the lower right
+  <section id="how-to-do-inter-warehouses-transfers"><p >Если у вас есть различные складские помещения, вы можете переместить товары с одного склада на другой. Это очень просто благодаря склада в Odoo.</p></section><section id="configuration"><h2 >Настройка</h2><p >Прежде всего вам нужно выбрать вариант нескольких местонахождений. Перейдите к: menuselection: [UNKNOWN NODE problematic]Настройка -&amp;gt; Налаштування`в приложении ** Состав [UNKNOWN NODE problematic]. Затем поставьте галочку на пункте ** Управление несколькими местонахождению на складе [UNKNOWN NODE problematic]. Пожалуйста, не забудьте ** применить ** свои изменения.</p><img src="../../../_images/inter01.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >Этот параметр также обозначить, если вы хотите управлять различными местонахождению и маршрутами на своем складе.</p></div></section><section id="creating-a-new-warehouse"><h2 >Создание нового состава</h2><p >Следующим шагом является создание вашего нового состава. В программе Состав нажмите: menuselection: [UNKNOWN NODE title_reference]. Теперь вы можете создать свой состав, нажав кнопку ** Создать [UNKNOWN NODE problematic].</p><p >Заполните ** название состава ** и ** краткое название [UNKNOWN NODE problematic], которая должна составлять максимум 5 символов.</p><img src="../../../_images/inter02.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >Обратите внимание на то, что ** краткое название ** очень важна, поскольку она будет отображаться в вашем распоряжении и других складских документах. Возможно, разумно использовать понятное название (например, ВС / [первые буквы внутреннего состава]).</p></div><p >Если вы вернетесь на информационную панель, новые операции автоматически создан для вашего нового состава.</p><img src="../../../_images/inter03.png" style="" class="img-responsive center-block"></section><section id="creating-a-new-inventory"><h2 >Создание новой инвентаризации</h2><p >Если вы создадите новый состав, у вас может быть доступна существующая инвентаризация. В таком случае вы должны создать инвентаризацию в Odoo, если не можете пропустить этот шаг.</p><p >Выделите приложение Состав, выберите: menuselection: [UNKNOWN NODE title_reference]. Затем можно создать новую инвентаризацию, нажав кнопку ** Создать [UNKNOWN NODE problematic]. Заполните ** реестр товара [UNKNOWN NODE problematic], ** дату ** и обязательно выберите правильный состав и местонахождения.</p><img src="../../../_images/inter04.png" style="" class="img-responsive center-block"><p >Нажмите ** Начать инвентаризацию [UNKNOWN NODE problematic]. Откроется новое окно, где вы сможете вводить существующие товары. Выберите добавления элемента и укажите ** Реальный объем [UNKNOWN NODE problematic], имеющийся на складе. Теоретическая количество не может быть изменена, поскольку она представляет исчисленный объем заказов на покупку и продажу.</p><img src="../../../_images/inter05.png" style="" class="img-responsive center-block"><p >Не забудьте проверить свою инвентаризацию, как только у вас запишется этап всего вашего товара.</p></section><section id="create-an-internal-transfer"><h2 >Создайте внутреннее перемещение</h2><p >Последний шаг - создание внутреннего перемещения. Если вы хотите переместить две единицы товара с вашего первого склада на другой, который находится именно в Брюсселе, выполните следующие действия:</p><p >На информационной панели выберите внутреннее перемещение одного из двух слогов. Для этого нажмите: menuselection: [UNKNOWN NODE title_reference].</p><img src="../../../_images/inter06.png" style="" class="img-responsive center-block"><p >Откроется новое окно, где вы можете выбрать зону местонахождение источника (в этом случае наш &amp;quot;старый состав») и зону местонахождение назначения (в данном случае наш &amp;quot;новый состав&amp;quot; расположен в Брюсселе).</p><p >Добавьте товары, которые вы хотите передать, нажав ** Добавить объект [UNKNOWN NODE problematic], и не забудьте ** проверить ** или ** обозначить как СДЕЛАТЬ [UNKNOWN NODE problematic], когда вы закончите.</p><img src="../../../_images/inter07.png" style="" class="img-responsive center-block"><p >Если вы выберете ** Проверить [UNKNOWN NODE problematic], Odoo будет обрабатывать все перечисленные величины.</p><p >Если вы выберете ** Отметить как СДЕЛАТЬ [UNKNOWN NODE problematic]<em >, Odoo поставит перемещения в статус *</em> ожидания [UNKNOWN NODE problematic]. Нажмите ** Резерв [UNKNOWN NODE problematic], чтобы зарезервировать количество товаров на своем исходном составе.</p><p >Можно также вручную переместить каждый товар:</p><ol ><li ><p >С помощью информационной панели выберите замолвння на перемещение в местонахождении источника.</p><img src="../../../_images/inter08.png" style="" class="img-responsive center-block"></li><li ><p >Выберите правильный заказ на перемещение</p><img src="../../../_images/inter09.png" style="" class="img-responsive center-block"></li></ol><p >3. Click on the little pencil logo in the lower right
 corner in order to open the operation details window. In this new
-window you can manually indicate how much products you process</p><img src="../../../_images/inter10.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >If you decide to partially process the transfer order (e.g. a part of the
-products can’t be shipped yet due to an unexpected event), Odoo will
-automatically ask if you wish to create a <strong >backorder</strong>.
-Create a backorder if you expect to process the remaining products
-later, do not create a backorder if you will not supply/receive the
-remaining products.</p></div></section>
+window you can manually indicate how much products you process</p><img src="../../../_images/inter10.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >Если вы решите частично обрабатывать заказы на перемещение (например, часть товаров еще не может быть отправлена через неожиданную событие), Odoo автоматически спросит, хотите ли вы создать ** обратное заказ [UNKNOWN NODE problematic]. Создайте обратной логотип, если вы хотите позже обработать товары, оставшиеся не создавайте обратное заказ, если вы не придаете / не получите другие товары.</p></div></section>
 
           </article>
         </div>
