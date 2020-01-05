@@ -1,5 +1,5 @@
 
-name: CI
+name: Rebuild docs
 
 on: [push]
 
@@ -10,10 +10,12 @@ jobs:
     
     steps:
     - uses: actions/checkout@v2
-      path: src
+      with:
+        path: src
     - uses: actions/checkout@v2
-      ref: master
-      path: dst
+      with:
+        ref: master
+        path: dst
     - name: Set up Python 2.7
       uses: actions/setup-python@v1
       with:
