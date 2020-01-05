@@ -1,0 +1,641 @@
+<!doctype html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Odoo Enterprise Subscription Agreement (ES) &#8212; Odoo 13.0 documentation</title>
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/accounting.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <link rel="canonical" href="" />
+  
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+  </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
+<!--
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <div class="o_header_buttons">
+        <a href="http://www.odoo.com/trial" class="btn btn-primary">Start Now</a>
+      </div>
+      <ul class="o_primary_nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Apps</a>
+          <div class="dropdown-menu o_secondary_nav">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-3 o_website_apps">
+                  <div class="o_nav_app_family">
+                    <span></span> Websites
+                    <div>Build great user experience</div>
+                  </div>
+                  <ul>
+                    <li><a href="https://www.odoo.com/page/website-builder">Website Builder</a></li>
+                    <li><a href="https://www.odoo.com/page/e-commerce">eCommerce</a></li>
+                    <li><a href="https://www.odoo.com/page/blog-engine">Blogs</a></li>
+                    <li><a href="https://www.odoo.com/page/community-builder">Forums</a></li>
+                    <li><a href="https://www.odoo.com/page/learning-management-system">eLearning</a></li>
+                    <li><a href="https://www.odoo.com/page/live-chat">Live Chat</a></li>
+                  </ul>
+                </div>
+                <div class="col-sm-3 o_sale_apps">
+                  <div class="o_nav_app_family">
+                    <span></span> Sales
+                    <div>Boost your success rate</div>
+                  </div>
+                  <ul>
+                    <li><a href="https://www.odoo.com/page/sales">Sales</a></li>
+                    <li><a href="https://www.odoo.com/page/crm">CRM</a></li>
+                    <li><a href="https://www.odoo.com/page/billing">Invoicing</a></li>
+                    <li class="dropdown">
+                      <a href="#0" class="dropdown-toggle">Point of Sale</a>
+                      <ul>
+                        <li><a href="https://www.odoo.com/page/point-of-sale">Shops</a></li>
+                        <li><a href="https://www.odoo.com/page/pos-restaurant">Restaurants</a></li>
+                        <li><a href="https://www.odoo.com/page/point-of-sale-hardware">Hardware</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://www.odoo.com/page/subscriptions">Subscriptions</a></li>
+                    <li><a href="https://www.odoo.com/page/sign">Sign</a></li>
+                    <li><a href="https://www.odoo.com/page/rental">Rental</a></li>
+                  </ul>
+                </div>
+                <div class="col-sm-3 o_operation_apps">
+                  <div class="o_nav_app_family">
+                    <span></span> Operations
+                    <div>It's all about efficiency</div>
+                  </div>
+                  <ul>
+                    <li><a href="https://www.odoo.com/page/accounting/">Accounting</a></li>
+                    <li><a href="https://www.odoo.com/page/project-management/">Project</a></li>
+                    <li class="dropdown">
+                      <a href="#0" class="dropdown-toggle">Human Resources</a>
+                      <ul>
+                        <li><a href="https://www.odoo.com/page/referral">Referral</a></li>
+                        <li><a href="https://www.odoo.com/page/employees">Employees</a></li>
+                        <li><a href="https://www.odoo.com/page/expenses">Expenses</a></li>
+                        <li><a href="https://www.odoo.com/page/appraisal">Appraisal</a></li>
+                        <li><a href="https://www.odoo.com/page/fleet">Fleet</a></li>
+                        <li><a href="https://www.odoo.com/page/leaves">Time Off</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://www.odoo.com/page/warehouse">Inventory</a></li>
+                    <li><a href="https://www.odoo.com/page/purchase">Purchase</a></li>
+                    <li class="dropdown">
+                      <a href="#0" class="dropdown-toggle">Manufacturing</a>
+                      <ul>
+                        <li><a href="https://www.odoo.com/page/manufacturing">MRP</a></li>
+                        <li><a href="https://www.odoo.com/page/plm">PLM</a></li>
+                        <li><a href="https://www.odoo.com/page/maintenance">Maintenance</a></li>
+                        <li><a href="https://www.odoo.com/page/quality">Quality</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://www.odoo.com/page/helpdesk">Helpdesk</a></li>
+                    <li><a href="https://www.odoo.com/page/field-service-management">Field Service</a></li>
+                  </ul>
+                </div>
+                <div class="col-sm-3 o_productivity_apps">
+                  <div class="o_nav_app_family">
+                    <span></span> Productivity Tools
+                    <div>Great Tools = Happy People</div>
+                  </div>
+                  <ul>
+                    <li class="dropdown">
+                      <a href="#0" class="dropdown-toggle">Communication</a>
+                      <ul>
+                        <li><a href="https://www.odoo.com/page/discuss">Discuss</a></li>
+                        <li><a href="https://www.odoo.com/page/discuss-groups">Mailing Lists</a></li>
+                        <li><a href="https://www.odoo.com/page/notes">Notes</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://www.odoo.com/page/timesheet">Timesheet</a></li>
+                    <li><a href="https://www.odoo.com/page/events">Events</a></li>
+                    <li class="dropdown">
+                      <a href="#0" class="dropdown-toggle">Marketing</a>
+                      <ul>
+                        <li><a href="https://www.odoo.com/page/marketing-automation">Automation</a></li>
+                        <li><a href="https://www.odoo.com/page/email-marketing">Email</a></li>
+                        <li><a href="https://www.odoo.com/page/social-marketing">Social</a></li>
+                        <li><a href="https://www.odoo.com/page/sms-marketing">SMS</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://www.odoo.com/page/survey">Survey</a></li>
+                    <li><a href="https://www.odoo.com/page/approval-workflow">Approvals</a></li>
+                    <li><a href="https://www.odoo.com/page/appointments">Appointments</a></li>
+                    <li><a href="https://www.odoo.com/page/documents">Documents</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <a href="http://www.odoo.com/apps/modules" class="o_store_link"><i class="fa fa-cube fa-fw"></i> Third party apps</a>
+          </div>
+        </li>
+        <li><a href="https://www.odoo.com/page/tour">Tour</a></li>
+        <li><a href="https://www.odoo.com/pricing">Pricing</a></li>
+        <li><a href="https://www.odoo.com/page/docs">Docs</a></li>
+      </ul>
+    </div>
+-->
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Navigate
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+
+
+
+
+
+    
+    <li class="active"><a href="#">Odoo Enterprise Subscription Agreement (ES)</a></li>
+
+              
+          </ol>
+
+          <div class="call-to-action navbar-right hidden-xs">
+            <a href="http://www.odoo.com/trial" class="btn btn-primary">Start Now</a>
+          </div>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+
+            
+            
+
+<!--
+<li><a href="https://www.odoo.com/documentation/user/13.0/index.html">User</a></li>
+<li><a href="https://www.odoo.com/documentation/13.0/index.html">Developer</a></li>
+<li><a href="https://odoo.com/slides">eLearning</a></li>
+<li><a href="https://www.odoo.com/documentation/13.0/webservices/odoo.html">API</a></li>
+<li><a href="https://www.odoo.com/documentation/13.0/setup/install.html">Installation</a></li>
+<li><a href="https://www.odoo.com/page/odoo-white-paper">White Papers</a></li>
+<li><a href="https://www.odoo.com/page/legal">Legal</a></li>
+-->
+<li id="searchbox" style="display: none; margin: 0 0 0 10px;" role="search">
+    <form class="search form-inline" action="../../../search.html" method="get">
+        <input type="text" class="form-control" name="q" id="q" placeholder="Поиск..." />
+        <input type="hidden" name="area" value="default" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <button type="submit" value="Go" class="btn btn-default">Найти</button>
+    </form>
+</li>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+            
+
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    <figure class="card top ">
+      <span class="card-img" ></span>
+      <div class="container text-center">
+        <h1> Odoo Enterprise Subscription Agreement (ES) </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#terminos-de-duracion-del-acuerdo" class="ripple internal reference">1 Términos de duración del acuerdo</a></li><li class="list-group-item"><a href="#definiciones" class="ripple internal reference">2 Definiciones</a></li><li class="list-group-item"><a href="#acceso-al-software" class="ripple internal reference">3 Acceso al Software</a></li><li class="list-group-item"><a href="#servicios" class="ripple internal reference">4 Servicios</a><ul ><li class="list-group-item"><a href="#servicio-de-correccion-de-errores" class="ripple internal reference">4.1 Servicio de corrección de errores</a></li><li class="list-group-item"><a href="#servicio-de-actualizaciones-de-seguridad" class="ripple internal reference">4.2 Servicio de actualizaciones de seguridad</a><ul ><li class="list-group-item"><a href="#auto-alojamiento-self-hosting" class="ripple internal reference">Auto-alojamiento/Self-Hosting</a></li><li class="list-group-item"><a href="#plataforma-en-la-nube-cloud-hosting" class="ripple internal reference">Plataforma en la nube/Cloud Hosting</a></li></ul></li><li class="list-group-item"><a href="#servicios-de-actualizacion" class="ripple internal reference">4.3 Servicios de actualización</a><ul ><li class="list-group-item"><a href="#servicio-de-actualizacion-para-extensiones-de-terceros" class="ripple internal reference">Servicio de actualización para extensiones de terceros</a></li></ul></li><li class="list-group-item"><a href="#servicios-de-alojamiento-en-la-nube-cloud-hosting" class="ripple internal reference">4.4 Servicios de alojamiento en la nube / Cloud Hosting</a></li><li class="list-group-item"><a href="#servicios-de-soporte" class="ripple internal reference">4.5 Servicios de soporte</a><ul ><li class="list-group-item"><a href="#alcance" class="ripple internal reference">Alcance</a></li></ul></li></ul></li><li class="list-group-item"><a href="#cargos-y-cuotas" class="ripple internal reference">5 Cargos y Cuotas</a><ul ><li class="list-group-item"><a href="#cargos-estandares" class="ripple internal reference">5.1 Cargos estándares</a></li><li class="list-group-item"><a href="#cargos-de-renovacion" class="ripple internal reference">5.2 Cargos de renovación</a></li><li class="list-group-item"><a href="#cargos-por-servicios-de-actualizacion-de-modulos-de-terceros" class="ripple internal reference">5.3 Cargos por servicios de actualización de módulos de terceros</a></li><li class="list-group-item"><a href="#impuestos" class="ripple internal reference">5.4 Impuestos</a></li></ul></li><li class="list-group-item"><a href="#condiciones-de-los-servicios" class="ripple internal reference">6 Condiciones de los servicios</a><ul ><li class="list-group-item"><a href="#obligaciones-del-cliente" class="ripple internal reference">6.1 Obligaciones del cliente</a></li><li class="list-group-item"><a href="#no-solicitar-o-contratar" class="ripple internal reference">6.2 No solicitar o contratar</a></li><li class="list-group-item"><a href="#publicidad" class="ripple internal reference">6.3 Publicidad</a></li><li class="list-group-item"><a href="#confidencialidad" class="ripple internal reference">6.4 Confidencialidad</a></li><li class="list-group-item"><a href="#proteccion-de-datos" class="ripple internal reference">6.5 Protección de datos</a><ul ><li class="list-group-item"><a href="#procesamiento-de-datos-personales" class="ripple internal reference">Procesamiento de datos personales</a></li><li class="list-group-item"><a href="#sub-procesadores" class="ripple internal reference">Sub procesadores</a></li></ul></li><li class="list-group-item"><a href="#terminacion" class="ripple internal reference">6.6 Terminación</a></li></ul></li><li class="list-group-item"><a href="#garantias-renuncias-responsabilidad-civil" class="ripple internal reference">7 Garantías, Renuncias, Responsabilidad Civil.</a><ul ><li class="list-group-item"><a href="#garantias" class="ripple internal reference">7.1 Garantías</a></li><li class="list-group-item"><a href="#renuncias" class="ripple internal reference">7.2 Renuncias</a></li><li class="list-group-item"><a href="#limitacion-de-responsabilidad" class="ripple internal reference">7.3 Limitación de responsabilidad</a></li><li class="list-group-item"><a href="#fuerza-mayor" class="ripple internal reference">7.4 Fuerza mayor</a></li></ul></li><li class="list-group-item"><a href="#disposiciones-generales" class="ripple internal reference">8 Disposiciones generales</a><ul ><li class="list-group-item"><a href="#ley-aplicable" class="ripple internal reference">8.1 Ley aplicable</a></li><li class="list-group-item"><a href="#divisibilidad" class="ripple internal reference">8.2 Divisibilidad</a></li></ul></li><li class="list-group-item"><a href="#apendice-a-licencia-de-odoo-enterprise-edition" class="ripple internal reference">9 Apéndice A: Licencia de Odoo Enterprise Edition</a></li></ul>
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/legal/terms/i18n/enterprise_es.rst" class="gith-link">
+                  Edit on GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body  ">
+            
+            
+  <section id="odoo-enterprise-subscription-agreement-es"><i id="enterprise-agreement-es"></i><div role="alert" class="alert-warning alert"><p class="alert-title">Warning</p><p >Esta es una traducción al español del “Odoo Enterprise Subscription Agreement”.
+Esta traducción se proporciona con la esperanza de que facilite la comprensión, pero no tiene valor legal.
+La única referencia oficial de los términos y condiciones del
+“Odoo Enterprise Subscription Agreement” es <a href="../enterprise.html#enterprise-agreement" class="internal alert-link reference"><span class="std std-ref">la versión original en
+inglés</span></a></p></div><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >Version 8.0 - 2018-05-22</p></div><p >Al suscribirse a los servicios de Odoo Enterprise proporcionados por
+Odoo SA y sus afiliados (colectivamente “Odoo SA”) en relación a Odoo Enterprise
+Edition u Odoo Community Edition, alojados en las plataformas <em >Cloud
+Hosting</em> (la nube de Odoo) o en las instalaciones <em >On Premise</em>
+(“Self-Hosting”), usted (el “Cliente”) acepta regirse por lo siguientes términos y condiciones:</p></section><section id="terminos-de-duracion-del-acuerdo"><i id="term-es"></i><h2 >1 Términos de duración del acuerdo</h2><p >La duración de este Acuerdo se especifica por escrito en el acuerdo
+entre las partes. Odoo acepta contratos mensuales o anuales. Los
+contratos de la licencia, llámese uso de Aplicaciones y de Usuarios, se
+renueva automáticamente por un término igual al contrato inicial a menos
+que cualquiera de las partes proporcione un aviso de terminación por
+escrito con un mínimo de 30 días antes de la fecha de finalización del
+acuerdo.</p></section><section id="definiciones"><i id="definitions-es"></i><h2 >2 Definiciones</h2><dl ><dt >Usuario</dt><dd >Cualquier cuenta de usuario activa con acceso al Software en
+modo de creación y / o edición. Las cuentas de usuario desactivadas y las cuentas utilizadas
+por personas (o sistemas) externos que solo tienen acceso limitado al Software a través del
+portal de usuario no son considerados <em >Usuarios.</em></dd><dt >Aplicación</dt><dd >Una “Aplicación” es un grupo especializado de funciones
+disponibles para la instalación en el Software, y listados en la sección de precios públicos
+del <a href="https://www.odoo.com/es_ES/" class="external reference">sitio web de Odoo SA</a></dd><dt >Error/Bug</dt><dd >Se considera un error cualquier falla del Software que
+resulte en una detención completa, un rastreo de errores o una violación de la seguridad,
+y no es causada directamente por una instalación o configuración defectuosa.
+El incumplimiento de algunas especificaciones o requisitos será considerado como error a
+discreción del Odoo SA (Por ejemplo, cuando el Software no cumple con el comportamiento ni
+los resultados para el cual fue diseñado, o cuando una característica específica del país
+ya no cumple con los requisitos legales de contabilidad).</dd><dt >Versiones Cubiertas</dt><dd ><p >A menos que se especifique lo contrario, los
+servicios que se ofrecen bajo este acuerdo son aplicables hasta las 3 versiones más recientes,
+inclusive.</p><p >Para estar cubierto por el presente Contrato, el Cliente debe utilizar la versión más reciente
+del software en el momento que se acuerda este contrato. De no ser el caso, se pueden realizar
+cargos adicionales, como se describe en el apartado número <a href="#charges-es" class="internal reference"><span class="std std-ref">5 Cargos y Cuotas</span></a></p></dd></dl></section><section id="acceso-al-software"><i id="enterprise-access-es"></i><h2 >3 Acceso al Software</h2><p >El cliente puede utilizar el software alojado en la plataforma en la
+nube, o elegir la opción de instalarlo en servidores propios. La
+plataforma en la nube está alojada y totalmente administrada por Odoo SA y se accede de forma
+remota por el cliente. Con la opción de self/hosting o alojado en servidores propios, el cliente
+en su lugar aloja el software en sistemas informáticos de su elección, que no están bajo el control
+de Odoo SA.</p><p >Durante la vigencia de este Acuerdo, Odoo SA otorga al Cliente una
+licencia no exclusiva e intransferible para usar (ejecutar, modificar, ejecutar después de la
+modificación) las opciones adquiridas del software, según los términos establecidos en el
+<a href="#appendix-a-es" class="internal reference"><span class="std std-ref">9 Apéndice A: Licencia de Odoo Enterprise Edition</span></a>.</p><p >El Cliente acuerda tomar todas las medidas necesarias para garantizar la ejecución y verificación
+de la parte del Software que se encuentra instalada o descargada tanto la verificación del uso de
+Odoo Enterprise Edition, incluyendo pero no limitado a la ejecución de su instancia, el número de
+usuarios activos/instalados y las aplicaciones instaladas.</p><p >Odoo SA se compromete a no divulgar figuras individuales o nombradas a terceros sin el
+consentimiento del Cliente, y tratar con todos los datos recopilados de conformidad con su
+Política de Privacidad oficial, publicado en <a href="https://www.odoo.com/privacy/" class="external reference">Odoo Privacy</a></p><p >Al vencimiento o terminación de este Acuerdo, esta licencia se revoca
+inmediatamente y el cliente acepta dejar de usar el software Odoo
+Enterprise Edition y la plataforma en la nube.</p><p >En caso de que el Cliente incumpla los términos de esta sección, el
+Cliente acepta pagar a Odoo SA una tarifa adicional igual a 300% del
+precio de lista aplicable para el número real de Usuarios y Aplicaciones
+instaladas.</p></section><section id="servicios"><i id="services-es"></i><h2 >4 Servicios</h2></section><section id="servicio-de-correccion-de-errores"><i id="bugfix-es"></i><h3 >4.1 Servicio de corrección de errores</h3><p >Durante la vigencia de este Acuerdo, Odoo SA se compromete a hacer todos los esfuerzos razonables
+para remediar cualquier error del software enviado por el cliente a través del canal apropiado
+(dirección de correo electrónico de la mesa de servicio de Odoo SA o el formulario del sitio web
+<a href="https://www.odoo.com/help/" class="external reference">Odoo Help</a> y comenzar a analizar la resolución del error dentro de
+un tiempo estimado de 2 días hábiles.</p><p >El cliente entiende que los errores causados por una modificación o
+extensión que sea parte del software oficial no será cubierto por este servicio de soporte.</p><p >Tan pronto como se solucione el error, se comunicará al cliente.</p><p >Para los clientes con alojamiento en la nube, si el error se ha
+solucionado en una revisión más reciente de la Versión Cubierta del
+Software utilizado por el cliente, el cliente acepta actualizar su
+sistema a esa revisión para obtener la corrección. No se le pedirá al
+cliente que actualice a la versión más reciente como solución.</p><p >Cuando se corrige un error en cualquier Versión Cubierta, Odoo SA se
+compromete a solucionar el error en todas las Versiones Cubiertas
+recientes del software.</p><p >Ambas partes reconocen que tal como se especifica en la licencia del
+Software y en la sección <a href="#liability-es" class="internal reference"><span class="std std-ref">7.3 Limitación de responsabilidad</span></a>,
+Odoo SA no se hace responsable de los errores en el Software.</p></section><section id="servicio-de-actualizaciones-de-seguridad"><h3 >4.2 Servicio de actualizaciones de seguridad</h3></section><section id="auto-alojamiento-self-hosting"><i id="secu-self-hosting-es"></i><h4 >Auto-alojamiento/Self-Hosting</h4><p >Durante la vigencia de este Acuerdo, Odoo SA se compromete a enviar un “Aviso de Seguridad” al
+cliente para cualquier error de seguridad que se descubra en las Versiones Cubiertas del software,
+al menos 2 semanas antes de hacer público el Aviso de seguridad, a menos que el error ya haya sido
+divulgado públicamente por un tercero. Los avisos de seguridad incluyen una descripción completa
+del error, su causa, sus posibles impactos en los sistemas del cliente, y la solución
+correspondiente para cada Cobertura.</p><p >El cliente entiende que el error y la información en el aviso de
+seguridad deben ser tratados como información confidencial como se
+describe en el apartado <a href="#confidentiality-es" class="internal reference"><span class="std std-ref">6.4 Confidencialidad</span></a> durante el período de embargo anterior a la
+divulgación pública.</p></section><section id="plataforma-en-la-nube-cloud-hosting"><h4 >Plataforma en la nube/Cloud Hosting</h4><p >Odoo SA se compromete a aplicar las soluciones de seguridad para
+cualquier error de seguridad descubierto en una versión del software
+alojado en la plataforma de la nube, en todos los sistemas bajo su
+control, tan pronto como la solución esté disponible, sin requerir
+ninguna acción manual del cliente.</p></section><section id="servicios-de-actualizacion"><i id="upgrade-es"></i><h3 >4.3 Servicios de actualización</h3><p id="upgrade-odoo-es"><strong >Servicio de actualización para el software</strong></p><p >Durante la vigencia de este Acuerdo, el Cliente puede enviar solicitudes de actualización a través
+del canal apropiado (normalmente, el sitio web del servicio de actualización de Odoo SA), para
+convertir una base de datos del software de una Versión Cubierta del software a una Versión
+Cubierta más reciente.</p><p >Para la Plataforma en la nube, las solicitudes de actualización se
+envían directamente desde el panel de control de la Plataforma en la
+nube, y no requiere ninguna carga de datos. Para Auto-Hosting, las
+solicitudes de actualización deben incluir una copia de respaldo
+completa de la base de datos del Cliente y los datos asociados
+(generalmente obtenido en el menú de copia de seguridad del software).</p><p >Este servicio se proporciona a través de una plataforma automatizada
+para permitir que el Cliente realice actualizaciones desatendidas una
+vez que una versión anterior de la base de datos del Cliente ha sido
+exitosamente actualizada para una Versión Cubierta. El Cliente puede
+presentar solicitudes de actualización sucesivas para una base de datos, y acepta enviar al menos
+1 solicitud de actualización para fines de prueba antes de enviar la solicitud de actualización final.</p><p >El Servicio de actualización se limita a la conversión técnica y la
+adaptación de la base de datos para que sea compatible con la versión de destino y la corrección
+de cualquier error directamente causado por la operación de actualización y que normalmente no
+ocurre en la versión de ndestino.</p><p >Es responsabilidad exclusiva del Cliente verificar y validar la base de datos actualizada para
+detectar errores, analizar el impacto de los cambios y las nuevas características implementadas
+en el versión de destino, y para convertir y adaptar a la versión de destino cualquier extensión
+de terceros que se haya instalado en la base de datos antes de la actualización (excepto cuando
+sea aplicable según lo previsto en la sección Servicio de actualización para extensiones de
+terceros). El cliente puede presentar múltiples solicitudes de actualización para una base de
+datos, hasta que se logre un resultado aceptable.</p></section><section id="servicio-de-actualizacion-para-extensiones-de-terceros"><i id="upgrade-extra-es"></i><h4 >Servicio de actualización para extensiones de terceros</h4><p >Durante la vigencia de este Acuerdo, el Cliente podrá solicitar
+servicios de actualización opcionales para módulos de extensión de
+terceros, además de los Servicios de actualización habituales. Esta
+servicio es opcional y está sujeto a tarifas adicionales (como se
+describe en el apartado <a href="#charges-es" class="internal reference"><span class="std std-ref">5 Cargos y Cuotas</span></a>) e incluye la adaptación técnica de módulos de terceros
+instalados en la base de datos del Cliente y sus datos correspondientes para ser compatibles con
+la versión de destino. El cliente recibirá una versión actualizada de todos los módulos de terceros
+instalados junto con la base de datos actualizada.</p></section><section id="servicios-de-alojamiento-en-la-nube-cloud-hosting"><i id="cloud-hosting-es"></i><h3 >4.4 Servicios de alojamiento en la nube / Cloud Hosting</h3><p >Durante la vigencia de este Acuerdo, cuando el Cliente elija utilizar la
+Plataforma en la nube (Cloud Hosting), Odoo SA se compromete a proporcionar los
+siguientes servicios:</p><ul ><li >Elección de múltiples regiones de alojamiento (mínimo 3: Europa,
+América, Asia / Pacífico)</li><li >Alojamiento en centros de datos de nivel III o equivalente, con un
+99,9% de tiempo de actividad óptima de la red</li><li >Cifrado de comunicación Grado A SSL (HTTPS)</li><li >Copias de seguridad verificadas, completamente automatizadas,
+replicadas en múltiples regiones</li><li >Plan de recuperación de desastres, probado regularmente</li></ul><p >Los detalles de los servicios de alojamiento en la nube se describen en
+la página del Acuerdo de nivel de servicio:
+<a href="http://www.odoo.com/cloud-sla" class="external reference">Cloud SLA</a>.</p></section><section id="servicios-de-soporte"><i id="support-service-es"></i><h3 >4.5 Servicios de soporte</h3></section><section id="alcance"><h4 >Alcance</h4><p >Durante la vigencia de este Acuerdo, el Cliente puede abrir un número
+ilimitado de tickets de soporte en <a href="https://www.odoo.com/help" class="external reference">Odoo SA</a>,
+exclusivamente para preguntas relacionadas con errores (<a href="#bugfix-es" class="internal reference"><span class="std std-ref">4.1 Servicio de corrección de errores</span></a>) u orientación con
+respecto al uso de las características estándar del Software y los Servicios (funcionalidades,
+uso previsto, configuración, solución de problemas).</p><p >Se pueden cubrir otras solicitudes de asistencia, como preguntas
+relacionadas con desarrollos, personalizaciones, instalación de
+Auto-Hosting o servicios que requieren acceso a la base de datos del
+Cliente a través de la compra de un Service Pack o Paquete de
+Implementación. En caso de que no quede claro si una solicitud está
+cubierta por este Acuerdo o un Service Pack, la decisión es a discreción de la disponibilidad de
+Odoo SA.</p></section><section id="cargos-y-cuotas"><i id="charges-es"></i><h2 >5 Cargos y Cuotas</h2></section><section id="cargos-estandares"><i id="charges-standard-es"></i><h3 >5.1 Cargos estándares</h3><p >Los cargos estándares para la suscripción de Odoo Enterprise y los
+Servicios se basan en el número de Usuarios y las Aplicaciones
+instaladas, en la versión de software utilizada por el cliente.</p><p >Cuando durante el plazo de uso del sistema, el Cliente tiene más
+Usuarios o más Aplicaciones instaladas que las especificadas en el
+momento de la celebración de este Acuerdo, el Cliente acepta pagar la
+tarifa adicional equivalente al precio de lista aplicable según el
+servicio que tenga instalado, para los Usuarios o Aplicaciones
+adicionales, para el resto del plazo.</p><p >Si en el momento de la conclusión de este Acuerdo, el Cliente utiliza
+una Versión Cubierta que no es la más reciente, los cargos estándares
+pueden incrementarse en un 50% durante la duración del primer plazo, a discreción exclusiva de
+Odoo SA, para cubrir los costos de mantenimiento adicionales.</p></section><section id="cargos-de-renovacion"><i id="charges-renewal-es"></i><h3 >5.2 Cargos de renovación</h3><p >En el momento de la renovación, tal como se describe en la sección <a href="#term-es" class="internal reference"><span class="std std-ref">1 Términos de duración del acuerdo</span></a>,
+si los cargos aplicados durante los términos
+anteriores son más bajos que el precio de lista aplicable más actual,
+estos cargos pueden aumentar hasta un 7%.</p></section><section id="cargos-por-servicios-de-actualizacion-de-modulos-de-terceros"><i id="charges-thirdparty-es"></i><h3 >5.3 Cargos por servicios de actualización de módulos de terceros</h3><p >El cargo adicional por el Servicio de actualización para módulos de
+terceros es de EUR (€) 1000.00 (mil euros) por 1000 líneas de código en los módulos de terceros,
+redondeados a las siguientes mil líneas. Las líneas de código incluyen todas las líneas de texto
+en el código fuente de esos módulos, independientemente del lenguaje de programación
+(Python, Javascript, etc.) o el formato de datos (XML, CSV, etc.), excluyendo líneas en blanco y
+líneas de comentarios.</p><p >Odoo SA se reserva el derecho de rechazar una solicitud de actualización para módulos de terceros
+en virtud de lo anterior si la calidad del código fuente de esos módulos es demasiado baja,
+o si estos módulos constituyen una interfaz con software o sistemas de terceros.
+La actualización de dichos módulos puede ser sujeta a una oferta por separado, fuera de este Acuerdo.</p></section><section id="impuestos"><i id="taxes-es"></i><h3 >5.4 Impuestos</h3><p >Todos los aranceles y cargos son exclusivos de todos los impuestos,
+aranceles o cargos federales, provinciales, estatales, locales u otros
+gubernamentales aplicables (colectivamente, “Impuestos”). El cliente es
+responsable de pagar todos los Impuestos asociados con las compras
+realizadas por el Cliente en virtud de este Acuerdo, excepto cuando Odoo
+SA está legalmente obligado a pagar o cobrar impuestos de los cuales el
+cliente es responsable.</p></section><section id="condiciones-de-los-servicios"><i id="conditions-es"></i><h2 >6 Condiciones de los servicios</h2></section><section id="obligaciones-del-cliente"><h3 >6.1 Obligaciones del cliente</h3><p >El Cliente se compromete a:</p><ul ><li >Pagar a Odoo SA cualquier cargo aplicable por los Servicios del
+presente Acuerdo, según las condiciones de pago especificadas en la
+factura correspondiente;</li><li >Notificar inmediatamente a Odoo SA cuando su número real de usarios
+o aplicaciones instaladas exceda el número especificado al final
+del Acuerdo y, en este caso, el pago de la tarifa adicional
+aplicable como se describe en la sección <a href="#charges-standard-es" class="internal reference"><span class="std std-ref">5.1 Cargos estándares</span></a>;</li><li >Tomar todas las medidas necesarias para garantizar la ejecución no
+modificada de la parte del Software que verifica la validez del uso
+de Odoo Enterprise Edition, como se describe en la sección <a href="#enterprise-access-es" class="internal reference"><span class="std std-ref">3 Acceso al Software</span></a>;</li><li >Designar a 1 persona de contacto dedicada del Cliente durante toda la duración del Acuerdo;</li></ul><p >Cuando el Cliente elige usar la Plataforma en la nube, el Cliente
+acuerda además:</p><ul ><li >Tomar todas las medidas razonables para mantener sus cuentas de
+Usuario seguras, incluso al elegir una contraseña segura y no
+compartirla con nadie más;</li><li >Hacer uso razonable de los servicios de alojamiento, cone xclusiónde cualquier actividad ilegal
+o actividades abusivas, y observar estrictamente las reglas descritas en la Política de uso
+aceptable publicada en <a href="https://www.odoo.com/acceptable-use" class="external reference">acceptable use</a>.</li></ul><p >Cuando el Cliente elige la opción de Auto-alojamiento, el Cliente acepta
+además:</p><p >Tomar todas las medidas razonables para proteger los archivos y las
+bases de datos del Cliente y para garantizar que los datos del Cliente sean seguros y estén
+protegidos, reconociendo que Odoo SA no se hace responsable de ninguna pérdida de datos</p><p >Otorgar a Odoo SA el acceso necesario para verificar la validez de la Edición Enterprise de Odoo
+uso a solicitud (por ejemplo, si la validación automática no es válida para el Cliente);</p></section><section id="no-solicitar-o-contratar"><h3 >6.2 No solicitar o contratar</h3><p >Excepto cuando la otra parte dé su consentimiento por escrito, cada
+parte, sus afiliados y sus representantes acuerdan no solicitar u
+ofrecer empleo a ningún empleado de la otra parte que esté involucrada en la prestación o el uso
+de los Servicios en virtud de este Acuerdo, durante la vigencia del Acuerdo y por un período de
+12 meses a partir de la fecha de terminación o vencimiento de este Acuerdo. En caso de cualquier
+incumplimiento de las condiciones de esta sección que conduzca a la terminación de dicho empleado,
+la parte infractora acuerda pagar a la otra parte un importe de EUR (€) 30000 (treinta mil euros).</p></section><section id="publicidad"><i id="publicity-es"></i><h3 >6.3 Publicidad</h3><p >Excepto cuando se notifique lo contrario por escrito, cada parte otorga a la otra una licencia
+mundial no transferible, no exclusiva, sin regalías para reproducir y mostrar el nombre,
+los logotipos de la otra parte y marcas comerciales, con el único fin de referirse a la otra parte
+como cliente o proveedor, en sitios web, comunicados de prensa y otros materiales de marketing.</p></section><section id="confidencialidad"><i id="confidentiality-es"></i><h3 >6.4 Confidencialidad</h3><p >Definición de “Información confidencial”: Toda la información divulgada
+por una parte (la “Parte reveladora”) a la otra parte (la “Parte
+receptora”), ya sea oralmente o por escrito, es decir, designado como
+confidencial o que razonablemente debe entenderse como confidencial dado
+la naturaleza de la información y las circunstancias de divulgación.</p><p >En particular, cualquier información relacionada con los negocios,
+asuntos, productos, desarrollos, secretos comerciales, “know-how”, el
+personal, los clientes y los proveedores de cualquiera de las partes
+deben considerarse confidenciales.</p><p >Para toda la Información confidencial recibida durante el Término de
+este Acuerdo, la parte receptora utilizará el mismo grado de atención
+que utiliza para proteger la confidencialidad de sus propios servicios
+similares.</p><p >La parte receptora puede divulgar información confidencial de la parte
+reveladora en la medida en que sea obligado por ley, siempre que la
+Parte Receptora dé aviso previo a la Parte Divulgadora de la divulgación
+obligada, en la medida permitida por la ley.</p></section><section id="proteccion-de-datos"><i id="data-protection-es"></i><h3 >6.5 Protección de datos</h3><p >Las definiciones de “Datos personales”, “Controlador”, “Procesamiento”
+toman los mismos significados que en el Reglamento (UE) 2016/679 y la
+Directiva 2002/58 / CE, y cualquier reglamento o legislación que los
+modifica o reemplaza (en lo sucesivo, “Legislación de protección de
+datos”)</p></section><section id="procesamiento-de-datos-personales"><h4 >Procesamiento de datos personales</h4><p >Las partes reconocen que la base de datos del Cliente puede contener
+datos personales, para los cuales el cliente es el controlador. Estos
+datos serán procesados por Odoo SA cuando el Cliente así lo indique,
+mediante el uso de cualquiera de los Servicios que requieren una base de
+datos (por ejemplo, los Servicios de hospedaje en la nube o el Servicio
+de actualización de la base de datos), o si el Cliente transfiere su
+base de datos o una parte de su base de datos a Odoo SA por cualquier
+motivo relacionado con este Acuerdo.</p><p >Este procesamiento se realizará de conformidad con la legislación de
+protección de datos. En particular, Odoo SA se compromete a:</p><ul ><li >(a) Solo procesar los datos personales cuando y como lo indique el Cliente, y para elp ropósito
+de realizar uno de los Servicios en virtud de este Acuerdo, a menos que sea requerido por la
+ley, en cuyo caso, Odoo SA proporcionará un aviso previo al Cliente, a menos que la ley lo prohíba;</li><li >(b) garantizar que todas las personas dentro de Odoo SA” autorizadas para procesar los Datos
+personales estén comprometidos con la confidencialidad;</li><li >(c) implementar y mantener medidas técnicas y organizativas adecuadas para proteger los datos
+personales contra el procesamiento no autorizado o ilegal y contra la pérdida accidental,
+destrucción, daño, robo, alteración o divulgación;</li><li >(d) enviará sin demora al Cliente cualquier solicitud de protección de datos que se haya enviado
+a Odoo SA con respecto a la base de datos del Cliente;</li><li >(e) notificar al Cliente inmediatamente al momento de conocer y confirmar cualquier accidente,
+el procesamiento no autorizado o ilegal de, la divulgación o el acceso a los datos personales;</li><li >(f) notificar al Cliente si las instrucciones de procesamiento infringen la Protección de datos
+aplicables a la legislación, en opinión de Odoo SA;</li><li >(g) poner a disposición del Cliente toda la información necesaria para demostrar el cumplimiento
+con la legislación de protección de datos, permitir y contribuir razonablemente
+a las auditorías, incluidas las inspecciones, realizadas o exigidas por el Cliente;</li><li >(h) eliminar permanentemente todas las copias de la base de datos del Cliente en posesión de
+Odoo SA, o devolver dichos datos, a elección del Cliente, a la terminación de este Acuerdo,
+sujeto a los retrasos especificados en la Política de privacidad
+de Odoo SA (<a href="https://www.odoo.com/privacy" class="external reference">Privacy</a>).</li></ul><p >Con respecto a los puntos (d) a (f), el Cliente acepta proporcionar a Odoo SA un contacto preciso
+para información en todo momento, según sea necesario para notificar al responsable de Protección
+de Datos del Cliente.</p></section><section id="sub-procesadores"><h4 >Sub procesadores</h4><p >El Cliente reconoce y acepta que para proporcionar los Servicios, Odoo SA puede utilizar
+proveedores de servicios de terceros (sub procesadores) para procesar datos personales.
+Odoo SA se compromete a utilizar únicamente sub procesadores de conformidad con la legislación de
+protección de datos. Este uso será cubierto por un contrato entre Odoo SA y el Sub procesador
+que proporciona garantías al efecto.</p><p >La Política de privacidad de Odoo SA, publicada en <a href="https://www.odoo.com/privacy" class="external reference">Odoo Privacy</a>
+proporciona información actualizada sobre los nombres y propósitos de los Sub procesadores
+actualmente en uso por Odoo SA para la ejecución de los Servicios.</p></section><section id="terminacion"><i id="termination-es"></i><h3 >6.6 Terminación</h3><p >En el caso de que cualquiera de las Partes incumpla alguna de las
+obligaciones que surgen en el presente documento, y si tal el
+incumplimiento no ha sido subsanado dentro de los 30 días de calendario posteriores
+a la notificación por escrito de dicho incumplimiento, este Acuerdo puede ser rescindido
+inmediatamente por la Parte que no incumple.</p><p >Además, Odoo SA puede rescindir el Contrato inmediatamente en caso de que el Cliente incumpla
+con pagos de las tarifas aplicables a los
+Servicios dentro de la fecha de vencimiento especificada en el factura.</p><p >Disposiciones supervivientes: Las secciones “<a href="#confidentiality-es" class="internal reference"><span class="std std-ref">6.4 Confidencialidad</span></a>”,
+“<a href="#disclaimers-es" class="internal reference"><span class="std std-ref">7.2 Renuncias</span></a>”,“<a href="#liability-es" class="internal reference"><span class="std std-ref">7.3 Limitación de responsabilidad</span></a>”, y “<a href="#general-provisions-es" class="internal reference"><span class="std std-ref">8 Disposiciones generales</span></a>” sobrevivirán
+cualquier terminación o vencimiento de este Acuerdo.</p></section><section id="garantias-renuncias-responsabilidad-civil"><i id="warranties-disclaimers-es"></i><h2 >7 Garantías, Renuncias, Responsabilidad Civil.</h2></section><section id="garantias"><i id="warranties-es"></i><h3 >7.1 Garantías</h3><p >Durante la vigencia de este Acuerdo, Odoo SA se compromete a utilizar
+esfuerzos comercialmente razonables con la finalidad de ejecutar los
+Servicios de acuerdo con los estándares de la industria generalmente
+aceptados siempre y cuando:</p><p >los sistemas informáticos del Cliente están en buen estado de
+funcionamiento y, en el caso de Auto-Hosting, el software se instala en
+un entorno operativo adecuado;</p><p >el Cliente proporciona información adecuada para la resolución de
+problemas y, para el Auto alojamiento, cualquier acceso que Odoo SA
+puede necesitar para identificar, reproducir y resolver problemas;</p><p >Todos los montos adeudados a Odoo SA han sido pagados.</p><p >El único y exclusivo remedio del Cliente y la única obligación de Odoo SA por cualquier
+incumplimiento de esta garantía es para Odoo SA reanudar la ejecución de los Servicios sin cargo
+adicional.</p></section><section id="renuncias"><i id="disclaimers-es"></i><h3 >7.2 Renuncias</h3><p >Excepto por lo expresamente dispuesto en este documento, ninguna de las
+partes ofrece ninguna garantía de ningún tipo, ya sea expresa,
+implícita, estatutaria o de otro tipo, y cada parte niega
+específicamente todas las garantías implícitas, incluida cualquier
+garantía implícita de comercialización, idoneidad para un propósito
+particular o no infracción, en la medida máxima permitida por la ley
+aplicable.</p><p >Odoo SA no garantiza que el Software cumpla con leyes o regulaciones
+locales o internacionales.</p></section><section id="limitacion-de-responsabilidad"><i id="liability-es"></i><h3 >7.3 Limitación de responsabilidad</h3><p >En la medida máxima permitida por la ley, la responsabilidad agregada de cada parte junto con los
+afiliados que surjan de o estén relacionados con este Acuerdo no excederán el 50% del monto total
+pagado por el Cliente en virtud de este Acuerdo durante los 12 meses inmediatamente anteriores
+a la fecha del evento que da lugar a tal reclamo. Las reclamaciones múltiples no ampliarán esta
+limitación.</p><p >En ningún caso, ninguna de las partes o sus afiliadas serán responsable
+por daños indirectos, especiales, ejemplares, incidentales o
+consecuentes de cualquier tipo, incluidos, entre otros, la pérdida de
+ingresos, ganancias, ahorros, pérdida de negocios u otras pérdidas
+financieras, costos de inactividad o demora, datos perdidos o dañados,
+que surjan de o en conexión con este Acuerdo independientemente de la
+forma de acción, ya sea en contrato, agravio (incluida negligencia
+estricta) o cualquier otra teoría legal o equitativa, incluso si una
+parte o sus afiliados han sido informados de la posibilidad de tales
+daños, o si una parte o sus afiliados no cumpla con su propósito
+esencial.</p></section><section id="fuerza-mayor"><i id="force-majeure-es"></i><h3 >7.4 Fuerza mayor</h3><p >Ninguna de las partes será responsable ante la otra parte por la demora
+en el cumplimiento o la falta de hacer cualquier desempeño bajo este
+Acuerdo cuando tal falla o demora sea causada por regulaciones
+gubernamentales, incendios, huelgas, guerras, inundaciones, accidentes,
+epidemias, embargos, apropiación de plantas, o producto en su totalidad
+o en parte por cualquier gobierno o autoridad pública, o cualquier otra
+causa o causas, ya sean de naturaleza similar o diferente, más allá del
+control razonable de dicha parte siempre que tal causa o causas existen.</p></section><section id="disposiciones-generales"><i id="general-provisions-es"></i><h2 >8 Disposiciones generales</h2></section><section id="ley-aplicable"><i id="governing-law-es"></i><h3 >8.1 Ley aplicable</h3><p >Ambas partes acuerdan que las leyes de Bélgica se aplicarán, en caso de
+que surja cualquier disputa fuera de o en relación con este Acuerdo, sin
+tener en cuenta la elección o el conflicto de principios legales. En la
+medida en que anteriormente se permita cualquier demanda o procedimiento
+judicial, ambas partes acuerdan someterse a la única jurisdicción del
+tribunal de Nivelles (Bélgica) con el fin de litigar todas las disputas.</p></section><section id="divisibilidad"><i id="severability-es"></i><h3 >8.2 Divisibilidad</h3><p >En caso de que una o más de las disposiciones de este Acuerdo o
+cualquiera de sus aplicaciones sean inválidas, ilegales o no exigibles
+en ningún aspecto, la validez, legalidad y exigibilidad de las
+disposiciones restantes del presente Acuerdo y su aplicación no serán de
+ninguna manera afectados o deteriorados. Ambas partes se comprometen a
+reemplazar cualquier inválido, ilegal o inaplicable disposición de este
+Acuerdo por una disposición válida que tenga los mismos efectos y
+objetivos.</p></section><section id="apendice-a-licencia-de-odoo-enterprise-edition"><i id="appendix-a-es"></i><h2 >9 Apéndice A: Licencia de Odoo Enterprise Edition</h2><p >Ver <a href="../../licenses/licenses.html#odoo-enterprise-license" class="internal reference"><span class="std std-ref">Odoo 13 Enterprise Edition</span></a>.</p></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+<!--
+  <footer>
+    <div id="footer" class="container">
+      <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+      <div class="row">
+        <div class="col-sm-7 col-md-7 col-lg-6">
+          <div class="row">
+            <div class="col-xs-6 col-sm-4">
+              <span class="menu_title">Community</span>
+              <ul>
+                <li><a href="https://github.com/odoo/odoo">Github</a></li>
+                <li><a href="http://www.odoo.com/page/download">Download</a></li>
+                <li class="divider"></li>
+                <li><a href="http://runbot.odoo.com/runbot/repo/git-github-com-odoo-enterprise-7">Runbot</a></li>
+                <li><a href="https://github.com/odoo/odoo/wiki/Translations">Translations</a></li>
+                <li class="divider"></li>
+                <li><a href="http://www.odoo.com/page/odoo-community">Mailing Lists</a></li>
+                <li><a href="http://www.odoo.com/forum/help-1">Forum</a></li>
+              </ul>
+            </div>
+            <div class="col-xs-6 col-sm-4">
+              <span class="menu_title">Services</span>
+              <ul>
+                <li><a href="http://www.odoo.com/pricing">Editions</a></li>
+                <li><a href="http://www.odoo.com/pricing-online">Cloud Pricing</a></li>
+                <li><a href="http://www.odoo.com/page/upgrade">Upgrade</a></li>
+                <li class="divider"></li>
+                <li><a href="http://www.odoo.com/partners">Find a partner</a></li>
+                <li><a href="http://www.odoo.com/page/become-a-partner">Become a partner</a></li>
+                <li class="divider"></li>
+                <li><a href="http://www.odoo.com/page/education-program">Education</a></li>
+                <li class="divider"></li>
+                <li><a href="http://www.odoo.com/page/security">Security</a></li>
+              </ul>
+            </div>
+            <div class="col-sm-4 mb64">
+              <span class="menu_title">About us</span>
+              <ul>
+                <li><a href="http://www.odoo.com/page/about-us">Our company</a></li>
+                <li><a href="http://www.odoo.com/page/contactus">Contact</a></li>
+                <li class="divider" />
+                <li><a href="http://www.odoo.com/event">Events</a></li>
+                <li><a href="http://www.odoo.com/blog/">Blog</a></li>
+                <li><a href="http://www.odoo.com/blog/6">Customers</a></li>
+                <li class="divider" />
+                <li><a href="http://www.odoo.com/jobs">Jobs</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-5 col-md-4 col-md-offset-1 col-lg-5 col-lg-offset-1">
+          <p>
+            <small>
+              Odoo is a suite of open source business apps that cover all your company needs: CRM, eCommerce, accounting, inventory, point of sale, project management, etc.
+              <br/><br/>
+              Odoo's unique value proposition is to be at the same time very easy to use and fully integrated.
+            </small>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="o_footer_bottom">
+      <div class="container">
+        <a class="small" href="http://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+        <div class="social-links pull-right">
+          <a href="http://www.odoo.com/web/about/facebook"><i class="fa fa-facebook"></i></a>
+          <a href="http://www.odoo.com/web/about/twitter"><i class="fa fa-twitter"></i></a>
+          <a href="http://www.odoo.com/web/about/linkedin"><i class="fa fa-linkedin"></i></a>
+          <a href="mailto:info@odoo.com"><i class="fa fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+-->
+  </body>
+</html>

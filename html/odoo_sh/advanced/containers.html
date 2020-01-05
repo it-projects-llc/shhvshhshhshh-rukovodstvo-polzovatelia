@@ -1,0 +1,516 @@
+<!doctype html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Containers &#8212; Odoo 13.0 documentation</title>
+    <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/accounting.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script type="text/javascript" src="../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.noconflict.js"></script>
+    <link rel="canonical" href="" />
+  
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Submodules" href="submodules.html" />
+    <link rel="prev" title="Advanced" href="../advanced.html" /> 
+  </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
+<!--
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <div class="o_header_buttons">
+        <a href="http://www.odoo.com/trial" class="btn btn-primary">Start Now</a>
+      </div>
+      <ul class="o_primary_nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Apps</a>
+          <div class="dropdown-menu o_secondary_nav">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-3 o_website_apps">
+                  <div class="o_nav_app_family">
+                    <span></span> Websites
+                    <div>Build great user experience</div>
+                  </div>
+                  <ul>
+                    <li><a href="https://www.odoo.com/page/website-builder">Website Builder</a></li>
+                    <li><a href="https://www.odoo.com/page/e-commerce">eCommerce</a></li>
+                    <li><a href="https://www.odoo.com/page/blog-engine">Blogs</a></li>
+                    <li><a href="https://www.odoo.com/page/community-builder">Forums</a></li>
+                    <li><a href="https://www.odoo.com/page/learning-management-system">eLearning</a></li>
+                    <li><a href="https://www.odoo.com/page/live-chat">Live Chat</a></li>
+                  </ul>
+                </div>
+                <div class="col-sm-3 o_sale_apps">
+                  <div class="o_nav_app_family">
+                    <span></span> Sales
+                    <div>Boost your success rate</div>
+                  </div>
+                  <ul>
+                    <li><a href="https://www.odoo.com/page/sales">Sales</a></li>
+                    <li><a href="https://www.odoo.com/page/crm">CRM</a></li>
+                    <li><a href="https://www.odoo.com/page/billing">Invoicing</a></li>
+                    <li class="dropdown">
+                      <a href="#0" class="dropdown-toggle">Point of Sale</a>
+                      <ul>
+                        <li><a href="https://www.odoo.com/page/point-of-sale">Shops</a></li>
+                        <li><a href="https://www.odoo.com/page/pos-restaurant">Restaurants</a></li>
+                        <li><a href="https://www.odoo.com/page/point-of-sale-hardware">Hardware</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://www.odoo.com/page/subscriptions">Subscriptions</a></li>
+                    <li><a href="https://www.odoo.com/page/sign">Sign</a></li>
+                    <li><a href="https://www.odoo.com/page/rental">Rental</a></li>
+                  </ul>
+                </div>
+                <div class="col-sm-3 o_operation_apps">
+                  <div class="o_nav_app_family">
+                    <span></span> Operations
+                    <div>It's all about efficiency</div>
+                  </div>
+                  <ul>
+                    <li><a href="https://www.odoo.com/page/accounting/">Accounting</a></li>
+                    <li><a href="https://www.odoo.com/page/project-management/">Project</a></li>
+                    <li class="dropdown">
+                      <a href="#0" class="dropdown-toggle">Human Resources</a>
+                      <ul>
+                        <li><a href="https://www.odoo.com/page/referral">Referral</a></li>
+                        <li><a href="https://www.odoo.com/page/employees">Employees</a></li>
+                        <li><a href="https://www.odoo.com/page/expenses">Expenses</a></li>
+                        <li><a href="https://www.odoo.com/page/appraisal">Appraisal</a></li>
+                        <li><a href="https://www.odoo.com/page/fleet">Fleet</a></li>
+                        <li><a href="https://www.odoo.com/page/leaves">Time Off</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://www.odoo.com/page/warehouse">Inventory</a></li>
+                    <li><a href="https://www.odoo.com/page/purchase">Purchase</a></li>
+                    <li class="dropdown">
+                      <a href="#0" class="dropdown-toggle">Manufacturing</a>
+                      <ul>
+                        <li><a href="https://www.odoo.com/page/manufacturing">MRP</a></li>
+                        <li><a href="https://www.odoo.com/page/plm">PLM</a></li>
+                        <li><a href="https://www.odoo.com/page/maintenance">Maintenance</a></li>
+                        <li><a href="https://www.odoo.com/page/quality">Quality</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://www.odoo.com/page/helpdesk">Helpdesk</a></li>
+                    <li><a href="https://www.odoo.com/page/field-service-management">Field Service</a></li>
+                  </ul>
+                </div>
+                <div class="col-sm-3 o_productivity_apps">
+                  <div class="o_nav_app_family">
+                    <span></span> Productivity Tools
+                    <div>Great Tools = Happy People</div>
+                  </div>
+                  <ul>
+                    <li class="dropdown">
+                      <a href="#0" class="dropdown-toggle">Communication</a>
+                      <ul>
+                        <li><a href="https://www.odoo.com/page/discuss">Discuss</a></li>
+                        <li><a href="https://www.odoo.com/page/discuss-groups">Mailing Lists</a></li>
+                        <li><a href="https://www.odoo.com/page/notes">Notes</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://www.odoo.com/page/timesheet">Timesheet</a></li>
+                    <li><a href="https://www.odoo.com/page/events">Events</a></li>
+                    <li class="dropdown">
+                      <a href="#0" class="dropdown-toggle">Marketing</a>
+                      <ul>
+                        <li><a href="https://www.odoo.com/page/marketing-automation">Automation</a></li>
+                        <li><a href="https://www.odoo.com/page/email-marketing">Email</a></li>
+                        <li><a href="https://www.odoo.com/page/social-marketing">Social</a></li>
+                        <li><a href="https://www.odoo.com/page/sms-marketing">SMS</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://www.odoo.com/page/survey">Survey</a></li>
+                    <li><a href="https://www.odoo.com/page/approval-workflow">Approvals</a></li>
+                    <li><a href="https://www.odoo.com/page/appointments">Appointments</a></li>
+                    <li><a href="https://www.odoo.com/page/documents">Documents</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <a href="http://www.odoo.com/apps/modules" class="o_store_link"><i class="fa fa-cube fa-fw"></i> Third party apps</a>
+          </div>
+        </li>
+        <li><a href="https://www.odoo.com/page/tour">Tour</a></li>
+        <li><a href="https://www.odoo.com/pricing">Pricing</a></li>
+        <li><a href="https://www.odoo.com/page/docs">Docs</a></li>
+      </ul>
+    </div>
+-->
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Navigate
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+
+
+
+
+
+    
+        
+            
+                <li><a href="../../index.html">Документация Пользователя</a></li>
+            
+        
+    
+        
+            
+                
+                    <li><a href="../documentation.html">Odoo.sh</a></li>
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+    <li class="active"><a href="#">Containers</a></li>
+
+              
+          </ol>
+
+          <div class="call-to-action navbar-right hidden-xs">
+            <a href="http://www.odoo.com/trial" class="btn btn-primary">Start Now</a>
+          </div>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+
+            
+            
+
+<!--
+<li><a href="https://www.odoo.com/documentation/user/13.0/index.html">User</a></li>
+<li><a href="https://www.odoo.com/documentation/13.0/index.html">Developer</a></li>
+<li><a href="https://odoo.com/slides">eLearning</a></li>
+<li><a href="https://www.odoo.com/documentation/13.0/webservices/odoo.html">API</a></li>
+<li><a href="https://www.odoo.com/documentation/13.0/setup/install.html">Installation</a></li>
+<li><a href="https://www.odoo.com/page/odoo-white-paper">White Papers</a></li>
+<li><a href="https://www.odoo.com/page/legal">Legal</a></li>
+-->
+<li id="searchbox" style="display: none; margin: 0 0 0 10px;" role="search">
+    <form class="search form-inline" action="../../search.html" method="get">
+        <input type="text" class="form-control" name="q" id="q" placeholder="Поиск..." />
+        <input type="hidden" name="area" value="default" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <button type="submit" value="Go" class="btn btn-default">Найти</button>
+    </form>
+</li>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+            
+
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    
+    
+    <figure class="card top has_banner">
+      <span class="card-img" style="background-image: url('../../_static/banners/odoo-sh.jpg');"></span>
+      <div class="container text-center">
+        <h1> Containers </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#overview" class="ripple internal reference">Overview</a></li><li class="list-group-item"><a href="#directory-structure" class="ripple internal reference">Directory structure</a></li><li class="list-group-item"><a href="#database-shell" class="ripple internal reference">Database shell</a></li><li class="list-group-item"><a href="#run-an-odoo-server" class="ripple internal reference">Run an Odoo server</a></li><li class="list-group-item"><a href="#debugging-in-odoo-sh" class="ripple internal reference">Debugging in Odoo.sh</a></li></ul>
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/odoo_sh/advanced/containers.rst" class="gith-link">
+                  Edit on GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body  ">
+            
+            
+  <section id="containers"></section><section id="overview"><h2 >Overview</h2><p >Each build is isolated within its own container (Linux namespaced container).</p><p >The base is an Ubuntu 16.04 system, where all of Odoo’s required dependencies,
+as well as common useful packages, are installed.</p><p >The Odoo.sh team is open to install any system packages
+as long as they are distributed in the official Ubuntu repositories.
+<a href="https://www.odoo.sh/feedback" class="external reference">Leave us a feedback</a> if you would like a package not yet installed.</p><p >If your project requires additional Python dependencies, or more recent releases,
+you can define a <code class="file">requirements.txt</code> file in the root of your branches listing them.
+The platform will take care to install these dependencies in your containers.
+<a href="https://pip.pypa.io/en/stable/reference/pip_install/#requirement-specifiers" class="external reference">The pip requirements specifiers</a>
+documentation can help you write a <code class="file">requirements.txt</code> file.
+To have a concrete example,
+check out the <a href="https://github.com/odoo/odoo/blob/13.0/requirements.txt" class="external reference">requirements.txt file of Odoo</a>.</p><p >The <code class="file">requirements.txt</code> files of submodules are taken into account as well. The platform
+looks for <code class="file">requirements.txt</code> files in each folder containing Odoo modules: Not in the module folder itself,
+but in their parent folder.</p></section><section id="directory-structure"><h2 >Directory structure</h2><p >As the containers are Ubuntu based, their directory structure follows the linux Filesystem Hierarchy Standard.
+<a href="https://help.ubuntu.com/community/LinuxFilesystemTreeOverview#Main_directories" class="external reference">Ubuntu’s filesystem tree overview</a>
+explains the main directories.</p><p >Here are the Odoo.sh pertinent directories:</p><div class="highlight-default"><div class="highlight"><pre><span></span>.
+├── home
+│    └── odoo
+│         ├── src
+│         │    ├── odoo                Odoo Community source code
+│         │    │    └── odoo-bin       Odoo server executable
+│         │    ├── enterprise          Odoo Enterprise source code
+│         │    ├── themes              Odoo Themes source code
+│         │    └── user                Your repository branch source code
+│         ├── data
+│         │    ├── filestore           database attachments, as well as the files of binary fields
+│         │    └── sessions            visitors and users sessions
+│         └── logs
+│              ├── install.log         Database installation logs
+│              ├── odoo.log            Running server logs
+│              ├── update.log          Database updates logs
+│              └── pip.log             Python packages installation logs
+└── usr
+     ├── lib
+     │    ├── python2.7
+     │         └── dist-packages       Python 2.7 standard libraries
+     │    ├── python3
+     │         └── dist-packages       Python 3 standard libraries
+     │    └── python3.5
+     │         └── dist-packages       Python 3.5 standard libraries
+     ├── local
+     │    └── lib
+     │         ├── python2.7
+     │         │    └── dist-packages  Python 2.7 third-party libraries
+     │         └── python3.5
+     │              └── dist-packages  Python 3.5 third-party libraries
+     └── usr
+          └── bin
+               ├── python2.7           Python 2.7 executable
+               └── python3.5           Python 3.5 executable
+</pre></div>
+</div>
+<p >Both Python 2.7 and 3.5 are installed in the containers. However:</p><ul ><li >If your project is configured to use Odoo 10.0, the Odoo server runs with Python 2.7.</li><li >If your project is configured to use Odoo 11.0 or above, the Odoo server runs with Python 3.5.</li></ul></section><section id="database-shell"><h2 >Database shell</h2><p >While accessing a container with the shell, you can access the database using <em >psql</em>.</p><div class="highlight-bash"><div class="highlight"><pre><span></span>odoo@odoo-addons-master-1.odoo.sh:~$ psql
+psql <span class="o">(</span><span class="m">9</span>.5.2, server <span class="m">9</span>.5.11<span class="o">)</span>
+SSL connection <span class="o">(</span>protocol: TLSv1.2, cipher: ECDHE-RSA-AES256-GCM-SHA384, bits: <span class="m">256</span>, compression: off<span class="o">)</span>
+Type <span class="s2">&quot;help&quot;</span> <span class="k">for</span> help.
+
+odoo-addons-master-1<span class="o">=</span>&gt;
+</pre></div>
+</div>
+<p ><strong >Be careful !</strong>
+<a href="https://www.postgresql.org/docs/current/static/sql-begin.html" class="external reference">Use transactions</a> (<em >BEGIN…COMMIT/ROLLBACK</em>)
+for every <em >sql</em> statements leading to changes
+(<em >UPDATE</em>, <em >DELETE</em>, <em >ALTER</em>, …), especially for your production database.</p><p >The transaction mechanism is your safety net in case of mistake.
+You simply have to rollback your changes to revert your database to its previous state.</p><p >For example, it may happen that you forget to set your <em >WHERE</em> condition.</p><div class="highlight-sql"><div class="highlight"><pre><span></span><span class="n">odoo</span><span class="o">-</span><span class="n">addons</span><span class="o">-</span><span class="n">master</span><span class="o">-</span><span class="mi">1</span><span class="o">=&gt;</span> <span class="k">BEGIN</span><span class="p">;</span>
+<span class="k">BEGIN</span>
+<span class="n">odoo</span><span class="o">-</span><span class="n">addons</span><span class="o">-</span><span class="n">master</span><span class="o">-</span><span class="mi">1</span><span class="o">=&gt;</span> <span class="k">UPDATE</span> <span class="n">res_users</span> <span class="k">SET</span> <span class="n">password</span> <span class="o">=</span> <span class="s1">&#39;***&#39;</span><span class="p">;</span>
+<span class="k">UPDATE</span> <span class="mi">457</span>
+<span class="n">odoo</span><span class="o">-</span><span class="n">addons</span><span class="o">-</span><span class="n">master</span><span class="o">-</span><span class="mi">1</span><span class="o">=&gt;</span> <span class="k">ROLLBACK</span><span class="p">;</span>
+<span class="k">ROLLBACK</span>
+</pre></div>
+</div>
+<p >In such a case, you can rollback to revert the unwanted changes that you just mistakenly did, and rewrite the statement:</p><div class="highlight-sql"><div class="highlight"><pre><span></span><span class="n">odoo</span><span class="o">-</span><span class="n">addons</span><span class="o">-</span><span class="n">master</span><span class="o">-</span><span class="mi">1</span><span class="o">=&gt;</span> <span class="k">BEGIN</span><span class="p">;</span>
+<span class="k">BEGIN</span>
+<span class="n">odoo</span><span class="o">-</span><span class="n">addons</span><span class="o">-</span><span class="n">master</span><span class="o">-</span><span class="mi">1</span><span class="o">=&gt;</span> <span class="k">UPDATE</span> <span class="n">res_users</span> <span class="k">SET</span> <span class="n">password</span> <span class="o">=</span> <span class="s1">&#39;***&#39;</span> <span class="k">WHERE</span> <span class="n">id</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="k">UPDATE</span> <span class="mi">1</span>
+<span class="n">odoo</span><span class="o">-</span><span class="n">addons</span><span class="o">-</span><span class="n">master</span><span class="o">-</span><span class="mi">1</span><span class="o">=&gt;</span> <span class="k">COMMIT</span><span class="p">;</span>
+<span class="k">COMMIT</span>
+</pre></div>
+</div>
+<p >However, do not forget to either commit or rollback your transaction after having done it.
+Open transactions may lock records in your tables
+and your running database may wait for them to be released. It can cause a server to hang indefinitely.</p><p >In addition, when possible, use your staging databases to test your statements first. It gives you an extra safety net.</p></section><section id="run-an-odoo-server"><h2 >Run an Odoo server</h2><p >You can start an Odoo server instance from a container shell. You won’t be able to access it from the outside world
+with a browser, but you can for instance:</p><ul ><li >use the Odoo shell,</li></ul><div class="highlight-bash"><div class="highlight"><pre><span></span>$  odoo-bin shell
+&gt;&gt;&gt; <span class="nv">partner</span> <span class="o">=</span> env<span class="o">[</span><span class="s1">&#39;res.partner&#39;</span><span class="o">]</span>.search<span class="o">([(</span><span class="s1">&#39;email&#39;</span>, <span class="s1">&#39;=&#39;</span>, <span class="s1">&#39;asusteK@yourcompany.example.com&#39;</span><span class="o">)]</span>, <span class="nv">limit</span><span class="o">=</span><span class="m">1</span><span class="o">)</span>
+&gt;&gt;&gt; partner.name
+<span class="s1">&#39;ASUSTeK&#39;</span>
+&gt;&gt;&gt; partner.name <span class="o">=</span> <span class="s1">&#39;Odoo&#39;</span>
+&gt;&gt;&gt; env<span class="o">[</span><span class="s1">&#39;res.partner&#39;</span><span class="o">]</span>.search<span class="o">([(</span><span class="s1">&#39;email&#39;</span>, <span class="s1">&#39;=&#39;</span>, <span class="s1">&#39;asusteK@yourcompany.example.com&#39;</span><span class="o">)]</span>, <span class="nv">limit</span><span class="o">=</span><span class="m">1</span><span class="o">)</span>.name
+<span class="s1">&#39;Odoo&#39;</span>
+</pre></div>
+</div>
+<ul ><li >install a module,</li></ul><div class="highlight-bash"><div class="highlight"><pre><span></span>$  odoo-bin -i sale --without-demo<span class="o">=</span>all --stop-after-init
+</pre></div>
+</div>
+<ul ><li >update a module,</li></ul><div class="highlight-bash"><div class="highlight"><pre><span></span>$  odoo-bin -u sale --stop-after-init
+</pre></div>
+</div>
+<ul ><li >run the tests for a module,</li></ul><div class="highlight-bash"><div class="highlight"><pre><span></span>$  odoo-bin -i sale --test-enable --log-level<span class="o">=</span><span class="nb">test</span> --stop-after-init
+</pre></div>
+</div>
+<p >In the above commands, the argument:</p><ul ><li ><code >--without-demo=all</code> prevents demo data to be loaded for all modules</li><li ><code >--stop-after-init</code> will immediately shutdown the server instance after it completed the operations you asked.</li></ul><p >More options are available and detailed in the
+<a href="https://www.odoo.com/documentation/13.0/reference/cmdline.html" class="external reference">CLI documentation</a>.</p><p >You can find in the logs (<em >~/logs/odoo.log</em>) the addons path used by Odoo.sh to run your server.
+Look for “<em >odoo: addons paths</em>”:</p><div class="highlight-default"><div class="highlight"><pre><span></span>2018-02-19 10:51:39,267 4 INFO ? odoo: Odoo version 13.0
+2018-02-19 10:51:39,268 4 INFO ? odoo: Using configuration file at /home/odoo/.config/odoo/odoo.conf
+2018-02-19 10:51:39,268 4 INFO ? odoo: addons paths: [&#39;/home/odoo/data/addons/13.0&#39;, &#39;/home/odoo/src/user&#39;, &#39;/home/odoo/src/enterprise&#39;, &#39;/home/odoo/src/themes&#39;, &#39;/home/odoo/src/odoo/addons&#39;, &#39;/home/odoo/src/odoo/odoo/addons&#39;]
+</pre></div>
+</div>
+<p ><strong >Be careful</strong>, especially with your production database.
+Operations that you perform running this Odoo server instance are not isolated:
+Changes will be effective in the database. Always, make your tests in your staging databases.</p></section><section id="debugging-in-odoo-sh"><h2 >Debugging in Odoo.sh</h2><p >Debugging an Odoo.sh build is not really different than another Python app. This article only explains the specificities and limitations of the Odoo.sh platform, and assumes that you already know how to use a debugger.</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >If you don’t know how to debug a Python application yet, there are multiple introductory courses that can be easily found on the Internet.</p></div><p >You can use <code >pdb</code>, <code >pudb</code> or <code >ipdb</code> to debug your code on Odoo.sh.
+As the server is run outside a shell, you cannot launch the debugger directly from your Odoo instance backend as the debugger needs a shell to operate.</p><ul ><li ><a href="https://docs.python.org/3/library/pdb.html" class="external reference">pdb</a> is installed by default in every container.</li><li ><p >If you want to use <a href="https://pypi.org/project/pudb/" class="external reference">pudb</a> or <a href="https://pypi.org/project/ipdb/" class="external reference">ipdb</a> you have to install it before.</p><p >To do so, you have two options:</p><blockquote ><ul ><li ><p >temporary (only in the current build):</p><div class="highlight-bash"><div class="highlight"><pre><span></span>$  pip install pudb --user
+</pre></div>
+</div>
+<p >or</p><div class="highlight-bash"><div class="highlight"><pre><span></span>$  pip install ipdb --user
+</pre></div>
+</div>
+</li><li >permanent: add <code >pudb</code> or <code >ipdb</code> to your project <code >requirements.txt</code> file.</li></ul></blockquote></li></ul><p >Then edit the code where you want to trigger the debugger and add this:</p><div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+<span class="k">if</span> <span class="n">sys</span><span class="o">.</span><span class="n">__stdin__</span><span class="o">.</span><span class="n">isatty</span><span class="p">():</span>
+    <span class="kn">import</span> <span class="nn">pdb</span><span class="p">;</span> <span class="n">pdb</span><span class="o">.</span><span class="n">set_trace</span><span class="p">()</span>
+</pre></div>
+</div>
+<p >The condition <code class="code">sys.__stdin__.isatty()</code> is a hack that detects if you run Odoo from a shell.</p><p >Save the file and then run the Odoo Shell:</p><div class="highlight-bash"><div class="highlight"><pre><span></span>$ odoo-bin shell
+</pre></div>
+</div>
+<p >Finally, <em >via</em> the Odoo Shell, you can trigger the piece of code/function/method
+you want to debug.</p><img src="../../_images/pdb_sh.png" alt="Console screenshot showing ``pdb`` running in an Odoo.sh shell." style="" class="img-responsive center-block"></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+<!--
+  <footer>
+    <div id="footer" class="container">
+      <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+      <div class="row">
+        <div class="col-sm-7 col-md-7 col-lg-6">
+          <div class="row">
+            <div class="col-xs-6 col-sm-4">
+              <span class="menu_title">Community</span>
+              <ul>
+                <li><a href="https://github.com/odoo/odoo">Github</a></li>
+                <li><a href="http://www.odoo.com/page/download">Download</a></li>
+                <li class="divider"></li>
+                <li><a href="http://runbot.odoo.com/runbot/repo/git-github-com-odoo-enterprise-7">Runbot</a></li>
+                <li><a href="https://github.com/odoo/odoo/wiki/Translations">Translations</a></li>
+                <li class="divider"></li>
+                <li><a href="http://www.odoo.com/page/odoo-community">Mailing Lists</a></li>
+                <li><a href="http://www.odoo.com/forum/help-1">Forum</a></li>
+              </ul>
+            </div>
+            <div class="col-xs-6 col-sm-4">
+              <span class="menu_title">Services</span>
+              <ul>
+                <li><a href="http://www.odoo.com/pricing">Editions</a></li>
+                <li><a href="http://www.odoo.com/pricing-online">Cloud Pricing</a></li>
+                <li><a href="http://www.odoo.com/page/upgrade">Upgrade</a></li>
+                <li class="divider"></li>
+                <li><a href="http://www.odoo.com/partners">Find a partner</a></li>
+                <li><a href="http://www.odoo.com/page/become-a-partner">Become a partner</a></li>
+                <li class="divider"></li>
+                <li><a href="http://www.odoo.com/page/education-program">Education</a></li>
+                <li class="divider"></li>
+                <li><a href="http://www.odoo.com/page/security">Security</a></li>
+              </ul>
+            </div>
+            <div class="col-sm-4 mb64">
+              <span class="menu_title">About us</span>
+              <ul>
+                <li><a href="http://www.odoo.com/page/about-us">Our company</a></li>
+                <li><a href="http://www.odoo.com/page/contactus">Contact</a></li>
+                <li class="divider" />
+                <li><a href="http://www.odoo.com/event">Events</a></li>
+                <li><a href="http://www.odoo.com/blog/">Blog</a></li>
+                <li><a href="http://www.odoo.com/blog/6">Customers</a></li>
+                <li class="divider" />
+                <li><a href="http://www.odoo.com/jobs">Jobs</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-5 col-md-4 col-md-offset-1 col-lg-5 col-lg-offset-1">
+          <p>
+            <small>
+              Odoo is a suite of open source business apps that cover all your company needs: CRM, eCommerce, accounting, inventory, point of sale, project management, etc.
+              <br/><br/>
+              Odoo's unique value proposition is to be at the same time very easy to use and fully integrated.
+            </small>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="o_footer_bottom">
+      <div class="container">
+        <a class="small" href="http://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+        <div class="social-links pull-right">
+          <a href="http://www.odoo.com/web/about/facebook"><i class="fa fa-facebook"></i></a>
+          <a href="http://www.odoo.com/web/about/twitter"><i class="fa fa-twitter"></i></a>
+          <a href="http://www.odoo.com/web/about/linkedin"><i class="fa fa-linkedin"></i></a>
+          <a href="mailto:info@odoo.com"><i class="fa fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+-->
+  </body>
+</html>

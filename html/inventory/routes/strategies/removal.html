@@ -1,0 +1,446 @@
+<!doctype html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>What is a removal strategy (FIFO, LIFO, and FEFO)? &#8212; Odoo 13.0 documentation</title>
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/accounting.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <link rel="canonical" href="" />
+  
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Barcodes" href="../../barcode.html" />
+    <link rel="prev" title="What is a Putaway Rule?" href="putaway.html" /> 
+  </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
+<!--
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <div class="o_header_buttons">
+        <a href="http://www.odoo.com/trial" class="btn btn-primary">Start Now</a>
+      </div>
+      <ul class="o_primary_nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Apps</a>
+          <div class="dropdown-menu o_secondary_nav">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-3 o_website_apps">
+                  <div class="o_nav_app_family">
+                    <span></span> Websites
+                    <div>Build great user experience</div>
+                  </div>
+                  <ul>
+                    <li><a href="https://www.odoo.com/page/website-builder">Website Builder</a></li>
+                    <li><a href="https://www.odoo.com/page/e-commerce">eCommerce</a></li>
+                    <li><a href="https://www.odoo.com/page/blog-engine">Blogs</a></li>
+                    <li><a href="https://www.odoo.com/page/community-builder">Forums</a></li>
+                    <li><a href="https://www.odoo.com/page/learning-management-system">eLearning</a></li>
+                    <li><a href="https://www.odoo.com/page/live-chat">Live Chat</a></li>
+                  </ul>
+                </div>
+                <div class="col-sm-3 o_sale_apps">
+                  <div class="o_nav_app_family">
+                    <span></span> Sales
+                    <div>Boost your success rate</div>
+                  </div>
+                  <ul>
+                    <li><a href="https://www.odoo.com/page/sales">Sales</a></li>
+                    <li><a href="https://www.odoo.com/page/crm">CRM</a></li>
+                    <li><a href="https://www.odoo.com/page/billing">Invoicing</a></li>
+                    <li class="dropdown">
+                      <a href="#0" class="dropdown-toggle">Point of Sale</a>
+                      <ul>
+                        <li><a href="https://www.odoo.com/page/point-of-sale">Shops</a></li>
+                        <li><a href="https://www.odoo.com/page/pos-restaurant">Restaurants</a></li>
+                        <li><a href="https://www.odoo.com/page/point-of-sale-hardware">Hardware</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://www.odoo.com/page/subscriptions">Subscriptions</a></li>
+                    <li><a href="https://www.odoo.com/page/sign">Sign</a></li>
+                    <li><a href="https://www.odoo.com/page/rental">Rental</a></li>
+                  </ul>
+                </div>
+                <div class="col-sm-3 o_operation_apps">
+                  <div class="o_nav_app_family">
+                    <span></span> Operations
+                    <div>It's all about efficiency</div>
+                  </div>
+                  <ul>
+                    <li><a href="https://www.odoo.com/page/accounting/">Accounting</a></li>
+                    <li><a href="https://www.odoo.com/page/project-management/">Project</a></li>
+                    <li class="dropdown">
+                      <a href="#0" class="dropdown-toggle">Human Resources</a>
+                      <ul>
+                        <li><a href="https://www.odoo.com/page/referral">Referral</a></li>
+                        <li><a href="https://www.odoo.com/page/employees">Employees</a></li>
+                        <li><a href="https://www.odoo.com/page/expenses">Expenses</a></li>
+                        <li><a href="https://www.odoo.com/page/appraisal">Appraisal</a></li>
+                        <li><a href="https://www.odoo.com/page/fleet">Fleet</a></li>
+                        <li><a href="https://www.odoo.com/page/leaves">Time Off</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://www.odoo.com/page/warehouse">Inventory</a></li>
+                    <li><a href="https://www.odoo.com/page/purchase">Purchase</a></li>
+                    <li class="dropdown">
+                      <a href="#0" class="dropdown-toggle">Manufacturing</a>
+                      <ul>
+                        <li><a href="https://www.odoo.com/page/manufacturing">MRP</a></li>
+                        <li><a href="https://www.odoo.com/page/plm">PLM</a></li>
+                        <li><a href="https://www.odoo.com/page/maintenance">Maintenance</a></li>
+                        <li><a href="https://www.odoo.com/page/quality">Quality</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://www.odoo.com/page/helpdesk">Helpdesk</a></li>
+                    <li><a href="https://www.odoo.com/page/field-service-management">Field Service</a></li>
+                  </ul>
+                </div>
+                <div class="col-sm-3 o_productivity_apps">
+                  <div class="o_nav_app_family">
+                    <span></span> Productivity Tools
+                    <div>Great Tools = Happy People</div>
+                  </div>
+                  <ul>
+                    <li class="dropdown">
+                      <a href="#0" class="dropdown-toggle">Communication</a>
+                      <ul>
+                        <li><a href="https://www.odoo.com/page/discuss">Discuss</a></li>
+                        <li><a href="https://www.odoo.com/page/discuss-groups">Mailing Lists</a></li>
+                        <li><a href="https://www.odoo.com/page/notes">Notes</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://www.odoo.com/page/timesheet">Timesheet</a></li>
+                    <li><a href="https://www.odoo.com/page/events">Events</a></li>
+                    <li class="dropdown">
+                      <a href="#0" class="dropdown-toggle">Marketing</a>
+                      <ul>
+                        <li><a href="https://www.odoo.com/page/marketing-automation">Automation</a></li>
+                        <li><a href="https://www.odoo.com/page/email-marketing">Email</a></li>
+                        <li><a href="https://www.odoo.com/page/social-marketing">Social</a></li>
+                        <li><a href="https://www.odoo.com/page/sms-marketing">SMS</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://www.odoo.com/page/survey">Survey</a></li>
+                    <li><a href="https://www.odoo.com/page/approval-workflow">Approvals</a></li>
+                    <li><a href="https://www.odoo.com/page/appointments">Appointments</a></li>
+                    <li><a href="https://www.odoo.com/page/documents">Documents</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <a href="http://www.odoo.com/apps/modules" class="o_store_link"><i class="fa fa-cube fa-fw"></i> Third party apps</a>
+          </div>
+        </li>
+        <li><a href="https://www.odoo.com/page/tour">Tour</a></li>
+        <li><a href="https://www.odoo.com/pricing">Pricing</a></li>
+        <li><a href="https://www.odoo.com/page/docs">Docs</a></li>
+      </ul>
+    </div>
+-->
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Navigate
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+
+
+
+
+
+    
+        
+            
+                <li><a href="../../../index.html">Документация Пользователя</a></li>
+            
+        
+    
+        
+            
+                
+                    <li><a href="../../../inventory.html">Inventory</a></li>
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+    <li class="active"><a href="#">What is a removal strategy (FIFO, LIFO, and FEFO)?</a></li>
+
+              
+          </ol>
+
+          <div class="call-to-action navbar-right hidden-xs">
+            <a href="http://www.odoo.com/trial" class="btn btn-primary">Start Now</a>
+          </div>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+
+            
+            
+
+<!--
+<li><a href="https://www.odoo.com/documentation/user/13.0/index.html">User</a></li>
+<li><a href="https://www.odoo.com/documentation/13.0/index.html">Developer</a></li>
+<li><a href="https://odoo.com/slides">eLearning</a></li>
+<li><a href="https://www.odoo.com/documentation/13.0/webservices/odoo.html">API</a></li>
+<li><a href="https://www.odoo.com/documentation/13.0/setup/install.html">Installation</a></li>
+<li><a href="https://www.odoo.com/page/odoo-white-paper">White Papers</a></li>
+<li><a href="https://www.odoo.com/page/legal">Legal</a></li>
+-->
+<li id="searchbox" style="display: none; margin: 0 0 0 10px;" role="search">
+    <form class="search form-inline" action="../../../search.html" method="get">
+        <input type="text" class="form-control" name="q" id="q" placeholder="Поиск..." />
+        <input type="hidden" name="area" value="default" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <button type="submit" value="Go" class="btn btn-default">Найти</button>
+    </form>
+</li>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+            
+
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    <figure class="card top ">
+      <span class="card-img" ></span>
+      <div class="container text-center">
+        <h1> What is a removal strategy (FIFO, LIFO, and FEFO)? </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#overview" class="ripple internal reference">Overview</a></li><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a></li><li class="list-group-item"><a href="#types-of-removal-strategy" class="ripple internal reference">Types of removal strategy</a><ul ><li class="list-group-item"><a href="#fifo-first-in-first-out" class="ripple internal reference">FIFO ( First In First Out )</a></li><li class="list-group-item"><a href="#lifo-last-in-first-out" class="ripple internal reference">LIFO (Last In First Out)</a></li><li class="list-group-item"><a href="#fefo-first-expiry-first-out" class="ripple internal reference">FEFO ( First Expiry First Out )</a></li></ul></li></ul>
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/inventory/routes/strategies/removal.rst" class="gith-link">
+                  Edit on GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body  ">
+            
+            
+  <section id="what-is-a-removal-strategy-fifo-lifo-and-fefo"></section><section id="overview"><h2 >Overview</h2><p >Removal strategies are usually in picking operations to select the best
+products in order to optimize the distance for the worker, for quality
+control purpose or due to reason of product expiration.</p><p >When a product movement needs to be done, Odoo will find available
+products that can be assigned to shipping. The way Odoo assign these
+products depend on the <strong >removal strategy</strong> that is defined on the <strong >product
+category</strong> or on the <strong >location</strong>.</p></section><section id="configuration"><h2 >Configuration</h2><p >In the <strong >Inventory</strong> application, go to <span class="menuselection">Configuration
+‣ Settings</span>:</p><img src="../../../_images/removal01.png" style="" class="img-responsive center-block"><img src="../../../_images/removal02.png" style="" class="img-responsive center-block"><p >Check <strong >Track lots or serial numbers</strong>, <strong >Manage several location per
+warehouse</strong> and <strong >Advanced routing of products using rules</strong>, then click
+on <strong >Apply</strong>.</p><p >Then, open <span class="menuselection">Configuration ‣ Locations</span>
+and open the location on which you want to apply a removal strategy.</p><img src="../../../_images/removal03.png" style="" class="img-responsive center-block"></section><section id="types-of-removal-strategy"><h2 >Types of removal strategy</h2></section><section id="fifo-first-in-first-out"><h3 >FIFO ( First In First Out )</h3><p >A <strong >First In First Out</strong> strategy implies that the products that were
+stocked first will move out first. Companies should use FIFO method if
+they are selling perishable goods. Companies selling products with
+relatively short demand cycles, such as clothes, also may have to pick
+FIFO to ensure they are not stuck with outdated styles in inventory.</p><p >Go to <span class="menuselection">Inventory ‣ Configuration ‣ Locations</span>,
+open the stock location and set <strong >FIFO</strong> removal strategy.</p><p >Let’s take one example of FIFO removal strategy.</p><p >In your warehouse stock (<code >WH/Stock</code>) location, there are <code >3</code> lots of <code >iPod
+32 Gb</code> available.</p><p >You can find details of available inventory in inventory valuation
+report.</p><img src="../../../_images/removal04.png" style="" class="img-responsive center-block"><p >Create one sales order <code >25</code> unit of <code >iPod 32 GB</code> and confirm it.</p><p >You can see in the outgoing shipment product that the <code >Ipod 32
+Gb</code> are assigned with the <strong >oldest</strong> lots, using the FIFO removal
+strategy.</p><img src="../../../_images/removal05.png" style="" class="img-responsive center-block"></section><section id="lifo-last-in-first-out"><h3 >LIFO (Last In First Out)</h3><p >In this warehouse management, the products which are brought in the
+last, moves out the first. LIFO is used in case of products which do not
+have a shelf life.</p><p >Go to <span class="menuselection">Inventory ‣ Configuration ‣ Locations</span>,
+open the stock location and set <strong >LIFO</strong> removal strategy.</p><p >In our example, let’s check the current available stock of <code >Ipod 32 Gb</code>
+on <code >WH/Stock</code> location.</p><img src="../../../_images/removal06.png" style="" class="img-responsive center-block"><p >Create a sale order with <code >10</code> units of <code >Ipod 32 Gb</code>.</p><p >You can see in the outgoing shipment product that the <code >Ipod 32
+Gb</code> are assigned with the <strong >newest</strong> lots, using the LIFO removal
+strategy.</p><img src="../../../_images/removal07.png" style="" class="img-responsive center-block"></section><section id="fefo-first-expiry-first-out"><h3 >FEFO ( First Expiry First Out )</h3><p >In FEFO warehouse management, the products are dispatched from the
+warehouse according to their expiration date.</p><p >Go to <span class="menuselection">Inventory ‣ Configuration ‣ Setting</span>.
+Check the option <strong >Define Expiration date on serial numbers</strong>.
+Then click on <strong >Apply</strong> to save changes.</p><img src="../../../_images/removal08.png" style="" class="img-responsive center-block"><p >This will allow you to set four expiration fields for each lot or serial number:
+<strong >best before date</strong>, <strong >end of life date</strong>, <strong >alert date</strong> and <strong >removal date</strong>.
+These dates can be set from <span class="menuselection">Inventory Control ‣ Serial Numbers/Lots</span>.</p><img src="../../../_images/removal09.png" style="" class="img-responsive center-block"><ul ><li ><strong >Best Before Date</strong>: This is the date on which the goods with this
+serial/lot number start deteriorating, without being dangerous yet.</li><li ><strong >End of Life Date:</strong> This is the date on which the goods with this
+serial/lot number may become dangerous and must not be consumed.</li><li ><strong >Removal Date:</strong> This is the date on which the goods with this
+serial/lot number should be removed from the stock. Using the FEFO
+removal strategy goods are picked for delivery orders using this date.</li><li ><strong >Alert Date:</strong> This is the date on which an alert should be sent
+about the goods with this serial/lot number.</li></ul><p >Lots will be picked based on their <strong >removal date</strong>, from earliest
+to latest. Lots without a removal date defined will be picked after
+lots with removal dates.</p><p >All dates except <strong >removal date</strong> are for informational and reporting purposes only.
+Lots that are past any or all of the above expiration dates may still be picked
+for delivery orders, and no alerts will be sent when lots pass their <strong >alert date</strong>.</p><p >Expiration dates on lots can also be set automatically when goods are received into stock.
+After enabling expiration dates on serial numbers, four new fields will become available
+in the inventory tab of the product form: <strong >product life time</strong>, <strong >product use time</strong>,
+<strong >product removal time</strong>, and <strong >product alert time</strong>. When an integer is entered into one
+of these fields, the expiration date of a lot/serial of the product in question will be set
+to the creation date of the lot/serial number plus the number of days entered in the time
+increment field. If the time increment field is set to zero, then the expiration date of
+a lot/serial must be defined manually after the lot has been created.</p><p >Each of these time increment fields is used to generate one of the lot expiration date fields as follows:</p><p >Product Use Time –&gt; Best Before Date</p><p >Product Removal Time –&gt; Removal Date</p><p >Product Life Time –&gt; End of Life Date</p><p >Product Alert Time –&gt; Alert Date</p><p >To set the removal strategy on location, go to
+<span class="menuselection">Configuration ‣ Locations</span> and choose FEFO.</p><img src="../../../_images/removal10.png" style="" class="img-responsive center-block"><p >Let’s take an example, there are <code >3</code> lots of <code >ice cream</code> available in
+<code >WH/Stock</code> location: <code >LOT0001</code>, <code >LOT0002</code>, <code >LOT0003</code> with
+different expiration date.</p><table class="table"><thead ><tr ><th ><strong >Lot / Serial No</strong></th><th ><strong >Product</strong></th><th ><strong >Expiration Date</strong></th></tr></thead><tbody ><tr ><td >LOT0001</td><td >Ice Cream</td><td >08/20/2015</td></tr><tr ><td >LOT0002</td><td >Ice Cream</td><td >08/10/2015</td></tr><tr ><td >LOT0003</td><td >Ice Cream</td><td >08/15/2015</td></tr></tbody></table><p >We will create a sale order with <code >15kg</code> of <code >ice cream</code> and confirm it.</p><p >The outgoing shipment related to sale order will make the move based on
+removal strategy <strong >FEFO</strong>.</p><p >It will take <code >10kg</code> from <code >LOT0002</code> and <code >5kg</code> from <code >LOT0003</code> based on the
+removal dates.</p><img src="../../../_images/removal11.png" style="" class="img-responsive center-block"><div role="alert" class="alert-go_to alert"><p class="alert-title">See also</p><ul ><li ><a href="../../management/reporting/valuation_methods_continental.html" class="internal alert-link reference"><span class="doc">How to do an inventory valuation? (Continental Accounting)</span></a></li><li ><a href="../../management/reporting/valuation_methods_anglo_saxon.html" class="internal alert-link reference"><span class="doc">How to do an inventory valuation? (Anglo-Saxon Accounting)</span></a></li></ul></div></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+<!--
+  <footer>
+    <div id="footer" class="container">
+      <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+      <div class="row">
+        <div class="col-sm-7 col-md-7 col-lg-6">
+          <div class="row">
+            <div class="col-xs-6 col-sm-4">
+              <span class="menu_title">Community</span>
+              <ul>
+                <li><a href="https://github.com/odoo/odoo">Github</a></li>
+                <li><a href="http://www.odoo.com/page/download">Download</a></li>
+                <li class="divider"></li>
+                <li><a href="http://runbot.odoo.com/runbot/repo/git-github-com-odoo-enterprise-7">Runbot</a></li>
+                <li><a href="https://github.com/odoo/odoo/wiki/Translations">Translations</a></li>
+                <li class="divider"></li>
+                <li><a href="http://www.odoo.com/page/odoo-community">Mailing Lists</a></li>
+                <li><a href="http://www.odoo.com/forum/help-1">Forum</a></li>
+              </ul>
+            </div>
+            <div class="col-xs-6 col-sm-4">
+              <span class="menu_title">Services</span>
+              <ul>
+                <li><a href="http://www.odoo.com/pricing">Editions</a></li>
+                <li><a href="http://www.odoo.com/pricing-online">Cloud Pricing</a></li>
+                <li><a href="http://www.odoo.com/page/upgrade">Upgrade</a></li>
+                <li class="divider"></li>
+                <li><a href="http://www.odoo.com/partners">Find a partner</a></li>
+                <li><a href="http://www.odoo.com/page/become-a-partner">Become a partner</a></li>
+                <li class="divider"></li>
+                <li><a href="http://www.odoo.com/page/education-program">Education</a></li>
+                <li class="divider"></li>
+                <li><a href="http://www.odoo.com/page/security">Security</a></li>
+              </ul>
+            </div>
+            <div class="col-sm-4 mb64">
+              <span class="menu_title">About us</span>
+              <ul>
+                <li><a href="http://www.odoo.com/page/about-us">Our company</a></li>
+                <li><a href="http://www.odoo.com/page/contactus">Contact</a></li>
+                <li class="divider" />
+                <li><a href="http://www.odoo.com/event">Events</a></li>
+                <li><a href="http://www.odoo.com/blog/">Blog</a></li>
+                <li><a href="http://www.odoo.com/blog/6">Customers</a></li>
+                <li class="divider" />
+                <li><a href="http://www.odoo.com/jobs">Jobs</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-5 col-md-4 col-md-offset-1 col-lg-5 col-lg-offset-1">
+          <p>
+            <small>
+              Odoo is a suite of open source business apps that cover all your company needs: CRM, eCommerce, accounting, inventory, point of sale, project management, etc.
+              <br/><br/>
+              Odoo's unique value proposition is to be at the same time very easy to use and fully integrated.
+            </small>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="o_footer_bottom">
+      <div class="container">
+        <a class="small" href="http://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+        <div class="social-links pull-right">
+          <a href="http://www.odoo.com/web/about/facebook"><i class="fa fa-facebook"></i></a>
+          <a href="http://www.odoo.com/web/about/twitter"><i class="fa fa-twitter"></i></a>
+          <a href="http://www.odoo.com/web/about/linkedin"><i class="fa fa-linkedin"></i></a>
+          <a href="mailto:info@odoo.com"><i class="fa fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+-->
+  </body>
+</html>
