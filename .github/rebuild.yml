@@ -1,0 +1,42 @@
+
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+      path: src
+    - uses: actions/checkout@v2
+      ref: master
+      path: dst
+    - name: Set up Python 2.7
+      uses: actions/setup-python@v1
+      with:
+        python-version: 2.7
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+    - name: Rebuild
+      run: |
+      cd src 
+      make html && cp -a _build/html/ ../dst
+ 
+    - name: Commit changes
+      uses: stefanzweifel/git-auto-commit-action@v2.4.0
+      with:
+        #author_name: Marc Demo (Github Actions)
+        #author_email: i18n-bot@it-projects.info
+        branch: master
+        commit_message: | 
+          :alien: recompile docs
+          
+          Sent from Github Actions (see .github/workflows/rebuild.yml )
+        repository: dst
+      env:
+        GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
