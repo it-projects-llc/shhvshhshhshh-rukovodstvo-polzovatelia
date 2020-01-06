@@ -1,0 +1,585 @@
+<!doctype html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="RU">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Mexico &#8212; Документация Odoo 12.0</title>
+    <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/accounting.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script type="text/javascript" src="../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.noconflict.js"></script>
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/accounting/localizations/mexico.html" />
+    <link rel="canonical" href="/master/ru/accounting/localizations/mexico.html" />
+  
+    <link rel="index" title="Алфавитный указатель" href="../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../search.html" />
+    <link rel="next" title="Netherlands" href="nederlands.html" />
+    <link rel="prev" title="Germany" href="germany.html" /> 
+  </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <div class="o_header_buttons">
+        <a href="http://www.odoo.com/trial" class="btn btn-primary">Start Now</a>
+      </div>
+      <ul class="o_primary_nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Apps</a>
+          <div class="dropdown-menu o_secondary_nav">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-3 o_website_apps">
+                  <div class="o_nav_app_family">
+                    <span></span> Websites
+                    <div>Build great user experience</div>
+                  </div>
+                  <ul>
+                    <li><a href="https://www.odoo.com/page/website-builder">Website Builder</a></li>
+                    <li><a href="https://www.odoo.com/page/e-commerce">eCommerce</a></li>
+                    <li><a href="https://www.odoo.com/page/blog-engine">Blogs</a></li>
+                    <li><a href="https://www.odoo.com/page/community-builder">Forums</a></li>
+                    <li><a href="https://www.odoo.com/page/learning-management-system">eLearning</a></li>
+                    <li><a href="https://www.odoo.com/page/live-chat">Live Chat</a></li>
+                  </ul>
+                </div>
+                <div class="col-sm-3 o_sale_apps">
+                  <div class="o_nav_app_family">
+                    <span></span> Sales
+                    <div>Boost your success rate</div>
+                  </div>
+                  <ul>
+                    <li><a href="https://www.odoo.com/page/sales">Sales</a></li>
+                    <li><a href="https://www.odoo.com/page/crm">CRM</a></li>
+                    <li><a href="https://www.odoo.com/page/billing">Invoicing</a></li>
+                    <li class="dropdown">
+                      <a href="#0" class="dropdown-toggle">Point of Sale</a>
+                      <ul>
+                        <li><a href="https://www.odoo.com/page/point-of-sale">Shops</a></li>
+                        <li><a href="https://www.odoo.com/page/pos-restaurant">Restaurants</a></li>
+                        <li><a href="https://www.odoo.com/page/point-of-sale-hardware">Hardware</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://www.odoo.com/page/subscriptions">Subscriptions</a></li>
+                    <li><a href="https://www.odoo.com/page/sign">Sign</a></li>
+                    <li><a href="https://www.odoo.com/page/rental">Rental</a></li>
+                  </ul>
+                </div>
+                <div class="col-sm-3 o_operation_apps">
+                  <div class="o_nav_app_family">
+                    <span></span> Operations
+                    <div>It's all about efficiency</div>
+                  </div>
+                  <ul>
+                    <li><a href="https://www.odoo.com/page/accounting/">Accounting</a></li>
+                    <li><a href="https://www.odoo.com/page/project-management/">Project</a></li>
+                    <li class="dropdown">
+                      <a href="#0" class="dropdown-toggle">Human Resources</a>
+                      <ul>
+                        <li><a href="https://www.odoo.com/page/referral">Referral</a></li>
+                        <li><a href="https://www.odoo.com/page/employees">Employees</a></li>
+                        <li><a href="https://www.odoo.com/page/expenses">Expenses</a></li>
+                        <li><a href="https://www.odoo.com/page/appraisal">Appraisal</a></li>
+                        <li><a href="https://www.odoo.com/page/fleet">Fleet</a></li>
+                        <li><a href="https://www.odoo.com/page/leaves">Time Off</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://www.odoo.com/page/warehouse">Inventory</a></li>
+                    <li><a href="https://www.odoo.com/page/purchase">Purchase</a></li>
+                    <li class="dropdown">
+                      <a href="#0" class="dropdown-toggle">Manufacturing</a>
+                      <ul>
+                        <li><a href="https://www.odoo.com/page/manufacturing">MRP</a></li>
+                        <li><a href="https://www.odoo.com/page/plm">PLM</a></li>
+                        <li><a href="https://www.odoo.com/page/maintenance">Maintenance</a></li>
+                        <li><a href="https://www.odoo.com/page/quality">Quality</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://www.odoo.com/page/helpdesk">Helpdesk</a></li>
+                    <li><a href="https://www.odoo.com/page/field-service-management">Field Service</a></li>
+                  </ul>
+                </div>
+                <div class="col-sm-3 o_productivity_apps">
+                  <div class="o_nav_app_family">
+                    <span></span> Productivity Tools
+                    <div>Great Tools = Happy People</div>
+                  </div>
+                  <ul>
+                    <li class="dropdown">
+                      <a href="#0" class="dropdown-toggle">Communication</a>
+                      <ul>
+                        <li><a href="https://www.odoo.com/page/discuss">Discuss</a></li>
+                        <li><a href="https://www.odoo.com/page/discuss-groups">Mailing Lists</a></li>
+                        <li><a href="https://www.odoo.com/page/notes">Notes</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://www.odoo.com/page/timesheet">Timesheet</a></li>
+                    <li><a href="https://www.odoo.com/page/events">Events</a></li>
+                    <li class="dropdown">
+                      <a href="#0" class="dropdown-toggle">Marketing</a>
+                      <ul>
+                        <li><a href="https://www.odoo.com/page/marketing-automation">Automation</a></li>
+                        <li><a href="https://www.odoo.com/page/email-marketing">Email</a></li>
+                        <li><a href="https://www.odoo.com/page/social-marketing">Social</a></li>
+                        <li><a href="https://www.odoo.com/page/sms-marketing">SMS</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://www.odoo.com/page/survey">Survey</a></li>
+                    <li><a href="https://www.odoo.com/page/approval-workflow">Approvals</a></li>
+                    <li><a href="https://www.odoo.com/page/appointments">Appointments</a></li>
+                    <li><a href="https://www.odoo.com/page/documents">Documents</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <a href="http://www.odoo.com/apps/modules" class="o_store_link"><i class="fa fa-cube fa-fw"></i> Third party apps</a>
+          </div>
+        </li>
+        <li><a href="https://www.odoo.com/page/tour">Tour</a></li>
+        <li><a href="https://www.odoo.com/pricing">Pricing</a></li>
+        <li><a href="https://www.odoo.com/page/docs">Docs</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Navigate
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+
+
+
+
+
+    
+        
+            
+                <li><a href="../../index.html">User Doc</a></li>
+            
+        
+    
+        
+            
+                
+                    <li><a href="../../accounting.html">Accounting</a></li>
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+    <li class="active"><a href="#">Mexico</a></li>
+
+              
+          </ol>
+
+          <div class="call-to-action navbar-right hidden-xs">
+            <a href="http://www.odoo.com/trial" class="btn btn-primary">Start Now</a>
+          </div>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        12.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/accounting/localizations/mexico.html">13.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="https://www.odoo.com/documentation/user/12.0/index.html">User</a></li>
+<li><a href="https://www.odoo.com/documentation/12.0/index.html">Developer</a></li>
+<li><a href="https://odoo.com/slides">eLearning</a></li>
+<li><a href="https://www.odoo.com/documentation/12.0/webservices/odoo.html">API</a></li>
+<li><a href="https://www.odoo.com/documentation/12.0/setup/install.html">Installation</a></li>
+<li><a href="https://www.odoo.com/page/odoo-white-paper">White Papers</a></li>
+<li><a href="https://www.odoo.com/page/legal">Legal</a></li>
+<li id="searchbox" style="display: none; margin: 0 0 0 10px;" role="search">
+    <form class="search form-inline" action="../../search.html" method="get">
+        <input type="text" class="form-control" name="q" id="q" placeholder="Search..." />
+        <input type="hidden" name="area" value="default" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <button type="submit" value="Go" class="btn btn-default">Go</button>
+    </form>
+</li>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    <figure class="card top ">
+      <span class="card-img" ></span>
+      <div class="container text-center">
+        <h1> Mexico </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#introduction" class="ripple internal reference">Introduction</a></li><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a><ul ><li class="list-group-item"><a href="#install-the-mexican-accounting-localization" class="ripple internal reference">1. Install the Mexican Accounting Localization</a></li><li class="list-group-item"><a href="#electronic-invoices-cdfi-3-2-and-3-3-format" class="ripple internal reference">2. Electronic Invoices (CDFI 3.2 and 3.3 format)</a></li><li class="list-group-item"><a href="#set-you-legal-information-in-the-company" class="ripple internal reference">3. Set you legal information in the company</a></li><li class="list-group-item"><a href="#set-the-proper-fiscal-position-on-the-partner-that-represent-the-company" class="ripple internal reference">4. Set the proper «Fiscal Position» on the partner that represent the company</a></li><li class="list-group-item"><a href="#enabling-cfdi-version-3-3" class="ripple internal reference">5. Enabling CFDI Version 3.3</a><ul ><li class="list-group-item"><a href="#important-considerations-when-yo-enable-the-cfdi-3-3" class="ripple internal reference">Important considerations when yo enable the CFDI 3.3</a></li></ul></li><li class="list-group-item"><a href="#configure-the-pac-in-order-to-sign-properly-the-invoices" class="ripple internal reference">6. Configure the PAC in order to sign properly the invoices</a></li><li class="list-group-item"><a href="#configure-the-tag-in-sales-taxes" class="ripple internal reference">7. Configure the tag in sales taxes</a></li></ul></li><li class="list-group-item"><a href="#usage-and-testing" class="ripple internal reference">Usage and testing</a><ul ><li class="list-group-item"><a href="#invoicing" class="ripple internal reference">Invoicing</a></li><li class="list-group-item"><a href="#cancelling-invoices" class="ripple internal reference">Cancelling invoices</a></li><li class="list-group-item"><a href="#payments-just-available-for-cfdi-3-3" class="ripple internal reference">Payments (Just available for CFDI 3.3)</a></li><li class="list-group-item"><a href="#accounting" class="ripple internal reference">Accounting</a><ul ><li class="list-group-item"><a href="#electronic-accounting-requires-accounting-app" class="ripple internal reference">Electronic Accounting (Requires Accounting App)</a></li></ul></li><li class="list-group-item"><a href="#electronic-chart-of-account-coa" class="ripple internal reference">Electronic Chart of account CoA</a></li><li class="list-group-item"><a href="#electronic-trial-balance" class="ripple internal reference">Electronic Trial Balance</a><ul ><li class="list-group-item"><a href="#diot-report-requires-accounting-app" class="ripple internal reference">DIOT Report (Requires Accounting App)</a></li><li class="list-group-item"><a href="#important-considerations-on-your-supplier-and-invice-data-for-the-diot" class="ripple internal reference">Important considerations on your Supplier and Invice data for the DIOT</a></li></ul></li></ul></li><li class="list-group-item"><a href="#extra-recommended-features" class="ripple internal reference">Extra Recommended features</a><ul ><li class="list-group-item"><a href="#contact-module-free" class="ripple internal reference">Contact Module (Free)</a></li><li class="list-group-item"><a href="#multi-currency-requires-accounting-app" class="ripple internal reference">Multi currency (Requires Accounting App)</a></li><li class="list-group-item"><a href="#enabling-explicit-errors-on-the-cfdi-using-the-xsd-local-validator-cfdi-3-3" class="ripple internal reference">Enabling Explicit errors on the CFDI using the XSD local validator (CFDI 3.3)</a></li></ul></li><li class="list-group-item"><a href="#faq" class="ripple internal reference">FAQ</a></li></ul>
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/12.0/accounting/localizations/mexico.rst" class="gith-link">
+                  Edit on GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body  ">
+            
+            
+  <section id="mexico"><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >This documentation is written assuming that you follow and know the official
+documentation regarding Invoicing, Sales and Accounting and that you have
+experience working with odoo on such areas, we are not intended to put
+here procedures that are already explained on those documents, just the
+information necessary to allow you use odoo in a Company with the country
+«Mexico» set.</p></div></section><section id="introduction"><h2 >Introduction</h2><p >The mexican localization is a group of 3 modules:</p><ol ><li ><strong >l10n_mx:</strong> All basic data to manage the accounting, taxes and the
+chart of account, this proposed chart of account installed is a intended
+copy of the list of group codes offered by the <a href="http://www.sat.gob.mx/fichas_tematicas/buzon_tributario/Documents/Anexo24_05012015.pdf" class="external reference">SAT</a>.</li><li ><strong >l10n_mx_edi</strong>: All regarding to electronic transactions, CFDI 3.2 and 3.3,
+payment complement, invoice addendum.</li><li ><strong >l10n_mx_reports</strong>: All mandatory electronic reports for electronic
+accounting are here (Accounting app required).</li></ol><p >With the Mexican localization in Odoo you will be able not just to comply
+with the required features by law in México but to use it as your
+accounting and invoicing system due to all the set of normal requirements for
+this market, becoming your Odoo in the perfect solution to administer your
+company in Mexico.</p></section><section id="configuration"><h2 >Configuration</h2><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >After the configuration we will give you the process to test everything,
+try to follow step by step in order to allow you to avoid expend time on
+fix debugging problems. In any step you can recall the step and try again.</p></div></section><section id="install-the-mexican-accounting-localization"><h3 >1. Install the Mexican Accounting Localization</h3><p >For this, go in Apps and search for Mexico. Then click on <em >Install</em>.</p><img src="../../_images/mexico01.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >When creating a database from www.odoo.com, if you choose Mexico
+as country when creating your account, the mexican localization will be
+automatically installed.</p></div></section><section id="electronic-invoices-cdfi-3-2-and-3-3-format"><h3 >2. Electronic Invoices (CDFI 3.2 and 3.3 format)</h3><p >To enable this requirement in Mexico go to configuration in accounting Go in
+<span class="menuselection">Accounting ‣ Settings</span> and enable the option on the image
+with this you will be able to generate the signed invoice (CFDI 3.2 and 3.3)
+and generate the payment complement signed as well (3.3 only) all fully
+integrate with the normal invoicing flow in Odoo.</p><img src="../../_images/mexico02.png" style="" class="img-responsive center-block"></section><section id="set-you-legal-information-in-the-company"><i id="mx-legal-info"></i><h3 >3. Set you legal information in the company</h3><p >First, make sure that your company is configured with the correct data.
+Go in <span class="menuselection">Settings ‣ Users ‣ Companies</span>
+and enter a valid address and VAT for
+your company. Don’t forget to define a mexican fiscal position on your
+company’s contact.</p><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >If you want use the Mexican localization on test mode, you can put any known
+address inside Mexico with all fields for the company address and
+set the vat to <strong >TCM970625MB1</strong>.</p></div><img src="../../_images/mexico03.png" style="" class="img-responsive center-block"></section><section id="set-the-proper-fiscal-position-on-the-partner-that-represent-the-company"><h3 >4. Set the proper «Fiscal Position» on the partner that represent the company</h3><p >Go In the same form where you are editing the company save the record in
+order to set this form as a readonly and on readonly view click on the partner
+link, then edit it and set in the <em >Invoicing</em> tab the proper Fiscal Information
+(for the <strong >Test Environment</strong> this must be <em >601 - General de Ley Personas
+Morales</em>, just search it as a normal Odoo field if you can’t see the option).</p></section><section id="enabling-cfdi-version-3-3"><h3 >5. Enabling CFDI Version 3.3</h3><div role="alert" class="alert-warning alert"><p class="alert-title">Предупреждение</p><p >This steps are only necessary when you will enable the CFDI 3.3 (only available
+for V11.0 and above) if you do not have Version 11.0 or above on your
+SaaS instance please ask for an upgrade sending a ticket to support in
+<a href="https://www.odoo.com/help" class="external reference alert-link">https://www.odoo.com/help</a>.</p></div><p >Enable debug mode:</p><img src="../../_images/mexico10.png" style="" class="img-responsive center-block"><p >Go and look the following technical parameter, on
+<span class="menuselection">Settings ‣ Technical ‣ Parameters ‣ System Parameters</span>
+and set the parameter called <em >l10n_mx_edi_cfdi_version</em> to 3.3 (Create it if
+the entry with this name does not exist).</p><div role="alert" class="alert-warning alert"><p class="alert-title">Предупреждение</p><p >The CFDI 3.2 will be legally possible until November 30th 2017 enable the
+3.3 version will be a mandatory step to comply with the new <a href="http://sat.gob.mx/informacion_fiscal/factura_electronica/Paginas/Anexo_20_version3.3.aspx" class="external reference alert-link">SAT resolution</a>
+in any new database created since v11.0 released CFDI 3.3 is the default
+behavior.</p></div><img src="../../_images/mexico11.png" style="" class="img-responsive center-block"></section><section id="important-considerations-when-yo-enable-the-cfdi-3-3"><h4 >Important considerations when yo enable the CFDI 3.3</h4><p >Your tax which represent the VAT 16% and 0% must have the «Factor Type» field
+set to «Tasa».</p><img src="../../_images/mexico12.png" style="" class="img-responsive center-block"><img src="../../_images/mexico13.png" style="" class="img-responsive center-block"><p >You must go to the Fiscal Position configuration and set the proper code (it is
+the first 3 numbers in the name) for example for the test one you should set
+601, it will look like the image.</p><img src="../../_images/mexico14.png" style="" class="img-responsive center-block"><p >All products must have for CFDI 3.3 the «SAT code» and the field «Reference»
+properly set, you can export them and re import them to do it faster.</p><img src="../../_images/mexico15.png" style="" class="img-responsive center-block"></section><section id="configure-the-pac-in-order-to-sign-properly-the-invoices"><h3 >6. Configure the PAC in order to sign properly the invoices</h3><p >To configure the EDI with the <strong >PACs</strong>, you can go in
+<span class="menuselection">Accounting ‣ Settings ‣ Electronic Invoicing (MX)</span>.
+You can choose a PAC within the <strong >List of supported PACs</strong> on the <em >PAC field</em>
+and then enter your PAC username and PAC password.</p><div role="alert" class="alert-warning alert"><p class="alert-title">Предупреждение</p><p >Remember you must sign up in the refereed PAC before hand, that process
+can be done with the PAC itself on this case we will have two
+(2) availables <a href="https://www.finkok.com/contacto.html" class="external reference alert-link">Finkok</a> and <a href="https://solucionfactible.com/sf/v3/timbrado.jsp" class="external reference alert-link">Solución Factible</a>.</p><p >You must process your <strong >Private Key (CSD)</strong> with the SAT institution before
+follow this steps, if you do not have such information please try all the
+«Steps for Test» and come back to this process when you finish the process
+proposed for the SAT in order to set this information for your production
+environment with real transactions.</p></div><img src="../../_images/mexico04.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >If you ticked the box <em >MX PAC test environment</em> there is no need
+to enter a PAC username or password.</p></div><img src="../../_images/mexico05.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >Here is a SAT certificate you can use if you want to use the <em >Test
+Environment</em> for the Mexican Accounting Localization.</p><ul ><li ><a href="../../_static/files/certificate.cer" class="external reference alert-link">Certificate</a></li><li ><a href="../../_static/files/certificate.key" class="external reference alert-link">Certificate Key</a></li><li ><strong >Password:</strong> 12345678a</li></ul></div></section><section id="configure-the-tag-in-sales-taxes"><h3 >7. Configure the tag in sales taxes</h3><p >This tag is used to set the tax type code, transferred or withhold, applicable
+to the concept in the CFDI.
+So, if the tax is a sale tax the «Tag» field should be «IVA», «ISR» or «IEPS».</p><img src="../../_images/mexico33.png" style="" class="img-responsive center-block"><p >Note that the default taxes already has a tag assigned, but when you create a
+new tax you should choose a tag.</p></section><section id="usage-and-testing"><h2 >Usage and testing</h2></section><section id="invoicing"><h3 >Invoicing</h3><p >To use the mexican invoicing you just need to do a normal invoice following
+the normal Odoo’s behaviour.</p><p >Once you validate your first invoice a correctly signed invoice should look
+like this:</p><img src="../../_images/mexico07.png" style="" class="img-responsive center-block"><p >You can generate the PDF just clicking on the Print button on the invoice or
+sending it by email following the normal process on odoo to send your invoice
+by email.</p><img src="../../_images/mexico08.png" style="" class="img-responsive center-block"><p >Once you send the electronic invoice by email this is the way it should looks
+like.</p><img src="../../_images/mexico09.png" style="" class="img-responsive center-block"></section><section id="cancelling-invoices"><h3 >Cancelling invoices</h3><p >The cancellation process is completely linked to the normal cancellation in Odoo.</p><p >If the invoice is not paid.</p><ul ><li >Go to to the customer invoice journal where the invoice belong to</li></ul><img src="../../_images/mexico28.png" style="" class="img-responsive center-block"><img src="../../_images/mexico29.png" style="" class="img-responsive center-block"><ul ><li >Check the «Allow cancelling entries» field</li></ul><img src="../../_images/mexico29.png" style="" class="img-responsive center-block"><ul ><li >Go back to your invoice and click on the button «Cancel Invoice»</li></ul><img src="../../_images/mexico30.png" style="" class="img-responsive center-block"><ul ><li >For security reasons it is recommendable return the check on the to allow
+cancelling to false again, then go to the journal and un check such field.</li></ul><p ><strong >Legal considerations</strong></p><ul ><li >A cancelled invoice will automatically cancelled on the SAT.</li><li >If you retry to use the same invoice after cancelled, you will have as much
+cancelled CFDI as you tried, then all those xml are important to maintain a
+good control of the cancellation reasons.</li><li >You must unlink all related payment done to an invoice on odoo before
+cancel such document, this payments must be cancelled to following the same
+approach but setting the «Allow Cancel Entries» in the payment itself.</li></ul></section><section id="payments-just-available-for-cfdi-3-3"><h3 >Payments (Just available for CFDI 3.3)</h3><p >To generate the payment complement you only need to follow the normal payment
+process in Odoo, this considerations to understand the behavior are important.</p><ol ><li ><p >To generate payment complement the payment term in the invoice must be
+PPD, because It is the expected behavior legally required for
+«Cash payment».</p><p ><strong >1.1. How can I generate an invoice with payment term `PUE`?</strong></p><p ><a href="https://www.sat.gob.mx/cs/Satellite?blobcol=urldata&amp;blobkey=id&amp;blobtable=MungoBlobs&amp;blobwhere=1461173400586&amp;ssbinary=true" class="external reference">According to the SAT documentation</a> a payment is classified as <code >PUE</code> if
+the invoice was agreed to be fully payed before the 17th of the next
+calendar month (the next month of the CFDI date), any other condition
+will generate a <code >PPD</code> invoice.</p><p ><strong >1.2. How can I get this with Odoo?</strong></p><p >In order to set the appropriate CFDI payment term (PPD or PUE), you can
+easily set it by using the <code >Payment Terms</code> defined in the invoice.</p><ul ><li >If an invoice is generated without <code >Payment Term</code> the attribute
+<code >MetodoPago</code> will be <code >PUE</code>.</li><li >Today, if is the first day of the month and is generated an invoice with
+<code >Payment Term</code> <code >30 Net Days</code> the <code >Due Date</code> calculated is going to
+be the first day of the following month, this means its before the 17th
+of the next month, then the attribute <code >MetodoPago</code> will be <code >PUE</code>.</li><li >Today, if an invoice is generated with <code >Payment Term</code> <code >30 Net Days</code>
+and the <code >Due Date</code> is higher than the day 17 of the next month the
+<code >MetodoPago</code> will be <code >PPD</code>.</li><li >If having a <code >Payment Term</code> with 2 lines or more, for example
+<code >30% Advance End of Following Month</code>, this is an installments term,
+then the attribute <code >MetodoPago</code> will be <code >PPD</code>.</li></ul></li><li >To test a normal signed payment just create an invoice with payment term
+<code >30% Advance End of Following Month</code> and then register a payment to it.</li><li >You must print the payment in order to retrieve the PDF properly.</li><li >Regarding the «Payments in Advance» you must create a proper invoice with
+the payment in advance itself as a product line setting the proper SAT code
+following the procedure on the official documentation <a href="http://sat.gob.mx/informacion_fiscal/factura_electronica/Documents/GuiaAnexo20DPA.pdf" class="external reference">given by the SAT</a>
+in the section <strong >Apéndice 2 Procedimiento para la emisión de los CFDI en el
+caso de anticipos recibidos</strong>.</li><li >Related to topic 4 it is blocked the possibility to create a Customer
+Payment without a proper invoice.</li></ol></section><section id="accounting"><h3 >Accounting</h3><p >The accounting for Mexico in odoo is composed by 3 reports:</p><ol ><li >Chart of Account (Called and shown as COA).</li><li >Electronic Trial Balance.</li><li >DIOT report.</li></ol><p >1 and 2 are considered as the electronic accounting, and the DIOT is a report
+only available on the context of the accounting.</p><p >You can find all those reports in the original report menu on Accounting app.</p><img src="../../_images/mexico16.png" style="" class="img-responsive center-block"></section><section id="electronic-accounting-requires-accounting-app"><h4 >Electronic Accounting (Requires Accounting App)</h4></section><section id="electronic-chart-of-account-coa"><h3 >Electronic Chart of account CoA</h3><p >The electronic accounting never has been easier, just go to
+<span class="menuselection">Accounting ‣ Reporting ‣ Mexico ‣ COA</span> and click on the
+button <strong >Export for SAT (XML)</strong></p><img src="../../_images/mexico19.png" style="" class="img-responsive center-block"><p ><strong >How to add new accounts?</strong></p><p >If you add an account with the coding convention NNN.YY.ZZ where NNN.YY is a
+SAT coding group then your account will be automatically configured.</p><p >Example to add an Account for a new Bank account go to
+<span class="menuselection">Accounting ‣ Settings ‣ Chart of Account</span> and then create
+a new account on the button «Create» and try to create an account with the
+number 102.01.99 once you change to set the name you will see a tag
+automatically set, the tags set are the one picked to be used in the COA on
+xml.</p><img src="../../_images/mexico20.png" style="" class="img-responsive center-block"><p ><strong >What is the meaning of the tag?</strong></p><p >To know all possible tags you can read the <a href="http://www.sat.gob.mx/fichas_tematicas/buzon_tributario/Documents/Anexo24_05012015.pdf" class="external reference">Anexo 24</a> in the SAT
+website on the section called <strong >Código agrupador de cuentas del SAT</strong>.</p><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >When you install the module l10n_mx and yous Chart of Account rely on it
+(this happen automatically when you install setting Mexico as country on
+your database) then you will have the more common tags if the tag you need
+is not created you can create one on the fly.</p></div></section><section id="electronic-trial-balance"><h3 >Electronic Trial Balance</h3><p >Exactly as the COA but with Initial balance debit and credit, once you have
+your coa properly set you can go to <span class="menuselection">Accounting ‣ Reports ‣ Mexico ‣ Trial Balance</span>
+this is automatically generated, and can be exported to XML using the button
+in the top  <strong >Export for SAT (XML)</strong> with the previous selection of the
+period you want to export.</p><img src="../../_images/mexico21.png" style="" class="img-responsive center-block"><p >All the normal auditory and analysis features are available here also as any
+regular Odoo Report.</p></section><section id="diot-report-requires-accounting-app"><h4 >DIOT Report (Requires Accounting App)</h4><p ><strong >What is the DIOT and the importance of presenting it SAT</strong></p><p >When it comes to procedures with the SAT Administration Service we know that
+we should not neglect what we present. So that things should not happen in Odoo.</p><p >The DIOT is the Informational Statement of Operations with Third Parties (DIOT),
+which is an an additional obligation with the VAT, where we must give the status
+of our operations to third parties, or what is considered the same, with our
+providers.</p><p >This applies both to individuals and to the moral as well, so if we have VAT
+for submitting to the SAT and also dealing with suppliers it is necessary to.
+submit the DIOT:</p><p ><strong >When to file the DIOT and in what format?</strong></p><p >It is simple to present the DIOT, since like all format this you can obtain
+it in the page of the SAT, it is the electronic format A-29 that you can find
+in the SAT website.</p><p >Every month if you have operations with third parties it is necessary to
+present the DIOT, just as we do with VAT, so that if in January we have deals
+with suppliers, by February we must present the information pertinent to
+said data.</p><p ><strong >Where the DIOT is presented?</strong></p><p >You can present DIOT in different ways, it is up to you which one you will
+choose and which will be more comfortable for you than you will present every
+month or every time you have dealings with suppliers.</p><p >The A-29 format is electronic so you can present it on the SAT page, but this
+after having made up to 500 records.</p><p >Once these 500 records are entered in the SAT, you must present them to the
+Local Taxpayer Services Administration (ALSC) with correspondence to your tax
+address, these records can be presented in a digital storage medium such as a
+CD or USB, which once validated you will be returned, so do not doubt that you
+will still have these records and of course, your CD or USB.</p><p ><strong >One more fact to know: the Batch load?</strong></p><p >When reviewing the official SAT documents on DIOT, you will find the Batch
+load, and of course the first thing we think is what is that ?, and according
+to the SAT site is:</p><p >The «batch upload» is the conversion of records databases of transactions with
+suppliers made by taxpayers in text files (.txt). These files have the
+necessary structure for their application and importation into the system of
+the Informative Declaration of Operations with third parties, avoiding the
+direct capture and consequently, optimizing the time invested in its
+integration for the presentation in time and form to the SAT.</p><p >You can use it to present the DIOT, since it is allowed, which will make this
+operation easier for you, so that it does not exist to avoid being in line
+with the SAT in regard to the Information Statement of Operations with
+Third Parties.</p><p >You can find the <a href="http://www.sat.gob.mx/fichas_tematicas/declaraciones_informativas/Paginas/declaracion_informativa_terceros.aspx" class="external reference">official information here</a>.</p><p ><strong >How Generate this report in odoo?</strong></p><ul ><li >Go to  <span class="menuselection">Accounting ‣ Reports ‣ Mexico ‣ Transactions with third partied (DIOT)</span>.</li></ul><img src="../../_images/mexico23.png" style="" class="img-responsive center-block"><ul ><li >A report view is shown, select last month to report the immediate before
+month you are or left the current month if it suits to you.</li></ul><img src="../../_images/mexico25.png" style="" class="img-responsive center-block"><ul ><li >Click on «Export (TXT).</li></ul><img src="../../_images/mexico24.png" style="" class="img-responsive center-block"><ul ><li >Save in a secure place the downloaded file and go to SAT website and follow
+the necessary steps to declare it.</li></ul></section><section id="important-considerations-on-your-supplier-and-invice-data-for-the-diot"><h4 >Important considerations on your Supplier and Invice data for the DIOT</h4><ul ><li >All suppliers must have set the fields on the accounting tab called «DIOT
+Information», the <em >L10N Mx Nationality</em> field is filled with just select the
+proper country in the address, you do not need to do anything else there, but
+the <em >L10N Mx Type Of Operation</em> must be filled by you in all your suppliers.</li></ul><img src="../../_images/mexico22.png" style="" class="img-responsive center-block"><ul ><li >There are 3 options of VAT for this report, 16%, 0% and exempt, an invoice
+line in odoo is considered exempt if no tax on it, the other 2 taxes are
+properly configured already.</li><li >Remember to pay an invoice which represent a payment in advance you must
+ask for the invoice first and then pay it and reconcile properly the payment
+following standard odoo procedure.</li><li >You do not need all you data on partners filled to try to generate the
+supplier invoice, you can fix this information when you generate the report
+itself.</li><li >Remember this report only shows the Supplier Invoices that were actually paid.</li></ul><p >If some of this considerations are not taken into account a message like this
+will appear when generate the DIOT on TXT with all the partners you need to
+check on this particular report, this is the reason we recommend use this
+report not just to export your legal obligation but to generate it before
+the end of the month and use it as your auditory process to see all your
+partners are correctly set.</p><img src="../../_images/mexico26.png" style="" class="img-responsive center-block"></section><section id="extra-recommended-features"><h2 >Extra Recommended features</h2></section><section id="contact-module-free"><h3 >Contact Module (Free)</h3><p >If you want to administer properly your customers, suppliers and addresses
+this module even if it is not a technical need, it is highly recommended to
+install.</p></section><section id="multi-currency-requires-accounting-app"><h3 >Multi currency (Requires Accounting App)</h3><p >In Mexico almost all companies send and receive payments in different
+currencies if you want to manage such capability you should enable the multi
+currency feature and you should enable the synchronization with <strong >Banxico</strong>,
+such feature allow you retrieve the proper exchange rate automatically
+retrieved from SAT and not being worried of put such information daily in the
+system manually.</p><p >Go to settings and enable the multi currency feature.</p><img src="../../_images/mexico17.png" style="" class="img-responsive center-block"></section><section id="enabling-explicit-errors-on-the-cfdi-using-the-xsd-local-validator-cfdi-3-3"><h3 >Enabling Explicit errors on the CFDI using the XSD local validator (CFDI 3.3)</h3><p >Frequently you want receive explicit errors from the fields incorrectly set
+on the xml, those errors are better informed to the user if the check is
+enable, to enable the Check with xsd feature follow the next steps (with
+debug mode enabled).</p><ul ><li >Go to <span class="menuselection">Settings ‣ Technical ‣ Actions ‣ Server Actions</span></li><li >Look for the Action called «Download XSD files to CFDI»</li><li >Click on button «Create Contextual Action»</li><li >Go to the company form <span class="menuselection">Settings ‣ Users<span class="accelerator">C</span>ompanies ‣ Companies</span></li><li >Open any company you have.</li><li >Click on «Action» and then on «Download XSD file to CFDI».</li></ul><img src="../../_images/mexico18.png" style="" class="img-responsive center-block"><p >Now you can make an invoice with any error (for example a product without
+code which is pretty common) and an explicit error will be shown instead a
+generic one with no explanation.</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >If you see an error like this:</p><blockquote ><p >The cfdi generated is not valid</p><p >attribute decl. „TipoRelacion“, attribute „type“: The QName value
+„{<a href="http://www.sat.gob.mx/sitio_internet/cfd/catalogos" class="external reference alert-link">http://www.sat.gob.mx/sitio_internet/cfd/catalogos</a>}c_TipoRelacion“ does
+not resolve to a(n) simple type definition., line 36</p></blockquote><p >This can be caused because of a database backup restored in anothe server,
+or when the XSD files are not correctly downloaded. Follow the same steps
+as above but:</p><ul ><li >Go to the company in which the error occurs.</li><li >Click on «Action» and then on «Download XSD file to CFDI».</li></ul></div></section><section id="faq"><h2 >FAQ</h2><ul ><li ><strong >Error message</strong> (Only applicable on CFDI 3.3):</li></ul><div class="code-fields"><div class="code-field"><div class="code-field-name">9:0:ERROR:SCHEMASV:SCHEMAV_CVC_MINLENGTH_VALID</div><div class="code-field-body">Element „{<a href="http://www.sat.gob.mx/cfd/3" class="external reference">http://www.sat.gob.mx/cfd/3</a>}Concepto“, attribute „NoIdentificacion“: [facet „minLength“] The value „“ has a length of „0“; this underruns the allowed minimum length of „1“.</div></div><div class="code-field"><div class="code-field-name">9:0:ERROR:SCHEMASV:SCHEMAV_CVC_PATTERN_VALID</div><div class="code-field-body">Element „{<a href="http://www.sat.gob.mx/cfd/3" class="external reference">http://www.sat.gob.mx/cfd/3</a>}Concepto“, attribute „NoIdentificacion“: [facet „pattern“] The value „“ is not accepted by the pattern „[^|]{1,100}“.</div></div></div><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p ><strong >Solution:</strong> You forget to set the proper «Reference» field in the product,
+please go to the product form and set your internal reference properly.</p></div><ul ><li ><strong >Error message</strong>:</li></ul><div class="code-fields"><div class="code-field"><div class="code-field-name">6:0:ERROR:SCHEMASV:SCHEMAV_CVC_COMPLEX_TYPE_4</div><div class="code-field-body">Element „{<a href="http://www.sat.gob.mx/cfd/3" class="external reference">http://www.sat.gob.mx/cfd/3</a>}RegimenFiscal“: The attribute „Regimen“ is required but missing.</div></div><div class="code-field"><div class="code-field-name">5:0:ERROR:SCHEMASV:SCHEMAV_CVC_COMPLEX_TYPE_4</div><div class="code-field-body">Element „{<a href="http://www.sat.gob.mx/cfd/3" class="external reference">http://www.sat.gob.mx/cfd/3</a>}Emisor“: The attribute „RegimenFiscal“ is required but missing.</div></div></div><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p ><strong >Solution:</strong> You forget to set the proper «Fiscal Position» on the
+partner of the company, go to customers, remove the customer filter and
+look for the partner called as your company and set the proper fiscal
+position which is the kind of business you company does related to SAT
+list of possible values, antoher option can be that you forgot follow the
+considerations about fiscal positions.</p><p >Yo must go to the Fiscal Position configuration and set the proper code (it is
+the first 3 numbers in the name) for example for the test one you should set
+601, it will look like the image.</p></div><img src="../../_images/mexico27.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >For testing purposes this value must be <em >601 - General de Ley Personas Morales</em>
+which is the one required for the demo VAT.</p></div><ul ><li ><strong >Error message</strong>:</li></ul><div class="code-fields"><div class="code-field"><div class="code-field-name">2:0:ERROR:SCHEMASV:SCHEMAV_CVC_ENUMERATION_VALID</div><div class="code-field-body">Element „{<a href="http://www.sat.gob.mx/cfd/3" class="external reference">http://www.sat.gob.mx/cfd/3</a>}Comprobante“, attribute „FormaPago“: [facet „enumeration“] The value „“ is not an element of the set {„01“, „02“, „03“, „04“, „05“, „06“, „08“, „12“, „13“, „14“, „15“, „17“, „23“, „24“, „25“, „26“, „27“, „28“, „29“, „30“, „99“}</div></div></div><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p ><strong >Solution:</strong> The payment method is required on your invoice.</p></div><img src="../../_images/mexico31.png" style="" class="img-responsive center-block"><ul ><li ><strong >Error message</strong>:</li></ul><div class="code-fields"><div class="code-field"><div class="code-field-name">2:0:ERROR:SCHEMASV:SCHEMAV_CVC_ENUMERATION_VALID</div><div class="code-field-body">Element „{<a href="http://www.sat.gob.mx/cfd/3" class="external reference">http://www.sat.gob.mx/cfd/3</a>}Comprobante“, attribute „LugarExpedicion“: [facet „enumeration“] The value „“ is not an element of the set {„00</div></div><div class="code-field"><div class="code-field-name">2:0:ERROR:SCHEMASV:SCHEMAV_CVC_DATATYPE_VALID_1_2_1</div><div class="code-field-body">Element „{<a href="http://www.sat.gob.mx/cfd/3" class="external reference">http://www.sat.gob.mx/cfd/3</a>}Comprobante“, attribute „LugarExpedicion“: „“ is not a valid value of the atomic type „{<a href="http://www.sat.gob.mx/sitio_internet/cfd/catalogos" class="external reference">http://www.sat.gob.mx/sitio_internet/cfd/catalogos</a>}c_CodigoPostal“.</div></div><div class="code-field"><div class="code-field-name">5:0:ERROR:SCHEMASV:SCHEMAV_CVC_COMPLEX_TYPE_4</div><div class="code-field-body">Element „{<a href="http://www.sat.gob.mx/cfd/3" class="external reference">http://www.sat.gob.mx/cfd/3</a>}Emisor“: The attribute „Rfc“ is required but missing.</div></div></div><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p ><strong >Solution:</strong> You must set the address on your company properly, this is a
+mandatory group of fields, you can go to your company configuration on
+<span class="menuselection">Settings ‣ Users &amp; Companies ‣ Companies</span> and fill
+all the required fields for your address following the step
+<a href="#mx-legal-info" class="internal alert-link reference"><span class="std std-ref">3. Set you legal information in the company</span></a>.</p></div><ul ><li ><strong >Error message</strong>:</li></ul><div class="code-fields"><div class="code-field"><div class="code-field-name">2:0:ERROR:SCHEMASV:SCHEMAV_CVC_DATATYPE_VALID_1_2_1</div><div class="code-field-body">Element „{<a href="http://www.sat.gob.mx/cfd/3" class="external reference">http://www.sat.gob.mx/cfd/3</a>}Comprobante“, attribute „LugarExpedicion“: „“ is not a valid value of the atomic type „{<a href="http://www.sat.gob.mx/sitio_internet/cfd/catalogos" class="external reference">http://www.sat.gob.mx/sitio_internet/cfd/catalogos</a>}c_CodigoPostal“.</div></div></div><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p ><strong >Solution:</strong> The postal code on your company address is not a valid one
+for Mexico, fix it.</p></div><img src="../../_images/mexico32.png" style="" class="img-responsive center-block"><ul ><li ><strong >Error message</strong>:</li></ul><div class="code-fields"><div class="code-field"><div class="code-field-name">18:0:ERROR:SCHEMASV:SCHEMAV_CVC_COMPLEX_TYPE_4</div><div class="code-field-body">Element „{<a href="http://www.sat.gob.mx/cfd/3" class="external reference">http://www.sat.gob.mx/cfd/3</a>}Traslado“: The attribute „TipoFactor“ is required but missing.</div></div><div class="code-field"><div class="code-field-name">34:0:ERROR:SCHEMASV:SCHEMAV_CVC_COMPLEX_TYPE_4</div><div class="code-field-body">Element „{<a href="http://www.sat.gob.mx/cfd/3" class="external reference">http://www.sat.gob.mx/cfd/3</a>}Traslado“: The attribute „TipoFactor“ is required but missing.», „“)</div></div></div><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p ><strong >Solution:</strong> Set the mexican name for the tax 0% and 16% in your system
+and used on the invoice.</p><p >Your tax which represent the VAT 16% and 0% must have the «Factor Type» field
+set to «Tasa».</p></div><img src="../../_images/mexico12.png" style="" class="img-responsive center-block"><img src="../../_images/mexico13.png" style="" class="img-responsive center-block"></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer>
+    <div id="footer" class="container">
+      <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+      <div class="row">
+        <div class="col-sm-7 col-md-7 col-lg-6">
+          <div class="row">
+            <div class="col-xs-6 col-sm-4">
+              <span class="menu_title">Community</span>
+              <ul>
+                <li><a href="https://github.com/odoo/odoo">Github</a></li>
+                <li><a href="http://www.odoo.com/page/download">Download</a></li>
+                <li class="divider"></li>
+                <li><a href="http://runbot.odoo.com/runbot/repo/git-github-com-odoo-enterprise-7">Runbot</a></li>
+                <li><a href="https://github.com/odoo/odoo/wiki/Translations">Translations</a></li>
+                <li class="divider"></li>
+                <li><a href="http://www.odoo.com/page/odoo-community">Mailing Lists</a></li>
+                <li><a href="http://www.odoo.com/forum/help-1">Forum</a></li>
+              </ul>
+            </div>
+            <div class="col-xs-6 col-sm-4">
+              <span class="menu_title">Services</span>
+              <ul>
+                <li><a href="http://www.odoo.com/pricing">Editions</a></li>
+                <li><a href="http://www.odoo.com/pricing-online">Cloud Pricing</a></li>
+                <li><a href="http://www.odoo.com/page/upgrade">Upgrade</a></li>
+                <li class="divider"></li>
+                <li><a href="http://www.odoo.com/partners">Find a partner</a></li>
+                <li><a href="http://www.odoo.com/page/become-a-partner">Become a partner</a></li>
+                <li class="divider"></li>
+                <li><a href="http://www.odoo.com/page/education-program">Education</a></li>
+                <li class="divider"></li>
+                <li><a href="http://www.odoo.com/page/security">Security</a></li>
+              </ul>
+            </div>
+            <div class="col-sm-4 mb64">
+              <span class="menu_title">About us</span>
+              <ul>
+                <li><a href="http://www.odoo.com/page/about-us">Our company</a></li>
+                <li><a href="http://www.odoo.com/page/contactus">Contact</a></li>
+                <li class="divider" />
+                <li><a href="http://www.odoo.com/event">Events</a></li>
+                <li><a href="http://www.odoo.com/blog/">Blog</a></li>
+                <li><a href="http://www.odoo.com/blog/6">Customers</a></li>
+                <li class="divider" />
+                <li><a href="http://www.odoo.com/jobs">Jobs</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-5 col-md-4 col-md-offset-1 col-lg-5 col-lg-offset-1">
+          <p>
+            <small>
+              Odoo is a suite of open source business apps that cover all your company needs: CRM, eCommerce, accounting, inventory, point of sale, project management, etc.
+              <br/><br/>
+              Odoo's unique value proposition is to be at the same time very easy to use and fully integrated.
+            </small>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="o_footer_bottom">
+      <div class="container">
+        <a class="small" href="http://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+        <div class="social-links pull-right">
+          <a href="http://www.odoo.com/web/about/facebook"><i class="fa fa-facebook"></i></a>
+          <a href="http://www.odoo.com/web/about/twitter"><i class="fa fa-twitter"></i></a>
+          <a href="http://www.odoo.com/web/about/linkedin"><i class="fa fa-linkedin"></i></a>
+          <a href="mailto:info@odoo.com"><i class="fa fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  </body>
+</html>

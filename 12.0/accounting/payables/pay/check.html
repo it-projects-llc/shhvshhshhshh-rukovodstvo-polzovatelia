@@ -1,0 +1,441 @@
+<!doctype html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="RU">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Pay by Checks &#8212; Документация Odoo 12.0</title>
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/accounting.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/accounting/payables/pay/check.html" />
+    <link rel="canonical" href="/master/ru/accounting/payables/pay/check.html" />
+  
+    <link rel="index" title="Алфавитный указатель" href="../../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../../search.html" />
+    <link rel="next" title="How to pay several bills at once?" href="multiple.html" />
+    <link rel="prev" title="Pay with SEPA" href="sepa.html" /> 
+  </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <div class="o_header_buttons">
+        <a href="http://www.odoo.com/trial" class="btn btn-primary">Start Now</a>
+      </div>
+      <ul class="o_primary_nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Apps</a>
+          <div class="dropdown-menu o_secondary_nav">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-3 o_website_apps">
+                  <div class="o_nav_app_family">
+                    <span></span> Websites
+                    <div>Build great user experience</div>
+                  </div>
+                  <ul>
+                    <li><a href="https://www.odoo.com/page/website-builder">Website Builder</a></li>
+                    <li><a href="https://www.odoo.com/page/e-commerce">eCommerce</a></li>
+                    <li><a href="https://www.odoo.com/page/blog-engine">Blogs</a></li>
+                    <li><a href="https://www.odoo.com/page/community-builder">Forums</a></li>
+                    <li><a href="https://www.odoo.com/page/learning-management-system">eLearning</a></li>
+                    <li><a href="https://www.odoo.com/page/live-chat">Live Chat</a></li>
+                  </ul>
+                </div>
+                <div class="col-sm-3 o_sale_apps">
+                  <div class="o_nav_app_family">
+                    <span></span> Sales
+                    <div>Boost your success rate</div>
+                  </div>
+                  <ul>
+                    <li><a href="https://www.odoo.com/page/sales">Sales</a></li>
+                    <li><a href="https://www.odoo.com/page/crm">CRM</a></li>
+                    <li><a href="https://www.odoo.com/page/billing">Invoicing</a></li>
+                    <li class="dropdown">
+                      <a href="#0" class="dropdown-toggle">Point of Sale</a>
+                      <ul>
+                        <li><a href="https://www.odoo.com/page/point-of-sale">Shops</a></li>
+                        <li><a href="https://www.odoo.com/page/pos-restaurant">Restaurants</a></li>
+                        <li><a href="https://www.odoo.com/page/point-of-sale-hardware">Hardware</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://www.odoo.com/page/subscriptions">Subscriptions</a></li>
+                    <li><a href="https://www.odoo.com/page/sign">Sign</a></li>
+                    <li><a href="https://www.odoo.com/page/rental">Rental</a></li>
+                  </ul>
+                </div>
+                <div class="col-sm-3 o_operation_apps">
+                  <div class="o_nav_app_family">
+                    <span></span> Operations
+                    <div>It's all about efficiency</div>
+                  </div>
+                  <ul>
+                    <li><a href="https://www.odoo.com/page/accounting/">Accounting</a></li>
+                    <li><a href="https://www.odoo.com/page/project-management/">Project</a></li>
+                    <li class="dropdown">
+                      <a href="#0" class="dropdown-toggle">Human Resources</a>
+                      <ul>
+                        <li><a href="https://www.odoo.com/page/referral">Referral</a></li>
+                        <li><a href="https://www.odoo.com/page/employees">Employees</a></li>
+                        <li><a href="https://www.odoo.com/page/expenses">Expenses</a></li>
+                        <li><a href="https://www.odoo.com/page/appraisal">Appraisal</a></li>
+                        <li><a href="https://www.odoo.com/page/fleet">Fleet</a></li>
+                        <li><a href="https://www.odoo.com/page/leaves">Time Off</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://www.odoo.com/page/warehouse">Inventory</a></li>
+                    <li><a href="https://www.odoo.com/page/purchase">Purchase</a></li>
+                    <li class="dropdown">
+                      <a href="#0" class="dropdown-toggle">Manufacturing</a>
+                      <ul>
+                        <li><a href="https://www.odoo.com/page/manufacturing">MRP</a></li>
+                        <li><a href="https://www.odoo.com/page/plm">PLM</a></li>
+                        <li><a href="https://www.odoo.com/page/maintenance">Maintenance</a></li>
+                        <li><a href="https://www.odoo.com/page/quality">Quality</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://www.odoo.com/page/helpdesk">Helpdesk</a></li>
+                    <li><a href="https://www.odoo.com/page/field-service-management">Field Service</a></li>
+                  </ul>
+                </div>
+                <div class="col-sm-3 o_productivity_apps">
+                  <div class="o_nav_app_family">
+                    <span></span> Productivity Tools
+                    <div>Great Tools = Happy People</div>
+                  </div>
+                  <ul>
+                    <li class="dropdown">
+                      <a href="#0" class="dropdown-toggle">Communication</a>
+                      <ul>
+                        <li><a href="https://www.odoo.com/page/discuss">Discuss</a></li>
+                        <li><a href="https://www.odoo.com/page/discuss-groups">Mailing Lists</a></li>
+                        <li><a href="https://www.odoo.com/page/notes">Notes</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://www.odoo.com/page/timesheet">Timesheet</a></li>
+                    <li><a href="https://www.odoo.com/page/events">Events</a></li>
+                    <li class="dropdown">
+                      <a href="#0" class="dropdown-toggle">Marketing</a>
+                      <ul>
+                        <li><a href="https://www.odoo.com/page/marketing-automation">Automation</a></li>
+                        <li><a href="https://www.odoo.com/page/email-marketing">Email</a></li>
+                        <li><a href="https://www.odoo.com/page/social-marketing">Social</a></li>
+                        <li><a href="https://www.odoo.com/page/sms-marketing">SMS</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://www.odoo.com/page/survey">Survey</a></li>
+                    <li><a href="https://www.odoo.com/page/approval-workflow">Approvals</a></li>
+                    <li><a href="https://www.odoo.com/page/appointments">Appointments</a></li>
+                    <li><a href="https://www.odoo.com/page/documents">Documents</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <a href="http://www.odoo.com/apps/modules" class="o_store_link"><i class="fa fa-cube fa-fw"></i> Third party apps</a>
+          </div>
+        </li>
+        <li><a href="https://www.odoo.com/page/tour">Tour</a></li>
+        <li><a href="https://www.odoo.com/pricing">Pricing</a></li>
+        <li><a href="https://www.odoo.com/page/docs">Docs</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Navigate
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+
+
+
+
+
+    
+        
+            
+                <li><a href="../../../index.html">User Doc</a></li>
+            
+        
+    
+        
+            
+                
+                    <li><a href="../../../accounting.html">Accounting</a></li>
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+    <li class="active"><a href="#">Pay by Checks</a></li>
+
+              
+          </ol>
+
+          <div class="call-to-action navbar-right hidden-xs">
+            <a href="http://www.odoo.com/trial" class="btn btn-primary">Start Now</a>
+          </div>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        12.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/accounting/payables/pay/check.html">13.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="https://www.odoo.com/documentation/user/12.0/index.html">User</a></li>
+<li><a href="https://www.odoo.com/documentation/12.0/index.html">Developer</a></li>
+<li><a href="https://odoo.com/slides">eLearning</a></li>
+<li><a href="https://www.odoo.com/documentation/12.0/webservices/odoo.html">API</a></li>
+<li><a href="https://www.odoo.com/documentation/12.0/setup/install.html">Installation</a></li>
+<li><a href="https://www.odoo.com/page/odoo-white-paper">White Papers</a></li>
+<li><a href="https://www.odoo.com/page/legal">Legal</a></li>
+<li id="searchbox" style="display: none; margin: 0 0 0 10px;" role="search">
+    <form class="search form-inline" action="../../../search.html" method="get">
+        <input type="text" class="form-control" name="q" id="q" placeholder="Search..." />
+        <input type="hidden" name="area" value="default" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <button type="submit" value="Go" class="btn btn-default">Go</button>
+    </form>
+</li>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    <figure class="card top ">
+      <span class="card-img" ></span>
+      <div class="container text-center">
+        <h1> Pay by Checks </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a><ul ><li class="list-group-item"><a href="#install-the-required-module" class="ripple internal reference">Install the required module</a></li><li class="list-group-item"><a href="#activate-checks-payment-methods" class="ripple internal reference">Activate checks payment methods</a></li></ul></li><li class="list-group-item"><a href="#compatible-check-stationery-for-printing-checks" class="ripple internal reference">Compatible check stationery for printing checks</a><ul ><li class="list-group-item"><a href="#united-states" class="ripple internal reference">United States</a></li></ul></li><li class="list-group-item"><a href="#pay-a-supplier-bill-with-a-check" class="ripple internal reference">Pay a supplier bill with a check</a><ul ><li class="list-group-item"><a href="#register-a-payment-by-check" class="ripple internal reference">Register a payment by check</a></li><li class="list-group-item"><a href="#print-checks" class="ripple internal reference">Print checks</a></li><li class="list-group-item"><a href="#reconcile-bank-statements" class="ripple internal reference">Reconcile Bank Statements</a></li></ul></li><li class="list-group-item"><a href="#pay-anything-with-a-check" class="ripple internal reference">Pay anything with a check</a></li></ul>
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/12.0/accounting/payables/pay/check.rst" class="gith-link">
+                  Edit on GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body  ">
+            
+            
+  <section id="pay-by-checks"><p >Once you decide to pay a supplier bill, you can select to pay by check.
+Then, at the end of the day, the manager can print all checks by batch.
+Finally, the bank reconciliation process will match the checks you sent
+to suppliers with actual bank statements.</p></section><section id="configuration"><h2 >Configuration</h2></section><section id="install-the-required-module"><h3 >Install the required module</h3><p >To record supplier payments by checks, you must install the <strong >Check
+Writing</strong> module. This module handle the process of recording checks in
+Odoo. Others modules are necessary to print checks, according to the
+country. As an example, the <strong >U.S. Check Printing</strong> module is required to
+print U.S. checks.</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >According to your country and the chart of account you use, those
+modules may be installed by default. (example: United States users have
+nothing to install, it’s configured by default).</p></div></section><section id="activate-checks-payment-methods"><h3 >Activate checks payment methods</h3><p >In order to allow payments by checks, you must activate the payment
+method on related bank journals. From the accounting dashboard (the
+screen you get when you enter the accounting application), click on your bank
+account on <span class="menuselection">More ‣ Settings</span> option. On the
+<strong >Payment Method</strong> field, set <strong >Check</strong>.</p><img src="../../../_images/check01.png" style="" class="img-responsive center-block"></section><section id="compatible-check-stationery-for-printing-checks"><h2 >Compatible check stationery for printing checks</h2></section><section id="united-states"><h3 >United States</h3><p >For the United States, Odoo supports by default the check formats of:</p><ul ><li ><strong >Quickbooks &amp; Quicken</strong>: check on top, stubs in the middle and bottom</li><li ><strong >Peachtree</strong>: check in the middle, stubs on top and bottom</li><li ><strong >ADP</strong>: check in the bottom, and stubs on the top.</li></ul><p >It is also possible to customize your own check format through customizations.</p></section><section id="pay-a-supplier-bill-with-a-check"><h2 >Pay a supplier bill with a check</h2><p >Paying a supplier with a check is done in three steps:</p><ol ><li >registering a payment you’d like to do on the bill</li><li >printing checks in batch for all registered payments</li><li >reconcile bank statements</li></ol></section><section id="register-a-payment-by-check"><h3 >Register a payment by check</h3><p >To register a payment on a bill, open any supplier bill from the menu
+<span class="menuselection">Purchases ‣ Vendor Bills</span>. Once the supplier bill is
+validated, you can register a payment. Set the <strong >Payment Method</strong> to <strong >Check</strong>
+and validate the payment dialog.</p><img src="../../../_images/check02.png" style="" class="img-responsive center-block"><p >Explanation of the fields of the payment screen:</p><div class="code-fields"><div class="code-field"><div class="code-field-name">Has Invoices</div><div class="code-field-body"><div class="line-block"><div class="line">Technical field used for usability purposes</div></div></div></div><div class="code-field"><div class="code-field-name">Invoices</div><div class="code-field-body"><div class="line-block"><div class="line">Technical field containing the invoice for which the payment has been generated.</div><div class="line">                                   This does not especially correspond to the invoices reconciled with the payment,</div><div class="line">                                   as it can have been generated first, and reconciled later</div></div></div></div><div class="code-field"><div class="code-field-name">Company</div><div class="code-field-body"><div class="line-block"><div class="line">Company related to this journal</div></div></div></div><div class="code-field"><div class="code-field-name">Hide Payment Method</div><div class="code-field-body"><div class="line-block"><div class="line">Technical field used to hide the payment method if the selected journal has only one available which is „manual“</div></div></div></div><div class="code-field"><div class="code-field-name">Payment Method</div><div class="code-field-body"><div class="line-block"><div class="line">Manual: Get paid by cash, check or any other method outside of Odoo.</div><div class="line">Electronic: Get paid automatically through a payment acquirer by requesting a transaction on a card saved by the customer when buying or subscribing online (payment token).</div><div class="line">Check: Pay bill by check and print it from Odoo.</div><div class="line">Batch Deposit: Encase several customer checks at once by generating a batch deposit to submit to your bank. When encoding the bank statement in Odoo, you are suggested to reconcile the transaction with the batch deposit.To enable batch deposit, module account_batch_payment must be installed.</div><div class="line">SEPA Credit Transfer: Pay bill from a SEPA Credit Transfer file you submit to your bank. To enable sepa credit transfer, module account_sepa must be installed </div></div></div></div><div class="code-field"><div class="code-field-name">Code</div><div class="code-field-body"><div class="line-block"><div class="line">Technical field used to adapt the interface to the payment type selected.</div></div></div></div><div class="code-field"><div class="code-field-name">Saved payment token</div><div class="code-field-body"><div class="line-block"><div class="line">Note that tokens from acquirers set to only authorize transactions (instead of capturing the amount) are not available.</div></div></div></div><div class="code-field"><div class="code-field-name">Show Partner Bank Account</div><div class="code-field-body"><div class="line-block"><div class="line">Technical field used to know whether the field `partner_bank_account_id` needs to be displayed or not in the payments form views</div></div></div></div><div class="code-field"><div class="code-field-name">Require Partner Bank Account</div><div class="code-field-body"><div class="line-block"><div class="line">Technical field used to know whether the field `partner_bank_account_id` needs to be required or not in the payments form views</div></div></div></div><div class="code-field"><div class="code-field-name">Manual Numbering</div><div class="code-field-body"><div class="line-block"><div class="line">Check this option if your pre-printed checks are not numbered.</div></div></div></div><div class="code-field"><div class="code-field-name">Check Number</div><div class="code-field-body"><div class="line-block"><div class="line">The selected journal is configured to print check numbers. If your pre-printed check paper already has numbers or if the current numbering is wrong, you can change it in the journal configuration page.</div></div></div></div><div class="code-field"><div class="code-field-name">Journal Item Label</div><div class="code-field-body"><div class="line-block"><div class="line">Change label of the counterpart that will hold the payment difference</div></div></div></div></div><a href="https://demo.odoo.com?module=account.action_account_payments" class="center-block reference btn-lg btn-primary external btn-block btn">Try paying a supplier bill with a check</a></section><section id="print-checks"><i id="printchecks"></i><h3 >Print checks</h3><p >From the accounting dashboard, on your bank account, you should see a
+link «X checks to print». Click on this link and you will get the list
+of all checks that are not printed yet. From this screen, you can print
+all checks in batch or review them one by one.</p><p >If you want to review every payment one by one before printing the
+check, open on the payment and click on <strong >Print Check</strong> if you accept it. A dialog
+will ask you the number of the check. It automatically proposes you the
+next number, but you can change it if it does not match your next check
+number.</p><p >To print all checks in batch, select all payments from the list view and
+Print Check from the top «print» menu.</p><img src="../../../_images/check03.png" style="" class="img-responsive center-block"></section><section id="reconcile-bank-statements"><i id="reconiclebankstatements"></i><h3 >Reconcile Bank Statements</h3><p >Once you process your bank statement, when the check is credited from
+your bank account, Odoo will propose you automatically to match it with
+the payment. This will mark the payment as <strong >Reconciled</strong>.</p><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >to review checks that have not been credited, open the list of
+payments and filter on the Sent state. Review those payments that have a
+date more than 2 weeks ago.</p></div></section><section id="pay-anything-with-a-check"><h2 >Pay anything with a check</h2><p >You can register a payment that is not related to a supplier bill. To do
+so, use the top menu <span class="menuselection">Purchases ‣ Payments</span>. Register your
+payment and select a payment method by check.</p><p >If you pay a specific supplier bill, put the reference of the bill in
+the <strong >Memo</strong> field.</p><img src="../../../_images/check04.png" style="" class="img-responsive center-block"><p >Once your payment by check is registered, don’t forget to <strong >Confirm</strong> it.
+Once confirmed, you can use <strong >Print Check</strong> directly or follow the preceding
+flow to print checks in batch:</p><ul ><li ><a href="#printchecks" class="internal reference">Print checks</a></li><li ><a href="#reconiclebankstatements" class="internal reference">Reconcile bank statements</a></li></ul></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer>
+    <div id="footer" class="container">
+      <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+      <div class="row">
+        <div class="col-sm-7 col-md-7 col-lg-6">
+          <div class="row">
+            <div class="col-xs-6 col-sm-4">
+              <span class="menu_title">Community</span>
+              <ul>
+                <li><a href="https://github.com/odoo/odoo">Github</a></li>
+                <li><a href="http://www.odoo.com/page/download">Download</a></li>
+                <li class="divider"></li>
+                <li><a href="http://runbot.odoo.com/runbot/repo/git-github-com-odoo-enterprise-7">Runbot</a></li>
+                <li><a href="https://github.com/odoo/odoo/wiki/Translations">Translations</a></li>
+                <li class="divider"></li>
+                <li><a href="http://www.odoo.com/page/odoo-community">Mailing Lists</a></li>
+                <li><a href="http://www.odoo.com/forum/help-1">Forum</a></li>
+              </ul>
+            </div>
+            <div class="col-xs-6 col-sm-4">
+              <span class="menu_title">Services</span>
+              <ul>
+                <li><a href="http://www.odoo.com/pricing">Editions</a></li>
+                <li><a href="http://www.odoo.com/pricing-online">Cloud Pricing</a></li>
+                <li><a href="http://www.odoo.com/page/upgrade">Upgrade</a></li>
+                <li class="divider"></li>
+                <li><a href="http://www.odoo.com/partners">Find a partner</a></li>
+                <li><a href="http://www.odoo.com/page/become-a-partner">Become a partner</a></li>
+                <li class="divider"></li>
+                <li><a href="http://www.odoo.com/page/education-program">Education</a></li>
+                <li class="divider"></li>
+                <li><a href="http://www.odoo.com/page/security">Security</a></li>
+              </ul>
+            </div>
+            <div class="col-sm-4 mb64">
+              <span class="menu_title">About us</span>
+              <ul>
+                <li><a href="http://www.odoo.com/page/about-us">Our company</a></li>
+                <li><a href="http://www.odoo.com/page/contactus">Contact</a></li>
+                <li class="divider" />
+                <li><a href="http://www.odoo.com/event">Events</a></li>
+                <li><a href="http://www.odoo.com/blog/">Blog</a></li>
+                <li><a href="http://www.odoo.com/blog/6">Customers</a></li>
+                <li class="divider" />
+                <li><a href="http://www.odoo.com/jobs">Jobs</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-5 col-md-4 col-md-offset-1 col-lg-5 col-lg-offset-1">
+          <p>
+            <small>
+              Odoo is a suite of open source business apps that cover all your company needs: CRM, eCommerce, accounting, inventory, point of sale, project management, etc.
+              <br/><br/>
+              Odoo's unique value proposition is to be at the same time very easy to use and fully integrated.
+            </small>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="o_footer_bottom">
+      <div class="container">
+        <a class="small" href="http://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+        <div class="social-links pull-right">
+          <a href="http://www.odoo.com/web/about/facebook"><i class="fa fa-facebook"></i></a>
+          <a href="http://www.odoo.com/web/about/twitter"><i class="fa fa-twitter"></i></a>
+          <a href="http://www.odoo.com/web/about/linkedin"><i class="fa fa-linkedin"></i></a>
+          <a href="mailto:info@odoo.com"><i class="fa fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  </body>
+</html>

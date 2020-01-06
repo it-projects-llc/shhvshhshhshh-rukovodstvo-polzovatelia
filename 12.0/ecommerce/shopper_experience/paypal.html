@@ -1,0 +1,441 @@
+<!doctype html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="RU">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Configure your Paypal account &#8212; Документация Odoo 12.0</title>
+    <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/accounting.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script type="text/javascript" src="../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.noconflict.js"></script>
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/ecommerce/shopper_experience/paypal.html" />
+    <link rel="canonical" href="/master/ru/ecommerce/shopper_experience/paypal.html" />
+  
+    <link rel="index" title="Алфавитный указатель" href="../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../search.html" />
+    <link rel="next" title="How to get paid with Authorize.Net" href="authorize.html" />
+    <link rel="prev" title="How to get paid with payment acquirers" href="payment.html" /> 
+  </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <div class="o_header_buttons">
+        <a href="http://www.odoo.com/trial" class="btn btn-primary">Start Now</a>
+      </div>
+      <ul class="o_primary_nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Apps</a>
+          <div class="dropdown-menu o_secondary_nav">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-3 o_website_apps">
+                  <div class="o_nav_app_family">
+                    <span></span> Websites
+                    <div>Build great user experience</div>
+                  </div>
+                  <ul>
+                    <li><a href="https://www.odoo.com/page/website-builder">Website Builder</a></li>
+                    <li><a href="https://www.odoo.com/page/e-commerce">eCommerce</a></li>
+                    <li><a href="https://www.odoo.com/page/blog-engine">Blogs</a></li>
+                    <li><a href="https://www.odoo.com/page/community-builder">Forums</a></li>
+                    <li><a href="https://www.odoo.com/page/learning-management-system">eLearning</a></li>
+                    <li><a href="https://www.odoo.com/page/live-chat">Live Chat</a></li>
+                  </ul>
+                </div>
+                <div class="col-sm-3 o_sale_apps">
+                  <div class="o_nav_app_family">
+                    <span></span> Sales
+                    <div>Boost your success rate</div>
+                  </div>
+                  <ul>
+                    <li><a href="https://www.odoo.com/page/sales">Sales</a></li>
+                    <li><a href="https://www.odoo.com/page/crm">CRM</a></li>
+                    <li><a href="https://www.odoo.com/page/billing">Invoicing</a></li>
+                    <li class="dropdown">
+                      <a href="#0" class="dropdown-toggle">Point of Sale</a>
+                      <ul>
+                        <li><a href="https://www.odoo.com/page/point-of-sale">Shops</a></li>
+                        <li><a href="https://www.odoo.com/page/pos-restaurant">Restaurants</a></li>
+                        <li><a href="https://www.odoo.com/page/point-of-sale-hardware">Hardware</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://www.odoo.com/page/subscriptions">Subscriptions</a></li>
+                    <li><a href="https://www.odoo.com/page/sign">Sign</a></li>
+                    <li><a href="https://www.odoo.com/page/rental">Rental</a></li>
+                  </ul>
+                </div>
+                <div class="col-sm-3 o_operation_apps">
+                  <div class="o_nav_app_family">
+                    <span></span> Operations
+                    <div>It's all about efficiency</div>
+                  </div>
+                  <ul>
+                    <li><a href="https://www.odoo.com/page/accounting/">Accounting</a></li>
+                    <li><a href="https://www.odoo.com/page/project-management/">Project</a></li>
+                    <li class="dropdown">
+                      <a href="#0" class="dropdown-toggle">Human Resources</a>
+                      <ul>
+                        <li><a href="https://www.odoo.com/page/referral">Referral</a></li>
+                        <li><a href="https://www.odoo.com/page/employees">Employees</a></li>
+                        <li><a href="https://www.odoo.com/page/expenses">Expenses</a></li>
+                        <li><a href="https://www.odoo.com/page/appraisal">Appraisal</a></li>
+                        <li><a href="https://www.odoo.com/page/fleet">Fleet</a></li>
+                        <li><a href="https://www.odoo.com/page/leaves">Time Off</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://www.odoo.com/page/warehouse">Inventory</a></li>
+                    <li><a href="https://www.odoo.com/page/purchase">Purchase</a></li>
+                    <li class="dropdown">
+                      <a href="#0" class="dropdown-toggle">Manufacturing</a>
+                      <ul>
+                        <li><a href="https://www.odoo.com/page/manufacturing">MRP</a></li>
+                        <li><a href="https://www.odoo.com/page/plm">PLM</a></li>
+                        <li><a href="https://www.odoo.com/page/maintenance">Maintenance</a></li>
+                        <li><a href="https://www.odoo.com/page/quality">Quality</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://www.odoo.com/page/helpdesk">Helpdesk</a></li>
+                    <li><a href="https://www.odoo.com/page/field-service-management">Field Service</a></li>
+                  </ul>
+                </div>
+                <div class="col-sm-3 o_productivity_apps">
+                  <div class="o_nav_app_family">
+                    <span></span> Productivity Tools
+                    <div>Great Tools = Happy People</div>
+                  </div>
+                  <ul>
+                    <li class="dropdown">
+                      <a href="#0" class="dropdown-toggle">Communication</a>
+                      <ul>
+                        <li><a href="https://www.odoo.com/page/discuss">Discuss</a></li>
+                        <li><a href="https://www.odoo.com/page/discuss-groups">Mailing Lists</a></li>
+                        <li><a href="https://www.odoo.com/page/notes">Notes</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://www.odoo.com/page/timesheet">Timesheet</a></li>
+                    <li><a href="https://www.odoo.com/page/events">Events</a></li>
+                    <li class="dropdown">
+                      <a href="#0" class="dropdown-toggle">Marketing</a>
+                      <ul>
+                        <li><a href="https://www.odoo.com/page/marketing-automation">Automation</a></li>
+                        <li><a href="https://www.odoo.com/page/email-marketing">Email</a></li>
+                        <li><a href="https://www.odoo.com/page/social-marketing">Social</a></li>
+                        <li><a href="https://www.odoo.com/page/sms-marketing">SMS</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://www.odoo.com/page/survey">Survey</a></li>
+                    <li><a href="https://www.odoo.com/page/approval-workflow">Approvals</a></li>
+                    <li><a href="https://www.odoo.com/page/appointments">Appointments</a></li>
+                    <li><a href="https://www.odoo.com/page/documents">Documents</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <a href="http://www.odoo.com/apps/modules" class="o_store_link"><i class="fa fa-cube fa-fw"></i> Third party apps</a>
+          </div>
+        </li>
+        <li><a href="https://www.odoo.com/page/tour">Tour</a></li>
+        <li><a href="https://www.odoo.com/pricing">Pricing</a></li>
+        <li><a href="https://www.odoo.com/page/docs">Docs</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Navigate
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+
+
+
+
+
+    
+        
+            
+                <li><a href="../../index.html">User Doc</a></li>
+            
+        
+    
+        
+            
+                
+                    <li><a href="../../ecommerce.html">eCommerce</a></li>
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+    <li class="active"><a href="#">Configure your Paypal account</a></li>
+
+              
+          </ol>
+
+          <div class="call-to-action navbar-right hidden-xs">
+            <a href="http://www.odoo.com/trial" class="btn btn-primary">Start Now</a>
+          </div>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        12.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/ecommerce/shopper_experience/paypal.html">13.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="https://www.odoo.com/documentation/user/12.0/index.html">User</a></li>
+<li><a href="https://www.odoo.com/documentation/12.0/index.html">Developer</a></li>
+<li><a href="https://odoo.com/slides">eLearning</a></li>
+<li><a href="https://www.odoo.com/documentation/12.0/webservices/odoo.html">API</a></li>
+<li><a href="https://www.odoo.com/documentation/12.0/setup/install.html">Installation</a></li>
+<li><a href="https://www.odoo.com/page/odoo-white-paper">White Papers</a></li>
+<li><a href="https://www.odoo.com/page/legal">Legal</a></li>
+<li id="searchbox" style="display: none; margin: 0 0 0 10px;" role="search">
+    <form class="search form-inline" action="../../search.html" method="get">
+        <input type="text" class="form-control" name="q" id="q" placeholder="Search..." />
+        <input type="hidden" name="area" value="default" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <button type="submit" value="Go" class="btn btn-default">Go</button>
+    </form>
+</li>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    <figure class="card top ">
+      <span class="card-img" ></span>
+      <div class="container text-center">
+        <h1> Configure your Paypal account </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#paypal-account" class="ripple internal reference">Paypal account</a></li><li class="list-group-item"><a href="#settings-in-paypal" class="ripple internal reference">Settings in Paypal</a><ul ><li class="list-group-item"><a href="#auto-return" class="ripple internal reference">Auto Return</a></li><li class="list-group-item"><a href="#payment-data-transfer-pdt" class="ripple internal reference">Payment Data Transfer (PDT)</a></li><li class="list-group-item"><a href="#instant-payment-notification-ipn" class="ripple internal reference">Instant Payment Notification (IPN)</a></li><li class="list-group-item"><a href="#payment-messages-format" class="ripple internal reference">Payment Messages Format</a></li></ul></li><li class="list-group-item"><a href="#settings-in-odoo" class="ripple internal reference">Settings in Odoo</a><ul ><li class="list-group-item"><a href="#activation" class="ripple internal reference">Activation</a></li><li class="list-group-item"><a href="#credentials" class="ripple internal reference">Credentials</a></li><li class="list-group-item"><a href="#transaction-fees" class="ripple internal reference">Transaction fees</a></li></ul></li><li class="list-group-item"><a href="#go-live" class="ripple internal reference">Go live!</a></li><li class="list-group-item"><a href="#test-environment" class="ripple internal reference">Test environment</a></li></ul>
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/12.0/ecommerce/shopper_experience/paypal.rst" class="gith-link">
+                  Edit on GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body  ">
+            
+            
+  <section id="configure-your-paypal-account"><p >Paypal is available and popular worldwide. It doesn’t charge any
+subscription fee and creating an account is very easy. That’s why we
+definitely recommend it for starters in Odoo. It works as a seamless
+flow where the customer is routed to Paypal website to register the
+payment.</p></section><section id="paypal-account"><h2 >Paypal account</h2><p >A business account is needed to get paid with Paypal. Create a  <a href="https://www.paypal.com/us/merchantsignup/applicationChecklist?signupType=CREATE_NEW_ACCOUNT&amp;productIntentId=wp_standard" class="external reference">Paypayl Business Account</a> or upgrade your Personal account to a Business account. Go to the Paypal settings and click on <em >Upgrade to a Business account</em>. Then follow the few configuration steps.</p></section><section id="settings-in-paypal"><h2 >Settings in Paypal</h2><div class="line-block"><div class="line">First, let’s see how to set up your Paypal account in order to build a
+seamless customer experience with Odoo.</div><div class="line">Log in and open the settings. Go to <em >Products &amp; Services &gt; Website
+payments</em> and click <em >Update</em> on <em >Website preferences</em>.</div></div><img src="../../_images/paypal011.png" style="" class="img-responsive center-block"></section><section id="auto-return"><h3 >Auto Return</h3><p ><em >Auto Return</em> automatically redirects your customers to Odoo once the
+payment is processed. Check <em >Auto Return</em> and enter your domain name
+«/shop/confirmation» as <em >Return URL</em> (e.g.
+<a href="https://yourcompany.odoo.com/shop/confirmation" class="external reference">https://yourcompany.odoo.com/shop/confirmation</a>).</p><p >This URL is requested in Paypal but not used in practice as Odoo
+transmits it at each transaction. Don’t worry if you manage several
+sales channels or Odoo databases.</p><img src="../../_images/paypal021.png" style="" class="img-responsive center-block"></section><section id="payment-data-transfer-pdt"><h3 >Payment Data Transfer (PDT)</h3><p ><em >Payment Data Transfer</em> delivers the payment confirmation to Odoo as
+soon as it is processed. Without it, Odoo cannot end the sales flow.
+This setting must be activated as well. When saving, an <em >Identity
+Token</em> is generated. You will be later requested to enter it in Odoo.</p><img src="../../_images/paypal031.png" style="" class="img-responsive center-block"><p >Paypal Account Optional</p><p >We advise you to not prompt customers to log in with a Paypal account
+when they get to pay. Let them pay with debit/credit cards as well, or you might lose some deals. Make sure this setting is turned on.</p><img src="../../_images/paypal04.png" style="" class="img-responsive center-block"></section><section id="instant-payment-notification-ipn"><h3 >Instant Payment Notification (IPN)</h3><p >PDT sends order confirmations once and only once. As a result, your site
+must be running when it happens; otherwise, it will never receive the
+message. That’s why we advise to activate the <em >Instant Payment
+Notification</em> (IPN) on top. With IPN, delivery of order confirmations
+is virtually guaranteed since IPN resends a confirmation until your site acknowledges receipt.</p><div class="line-block"><div class="line">To activate IPN, get back to <em >Website payments</em> menu and click
+<em >Update</em> in <em >Instant Payment Notification</em>.</div><div class="line">The <em >Notification URL</em> to set is your domain name +
+“payment/paypal/ipn” (e.g.
+<a href="https://yourcompany.odoo.com/payment/paypal/ipn" class="external reference">https://yourcompany.odoo.com/payment/paypal/ipn</a>).</div></div><img src="../../_images/paypal05.png" style="" class="img-responsive center-block"></section><section id="payment-messages-format"><h3 >Payment Messages Format</h3><p >If you use accented characters (or anything else than basic Latin characters)
+for your customer names, addresses… you MUST configure the encoding format of
+the payment request sent by Odoo to Paypal.</p><div role="alert" class="alert-danger alert"><p class="alert-title">Опасно</p><p >If you don’t configure this setting, some transactions fail without notice.</p></div><p >To do so, open:</p><ul ><li ><a href="https://sandbox.paypal.com/cgi-bin/customerprofileweb?cmd=_profile-language-encoding" class="external reference">this page for a test account</a></li><li ><a href="https://www.paypal.com/cgi-bin/customerprofileweb?cmd=_profile-language-encoding" class="external reference">this page for a production account</a></li></ul><p >Then, click <em >More Options</em> and set the two default encoding formats as <strong >UTF-8</strong>.</p><img src="../../_images/paypal07.png" style="" class="img-responsive center-block"><img src="../../_images/paypal08.png" style="" class="img-responsive center-block"><p >Your Paypal account is ready!</p><blockquote ><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >If you want your customers to pay without creating a Paypal account,
+<strong >Paypal Account Optional</strong> needs to be turned on.</p><img src="../../_images/paypal_account_optional.png" style="" class="img-responsive center-block"></div><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >For Encrypted Website Payments &amp; EWP_SETTINGS error,
+please check the <a href="https://developer.paypal.com/docs/classic/paypal-payments-standard/integration-guide/encryptedwebpayments/#encrypted-website-payments-ewp" class="external reference alert-link">paypal documentation.</a></p></div></blockquote></section><section id="settings-in-odoo"><h2 >Settings in Odoo</h2></section><section id="activation"><h3 >Activation</h3><p >Activate <em >Paypal</em> from the config bar of Sales, Invoicing and
+eCommerce apps, or from the configuration menu of <em >Payment Acquirers</em>.</p></section><section id="credentials"><h3 >Credentials</h3><p >Odoo requires three Paypal credentials:</p><ul ><li ><em >Email ID</em> is your login email address in Paypal.</li><li ><em >Merchant ID</em> can be found in the settings of your Paypal account, in <em >Profile &gt; About the business</em>.</li><li ><em >Paypal PDT Token</em> is given in <em >Website payments</em> configuration as explained here above.</li></ul><img src="../../_images/paypal09.png" style="" class="img-responsive center-block"></section><section id="transaction-fees"><h3 >Transaction fees</h3><p >You can charge extra fees to your customers for paying with Paypal;
+This to cover the transaction fees Paypal charges you. Once redirected to Paypal, your customer sees an extra applied to the order amount.</p><p >To activate this, go to the Configuration tab of Paypal configuration in
+Odoo and check <em >Add Extra Fees</em>.</p><img src="../../_images/paypal10.png" style="" class="img-responsive center-block"><p >You can refer to <a href="https://www.paypal.com/webapps/mpp/paypal-fees" class="external reference">Paypal Fees</a> to set up
+fees.</p><p >..note:: <a href="https://europa.eu/youreurope/citizens/consumers/shopping/pricing-payments/index_en.htm" class="external reference">Traders in the EU</a>
+are not allowed to charge extra fees for paying with credit cards.</p></section><section id="go-live"><h2 >Go live!</h2><p >Your configuration is ready to roll. Make sure <em >Production</em> mode is
+on. Then publish the payment method by clicking the <em >Published</em> button right next to it.</p><img src="../../_images/paypal11.png" style="" class="img-responsive center-block"><img src="../../_images/paypal12.png" style="" class="img-responsive center-block"><p >Paypal is now available in your payment form available in eCommerce,
+Sales and Invoicing apps. Customers are redirected to Paypal website
+when hitting <em >Pay Now</em>. They get back to a confirmation page in Odoo
+once the payment is processed.</p><img src="../../_images/paypal13.png" style="" class="img-responsive center-block"></section><section id="test-environment"><h2 >Test environment</h2><p >You can test the entire payment flow in Odoo thanks to Paypal Sandbox accounts.</p><p >Log in to <a href="https://developer.paypal.com/" class="external reference">Paypal Developer Site</a> with your Paypal credentials.</p><p >This will create two sandbox accounts:</p><ul ><li >A business account (to use as merchant, e.g. <a href="mailto:pp.merch01-facilitator@example.com" class="external reference">pp.merch01-facilitator@example.com</a>).</li><li >A default personal account (to use as shopper, e.g. <a href="mailto:pp.merch01-buyer@example.com" class="external reference">pp.merch01-buyer@example.com</a>).</li></ul><p >Log in to Paypal Sandbox with the merchant account and follow the same configuration instructions.
+Enter your sandbox credentials in Odoo and make sure Paypal is still
+set on <em >Test Environment</em>. Also, make sure the automatic invoicing
+is not activated in your eCommerce settings, to not generate invoices
+when a fictitious transaction is completed.</p><p >Run a test transaction from Odoo using the sandbox personal account.</p><p >See also</p><p ><a href="https://www.odoo.com/documentation/user/12.0/ecommerce/shopper_experience/payment.html" class="external reference">How to manage orders paid with payment acquirers</a></p><p ><a href="https://www.odoo.com/documentation/user/12.0/ecommerce/shopper_experience/payment_acquirer.html" class="external reference">How to manage orders paid with payment acquirers</a></p></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer>
+    <div id="footer" class="container">
+      <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+      <div class="row">
+        <div class="col-sm-7 col-md-7 col-lg-6">
+          <div class="row">
+            <div class="col-xs-6 col-sm-4">
+              <span class="menu_title">Community</span>
+              <ul>
+                <li><a href="https://github.com/odoo/odoo">Github</a></li>
+                <li><a href="http://www.odoo.com/page/download">Download</a></li>
+                <li class="divider"></li>
+                <li><a href="http://runbot.odoo.com/runbot/repo/git-github-com-odoo-enterprise-7">Runbot</a></li>
+                <li><a href="https://github.com/odoo/odoo/wiki/Translations">Translations</a></li>
+                <li class="divider"></li>
+                <li><a href="http://www.odoo.com/page/odoo-community">Mailing Lists</a></li>
+                <li><a href="http://www.odoo.com/forum/help-1">Forum</a></li>
+              </ul>
+            </div>
+            <div class="col-xs-6 col-sm-4">
+              <span class="menu_title">Services</span>
+              <ul>
+                <li><a href="http://www.odoo.com/pricing">Editions</a></li>
+                <li><a href="http://www.odoo.com/pricing-online">Cloud Pricing</a></li>
+                <li><a href="http://www.odoo.com/page/upgrade">Upgrade</a></li>
+                <li class="divider"></li>
+                <li><a href="http://www.odoo.com/partners">Find a partner</a></li>
+                <li><a href="http://www.odoo.com/page/become-a-partner">Become a partner</a></li>
+                <li class="divider"></li>
+                <li><a href="http://www.odoo.com/page/education-program">Education</a></li>
+                <li class="divider"></li>
+                <li><a href="http://www.odoo.com/page/security">Security</a></li>
+              </ul>
+            </div>
+            <div class="col-sm-4 mb64">
+              <span class="menu_title">About us</span>
+              <ul>
+                <li><a href="http://www.odoo.com/page/about-us">Our company</a></li>
+                <li><a href="http://www.odoo.com/page/contactus">Contact</a></li>
+                <li class="divider" />
+                <li><a href="http://www.odoo.com/event">Events</a></li>
+                <li><a href="http://www.odoo.com/blog/">Blog</a></li>
+                <li><a href="http://www.odoo.com/blog/6">Customers</a></li>
+                <li class="divider" />
+                <li><a href="http://www.odoo.com/jobs">Jobs</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-5 col-md-4 col-md-offset-1 col-lg-5 col-lg-offset-1">
+          <p>
+            <small>
+              Odoo is a suite of open source business apps that cover all your company needs: CRM, eCommerce, accounting, inventory, point of sale, project management, etc.
+              <br/><br/>
+              Odoo's unique value proposition is to be at the same time very easy to use and fully integrated.
+            </small>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="o_footer_bottom">
+      <div class="container">
+        <a class="small" href="http://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+        <div class="social-links pull-right">
+          <a href="http://www.odoo.com/web/about/facebook"><i class="fa fa-facebook"></i></a>
+          <a href="http://www.odoo.com/web/about/twitter"><i class="fa fa-twitter"></i></a>
+          <a href="http://www.odoo.com/web/about/linkedin"><i class="fa fa-linkedin"></i></a>
+          <a href="mailto:info@odoo.com"><i class="fa fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  </body>
+</html>

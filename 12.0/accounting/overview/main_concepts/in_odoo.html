@@ -1,0 +1,456 @@
+<!doctype html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="RU">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>The Accounting behind Odoo &#8212; Документация Odoo 12.0</title>
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/accounting.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/accounting/overview/main_concepts/in_odoo.html" />
+    <link rel="canonical" href="/master/ru/accounting/overview/main_concepts/in_odoo.html" />
+  
+    <link rel="index" title="Алфавитный указатель" href="../../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../../search.html" />
+    <link rel="next" title="Accounting Memento For Entrepreneurs (US GAAP)" href="memento.html" />
+    <link rel="prev" title="Introduction to Odoo Accounting" href="intro.html" /> 
+  </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <div class="o_header_buttons">
+        <a href="http://www.odoo.com/trial" class="btn btn-primary">Start Now</a>
+      </div>
+      <ul class="o_primary_nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Apps</a>
+          <div class="dropdown-menu o_secondary_nav">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-3 o_website_apps">
+                  <div class="o_nav_app_family">
+                    <span></span> Websites
+                    <div>Build great user experience</div>
+                  </div>
+                  <ul>
+                    <li><a href="https://www.odoo.com/page/website-builder">Website Builder</a></li>
+                    <li><a href="https://www.odoo.com/page/e-commerce">eCommerce</a></li>
+                    <li><a href="https://www.odoo.com/page/blog-engine">Blogs</a></li>
+                    <li><a href="https://www.odoo.com/page/community-builder">Forums</a></li>
+                    <li><a href="https://www.odoo.com/page/learning-management-system">eLearning</a></li>
+                    <li><a href="https://www.odoo.com/page/live-chat">Live Chat</a></li>
+                  </ul>
+                </div>
+                <div class="col-sm-3 o_sale_apps">
+                  <div class="o_nav_app_family">
+                    <span></span> Sales
+                    <div>Boost your success rate</div>
+                  </div>
+                  <ul>
+                    <li><a href="https://www.odoo.com/page/sales">Sales</a></li>
+                    <li><a href="https://www.odoo.com/page/crm">CRM</a></li>
+                    <li><a href="https://www.odoo.com/page/billing">Invoicing</a></li>
+                    <li class="dropdown">
+                      <a href="#0" class="dropdown-toggle">Point of Sale</a>
+                      <ul>
+                        <li><a href="https://www.odoo.com/page/point-of-sale">Shops</a></li>
+                        <li><a href="https://www.odoo.com/page/pos-restaurant">Restaurants</a></li>
+                        <li><a href="https://www.odoo.com/page/point-of-sale-hardware">Hardware</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://www.odoo.com/page/subscriptions">Subscriptions</a></li>
+                    <li><a href="https://www.odoo.com/page/sign">Sign</a></li>
+                    <li><a href="https://www.odoo.com/page/rental">Rental</a></li>
+                  </ul>
+                </div>
+                <div class="col-sm-3 o_operation_apps">
+                  <div class="o_nav_app_family">
+                    <span></span> Operations
+                    <div>It's all about efficiency</div>
+                  </div>
+                  <ul>
+                    <li><a href="https://www.odoo.com/page/accounting/">Accounting</a></li>
+                    <li><a href="https://www.odoo.com/page/project-management/">Project</a></li>
+                    <li class="dropdown">
+                      <a href="#0" class="dropdown-toggle">Human Resources</a>
+                      <ul>
+                        <li><a href="https://www.odoo.com/page/referral">Referral</a></li>
+                        <li><a href="https://www.odoo.com/page/employees">Employees</a></li>
+                        <li><a href="https://www.odoo.com/page/expenses">Expenses</a></li>
+                        <li><a href="https://www.odoo.com/page/appraisal">Appraisal</a></li>
+                        <li><a href="https://www.odoo.com/page/fleet">Fleet</a></li>
+                        <li><a href="https://www.odoo.com/page/leaves">Time Off</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://www.odoo.com/page/warehouse">Inventory</a></li>
+                    <li><a href="https://www.odoo.com/page/purchase">Purchase</a></li>
+                    <li class="dropdown">
+                      <a href="#0" class="dropdown-toggle">Manufacturing</a>
+                      <ul>
+                        <li><a href="https://www.odoo.com/page/manufacturing">MRP</a></li>
+                        <li><a href="https://www.odoo.com/page/plm">PLM</a></li>
+                        <li><a href="https://www.odoo.com/page/maintenance">Maintenance</a></li>
+                        <li><a href="https://www.odoo.com/page/quality">Quality</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://www.odoo.com/page/helpdesk">Helpdesk</a></li>
+                    <li><a href="https://www.odoo.com/page/field-service-management">Field Service</a></li>
+                  </ul>
+                </div>
+                <div class="col-sm-3 o_productivity_apps">
+                  <div class="o_nav_app_family">
+                    <span></span> Productivity Tools
+                    <div>Great Tools = Happy People</div>
+                  </div>
+                  <ul>
+                    <li class="dropdown">
+                      <a href="#0" class="dropdown-toggle">Communication</a>
+                      <ul>
+                        <li><a href="https://www.odoo.com/page/discuss">Discuss</a></li>
+                        <li><a href="https://www.odoo.com/page/discuss-groups">Mailing Lists</a></li>
+                        <li><a href="https://www.odoo.com/page/notes">Notes</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://www.odoo.com/page/timesheet">Timesheet</a></li>
+                    <li><a href="https://www.odoo.com/page/events">Events</a></li>
+                    <li class="dropdown">
+                      <a href="#0" class="dropdown-toggle">Marketing</a>
+                      <ul>
+                        <li><a href="https://www.odoo.com/page/marketing-automation">Automation</a></li>
+                        <li><a href="https://www.odoo.com/page/email-marketing">Email</a></li>
+                        <li><a href="https://www.odoo.com/page/social-marketing">Social</a></li>
+                        <li><a href="https://www.odoo.com/page/sms-marketing">SMS</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://www.odoo.com/page/survey">Survey</a></li>
+                    <li><a href="https://www.odoo.com/page/approval-workflow">Approvals</a></li>
+                    <li><a href="https://www.odoo.com/page/appointments">Appointments</a></li>
+                    <li><a href="https://www.odoo.com/page/documents">Documents</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <a href="http://www.odoo.com/apps/modules" class="o_store_link"><i class="fa fa-cube fa-fw"></i> Third party apps</a>
+          </div>
+        </li>
+        <li><a href="https://www.odoo.com/page/tour">Tour</a></li>
+        <li><a href="https://www.odoo.com/pricing">Pricing</a></li>
+        <li><a href="https://www.odoo.com/page/docs">Docs</a></li>
+      </ul>
+    </div>
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Navigate
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+
+
+
+
+
+    
+        
+            
+                <li><a href="../../../index.html">User Doc</a></li>
+            
+        
+    
+        
+            
+                
+                    <li><a href="../../../accounting.html">Accounting</a></li>
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+    <li class="active"><a href="#">The Accounting behind Odoo</a></li>
+
+              
+          </ol>
+
+          <div class="call-to-action navbar-right hidden-xs">
+            <a href="http://www.odoo.com/trial" class="btn btn-primary">Start Now</a>
+          </div>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        12.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/13.0/accounting/overview/main_concepts/in_odoo.html">13.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<li><a href="https://www.odoo.com/documentation/user/12.0/index.html">User</a></li>
+<li><a href="https://www.odoo.com/documentation/12.0/index.html">Developer</a></li>
+<li><a href="https://odoo.com/slides">eLearning</a></li>
+<li><a href="https://www.odoo.com/documentation/12.0/webservices/odoo.html">API</a></li>
+<li><a href="https://www.odoo.com/documentation/12.0/setup/install.html">Installation</a></li>
+<li><a href="https://www.odoo.com/page/odoo-white-paper">White Papers</a></li>
+<li><a href="https://www.odoo.com/page/legal">Legal</a></li>
+<li id="searchbox" style="display: none; margin: 0 0 0 10px;" role="search">
+    <form class="search form-inline" action="../../../search.html" method="get">
+        <input type="text" class="form-control" name="q" id="q" placeholder="Search..." />
+        <input type="hidden" name="area" value="default" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <button type="submit" value="Go" class="btn btn-default">Go</button>
+    </form>
+</li>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    <figure class="card top ">
+      <span class="card-img" ></span>
+      <div class="container text-center">
+        <h1> The Accounting behind Odoo </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#double-entry-bookkeeping" class="ripple internal reference">Double-entry bookkeeping</a></li><li class="list-group-item"><a href="#accrual-and-cash-basis-methods" class="ripple internal reference">Accrual and Cash Basis Methods</a></li><li class="list-group-item"><a href="#multi-companies" class="ripple internal reference">Multi-companies</a></li><li class="list-group-item"><a href="#multi-currencies" class="ripple internal reference">Multi-currencies</a></li><li class="list-group-item"><a href="#international-standards" class="ripple internal reference">International Standards</a></li><li class="list-group-item"><a href="#accounts-receivable-payable" class="ripple internal reference">Accounts Receivable &amp; Payable</a></li><li class="list-group-item"><a href="#wide-range-of-financial-reports" class="ripple internal reference">Wide range of financial reports</a></li><li class="list-group-item"><a href="#import-bank-feeds-automatically" class="ripple internal reference">Import bank feeds automatically</a></li><li class="list-group-item"><a href="#calculate-the-tax-you-owe-your-tax-authority" class="ripple internal reference">Calculate the tax you owe your tax authority</a></li><li class="list-group-item"><a href="#inventory-valuation" class="ripple internal reference">Inventory Valuation</a></li><li class="list-group-item"><a href="#easy-retained-earnings" class="ripple internal reference">Easy retained earnings</a></li></ul>
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/12.0/accounting/overview/main_concepts/in_odoo.rst" class="gith-link">
+                  Edit on GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body  ">
+            
+            
+  <section id="the-accounting-behind-odoo"><p >This page summarises the way Odoo deals with typical accounts and
+transactions.</p></section><section id="double-entry-bookkeeping"><h2 >Double-entry bookkeeping</h2><p >Odoo automatically creates all the behind-the-scenes journal entries
+for each of your accounting transactions: customer invoices, point of
+sale order, expenses, inventory moves, etc.</p><p >Odoo uses the rules of double-entry bookkeeping system: all journal
+entries are automatically balanced (sum of debits = sum of credits).</p><div role="alert" class="alert-go_to alert"><p class="alert-title">См.также</p><p ><a href="https://odoo.com/documentation/functional/accounting.html" class="external reference alert-link">Understand Odoo’s accounting transactions per document</a></p></div></section><section id="accrual-and-cash-basis-methods"><h2 >Accrual and Cash Basis Methods</h2><p >Odoo supports both accrual and cash basis reporting. This allows you to
+report income / expense at the time transactions occur (i.e., accrual basis), or when
+payment is made or received (i.e., cash basis).</p></section><section id="multi-companies"><h2 >Multi-companies</h2><p >Odoo allows one to manage several companies within the same database. Each
+company has its own chart of accounts and rules. You can get
+consolidation reports following your consolidation rules.</p><p >Users can access several companies but always work in one company at a
+time.</p></section><section id="multi-currencies"><h2 >Multi-currencies</h2><p >Every transaction is recorded in the default currency of the
+company. For transactions occurring in another currency, Odoo stores
+both the value in the currency of the company and the value in the
+currency of the transaction. Odoo can generate currencies gains and
+losses after the reconciliation of the journal items.</p><p >Currency rates are updated once a day using a yahoo.com online
+web-service.</p></section><section id="international-standards"><h2 >International Standards</h2><p >Odoo accounting supports more than 50 countries. The Odoo core
+accounting implements accounting standards that are common to all
+countries. Specific modules exist per country for the
+specificities of the country like the chart of accounts, taxes, or
+bank interfaces.</p><p >In particular, Odoo’s core accounting engine supports:</p><ul ><li >Anglo-Saxon Accounting (U.S., U.K.,, and other English-speaking
+countries including Ireland, Canada, Australia, and New Zealand)
+where costs of good sold are reported when products are
+sold/delivered.</li><li >European accounting where expenses are accounted at the supplier
+bill.</li></ul><p >Odoo also have modules to comply with IFRS rules.</p></section><section id="accounts-receivable-payable"><h2 >Accounts Receivable &amp; Payable</h2><p >By default, Odoo uses a single account for all account
+receivable entries and one for all accounts payable entries. You can
+create separate accounts per customers/suppliers, but you don’t need
+to.</p><p >As transactions are associated to customers or suppliers, you get
+reports to perform analysis per customer/supplier such as the customer
+statement, revenues per customers, aged receivable/payables, …</p></section><section id="wide-range-of-financial-reports"><h2 >Wide range of financial reports</h2><p >In Odoo, you can generate financial reports in real time. Odoo’s
+reports range from basic accounting reports to advanced management
+reports. Odoo’s reports include:</p><ul ><li >Performance reports (such as Profit and Loss, Budget Variance)</li><li >Position reports (such as Balance Sheet, Aged Payables, Aged
+Receivables)</li><li >Cash reports (such as Bank Summary)</li><li >Detail reports (such as Trial Balance and General Ledger)</li><li >Management reports (such as Budgets, Executive Summary)</li></ul><p >Odoo’s report engine allows you to customize your own report based on
+your own formulae.</p></section><section id="import-bank-feeds-automatically"><h2 >Import bank feeds automatically</h2><p >Bank reconciliation is a process that matches your bank statement
+lines, as supplied by the bank, to your accounting transactions in the
+general ledger. Odoo makes bank reconciliation easy by frequently
+importing bank statement lines from your bank directly into your Odoo
+account. This means you can have a daily view of your cashflow without
+having to log into your online banking or wait for your paper bank
+statements.</p><p >Odoo speeds up bank reconciliation by matching most of your imported
+bank statement lines to your accounting transactions. Odoo also
+remembers how you’ve treated other bank statement lines and provides
+suggested general ledger transactions.</p></section><section id="calculate-the-tax-you-owe-your-tax-authority"><h2 >Calculate the tax you owe your tax authority</h2><p >Odoo totals all your accounting transactions for your tax period and
+uses these totals to calculate your tax obligation. You can then check
+your sales tax by running Odoo’s Tax Report.</p></section><section id="inventory-valuation"><h2 >Inventory Valuation</h2><p >Odoo support both periodic (manual) and perpetual (automated)
+inventory valuations. The available methods are standard price,
+average price, LIFO (for countries allowing it) and FIFO.</p><div role="alert" class="alert-go_to alert"><p class="alert-title">См.также</p><p ><a href="https://odoo.com/documentation/functional/valuation.html" class="external reference alert-link">View impact of the valuation method on your transactions</a></p></div></section><section id="easy-retained-earnings"><h2 >Easy retained earnings</h2><p >Retained earnings are the portion of income retained by your
+business. Odoo automatically calculates your current year earnings in
+real time so no year-end journal or rollover is required.  This is
+calculated by reporting the profit and loss balance to your balance
+sheet report automatically.</p></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer>
+    <div id="footer" class="container">
+      <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+      <div class="row">
+        <div class="col-sm-7 col-md-7 col-lg-6">
+          <div class="row">
+            <div class="col-xs-6 col-sm-4">
+              <span class="menu_title">Community</span>
+              <ul>
+                <li><a href="https://github.com/odoo/odoo">Github</a></li>
+                <li><a href="http://www.odoo.com/page/download">Download</a></li>
+                <li class="divider"></li>
+                <li><a href="http://runbot.odoo.com/runbot/repo/git-github-com-odoo-enterprise-7">Runbot</a></li>
+                <li><a href="https://github.com/odoo/odoo/wiki/Translations">Translations</a></li>
+                <li class="divider"></li>
+                <li><a href="http://www.odoo.com/page/odoo-community">Mailing Lists</a></li>
+                <li><a href="http://www.odoo.com/forum/help-1">Forum</a></li>
+              </ul>
+            </div>
+            <div class="col-xs-6 col-sm-4">
+              <span class="menu_title">Services</span>
+              <ul>
+                <li><a href="http://www.odoo.com/pricing">Editions</a></li>
+                <li><a href="http://www.odoo.com/pricing-online">Cloud Pricing</a></li>
+                <li><a href="http://www.odoo.com/page/upgrade">Upgrade</a></li>
+                <li class="divider"></li>
+                <li><a href="http://www.odoo.com/partners">Find a partner</a></li>
+                <li><a href="http://www.odoo.com/page/become-a-partner">Become a partner</a></li>
+                <li class="divider"></li>
+                <li><a href="http://www.odoo.com/page/education-program">Education</a></li>
+                <li class="divider"></li>
+                <li><a href="http://www.odoo.com/page/security">Security</a></li>
+              </ul>
+            </div>
+            <div class="col-sm-4 mb64">
+              <span class="menu_title">About us</span>
+              <ul>
+                <li><a href="http://www.odoo.com/page/about-us">Our company</a></li>
+                <li><a href="http://www.odoo.com/page/contactus">Contact</a></li>
+                <li class="divider" />
+                <li><a href="http://www.odoo.com/event">Events</a></li>
+                <li><a href="http://www.odoo.com/blog/">Blog</a></li>
+                <li><a href="http://www.odoo.com/blog/6">Customers</a></li>
+                <li class="divider" />
+                <li><a href="http://www.odoo.com/jobs">Jobs</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-5 col-md-4 col-md-offset-1 col-lg-5 col-lg-offset-1">
+          <p>
+            <small>
+              Odoo is a suite of open source business apps that cover all your company needs: CRM, eCommerce, accounting, inventory, point of sale, project management, etc.
+              <br/><br/>
+              Odoo's unique value proposition is to be at the same time very easy to use and fully integrated.
+            </small>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="o_footer_bottom">
+      <div class="container">
+        <a class="small" href="http://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+        <div class="social-links pull-right">
+          <a href="http://www.odoo.com/web/about/facebook"><i class="fa fa-facebook"></i></a>
+          <a href="http://www.odoo.com/web/about/twitter"><i class="fa fa-twitter"></i></a>
+          <a href="http://www.odoo.com/web/about/linkedin"><i class="fa fa-linkedin"></i></a>
+          <a href="mailto:info@odoo.com"><i class="fa fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  </body>
+</html>
