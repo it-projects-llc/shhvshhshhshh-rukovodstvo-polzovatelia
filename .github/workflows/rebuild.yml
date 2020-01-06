@@ -30,7 +30,7 @@ jobs:
     - name: Rebuild
       run: |
         cd src
-        make html SPHINXOPTS="-D language=ru -D languages=ru -D versions=13.0 -D canonical_root=/13.0"
+        make html SPHINXOPTS="-D language=ru -D languages=ru -D versions=13.0,12.0 -D canonical_root=/13.0"
         cp -a _build/html/. ../dst
  
     - name: Commit changes
