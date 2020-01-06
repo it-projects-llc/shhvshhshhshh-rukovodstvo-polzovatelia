@@ -1,9 +1,9 @@
 version: "1"
 rules:
-  - base: 13.0
+  - base: "13.0"
     upstream: odoo:13.0
     mergeMethod: merge
-  - base: 12.0
+  - base: "12.0"
     upstream: odoo:12.0
     mergeMethod: merge
 label: ":alien: pull from odoo" 
