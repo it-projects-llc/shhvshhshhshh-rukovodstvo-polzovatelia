@@ -30,11 +30,11 @@ jobs:
     - name: Rebuild
       run: |
         cd src
-        make html SPHINXOPTS="-D language=ru -D languages=ru -D versions=13.0,12.0 -D canonical_root=/13.0"
+        make html SPHINXOPTS="-D language=ru -D languages=ru -D versions=13.0,12.0,11.0 -D canonical_root=/13.0"
         cp -a _build/html/. ../dst
  
     - name: Commit changes
-      uses: yelizariev/git-auto-commit-action@custom-author-and-token
+      uses: yelizariev/git-auto-commit-action@custom-author-and-token2
       with:
         commit_author_name: Marc Demo (Github Actions)
         commit_author_email: i18n-bot@it-projects.info
