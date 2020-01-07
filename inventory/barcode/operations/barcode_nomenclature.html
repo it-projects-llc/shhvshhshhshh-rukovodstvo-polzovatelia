@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>Work with Barcode Nomenclature &#8212; Документация Odoo 13.0</title>
+    <title>Общий обзор &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/accounting.css" />
@@ -213,7 +213,7 @@
             
         
     
-    <li class="active"><a href="#">Work with Barcode Nomenclature</a></li>
+    <li class="active"><a href="#">Общий обзор</a></li>
 
               
           </ol>
@@ -285,7 +285,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> Work with Barcode Nomenclature </h1>
+        <h1> Общий обзор </h1>
       </div>
     </figure>
     
@@ -298,7 +298,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#create-a-barcode-nomenclature" class="ripple internal reference">Create a Barcode Nomenclature</a></li><li class="list-group-item"><a href="#configure-your-product" class="ripple internal reference">Configure your Product</a></li><li class="list-group-item"><a href="#rule-types" class="ripple internal reference">Rule Types</a></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#create-a-barcode-nomenclature" class="ripple internal reference">Create a Barcode Nomenclature</a><ul ><li class="list-group-item"><a href="#configure-your-product" class="ripple internal reference">Configure your Product</a></li><li class="list-group-item"><a href="#rule-types" class="ripple internal reference">Rule Types</a></li></ul></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/inventory/barcode/operations/barcode_nomenclature.rst" class="gith-link">
                   Edit on GitHub
@@ -310,31 +310,32 @@
           <article class="doc-body  ">
             
             
-  <section id="work-with-barcode-nomenclature"><p >There are different situations in which barcode nomenclatures can be
-useful. A well-known use case is the one of a point of sales that sells
-products in bulk. The customers will scale their products themselves and
-get the printed barcode to stick on the product. This barcode will
-contain the weight of the product and help compute the price
-accordingly.</p></section><section id="create-a-barcode-nomenclature"><h2 >Create a Barcode Nomenclature</h2><p >Odoo supports <em >Barcode Nomenclatures</em>, which determine the mapping and
-interpretation of the encoded information.</p><p >To configure the <em >Barcode Nomenclature</em>, you need to activate the
-debug mode. To do so, go to <em >Inventory &gt; Configuration &gt; Barcode
-Nomenclature</em>.</p><p >You can create a barcode nomenclature from there, and then add a line to
-create your first rule.</p><img src="../../../_images/barcode_nomenclature_01.png" style="" class="img-responsive center-block"><p >The first step is to specify the <em >rule name</em>, for example, <em >Weight
-Barcode</em> with 3 decimals. Then, you have to specify the type for
-barcode nomenclature, like the <em >Weighted Product</em>.</p><img src="../../../_images/barcode_nomenclature_02.png" style="" class="img-responsive center-block"><p >The <em >Barcode Pattern</em> is a regular expression that defines the
-structure of the barcode. In this example, 21 defines the products on
-which the rule will be applied. Those are the numbers by which the
-product barcode should start. The 5 “dots” are the following numbers of
-the product barcode and are there to identify the product in question.
-The “N” defines a number and the “D” defines the decimals.</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >You can define different rules and order their priority thanks to the
-sequence. The first rule that matches the scanned barcode will then be
-applied.</p></div></section><section id="configure-your-product"><h2 >Configure your Product</h2><ol ><li >The barcode of the product should start by “21”;</li><li >The 5 “dots” are the other numbers of your product barcode, allowing to identify the product;</li><li >The barcode should contain 0’s when you did defined D’s or N’s. In our case, we need to set 5 zeros because we condigures “21………{NNDDD}”;</li><li >In EAN-13, the last number is a check number. Use an EAN13 generator to know which digit it should be in your case.</li></ol><img src="../../../_images/barcode_nomenclature_03.png" style="" class="img-responsive center-block"><p >In case you weight 1,5kg of pasta, the balance will print you the
-following barcode: <em >2112345015001</em>. If you scan this barcode in your
-PoS, or when receiving the products in your barcode app, Odoo will
-automatically create a new line for the product, for a quantity of
-1,5kg.</p><p >For the point of sale, a price depending on the quantity will also be
-computed.</p><img src="../../../_images/barcode_nomenclature_04.png" style="" class="img-responsive center-block"></section><section id="rule-types"><h2 >Rule Types</h2><ul ><li ><strong >Priced Product</strong>: it allows you to identify the product and specify its price, used in PoS;</li><li ><strong >Discounted Product</strong>: it allows you to create one barcode per applied discount. Then, you can scan your product in the PoS and apply discounts on the product by scanning the discount barcode;</li><li ><strong >Weighted Product</strong>: it allows you to identify the product and specify its weight, used in both PoS and in Inventory;</li><li ><strong >Client</strong>: it allows you to identify the customer, for example used with loyalty program;</li><li ><strong >Cashier</strong>: it allows you to identify the cashier when entering the PoS;</li><li ><strong >Location</strong>: it allows you to identify the location on a transfer when multi-location is activated;</li><li ><strong >Package</strong>: it allows you to identify packages on a transfer when packages are activated;</li><li ><strong >Lot</strong>: it allows you to identify the lot number of a product on a transfer;</li><li ><strong >Credit Card</strong>: it doesn’t need manual modification, exists for data from the Mercury module;</li><li ><strong >Unit Product</strong>: it allows you to identify a product for both PoS and Transfers.</li></ul><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >When the barcode pattern contains .*, it means that it can contain any
-number of characters. Those characters can be any number.</p></div></section>
+  <section id="overview"><p >There are different situations in which barcode nomenclatures can be
+useful. A well-known use case is the one of a point of sale which sells
+products in bulk, in which the customers will scale their products
+themselves and get the printed barcode to stick on the product. This
+barcode will contain the weight of the product and help compute the
+price accordingly.</p></section><section id="create-a-barcode-nomenclature"><h2 >Create a Barcode Nomenclature</h2><p >Odoo supports Barcode Nomenclatures, which determine the mapping and
+interpretation of the encoded information.
+You can configure your barcode nomenclature being in <strong >debug</strong> mode.
+To do so, go to <em >Inventory &gt; Configuration &gt; Barcode Nomenclature</em>.</p><p >You can create a barcode nomenclature from there, and then add a line to
+create your first rule.</p><img src="../../../_images/barcode_nomenclature_01.png" style="" class="img-responsive center-block"><p >The first step is to specify the <strong >rule name</strong>, for example Weight
+Barcode with 3 Decimals. You then have to specify the type for barcode
+nomenclature, in our case it will be Weighted Product.</p><img src="../../../_images/barcode_nomenclature_02.png" style="" class="img-responsive center-block"><p >The Barcode Pattern is a regular expression that defines the structure
+of the barcode. In this example 21 defines the products on which the
+rule will be applied, those are the numbers by which the product barcode
+should start. The 5 “dots” are the following numbers of the product
+barcode and are there simply to identify the product in question. The
+“N” define a number and the “D” define the decimals.</p><p >The encoding allows to specify the barcode encoding on which the rule
+should be applied.</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >You can define different rules and order their priority thanks to the
+sequence. The first rule which matches the scanned barcode will be
+applied.</p></div></section><section id="configure-your-product"><h3 >Configure your Product</h3><ol ><li >The barcode of the product should start by “21”;</li><li >The 5 “dots” are the other numbers of your product barcode, allowing to identify the product;</li><li >The barcode should contain 0’s where you did defined D’s or N’s. In our case we need to set 5 zeros because we configured “21…..{NNDDD}”;</li><li >In EAN-13, the last number is a check number, use an EAN13 generator to know which digit it should be in your case.</li></ol><img src="../../../_images/barcode_nomenclature_03.png" style="" class="img-responsive center-block"><p >In case you weight 1,5 Kg of pasta, the balance will print you the
+following barcode 2112345015002. If you scan this barcode in your POS or
+when receiving products in your barcode application, Odoo will
+automatically create a new line for the Pasta product for a quantity of
+1.5 Kg. For the point of sale, a price depending on the quantity will
+also be computed.</p><img src="../../../_images/barcode_nomenclature_04.png" style="" class="img-responsive center-block"></section><section id="rule-types"><h3 >Rule Types</h3><ul ><li ><strong >Priced Product</strong>: allows you to identify the product and specify its price, used in POS.</li><li ><strong >Discounted Product</strong>: allows you to create one barcode per applied discount. You can then scan your product in the POS and then scan the discount barcode, discount will be applied on the normal price of the product.</li><li ><strong >Weighted Product</strong>: allows you to identify the product and specify its weight, used in both POS (in which the price is computed based on the weight) and in inventory.</li><li ><strong >Client</strong>: allows you to identify the customer, for example used with loyalty program.</li><li ><strong >Cashier</strong>: allows you to identify the cashier when entering the POS.</li><li ><strong >Location</strong>: allows you to identify the location on a transfer when multi-location is activated.</li><li ><strong >Package</strong>: allows you to identify packages on a transfer when packages are activated.</li><li ><strong >Lot</strong>: allows you to identify the lot number of a product on a transfer.</li><li ><strong >Credit Card</strong>: doesn’t need manual modification, exists for data from the Mercury module.</li><li ><strong >Unit Product</strong>: allows you to identify a product for both POS and transfers.</li></ul><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >When the barcode pattern contains .*, it means that it can contain any
+number of characters, those characters being any number.</p></div></section>
 
           </article>
         </div>
