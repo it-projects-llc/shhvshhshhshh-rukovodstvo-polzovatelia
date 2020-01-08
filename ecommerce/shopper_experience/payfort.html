@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>Настройте ваш аккаунт Paypal &#8212; Документация Odoo 13.0</title>
+    <title>Configure your Payfort account &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/accounting.css" />
@@ -32,13 +32,13 @@
     <script type="text/javascript" src="../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../_static/doc.js"></script>
     <script type="text/javascript" src="../../_static/jquery.noconflict.js"></script>
-    <link rel="alternate" hreflang="ru" href="/13.0/ru/ecommerce/shopper_experience/paypal.html" />
-    <link rel="canonical" href="/master/ru/ecommerce/shopper_experience/paypal.html" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/ecommerce/shopper_experience/payfort.html" />
+    <link rel="canonical" href="/master/ru/ecommerce/shopper_experience/payfort.html" />
   
     <link rel="index" title="Алфавитный указатель" href="../../genindex.html" />
     <link rel="search" title="Поиск" href="../../search.html" />
-    <link rel="next" title="Как получить оплату с помощью Authorize.Net" href="authorize.html" />
-    <link rel="prev" title="Configure your Payfort account" href="payfort.html" /> 
+    <link rel="next" title="Настройте ваш аккаунт Paypal" href="paypal.html" />
+    <link rel="prev" title="Как получить платеж через платежные эквайеры" href="payment.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -207,7 +207,7 @@
             
         
     
-    <li class="active"><a href="#">Настройте ваш аккаунт Paypal</a></li>
+    <li class="active"><a href="#">Configure your Payfort account</a></li>
 
               
           </ol>
@@ -231,7 +231,7 @@
     </a>
     <ul class="dropdown-menu" role="menu">
         
-            <li><a href="/12.0/ecommerce/shopper_experience/paypal.html">12.0</a></li>
+            <li><a href="/12.0/ecommerce/shopper_experience/payfort.html">12.0</a></li>
         
     </ul>
 </li>
@@ -279,7 +279,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> Настройте ваш аккаунт Paypal </h1>
+        <h1> Configure your Payfort account </h1>
       </div>
     </figure>
     
@@ -292,9 +292,9 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#paypal-account" class="ripple internal reference">Аккаунт Paypal</a></li><li class="list-group-item"><a href="#settings-in-paypal" class="ripple internal reference">Настройки в Paypal</a><ul ><li class="list-group-item"><a href="#auto-return" class="ripple internal reference">автоматический возврат</a></li><li class="list-group-item"><a href="#payment-data-transfer-pdt" class="ripple internal reference">Перевод данных об оплате (PDT)</a></li><li class="list-group-item"><a href="#instant-payment-notification-ipn" class="ripple internal reference">Мгновенные оповещения оплаты (IPN)</a></li><li class="list-group-item"><a href="#payment-messages-format" class="ripple internal reference">Формат сообщений оплаты</a></li></ul></li><li class="list-group-item"><a href="#settings-in-odoo" class="ripple internal reference">Настройки в Odoo</a><ul ><li class="list-group-item"><a href="#activation" class="ripple internal reference">Активация</a></li><li class="list-group-item"><a href="#credentials" class="ripple internal reference">Полномочия</a></li><li class="list-group-item"><a href="#transaction-fees" class="ripple internal reference">оплата транзакции</a></li></ul></li><li class="list-group-item"><a href="#go-live" class="ripple internal reference">Перейдите в онлайн!</a></li><li class="list-group-item"><a href="#test-environment" class="ripple internal reference">тестовое среду</a></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#installing-the-payfort-integration-module" class="ripple internal reference">Installing the Payfort integration module</a></li><li class="list-group-item"><a href="#create-a-payfort-account" class="ripple internal reference">Create a Payfort account</a></li><li class="list-group-item"><a href="#supported-payment-methods" class="ripple internal reference">Supported Payment Methods</a></li><li class="list-group-item"><a href="#settings-in-payfort" class="ripple internal reference">Settings in Payfort</a><ul ><li class="list-group-item"><a href="#security-parameters" class="ripple internal reference">Security Parameters</a></li><li class="list-group-item"><a href="#notification-and-return-urls" class="ripple internal reference">Notification and Return URLs</a></li></ul></li><li class="list-group-item"><a href="#settings-in-odoo" class="ripple internal reference">Настройки в Odoo</a><ul ><li class="list-group-item"><a href="#activation" class="ripple internal reference">Активация</a></li></ul></li><li class="list-group-item"><a href="#go-live" class="ripple internal reference">Перейдите в онлайн!</a></li></ul>
               
-              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/ecommerce/shopper_experience/paypal.rst" class="gith-link">
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/ecommerce/shopper_experience/payfort.rst" class="gith-link">
                   Edit on GitHub
               </a></p>
               
@@ -304,18 +304,67 @@
           <article class="doc-body  ">
             
             
-  <section id="configure-your-paypal-account"><p >Paypal доступен и популярен по всему миру. Он не взимает плату за подписку, а создать аккаунт очень легко. Вот почему мы рекомендуем его для начинающих в Odoo. Он работает бесперебойно, когда клиент перенаправляется на сайт Paypal для регистрации платежа.</p></section><section id="paypal-account"><h2 >Аккаунт Paypal</h2><p >Бизнес-счет нужен для получения платежей с Paypal. Создайте [UNKNOWN NODE problematic]Бизнес-счет Paypayl &lt;<a href="https://www.paypal.com/us/merchantsignup/applicationChecklist?signupType=CREATE_NEW_ACCOUNT&amp;productIntentId=wp_standard" class="external reference">https://www.paypal.com/us/merchantsignup/applicationChecklist?signupType=CREATE_NEW_ACCOUNT&amp;productIntentId=wp_standard</a>&gt; [UNKNOWN NODE problematic]__ или обновите ваш Персональный счет на Бизнес. Перейдите в настройки Paypal и нажмите * Обновить на Бизнес-счет [UNKNOWN NODE problematic]. Затем продолжите несколько шагов настройки.</p></section><section id="settings-in-paypal"><h2 >Настройки в Paypal</h2><div class="line-block"><div class="line">Сначала, давайте посмотрим, как настроить ваш аккаунт Paypal, чтобы создать бесперебойный опыт работы клиента с Odoo.</div><div class="line">Войдите и откройте настройки. Перейдите в * Товары и Услуги&amp;gt; Платежи сайта * и нажмите * Обновить * в * Преимущества сайта [UNKNOWN NODE problematic].</div></div><img src="../../_images/paypal011.png" style="" class="img-responsive center-block"></section><section id="auto-return"><h3 >автоматический возврат</h3><p ><em >Auto Return</em> automatically redirects your customers to Odoo once the
-payment is processed. Check <em >Auto Return</em> and enter your domain name
-«/shop/confirmation» as <em >Return URL</em> (e.g.
-<a href="https://yourcompany.odoo.com/shop/confirmation" class="external reference">https://yourcompany.odoo.com/shop/confirmation</a>).</p><p >Эта URL-адрес запрашивает Paypal, но не используется на практике, поскольку Odoo передает ее на каждой транзакции. Не волнуйтесь, если вы управляете несколькими каналами продаж или базами данных Odoo.</p><img src="../../_images/paypal021.png" style="" class="img-responsive center-block"></section><section id="payment-data-transfer-pdt"><h3 >Перевод данных об оплате (PDT)</h3><p ><em >Payment Data Transfer</em> delivers the payment confirmation to Odoo as
-soon as it is processed. Without it, Odoo cannot end the sales flow.
-This setting must be activated as well. When saving, an <em >Identity
-Token</em> is generated. You will be later requested to enter it in Odoo.</p><img src="../../_images/paypal031.png" style="" class="img-responsive center-block"><p >Опциональный счет Paypal</p><p >Мы советуем не побуждать клиентов входить с помощью аккаунта Paypal, когда они получают оплату. Пусть они также платят дебетовыми / кредитными карточками, иначе вы можете потерять некоторые сделки. Убедитесь, что этот параметр.</p><img src="../../_images/paypal04.png" style="" class="img-responsive center-block"></section><section id="instant-payment-notification-ipn"><h3 >Мгновенные оповещения оплаты (IPN)</h3><p >PDT направляет подтверждение заказов только один раз. В результате ваш сайт должен запускаться, когда это случается; в противном случае он никогда не получит сообщение. Поэтому мы советуем активировать * Мгновенные уведомления оплаты * (IPN) в горе. С IPN, доставка подтверждение заказов практически гарантировано с тех пор, как IPN повторно направляет подтверждения пока ваш сайт не подтвердит получение.</p><div class="line-block"><div class="line">Чтобы активировать IPN, вернитесь в меню * Платежи сайта * и нажмите * Обновить * в * Моментальное уведомление оплаты [UNKNOWN NODE problematic].</div><div class="line">The <em >Notification URL</em> to set is your domain name +
-“payment/paypal/ipn” (e.g.
-<a href="https://yourcompany.odoo.com/payment/paypal/ipn" class="external reference">https://yourcompany.odoo.com/payment/paypal/ipn</a>).</div></div><img src="../../_images/paypal05.png" style="" class="img-responsive center-block"></section><section id="payment-messages-format"><h3 >Формат сообщений оплаты</h3><p >If you use accented characters (or anything else than basic Latin characters)
-for your customer names, addresses… you MUST configure the encoding format of
-the payment request sent by Odoo to Paypal.</p><div role="alert" class="alert-danger alert"><p class="alert-title">Опасно</p><p >If you don’t configure this setting, some transactions fail without notice.</p></div><p >To do so, open:</p><ul ><li ><a href="https://sandbox.paypal.com/cgi-bin/customerprofileweb?cmd=_profile-language-encoding" class="external reference">this page for a test account</a></li><li ><a href="https://www.paypal.com/cgi-bin/customerprofileweb?cmd=_profile-language-encoding" class="external reference">this page for a production account</a></li></ul><p >Then, click <em >More Options</em> and set the two default encoding formats as <strong >UTF-8</strong>.</p><img src="../../_images/paypal07.png" style="" class="img-responsive center-block"><img src="../../_images/paypal08.png" style="" class="img-responsive center-block"><p >Ваш аккаунт Paypal готов!</p><blockquote ><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >If you want your customers to pay without creating a Paypal account,
-<strong >Paypal Account Optional</strong> needs to be turned on.</p><img src="../../_images/paypal_account_optional.png" style="" class="img-responsive center-block"></div><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >Для зашифрованных платежей на сайте и ошибки EWP_SETTINGS, проверьте [UNKNOWN NODE problematic]документацию paypal. &lt;<a href="https://developer.paypal.com/docs/classic/paypal-payments-standard/integration-guide/encryptedwebpayments/#encrypted-website-payments-ewp" class="external reference alert-link">https://developer.paypal.com/docs/classic/paypal-payments-standard/integration-guide/encryptedwebpayments/#encrypted-website-payments-ewp</a>&gt; [UNKNOWN NODE problematic]__</p></div></blockquote></section><section id="settings-in-odoo"><h2 >Настройки в Odoo</h2></section><section id="activation"><h3 >Активация</h3><p >Активируйте * Paypal * с панели настроек Продаж, Выставление счетов и Электронной коммерции, или из меню настройки * платежных эквайеров [UNKNOWN NODE problematic].</p></section><section id="credentials"><h3 >Полномочия</h3><p >Odoo требует трех учетных данных Paypal:</p><ul ><li ><em >Email ID</em> is your login email address in Paypal.</li><li ><em >Merchant ID</em> can be found in the settings of your Paypal account, in <em >Profile &gt; About the business</em>.</li><li ><em >Paypal PDT Token</em> is given in <em >Website payments</em> configuration as explained here above.</li></ul><img src="../../_images/paypal09.png" style="" class="img-responsive center-block"></section><section id="transaction-fees"><h3 >оплата транзакции</h3><p >Вы можете взимать дополнительную комиссию с клиентов за оплату через Paypal; Это покрывает взыскании с вас комиссии за транзакцию Paypal. После направления на Paypal, ваш клиент видит дополнительную сумму к сумме заказа.</p><p >Чтобы активировать это, перейдите на вкладку Настройка Paypal а Odoo и отметьте * Добавить дополнительные комиссии [UNKNOWN NODE problematic].</p><img src="../../_images/paypal10.png" style="" class="img-responsive center-block"><p >Вы можете перейти на [UNKNOWN NODE problematic]Комиссию Paypal &lt;<a href="https://www.paypal.com/webapps/mpp/paypal-fees" class="external reference">https://www.paypal.com/webapps/mpp/paypal-fees</a>&gt; [UNKNOWN NODE problematic]__ чтобы установить комиссию.</p><p >..note :: [UNKNOWN NODE problematic]Продавцам в ЕС &lt;<a href="https://europa.eu/youreurope/citizens/consumers/shopping/pricing-payments/index_en.htm" class="external reference">https://europa.eu/youreurope/citizens/consumers/shopping/pricing-payments/index_en.htm</a>&gt; [UNKNOWN NODE problematic]__ запрещено взимать дополнительную комиссию за оплату кредитными карточками.</p></section><section id="go-live"><h2 >Перейдите в онлайн!</h2><p >Ваши настройки готовы к запуску. Убедитесь, что включен режим * Разработчик [UNKNOWN NODE problematic]. Затем опубликуйте метод платежа, нажав на кнопку * Опубликовано * рядом.</p><img src="../../_images/paypal11.png" style="" class="img-responsive center-block"><img src="../../_images/paypal12.png" style="" class="img-responsive center-block"><p >Теперь Paypal доступен в ваших платежах в модулях Электронной коммерции, продажи и выставления счетов. Клиенты перенаправляются на сайт Paypal при нажатии * Оплатить сейчас [UNKNOWN NODE problematic]. Они вернутся на страницу подтверждения в Odoo после того, как платеж будет обработан.</p><img src="../../_images/paypal13.png" style="" class="img-responsive center-block"></section><section id="test-environment"><h2 >тестовое среду</h2><p >Вы можете протестировать процесс оплаты в Odoo благодаря счетам Paypal Sandbox.</p><p >Войдите на [UNKNOWN NODE problematic]Сайт разработчика Paypal &lt;<a href="https://developer.paypal.com/" class="external reference">https://developer.paypal.com/</a>&gt; [UNKNOWN NODE problematic]__ с вашими учетными данными Paypal.</p><p >Это создаст два счета sandbox:</p><ul ><li >Бизнес-счет (для использования в качестве покупателей, например. [UNKNOWN NODE problematic]<a href="mailto:pp.merch01-facilitator@example.com" class="external reference">pp.merch01-facilitator@example.com</a> &lt;<a href="mailto:pp.merch01-facilitator@example.com" class="external reference">mailto:pp.merch01-facilitator@example.com</a>&gt; [UNKNOWN NODE problematic]__).</li><li >Персональный счет по умолчанию (для использования в качестве покупателя, eg [UNKNOWN NODE problematic]<a href="mailto:pp.merch01-buyer@example.com" class="external reference">pp.merch01-buyer@example.com</a> &lt;<a href="mailto:pp.merch01-buyer@example.com" class="external reference">mailto:pp.merch01-buyer@example.com</a>&gt; [UNKNOWN NODE problematic]__).</li></ul><p >Войдите в Paypal Sandbox учетной записью продавца и следуйте тем самым инструкциям настройки. Введите учетные данные sandbox в Odoo и убедитесь, что Paypal сих пор не установлено как * Тестовое среду [UNKNOWN NODE problematic]. Также убедитесь, что автоматическое выставление счета не активирован в ваших настройках Электронной коммерции, чтобы не создавать счета когда завершаются фиктивные транзакции.</p><p >Запустите тестовую транзакцию в Odoo, используя личный аккаунт Sandbox.</p><p >Смотрите также</p><p >[UNKNOWN NODE problematic]Как управлять оплаченными заказами через платежные евайеры &lt;<a href="https://www.odoo.com/documentation/user/13.0/ecommerce/shopper_experience/payment.html" class="external reference">https://www.odoo.com/documentation/user/13.0/ecommerce/shopper_experience/payment.html</a>&gt; [UNKNOWN NODE problematic]__</p><p >[UNKNOWN NODE problematic]Как управлять оплаченными заказами через платежные эквайеры &lt;<a href="https://www.odoo.com/documentation/user/13.0/ecommerce/shopper_experience/payment_acquirer.html" class="external reference">https://www.odoo.com/documentation/user/13.0/ecommerce/shopper_experience/payment_acquirer.html</a>&gt; [UNKNOWN NODE problematic]__</p></section>
+  <section id="configure-your-payfort-account"><p >Payfort is an Amazon company providing payment services, mostly in the MENA region. It is fully
+supported by Odoo, making classical and tokenization payment flows possible with little
+configuration.</p><p >It is strongly advised to use a test account in addition to your real account; that way, you can
+test configuration changes safely in a copy of your instance before making any change in your
+production environment.</p></section><section id="installing-the-payfort-integration-module"><h2 >Installing the Payfort integration module</h2><p >The Payfort integration was added after the release of Odoo 13 for our own internal needs - we
+decided to make this integration standard so that all our customers might use it.</p><p >This means that your Odoo source code must be up-to-date for the module to be available. If your
+Odoo instance was created prior to the addition of the module in the code, you will need to update
+the list of available modules.</p><p >To do so, follow these steps:</p><ol ><li >Enable the Developer Mode by going to <span class="menuselection">Settings ‣ Activate the developer mode</span></li><li >Go to <span class="menuselection">Apps ‣ Update Apps List</span> and confirm the operation</li></ol><p >The Payfort module is now visible in the list of applications and can be installed from there.
+If you want the Payfort integration to be visible in the list of available payment providers without
+first installing the module, you can update the <code >payment</code> base module:</p><div role="alert" class="alert-warning alert"><p class="alert-title">Предупреждение</p><p >Updating a module can lead to a small downtime for your database. Make sure to check if the
+update works correctly in a duplicate database first.</p></div><ol ><li >Go to <span class="menuselection">Apps</span></li><li >Remove the <em >Apps</em> filter from the search menu</li><li >Search for the <code >payment</code> module (<em >Payment Acquirer</em>)</li><li >Update that module</li></ol><p >Payfort will now be visible in the list of available acquirers, independently of its installation
+status.</p></section><section id="create-a-payfort-account"><h2 >Create a Payfort account</h2><p >Creating a Payfort account can take some time, as you will need to get in touch with them through
+their <a href="https://www.payfort.com/get-started/" class="external reference">online form</a> first. Depending on your expected usage
+of Odoo, you will need to require some specific options for your account.</p><p >The most basic configuration will require the <em >Redirection</em> channel. An advanced integration,
+allowing customers to save their card for future payments (e.g. to process recurring charges in the
+Subscription application or to allow your customer to pay easily through your eCommerce with saved
+cards), will require the channels <em >Recurring</em> and <em >Merchant Page</em>.</p></section><section id="supported-payment-methods"><h2 >Supported Payment Methods</h2><p >Payfort supports multiple payment options; all major credit cards are supported,
+as well as local payment methods such as Mada, Knet or Meeza. However, these
+local payment methods do not support tokenization (saving payment data for future
+usage, e.g. through the Subscription application).</p><p >If you configure Payfort to use the <em >Payment from Odoo</em> payment flow (which is
+required if you plan to use tokenization), your customers will not be able to pay
+using these local payment methods. If you plan for a simple eCommerce integration
+without the use of subscriptions, using the <em >Redirection to the acquirer website</em>
+payment flow is recommended, as it supports more payment methods and will make
+payment more convenient for your customers.</p><p >Credit card support is always available, independently of the payment flow
+selection.</p></section><section id="settings-in-payfort"><h2 >Settings in Payfort</h2></section><section id="security-parameters"><h3 >Security Parameters</h3><p >First, you need to configure your security parameters. To do so, connect to your
+Payfort account and go to <span class="menuselection">Integration Settings ‣ Secuirty Settings</span>.</p><p >This page contains your Merchant Identifier, Access Code and cryptographic passphrases
+for securing communications between Odoo and Payfort. Set the <em >SHA Type</em> field to
+<em >SHA-256</em>, and fill in the mandatory fields. You will need to input these in Odoo
+later on. Your SHA passphrases should be difficult to guess and not too short (using
+a password generator to create strong passphrases is strongly advised).</p><p >You can set up <em >Origin IP</em> and <em >Origin URL</em> restrictions, though that may not always
+be advisable. Odoo Online instances can change IP without prior notice, for example in
+case of hardware retirement or planned maintenance. The origin URL might not always
+be the same, especially if you enable support for multiple websites in Odoo.
+If you are unsure about these settings, leave them empty.</p><p >You can see here an example configuration of the security settings in Payfort:</p><img src="../../_images/payfort_security_settings.png" style="" class="img-responsive center-block"></section><section id="notification-and-return-urls"><h3 >Notification and Return URLs</h3><p >Payfort provides a notification mechanism that will notify Odoo of new payments
+and of updates in existing payments. These notifications act as a fallback to
+make sure that all payments status are correct in Odoo, even if your customer closes
+their browser window or lose connectivity during payment confirmation.</p><p >For every payment channel activated on your Payfort account, you will need to specify
+the notification URL. To do so, go to <span class="menuselection">Integration Settings ‣ Technical Setting</span>
+and configure every payment channel with the notification URL <em >&lt;BaseUrl&gt;/payment/payfort/notify</em>
+(e.g. <code >https://my-ecommerce.odoo.com/payment/payfort/notify</code>).</p><p >The URL is identical for the <em >Notification URL</em> and
+<em >Direct Transaction Feedback</em>. In the case of the redirection channel, you will also
+need to specify a <em >Redirection URL</em>: <em >&lt;BaseUrl&gt;/payment/payfort/return</em> (e.g.
+<code >https://my-ecommerce.odoo.com/payment/payfort/return</code>). Make
+sure to set <em >Send Response Parameters</em> to <code >Yes</code>.</p><p >The <em >Response Type</em> field
+should be set to <code >JSON</code> and the <em >Return URL Type</em> to <code >POST</code>. Downgrading
+the CVC is advised as it does not impact communication with Odoo and will limit
+the amount of sensitive information that will be included in the technical logs.</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Not all fields may be available depending on the payment channel you are
+configuring.</p></div><p >You can see an example configuration for the Redirection channel here:</p><img src="../../_images/payfort_url_config.png" style="" class="img-responsive center-block"></section><section id="settings-in-odoo"><h2 >Настройки в Odoo</h2></section><section id="activation"><h3 >Активация</h3><ul ><li >Activate Payfort in Odoo from <span class="menuselection">Website or Accounting ‣ Settings ‣
+Payment Acquirers</span>.</li><li >Enter your Payfort security settings in the credentials tab: <strong >Merchant Identifier</strong>,
+<strong >Access Code</strong>, <strong >SHA Request Phrase</strong> and <strong >SHA Response Phrase</strong>.</li><li >Choose your payment flow; note that the <em >Payment from Odoo</em> payment flow is only compatible with
+credit card payments.</li><li >Finalize the configuration in the Configuration tab: set country restrictions, website
+restrictions (if you have enabled support for multiple websites) and/or payment icons for local
+payment options (only for <em >Redirection to the acquirer website</em> payment flows).</li><li >Set the Payfort provider to the correct status (<em >Enabled</em> for a production account, <em >Test</em> for a
+test account)</li></ul><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Payment Icons are only there to indicate to your customers which payment options are available.
+Enabling support for these options should be done in your Payfort account. Icons for the local
+payment options are available but are not active by default.</p></div></section><section id="go-live"><h2 >Перейдите в онлайн!</h2><p >Payfort is now available in your payment form available in eCommerce, Sales, Subscription and
+Invoicing apps. Your customers will get back to a confirmation page in Odoo once the payment is
+processed.</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p ><em >(for integrators only)</em> Be aware that the Payfort integration makes use of <code >iframe</code> elements;
+your web server configuration should allow iframes with the <code >sameorigin</code> value of the
+<code >X-Frame-Options</code> header of Odoo pages.</p></div><div role="alert" class="alert-go_to alert"><p class="alert-title">См.также</p><ul ><li ><a href="payment.html" class="internal alert-link reference"><span class="doc">Как получить платеж через платежные эквайеры</span></a></li><li ><a href="payment_acquirer.html" class="internal alert-link reference"><span class="doc">Как управлять заказами, оплаченными через платежные эквайеры</span></a></li></ul></div></section>
 
           </article>
         </div>
