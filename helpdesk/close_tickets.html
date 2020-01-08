@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>Послепродажные функции: возмещение, купоны, возврат, ремонт, вмешательства на месте &#8212; Документация Odoo 13.0</title>
+    <title>Allow customers to close their tickets &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/accounting.css" />
@@ -32,13 +32,13 @@
     <script type="text/javascript" src="../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../_static/doc.js"></script>
     <script type="text/javascript" src="../_static/jquery.noconflict.js"></script>
-    <link rel="alternate" hreflang="ru" href="/13.0/ru/helpdesk/after_sales.html" />
-    <link rel="canonical" href="/master/ru/helpdesk/after_sales.html" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/helpdesk/close_tickets.html" />
+    <link rel="canonical" href="/master/ru/helpdesk/close_tickets.html" />
   
     <link rel="index" title="Алфавитный указатель" href="../genindex.html" />
     <link rel="search" title="Поиск" href="../search.html" />
-    <link rel="next" title="Allow customers to close their tickets" href="close_tickets.html" />
-    <link rel="prev" title="Запись времени на задачи и выставления счета" href="invoice_time.html" /> 
+    <link rel="next" title="Turn helpdesk hours into invoices directly from a project task" href="reinvoice_from_project.html" />
+    <link rel="prev" title="Послепродажные функции: возмещение, купоны, возврат, ремонт, вмешательства на месте" href="after_sales.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -201,7 +201,7 @@
             
         
     
-    <li class="active"><a href="#">Послепродажные функции: возмещение, купоны, возврат, ремонт, вмешательства на месте</a></li>
+    <li class="active"><a href="#">Allow customers to close their tickets</a></li>
 
               
           </ol>
@@ -225,7 +225,7 @@
     </a>
     <ul class="dropdown-menu" role="menu">
         
-            <li><a href="/12.0/helpdesk/after_sales.html">12.0</a></li>
+            <li><a href="/12.0/helpdesk/close_tickets.html">12.0</a></li>
         
     </ul>
 </li>
@@ -273,7 +273,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> Послепродажные функции: возмещение, купоны, возврат, ремонт, вмешательства на месте </h1>
+        <h1> Allow customers to close their tickets </h1>
       </div>
     </figure>
     
@@ -286,9 +286,9 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#set-up-the-after-sales-services" class="ripple internal reference">Установите Послепродажные услуги</a></li><li class="list-group-item"><a href="#generate-credit-notes-from-tickets" class="ripple internal reference">Создать сторно из заявки</a></li><li class="list-group-item"><a href="#allow-product-returns-from-tickets" class="ripple internal reference">Разрешить возврат товара по заявке</a></li><li class="list-group-item"><a href="#grant-coupons-from-tickets" class="ripple internal reference">Предоставляйте купоны из заявок</a></li><li class="list-group-item"><a href="#repairs-from-tickets" class="ripple internal reference">Ремонт по заявке</a></li><li class="list-group-item"><a href="#plan-onsite-interventions-from-tickets" class="ripple internal reference">Планируйте вмешательства на месте из заявок</a></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configure-the-feature" class="ripple internal reference">Configure the feature</a></li><li class="list-group-item"><a href="#the-costumer-portal" class="ripple internal reference">The Costumer Portal</a></li><li class="list-group-item"><a href="#get-reports-on-tickets-closed-by-costumers" class="ripple internal reference">Get reports on tickets closed by costumers</a></li></ul>
               
-              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/helpdesk/after_sales.rst" class="gith-link">
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/helpdesk/close_tickets.rst" class="gith-link">
                   Edit on GitHub
               </a></p>
               
@@ -298,7 +298,7 @@
           <article class="doc-body  ">
             
             
-  <section id="after-sales-features-refund-coupon-return-repair-onsite-interventions"><p >Поскольку мой бизнес растет, ключевым фактором является наличие инструментов, которые позволяют моей службе поддержки легко и эффективно записывать, отслеживать и управлять проблемами. Модуль Службы поддержки Odoo позволяет мне генерировать сторно, возвращать товары, выдавать купоны, делать ремонт и планировать выездные мероприятия на странице заявки.</p></section><section id="set-up-the-after-sales-services"><h2 >Установите Послепродажные услуги</h2><p >Перейдите в * Настройка&amp;gt; Команды поддержки * и включите Послепродажные опции: * Возмещение, Возвращение, Купоны, Ремонт и Вмешательство на месте [UNKNOWN NODE problematic].</p><img src="../_images/aftersales1.png" style="" class="img-responsive center-block"></section><section id="generate-credit-notes-from-tickets"><h2 >Создать сторно из заявки</h2><p >Можно использовать сторно для возмещения клиентам или корректировки суммы долга. Для этого нужно перейти на страницу своих заявок, нажать * Возместить * и выбрать корреспондирующий * Счет [UNKNOWN NODE problematic]. Нажав на * Обратная * будет создан сторно, а также можно * Публиковать * это, находясь в модуле * Служба поддержки [UNKNOWN NODE problematic].</p><img src="../_images/aftersales2.png" style="" class="img-responsive center-block"></section><section id="allow-product-returns-from-tickets"><h2 >Разрешить возврат товара по заявке</h2><p >Процесс возврата товара от клиента назад в состав будет введен в действие, когда на странице заявки будут выбраны опцию * Возвращение [UNKNOWN NODE problematic].</p><img src="../_images/aftersales3.png" style="" class="img-responsive center-block"></section><section id="grant-coupons-from-tickets"><h2 >Предоставляйте купоны из заявок</h2><p >Во-первых, не забудьте запланировать * Купонная программу * в модуле * Продажи * или * Веб-сайте [UNKNOWN NODE problematic]. В приложении * Служба поддержки * нужно открыть свою заявку и нажать * Купон * выбрать * Купонная программу&amp;gt; Создать [UNKNOWN NODE problematic].</p><img src="../_images/aftersales4.png" style="" class="img-responsive center-block"></section><section id="repairs-from-tickets"><h2 >Ремонт по заявке</h2><p >Нажав на опцию * Ремонт * на странице заявки, будет показано новый заказ на ремонт. Заполните оставленные поля по необходимости и выберите следующий шаг.</p><img src="../_images/aftersales5.png" style="" class="img-responsive center-block"></section><section id="plan-onsite-interventions-from-tickets"><h2 >Планируйте вмешательства на месте из заявок</h2><p >На странице заявки можно настроить вмешательства на месте в тот же способ, что и в модуле * Выездное обслуживание [UNKNOWN NODE problematic], нажав на * Запланировать вмешательства [UNKNOWN NODE problematic].</p><img src="../_images/aftersales6.png" style="" class="img-responsive center-block"><div role="alert" class="alert-go_to alert"><p class="alert-title">См.также</p><ul ><li >[UNKNOWN NODE problematic]Купоны &lt;<a href="https://www.odoo.com/slides/slide/coupon-programs-640?fullscreen=1" class="external reference alert-link">https://www.odoo.com/slides/slide/coupon-programs-640?fullscreen=1</a>&gt; [UNKNOWN NODE problematic]_</li><li ><a href="../manufacturing/repair/repair.html" class="internal alert-link reference"><span class="doc">ремонт товаров</span></a></li></ul></div></section>
+  <section id="allow-customers-to-close-their-tickets"><p >Allowing customers to close their tickets gives them autonomy and minimize misunderstandings about when an issue is considered solved, or not. It makes communication and actions more efficient.</p></section><section id="configure-the-feature"><h2 >Configure the feature</h2><p >To configure the feauture go to <em >Helpdesk &gt; Settings &gt; Helpdesk Teams &gt; Edit</em> and enable <em >Ticket closing</em>.</p><img src="../_images/closetickets1.png" alt="Ticket closing in Odoo Helpdesk" style="" class="img-responsive center-block"><p >In order to designate to which stage the ticket will migrate to once it is closed, go to <em >Overview &gt; Tickets</em>.</p><img src="../_images/closetickets2.png" alt="Ticket closing in Odoo Helpdesk" style="" class="img-responsive center-block"><p >You can either create a new kanban stage or work with an existing one. For both scenarios, go to <em >Settings &gt; Edit Stage</em> and enable <em >Closing Stage</em>.</p><img src="../_images/closetickets3.png" alt="Ticket closing in Odoo Helpdesk" style="" class="img-responsive center-block"><p >If a closing stage is not specified, by default, the ticket will be transferred to the last stage; contrarily, if you have more than one stage set as closing, the ticket will be put in the first one.</p></section><section id="the-costumer-portal"><h2 >The Costumer Portal</h2><p >Now, once the user logs in to his Portal, the option <em >Close this ticket</em> is available.</p><img src="../_images/closetickets4.png" alt="Ticket closing in Odoo Helpdesk" style="" class="img-responsive center-block"></section><section id="get-reports-on-tickets-closed-by-costumers"><h2 >Get reports on tickets closed by costumers</h2><p >To do an analysis of the tickets that have been closed by costumers go to <em >Reporting &gt; Tickets &gt; Filters &gt; Add Custom filter &gt; Closed by partner &gt; Applied</em>.</p><img src="../_images/closetickets5.png" alt="Reports on Ticket closing in Odoo Helpdesk" style="" class="img-responsive center-block"></section>
 
           </article>
         </div>
