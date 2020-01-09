@@ -38,7 +38,7 @@
     <link rel="index" title="Алфавитный указатель" href="../../genindex.html" />
     <link rel="search" title="Поиск" href="../../search.html" />
     <link rel="next" title="eBay" href="../sale_ebay.html" />
-    <link rel="prev" title="Configure Amazon MWS Connector in Odoo" href="setup.html" /> 
+    <link rel="prev" title="Configure Amazon Connector in Odoo" href="setup.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -309,19 +309,18 @@ The synchronization is based on the Amazon status: only orders whose status has 
 last synchronization are fetched from Amazon. For <strong >FBA</strong> (Fulfilled by Amazon), only <strong >Shipped</strong>
 and <strong >Canceled</strong> orders are fetched. For <strong >FBM</strong> (Fulfilled by Merchant), the same is done for
 <strong >Unshipped</strong> and <strong >Canceled</strong> orders. For each synchronized order, a sales order and a customer are
-created in Odoo if they are not yet registered.</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >If you did not request access to Personally Identifiable Information of your customers
-in the <a href="setup.html#developer-form" class="external reference alert-link">Developer Registration and Assessment form</a>, the
-customers are created anonymously (the name, postal address and phone number are omitted)
-and named <strong >Amazon Customer</strong>.</p></div><p >When an order is canceled in Amazon and was already synchronized in Odoo, the corresponding sales
+created in Odoo if they are not yet registered.</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >If you did not request access to Personally Identifiable Information of your customers in the
+<a href="apply.html#amazon-developer-form" class="internal alert-link reference"><span class="std std-ref">Developer Registration and Assessment form</span></a>, the customers are
+created anonymously (the name, postal address and phone number are omitted) and named
+<strong >Amazon Customer</strong>.</p></div><p >When an order is canceled in Amazon and was already synchronized in Odoo, the corresponding sales
 order is canceled in Odoo.
 When an order is canceled in Odoo, a notification is sent to Amazon who will mark it as such in
 Seller Central and notify the customer.</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >To force the synchronization of an order whose status has not changed since the last
-synchronization, activate the <strong >Developer mode</strong>, navigate to your Amazon account and
-modify the date under <span class="menuselection">Orders Follow-up ‣ Last Order Sync</span>. Pick a date
-anterior to the last status change of the order that you wish to synchronize and save.</p></div><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >To synchronize immediately the orders of your Amazon account, open that later’s form in
-<strong >Developer mode</strong> and click the button <strong >SYNC ORDERS</strong>. The same can be done with order
-cancellations and pickings by clicking the buttons <strong >SYNC CANCELLATIONS</strong> and <strong >SYNC
-PICKINGS</strong>.</p></div></section><section id="manage-deliveries-in-fbm"><h2 >Manage deliveries in FBM</h2><p >When a <strong >FBM</strong> (Fulfilled by Merchant) order is synchronized in Odoo, a picking is created along
+synchronization, activate the <strong >Developer mode</strong>, navigate to your Amazon account and modify the
+date under <span class="menuselection">Orders Follow-up ‣ Last Order Sync</span>. Pick a date anterior to the
+last status change of the order that you wish to synchronize and save.</p></div><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >To synchronize immediately the orders of your Amazon account switch to <strong >Developer mode</strong>, head
+to your Amazon account and click the button <strong >SYNC ORDERS</strong>. The same can be done with order
+cancellations and pickings by clicking the buttons <strong >SYNC CANCELLATIONS</strong> and <strong >SYNC PICKINGS</strong>.</p></div></section><section id="manage-deliveries-in-fbm"><h2 >Manage deliveries in FBM</h2><p >When a <strong >FBM</strong> (Fulfilled by Merchant) order is synchronized in Odoo, a picking is created along
 with the sales order and the customer. You can either ship all the ordered products to your customer
 at once or ship products partially by using backorders.</p><p >When a picking related to the order is confirmed, a notification is sent to Amazon who will, in
 turn, notify the customer that the order (or a part of it) is on its way.</p></section><section id="follow-deliveries-in-fba"><h2 >Follow deliveries in FBA</h2><p >When a <strong >FBA</strong> (Fulfilled by Amazon) order is synchronized in Odoo, a stock move is recorded for
@@ -329,27 +328,27 @@ each sales order item so that it is saved in your system. Inventory managers can
 in <span class="menuselection">Inventory ‣ Reporting ‣ Product Moves</span>. They pick up products in a specific
 inventory location called <strong >Amazon</strong>. This location represents your stock in Amazon’s warehouses
 and allows you to manage the stock of your products under the FBA program.</p><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >To follow your Amazon (FBA) stock in Odoo, you can make an inventory adjustment after
-replenishing it. You can also trigger an automated replenishment from reordering rules
-on the Amazon location.</p></div><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >The Amazon location is configurable by Amazon account managed in Odoo. All accounts of
-the same company use the same location by default. It is however possible to follow the
-stock by marketplace. First, remove the marketplace for which you want to follow the stock
-separately from the list of synchronized marketplaces. Then, create another registration
-for this account and remove all marketplaces, except the one to isolate from the others.
-Finally, assign another stock location to the second registration of your account.</p></div></section><section id="issue-invoices-and-register-payments"><h2 >Issue invoices and register payments</h2><p >You can issue invoices for Amazon orders in Odoo. Click <strong >Create Invoice</strong> in the sales order to do
+replenishing it. You can also trigger an automated replenishment from reordering rules on the
+Amazon location.</p></div><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >The Amazon location is configurable by Amazon account managed in Odoo. All accounts of the same
+company use the same location by default. It is however possible to follow the stock by
+marketplace. First, remove the marketplace for which you want to follow the stock separately from
+the list of synchronized marketplaces. Then, create another registration for this account and
+remove all marketplaces, except the one to isolate from the others. Finally, assign another stock
+location to the second registration of your account.</p></div></section><section id="issue-invoices-and-register-payments"><h2 >Issue invoices and register payments</h2><p >You can issue invoices for Amazon orders in Odoo. Click <strong >Create Invoice</strong> in the sales order to do
 so. You can also do it in batch from the list view of orders. Then, confirm and send the invoices to
-your customers.</p><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >To display only Amazon-related orders on the list view, you can filter orders based on the
-sales team.</p></div><p >As the customer has paid Amazon as an intermediary, you should register invoice payments in a
+your customers.</p><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >To display only Amazon-related orders on the list view, you can filter orders based on the sales
+team.</p></div><p >As the customer has paid Amazon as an intermediary, you should register invoice payments in a
 payment journal dedicated to Amazon (e.g. Amazon Payments, with a dedicated intermediary account).
 You can do the same with the vendor bill received from Amazon and dedicated to commissions. When you
 receive the balance on your bank account at the end of the month and record your bank statements in
 Odoo, you simply credit the Amazon intermediary account by the amount received.</p></section><section id="follow-your-amazon-sales-in-sales-reporting"><h2 >Follow your Amazon sales in sales reporting</h2><p >As a sales team is set on your account under the tab <strong >Order Follow-up</strong>, this helps you give quick
 glances at the figures in just a few clicks in Sales reporting. By default, your account’s sales
 team is shared between all of your company’s accounts.</p><p >If you wish, you can change the sales team on your account for another to perform a separate
-reporting for the sales of this account.</p><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >It is also possible to perform reporting on a per-marketplace basis in a similar fashion.
-First, remove the marketplace you wish to track separately from the list of synchronized
-marketplaces. Then, create another registration for this account and remove all
-marketplaces, except the one to isolate from the others. Finally, assign another sales
-team to one of the two registrations of your account.</p></div></section>
+reporting for the sales of this account.</p><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >It is also possible to perform reporting on a per-marketplace basis in a similar fashion. First,
+remove the marketplace you wish to track separately from the list of synchronized marketplaces.
+Then, create another registration for this account and remove all marketplaces, except the one to
+isolate from the others. Finally, assign another sales team to one of the two registrations of
+your account.</p></div></section>
 
           </article>
         </div>

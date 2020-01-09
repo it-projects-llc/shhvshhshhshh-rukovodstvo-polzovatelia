@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>Configure Amazon Connector in Odoo &#8212; Документация Odoo 13.0</title>
+    <title>Apply for Amazon MWS Access Keys &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/accounting.css" />
@@ -32,13 +32,13 @@
     <script type="text/javascript" src="../../_static/bootstrap.js"></script>
     <script type="text/javascript" src="../../_static/doc.js"></script>
     <script type="text/javascript" src="../../_static/jquery.noconflict.js"></script>
-    <link rel="alternate" hreflang="ru" href="/13.0/ru/sales/sale_amazon/setup.html" />
-    <link rel="canonical" href="/master/ru/sales/sale_amazon/setup.html" />
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/sales/sale_amazon/apply.html" />
+    <link rel="canonical" href="/master/ru/sales/sale_amazon/apply.html" />
   
     <link rel="index" title="Алфавитный указатель" href="../../genindex.html" />
     <link rel="search" title="Поиск" href="../../search.html" />
-    <link rel="next" title="Manage Amazon orders in Odoo" href="manage.html" />
-    <link rel="prev" title="Apply for Amazon MWS Access Keys" href="apply.html" /> 
+    <link rel="next" title="Configure Amazon Connector in Odoo" href="setup.html" />
+    <link rel="prev" title="Amazon Connector" href="../sale_amazon.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -207,7 +207,7 @@
             
         
     
-    <li class="active"><a href="#">Configure Amazon Connector in Odoo</a></li>
+    <li class="active"><a href="#">Apply for Amazon MWS Access Keys</a></li>
 
               
           </ol>
@@ -231,7 +231,7 @@
     </a>
     <ul class="dropdown-menu" role="menu">
         
-            <li><a href="/12.0/sales/sale_amazon/setup.html">12.0</a></li>
+            <li><a href="/12.0/sales/sale_amazon/apply.html">12.0</a></li>
         
     </ul>
 </li>
@@ -279,7 +279,7 @@
     <figure class="card top ">
       <span class="card-img" ></span>
       <div class="container text-center">
-        <h1> Configure Amazon Connector in Odoo </h1>
+        <h1> Apply for Amazon MWS Access Keys </h1>
       </div>
     </figure>
     
@@ -292,9 +292,9 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#register-your-amazon-account-in-odoo" class="ripple internal reference">Register your Amazon account in Odoo</a></li><li class="list-group-item"><a href="#match-database-products-in-amazon" class="ripple internal reference">Match database products in Amazon</a></li><li class="list-group-item"><a href="#configure-taxes-of-products" class="ripple internal reference">Configure taxes of products</a></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#submit-the-amazon-mws-developer-registration-and-assessment-form" class="ripple internal reference">Submit the Amazon MWS Developer Registration and Assessment Form</a></li><li class="list-group-item"><a href="#answer-the-additional-form" class="ripple internal reference">Answer the Additional Form</a></li></ul>
               
-              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/sales/sale_amazon/setup.rst" class="gith-link">
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/sales/sale_amazon/apply.rst" class="gith-link">
                   Edit on GitHub
               </a></p>
               
@@ -304,31 +304,54 @@
           <article class="doc-body  ">
             
             
-  <section id="configure-amazon-connector-in-odoo"></section><section id="register-your-amazon-account-in-odoo"><h2 >Register your Amazon account in Odoo</h2><p >To register your seller account in Odoo, navigate to <span class="menuselection">Sales ‣ Configuration
-‣ Settings ‣ Connectors ‣ Amazon Sync ‣ Amazon Accounts</span> and click on <strong >CREATE</strong>.</p><p >The <strong >Seller ID</strong> can be found in Seller Central under the link <strong >Your Merchant Token</strong> on the
-<strong >Seller Account Information</strong> page. The <strong >Access Key</strong> and the <strong >Secret Key</strong> can be found in
-Developer Central (where the Developer Registration and Assessment form was located).</p><p >Once the account is registered, the marketplaces available to this account are synchronized and
-listed under the <strong >Marketplaces</strong> tab. If you wish, you can remove some items from the list of
-synchronized marketplaces to disable their synchronization.</p></section><section id="match-database-products-in-amazon"><h2 >Match database products in Amazon</h2><p id="amazon-matching">When an Amazon order is synchronized, up to three sales order items are created in Odoo for each
-product sold on Amazon: one for the marketplace product, one for the shipping charges (if any) and
-one for the gift wrapping charges (if any).</p><p >The selection of a database product for a sales order item is done by matching its
-<strong >internal reference</strong> with the <strong >SKU</strong> for marketplace items, the <strong >shipping code</strong> for delivery
-charges, and the <strong >gift wrapping</strong> code for gift wrapping charges.</p><p >For marketplace products, pairings are saved as <strong >Amazon Offers</strong> which are listed under the
-<strong >Offers</strong> stat button on the account form. Offers are automatically created when the pairing is
-established and are used for subsequent orders to lookup SKUs. If no offer with a matching SKU is
-found, <a href="#amazon-matching" class="internal reference"><span class="std std-ref">the internal reference is used instead</span></a>.</p><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >It is possible to force the pairing of a marketplace item with a specific product by changing
-either the product or the SKU of an offer. The offer can be manually created if it was not
-automatically done yet. This is useful if you do not use the internal reference as the SKU or if
-you sell the product under different conditions.</p></div><p >If no database product with a matching internal reference is found for a given SKU or gift wrapping
-code, a default database product <strong >Amazon Sale</strong> is used. The same is done with the default product
-<strong >Amazon Shipping</strong> and the shipping code.</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >To modify the default products, activate the <strong >Developer mode</strong> and navigate to
-<span class="menuselection">Sales ‣ Configuration ‣ Settings ‣ Connectors ‣ Amazon Sync ‣
-Default Products</span>.</p></div></section><section id="configure-taxes-of-products"><h2 >Configure taxes of products</h2><p >To allow for tax reporting of Amazon sales with Odoo, the taxes applied to the sales order items are
-those set on the product or determined by the fiscal position. Make sure to have set the correct
-taxes on your products in Odoo or to have it done by a fiscal position, to avoid discrepancies in
-the subtotals between Seller Central and Odoo.</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >As Amazon does not necessarily apply the same taxes as those configured in Odoo, it may happen
-that order totals differ by a few cents from that on Seller Central. Those differences can be
-resolved with a write-off when reconciling the payments in Odoo.</p></div></section>
+  <section id="apply-for-amazon-mws-access-keys"></section><section id="submit-the-amazon-mws-developer-registration-and-assessment-form"><i id="amazon-developer-form"></i><h2 >Submit the Amazon MWS Developer Registration and Assessment Form</h2><p >In order to synchronize your Amazon orders with Odoo, Amazon MWS access keys are required.
+They can be obtained by submitting the <strong >Amazon MWS Developer Registration and Assessment form</strong> to
+register as a developer. Once recognized by Amazon as a developer (i.e. you make use of an
+application connecting to MWS), you will be granted Amazon MWS access keys.</p><p >First, visit the <a href="http://docs.developer.amazonservices.com/en_US/dev_guide/DG_Registering.html" class="external reference">Amazon Marketplace Web Service documentation</a> and follow the
+instructions to register as a developer. Take care to choose the form «I represent a seller
+organization integrating with Amazon MWS for its own selling account only.».</p><p >Fill out the <em >Developer Registration and Assessment form</em> as suggested below and provide your own
+contact information in the <strong >Developer contact information</strong> section. In the <strong >Business use
+information</strong> section, select the correct region of your seller account. For the other sections,
+adapt your responses in accordance with your business case.</p><p >Give a particular attention to <strong >Merchant Fulfilled Shipping</strong>. It should only be checked if you
+ship your products yourself. You should uncheck it if you sell exclusively with the <em >Fulfillment by
+Amazon</em> service. Please note that requesting this function is not recommended if you are hosted on
+<em >Odoo Online</em> or <em >Odoo.sh</em> as the additional security requirements asked by Amazon may not be met by
+Odoo.</p><div role="alert" class="alert-warning alert"><p class="alert-title">Предупреждение</p><p >Depending on several factors (your region, whether you checked the <strong >Merchant Fulfilled
+Shipping</strong> function (i.e. you request access to Personally Identifiable Information of your
+customers), etc.), Amazon may request you to fill out a second form before granting you MWS
+access keys. As that form depends on the data protection policy of the region of your seller
+account (e.g. GDPR in Europe), we cannot provide you with a pre-filled form. Instead, the answers
+of questions related to Odoo are listed in the <a href="#answer-the-additional-form" class="internal alert-link reference">Answer the Additional Form</a> section.</p></div><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >If you need assistance for your application for Amazon MWS access keys, <a href="https://www.odoo.com/help" class="external reference alert-link">submit a support ticket
+to Odoo</a>.</p></div><img src="../../_images/dev_form.png" style="" class="img-responsive"></section><section id="answer-the-additional-form"><h2 >Answer the Additional Form</h2><p >This section lists all questions asked by Amazon in additional forms. The answers are tailored for
+<em >Odoo Online</em> and <em >Odoo.sh</em>. If you did not receive any additional form after your <a href="#amazon-developer-form" class="internal reference"><span class="std std-ref">initial
+application for Amazon MWS keys</span></a>, you may disregard this section.</p><div role="alert" class="alert-warning alert"><p class="alert-title">Предупреждение</p><p >If you are not hosted on Odoo.com (<em >online</em>) or on Odoo.sh, you should adapt the answers related
+to hosting according to your own infrastructure and data protection policy.</p></div><ul ><li ><p ><strong >Describe all functionalities in your application where Personally Identifiable Information (e.g.
+customer name, street address, billing address) is required.</strong></p><dl ><dt >► If you did not apply for the <em >Merchant Fulfilled Shipping</em> function:</dt><dd ><div class="line-block"><div class="line">- Generation of customer invoices</div></div></dd><dt >► If you applied for the <em >Merchant Fulfilled Shipping</em> function:</dt><dd ><div class="line-block"><div class="line">- Generation of delivery orders</div><div class="line">- Generation of customer invoices</div></div></dd></dl></li><li ><p ><strong >List all outside parties with whom your organization shares Amazon Information (e.g. information
+exposed by Amazon through Amazon MWS, Seller Central, or Amazon’s public-facing websites) and
+describe how your organization shares this information.</strong></p><dl ><dt >► If you do not share Amazon Information with outside parties:</dt><dd >Odoo does not share any information with outside parties.</dd><dt >► If you share Amazon Information with outside parties:</dt><dd >[Description of your organization’s policy regarding Amazon Information]</dd></dl></li><li ><p ><strong >List all non-Amazon MWS sources where you retrieve Amazon Information.</strong></p><p >Odoo only relies on MWS to retrieve Amazon Information.</p></li><li ><p ><strong >Describe how your organization restricts public access to databases, file servers, and
+desktop/developer endpoints.</strong></p><div class="line-block"><div class="line">- Access to the postgreSQL database through the network is disabled and standard ports are</div><div class="line-block"><div class="line">closed. The database is only accessible through a socket on the server itself.</div></div><div class="line">- The reverse proxy only serves whitelisted directories that are only from sources controlled by</div><div class="line-block"><div class="line">Odoo S.A.</div></div><div class="line">- API endpoints are password protected (PBKDF2 &amp; SHA512 encryption, salted, and stretched for</div><div class="line-block"><div class="line">thousands of rounds).</div></div><div class="line">- Login credentials are always transmitted securely over HTTPS.</div><div class="line"><br /></div></div></li><li ><p ><strong >Describe how your organization uniquely identifies employees and restricts access to Amazon
+Information on a need-to-know basis.</strong></p><dl ><dt >► If all your employees are properly assigned separate users and given only relevant access rights:</dt><dd ><p >Access rights are provided to employees based on their role within the company and are
+progressive, based on their responsibility.</p><p >For instance, salespersons only have access to their own leads/quotes (and thus no access to
+quotes generated through the Amazon API). A salesmanager has access to all quotes/leads for
+reporting purposes (including quotes generated through the Amazon API). A quote will generate a
+delivery order which will be accessible to a „normal“ user of the Inventory application for him
+to be able to print the delivery label and pack the products.</p></dd><dt >► If your employees share users or if they are given more rights than needed:</dt><dd >[Description of your organization’s policy for the assignation of users and access rights to
+your employees]</dd></dl></li><li ><p ><strong >Describe how your organization prevents Amazon Information from being accessed from employee
+personal devices.</strong></p><p >Odoo does not prevent employees from accessing the organization’s data from personal devices.
+Role-based restrictions and access rights still apply.</p></li><li ><p ><strong >Provide details on your organization’s privacy and data handling policies (a link to your policy
+is also acceptable).</strong></p><p >[Description of your organization’s privacy and data handling policies]</p></li><li ><p ><strong >Describe where your organization stores Amazon Information and provide details on how you
+encrypt this information (e.g., algorithm).</strong></p><p >Amazon Information is stored in an unencrypted database. Direct access to the database is not
+possible for the customer outside of UI interactions or API calls. Granular access rights control
+ensures that access is not shared to all users of the database.</p></li><li ><p ><strong >Describe how your organization backups or archives Amazon Information and provide details on how
+you encrypt this information (e.g., algorithm).</strong></p><p >The entire database is backed up once a day and backups are kept for a minimum of three months
+according to the <a href="https://www.odoo.com/cloud-sla" class="external reference">Odoo Online SLA</a>. Backups are hosted on
+several remote servers as unencrypted database dumps; these backups can only be retrieved by
+Odoo S.A. employees through support requests.</p></li><li ><p ><strong >Describe where your organization monitors and detects malicious activity in your
+application(s).</strong></p><p >Odoo Online uses automated probes on our server that report their status in Munin, an opensource
+monitoring tool. This tool automatically triggers alarms when probes detect values outside of
+their pre-defined range. We monitor (among many other things) access rates, response times, ssh
+connections, network activity.</p></li><li ><p ><strong >Describe how your organization’s incident response plan addresses database hacks, unauthorized
+access, and data leaks (a link to your policy is also acceptable).</strong></p><p >[Description of your organization’s incident response plan]</p></li></ul></section>
 
           </article>
         </div>
