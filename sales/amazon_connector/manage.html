@@ -1,0 +1,451 @@
+<!doctype html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Manage Amazon orders in Odoo &#8212; Документация Odoo 13.0</title>
+    <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/accounting.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script type="text/javascript" src="../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../_static/coa-valuation-continental.js"></script>
+    <script type="text/javascript" src="../../_static/coa-valuation-anglo-saxon.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.noconflict.js"></script>
+    <link rel="alternate" hreflang="ru" href="/13.0/ru/sales/amazon_connector/manage.html" />
+    <link rel="canonical" href="/master/ru/sales/amazon_connector/manage.html" />
+  
+    <link rel="index" title="Алфавитный указатель" href="../../genindex.html" />
+    <link rel="search" title="Поиск" href="../../search.html" />
+    <link rel="next" title="eBay Connector" href="../ebay_connector.html" />
+    <link rel="prev" title="Configure Amazon Connector in Odoo" href="setup.html" /> 
+  </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
+<!--
+    <div class="o_main_header_main">
+      <a class="pull-left o_logo" href="/"></a>
+      <a href="#" class="o_mobile_menu_toggle visible-xs-block pull-right">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="mdi-navigation-menu"></span>
+      </a>
+      <div class="o_header_buttons">
+        <a href="http://www.odoo.com/trial" class="btn btn-primary">Start Now</a>
+      </div>
+      <ul class="o_primary_nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Apps</a>
+          <div class="dropdown-menu o_secondary_nav">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-3 o_website_apps">
+                  <div class="o_nav_app_family">
+                    <span></span> Websites
+                    <div>Build great user experience</div>
+                  </div>
+                  <ul>
+                    <li><a href="https://www.odoo.com/page/website-builder">Website Builder</a></li>
+                    <li><a href="https://www.odoo.com/page/e-commerce">eCommerce</a></li>
+                    <li><a href="https://www.odoo.com/page/blog-engine">Blogs</a></li>
+                    <li><a href="https://www.odoo.com/page/community-builder">Forums</a></li>
+                    <li><a href="https://www.odoo.com/page/learning-management-system">eLearning</a></li>
+                    <li><a href="https://www.odoo.com/page/live-chat">Live Chat</a></li>
+                  </ul>
+                </div>
+                <div class="col-sm-3 o_sale_apps">
+                  <div class="o_nav_app_family">
+                    <span></span> Sales
+                    <div>Boost your success rate</div>
+                  </div>
+                  <ul>
+                    <li><a href="https://www.odoo.com/page/sales">Sales</a></li>
+                    <li><a href="https://www.odoo.com/page/crm">CRM</a></li>
+                    <li><a href="https://www.odoo.com/page/billing">Invoicing</a></li>
+                    <li class="dropdown">
+                      <a href="#0" class="dropdown-toggle">Point of Sale</a>
+                      <ul>
+                        <li><a href="https://www.odoo.com/page/point-of-sale">Shops</a></li>
+                        <li><a href="https://www.odoo.com/page/pos-restaurant">Restaurants</a></li>
+                        <li><a href="https://www.odoo.com/page/point-of-sale-hardware">Hardware</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://www.odoo.com/page/subscriptions">Subscriptions</a></li>
+                    <li><a href="https://www.odoo.com/page/sign">Sign</a></li>
+                    <li><a href="https://www.odoo.com/page/rental">Rental</a></li>
+                  </ul>
+                </div>
+                <div class="col-sm-3 o_operation_apps">
+                  <div class="o_nav_app_family">
+                    <span></span> Operations
+                    <div>It's all about efficiency</div>
+                  </div>
+                  <ul>
+                    <li><a href="https://www.odoo.com/page/accounting/">Accounting</a></li>
+                    <li><a href="https://www.odoo.com/page/project-management/">Project</a></li>
+                    <li class="dropdown">
+                      <a href="#0" class="dropdown-toggle">Human Resources</a>
+                      <ul>
+                        <li><a href="https://www.odoo.com/page/referral">Referral</a></li>
+                        <li><a href="https://www.odoo.com/page/employees">Employees</a></li>
+                        <li><a href="https://www.odoo.com/page/expenses">Expenses</a></li>
+                        <li><a href="https://www.odoo.com/page/appraisal">Appraisal</a></li>
+                        <li><a href="https://www.odoo.com/page/fleet">Fleet</a></li>
+                        <li><a href="https://www.odoo.com/page/leaves">Time Off</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://www.odoo.com/page/warehouse">Inventory</a></li>
+                    <li><a href="https://www.odoo.com/page/purchase">Purchase</a></li>
+                    <li class="dropdown">
+                      <a href="#0" class="dropdown-toggle">Manufacturing</a>
+                      <ul>
+                        <li><a href="https://www.odoo.com/page/manufacturing">MRP</a></li>
+                        <li><a href="https://www.odoo.com/page/plm">PLM</a></li>
+                        <li><a href="https://www.odoo.com/page/maintenance">Maintenance</a></li>
+                        <li><a href="https://www.odoo.com/page/quality">Quality</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://www.odoo.com/page/helpdesk">Helpdesk</a></li>
+                    <li><a href="https://www.odoo.com/page/field-service-management">Field Service</a></li>
+                  </ul>
+                </div>
+                <div class="col-sm-3 o_productivity_apps">
+                  <div class="o_nav_app_family">
+                    <span></span> Productivity Tools
+                    <div>Great Tools = Happy People</div>
+                  </div>
+                  <ul>
+                    <li class="dropdown">
+                      <a href="#0" class="dropdown-toggle">Communication</a>
+                      <ul>
+                        <li><a href="https://www.odoo.com/page/discuss">Discuss</a></li>
+                        <li><a href="https://www.odoo.com/page/discuss-groups">Mailing Lists</a></li>
+                        <li><a href="https://www.odoo.com/page/notes">Notes</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://www.odoo.com/page/timesheet">Timesheet</a></li>
+                    <li><a href="https://www.odoo.com/page/events">Events</a></li>
+                    <li class="dropdown">
+                      <a href="#0" class="dropdown-toggle">Marketing</a>
+                      <ul>
+                        <li><a href="https://www.odoo.com/page/marketing-automation">Automation</a></li>
+                        <li><a href="https://www.odoo.com/page/email-marketing">Email</a></li>
+                        <li><a href="https://www.odoo.com/page/social-marketing">Social</a></li>
+                        <li><a href="https://www.odoo.com/page/sms-marketing">SMS</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="https://www.odoo.com/page/survey">Survey</a></li>
+                    <li><a href="https://www.odoo.com/page/approval-workflow">Approvals</a></li>
+                    <li><a href="https://www.odoo.com/page/appointments">Appointments</a></li>
+                    <li><a href="https://www.odoo.com/page/documents">Documents</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <a href="http://www.odoo.com/apps/modules" class="o_store_link"><i class="fa fa-cube fa-fw"></i> Third party apps</a>
+          </div>
+        </li>
+        <li><a href="https://www.odoo.com/page/tour">Tour</a></li>
+        <li><a href="https://www.odoo.com/pricing">Pricing</a></li>
+        <li><a href="https://www.odoo.com/page/docs">Docs</a></li>
+      </ul>
+    </div>
+-->
+    <nav class="navbar o_sub_nav">
+      <div class="container">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Navigate
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              
+              
+
+
+
+
+
+    
+        
+            
+                <li><a href="../../index.html">Документация пользователя</a></li>
+            
+        
+    
+        
+            
+                
+                    <li><a href="../../sales.html">Продажи</a></li>
+                
+            
+        
+    
+        
+            
+                
+            
+        
+    
+    <li class="active"><a href="#">Manage Amazon orders in Odoo</a></li>
+
+              
+          </ol>
+
+          <div class="call-to-action navbar-right hidden-xs">
+            <a href="http://www.odoo.com/trial" class="btn btn-primary">Start Now</a>
+          </div>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+
+<li class="versions dropdown">
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+        13.0
+    </a>
+    <ul class="dropdown-menu" role="menu">
+        
+            <li><a href="/12.0/sales/amazon_connector/manage.html">12.0</a></li>
+        
+    </ul>
+</li>
+
+            
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            
+              <li class="divider"></li>
+            
+
+            
+            
+
+<!--
+<li><a href="https://www.odoo.com/documentation/user/13.0/index.html">User</a></li>
+<li><a href="https://www.odoo.com/documentation/13.0/index.html">Developer</a></li>
+<li><a href="https://odoo.com/slides">eLearning</a></li>
+<li><a href="https://www.odoo.com/documentation/13.0/webservices/odoo.html">API</a></li>
+<li><a href="https://www.odoo.com/documentation/13.0/setup/install.html">Installation</a></li>
+<li><a href="https://www.odoo.com/page/odoo-white-paper">White Papers</a></li>
+<li><a href="https://www.odoo.com/page/legal">Legal</a></li>
+-->
+<li id="searchbox" style="display: none; margin: 0 0 0 10px;" role="search">
+    <form class="search form-inline" action="../../search.html" method="get">
+        <input type="text" class="form-control" name="q" id="q" placeholder="Поиск..." />
+        <input type="hidden" name="area" value="default" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <button type="submit" value="Go" class="btn btn-default">Найти</button>
+    </form>
+</li>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+            
+
+            
+              <li class="divider"></li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header><div id="wrap" class="">
+    
+    <figure class="card top ">
+      <span class="card-img" ></span>
+      <div class="container text-center">
+        <h1> Manage Amazon orders in Odoo </h1>
+      </div>
+    </figure>
+    
+    
+    
+    <div class="container ">
+      <main class="container-fluid ">
+        
+        <div class="row">
+          
+          <aside>
+            <div class="navbar-aside text-center">
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#synchronization-of-orders" class="ripple internal reference">Synchronization of orders</a></li><li class="list-group-item"><a href="#manage-deliveries-in-fbm" class="ripple internal reference">Manage deliveries in FBM</a></li><li class="list-group-item"><a href="#follow-deliveries-in-fba" class="ripple internal reference">Follow deliveries in FBA</a></li><li class="list-group-item"><a href="#issue-invoices-and-register-payments" class="ripple internal reference">Issue invoices and register payments</a></li><li class="list-group-item"><a href="#follow-your-amazon-sales-in-sales-reporting" class="ripple internal reference">Follow your Amazon sales in sales reporting</a></li></ul>
+              
+              <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/sales/amazon_connector/manage.rst" class="gith-link">
+                  Edit on GitHub
+              </a></p>
+              
+            </div>
+          </aside>
+          
+          <article class="doc-body  ">
+            
+            
+  <section id="manage-amazon-orders-in-odoo"></section><section id="synchronization-of-orders"><h2 >Synchronization of orders</h2><p >Orders are automatically fetched from Amazon and synchronized in Odoo at regular intervals.
+The synchronization is based on the Amazon status: only orders whose status has changed since the
+last synchronization are fetched from Amazon. For <strong >FBA</strong> (Fulfilled by Amazon), only <strong >Shipped</strong>
+and <strong >Canceled</strong> orders are fetched. For <strong >FBM</strong> (Fulfilled by Merchant), the same is done for
+<strong >Unshipped</strong> and <strong >Canceled</strong> orders. For each synchronized order, a sales order and a customer are
+created in Odoo if they are not yet registered.</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >If you did not request access to Personally Identifiable Information of your customers in the
+<a href="apply.html#amazon-developer-form" class="internal alert-link reference"><span class="std std-ref">Developer Registration and Assessment form</span></a>, the customers are
+created anonymously (the name, postal address and phone number are omitted) and named
+<strong >Amazon Customer</strong>.</p></div><p >When an order is canceled in Amazon and was already synchronized in Odoo, the corresponding sales
+order is canceled in Odoo.
+When an order is canceled in Odoo, a notification is sent to Amazon who will mark it as such in
+Seller Central and notify the customer.</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >To force the synchronization of an order whose status has not changed since the last
+synchronization, activate the <strong >Developer mode</strong>, navigate to your Amazon account and modify the
+date under <span class="menuselection">Orders Follow-up ‣ Last Order Sync</span>. Pick a date anterior to the
+last status change of the order that you wish to synchronize and save.</p></div><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >To synchronize immediately the orders of your Amazon account switch to <strong >Developer mode</strong>, head
+to your Amazon account and click the button <strong >SYNC ORDERS</strong>. The same can be done with order
+cancellations and pickings by clicking the buttons <strong >SYNC CANCELLATIONS</strong> and <strong >SYNC PICKINGS</strong>.</p></div></section><section id="manage-deliveries-in-fbm"><h2 >Manage deliveries in FBM</h2><p >When a <strong >FBM</strong> (Fulfilled by Merchant) order is synchronized in Odoo, a picking is created along
+with the sales order and the customer. You can either ship all the ordered products to your customer
+at once or ship products partially by using backorders.</p><p >When a picking related to the order is confirmed, a notification is sent to Amazon who will, in
+turn, notify the customer that the order (or a part of it) is on its way.</p></section><section id="follow-deliveries-in-fba"><h2 >Follow deliveries in FBA</h2><p >When a <strong >FBA</strong> (Fulfilled by Amazon) order is synchronized in Odoo, a stock move is recorded for
+each sales order item so that it is saved in your system. Inventory managers can find such moves
+in <span class="menuselection">Inventory ‣ Reporting ‣ Product Moves</span>. They pick up products in a specific
+inventory location called <strong >Amazon</strong>. This location represents your stock in Amazon’s warehouses
+and allows you to manage the stock of your products under the FBA program.</p><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >To follow your Amazon (FBA) stock in Odoo, you can make an inventory adjustment after
+replenishing it. You can also trigger an automated replenishment from reordering rules on the
+Amazon location.</p></div><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >The Amazon location is configurable by Amazon account managed in Odoo. All accounts of the same
+company use the same location by default. It is however possible to follow the stock by
+marketplace. First, remove the marketplace for which you want to follow the stock separately from
+the list of synchronized marketplaces. Then, create another registration for this account and
+remove all marketplaces, except the one to isolate from the others. Finally, assign another stock
+location to the second registration of your account.</p></div></section><section id="issue-invoices-and-register-payments"><h2 >Issue invoices and register payments</h2><p >You can issue invoices for Amazon orders in Odoo. Click <strong >Create Invoice</strong> in the sales order to do
+so. You can also do it in batch from the list view of orders. Then, confirm and send the invoices to
+your customers.</p><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >To display only Amazon-related orders on the list view, you can filter orders based on the sales
+team.</p></div><p >As the customer has paid Amazon as an intermediary, you should register invoice payments in a
+payment journal dedicated to Amazon (e.g. Amazon Payments, with a dedicated intermediary account).
+You can do the same with the vendor bill received from Amazon and dedicated to commissions. When you
+receive the balance on your bank account at the end of the month and record your bank statements in
+Odoo, you simply credit the Amazon intermediary account by the amount received.</p></section><section id="follow-your-amazon-sales-in-sales-reporting"><h2 >Follow your Amazon sales in sales reporting</h2><p >As a sales team is set on your account under the tab <strong >Order Follow-up</strong>, this helps you give quick
+glances at the figures in just a few clicks in Sales reporting. By default, your account’s sales
+team is shared between all of your company’s accounts.</p><p >If you wish, you can change the sales team on your account for another to perform a separate
+reporting for the sales of this account.</p><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >It is also possible to perform reporting on a per-marketplace basis in a similar fashion. First,
+remove the marketplace you wish to track separately from the list of synchronized marketplaces.
+Then, create another registration for this account and remove all marketplaces, except the one to
+isolate from the others. Finally, assign another sales team to one of the two registrations of
+your account.</p></div></section>
+
+          </article>
+        </div>
+        
+        <div id="mask"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+<!--
+  <footer>
+    <div id="footer" class="container">
+      <span class="o_logo o_logo_inverse center-block o_footer_logo"></span>
+      <div class="row">
+        <div class="col-sm-7 col-md-7 col-lg-6">
+          <div class="row">
+            <div class="col-xs-6 col-sm-4">
+              <span class="menu_title">Community</span>
+              <ul>
+                <li><a href="https://github.com/odoo/odoo">Github</a></li>
+                <li><a href="http://www.odoo.com/page/download">Download</a></li>
+                <li class="divider"></li>
+                <li><a href="http://runbot.odoo.com/runbot/repo/git-github-com-odoo-enterprise-7">Runbot</a></li>
+                <li><a href="https://github.com/odoo/odoo/wiki/Translations">Translations</a></li>
+                <li class="divider"></li>
+                <li><a href="http://www.odoo.com/page/odoo-community">Mailing Lists</a></li>
+                <li><a href="http://www.odoo.com/forum/help-1">Forum</a></li>
+              </ul>
+            </div>
+            <div class="col-xs-6 col-sm-4">
+              <span class="menu_title">Services</span>
+              <ul>
+                <li><a href="http://www.odoo.com/pricing">Editions</a></li>
+                <li><a href="http://www.odoo.com/pricing-online">Cloud Pricing</a></li>
+                <li><a href="http://www.odoo.com/page/upgrade">Upgrade</a></li>
+                <li class="divider"></li>
+                <li><a href="http://www.odoo.com/partners">Find a partner</a></li>
+                <li><a href="http://www.odoo.com/page/become-a-partner">Become a partner</a></li>
+                <li class="divider"></li>
+                <li><a href="http://www.odoo.com/page/education-program">Education</a></li>
+                <li class="divider"></li>
+                <li><a href="http://www.odoo.com/page/security">Security</a></li>
+              </ul>
+            </div>
+            <div class="col-sm-4 mb64">
+              <span class="menu_title">About us</span>
+              <ul>
+                <li><a href="http://www.odoo.com/page/about-us">Our company</a></li>
+                <li><a href="http://www.odoo.com/page/contactus">Contact</a></li>
+                <li class="divider" />
+                <li><a href="http://www.odoo.com/event">Events</a></li>
+                <li><a href="http://www.odoo.com/blog/">Blog</a></li>
+                <li><a href="http://www.odoo.com/blog/6">Customers</a></li>
+                <li class="divider" />
+                <li><a href="http://www.odoo.com/jobs">Jobs</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-5 col-md-4 col-md-offset-1 col-lg-5 col-lg-offset-1">
+          <p>
+            <small>
+              Odoo is a suite of open source business apps that cover all your company needs: CRM, eCommerce, accounting, inventory, point of sale, project management, etc.
+              <br/><br/>
+              Odoo's unique value proposition is to be at the same time very easy to use and fully integrated.
+            </small>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="o_footer_bottom">
+      <div class="container">
+        <a class="small" href="http://www.odoo.com/page/website-builder">Website made with <span class="o_logo o_logo_inverse o_logo_15"></span></a>
+        <div class="social-links pull-right">
+          <a href="http://www.odoo.com/web/about/facebook"><i class="fa fa-facebook"></i></a>
+          <a href="http://www.odoo.com/web/about/twitter"><i class="fa fa-twitter"></i></a>
+          <a href="http://www.odoo.com/web/about/linkedin"><i class="fa fa-linkedin"></i></a>
+          <a href="mailto:info@odoo.com"><i class="fa fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+-->
+  </body>
+</html>
