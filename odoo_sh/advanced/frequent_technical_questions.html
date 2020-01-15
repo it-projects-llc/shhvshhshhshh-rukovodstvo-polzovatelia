@@ -279,7 +279,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#scheduled-actions-do-not-run-at-the-exact-time-they-were-expected" class="ripple internal reference">«Scheduled actions do not run at the exact time they were expected»</a></li><li class="list-group-item"><a href="#are-there-best-practices-regarding-scheduled-actions" class="ripple internal reference">Are there «best practices» regarding scheduled actions?</a></li><li class="list-group-item"><a href="#can-you-install-pycups-or-some-similar-library-linked-to-cups" class="ripple internal reference">Can you install pycups or some similar library linked to CUPS ?</a></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#scheduled-actions-do-not-run-at-the-exact-time-they-were-expected" class="ripple internal reference">«Scheduled actions do not run at the exact time they were expected»</a></li><li class="list-group-item"><a href="#are-there-best-practices-regarding-scheduled-actions" class="ripple internal reference">Are there «best practices» regarding scheduled actions?</a></li><li class="list-group-item"><a href="#can-you-install-pycups-or-some-similar-library-linked-to-cups" class="ripple internal reference">Can you install <code >pycups</code> or some similar library linked to <code >CUPS</code> ?</a></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/odoo_sh/advanced/frequent_technical_questions.rst" class="gith-link">
                   Edit on GitHub
@@ -295,8 +295,11 @@
 Therefore, you must keep this fact in mind when developing your own crons.</p><p >We advise that:</p><ul ><li >Your scheduled actions should work on small batches of records.</li><li >Your scheduled actions should commit their work after processing each batch;
 this way, if they get interrupted by the time-limit, there is no need to start over.</li><li >Your scheduled actions should be
 <a href="https://stackoverflow.com/a/1077421/3332416" class="external reference">idempotent</a>: they must not
-cause side-effects if they are started more often than expected.</li></ul></section><section id="can-you-install-pycups-or-some-similar-library-linked-to-cups"><h2 >Can you install <a href="https://pypi.org/project/pycups/" class="external reference">pycups</a> or some similar library linked to <a href="https://www.cups.org/" class="external reference">CUPS</a> ?</h2><p >Several community apps for Odoo list <code >pycups</code> as required dependency.</p><ul ><li ><code >pycups</code> is a set of Python bindings for the libcups library. They are meant to integrate your computer with a local printing server.</li><li >CUPS is a printing server meant to be used for printers on the same local network as the Odoo server.</li></ul><p >We consider adding new system packages as long as they are indeed used.
-Regarding <code >pycups</code>, you won’t be able to configure a printer in the local network of your Odoo.sh server.</p></section>
+cause side-effects if they are started more often than expected.</li></ul></section><section id="can-you-install-pycups-or-some-similar-library-linked-to-cups"><h2 >Can you install <code >pycups</code> or some similar library linked to <code >CUPS</code> ?</h2><p >Several community apps for Odoo list <code >pycups</code> as required dependency.</p><ul ><li ><a href="https://pypi.org/project/pycups/" class="external reference">pycups</a> is a set of Python bindings for the libcups library.
+They are meant to integrate your computer with a local printing server.</li><li ><a href="https://www.cups.org/" class="external reference">CUPS</a> is a printing server meant to be used for printers on the same
+local network as the Odoo server.</li></ul><p >We consider adding new system packages as long as they are indeed used.
+Regarding <code >pycups</code>, you won’t be able to configure a printer in the local network of your Odoo.sh
+server.</p></section>
 
           </article>
         </div>

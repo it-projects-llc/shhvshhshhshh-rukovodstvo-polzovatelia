@@ -304,7 +304,8 @@ or if the modules update fails,
 the server is automatically reverted to the previous successful code revision and
 the database is roll-backed as it was before the update.
 You still have access to the log of the failed update, so you can troubleshoot it.</p><p >The demo data is not loaded, as it is not meant to be used in a production database.
-The unit tests are not performed, as it would increase the unavailabity time of the production database during the updates.</p><p >Partners using trial projects should be aware their production branch, along with all the staging branches,
+The unit tests are not performed, as it would increase the unavailability time of the production
+database during the updates.</p><p >Partners using trial projects should be aware their production branch, along with all the staging branches,
 will automatically be set back to the development stage after 30 days.</p></section><section id="staging"><h3 >Staging</h3><p >Staging branches are meant to test your new features using the production data without compromising
 the actual production database with test records. They will create databases that are neutralized
 duplicates of the production database.</p><p >The neutralization includes:</p><ul ><li >Disabling scheduled actions. If you want to test them, you can trigger their action manually or

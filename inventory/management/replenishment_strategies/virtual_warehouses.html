@@ -298,9 +298,8 @@
   <section id="resupply-from-another-warehouse"></section><section id="configuration"><h2 >Настройка</h2><p >In order to be able to resupply from another warehouse, you need to
 activate *multi-warehouses* and *multi-step routes*. Storage
 locations will be automatically activated when activating
-multi-warehouses.</p><img src="../../../_images/virtual_warehouses_01.png" style="" class="img-responsive center-block"><p >You can then access your warehouses via *Inventory &gt; Configuration &gt;
-Warehouses*. Create the necessary warehouses following this
-<a href="https://docs.google.com/document/d/14xNFdUOAbfzdloqXcjq67T8qjjlY7pu4Db6BbR4_fdA/edit" class="external reference">*documentation*</a>.
+multi-warehouses.</p><img src="../../../_images/virtual_warehouses_01.png" style="" class="img-responsive center-block"><p >You can then access your warehouses via <span class="menuselection">Inventory ‣ Configuration ‣
+Warehouses</span>. Create the necessary warehouses following this <a href="../warehouses/warehouse_creation.html" class="internal reference"><span class="doc">documentation</span></a>.
 Enter the warehouse which should be resupplied by another one. You will
 have the possibility to directly indicate through which warehouse it
 gets resupplied.</p><img src="../../../_images/virtual_warehouses_02.png" style="" class="img-responsive center-block"><p >By activating this option, a new route will now be available on your
@@ -308,8 +307,8 @@ products *Supply Product from Second warehouse*. It can now be
 selected, along with either a *reordering rule* or a *make to
 order*.</p><img src="../../../_images/virtual_warehouses_03.png" style="" class="img-responsive center-block"><p >For the demonstration, I set a reordering rule with a minimum of 5 units
 in stock and a maximum of 10 units in stock, having currently 0 units on
-hand. I will run the scheduler by going to *Inventory &gt; Operations &gt;
-Run scheduler*.</p><img src="../../../_images/virtual_warehouses_04.png" style="" class="img-responsive center-block"><p >The system automatically creates two pickings, one *delivery order*
+hand. I will run the scheduler by going to <span class="menuselection">Inventory ‣ Operations ‣
+Run scheduler</span>.</p><img src="../../../_images/virtual_warehouses_04.png" style="" class="img-responsive center-block"><p >The system automatically creates two pickings, one *delivery order*
 from my Second Warehouse which contains the necessary products, and a
 receipt in my main warehouse WH/Stock for the same products. The source
 document is the *reordering rule* which triggered the route *Supply

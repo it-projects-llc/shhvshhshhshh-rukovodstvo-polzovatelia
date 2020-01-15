@@ -292,17 +292,17 @@
   <section id="connect-six-worldline-to-your-pos"><p >Connecting a SIX/Worldline payment terminal allows you to offer a fluid
 payment flow to your customers and ease the work of your cashiers.</p><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >Please note SIX/Worldine is currently only available for UE customers.</p></div></section><section id="configuration"><h2 >Настройка</h2></section><section id="connect-a-payment-terminal"><h3 >Connect a Payment Terminal</h3><p >Connecting a SIX/Worldline Payment Terminal to Odoo is a feature that
 requires an IoT Box. For more information on how to connect an IoT Box
-to your database, please refer to <a href="https://www.odoo.com/documentation/user/12.0/iot.html" class="external reference">this documentation</a>.</p><p >Once the <em >IoT Box</em> is up and running, you’ll need to link it to your
-PoS. Open the Point of Sale app and go to <em >Configuration &gt; Point of
-Sale</em>. Select a PoS, tick the IoT Box Device option and select your
-payment terminal.</p><img src="../../_images/six_01.png" style="" class="img-responsive center-block"><p >Then go to your <em >IoT Box homepage</em> (accessible from the IoT Box form
+to your database, please refer to the <a href="../../iot/config/connect.html" class="internal reference"><span class="doc">IoT documentation</span></a>.</p><p >Once the <em >IoT Box</em> is up and running, you’ll need to link it to your
+PoS. Open the Point of Sale app and go to <span class="menuselection">Configuration
+‣ Point of Sale</span>. Select a PoS, tick the IoT Box Device option and select
+your payment terminal.</p><img src="../../_images/six_01.png" style="" class="img-responsive center-block"><p >Then go to your <em >IoT Box homepage</em> (accessible from the IoT Box form
 view in Odoo) and enter the ID of your Six payment terminal.</p><img src="../../_images/six_02.png" style="" class="img-responsive center-block"><p >You should now see that the terminal is connected to your IoT Box (it
 takes +/- 1 min).</p><img src="../../_images/six_03.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >The terminal should only be connected to the network with the Ethernet.
 Do not connect it to the IoT Box with a USB Cable.</p></div></section><section id="configure-the-payment-method"><h3 >Configure the Payment Method</h3><p >First, go in the general settings of the POS app, and activate the SIX
-setting.</p><img src="../../_images/six_04.png" style="" class="img-responsive center-block"><p >Back in <em >Point of Sale &gt; Configuration &gt; Point of Sale</em>, go in the
-payments section and access your payment methods. Create a new payment
-method for SIX, select the payment terminal option SIX, and select your
-payment terminal device.</p><img src="../../_images/six_05.png" style="" class="img-responsive center-block"></section><section id="pay-with-a-payment-terminal"><h2 >Pay with a Payment Terminal</h2><p >In your PoS interface, at the moment of the payment, select a payment
+setting.</p><img src="../../_images/six_04.png" style="" class="img-responsive center-block"><p >Back in <span class="menuselection">Point of Sale ‣ Configuration ‣ Point of Sale</span>,
+go in the payments section and access your payment methods. Create a new
+payment method for SIX, select the payment terminal option SIX, and select
+your payment terminal device.</p><img src="../../_images/six_05.png" style="" class="img-responsive center-block"></section><section id="pay-with-a-payment-terminal"><h2 >Pay with a Payment Terminal</h2><p >In your PoS interface, at the moment of the payment, select a payment
 method using a payment terminal. Verify that the amount in the tendered
 column is the one that has to be sent to the payment terminal and click
 on <em >Send</em>. If you want to cancel the payment request, click on cancel.</p><img src="../../_images/six_06.png" style="" class="img-responsive center-block"><p >When the payment is done, the status will change to <em >Payment

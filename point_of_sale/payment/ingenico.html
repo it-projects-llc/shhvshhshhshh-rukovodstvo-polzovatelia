@@ -293,18 +293,17 @@
 to your customers and ease the work of your cashiers.</p><p >Please note that Ingenico is currently only available for customers in the
 Benelux.</p></section><section id="configuration"><h2 >Настройка</h2></section><section id="connect-a-payment-terminal"><h3 >Connect a Payment Terminal</h3><p >Connecting an Ingenico Payment Terminal to Odoo is a feature that
 requires an IoT Box. For more information on how to connect an IoT Box
-to your database, please refer to <a href="https://www.odoo.com/documentation/user/12.0/iot.html" class="external reference">this
-documentation</a>.</p><p >Once the IoT Box is up and running, you’ll need to link your payment
-terminal to your PoS. Open the Point of Sale app and go to <em >Configuration
-&gt; Point of Sale</em>. Select a PoS, tick the IoT Box Device option and select
-your payment terminal.</p><img src="../../_images/payment_terminal_01.png" style="" class="img-responsive center-block"></section><section id="configure-the-lane-5000-for-ingenico-benelux"><h3 >Configure the Lane/5000 for Ingenico BENELUX</h3><p >Click on the F button of the terminal, then go in the <em >PoS Menu</em> &gt;
-settings menu and enter the settings password.</p><p >Now, click on connexion change and TCP/IP. Type the IP of your <em >IoT
+to your database, please refer to the <a href="../../iot/config/connect.html" class="internal reference"><span class="doc">IoT documentation</span></a>.</p><p >Once the IoT Box is up and running, you’ll need to link your payment
+terminal to your PoS. Open the <em >Point of Sale</em> app and go to
+<span class="menuselection">Configuration ‣ Point of Sale</span>. Select a PoS, tick the IoT
+Box Device option and select your payment terminal.</p><img src="../../_images/payment_terminal_01.png" style="" class="img-responsive center-block"></section><section id="configure-the-lane-5000-for-ingenico-benelux"><h3 >Configure the Lane/5000 for Ingenico BENELUX</h3><p >Click on the F button of the terminal, then go in the
+<span class="menuselection">PoS Menu ‣ Settings</span> and enter the settings password.</p><p >Now, click on connexion change and TCP/IP. Type the IP of your <em >IoT
 Box</em> (you can find it on the form view of your IoT Box). Then, enter
 9000 as port. The terminal will restart. Once it is done, go on your
 <em >IoT Box</em> form in Odoo and verify that the terminal has been found.</p><img src="../../_images/payment_terminal_02.png" style="" class="img-responsive center-block"></section><section id="configure-the-payment-method"><h3 >Configure the payment method</h3><p >First, go in the general settings of the POS app, and activate the
-Ingenico setting.</p><img src="../../_images/payment_terminal_03.png" style="" class="img-responsive center-block"><p >Go back in <em >Point of Sale &gt; Configuration &gt; Point of Sale</em>, go in the
-payments section and access your payment methods. Create a new payment
-method for Ingenico, select the payment terminal option Ingenico, and
+Ingenico setting.</p><img src="../../_images/payment_terminal_03.png" style="" class="img-responsive center-block"><p >Go back in <span class="menuselection">Point of Sale ‣ Configuration ‣ Point of Sale</span>,
+go in the payments section and access your payment methods. Create a new
+payment method for Ingenico, select the payment terminal option Ingenico, and
 select your payment terminal device.</p><img src="../../_images/payment_terminal_04.png" style="" class="img-responsive center-block"></section><section id="pay-with-a-payment-terminal"><h2 >Pay with a payment terminal</h2><p >In your <em >PoS interface</em>, when processing a payment, select a <em >Payment
 Method</em> using a payment terminal. Check that the amount in the tendered
 column is the one that has to be sent to the payment terminal and click
