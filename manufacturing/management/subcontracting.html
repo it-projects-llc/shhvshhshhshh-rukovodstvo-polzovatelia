@@ -277,7 +277,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Настройка</a></li><li class="list-group-item"><a href="#receive-or-buy-a-subcontracted-product" class="ripple internal reference">Receive or buy a subcontracted product</a></li><li class="list-group-item"><a href="#resupply-the-subcontractor-with-the-components" class="ripple internal reference">Resupply the subcontractor with the components</a></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Настройка</a></li><li class="list-group-item"><a href="#receive-or-buy-a-subcontracted-product" class="ripple internal reference">Receive or buy a subcontracted product</a></li><li class="list-group-item"><a href="#receive-or-buy-a-subcontracted-product-with-tracked-components" class="ripple internal reference">Receive or buy a subcontracted product with tracked components</a></li><li class="list-group-item"><a href="#resupply-the-subcontractor-with-the-components" class="ripple internal reference">Resupply the subcontractor with the components</a></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/manufacturing/management/subcontracting.rst" class="gith-link">
                   Edit on GitHub
@@ -289,28 +289,31 @@
           <article class="doc-body  ">
             
             
-  <section id="subcontract-the-manufacturing"><p >Some businesses subcontract the production of some finished products
-through subcontractors. This can be easily managed through Odoo.</p></section><section id="configuration"><h2 >Настройка</h2><p >Go to the <span class="menuselection">Manufacturing app ‣ Configuration ‣ Settings</span> and tick the
-box <em >Subcontracting</em>.</p><img src="../../_images/subcontract_01.png" style="" class="img-responsive center-block"><p >You can now define subcontracted <em >Bill of Materials</em>. Therefore, you need to go to
+  <section id="subcontract-the-manufacturing"><p >Some businesses subcontract the production of finished products through
+subcontractors. This can be easily managed through Odoo.</p></section><section id="configuration"><h2 >Настройка</h2><p >Go to the <span class="menuselection">Manufacturing app ‣ Configuration ‣ Settings</span> and tick the
+box <em >Subcontracting</em>.</p><img src="../../_images/subcontracting_01.png" style="" class="img-responsive center-block"><p >You can now define subcontracted <em >Bill of Materials</em>. Therefore, you need to go to
 <span class="menuselection">Manufacturing ‣ Master Data ‣ Bill of Materials</span> and hit <em >Create</em>. In this
 <em >BoM</em>, list the components which will be used by the subcontractor to manufacture the subcontracted
-finished product. Specify that the <em >BoM</em> type is <em >Subcontracting</em>.</p><img src="../../_images/subcontract_03.png" style="" class="img-responsive center-block"><p >You can also define subcontractors on the BoM.</p><ul ><li >If no subcontractor is set, the BoM can be used by any subcontractor</li><li >If some are set, the BoM can only be used for those subcontractors</li></ul><img src="../../_images/subcontract_04.png" style="" class="img-responsive center-block"></section><section id="receive-or-buy-a-subcontracted-product"><h2 >Receive or buy a subcontracted product</h2><p >You have two options to trigger the subcontracting of a product:</p><ul ><li ><strong >Option A</strong>: You can buy the subcontracted product from your subcontractor</li><li ><strong >Option B</strong>: You can directly receive the subcontracted product</li></ul><p >Let’s start with option A (option B is just a simpler version of it).</p><p >Create a new purchase order. The vendor must be a subcontractor. The
+finished product. Specify that the <em >BoM</em> type is <em >Subcontracting</em> and define one or
+several subcontractors who will provide you the product.</p><img src="../../_images/subcontracting_02.png" style="" class="img-responsive center-block"><img src="../../_images/subcontracting_03.png" style="" class="img-responsive center-block"><p >And… the configuration part is already done!</p></section><section id="receive-or-buy-a-subcontracted-product"><h2 >Receive or buy a subcontracted product</h2><p >You have two options to trigger the subcontracting of a product:</p><ul ><li ><strong >Option A</strong>: You can buy the subcontracted product from your subcontractor</li><li ><strong >Option B</strong>: You can directly receive the subcontracted product</li></ul><p >Let’s start with option A (option B is just a simpler version of it).</p><p >Create a new purchase order. The vendor must be a subcontractor. The
 unit price should be the cost you are paying to the subcontractor for
 the subcontracting (thus, it’s not necessarily the total cost of the
-subcontracted product).</p><img src="../../_images/subcontract_05.png" style="" class="img-responsive center-block"><p >The validation of the purchase order automatically creates the receipt.
+subcontracted product).</p><img src="../../_images/subcontracting_04.png" style="" class="img-responsive center-block"><p >The validation of the purchase order automatically creates the receipt.
 Whenever you receive the product, you can validate the receipt. The
 following stock moves are created:</p><ul ><li ><p >For the components</p><ul ><li >From Subcontracting To Production</li></ul></li><li ><p >For the subcontracted product</p><ul ><li >From Production to Subcontracting</li><li >From Subcontracting to Stock</li></ul></li></ul><p >The <em >Subcontracting Location</em> represents the place where the products
 are at your subcontractor’s warehouse. It is configured as an internal
 location, the components that are sent to the subcontractor are still
 valued in your stock.</p><p >For option B, you can simply create the receipt manually with a partner
-of type subcontractor defined on it.</p></section><section id="resupply-the-subcontractor-with-the-components"><h2 >Resupply the subcontractor with the components</h2><p >There are 3 ways to manage the resupply of your subcontractor with the
-components:</p><ul ><li ><dl ><dt ><strong >Manually</strong>: You create a delivery order in which you set the</dt><dd >subcontractor as a partner and you choose the components to
-deliver.</dd></dl></li></ul><img src="../../_images/subcontract_06.png" style="" class="img-responsive center-block"><ul ><li ><dl ><dt ><strong >With reordering rules</strong>: You can define a <em >reordering rule</em></dt><dd >on the <em >Subcontracting location</em> to ensure that they are always
-enough components sent to your subcontractors. When the
-reordering rule is triggered, a delivery order is created for the
-product is automatically created.</dd></dl></li></ul><img src="../../_images/subcontract_07.png" style="" class="img-responsive center-block"><ul ><li ><dl ><dt ><strong >On order</strong>: You can also deliver the components to your</dt><dd >subcontractors each time you order a subcontracted product. For
-this, you need to tick the route <em >Resupply Subcontractor on
-Order</em> on the wanted components.</dd></dl></li></ul><img src="../../_images/subcontract_08.png" style="" class="img-responsive center-block"></section>
+of type subcontractor defined on it.</p></section><section id="receive-or-buy-a-subcontracted-product-with-tracked-components"><h2 >Receive or buy a subcontracted product with tracked components</h2><p >In case the subcontracted product you receive from your subcontractor
+contains tracked components, you will need to specify the <em >serial/lot
+numbers</em> of the components in question for traceability. This operation
+is included in the receipt of the subcontracted product.</p><p >On the receipt, you see a <em >Record Components</em> button appearing when
+necessary. If you click on it, a <em >Produce</em> wizard opens in which you
+will have to enter the <em >serial/lot numbers</em> of the components, and the
+finished product if it is also tracked, like in the below example.</p><img src="../../_images/subcontracting_05.png" style="" class="img-responsive center-block"><img src="../../_images/subcontracting_06.png" style="" class="img-responsive center-block"><p >Once this information has been entered, you will see a new icon on the
+receipt stock move, which will allow you to find back the components
+which are part of the finished product.</p><img src="../../_images/subcontracting_07.png" style="" class="img-responsive center-block"></section><section id="resupply-the-subcontractor-with-the-components"><h2 >Resupply the subcontractor with the components</h2><p >There are 3 ways to manage the resupply of your subcontractor with the
+components:</p><ul ><li ><strong >Manually</strong>: You create a delivery order in which you set the subcontractor as a partner and you choose the components to deliver.</li></ul><img src="../../_images/subcontracting_08.png" style="" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >You therefore need to activate <em >Multi-locations</em> in the inventory settings.</p></div><img src="../../_images/subcontracting_09.png" style="" class="img-responsive center-block"><ul ><li ><strong >With reordering rules</strong>: You can define a <em >reordering rule</em> on the <em >Subcontracting location</em> to ensure that they are always enough components sent to your subcontractors. When the reordering rule is triggered, a delivery order is created for the product is automatically created.</li></ul><img src="../../_images/subcontracting_10.png" style="" class="img-responsive center-block"><ul ><li ><strong >On order</strong>: You can also deliver the components to your subcontractors each time you order a subcontracted product. For this, you need to tick the route <em >Resupply Subcontractor on Order</em> on the wanted components.</li></ul><img src="../../_images/subcontracting_11.png" style="" class="img-responsive center-block"></section>
 
           </article>
         </div>
