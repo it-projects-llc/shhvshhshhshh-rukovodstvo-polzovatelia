@@ -38,7 +38,7 @@
     <link rel="index" title="Алфавитный указатель" href="../../genindex.html" />
     <link rel="search" title="Поиск" href="../../search.html" />
     <link rel="next" title="Добавьте сроки и условия на заказ" href="terms_and_conditions.html" />
-    <link rel="prev" title="Стимулируйте клиентов дедлайном коммерческого предложения" href="deadline.html" /> 
+    <link rel="prev" title="Use quotations deadline to stimulate your customers" href="deadline.html" /> 
   </head><body><header class="o_main_header o_has_sub_nav o_inverted ">
 <!--
     <div class="o_main_header_main">
@@ -277,7 +277,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#activate-the-feature" class="ripple internal reference">Включите эту функцию</a></li><li class="list-group-item"><a href="#add-different-addresses-to-a-quotation-or-sales-order" class="ripple internal reference">Добавьте разные адреса в коммерческие предложения или заказ на продажу</a></li><li class="list-group-item"><a href="#add-invoice-delivery-addresses-to-a-customer" class="ripple internal reference">Добавьте счета-фактуры и адреса доставки клиенту</a></li><li class="list-group-item"><a href="#various-addresses-on-the-quotation-sales-orders" class="ripple internal reference">Разные адреса в коммерческих предложениях / заказам на продажу</a></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#activate-the-feature" class="ripple internal reference">Включите эту функцию</a></li><li class="list-group-item"><a href="#add-addresses-from-a-quotation" class="ripple internal reference">Add addresses from a quotation</a></li><li class="list-group-item"><a href="#add-addresses-from-a-contact-form" class="ripple internal reference">Add addresses from a contact form</a></li><li class="list-group-item"><a href="#deal-with-different-addresses" class="ripple internal reference">Deal with different addresses</a></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/sales/send_quotations/different_addresses.rst" class="gith-link">
                   Edit on GitHub
@@ -289,7 +289,25 @@
           <article class="doc-body  ">
             
             
-  <section id="deliver-and-invoice-to-different-addresses"><p >В Odoo вы можете настроить различные адреса для доставки и выставления счетов. Это является ключевым, не все будут иметь одинаковое место для доставки, как местоположение счета-фактуры.</p></section><section id="activate-the-feature"><h2 >Включите эту функцию</h2><p >Перейдите к <span class="menuselection">SALES ‣ Configuration ‣ Settings</span> и активируйте функцию * Адреса клиента [UNKNOWN NODE problematic].</p><img src="../../_images/invoice_and_deliver_to_different_address01.png" style="" class="img-responsive center-block"></section><section id="add-different-addresses-to-a-quotation-or-sales-order"><h2 >Добавьте разные адреса в коммерческие предложения или заказ на продажу</h2><p >Если вы выберете клиента с набором счетов-фактур и адресом доставки, Odoo будет автоматически использовать их. Если есть только одна, Odoo будет использовать ее для обоих, но вы, конечно, можете изменить это мгновенно и создать новую прямо с коммерческого предложения или заказ на продажу.</p><img src="../../_images/invoice_and_deliver_to_different_address02.png" style="" class="img-responsive center-block"></section><section id="add-invoice-delivery-addresses-to-a-customer"><h2 >Добавьте счета-фактуры и адреса доставки клиенту</h2><p >Если вы хотите добавить их клиенту перед заказом или продажей, они добавляются в форму клиента. Выделите любой формы клиентов в <span class="menuselection">SALES ‣ Orders ‣ Customers</span>.</p><p >Оттуда вы можете добавить новые адреса клиенту.</p><img src="../../_images/invoice_and_deliver_to_different_address03.png" style="" class="img-responsive center-block"></section><section id="various-addresses-on-the-quotation-sales-orders"><h2 >Разные адреса в коммерческих предложениях / заказам на продажу</h2><p >Эти два адреса затем будут использоваться в коммерческом предложении или заказе на продажу, которое вы посылаете по электронной почте или печатаете.</p><img src="../../_images/invoice_and_deliver_to_different_address04.png" style="" class="img-responsive center-block"></section>
+  <section id="deliver-and-invoice-to-different-addresses"><p >With Odoo Sales, you can configure different addresses for delivery and invoicing. For some
+customers, it will be very practical to define specific billing and shipping addresses. Indeed, not
+everyone will have the same delivery location as the invoicing location.</p></section><section id="activate-the-feature"><h2 >Включите эту функцию</h2><p >Go to <span class="menuselection">Sales ‣ Configuration ‣ Settings</span> and activate the <strong >Customer Addresses</strong>
+feature.</p><img src="../../_images/addresses_1.png" alt="How to enable different customer addresses on Odoo Sales?" style="" class="img-responsive center-block img-thumbnail"></section><section id="add-addresses-from-a-quotation"><h2 >Add addresses from a quotation</h2><p >When you create a quotation, you must add a customer. This customer can be a company or a person
+with specific billing and shipping addresses already defined and registered in the system, or it can
+be a new customer. In this case, you have to <strong >Create and edit</strong> the contact form for your new
+customer and link it, if necessary, to a company. In this contact form, you will be able to add,
+delete and modify invoice and delivery addresses.</p><img src="../../_images/addresses_2.png" alt="How to add addresses from a quotation on Odoo Sales?" style="" class="img-responsive center-block img-thumbnail"><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >If you select a customer with defined invoice and delivery addresses, Odoo will automatically use
+them to fill in the fields. Now, if you want to change it instantly, it is possible to do so
+directly from the quotation or the sales order.</p></div></section><section id="add-addresses-from-a-contact-form"><h2 >Add addresses from a contact form</h2><p >Previously, we talked about the contact form that you can fill in directly from a quotation or a
+sales order to add billing and shipping addresses to customers. But, if you go to
+<span class="menuselection">Sales ‣ Orders ‣ Customers</span>, you can create or modify every customer you want
+and add, delete or modify invoice and delivery addresses instantly there, before creating a
+quotation.</p><img src="../../_images/addresses_3.png" alt="How to add addresses from a contact form on Odoo Sales?" style="" class="img-responsive center-block img-thumbnail"></section><section id="deal-with-different-addresses"><h2 >Deal with different addresses</h2><p >Like for the previous example, go to <span class="menuselection">Sales ‣ Orders ‣ Customers</span> and create a
+new customer. There, you can add company information but, more importantly, you can enter billing
+and shipping addresses under the <strong >Contacts &amp; Addresses</strong> tab.</p><img src="../../_images/addresses_4.png" alt="How to manage different customer addresses on Odoo Sales?" style="" class="img-responsive center-block img-thumbnail"><p >Once done, you can return to your Sales dashboard and create a new quotation. Now, if you enter
+your new customer, you will see that the other fields will fill in by themself with the information
+previously saved for billing and shipping addresses.</p><img src="../../_images/addresses_5.png" alt="Automatic quotation fields filling on Odoo Sales" style="" class="img-responsive center-block img-thumbnail"><p >With Odoo Sales, it is now very convenient to play with various addresses in terms of invoice and
+delivery features.</p></section>
 
           </article>
         </div>
