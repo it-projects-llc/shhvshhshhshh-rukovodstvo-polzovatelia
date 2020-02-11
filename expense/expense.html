@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-    <title>Expenses &#8212; Документация Odoo 13.0</title>
+    <title>Расходы &#8212; Документация Odoo 13.0</title>
     <link rel="stylesheet" href="../_static/style.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/accounting.css" />
@@ -191,7 +191,7 @@
             <li><a href="../index.html">Документация пользователя</a></li>
         
     
-    <li class="active"><a href="#">Expenses</a></li>
+    <li class="active"><a href="#">Расходы</a></li>
 
               
           </ol>
@@ -250,7 +250,7 @@
     <figure class="card top has_banner">
       <span class="card-img" style="background-image: url('../_static/banners/expense.png');"></span>
       <div class="container text-center">
-        <h1> Expenses </h1>
+        <h1> Расходы </h1>
       </div>
     </figure>
     
@@ -263,7 +263,7 @@
           
           <aside>
             <div class="navbar-aside text-center">
-              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#how-to-set-expense-types" class="ripple internal reference">How to set expense types</a></li><li class="list-group-item"><a href="#how-to-record-expenses" class="ripple internal reference">How to record expenses</a><ul ><li class="list-group-item"><a href="#manually" class="ripple internal reference">Manually</a></li><li class="list-group-item"><a href="#in-one-click-from-emails" class="ripple internal reference">In one click from emails</a></li></ul></li><li class="list-group-item"><a href="#how-to-submit-expenses-to-managers" class="ripple internal reference">How to submit expenses to managers</a></li><li class="list-group-item"><a href="#how-to-approve-expenses" class="ripple internal reference">How to approve expenses</a></li><li class="list-group-item"><a href="#how-to-post-expenses-in-accounting" class="ripple internal reference">How to post expenses in accounting</a></li><li class="list-group-item"><a href="#how-to-reimburse-employees" class="ripple internal reference">How to reimburse employees</a></li><li class="list-group-item"><a href="#how-to-re-invoice-expenses-to-your-customers" class="ripple internal reference">How to re-invoice expenses to your customers</a><ul ><li class="list-group-item"><a href="#setup" class="ripple internal reference">Setup</a></li><li class="list-group-item"><a href="#create-an-order" class="ripple internal reference">Create an order</a></li><li class="list-group-item"><a href="#submit-validate-and-post-expenses" class="ripple internal reference">Submit, validate and post expenses</a></li><li class="list-group-item"><a href="#invoice-expenses" class="ripple internal reference">Invoice expenses</a></li></ul></li></ul>
+              <ul class="list-group text-left nav"><li class="list-group-item"><a href="#how-to-set-expense-types" class="ripple internal reference">How to set expense types</a></li><li class="list-group-item"><a href="#how-to-record-expenses" class="ripple internal reference">How to record expenses</a><ul ><li class="list-group-item"><a href="#manually" class="ripple internal reference">Вручную</a></li><li class="list-group-item"><a href="#in-one-click-from-emails" class="ripple internal reference">In one click from emails</a></li></ul></li><li class="list-group-item"><a href="#how-to-submit-expenses-to-managers" class="ripple internal reference">How to submit expenses to managers</a></li><li class="list-group-item"><a href="#how-to-approve-expenses" class="ripple internal reference">How to approve expenses</a></li><li class="list-group-item"><a href="#how-to-post-expenses-in-accounting" class="ripple internal reference">How to post expenses in accounting</a></li><li class="list-group-item"><a href="#how-to-reimburse-employees" class="ripple internal reference">How to reimburse employees</a></li><li class="list-group-item"><a href="#how-to-re-invoice-expenses-to-your-customers" class="ripple internal reference">How to re-invoice expenses to your customers</a><ul ><li class="list-group-item"><a href="#setup" class="ripple internal reference">Установка</a></li><li class="list-group-item"><a href="#create-an-order" class="ripple internal reference">Create an order</a></li><li class="list-group-item"><a href="#submit-validate-and-post-expenses" class="ripple internal reference">Submit, validate and post expenses</a></li><li class="list-group-item"><a href="#invoice-expenses" class="ripple internal reference">Invoice expenses</a></li></ul></li></ul>
               
               <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/13.0/expense/expense.rst" class="gith-link">
                   Edit on GitHub
@@ -286,7 +286,7 @@ That way, employees report expenses with
 prices including taxes, which is usually the expected behaviour.</p><div role="alert" class="alert-info alert"><p class="alert-title">Совет</p><p >The <em >Sales</em> app allows you to specify unit of measures for your
 expense types (units, miles, nights, etc.).
 Go to <span class="menuselection">Sales ‣ Configuration ‣ Settings</span> and check
-<em >Some products may be sold/purchased in different units of measure (advanced)</em>.</p></div></section><section id="how-to-record-expenses"><h2 >How to record expenses</h2></section><section id="manually"><h3 >Manually</h3><p >As an employee (Employee in user access rights), you can record
+<em >Some products may be sold/purchased in different units of measure (advanced)</em>.</p></div></section><section id="how-to-record-expenses"><h2 >How to record expenses</h2></section><section id="manually"><h3 >Вручную</h3><p >As an employee (Employee in user access rights), you can record
 expenses from <span class="menuselection">My Expenses ‣ Expenses to Submit</span>.</p><img src="../_images/expense_submit_01.png" style="" class="img-responsive center-block"><ol ><li >Select the related product and enter either the total amount
 you paid (with Quantity = 1) or the unit price if Quantity is
 countable (e.g. number of hotel nights).</li><li >Enter the expense date.</li><li >Choose if you paid the bill on your own (and expect to be reimbursed)
@@ -313,14 +313,14 @@ You need to be set as manager in the detail form of those employees.</p><img src
 goes to <span class="menuselection">Expenses ‣ Accountant ‣ Expense Reports To Post</span> to check
 accounts, products and taxes. They can click <em >Post Journal Entries</em>
 to post related journal entries into your books.
-To do so, the user must have following access rights:</p><ul ><li >Accounting: Accountant or Adviser</li><li >Expenses: Manager</li></ul><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >To post an expense, a <em >Home Address</em> must be set on the employee.
+To do so, the user must have following access rights:</p><ul ><li >Бухгалтерия: Бухгалтер или Аудитор</li><li >Расходы: Менеджер</li></ul><div role="alert" class="alert-info alert"><p class="alert-title">Примечание</p><p >To post an expense, a <em >Home Address</em> must be set on the employee.
 If you get a related blocking message when posting, click the employee,
 go to <em >Personal Information</em> tab and select/create the contact of your employee
 in the address book.
 A contact has been automatically created if this person is using Odoo.</p></div></section><section id="how-to-reimburse-employees"><h2 >How to reimburse employees</h2><p >You can now see all the expense reports to reimburse in
 <span class="menuselection">Expenses ‣ Accountant ‣ Expense Reports To Pay</span>.
 To record the payment or pay by check, click <em >Register a Payment</em>.</p><p >See how you can easily manage the payment process in Odoo:</p><ul ><li ><a href="../accounting/payables/pay/check.html" class="internal reference"><span class="doc">оплачивайте чеками</span></a></li><li ><a href="../accounting/payables/pay/sepa.html" class="internal reference"><span class="doc">Оплачивайте с SEPA</span></a></li></ul></section><section id="how-to-re-invoice-expenses-to-your-customers"><h2 >How to re-invoice expenses to your customers</h2><p >If you track expenses on customer projects, you can charge them back to
-your customers automatically.</p></section><section id="setup"><h3 >Setup</h3><ul ><li >Enable <strong >Customer Billing</strong> in the Expenses settings</li><li ><p >Go to the product configuration menu and set the invoicing method on
+your customers automatically.</p></section><section id="setup"><h3 >Установка</h3><ul ><li >Enable <strong >Customer Billing</strong> in the Expenses settings</li><li ><p >Go to the product configuration menu and set the invoicing method on
 all your Expense types:</p><ul ><li >Ordered quantities : it will invoice expenses based on the ordered
 quantity</li><li >Delivered quantities :it will invoice expenses based on the
 expenses quantity</li><li >At cost: will invoice expenses at their real cost.</li><li >At sales price: will invoice based on a fixed sales price set on
